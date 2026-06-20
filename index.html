@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T&T Personal Hub</title>
+    <meta name="description" content="Trang cá nhân giới thiệu các dự án của T&T phát triển trên Cloudflare Pages.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <div class="container">
+        <!-- Header Profile Card -->
+        <header class="profile-card">
+            <div class="profile-avatar">
+                <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h1 class="profile-name">T&T Hub</h1>
+            <p class="profile-tagline">Web Developer & Designer</p>
+            <p class="profile-bio">Chào mừng bạn đến với trang giới thiệu của tôi. Đây là không gian lưu trữ và thử nghiệm các ứng dụng web được triển khai tự động trên Cloudflare Pages.</p>
+            
+            <div class="social-links">
+                <a href="https://github.com" target="_blank" aria-label="GitHub" class="social-btn"><i class="fa-brands fa-github"></i></a>
+                <a href="#" aria-label="Website" class="social-btn"><i class="fa-solid fa-globe"></i></a>
+                <a href="mailto:contact@example.com" aria-label="Email" class="social-btn"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </header>
+
+        <!-- Main Workspace Projects -->
+        <main class="projects-section">
+            <h2 class="section-title"><i class="fa-solid fa-cubes"></i> Dự án nổi bật</h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-badge">Next.js</div>
+                    <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="project-title">VN Stock Dashboard</h3>
+                    <p class="project-desc">Bảng theo dõi thị trường chứng khoán Việt Nam thời gian thực với các biểu đồ phân tích trực quan và dữ liệu cập nhật liên tục.</p>
+                    <div class="project-footer">
+                        <span class="project-status status-active">Hoạt động</span>
+                        <a href="https://github.com" class="project-link" target="_blank">Xem code <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-badge">HTML5 Game</div>
+                    <div class="project-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <h3 class="project-title">Game for Web</h3>
+                    <p class="project-desc">Tuyển tập các trò chơi mini chạy trực tiếp trên trình duyệt, tối ưu hóa trải nghiệm tương tác mượt mà.</p>
+                    <div class="project-footer">
+                        <span class="project-status status-active">Hoạt động</span>
+                        <a href="https://github.com" class="project-link" target="_blank">Xem code <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-badge">Tools</div>
+                    <div class="project-icon"><i class="fa-solid fa-fire"></i></div>
+                    <h3 class="project-title">SSI & Fireant Inspectors</h3>
+                    <p class="project-desc">Bộ công cụ hỗ trợ phân tích dữ liệu tài chính tự động từ các nền tảng SSI và Fireant.</p>
+                    <div class="project-footer">
+                        <span class="project-status status-dev">Đang phát triển</span>
+                        <a href="https://github.com" class="project-link" target="_blank">Xem code <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Interactive Tech Stack widget -->
+        <section class="tech-stack-section">
+            <h2 class="section-title"><i class="fa-solid fa-code"></i> Công nghệ sử dụng</h2>
+            <div class="tech-tags">
+                <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
+                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span class="tech-tag"><i class="fa-brands fa-react"></i> React</span>
+                <span class="tech-tag"><i class="fa-brands fa-cloudflare"></i> Cloudflare Pages</span>
+                <span class="tech-tag"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <p>&copy; 2026 T&T. Được phát triển và triển khai qua <a href="https://pages.cloudflare.com" target="_blank">Cloudflare Pages</a>.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
