@@ -3,98 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T&T Personal Hub</title>
-    <meta name="description" content="Trang cá nhân giới thiệu các dự án của T&T phát triển trên Cloudflare Pages.">
+    <title>Đặng Thanh Tân - Financial Hub</title>
+    <meta name="description" content="Trang cá nhân của Đặng Thanh Tân - Lập trình viên Tài chính & Phát triển Web.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <!-- Background Elements -->
-    <div class="bg-glow bg-glow-1"></div>
-    <div class="bg-glow bg-glow-2"></div>
+<body class="theme-bull"> <!-- Default to Bull Theme -->
+    <!-- Background Glow Elements -->
+    <div class="bg-glow bg-glow-left"></div>
+    <div class="bg-glow bg-glow-right"></div>
+    <div class="grid-overlay"></div>
 
     <div class="container">
+        <!-- Market Sentiment Controller -->
+        <div class="sentiment-bar">
+            <span class="sentiment-label"><i class="fa-solid fa-gauge-high"></i> Thị trường:</span>
+            <div class="sentiment-switch">
+                <button id="btn-bull" class="sentiment-btn active" onclick="setTheme('bull')">
+                    <i class="fa-solid fa-arrow-trend-up"></i> BÒ (BULL)
+                </button>
+                <button id="btn-bear" class="sentiment-btn" onclick="setTheme('bear')">
+                    <i class="fa-solid fa-arrow-trend-down"></i> GẤU (BEAR)
+                </button>
+            </div>
+        </div>
+
         <!-- Header Profile Card -->
         <header class="profile-card">
-            <div class="profile-avatar">
-                <i class="fa-solid fa-laptop-code"></i>
+            <div class="avatar-container">
+                <div class="avatar-glow"></div>
+                <div class="profile-avatar">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
             </div>
-            <h1 class="profile-name">T&T Hub</h1>
-            <p class="profile-tagline">Web Developer & Designer</p>
-            <p class="profile-bio">Chào mừng bạn đến với trang giới thiệu của tôi. Đây là không gian lưu trữ và thử nghiệm các ứng dụng web được triển khai tự động trên Cloudflare Pages.</p>
+            
+            <h1 class="profile-name">ĐẶNG THANH TÂN</h1>
+            <p class="profile-tagline">Financial Tech & Web Developer</p>
+            <p class="profile-bio">
+                Chuyên thiết kế và phát triển các công cụ phân tích tài chính, bảng dữ liệu chứng khoán thời gian thực và tự động hóa trích xuất dữ liệu thị trường.
+            </p>
             
             <div class="social-links">
                 <a href="https://github.com" target="_blank" aria-label="GitHub" class="social-btn"><i class="fa-brands fa-github"></i></a>
-                <a href="#" aria-label="Website" class="social-btn"><i class="fa-solid fa-globe"></i></a>
+                <a href="#" aria-label="LinkedIn" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
                 <a href="mailto:contact@example.com" aria-label="Email" class="social-btn"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </header>
 
+        <!-- Stats Banner -->
+        <section class="stats-banner">
+            <div class="stat-item">
+                <span class="stat-value text-bull">VN-INDEX</span>
+                <span class="stat-sub"><i class="fa-solid fa-circle-chevron-up"></i> Uptrend</span>
+            </div>
+            <div class="stat-item border-x">
+                <span class="stat-value" id="current-sentiment-text">Thị trường Bò tót</span>
+                <span class="stat-sub">Trạng thái chủ đạo</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value text-bear">HEDGE RATE</span>
+                <span class="stat-sub"><i class="fa-solid fa-shield-halved"></i> Bảo hiểm Rủi ro</span>
+            </div>
+        </section>
+
         <!-- Main Workspace Projects -->
         <main class="projects-section">
-            <h2 class="section-title"><i class="fa-solid fa-cubes"></i> Dự án nổi bật</h2>
+            <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Hệ sinh thái Công cụ</h2>
             
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-badge">Next.js</div>
-                    <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <!-- Project 1: VN Stock Dashboard -->
+                <div class="project-card border-glow">
+                    <div class="project-header-row">
+                        <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <span class="project-badge bg-badge-bull">Real-time</span>
+                    </div>
                     <h3 class="project-title">VN Stock Dashboard</h3>
-                    <p class="project-desc">Bảng theo dõi thị trường chứng khoán Việt Nam thời gian thực với các biểu đồ phân tích trực quan và dữ liệu cập nhật liên tục.</p>
+                    <p class="project-desc">
+                        Bảng theo dõi và trực quan hóa dữ liệu giao dịch chứng khoán Việt Nam. Hỗ trợ phân tích kỹ thuật, dòng tiền và chỉ số thị trường.
+                    </p>
                     <div class="project-footer">
                         <span class="project-status status-active">Hoạt động</span>
-                        <a href="https://github.com" class="project-link" target="_blank">Xem code <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./vn-stock-dashboard/" class="project-link">Truy cập <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-badge">HTML5 Game</div>
-                    <div class="project-icon"><i class="fa-solid fa-gamepad"></i></div>
+                <!-- Project 2: Game for Web -->
+                <div class="project-card border-glow">
+                    <div class="project-header-row">
+                        <div class="project-icon"><i class="fa-solid fa-gamepad"></i></div>
+                        <span class="project-badge bg-badge-neutral">Trình duyệt</span>
+                    </div>
                     <h3 class="project-title">Game for Web</h3>
-                    <p class="project-desc">Tuyển tập các trò chơi mini chạy trực tiếp trên trình duyệt, tối ưu hóa trải nghiệm tương tác mượt mà.</p>
+                    <p class="project-desc">
+                        Các tựa game mini giải trí tích hợp trên nền tảng web, bao gồm trò chơi mô phỏng tâm lý giao dịch mua/bán và thị trường.
+                    </p>
                     <div class="project-footer">
                         <span class="project-status status-active">Hoạt động</span>
-                        <a href="https://github.com" class="project-link" target="_blank">Xem code <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./Game for Web/" class="project-link">Trải nghiệm <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-badge">Tools</div>
-                    <div class="project-icon"><i class="fa-solid fa-fire"></i></div>
-                    <h3 class="project-title">SSI & Fireant Inspectors</h3>
-                    <p class="project-desc">Bộ công cụ hỗ trợ phân tích dữ liệu tài chính tự động từ các nền tảng SSI và Fireant.</p>
+                <!-- Project 3: SSI & Fireant Inspectors -->
+                <div class="project-card border-glow">
+                    <div class="project-header-row">
+                        <div class="project-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                        <span class="project-badge bg-badge-bear">Automation</span>
+                    </div>
+                    <h3 class="project-title">Inspectors Tool</h3>
+                    <p class="project-desc">
+                        Bộ script tự động hóa trích xuất dữ liệu, quét tín hiệu phân tích kỹ thuật từ các cổng thông tin chứng khoán SSI và Fireant.
+                    </p>
                     <div class="project-footer">
-                        <span class="project-status status-dev">Đang phát triển</span>
-                        <a href="https://github.com" class="project-link" target="_blank">Xem code <i class="fa-solid fa-arrow-right"></i></a>
+                        <span class="project-status status-dev">Phát triển</span>
+                        <a href="./file for wed/" class="project-link">Xem tài liệu <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </main>
 
-        <!-- Interactive Tech Stack widget -->
-        <section class="tech-stack-section">
-            <h2 class="section-title"><i class="fa-solid fa-code"></i> Công nghệ sử dụng</h2>
-            <div class="tech-tags">
-                <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML5</span>
-                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
-                <span class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
-                <span class="tech-tag"><i class="fa-brands fa-react"></i> React</span>
-                <span class="tech-tag"><i class="fa-brands fa-cloudflare"></i> Cloudflare Pages</span>
-                <span class="tech-tag"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+        <!-- Dynamic Tech Stack & Market Sentiment Info -->
+        <section class="info-section">
+            <h2 class="section-title"><i class="fa-solid fa-sliders"></i> Phân tích Kỹ thuật & Công nghệ</h2>
+            <div class="info-content">
+                <p id="sentiment-philosophy">
+                    Khi thị trường trong pha <strong>Tăng giá (Bull Market)</strong>, chúng tôi tập trung phát triển các bảng Dashboard tối ưu hóa hiệu năng, xử lý luồng dữ liệu thời gian thực (Websockets) để nắm bắt nhanh các cơ hội dòng tiền lớn.
+                </p>
+                <div class="tech-tags">
+                    <span class="tech-tag"><i class="fa-brands fa-react"></i> Next.js</span>
+                    <span class="tech-tag"><i class="fa-solid fa-chart-area"></i> Chart.js / Recharts</span>
+                    <span class="tech-tag"><i class="fa-solid fa-server"></i> API Streaming</span>
+                    <span class="tech-tag"><i class="fa-brands fa-cloudflare"></i> Cloudflare Workers</span>
+                    <span class="tech-tag"><i class="fa-brands fa-git-alt"></i> GitHub CI/CD</span>
+                </div>
             </div>
         </section>
 
         <!-- Footer -->
         <footer class="site-footer">
-            <p>&copy; 2026 T&T. Được phát triển và triển khai qua <a href="https://pages.cloudflare.com" target="_blank">Cloudflare Pages</a>.</p>
+            <p>&copy; 2026 ĐẶNG THANH TÂN. Hỗ trợ giao dịch chuyên nghiệp với hệ thống Cloudflare Pages.</p>
         </footer>
     </div>
 
