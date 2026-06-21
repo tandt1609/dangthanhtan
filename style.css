@@ -2847,3 +2847,513 @@ color:var(--ink-soft);}
     .disc-tag { font-size: 0.62rem; padding: 0.22rem 0.5rem; }
     .profile-disciplines { gap: 0.35rem; letter-spacing: 0.1em; }
 }
+
+/* ============================================================
+   Jim Simons Article — Scoped Styles (.article-jimsimons)
+   All component classes prefixed with .jsi-
+   Contained so they don't bleed into the dark-navy site theme
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Mono:wght@400;500&display=swap');
+
+/* ── Outer wrapper ── */
+.article-jimsimons {
+    background: #f7f4ef;
+    color: #0d0d0d;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    border-radius: 4px;
+    overflow: hidden;
+    line-height: 1.6;
+}
+
+/* ── Masthead ── */
+.jsi-masthead {
+    background: #2c3042;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.jsi-masthead-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 32px 48px;
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 48px;
+    align-items: end;
+}
+
+.jsi-masthead-left {
+    text-align: left;
+}
+
+.jsi-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: #d4af5a;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.jsi-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 6vw, 76px);
+    font-weight: 300;
+    color: #f0ebe0;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.jsi-name em {
+    font-style: italic;
+    color: #d4af5a;
+}
+
+.jsi-subtitle {
+    font-size: 14px;
+    font-style: italic;
+    color: rgba(240, 235, 224, 0.6);
+    margin-top: 16px;
+    line-height: 1.6;
+}
+
+/* ── Stats panel ── */
+.jsi-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    border: 1px solid rgba(184, 150, 46, 0.25);
+    background: rgba(184, 150, 46, 0.05);
+}
+
+.jsi-stat-item {
+    border-bottom: 1px solid rgba(184, 150, 46, 0.15);
+    padding-bottom: 12px;
+}
+
+.jsi-stat-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.jsi-stat-num {
+    font-size: 26px;
+    font-weight: 300;
+    color: #d4af5a;
+    line-height: 1;
+}
+
+.jsi-stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(240, 235, 224, 0.45);
+    margin-top: 4px;
+}
+
+/* ── Table of contents ── */
+.jsi-toc {
+    background: #0d0d0d;
+    border-bottom: 1px solid #b8962e;
+    padding: 0 32px;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    flex-wrap: wrap;
+}
+
+.jsi-toc-item {
+    padding: 12px 16px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    white-space: nowrap;
+}
+
+.jsi-toc-sep {
+    padding: 12px 4px;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 10px;
+}
+
+/* ── Content area ── */
+.jsi-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.jsi-section {
+    padding: 60px 0;
+    border-bottom: 1px solid #d6cec0;
+}
+
+.jsi-section:last-of-type {
+    border-bottom: none;
+}
+
+.jsi-section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.jsi-section-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: #b8962e;
+    letter-spacing: 0.1em;
+    flex-shrink: 0;
+}
+
+.jsi-section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(24px, 3vw, 34px);
+    font-weight: 400;
+    line-height: 1.15;
+    color: #2c3042;
+    margin: 0;
+}
+
+.jsi-section-title em {
+    font-style: italic;
+    color: #b8962e;
+}
+
+/* ── Body paragraphs ── */
+.article-jimsimons p {
+    font-size: 17px;
+    line-height: 1.85;
+    color: #1a1814;
+    margin-bottom: 1.4em;
+}
+
+/* ── Timeline ── */
+.jsi-timeline {
+    position: relative;
+    padding-left: 28px;
+    list-style: none;
+    margin: 0;
+}
+
+.jsi-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: linear-gradient(to bottom, #b8962e, transparent);
+}
+
+.jsi-timeline-item {
+    position: relative;
+    padding: 0 0 32px 24px;
+}
+
+.jsi-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #b8962e;
+    border: 2px solid #f7f4ef;
+}
+
+.jsi-timeline-year {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #b8962e;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+}
+
+.jsi-timeline-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #2c3042;
+    margin-bottom: 4px;
+}
+
+.jsi-timeline-body {
+    font-size: 15px;
+    color: #6b6459;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ── Pull quote ── */
+.jsi-pullquote {
+    margin: 40px 0;
+    padding: 32px 36px;
+    border-left: 3px solid #b8962e;
+    background: #fffbf2;
+    position: relative;
+}
+
+.jsi-pullquote::before {
+    content: '\201C';
+    position: absolute;
+    top: -8px;
+    left: 24px;
+    font-size: 72px;
+    color: #f0e4c0;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.jsi-pullquote p {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    color: #2c3042;
+    margin: 0 0 10px;
+    line-height: 1.55;
+}
+
+.jsi-pullquote cite {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #b8962e;
+    font-style: normal;
+}
+
+/* ── Principles list ── */
+.jsi-principles {
+    counter-reset: principle;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.jsi-principles li {
+    counter-increment: principle;
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 16px;
+    padding: 20px 0;
+    border-bottom: 1px solid #d6cec0;
+    align-items: start;
+}
+
+.jsi-principles li:last-child {
+    border-bottom: none;
+}
+
+.jsi-principles li::before {
+    content: counter(principle, decimal-leading-zero);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: #b8962e;
+    padding-top: 2px;
+}
+
+.jsi-principle-content strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3042;
+    margin-bottom: 4px;
+}
+
+.jsi-principle-content span {
+    font-size: 14px;
+    color: #6b6459;
+    line-height: 1.7;
+}
+
+/* ── Performance box ── */
+.jsi-perf-box {
+    background: #2c3042;
+    color: #f0ebe0;
+    padding: 32px;
+    margin: 32px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.jsi-perf-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(ellipse at top right, rgba(212, 175, 90, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.jsi-perf-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #d4af5a;
+    margin-bottom: 24px;
+}
+
+.jsi-perf-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    margin-bottom: 1px;
+}
+
+.jsi-perf-cell {
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    font-size: 14px;
+}
+
+.jsi-perf-row.jsi-perf-header .jsi-perf-cell {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #d4af5a;
+    background: rgba(184, 150, 46, 0.08);
+}
+
+.jsi-perf-hi {
+    color: #d4af5a;
+    font-weight: 500;
+}
+
+/* ── Strategy grid ── */
+.jsi-strat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: #d6cec0;
+    margin: 32px 0;
+    border: 1px solid #d6cec0;
+}
+
+.jsi-strat-card {
+    background: #f7f4ef;
+    padding: 24px 28px;
+}
+
+.jsi-strat-icon {
+    font-size: 22px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.jsi-strat-name {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #b8962e;
+    margin-bottom: 6px;
+}
+
+.jsi-strat-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3042;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.jsi-strat-body {
+    font-size: 13px;
+    color: #6b6459;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ── Sub-heading h3 ── */
+.jsi-h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3042;
+    margin: 32px 0 12px;
+}
+
+/* ── Article footer ── */
+.jsi-article-footer {
+    background: #0d0d0d;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    padding: 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+}
+
+.jsi-article-footer span {
+    color: #b8962e;
+}
+
+/* ── Back button (scoped to article wrapper) ── */
+.article-jimsimons .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 20px 32px;
+    padding: 8px 18px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: border-color 0.2s, color 0.2s;
+    text-decoration: none;
+}
+
+.article-jimsimons .back-btn:hover {
+    border-color: #b8962e;
+    color: #b8962e;
+}
+
+/* ============================================================
+   Responsive — Mobile ≤ 680px
+   ============================================================ */
+@media (max-width: 680px) {
+    .jsi-masthead-inner {
+        grid-template-columns: 1fr;
+        padding: 40px 16px 32px;
+    }
+
+    .jsi-stats {
+        display: none;
+    }
+
+    .jsi-content {
+        padding: 0 16px;
+    }
+
+    .jsi-strat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jsi-perf-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Hide the third column cell on mobile */
+    .jsi-perf-row .jsi-perf-cell:last-child {
+        display: none;
+    }
+}

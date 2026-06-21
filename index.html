@@ -105,6 +105,19 @@
                         </div>
                     </div>
 
+                    <!-- Post: Jim Simons (From Huyen Thoai tab) -->
+                    <div class="news-card clickable-card" onclick="openHomeLegendArticle('jim-simons')">
+                        <div class="news-meta">
+                            <span class="news-source"><i class="fa-solid fa-brain"></i> Huyền thoại &amp; Tài chính</span>
+                            <span class="news-time">21/06/2026</span>
+                        </div>
+                        <h3 class="news-heading">Jim Simons — The Man Who Solved the Market</h3>
+                        <p class="news-excerpt">Nhà toán học, mật mã gia người sáng lập Renaissance Technologies. Quỹ Medallion: 66.1% lợi nhuận gộp mỗi năm, không một năm nào lỗ trong 30 năm.</p>
+                        <div class="news-footer">
+                            <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc hồ sơ</span>
+                        </div>
+                    </div>
+
                     <!-- Post 2: Tien Si Dong (From Commodity Tab) -->
                     <div class="news-card clickable-card" onclick="openHomeArticle('tien-si-dong')">
                         <div class="news-meta">
@@ -2015,36 +2028,212 @@
 
             <!-- PANEL 5: HUYỀN THOẠI -->
             <div id="panel-huyen-thoai" class="tab-panel">
-                <h2 class="section-title"><i class="fa-solid fa-crown"></i> Các nhà giao dịch huyền thoại</h2>
-                <div class="legends-grid">
-                    <div class="legend-card">
-                        <div class="legend-header">
-                            <div class="legend-avatar"><i class="fa-solid fa-brain"></i></div>
-                            <div>
-                                <h3 class="legend-name">Jim Simons</h3>
-                                <span class="legend-title">Vua Quants (Mô hình Toán)</span>
+                <!-- LIST VIEW -->
+                <div id="huyen-thoai-list-view" class="sukien-view active">
+                    <h2 class="section-title"><i class="fa-solid fa-crown"></i> Các nhà giao dịch huyền thoại</h2>
+                    <div class="news-list">
+                        <div class="news-card clickable-card" onclick="openLegendArticle('jim-simons')">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-brain"></i> Hồ sơ Huyền thoại</span>
+                                <span class="news-time">25/04/1938 – 10/05/2024</span>
+                            </div>
+                            <h3 class="news-heading">Jim Simons — The Man Who Solved the Market</h3>
+                            <p class="news-excerpt">Nhà toán học, mật mã gia, người sáng lập Renaissance Technologies. Quỹ Medallion đạt 66.1% lợi nhuận gộp mỗi năm trong 30 năm — không một năm nào lỗ.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc hồ sơ</span>
                             </div>
                         </div>
-                        <p class="legend-bio">Người sáng lập Renaissance Technologies. Quỹ Medallion của ông đạt hiệu suất sinh lời trung bình 66% mỗi năm từ 1988 đến 2018.</p>
-                        <blockquote class="legend-quote">
-                            "Mô hình thuật toán loại bỏ hoàn toàn yếu tố cảm xúc của con người ra khỏi việc giao dịch."
-                        </blockquote>
-                    </div>
-                    <div class="legend-card">
-                        <div class="legend-header">
-                            <div class="legend-avatar"><i class="fa-solid fa-compass"></i></div>
-                            <div>
-                                <h3 class="legend-name">Warren Buffett</h3>
-                                <span class="legend-title">Nhà đầu tư giá trị vĩ đại</span>
+                        <div class="news-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-compass"></i> Hồ sơ Huyền thoại</span>
+                                <span class="news-time">Sắp ra mắt</span>
+                            </div>
+                            <h3 class="news-heading">Warren Buffett — Nhà đầu tư giá trị vĩ đại nhất</h3>
+                            <p class="news-excerpt">Chủ tịch Berkshire Hathaway. Triết lý đầu tư dài hạn vào các công ty có lợi thế cạnh tranh bền vững.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator" style="color:var(--text-muted,#888)"><i class="fa-solid fa-clock"></i> Đang biên soạn</span>
                             </div>
                         </div>
-                        <p class="legend-bio">Chủ tịch tập đoàn Berkshire Hathaway. Nổi tiếng với triết lý đầu tư dài hạn vào các công ty có lợi thế cạnh tranh bền vững.</p>
-                        <blockquote class="legend-quote">
-                            "Hãy sợ hãi khi người khác tham lam, và hãy tham lam khi người khác sợ hãi."
-                        </blockquote>
                     </div>
                 </div>
-            </div>
+
+                <!-- ARTICLE VIEW -->
+                <div id="huyen-thoai-article-view" class="sukien-view">
+                    <div id="article-jimsimons-panel" class="sukien-article-panel">
+                        <div class="article-jimsimons">
+                            <button class="back-btn" onclick="openLegendArticle('')">
+                                <i class="fa-solid fa-arrow-left"></i> Quay lại danh sách
+                            </button>
+
+                            <!-- MASTHEAD -->
+                            <div class="jsi-masthead">
+                                <div class="jsi-masthead-inner">
+                                    <div class="jsi-masthead-left">
+                                        <div class="jsi-eyebrow">Hồ sơ nhà giao dịch huyền thoại</div>
+                                        <h1 class="jsi-name">Jim<br><em>Simons</em></h1>
+                                        <p class="jsi-subtitle">Nhà toán học, mật mã gia, nhà khoa học,<br>người sáng lập Renaissance Technologies —<br>"The Man Who Solved the Market"</p>
+                                    </div>
+                                    <div class="jsi-stats">
+                                        <div class="jsi-stat-item">
+                                            <div class="jsi-stat-num">66.1%</div>
+                                            <div class="jsi-stat-label">Lợi nhuận gộp TB/năm (1988–2018)</div>
+                                        </div>
+                                        <div class="jsi-stat-item">
+                                            <div class="jsi-stat-num">39.1%</div>
+                                            <div class="jsi-stat-label">Lợi nhuận ròng TB/năm (30 năm)</div>
+                                        </div>
+                                        <div class="jsi-stat-item">
+                                            <div class="jsi-stat-num">$30B+</div>
+                                            <div class="jsi-stat-label">Tài sản cá nhân (tự kiếm)</div>
+                                        </div>
+                                        <div class="jsi-stat-item">
+                                            <div class="jsi-stat-num">0</div>
+                                            <div class="jsi-stat-label">Năm lỗ của Medallion Fund</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- TOC -->
+                            <nav class="jsi-toc">
+                                <span class="jsi-toc-item">Tiểu sử</span><span class="jsi-toc-sep">·</span>
+                                <span class="jsi-toc-item">Sự nghiệp</span><span class="jsi-toc-sep">·</span>
+                                <span class="jsi-toc-item">Renaissance</span><span class="jsi-toc-sep">·</span>
+                                <span class="jsi-toc-item">Triết lý</span><span class="jsi-toc-sep">·</span>
+                                <span class="jsi-toc-item">Phương pháp</span><span class="jsi-toc-sep">·</span>
+                                <span class="jsi-toc-item">Thành tựu</span><span class="jsi-toc-sep">·</span>
+                                <span class="jsi-toc-item">Di sản</span>
+                            </nav>
+
+                            <div class="jsi-content">
+
+                            <!-- 01 -->
+                            <section class="jsi-section">
+                                <div class="jsi-section-header"><span class="jsi-section-num">01</span><h2 class="jsi-section-title">Tiểu sử &amp; <em>Gia cảnh</em></h2></div>
+                                <p>James Harris Simons sinh ngày 25 tháng 4 năm 1938 tại Newton, Massachusetts, trong một gia đình gốc Do Thái. Cha ông, Matthew Simons, làm chủ một xưởng giày. Từ thuở ấu thơ, Simons đã bộc lộ niềm đam mê mãnh liệt với toán học — một niềm đam mê không bao giờ tắt, dù sau này ông trở thành tỷ phú tài chính hàng đầu thế giới.</p>
+                                <p>Ông tốt nghiệp cử nhân toán học tại Viện Công nghệ Massachusetts (MIT) năm 1958, khi mới 20 tuổi. Chỉ ba năm sau, năm 1961, ông nhận bằng Tiến sĩ toán học tại Đại học California, Berkeley, ở tuổi 23 — một thành tích xuất sắc hiếm có. Luận án tiến sĩ của ông tập trung vào hình học vi phân, một nhánh toán học thuần túy mà ông sẽ cày xới suốt nhiều thập kỷ.</p>
+                                <p>Cuộc đời riêng của Simons trải qua nhiều thăng trầm đau lòng. Ông kết hôn lần đầu với Barbara Simons, có với nhau ba người con. Người con trai Paul qua đời năm 1996 khi bị xe tông trong lúc đạp xe, chỉ mới 34 tuổi. Người con trai thứ hai Nick chìm đuối nước tại Bali năm 2003, khi 24 tuổi. Ông kết hôn lần hai với Marilyn Hawrys — người phụ nữ ông gặp tại Stony Brook — vào năm 1977. Hai vợ chồng cùng sáng lập Quỹ Simons năm 1994, trở thành những nhà từ thiện khoa học vĩ đại nhất nước Mỹ.</p>
+                                <p>Ngày 10 tháng 5 năm 2024, Jim Simons ra đi thanh thản tại New York City, hưởng thọ 86 tuổi, bên cạnh những người thân yêu. Ông vẫn miệt mài với công việc của Quỹ Simons cho đến những ngày cuối đời.</p>
+                                <div class="jsi-pullquote"><p>Toán học là ngôn ngữ của vũ trụ. Và thị trường tài chính, xét đến cùng, cũng chỉ là một phương trình chờ được giải.</p><cite>— Jim Simons</cite></div>
+                            </section>
+
+                            <!-- 02 -->
+                            <section class="jsi-section">
+                                <div class="jsi-section-header"><span class="jsi-section-num">02</span><h2 class="jsi-section-title">Hành trình <em>Sự nghiệp</em></h2></div>
+                                <div class="jsi-timeline">
+                                    <div class="jsi-timeline-item"><div class="jsi-timeline-year">1958 – 1961</div><div class="jsi-timeline-title">Học thuật tại MIT &amp; Berkeley</div><p class="jsi-timeline-body">Hoàn thành cử nhân tại MIT năm 20 tuổi; lấy bằng Tiến sĩ Toán học tại UC Berkeley năm 23 tuổi. Chuyên ngành hình học vi phân — nền tảng toán học thuần túy mà về sau ông áp dụng vào thị trường tài chính.</p></div>
+                                    <div class="jsi-timeline-item"><div class="jsi-timeline-year">1961 – 1964</div><div class="jsi-timeline-title">Giảng dạy tại MIT và Harvard</div><p class="jsi-timeline-body">Sau khi lấy bằng tiến sĩ, Simons giảng dạy toán học tại MIT rồi Harvard, xây dựng danh tiếng trong giới học thuật với tư cách một nhà toán học xuất sắc.</p></div>
+                                    <div class="jsi-timeline-item"><div class="jsi-timeline-year">1964 – 1968</div><div class="jsi-timeline-title">Giải mật mã tại NSA &amp; IDA</div><p class="jsi-timeline-body">Gia nhập Cơ quan An ninh Quốc gia (NSA) với tư cách chuyên gia phá mã trong Chiến tranh Lạnh. Làm việc tại Bộ phận Nghiên cứu Truyền thông của Viện Phân tích Quốc phòng (IDA) tại Princeton. Công việc giải mã dạy ông cách xây dựng mô hình toán học để tìm ra quy luật ẩn trong dữ liệu hỗn độn — kỹ năng trực tiếp tạo ra Renaissance Technologies sau này. Ông bị sa thải năm 1968 vì công khai phản đối Chiến tranh Việt Nam trên tạp chí Newsweek.</p></div>
+                                    <div class="jsi-timeline-item"><div class="jsi-timeline-year">1968 – 1978</div><div class="jsi-timeline-title">Chủ nhiệm Khoa Toán — Đại học Stony Brook</div><p class="jsi-timeline-body">Được mời về lãnh đạo khoa Toán tại Stony Brook University và biến nơi này thành trung tâm nghiên cứu toán học đẳng cấp quốc tế. Tại đây, ông hợp tác với nhà toán học lừng danh Shiing-Shen Chern. Năm 1974, hai người công bố công trình "Characteristic Forms and Geometric Invariants" — giới thiệu khái niệm <em>Chern-Simons invariants</em>, sau này trở thành nền tảng quan trọng trong vật lý lý thuyết, lý thuyết trường lượng tử và vật lý chất ngưng tụ. Năm 1976, Simons nhận Giải thưởng Oswald Veblen Prize in Geometry — giải thưởng danh giá nhất của Hiệp hội Toán học Mỹ trong lĩnh vực hình học.</p></div>
+                                    <div class="jsi-timeline-item"><div class="jsi-timeline-year">1978</div><div class="jsi-timeline-title">Rời học thuật, sáng lập Monemetrics</div><p class="jsi-timeline-body">Ở tuổi 40, Simons từ bỏ ghế giáo sư để lao vào tài chính. Ông thành lập công ty quản lý quỹ Monemetrics tại một khu mua sắm bình dân ở East Setauket, Long Island — cách phố Wall hơn 80 km. Ban đầu ông giao dịch ngoại hối và hàng hóa theo phương pháp tự do, thuần trực giác, nhưng nhanh chóng nhận ra giới hạn của phương pháp này.</p></div>
+                                    <div class="jsi-timeline-item"><div class="jsi-timeline-year">1982</div><div class="jsi-timeline-title">Đổi tên thành Renaissance Technologies</div><p class="jsi-timeline-body">Đổi tên công ty thành Renaissance Technologies LLC, chính thức bắt đầu xây dựng một công ty dựa hoàn toàn vào mô hình toán học và khoa học dữ liệu. Thay vì tuyển dụng những nhà phân tích phố Wall, ông săn đón các tiến sĩ toán học, vật lý, khoa học máy tính và thống kê từ các trường đại học hàng đầu.</p></div>
+                                    <div class="jsi-timeline-item"><div class="jsi-timeline-year">1988</div><div class="jsi-timeline-title">Ra mắt Medallion Fund — Bước ngoặt lịch sử</div><p class="jsi-timeline-body">Medallion Fund ra đời với nền tảng hoàn toàn là giao dịch định lượng tự động. Ngay từ những năm đầu, quỹ đã cho thấy hiệu suất vượt trội mọi chuẩn mực ngành. Từ 1988 đến 2021, Medallion không có bất kỳ một năm lỗ nào, kể cả trong khủng hoảng 2000 và 2008.</p></div>
+                                    <div class="jsi-timeline-item"><div class="jsi-timeline-year">1994</div><div class="jsi-timeline-title">Sáng lập Quỹ Simons</div><p class="jsi-timeline-body">Cùng vợ Marilyn thành lập Simons Foundation, tập trung tài trợ nghiên cứu toán học và khoa học cơ bản. Quỹ này trở thành một trong những tổ chức từ thiện khoa học lớn nhất thế giới.</p></div>
+                                    <div class="jsi-timeline-item"><div class="jsi-timeline-year">2009</div><div class="jsi-timeline-title">Nghỉ hưu khỏi vị trí điều hành</div><p class="jsi-timeline-body">Rút lui khỏi vai trò CEO của Renaissance Technologies sau hơn 30 năm chèo lái, chuyển sang vị trí Chủ tịch không điều hành (Non-executive Chairman) cho đến năm 2021.</p></div>
+                                    <div class="jsi-timeline-item"><div class="jsi-timeline-year">10/5/2024</div><div class="jsi-timeline-title">Từ trần tại New York City</div><p class="jsi-timeline-body">Jim Simons qua đời ở tuổi 86, để lại di sản khoa học và tài chính vô song — một cuộc đời chứng minh rằng toán học có thể giải được mọi bài toán, kể cả bài toán thị trường.</p></div>
+                                </div>
+                            </section>
+
+                            <!-- 03 -->
+                            <section class="jsi-section">
+                                <div class="jsi-section-header"><span class="jsi-section-num">03</span><h2 class="jsi-section-title">Renaissance Technologies &amp; <em>Medallion Fund</em></h2></div>
+                                <p>Renaissance Technologies, đặt trụ sở tại East Setauket, New York, là công ty quản lý quỹ định lượng thành công nhất trong lịch sử tài chính Mỹ. Điểm khác biệt cốt lõi của công ty là chính sách tuyển dụng: Renaissance không thuê bất kỳ chuyên gia phân tích phố Wall, MBA hay nhà kinh tế học truyền thống nào. Thay vào đó, công ty săn đón các tiến sĩ toán học, vật lý, thiên văn học, khoa học máy tính và thống kê — những người được đào tạo để tư duy bằng ngôn ngữ dữ liệu và xác suất.</p>
+                                <p>Simons thường mô tả "công thức bí mật" của Renaissance là <em>con người</em>, không phải thuật toán. Một môi trường cộng tác khoa học đích thực, nơi mọi người chia sẻ ý tưởng cởi mở, được thúc đẩy bởi lòng tò mò thuần túy, không phải tham vọng ngắn hạn. Tất cả nhân viên đều phải ký thỏa thuận bảo mật cực kỳ nghiêm ngặt — không một chi tiết nào về thuật toán giao dịch được phép rò rỉ ra ngoài.</p>
+                                <div class="jsi-perf-box">
+                                    <div class="jsi-perf-title">Medallion Fund — Hiệu suất Lịch sử</div>
+                                    <div class="jsi-perf-row jsi-perf-header"><div class="jsi-perf-cell">Giai đoạn</div><div class="jsi-perf-cell">Lợi nhuận gộp TB/năm</div><div class="jsi-perf-cell">Lợi nhuận ròng TB/năm</div></div>
+                                    <div class="jsi-perf-row"><div class="jsi-perf-cell">1988 – 2009 (Jim Simons)</div><div class="jsi-perf-cell jsi-perf-hi">63.5%</div><div class="jsi-perf-cell jsi-perf-hi">40.1%</div></div>
+                                    <div class="jsi-perf-row"><div class="jsi-perf-cell">2010 – 2022 (Hậu Simons)</div><div class="jsi-perf-cell jsi-perf-hi">77.3%</div><div class="jsi-perf-cell jsi-perf-hi">40.3%</div></div>
+                                    <div class="jsi-perf-row"><div class="jsi-perf-cell">Toàn bộ 1988 – 2022</div><div class="jsi-perf-cell jsi-perf-hi">68%</div><div class="jsi-perf-cell jsi-perf-hi">40%</div></div>
+                                    <div class="jsi-perf-row"><div class="jsi-perf-cell">Sharpe Ratio</div><div class="jsi-perf-cell jsi-perf-hi">&gt; 2.0</div><div class="jsi-perf-cell">Độ lệch chuẩn: 31.7%</div></div>
+                                </div>
+                                <p>Điều khiến Medallion Fund trở thành huyền thoại không chỉ là con số lợi nhuận mà còn là <em>tính liên tục tuyệt đối</em>: quỹ không có bất kỳ một năm lỗ nào trong suốt hơn ba thập kỷ hoạt động. Năm 2000, khi bong bóng dotcom nổ, Medallion tăng 98.5%. Năm 2008, khi khủng hoảng tài chính toàn cầu khiến hầu hết mọi quỹ sụp đổ, Medallion vẫn tăng 82.4%. Quỹ đóng cửa với nhà đầu tư bên ngoài từ năm 1993 — chỉ dành riêng cho nhân viên và cựu nhân viên của Renaissance.</p>
+                                <div class="jsi-pullquote"><p>Tôi muốn những mô hình có thể kiếm tiền trong khi tôi ngủ. Một hệ thống thuần túy không có con người can thiệp vào.</p><cite>— Jim Simons</cite></div>
+                            </section>
+
+                            <!-- 04 -->
+                            <section class="jsi-section">
+                                <div class="jsi-section-header"><span class="jsi-section-num">04</span><h2 class="jsi-section-title">Triết lý <em>Cốt lõi</em></h2></div>
+                                <p>Khác với hầu hết các nhà đầu tư vĩ đại — những người xây dựng triết lý từ kinh nghiệm phố Wall hay lý thuyết kinh tế — Jim Simons đến với tài chính như một nhà khoa học tự nhiên tiếp cận một hiện tượng chưa được giải thích. Triết lý của ông không phải là hệ thống niềm tin hay trực giác, mà là một phương pháp luận khoa học nghiêm ngặt.</p>
+                                <div class="jsi-pullquote"><p>Chúng tôi không bắt đầu bằng mô hình. Chúng tôi bắt đầu bằng dữ liệu. Chúng tôi không có bất kỳ định kiến nào. Chúng tôi tìm kiếm những thứ có thể được tái hiện hàng nghìn lần.</p><cite>— Jim Simons</cite></div>
+                                <ol class="jsi-principles">
+                                    <li><div class="jsi-principle-content"><strong>Dữ liệu là thẩm phán tối cao</strong><span>Không một nhận định nào về thị trường được chấp nhận mà không có bằng chứng thống kê xác thực từ dữ liệu lịch sử. Trực giác, kinh nghiệm cá nhân hay "cảm giác thị trường" hoàn toàn bị loại trừ khỏi quá trình ra quyết định. Chỉ có những gì có thể đo lường, kiểm tra và tái hiện mới có giá trị.</span></div></li>
+                                    <li><div class="jsi-principle-content"><strong>Thị trường không hiệu quả hoàn toàn</strong><span>Simons tin tưởng rằng thị trường chứa đựng những kém hiệu quả nhỏ, dai dẳng — những "tín hiệu" ẩn trong nhiễu thị trường. Những kém hiệu quả này tồn tại vì chúng quá nhỏ hoặc quá thoáng qua để con người bình thường khai thác có lợi nhuận. Chỉ có máy tính với tốc độ xử lý cực cao mới có thể nhận ra và tận dụng chúng.</span></div></li>
+                                    <li><div class="jsi-principle-content"><strong>Mô hình đúng còn giá trị hơn lý do</strong><span>Renaissance không cần biết <em>tại sao</em> một quy luật tồn tại — chỉ cần biết rằng nó tồn tại một cách đáng tin cậy về mặt thống kê. Simons từng nói: "Tôi không biết tại sao các hành tinh quay quanh mặt trời. Điều đó không có nghĩa là tôi không thể dự đoán chúng."</span></div></li>
+                                    <li><div class="jsi-principle-content"><strong>Loại bỏ hoàn toàn cảm xúc con người</strong><span>Sợ hãi khi thị trường sụp đổ, tham lam khi thị trường tăng — đây là những thiên kiến chết người đối với nhà giao dịch. Hệ thống của Renaissance vận hành tự động 100%, không có sự can thiệp của con người trong thời gian thực. Khi mô hình phát tín hiệu, lệnh được thực thi. Không có ngoại lệ. Không có "nhưng lần này thì khác".</span></div></li>
+                                    <li><div class="jsi-principle-content"><strong>Ưu thế nhỏ × Số lượng lớn = Lợi nhuận khổng lồ</strong><span>Renaissance không tìm kiếm những đặt cược lớn với tỷ suất sinh lời cao. Thay vào đó, họ tìm kiếm những ưu thế thống kê cực nhỏ — chỉ 0.01% đến 0.05% mỗi giao dịch — nhưng được thực hiện với số lượng khổng lồ: 150,000 đến 300,000 lệnh giao dịch mỗi ngày. Quỹ chỉ đúng trong khoảng 50.75% số giao dịch — nhưng điều đó là quá đủ khi nhân với hàng triệu giao dịch.</span></div></li>
+                                    <li><div class="jsi-principle-content"><strong>Khoa học thuần túy, không phải nghệ thuật</strong><span>Simons tin rằng đầu tư thành công là một khoa học có thể học được và cải thiện được — không phải một tài năng bẩm sinh hay một nghệ thuật mơ hồ. Mỗi chiến lược đều phải trải qua kiểm định thống kê nghiêm ngặt trước khi được triển khai thực tế. Thất bại là dữ liệu. Thành công là bằng chứng.</span></div></li>
+                                </ol>
+                            </section>
+
+                            <!-- 05 -->
+                            <section class="jsi-section">
+                                <div class="jsi-section-header"><span class="jsi-section-num">05</span><h2 class="jsi-section-title">Phương pháp <em>Giao dịch</em></h2></div>
+                                <p>Đây là trái tim của toàn bộ sự nghiệp Jim Simons — và cũng là bí mật được bảo vệ kỹ lưỡng nhất trong lịch sử tài chính. Những gì sau đây được tổng hợp từ các tài liệu công khai, lời khai của nhân viên cũ và công trình nghiên cứu của nhà báo Gregory Zuckerman trong cuốn "The Man Who Solved the Market".</p>
+                                <h3 class="jsi-h3">Bước 1: Thu thập &amp; Làm sạch Dữ liệu</h3>
+                                <p>Nền tảng của mọi thứ là dữ liệu. Renaissance thu thập một khối lượng dữ liệu thị trường khổng lồ và đa dạng: giá cổ phiếu, hàng hóa, ngoại hối, lãi suất — trải dài qua hàng thập kỷ, nhiều quốc gia và nhiều loại tài sản. Không dừng lại ở đó, họ còn thu thập dữ liệu phi thị trường: báo cáo thời tiết, dữ liệu nông nghiệp, số liệu kinh tế vĩ mô, thông tin địa chính trị, và thậm chí cả vị trí vệ tinh của các con tàu chở dầu. Một trong những bước then chốt — và tốn công sức nhất — là <em>làm sạch dữ liệu</em>: loại bỏ lỗi, điều chỉnh phân tách cổ phiếu, chuẩn hóa định dạng, loại trừ nhiễu kỹ thuật. Dữ liệu bẩn dẫn đến mô hình sai.</p>
+                                <h3 class="jsi-h3">Bước 2: Tìm kiếm Tín hiệu — Quy trình Ba Giai đoạn</h3>
+                                <p>Renaissance sử dụng một quy trình ba bước nghiêm ngặt để xác định các "tín hiệu" giao dịch có giá trị:</p>
+                                <div class="jsi-strat-grid">
+                                    <div class="jsi-strat-card"><span class="jsi-strat-icon">🔍</span><div class="jsi-strat-name">Giai đoạn 1</div><div class="jsi-strat-title">Phát hiện Quy luật Thống kê</div><p class="jsi-strat-body">Các nhà khoa học phân tích dữ liệu lịch sử để tìm kiếm những quy luật lặp đi lặp lại — những mối tương quan, những hiện tượng thị trường có thể được mã hóa thành tín hiệu giao dịch có thể kiểm chứng và nhân rộng hàng nghìn lần.</p></div>
+                                    <div class="jsi-strat-card"><span class="jsi-strat-icon">⚗️</span><div class="jsi-strat-name">Giai đoạn 2</div><div class="jsi-strat-title">Kiểm định Thống kê Nghiêm ngặt</div><p class="jsi-strat-body">Mỗi tín hiệu tiềm năng phải vượt qua loạt kiểm định thống kê khắt khe: kiểm tra độ có ý nghĩa (p-value), kiểm tra robust qua nhiều thời kỳ và thị trường khác nhau, loại trừ overfitting, và đánh giá tác động của chi phí giao dịch thực tế.</p></div>
+                                    <div class="jsi-strat-card"><span class="jsi-strat-icon">🤖</span><div class="jsi-strat-name">Giai đoạn 3</div><div class="jsi-strat-title">Tích hợp vào Mô hình Thống nhất</div><p class="jsi-strat-body">Điểm thiên tài của Renaissance: thay vì vận hành nhiều chiến lược riêng biệt, tất cả tín hiệu được tích hợp vào MỘT mô hình thống nhất duy nhất. Toàn bộ hệ thống học hỏi và tiến hóa như một sinh thể đơn nhất.</p></div>
+                                    <div class="jsi-strat-card"><span class="jsi-strat-icon">⚙️</span><div class="jsi-strat-name">Kết quả</div><div class="jsi-strat-title">Thực thi Tự động Hoàn toàn</div><p class="jsi-strat-body">Mô hình được thực thi hoàn toàn tự động — không có con người can thiệp vào thời điểm giao dịch thực tế. Hệ thống xử lý 150,000–300,000 lệnh mỗi ngày trên nhiều loại tài sản, múi giờ và thị trường trên toàn cầu, liên tục 24/7.</p></div>
+                                </div>
+                                <h3 class="jsi-h3">Các Chiến lược Giao dịch Cốt lõi</h3>
+                                <p><strong>Giao dịch Xu hướng (Trend Following / Momentum).</strong> Đây là chiến lược đầu tiên và đơn giản nhất mà Renaissance khai thác trong những năm đầu. Khi một tài sản đang trong xu hướng tăng hay giảm rõ ràng và bền vững, hệ thống sẽ đặt lệnh theo hướng xu hướng đó. Renaissance không chỉ nhận diện xu hướng đơn giản mà còn xây dựng mô hình dự đoán <em>độ dài</em> của xu hướng — một điểm mù của hầu hết các nhà giao dịch xu hướng khác.</p>
+                                <p><strong>Hồi quy Trung bình (Mean Reversion).</strong> Khi giá của một tài sản lệch quá xa khỏi giá trị trung bình lịch sử của nó hoặc mối quan hệ thông thường với các tài sản liên quan, thị trường có xu hướng điều chỉnh trở lại. Renaissance xây dựng mô hình phát hiện những lệch lạc này với độ chính xác thống kê cao, đặt lệnh ngược chiều với lệch lạc. Ưu thế cạnh tranh của Renaissance trong chiến lược này đến từ ba yếu tố: tốc độ phát hiện tín hiệu nhanh hơn đối thủ, định thời điểm chính xác hơn, và quản lý rủi ro được tích hợp sâu vào mô hình.</p>
+                                <p><strong>Chênh lệch Thống kê (Statistical Arbitrage).</strong> Khai thác mối quan hệ thống kê giữa các tài sản tương quan — ví dụ hai cổ phiếu trong cùng ngành, hoặc cổ phiếu với hợp đồng tương lai tương ứng. Khi mối quan hệ này tạm thời lệch khỏi mức cân bằng lịch sử, Renaissance mua tài sản bị định giá thấp và bán tài sản bị định giá cao, chờ đợi mối quan hệ phục hồi.</p>
+                                <p><strong>Tính Thời vụ (Seasonality).</strong> Thị trường thể hiện những quy luật có tính chu kỳ đáng tin cậy về mặt thống kê. Ví dụ điển hình mà các nhà nghiên cứu của Renaissance phát hiện: giá cổ phiếu thứ Hai thường phản chiếu hành vi của thứ Sáu, và thường có sự đảo chiều vào thứ Ba. Các mô hình thời vụ liên quan đến chu kỳ công bố số liệu kinh tế, báo cáo thu nhập doanh nghiệp, kỳ nghỉ lễ quốc gia và chu kỳ tháng/quý cũng được mã hóa thành tín hiệu.</p>
+                                <p><strong>Phản ứng với Sự kiện (Event-Based Trading).</strong> Giá tài sản thường có những chuyển động có thể dự đoán được trước và sau các sự kiện quan trọng: công bố số liệu lao động, quyết định lãi suất của Fed, công bố lợi nhuận doanh nghiệp. Renaissance xây dựng mô hình học từ hàng nghìn sự kiện lịch sử để dự đoán xác suất hướng dịch chuyển và mức độ biến động.</p>
+                                <p><strong>Khai thác Hành vi Nhà giao dịch (Trader Behavior Patterns).</strong> Thị trường không chỉ phản ánh thông tin kinh tế — nó còn phản ánh tâm lý con người. Renaissance phát hiện và khai thác những quy luật hành vi lặp đi lặp lại: ví dụ, các nhà giao dịch hàng hóa thường đóng vị thế vào thứ Sáu để tránh rủi ro cuối tuần, tạo ra áp lực bán có thể dự đoán được. Nhận ra điều này, Renaissance sẽ mua vào trước khi đợt bán xảy ra và hưởng lợi khi giá phục hồi vào đầu tuần sau.</p>
+                                <h3 class="jsi-h3">Công nghệ &amp; Kỹ thuật Toán học Đặc trưng</h3>
+                                <p><strong>Hidden Markov Models (HMM) — Mô hình Markov Ẩn.</strong> Đây là một trong những đột phá kỹ thuật quan trọng nhất của Renaissance. HMM — vốn được phát triển cho nhận dạng giọng nói và giải mã tín hiệu — được áp dụng để xác định các "chế độ thị trường" ẩn (market regimes). Giống như trong nhận dạng ngôn ngữ, nơi mô hình dự đoán âm tiết tiếp theo dựa trên chuỗi âm tiết trước đó, HMM trong tài chính dự đoán trạng thái thị trường tiếp theo (xu hướng mạnh, xu hướng yếu, biến động cao, biến động thấp) dựa trên chuỗi dữ liệu lịch sử.</p>
+                                <p><strong>Kernel Methods &amp; Machine Learning.</strong> Renaissance sử dụng kỹ thuật kernel — một phương pháp học máy ánh xạ dữ liệu vào không gian chiều cao hơn — để khám phá những mối tương quan ẩn không thể nhìn thấy trong dữ liệu thô. Phương pháp này cho phép mô hình phát hiện những quy luật phi tuyến tính phức tạp mà các phương pháp thống kê truyền thống bỏ qua.</p>
+                                <p><strong>Xử lý Tín hiệu (Signal Processing).</strong> Kỹ năng giải mã của Simons tại NSA không chỉ là một chi tiết tiểu sử thú vị — nó trực tiếp ảnh hưởng đến phương pháp của Renaissance. Thị trường tài chính, giống như tín hiệu vô tuyến, chứa đựng tín hiệu thực sự ẩn trong nhiễu. Các kỹ thuật lọc tín hiệu (signal filtering) và phân tích chuỗi thời gian (time series analysis) được áp dụng để tách tín hiệu có ý nghĩa ra khỏi nhiễu thống kê.</p>
+                                <p><strong>Giao dịch Tần suất Cao (High-Frequency Trading).</strong> Mặc dù Renaissance không phải công ty HFT thuần túy, nhưng hệ thống của họ hoạt động ở tần suất cực cao: 150,000 đến 300,000 lệnh mỗi ngày. Điều này đòi hỏi cơ sở hạ tầng công nghệ đẳng cấp: kết nối co-location với các sàn giao dịch, hệ thống thực thi lệnh có độ trễ cực thấp, và khả năng xử lý dữ liệu thời gian thực với tốc độ microsecond.</p>
+                                <p><strong>Quản lý Rủi ro Toàn diện.</strong> Kiểm soát rủi ro không phải là một module riêng biệt trong hệ thống Renaissance — nó được tích hợp sâu vào từng mô hình giao dịch. Sharpe Ratio vượt 2.0 cho thấy Renaissance đạt được lợi nhuận cao với biến động tương đối thấp — một bằng chứng về chất lượng quản lý rủi ro. Kích thước vị thế, giới hạn thua lỗ và phân tán danh mục được tính toán đồng thời với tín hiệu vào lệnh, không phải sau đó.</p>
+                                <div class="jsi-pullquote"><p>Chúng tôi đúng trong khoảng 50.75% số giao dịch. Nhưng khi bạn nhân con số đó với hàng triệu giao dịch, những tỷ lệ nhỏ đó trở thành những khoản tiền khổng lồ.</p><cite>— Robert Mercer, Quản lý Quỹ Medallion</cite></div>
+                            </section>
+
+                            <!-- 06 -->
+                            <section class="jsi-section">
+                                <div class="jsi-section-header"><span class="jsi-section-num">06</span><h2 class="jsi-section-title">Thành tựu <em>Nổi bật</em></h2></div>
+                                <div class="jsi-strat-grid">
+                                    <div class="jsi-strat-card"><span class="jsi-strat-icon">🏆</span><div class="jsi-strat-name">Toán học</div><div class="jsi-strat-title">Oswald Veblen Prize in Geometry (1976)</div><p class="jsi-strat-body">Giải thưởng cao quý nhất của AMS trong lĩnh vực hình học vi phân và tô pô, trao cho công trình Chern-Simons invariants — hiện được ứng dụng rộng rãi trong vật lý lý thuyết hiện đại.</p></div>
+                                    <div class="jsi-strat-card"><span class="jsi-strat-icon">📈</span><div class="jsi-strat-name">Tài chính</div><div class="jsi-strat-title">Hedge Fund Manager Hall of Fame (2008)</div><p class="jsi-strat-body">Được tôn vinh vào Sảnh Danh vọng của Institutional Investor Alpha, ghi nhận thành tích quản lý quỹ xuất sắc nhất trong lịch sử tài chính hiện đại.</p></div>
+                                    <div class="jsi-strat-card"><span class="jsi-strat-icon">🌍</span><div class="jsi-strat-name">Từ thiện</div><div class="jsi-strat-title">$500 triệu cho Đại học Stony Brook (2023)</div><p class="jsi-strat-body">Khoản tài trợ $500 triệu cho Stony Brook University — khoản tài trợ lớn thứ hai trong lịch sử cho một trường đại học công lập Mỹ. Tổng đóng góp cho khoa học và giáo dục của Quỹ Simons vượt hàng tỷ đô-la.</p></div>
+                                    <div class="jsi-strat-card"><span class="jsi-strat-icon">⭐</span><div class="jsi-strat-name">Vinh danh</div><div class="jsi-strat-title">"Tỷ phú thông minh nhất thế giới" — FT 2006</div><p class="jsi-strat-body">Financial Times vinh danh Simons là "the world's smartest billionaire" — không phải vì tài sản mà vì trí tuệ và phương pháp luận đứng sau nó. Năm 2016, tiểu hành tinh 6618 được đặt theo tên ông.</p></div>
+                                </div>
+                            </section>
+
+                            <!-- 07 -->
+                            <section class="jsi-section">
+                                <div class="jsi-section-header"><span class="jsi-section-num">07</span><h2 class="jsi-section-title">Di sản &amp; <em>Ảnh hưởng</em></h2></div>
+                                <p>Jim Simons không chỉ tạo ra một quỹ đầu tư thành công — ông tạo ra một cuộc cách mạng. Trước Renaissance Technologies, tài chính là lĩnh vực của các nhà kinh tế học, nhà phân tích phố Wall và những người tin vào "trực giác thị trường". Simons chứng minh rằng khoa học dữ liệu, toán học và thuật toán máy tính có thể đánh bại tất cả họ một cách nhất quán và tuyệt đối.</p>
+                                <p>Ngày nay, giao dịch định lượng (quantitative trading) chiếm hơn 60% khối lượng giao dịch hàng ngày trên thị trường cổ phiếu Mỹ — một con số không tưởng vào thời điểm Simons thành lập Renaissance năm 1982. Hàng trăm quỹ định lượng ra đời lấy cảm hứng từ mô hình của Renaissance, dù không ai tiếp cận được thành tích của Medallion Fund.</p>
+                                <p>Năm nguyên tắc sống mà Simons chia sẻ trong bài giảng tại MIT năm 2010 đã trở thành triết lý sống cho không chỉ các nhà đầu tư mà còn các nhà khoa học và doanh nhân trên toàn thế giới:</p>
+                                <ol class="jsi-principles">
+                                    <li><div class="jsi-principle-content"><strong>Làm điều gì đó mới — đừng chạy theo đám đông</strong><span>"Do something new. Don't run with the pack." Mọi đột phá lớn của Simons — từ Chern-Simons Theory đến Renaissance Technologies — đều đi ngược lại trào lưu phổ biến của thời đại.</span></div></li>
+                                    <li><div class="jsi-principle-content"><strong>Bao quanh bản thân bởi những người thông minh nhất</strong><span>"Surround yourself with the smartest people you can find." Simons không bao giờ coi bản thân là người thông minh nhất trong phòng — và ông chủ động tạo ra môi trường nơi những người thông minh nhất muốn làm việc cùng nhau.</span></div></li>
+                                    <li><div class="jsi-principle-content"><strong>Hãy để vẻ đẹp dẫn đường</strong><span>"Be guided by beauty." Với Simons, toán học đẹp và tài chính hiệu quả đều có cùng một nguồn gốc — sự gọn gàng, nhất quán và thanh lịch của một lý thuyết đúng đắn.</span></div></li>
+                                    <li><div class="jsi-principle-content"><strong>Đừng dễ dàng bỏ cuộc</strong><span>"Don't give up easily." Renaissance đã trải qua nhiều năm thất bại và loay hoay tìm phương pháp đúng đắn. Chỉ đến năm 1988, Medallion Fund mới tìm được mô hình hoạt động thực sự — nhưng khi đó, mọi thứ thay đổi vĩnh viễn.</span></div></li>
+                                    <li><div class="jsi-principle-content"><strong>Hãy hy vọng vào may mắn</strong><span>"Hope for good luck." Không phải mê tín — mà là thừa nhận rằng ngay cả hệ thống hoàn hảo nhất cũng cần một chút ân sủng của số phận để bắt đầu. Sự khiêm nhường này, nghịch lý thay, lại là dấu hiệu của sự thông thái thực sự.</span></div></li>
+                                </ol>
+                                <div class="jsi-pullquote"><p>Tôi không biết tại sao tôi sống tốt hơn những người khác. Tôi chỉ biết rằng chúng tôi đã tìm ra một cách tốt hơn để xử lý dữ liệu.</p><cite>— Jim Simons</cite></div>
+                                <p>Jim Simons mất đi, nhưng di sản ông để lại là vĩnh cửu: một bằng chứng sống về sức mạnh của toán học và khoa học dữ liệu; hàng tỷ đô-la tài trợ cho nghiên cứu khoa học cơ bản qua Quỹ Simons; và một câu hỏi mà thị trường tài chính sẽ mãi tự hỏi — còn bao nhiêu tín hiệu ẩn đang chờ người đủ thông minh để nhìn thấy chúng?</p>
+                            </section>
+
+                            </div><!-- /.jsi-content -->
+                            <div class="jsi-article-footer">
+                                <p>Tổng hợp thông tin về <span>James Harris Simons</span> (1938–2024) &nbsp;·&nbsp; Nhà toán học · Mật mã gia · Nhà đầu tư huyền thoại</p>
+                                <p>Tài liệu chỉ đọc — Mọi dữ liệu được tổng hợp từ nguồn công khai</p>
+                            </div>
+                        </div><!-- /.article-jimsimons -->
+                    </div><!-- /#article-jimsimons-panel -->
+                </div><!-- /#huyen-thoai-article-view -->
+            </div><!-- /#panel-huyen-thoai -->
+
 
             <!-- PANEL 6: GAME -->
             <div id="panel-game" class="tab-panel">

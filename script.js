@@ -140,6 +140,14 @@ function handleRouting(path) {
         } else {
             openCommodityArticle('', false);
         }
+    } else if (path.startsWith('/huyen-thoai')) {
+        switchTab('huyen-thoai', false);
+        const subPath = path.substring('/huyen-thoai'.length);
+        if (subPath === '/jim-simons') {
+            openLegendArticle('jim-simons', false);
+        } else {
+            openLegendArticle('', false);
+        }
     } else if (path.startsWith('/su-kien')) {
         switchTab('su-kien', false);
         const subPath = path.substring('/su-kien'.length);
@@ -930,3 +938,29 @@ function tetrisPause()            { TETRIS.pause(); }
 function tetrisInput(action)      { TETRIS.handleInput(action); }
 function tetrisToggleFullscreen() { TETRIS.toggleFullscreen(); }
 function tetrisSetDifficulty(d)   { TETRIS.setDifficulty(d, false); }
+
+function openLegendArticle(articleId, updateUrl = true) {
+    const listView = document.getElementById('huyen-thoai-list-view');
+    const articleView = document.getElementById('huyen-thoai-article-view');
+    if (!listView || !articleView) return;
+
+    document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
+
+    if (articleId === 'jim-simons') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-jimsimons-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'huyen-thoai', articleId: 'jim-simons' }, '', '/huyen-thoai/jim-simons');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+        articleView.classList.remove('active');
+        listView.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'huyen-thoai', articleId: '' }, '', '/huyen-thoai');
+    }
+}
+
+function openHomeLegendArticle(articleId) {
+    switchTab('huyen-thoai', false);
+    openLegendArticle(articleId, true);
+}
