@@ -13,25 +13,23 @@ function setTheme(theme) {
     if (theme === 'bull') {
         body.classList.remove('theme-bear');
         body.classList.add('theme-bull');
-        btnBull.classList.add('active');
-        btnBear.classList.remove('active');
-        
+        if (btnBull) btnBull.classList.add('active');
+        if (btnBear) btnBear.classList.remove('active');
+
         if (sentimentText) sentimentText.textContent = 'Thị trường Bò tót';
         if (philosophyText) {
             philosophyText.innerHTML = `Khi thị trường trong pha <strong>Tăng giá (Bull Market)</strong>, chúng tôi tập trung phát triển các bảng Dashboard tối ưu hóa hiệu năng, xử lý luồng dữ liệu thời gian thực (Websockets) để nắm bắt nhanh các cơ hội dòng tiền lớn.`;
         }
-        console.log('%c📈 SENTIMENT: BULLISH. Markets trending up.', 'color: #10b981; font-weight: bold;');
     } else {
         body.classList.remove('theme-bull');
         body.classList.add('theme-bear');
-        btnBear.classList.add('active');
-        btnBull.classList.remove('active');
-        
+        if (btnBear) btnBear.classList.add('active');
+        if (btnBull) btnBull.classList.remove('active');
+
         if (sentimentText) sentimentText.textContent = 'Thị trường Gấu ngủ';
         if (philosophyText) {
             philosophyText.innerHTML = `Khi thị trường bước vào pha <strong>Giảm giá (Bear Market)</strong>, trọng tâm dịch chuyển sang các hệ thống quản trị rủi ro, tối ưu hóa bộ lọc tín hiệu kỹ thuật để phòng vệ danh mục và cảnh báo tự động.`;
         }
-        console.log('%c📉 SENTIMENT: BEARISH. Protection mode activated.', 'color: #f43f5e; font-weight: bold;');
     }
 }
 
