@@ -349,26 +349,76 @@ body {
 }
 
 .social-btn {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-color);
-    color: var(--text-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 1.15rem;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+/* GitHub */
+.social-btn[aria-label="GitHub"] {
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.02);
+}
+.social-btn[aria-label="GitHub"]:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Gmail */
+.social-btn[aria-label="Gmail"] {
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    background: rgba(239, 68, 68, 0.06);
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.05);
+}
+.social-btn[aria-label="Gmail"]:hover {
+    color: #ffffff;
+    border-color: #ef4444;
+    background: #ef4444;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+}
+
+/* Telegram */
+.social-btn[aria-label="Telegram"] {
+    color: #7dd3fc;
+    border: 1px solid rgba(14, 165, 233, 0.3);
+    background: rgba(14, 165, 233, 0.06);
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.05);
+}
+.social-btn[aria-label="Telegram"]:hover {
+    color: #ffffff;
+    border-color: #0ea5e9;
+    background: #0ea5e9;
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.6);
+}
+
+/* X (Twitter) */
+.social-btn[aria-label="X (Twitter)"] {
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.02);
+}
+.social-btn[aria-label="X (Twitter)"]:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
 .social-btn:hover {
-    color: white;
-    border-color: var(--theme-color);
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 15px var(--theme-glow);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
 }
 
 /* Tab Navigation Bar */
