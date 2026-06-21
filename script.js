@@ -69,8 +69,10 @@ function switchTab(tabId, updateUrl = true) {
     const targetPanel = document.getElementById(`panel-${tabId}`);
     if (targetPanel) targetPanel.classList.add('active');
 
-    // Update URL if requested
-    if (updateUrl) {
+    // If switching to a main tab, default the commodity sub-views to list if it's updateUrl
+    if (tabId === 'hang-hoa' && updateUrl) {
+        openCommodityArticle('', true);
+    } else if (updateUrl) {
         const route = tabToRoute[tabId] || '/';
         history.pushState({ tabId }, '', route);
     }
@@ -78,22 +80,61 @@ function switchTab(tabId, updateUrl = true) {
     console.log(`🧭 Switched to tab: ${tabId}`);
 }
 
-function switchSubTab(subTabId) {
-    // Deactivate sub-tabs and sub-panels
-    document.querySelectorAll('.sub-tab-btn').forEach(btn => btn.classList.remove('active'));
-    document.querySelectorAll('.commodity-sub-panel').forEach(panel => panel.classList.remove('active'));
+function openCommodityArticle(articleId, updateUrl = true) {
+    const listView = document.getElementById('commodity-list-view');
+    const articleView = document.getElementById('commodity-article-view');
     
-    // Activate target sub-tab button
-    const targetBtn = document.querySelector(`.sub-tab-btn[onclick="switchSubTab('${subTabId}')"]`);
-    if (targetBtn) targetBtn.classList.add('active');
+    if (!listView || !articleView) return;
     
-    // Activate target sub-panel
-    const targetPanel = document.getElementById(`sub-panel-${subTabId}`);
-    if (targetPanel) targetPanel.classList.add('active');
+    // Deactivate all article panels
+    document.querySelectorAll('.commodity-article-panel').forEach(panel => panel.classList.remove('active'));
     
-    console.log(`📂 Switched commodity sub-tab to: ${subTabId}`);
+    if (articleId === 'tien-si-dong') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const targetPanel = document.getElementById('article-tiensidong-panel');
+        if (targetPanel) targetPanel.classList.add('active');
+        
+        if (updateUrl) {
+            history.pushState({ tabId: 'hang-hoa', articleId: 'tien-si-dong' }, '', '/hang-hoa/tien-si-dong');
+        }
+    } else if (articleId === 'luoc-su-dong') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const targetPanel = document.getElementById('article-luocsudong-panel');
+        if (targetPanel) targetPanel.classList.add('active');
+        
+        if (updateUrl) {
+            history.pushState({ tabId: 'hang-hoa', articleId: 'luoc-su-dong' }, '', '/hang-hoa/luoc-su-dong');
+        }
+    } else {
+        // Go back to list view
+        articleView.classList.remove('active');
+        listView.classList.add('active');
+        
+        if (updateUrl) {
+            history.pushState({ tabId: 'hang-hoa', articleId: '' }, '', '/hang-hoa');
+        }
+    }
 }
 
+// Router matching logic for paths
+function handleRouting(path) {
+    if (path.startsWith('/hang-hoa')) {
+        switchTab('hang-hoa', false);
+        const subPath = path.substring('/hang-hoa'.length);
+        if (subPath === '/tien-si-dong') {
+            openCommodityArticle('tien-si-dong', false);
+        } else if (subPath === '/luoc-su-dong') {
+            openCommodityArticle('luoc-su-dong', false);
+        } else {
+            openCommodityArticle('', false);
+        }
+    } else {
+        const tabId = routeToTab[path] || 'trang-chu';
+        switchTab(tabId, false);
+    }
+}
 
 // Initialize router click events
 function initRouter() {
@@ -109,14 +150,12 @@ function initRouter() {
     // Handle browser Back/Forward navigation
     window.addEventListener('popstate', (e) => {
         const path = window.location.pathname;
-        const tabId = routeToTab[path] || 'trang-chu';
-        switchTab(tabId, false);
+        handleRouting(path);
     });
 
     // Handle initial load routing
     const initialPath = window.location.pathname;
-    const initialTab = routeToTab[initialPath] || 'trang-chu';
-    switchTab(initialTab, false);
+    handleRouting(initialPath);
 }
 
 

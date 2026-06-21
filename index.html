@@ -149,16 +149,9 @@
             <div id="panel-hang-hoa" class="tab-panel">
                 <h2 class="section-title"><i class="fa-solid fa-droplet"></i> Bảng giá & Phân tích Hàng hóa</h2>
                 
-                <!-- Sub Tab Navigation -->
-                <div class="commodity-sub-nav">
-                    <button class="sub-tab-btn active" onclick="switchSubTab('price')"><i class="fa-solid fa-table"></i> Bảng giá</button>
-                    <button class="sub-tab-btn" onclick="switchSubTab('tiensidong')"><i class="fa-solid fa-user-doctor"></i> Hồ sơ "Tiến sĩ Đồng"</button>
-                    <button class="sub-tab-btn" onclick="switchSubTab('luocsudong')"><i class="fa-solid fa-book-open"></i> Hồ sơ "Lược sử Đồng"</button>
-                </div>
-
-                <!-- Sub Panel 1: Price Table -->
-                <div id="sub-panel-price" class="commodity-sub-panel active">
-                    <div class="commodity-table-wrapper">
+                <!-- Commodity List View (Price table + Article list) -->
+                <div id="commodity-list-view" class="commodity-view active">
+                    <div class="commodity-table-wrapper" style="margin-bottom: 2.25rem;">
                         <table class="commodity-table">
                             <thead>
                                 <tr>
@@ -196,11 +189,44 @@
                             </tbody>
                         </table>
                     </div>
+
+                    <h3 class="section-title" style="margin-top: 1.5rem;"><i class="fa-solid fa-square-rss"></i> Bài viết mới nhất</h3>
+                    
+                    <div class="news-list">
+                        <!-- Post 1: Tien Si Dong -->
+                        <div class="news-card clickable-card" onclick="openCommodityArticle('tien-si-dong')">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-user-doctor"></i> Phân tích kinh tế</span>
+                                <span class="news-time">20/06/2026</span>
+                            </div>
+                            <h3 class="news-heading">Tiến Sĩ Đồng — Hồ Sơ Chẩn Đoán Kinh Tế Và Thị Trường Chứng Khoán</h3>
+                            <p class="news-excerpt">Khi nào kim loại công nghiệp này phản ánh đúng nhịp đập của nền kinh tế và thị trường chứng khoán toàn cầu — và khi nào nó nói một câu chuyện khác.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc bài viết</span>
+                            </div>
+                        </div>
+
+                        <!-- Post 2: Luoc Su Dong -->
+                        <div class="news-card clickable-card" onclick="openCommodityArticle('luoc-su-dong')">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-clock-rotate-left"></i> Lịch sử & Địa chất</span>
+                                <span class="news-time">15/06/2026</span>
+                            </div>
+                            <h3 class="news-heading">Lược Sử Đồng — Kim Loại Ngoan Cố Nhất Lịch Sử</h3>
+                            <p class="news-excerpt">Kim loại đầu tiên loài người biết dùng, kim loại cuối cùng loài người có thể từ bỏ — hành trình 9.000 năm của nguyên tố số 29.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc bài viết</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Sub Panel 2: Tien Si Dong -->
-                <div id="sub-panel-tiensidong" class="commodity-sub-panel">
-                    <div class="article-tiensidong">
+                <!-- Commodity Article View (Full article content container) -->
+                <div id="commodity-article-view" class="commodity-view">
+                    <button class="back-to-list-btn" onclick="openCommodityArticle('')"><i class="fa-solid fa-arrow-left"></i> Quay lại danh sách</button>
+                    
+                    <div id="article-tiensidong-panel" class="commodity-article-panel">
+                        <div class="article-tiensidong">
 
   <!-- ===================== MASTHEAD ===================== -->
   <header class="masthead">
@@ -640,11 +666,10 @@
   </footer>
 
 </div>
-                </div>
+                    </div>
 
-                <!-- Sub Panel 3: Luoc Su Dong -->
-                <div id="sub-panel-luocsudong" class="commodity-sub-panel">
-                    <div class="article-luocsudong">
+                    <div id="article-luocsudong-panel" class="commodity-article-panel">
+                        <div class="article-luocsudong">
 
 <!-- ========== HERO ========== -->
 <header class="hero">
@@ -1371,6 +1396,7 @@
 </footer>
 
 </div>
+                    </div>
                 </div></div>
 
             <!-- PANEL 4: SỰ KIỆN -->

@@ -997,45 +997,54 @@ body {
 }
 
 
+
+
 /* --- SCOPED ARTICLES CSS --- */
 
-/* Sub-tab navigation styles */
-.commodity-sub-nav {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1.25rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.75rem;
+/* Scoped sub-views inside Commodities */
+.commodity-view {
+    display: none;
 }
-.sub-tab-btn {
-    border: none;
-    background: transparent;
-    color: var(--text-secondary);
+.commodity-view.active {
+    display: block;
+    animation: panelFadeIn 0.5s ease;
+}
+.commodity-article-panel {
+    display: none;
+}
+.commodity-article-panel.active {
+    display: block;
+}
+.clickable-card {
+    cursor: pointer;
+    transition: transform 0.25s ease, border-color 0.25s ease !important;
+}
+.clickable-card:hover {
+    transform: translateY(-3px) scale(1.01) !important;
+    border-color: var(--theme-color) !important;
+    box-shadow: 0 10px 25px -10px var(--theme-glow) !important;
+}
+.back-to-list-btn {
+    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--text-primary);
     font-family: var(--font-mono);
     font-size: 0.8rem;
     font-weight: 700;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
+    padding: 0.6rem 1.25rem;
+    border-radius: 12px;
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
     transition: all 0.2s ease;
 }
-.sub-tab-btn:hover {
-    color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.02);
-}
-.sub-tab-btn.active {
+.back-to-list-btn:hover {
     background: var(--theme-color);
     color: #070a13;
-}
-.commodity-sub-panel {
-    display: none;
-}
-.commodity-sub-panel.active {
-    display: block;
-    animation: panelFadeIn 0.4s ease;
+    border-color: var(--theme-color);
+    box-shadow: 0 0 15px var(--theme-glow);
 }
 
 /* Scoped Article Styles for Tien Si Dong */
