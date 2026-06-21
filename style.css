@@ -3487,3 +3487,198 @@ color:var(--ink-soft);}
         display: none;
     }
 }
+
+
+.article-richardwyckoff {
+    --paper:#f3e9d6;
+    --paper-deep:#eadfc6;
+    --paper-deeper:#e2d4b8;
+    --ink:#2c2316;
+    --ink-soft:#5d4f3a;
+    --rule:#c9b696;
+    --brass:#a3702f;
+    --brass-deep:#8a5a22;
+    --green:#3f5b42;
+    --green-tint:rgba(63,91,66,0.09);
+    --red:#8a3b35;
+    --red-tint:rgba(138,59,53,0.09);
+
+    background-color: var(--paper);
+    background-image:
+      repeating-linear-gradient(0deg, rgba(0,0,0,0.012) 0px, rgba(0,0,0,0.012) 1px, transparent 1px, transparent 3px),
+      radial-gradient(ellipse at top, rgba(255,255,255,0.35), transparent 60%);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    font-size: 17px;
+    line-height: 1.78;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.article-richardwyckoff * { box-sizing: border-box; }
+
+.article-richardwyckoff .container { max-width:760px; margin:0 auto; padding:0 28px; }
+
+/* ===== HERO ===== */
+.article-richardwyckoff .hero { text-align:center; padding:72px 24px 36px; border-bottom:1px solid var(--rule); }
+.article-richardwyardoff .hero .eyebrow,
+.article-richardwyckoff .hero .eyebrow {
+    font-family:'Special Elite', monospace; font-size:11px; letter-spacing:0.32em;
+    text-transform:uppercase; color:var(--brass-deep); margin-bottom:18px;
+}
+.article-richardwyckoff .hero h1 {
+    font-family:'Playfair Display', serif; font-weight:900;
+    font-size:clamp(2.4rem, 7vw, 4.4rem); line-height:1.05; margin:0; letter-spacing:0.01em;
+}
+.article-richardwyckoff .hero .dates {
+    font-family:'Special Elite', monospace; font-size:1.05rem; color:var(--brass-deep);
+    margin:14px 0 6px; letter-spacing:0.08em;
+}
+.article-richardwyckoff .hero .tagline {
+    font-family:'Playfair Display', serif; font-style:italic; font-weight:500;
+    font-size:1.25rem; color:var(--ink-soft); max-width:540px; margin:14px auto 0; line-height:1.5;
+}
+.article-richardwyckoff .hero .ornament { margin:28px auto 0; width:120px; height:14px; opacity:0.55; }
+
+/* ===== TICKER ===== */
+.article-richardwyckoff .ticker { background:var(--ink); color:var(--paper); font-family:'Special Elite', monospace;
+    font-size:12.5px; letter-spacing:0.04em; padding:14px 0; }
+.article-richardwyckoff .ticker .ticker-inner {
+    max-width:900px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:center;
+    align-items:center; gap:0.7em 1.6em; padding:0 20px; text-align:center;
+}
+.article-richardwyckoff .ticker .dot { color:var(--brass); }
+
+/* ===== TOC ===== */
+.article-richardwyckoff .toc { max-width:620px; margin:56px auto; padding:34px 36px; background:var(--paper-deep); border:1px solid var(--rule); }
+.article-richardwyckoff .toc h2 { font-family:'Playfair Display', serif; font-weight:700; font-size:1.5rem; margin:0 0 22px; text-align:center; letter-spacing:0.04em; }
+.article-richardwyckoff .toc ol { list-style:none; margin:0; padding:0; }
+.article-richardwyckoff .toc li { margin:0; padding:9px 0; border-bottom:1px dotted var(--rule); }
+.article-richardwyckoff .toc li:last-child { border-bottom:none; }
+.article-richardwyckoff .toc a { display:flex; align-items:baseline; gap:14px; color:var(--ink); text-decoration:none; font-size:0.98rem; }
+.article-richardwyckoff .toc a:hover { color:var(--brass-deep); }
+.article-richardwyckoff .toc .roman { font-family:'Special Elite', monospace; color:var(--brass); font-size:0.85rem; min-width:2.4em; }
+
+/* ===== MAIN ===== */
+.article-richardwyckoff main { max-width:700px; margin:0 auto; padding:10px 28px 0; }
+.article-richardwyckoff section { margin-top:64px; }
+.article-richardwyckoff section > h2 {
+    font-family:'Playfair Display', serif; font-weight:700; font-size:clamp(1.6rem, 4vw, 2.1rem);
+    display:flex; align-items:baseline; gap:18px; margin:0 0 28px; line-height:1.25;
+}
+.article-richardwyckoff section > h2 .num {
+    font-family:'Special Elite', monospace; font-size:0.85rem; color:var(--brass-deep);
+    border:1px solid var(--brass); padding:5px 11px; flex-shrink:0; letter-spacing:0.05em;
+}
+.article-richardwyckoff h3 { font-family:'Playfair Display', serif; font-weight:600; font-size:1.28rem; margin:38px 0 14px; color:var(--ink); }
+.article-richardwyckoff h3 .num { color:var(--brass-deep); font-style:italic; margin-right:8px; }
+.article-richardwyckoff p { margin:0 0 20px; text-align:justify; hyphens:auto; }
+.article-richardwyckoff p.lead::first-letter {
+    font-family:'Playfair Display', serif; font-weight:900; font-size:3.6em; line-height:0.85;
+    float:left; padding:0.04em 0.1em 0 0; color:var(--brass-deep);
+}
+.article-richardwyckoff strong { color:var(--ink); }
+.article-richardwyckoff em.term { font-style:italic; color:var(--brass-deep); }
+
+/* ===== TIMELINE ===== */
+.article-richardwyckoff .timeline-wrap { margin:56px 0; padding:36px 28px 12px; background:var(--paper-deep); border:1px solid var(--rule); }
+.article-richardwyckoff .timeline-wrap h2 { font-family:'Playfair Display', serif; font-weight:700; font-size:1.4rem; text-align:center; margin:0 0 36px; letter-spacing:0.05em; }
+.article-richardwyckoff .timeline { position:relative; padding-left:104px; }
+.article-richardwyckoff .timeline::before { content:""; position:absolute; left:70px; top:4px; bottom:4px; width:1px; background:var(--rule); }
+.article-richardwyckoff .timeline-item { position:relative; margin-bottom:26px; padding-bottom:2px; }
+.article-richardwyckoff .timeline-item:last-child { margin-bottom:0; }
+.article-richardwyckoff .timeline-item::before {
+    content:""; position:absolute; left:-37px; top:6px; width:9px; height:9px; border-radius:50%;
+    background:var(--brass); border:2px solid var(--paper-deep);
+}
+.article-richardwyckoff .timeline-item .year {
+    position:absolute; left:-104px; width:70px; text-align:right; font-family:'Special Elite', monospace;
+    color:var(--brass-deep); font-size:0.82rem; padding-top:3px;
+}
+.article-richardwyckoff .timeline-item p { margin:0; font-size:0.95rem; text-align:left; }
+
+/* ===== BLOCKQUOTE ===== */
+.article-richardwyckoff blockquote {
+    font-family:'Special Elite', monospace; font-size:0.92rem; line-height:1.85; color:var(--ink-soft);
+    background:var(--paper-deep); border-left:3px solid var(--brass); padding:18px 26px; margin:32px 0;
+}
+.article-richardwyckoff blockquote .cite { display:block; margin-top:10px; font-size:0.78rem; color:var(--brass-deep); letter-spacing:0.05em; }
+
+/* ===== TABLES ===== */
+.article-richardwyckoff .law-table, .article-richardwyckoff .step-table { width:100%; border-collapse:collapse; margin:28px 0 36px; font-size:0.93rem; }
+.article-richardwyckoff .law-table th, .article-richardwyckoff .law-table td,
+.article-richardwyckoff .step-table th, .article-richardwyckoff .step-table td {
+    text-align:left; padding:13px 10px; border-bottom:1px solid var(--rule); vertical-align:top;
+}
+.article-richardwyckoff .law-table th, .article-richardwyckoff .step-table th {
+    font-family:'Special Elite', monospace; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--brass-deep); border-bottom:2px solid var(--ink);
+}
+.article-richardwyckoff .law-table td:first-child,
+.article-richardwyckoff .step-table td:first-child {
+    font-family:'Playfair Display', serif; font-weight:700; color:var(--brass-deep); white-space:nowrap; width:1%; padding-right:18px;
+}
+
+/* ===== FIGURES / DIAGRAMS ===== */
+.article-richardwyckoff figure { margin:42px 0; }
+.article-richardwyckoff figure .diagram-frame { background:var(--paper-deep); border:1px solid var(--rule); padding:18px 10px; }
+.article-richardwyckoff figure svg { display:block; width:100%; height:auto; }
+.article-richardwyckoff figcaption { font-family:'Special Elite', monospace; font-size:0.78rem; color:var(--ink-soft); text-align:center; margin-top:14px; line-height:1.6; }
+.article-richardwyckoff figcaption .fig-num { color:var(--brass-deep); font-weight:bold; }
+
+/* ===== EVENT LEGEND ===== */
+.article-richardwyckoff .legend { display:grid; grid-template-columns:1fr 1fr; gap:6px 28px; font-size:0.85rem; margin:18px 0 0; font-family:'Special Elite', monospace; color:var(--ink-soft); }
+.article-richardwyckoff .legend div span { color:var(--brass-deep); font-weight:bold; margin-right:6px; }
+
+/* ===== DIVIDER ===== */
+.article-richardwyckoff .divider { display:flex; justify-content:center; margin:56px 0; opacity:0.5; }
+
+/* ===== NOTE BOX ===== */
+.article-richardwyckoff .note { background:var(--paper-deep); border:1px solid var(--rule); padding:20px 24px; margin:32px 0; font-size:0.94rem; }
+.article-richardwyckoff .note .note-label { font-family:'Special Elite', monospace; font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--brass-deep); display:block; margin-bottom:8px; }
+.article-richardwyckoff .note p { margin-bottom:0; text-align:left; }
+.article-richardwyckoff .note p + p { margin-top:12px; }
+
+/* ===== FOOTER ===== */
+.article-richardwyckoff footer { margin-top:80px; border-top:1px solid var(--rule); padding:40px 28px 56px; text-align:center; font-family:'Special Elite', monospace; font-size:0.78rem; color:var(--ink-soft); line-height:2; }
+.article-richardwyckoff footer .seal { font-family:'Playfair Display', serif; font-style:italic; font-size:1.1rem; color:var(--ink); margin-bottom:18px; }
+.article-richardwyckoff footer .sources { max-width:560px; margin:18px auto 0; text-align:left; font-size:0.74rem; color:var(--ink-soft); }
+.article-richardwyckoff footer .sources p { margin:0 0 6px; text-align:left; }
+
+.article-richardwyckoff .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 20px 28px;
+    padding: 8px 18px;
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--ink-soft);
+    font-family: 'Special Elite', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+.article-richardwyckoff .back-btn:hover {
+    border-color: var(--brass-deep);
+    color: var(--brass-deep);
+    background: var(--paper-deep);
+}
+
+@media (max-width:600px) {
+    .article-richardwyckoff { font-size:15.5px; }
+    .article-richardwyckoff .toc { padding:26px 22px; }
+    .article-richardwyckoff .timeline { padding-left:88px; }
+    .article-richardwyckoff .timeline::before { left:58px; }
+    .article-richardwyckoff .timeline-item::before { left:-31px; }
+    .article-richardwyckoff .timeline-item .year { left:-88px; width:54px; font-size:0.74rem; }
+}
+
+@media (max-width:520px) {
+    .article-richardwyckoff .legend { grid-template-columns: 1fr; }
+}

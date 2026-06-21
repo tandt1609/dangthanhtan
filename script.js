@@ -147,6 +147,8 @@ function handleRouting(path) {
         const subPath = path.substring('/huyen-thoai'.length);
         if (subPath === '/jim-simons') {
             openLegendArticle('jim-simons', false);
+        } else if (subPath === '/richard-wyckoff') {
+            openLegendArticle('richard-wyckoff', false);
         } else {
             openLegendArticle('', false);
         }
@@ -1019,6 +1021,13 @@ function openLegendArticle(articleId, updateUrl = true) {
         const panel = document.getElementById('article-jimsimons-panel');
         if (panel) panel.classList.add('active');
         if (updateUrl) history.pushState({ tabId: 'huyen-thoai', articleId: 'jim-simons' }, '', '/huyen-thoai/jim-simons');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'richard-wyckoff') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-richard-wyckoff-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'huyen-thoai', articleId: 'richard-wyckoff' }, '', '/huyen-thoai/richard-wyckoff');
         window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
         articleView.classList.remove('active');
