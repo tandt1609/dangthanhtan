@@ -2467,7 +2467,7 @@ color:var(--ink-soft);}
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 8px;
 }
 
 .dpad {
@@ -2475,83 +2475,120 @@ color:var(--ink-soft);}
     grid-template-columns: repeat(3, 44px);
     grid-template-rows: repeat(3, 44px);
     gap: 4px;
+    flex-shrink: 0;
 }
 .dpad button {
     border: none;
     background: var(--case-light);
     box-shadow: 0 4px 0 rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.08);
-    color: #cfc6c9;
-    font-size: 17px;
+    color: #d4c8cc;
+    font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
     cursor: pointer;
+    transition: transform 0.06s;
 }
 .dpad button:active { box-shadow: 0 1px 0 rgba(0,0,0,0.45); transform: translateY(3px); }
-.dpad .d-up { grid-column: 2; grid-row: 1; border-radius: 6px 6px 0 0; }
-.dpad .d-left { grid-column: 1; grid-row: 2; border-radius: 6px 0 0 6px; }
-.dpad .d-center { grid-column: 2; grid-row: 2; background: var(--case); box-shadow: none; pointer-events: none; }
+.dpad .d-up    { grid-column: 2; grid-row: 1; border-radius: 6px 6px 0 0; }
+.dpad .d-left  { grid-column: 1; grid-row: 2; border-radius: 6px 0 0 6px; }
+.dpad .d-center{ grid-column: 2; grid-row: 2; background: var(--case); box-shadow: none; pointer-events: none; }
 .dpad .d-right { grid-column: 3; grid-row: 2; border-radius: 0 6px 6px 0; }
-.dpad .d-down { grid-column: 2; grid-row: 3; border-radius: 0 0 6px 6px; }
+.dpad .d-down  { grid-column: 2; grid-row: 3; border-radius: 0 0 6px 6px; }
 
+/* Center: THẢ drop button */
 .mid-controls {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    flex: 1;
 }
+
+/* Right column: XOAY on top, PAUSE+mute bottom-right */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* PAUSE + mute grouped horizontally at bottom-right */
+.sys-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Round action buttons (XOAY, THẢ) */
+.round-btn {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    border: none;
+    background: radial-gradient(circle at 35% 28%, #ff7a8a, var(--accent));
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 0 #9c2333, inset 0 1px 0 rgba(255,255,255,0.35);
+    cursor: pointer;
+    line-height: 1.3;
+    transition: transform 0.06s;
+}
+.round-btn:active { box-shadow: 0 1px 0 #9c2333; transform: translateY(4px); }
+
+/* THẢ (drop) – slightly larger, green-olive tint */
+.drop-btn {
+    width: 70px; height: 70px;
+    background: radial-gradient(circle at 35% 28%, #d6e8b4, #8aab60);
+    color: #1e2d10;
+    box-shadow: 0 5px 0 #4e6a2a, inset 0 1px 0 rgba(255,255,255,0.35);
+}
+.drop-btn:active { box-shadow: 0 1px 0 #4e6a2a; transform: translateY(4px); }
+
+.round-btn.alt {
+    background: radial-gradient(circle at 35% 28%, #d6e8b4, #8aab60);
+    color: #1e2d10;
+    box-shadow: 0 5px 0 #4e6a2a, inset 0 1px 0 rgba(255,255,255,0.35);
+}
+.round-btn.alt:active { box-shadow: 0 1px 0 #4e6a2a; transform: translateY(4px); }
+
+/* START / PAUSE pill button */
 .start-btn {
-    font-family: 'Press Start 2P', monospace;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     color: #3a1f12;
     background: var(--shell-dark);
     border: none;
-    padding: 11px 16px;
+    padding: 9px 14px;
     border-radius: 999px;
     box-shadow: 0 4px 0 rgba(0,0,0,0.3);
     cursor: pointer;
+    transition: transform 0.06s;
 }
 .start-btn:active { box-shadow: 0 1px 0 rgba(0,0,0,0.3); transform: translateY(3px); }
+
+/* Mute button */
 .mute-btn {
-    width: 34px; height: 34px;
+    width: 32px; height: 32px;
     border-radius: 50%;
     border: none;
     background: var(--case-light);
     color: #cfc6c9;
-    font-size: 15px;
+    font-size: 14px;
     box-shadow: 0 3px 0 rgba(0,0,0,0.4);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.06s;
 }
 .mute-btn:active { box-shadow: 0 1px 0 rgba(0,0,0,0.4); transform: translateY(2px); }
-
-.action-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-.round-btn {
-    width: 62px; height: 62px;
-    border-radius: 50%;
-    border: none;
-    background: radial-gradient(circle at 35% 30%, #ff6f80, var(--accent));
-    color: #3a0b12;
-    font-family: 'Press Start 2P', monospace;
-    font-size: 9px;
-    box-shadow: 0 5px 0 #9c2333, inset 0 1px 0 rgba(255,255,255,0.35);
-    cursor: pointer;
-    line-height: 1.3;
-}
-.round-btn:active { box-shadow: 0 1px 0 #9c2333; transform: translateY(4px); }
-.round-btn.alt {
-    background: radial-gradient(circle at 35% 30%, #cfd6c2, #8a9a76);
-    box-shadow: 0 5px 0 #5c6a4a, inset 0 1px 0 rgba(255,255,255,0.35);
-    color: #23291a;
-}
-.round-btn.alt:active { box-shadow: 0 1px 0 #5c6a4a; }
 
 /* FULLSCREEN SIMULATION FOR retro device */
 .tetris-device-container.is-fullscreen {
@@ -2592,12 +2629,25 @@ color:var(--ink-soft);}
         font-size: 14px;
     }
     .round-btn {
-        width: 52px;
-        height: 52px;
+        width: 54px;
+        height: 54px;
+        font-size: 10px;
+    }
+    .drop-btn {
+        width: 60px;
+        height: 60px;
     }
     .start-btn {
-        padding: 8px 12px;
-        font-size: 8px;
+        padding: 7px 10px;
+        font-size: 9px;
+    }
+    .mute-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+    }
+    .sys-controls {
+        gap: 6px;
     }
 }
 \n/* ============================================================
