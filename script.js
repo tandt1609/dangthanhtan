@@ -117,6 +117,12 @@ function openCommodityArticle(articleId, updateUrl = true) {
         }
     }
 }
+function openHomeArticle(articleId) {
+    // Switch to Commodities tab without updating the URL yet
+    switchTab('hang-hoa', false);
+    // Open the commodity article and update the URL to its nested path
+    openCommodityArticle(articleId, true);
+}
 
 // Router matching logic for paths
 function handleRouting(path) {
