@@ -42,6 +42,7 @@ const routeToTab = {
     '/hang-hoa': 'hang-hoa',
     '/su-kien': 'su-kien',
     '/huyen-thoai': 'huyen-thoai',
+    '/thu-vien': 'thu-vien',
     '/game': 'game'
 };
 
@@ -51,6 +52,7 @@ const tabToRoute = {
     'hang-hoa': '/hang-hoa',
     'su-kien': '/su-kien',
     'huyen-thoai': '/huyen-thoai',
+    'thu-vien': '/thu-vien',
     'game': '/game'
 };
 
