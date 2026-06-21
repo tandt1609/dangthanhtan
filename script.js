@@ -69,9 +69,16 @@ function switchTab(tabId, updateUrl = true) {
     const targetPanel = document.getElementById(`panel-${tabId}`);
     if (targetPanel) targetPanel.classList.add('active');
 
-    // If switching to a main tab, default the commodity sub-views to list if it's updateUrl
+    // Handle sub-view routing per tab
     if (tabId === 'hang-hoa' && updateUrl) {
+        // Hang hoa: reset to list view and push URL
         openCommodityArticle('', true);
+    } else if (tabId === 'su-kien' && updateUrl) {
+        // Su kien: reset to list view and push URL
+        openEventArticle('', true);
+    } else if (tabId === 'huyen-thoai' && updateUrl) {
+        // Huyen thoai: reset to list view and push URL
+        openLegendArticle('', true);
     } else if (updateUrl) {
         const route = tabToRoute[tabId] || '/';
         history.pushState({ tabId }, '', route);
