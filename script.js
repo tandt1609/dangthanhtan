@@ -131,38 +131,38 @@ function openHomeEventArticle(articleId) {
 
 
 // Router matching logic for paths
-function handleRouting(path) {
+function handleRouting(path, updateUrl = false) {
     if (path.startsWith('/hang-hoa')) {
         switchTab('hang-hoa', false);
         const subPath = path.substring('/hang-hoa'.length);
         if (subPath === '/tien-si-dong') {
-            openCommodityArticle('tien-si-dong', false);
+            openCommodityArticle('tien-si-dong', updateUrl);
         } else if (subPath === '/luoc-su-dong') {
-            openCommodityArticle('luoc-su-dong', false);
+            openCommodityArticle('luoc-su-dong', updateUrl);
         } else {
-            openCommodityArticle('', false);
+            openCommodityArticle('', updateUrl);
         }
     } else if (path.startsWith('/huyen-thoai')) {
         switchTab('huyen-thoai', false);
         const subPath = path.substring('/huyen-thoai'.length);
         if (subPath === '/jim-simons') {
-            openLegendArticle('jim-simons', false);
+            openLegendArticle('jim-simons', updateUrl);
         } else if (subPath === '/richard-wyckoff') {
-            openLegendArticle('richard-wyckoff', false);
+            openLegendArticle('richard-wyckoff', updateUrl);
         } else {
-            openLegendArticle('', false);
+            openLegendArticle('', updateUrl);
         }
     } else if (path.startsWith('/su-kien')) {
         switchTab('su-kien', false);
         const subPath = path.substring('/su-kien'.length);
         if (subPath === '/chicxulub') {
-            openEventArticle('chicxulub', false);
+            openEventArticle('chicxulub', updateUrl);
         } else {
-            openEventArticle('', false);
+            openEventArticle('', updateUrl);
         }
     } else {
         const tabId = routeToTab[path] || 'trang-chu';
-        switchTab(tabId, false);
+        switchTab(tabId, updateUrl);
     }
 }
 
@@ -196,6 +196,17 @@ function initRouter() {
             e.preventDefault();
             const tabId = link.getAttribute('data-tab');
             switchTab(tabId, true);
+        });
+    });
+
+    // Intercept click on all article cards — route via SPA (keeps href for right-click → new tab)
+    document.querySelectorAll('.clickable-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Allow modifier-key clicks (Ctrl/Cmd/middle-click) to open in new tab natively
+            if (e.ctrlKey || e.metaKey || e.shiftKey || e.button === 1) return;
+            e.preventDefault();
+            const path = card.getAttribute('href');
+            if (path) handleRouting(path, true);
         });
     });
 
