@@ -2802,3 +2802,48 @@ color:var(--ink-soft);}
     .achx-ext-bar-label { min-width: 100px; font-size: 0.72rem; }
     .achx-pullquote { font-size: 1rem; padding: 1rem 1.3rem; }
 }
+
+/* ===== PROFILE DISCIPLINES TAG ROW ===== */
+.profile-disciplines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 0.6rem 0 1.4rem;
+    letter-spacing: 0.18em;
+}
+.disc-tag {
+    font-family: "Space Mono", monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--accent, #00ff88);
+    text-transform: uppercase;
+    padding: 0.28rem 0.7rem;
+    border: 1px solid rgba(0,255,136,0.28);
+    border-radius: 2px;
+    background: rgba(0,255,136,0.05);
+    transition: background 0.25s, color 0.25s;
+    white-space: nowrap;
+}
+.disc-tag:hover {
+    background: rgba(0,255,136,0.12);
+    color: #fff;
+}
+.disc-tag-em {
+    color: var(--accent-2, #00bfff);
+    border-color: rgba(0,191,255,0.3);
+    background: rgba(0,191,255,0.05);
+}
+.disc-tag-em:hover {
+    background: rgba(0,191,255,0.12);
+}
+.disc-sep {
+    font-size: 0.6rem;
+    color: rgba(255,255,255,0.25);
+    user-select: none;
+}
+@media (max-width: 480px) {
+    .disc-tag { font-size: 0.62rem; padding: 0.22rem 0.5rem; }
+    .profile-disciplines { gap: 0.35rem; letter-spacing: 0.1em; }
+}
