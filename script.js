@@ -124,6 +124,12 @@ function openHomeArticle(articleId) {
     openCommodityArticle(articleId, true);
 }
 
+function openHomeEventArticle(articleId) {
+    switchTab('su-kien', false);
+    openEventArticle(articleId, true);
+}
+
+
 // Router matching logic for paths
 function handleRouting(path) {
     if (path.startsWith('/hang-hoa')) {
@@ -136,11 +142,41 @@ function handleRouting(path) {
         } else {
             openCommodityArticle('', false);
         }
+    } else if (path.startsWith('/su-kien')) {
+        switchTab('su-kien', false);
+        const subPath = path.substring('/su-kien'.length);
+        if (subPath === '/chicxulub') {
+            openEventArticle('chicxulub', false);
+        } else {
+            openEventArticle('', false);
+        }
     } else {
         const tabId = routeToTab[path] || 'trang-chu';
         switchTab(tabId, false);
     }
 }
+
+function openEventArticle(articleId, updateUrl = true) {
+    const listView   = document.getElementById('sukien-list-view');
+    const articleView = document.getElementById('sukien-article-view');
+    if (!listView || !articleView) return;
+
+    document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
+
+    if (articleId === 'chicxulub') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-chicxulub-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'su-kien', articleId: 'chicxulub' }, '', '/su-kien/chicxulub');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+        articleView.classList.remove('active');
+        listView.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'su-kien', articleId: '' }, '', '/su-kien');
+    }
+}
+
 
 // Initialize router click events
 function initRouter() {
