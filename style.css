@@ -2466,8 +2466,8 @@ color:var(--ink-soft);}
     margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
+    justify-content: center;
+    gap: 18px;
 }
 
 /* D-pad cross */
@@ -2501,9 +2501,9 @@ color:var(--ink-soft);}
 /* ---- 2×2 button grid (right side) ---- */
 .btn-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(2, 62px);
+    grid-template-rows: repeat(2, 62px);
+    gap: 6px;
     flex-shrink: 0;
 }
 
@@ -2618,7 +2618,9 @@ color:var(--ink-soft);}
         font-size: 14px;
     }
     .btn-grid {
-        gap: 8px;
+        grid-template-columns: repeat(2, 48px);
+        grid-template-rows: repeat(2, 48px);
+        gap: 5px;
     }
     .round-btn,
     .start-btn,
