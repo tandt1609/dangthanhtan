@@ -1501,8 +1501,131 @@
 
             <!-- PANEL 6: GAME -->
             <div id="panel-game" class="tab-panel">
-                <h2 class="section-title"><i class="fa-solid fa-gamepad"></i> Trò chơi giả lập trading: "TÂN TERMINAL"</h2>
-                
+                <h2 class="section-title"><i class="fa-solid fa-puzzle-piece"></i> Game Xếp Hình — TETRIS TÂN</h2>
+
+                <!-- Tetris Game Wrapper (this whole div becomes fullscreen) -->
+                <div id="tetris-wrapper" class="tetris-wrapper">
+
+                    <!-- Top Controls Bar -->
+                    <div class="tetris-topbar">
+                        <div class="tetris-difficulty-group">
+                            <span class="tetris-label"><i class="fa-solid fa-gauge-high"></i> Độ khó:</span>
+                            <div class="tetris-difficulty-btns">
+                                <button id="diff-easy"   class="diff-btn active" onclick="tetrisSetDifficulty('easy')">Dễ</button>
+                                <button id="diff-medium" class="diff-btn"        onclick="tetrisSetDifficulty('medium')">Bình thường</button>
+                                <button id="diff-hard"   class="diff-btn"        onclick="tetrisSetDifficulty('hard')">Khó</button>
+                                <button id="diff-expert" class="diff-btn"        onclick="tetrisSetDifficulty('expert')">Cực khó</button>
+                            </div>
+                        </div>
+                        <button id="tetris-fullscreen-btn" class="tetris-fullscreen-btn" onclick="tetrisToggleFullscreen()" title="Toàn màn hình">
+                            <i class="fa-solid fa-expand"></i>
+                        </button>
+                    </div>
+
+                    <!-- Main Game Area -->
+                    <div class="tetris-main">
+
+                        <!-- Left Panel: Next + Hold -->
+                        <div class="tetris-side tetris-side-left">
+                            <div class="tetris-info-box">
+                                <div class="tetris-info-label">TIẾP THEO</div>
+                                <canvas id="tetris-next-canvas" width="120" height="120" class="tetris-preview-canvas"></canvas>
+                            </div>
+                            <div class="tetris-info-box" style="margin-top:1rem;">
+                                <div class="tetris-info-label">GIỮ <span style="font-size:0.65rem;opacity:0.6">(C)</span></div>
+                                <canvas id="tetris-hold-canvas" width="120" height="120" class="tetris-preview-canvas"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Center: Game Canvas -->
+                        <div class="tetris-board-wrap">
+                            <canvas id="tetris-canvas" class="tetris-canvas" width="300" height="600"></canvas>
+                            <!-- Overlay screens -->
+                            <div id="tetris-overlay" class="tetris-overlay active">
+                                <div class="tetris-overlay-content">
+                                    <div class="tetris-logo">🟦🟥🟧<br>TETRIS TÂN</div>
+                                    <p id="tetris-overlay-msg">Nhấn <strong>CHƠI</strong> để bắt đầu!</p>
+                                    <p id="tetris-overlay-score" class="tetris-final-score" style="display:none"></p>
+                                    <button class="tetris-play-btn" id="tetris-play-btn" onclick="tetrisStart()">
+                                        <i class="fa-solid fa-play"></i> CHƠI
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Panel: Stats -->
+                        <div class="tetris-side tetris-side-right">
+                            <div class="tetris-info-box">
+                                <div class="tetris-info-label">ĐIỂM</div>
+                                <div id="tetris-score" class="tetris-stat-val">0</div>
+                            </div>
+                            <div class="tetris-info-box">
+                                <div class="tetris-info-label">CẤP ĐỘ</div>
+                                <div id="tetris-level" class="tetris-stat-val">1</div>
+                            </div>
+                            <div class="tetris-info-box">
+                                <div class="tetris-info-label">HÀNG</div>
+                                <div id="tetris-lines" class="tetris-stat-val">0</div>
+                            </div>
+                            <div class="tetris-info-box tetris-info-box-best">
+                                <div class="tetris-info-label">KỶ LỤC</div>
+                                <div id="tetris-best" class="tetris-stat-val tetris-best-val">0</div>
+                            </div>
+                            <button class="tetris-pause-btn" id="tetris-pause-btn" onclick="tetrisPause()" style="margin-top:auto;display:none">
+                                <i class="fa-solid fa-pause" id="tetris-pause-icon"></i>
+                                <span id="tetris-pause-label">Tạm dừng</span>
+                            </button>
+                        </div>
+
+                    </div><!-- /.tetris-main -->
+
+                    <!-- Mobile D-Pad Controls -->
+                    <div class="tetris-dpad">
+                        <div class="dpad-row">
+                            <button class="dpad-btn dpad-up" id="dpad-rotate" ontouchstart="tetrisInput('rotate')" onclick="tetrisInput('rotate')" title="Xoay">
+                                <i class="fa-solid fa-rotate-right"></i>
+                            </button>
+                        </div>
+                        <div class="dpad-row dpad-middle">
+                            <button class="dpad-btn dpad-left" ontouchstart="tetrisInput('left')" onclick="tetrisInput('left')">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button class="dpad-btn dpad-down" id="dpad-down" ontouchstart="tetrisInput('down')" onclick="tetrisInput('down')">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <button class="dpad-btn dpad-right" ontouchstart="tetrisInput('right')" onclick="tetrisInput('right')">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="dpad-row">
+                            <button class="dpad-btn dpad-hold" ontouchstart="tetrisInput('hold')" onclick="tetrisInput('hold')" title="Giữ (Hold)">
+                                <i class="fa-solid fa-hand"></i>
+                            </button>
+                            <button class="dpad-btn dpad-drop" ontouchstart="tetrisInput('drop')" onclick="tetrisInput('drop')" title="Thả nhanh">
+                                <i class="fa-solid fa-angles-down"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Keyboard hints (desktop only) -->
+                    <div class="tetris-keys-hint">
+                        <span>← → Di chuyển</span>
+                        <span>↑ Xoay</span>
+                        <span>↓ Rơi chậm</span>
+                        <span>Space Thả nhanh</span>
+                        <span>C Giữ</span>
+                        <span>P Tạm dừng</span>
+                    </div>
+
+                </div><!-- /#tetris-wrapper -->
+
+                <!-- Separator -->
+                <div class="game-section-divider">
+                    <span>Trò chơi thứ hai</span>
+                </div>
+
+                <!-- Kept Trading Simulator below -->
+                <h2 class="section-title" style="margin-top:0"><i class="fa-solid fa-chart-candlestick"></i> Giả lập trading: "TÂN TERMINAL"</h2>
                 <div class="game-container">
                     <div class="game-stats">
                         <div class="game-stat">
@@ -1522,27 +1645,21 @@
                             <span id="game-networth" class="value text-bull">$10,000.00</span>
                         </div>
                     </div>
-
-                    <!-- Live Chart Area -->
                     <div class="chart-container">
                         <div class="chart-header">
                             <span class="chart-ticker"><i class="fa-solid fa-bolt text-bull"></i> Mã cổ phiếu: <strong>TNT</strong></span>
                             <span id="chart-price" class="chart-price">$100.00</span>
                             <span id="chart-change" class="chart-change text-bull">+0.00%</span>
                         </div>
-                        <!-- Simple visual chart line using simulated grid -->
                         <div class="visual-chart-box">
                             <div class="visual-grid-line"></div>
                             <div class="visual-grid-line"></div>
                             <div class="visual-grid-line"></div>
-                            <!-- SVG Polyline for price updates -->
                             <svg class="game-svg-chart" id="game-svg-chart">
                                 <polyline id="chart-line" fill="none" stroke="#10b981" stroke-width="2.5" points="0,100" />
                             </svg>
                         </div>
                     </div>
-
-                    <!-- Trading Buttons -->
                     <div class="trading-controls">
                         <button class="trade-btn buy" onclick="gameAction('buy')"><i class="fa-solid fa-circle-chevron-up"></i> MUA (LONG)</button>
                         <button class="trade-btn sell" onclick="gameAction('sell')"><i class="fa-solid fa-circle-chevron-down"></i> BÁN (SHORT)</button>
@@ -1550,6 +1667,7 @@
                     </div>
                 </div>
             </div>
+
 
         </main>
 
