@@ -2330,27 +2330,28 @@
 
                     <!-- Mobile D-Pad Controls -->
                     <div class="tetris-dpad">
-                        <div class="dpad-row">
-                            <button class="dpad-btn dpad-up" id="dpad-rotate" ontouchstart="tetrisInput('rotate')" onclick="tetrisInput('rotate')" title="Xoay">
-                                <i class="fa-solid fa-rotate-right"></i>
-                            </button>
-                        </div>
-                        <div class="dpad-row dpad-middle">
-                            <button class="dpad-btn dpad-left" ontouchstart="tetrisInput('left')" onclick="tetrisInput('left')">
+                        <!-- Left Cluster: Movements -->
+                        <div class="dpad-cluster dpad-cluster-left">
+                            <button class="dpad-btn dpad-left" ontouchstart="tetrisInput('left')" onclick="tetrisInput('left')" title="Sang trái">
                                 <i class="fa-solid fa-chevron-left"></i>
                             </button>
-                            <button class="dpad-btn dpad-down" id="dpad-down" ontouchstart="tetrisInput('down')" onclick="tetrisInput('down')">
+                            <button class="dpad-btn dpad-down" id="dpad-down" ontouchstart="tetrisInput('down')" onclick="tetrisInput('down')" title="Rơi chậm">
                                 <i class="fa-solid fa-chevron-down"></i>
                             </button>
-                            <button class="dpad-btn dpad-right" ontouchstart="tetrisInput('right')" onclick="tetrisInput('right')">
+                            <button class="dpad-btn dpad-right" ontouchstart="tetrisInput('right')" onclick="tetrisInput('right')" title="Sang phải">
                                 <i class="fa-solid fa-chevron-right"></i>
                             </button>
                         </div>
-                        <div class="dpad-row">
-                            <button class="dpad-btn dpad-hold" ontouchstart="tetrisInput('hold')" onclick="tetrisInput('hold')" title="Giữ (Hold)">
+
+                        <!-- Right Cluster: Actions -->
+                        <div class="dpad-cluster dpad-cluster-right">
+                            <button class="dpad-btn dpad-hold" ontouchstart="tetrisInput('hold')" onclick="tetrisInput('hold')" title="Giữ khối (Hold)">
                                 <i class="fa-solid fa-hand"></i>
                             </button>
-                            <button class="dpad-btn dpad-drop" ontouchstart="tetrisInput('drop')" onclick="tetrisInput('drop')" title="Thả nhanh">
+                            <button class="dpad-btn dpad-up" id="dpad-rotate" ontouchstart="tetrisInput('rotate')" onclick="tetrisInput('rotate')" title="Xoay khối">
+                                <i class="fa-solid fa-rotate-right"></i>
+                            </button>
+                            <button class="dpad-btn dpad-drop" ontouchstart="tetrisInput('drop')" onclick="tetrisInput('drop')" title="Thả nhanh (Drop)">
                                 <i class="fa-solid fa-angles-down"></i>
                             </button>
                         </div>

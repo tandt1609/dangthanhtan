@@ -472,6 +472,22 @@ const TETRIS = {
         this.updateDOM();
         this.drawBoard();
         this.setDifficulty(this.difficulty, false);
+
+        // Bind fullscreen change events for proper state tracking
+        const handleFullscreenChange = () => {
+            const el = document.getElementById('tetris-wrapper');
+            if (!el) return;
+            const isFS = !!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement);
+            if (!isFS) {
+                el.classList.remove('is-fullscreen');
+                document.body.style.overflow = '';
+            } else {
+                el.classList.add('is-fullscreen');
+            }
+        };
+        document.addEventListener('fullscreenchange', handleFullscreenChange);
+        document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+        document.addEventListener('mozfullscreenchange', handleFullscreenChange);
     },
 
     setDifficulty(diff, restart = true) {
@@ -904,12 +920,33 @@ const TETRIS = {
         const el = document.getElementById('tetris-wrapper');
         if (!el) return;
         const fsEl = document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement;
-        if (!fsEl) {
-            const req = el.requestFullscreen || el.webkitRequestFullscreen || el.mozRequestFullScreen;
-            if (req) req.call(el);
+        
+        const req = el.requestFullscreen || el.webkitRequestFullscreen || el.mozRequestFullScreen;
+        const exit = document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen;
+
+        if (req) {
+            if (!fsEl) {
+                req.call(el).then(() => {
+                    el.classList.add('is-fullscreen');
+                }).catch(err => {
+                    console.log("Standard fullscreen failed, falling back to CSS fullscreen", err);
+                    el.classList.toggle('is-fullscreen');
+                    document.body.style.overflow = el.classList.contains('is-fullscreen') ? 'hidden' : '';
+                });
+            } else {
+                if (exit) {
+                    exit.call(document);
+                    el.classList.remove('is-fullscreen');
+                    document.body.style.overflow = '';
+                }
+            }
         } else {
-            const exit = document.exitFullscreen || document.webkitExitFullscreen || document.mozCancelFullScreen;
-            if (exit) exit.call(document);
+            // Fallback for iOS Safari
+            el.classList.toggle('is-fullscreen');
+            document.body.style.overflow = el.classList.contains('is-fullscreen') ? 'hidden' : '';
+            if (el.classList.contains('is-fullscreen')) {
+                window.scrollTo(0, 0);
+            }
         }
     },
 
