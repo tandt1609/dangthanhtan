@@ -245,21 +245,21 @@ body {
     font-size: 0.85rem;
     font-weight: 300;
     font-style: italic;
-    color: #ffca28;
+    color: rgba(147, 197, 253, 0.8);
     line-height: 1.8;
     margin: 0;
-    text-shadow: 0 0 10px rgba(255, 202, 40, 0.4), 0 2px 8px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 8px rgba(147, 197, 253, 0.25), 0 2px 8px rgba(0, 0, 0, 0.9);
     letter-spacing: 0.08em;
 }
 
 .cover-poem-line:first-child {
-    color: rgba(255, 202, 40, 0.7);
+    color: rgba(147, 197, 253, 0.55);
 }
 
 .cover-poem-line:last-child {
-    color: #ffd54f;
+    color: #93c5fd;
     font-weight: 500;
-    text-shadow: 0 0 15px rgba(255, 213, 79, 0.6), 0 2px 10px rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 12px rgba(147, 197, 253, 0.45), 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 @keyframes poemFadeUp {
