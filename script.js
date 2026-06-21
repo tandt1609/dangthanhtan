@@ -37,8 +37,9 @@ function setTheme(theme) {
 
 // --- 2. SINGLE PAGE APPLICATION (SPA) ROUTER ---
 const routeToTab = {
-    '/': 'ban-tin',
-    '/ban-tin': 'ban-tin',
+    '/': 'trang-chu',
+    '/trang-chu': 'trang-chu',
+    '/ban-tin': 'trang-chu',
     '/vi-mo': 'vi-mo',
     '/hang-hoa': 'hang-hoa',
     '/su-kien': 'su-kien',
@@ -47,7 +48,7 @@ const routeToTab = {
 };
 
 const tabToRoute = {
-    'ban-tin': '/',
+    'trang-chu': '/',
     'vi-mo': '/vi-mo',
     'hang-hoa': '/hang-hoa',
     'su-kien': '/su-kien',
@@ -108,13 +109,13 @@ function initRouter() {
     // Handle browser Back/Forward navigation
     window.addEventListener('popstate', (e) => {
         const path = window.location.pathname;
-        const tabId = routeToTab[path] || 'ban-tin';
+        const tabId = routeToTab[path] || 'trang-chu';
         switchTab(tabId, false);
     });
 
     // Handle initial load routing
     const initialPath = window.location.pathname;
-    const initialTab = routeToTab[initialPath] || 'ban-tin';
+    const initialTab = routeToTab[initialPath] || 'trang-chu';
     switchTab(initialTab, false);
 }
 
