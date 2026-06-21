@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đặng Thanh Tân - Financial Hub</title>
-    <meta name="description" content="Trang cá nhân của Đặng Thanh Tân - Lập trình viên Tài chính & Phát triển Web.">
+    <meta name="description" content="Trang cá nhân của Đặng Thanh Tân - Phân tích tài chính & Lập trình web.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -23,13 +23,13 @@
     <div class="container">
         <!-- Market Sentiment Controller -->
         <div class="sentiment-bar">
-            <span class="sentiment-label"><i class="fa-solid fa-gauge-high"></i> Thị trường:</span>
+            <span class="sentiment-label"><i class="fa-solid fa-gauge-high"></i> Xu hướng:</span>
             <div class="sentiment-switch">
                 <button id="btn-bull" class="sentiment-btn active" onclick="setTheme('bull')">
-                    <i class="fa-solid fa-arrow-trend-up"></i> BÒ (BULL)
+                    <i class="fa-solid fa-arrow-trend-up"></i> BÒ
                 </button>
                 <button id="btn-bear" class="sentiment-btn" onclick="setTheme('bear')">
-                    <i class="fa-solid fa-arrow-trend-down"></i> GẤU (BEAR)
+                    <i class="fa-solid fa-arrow-trend-down"></i> GẤU
                 </button>
             </div>
         </div>
@@ -46,7 +46,7 @@
             <h1 class="profile-name">ĐẶNG THANH TÂN</h1>
             <p class="profile-tagline">Financial Tech & Web Developer</p>
             <p class="profile-bio">
-                Chuyên thiết kế và phát triển các công cụ phân tích tài chính, bảng dữ liệu chứng khoán thời gian thực và tự động hóa trích xuất dữ liệu thị trường.
+                Chuyên thiết kế và phát triển các hệ thống báo cáo tài chính trực quan, bảng dữ liệu chứng khoán thời gian thực và script phân tích dữ liệu tự động.
             </p>
             
             <div class="social-links">
@@ -56,93 +56,250 @@
             </div>
         </header>
 
-        <!-- Stats Banner -->
-        <section class="stats-banner">
-            <div class="stat-item">
-                <span class="stat-value text-bull">VN-INDEX</span>
-                <span class="stat-sub"><i class="fa-solid fa-circle-chevron-up"></i> Uptrend</span>
+        <!-- Dynamic Navigation Tabs -->
+        <nav class="tab-navigation">
+            <div class="tabs-wrapper">
+                <a href="/" class="tab-link active" data-tab="ban-tin"><i class="fa-solid fa-newspaper"></i> Bản tin</a>
+                <a href="/vi-mo" class="tab-link" data-tab="vi-mo"><i class="fa-solid fa-globe"></i> Vĩ mô</a>
+                <a href="/hang-hoa" class="tab-link" data-tab="hang-hoa"><i class="fa-solid fa-cubes"></i> Hàng hóa</a>
+                <a href="/su-kien" class="tab-link" data-tab="su-kien"><i class="fa-solid fa-calendar-days"></i> Sự kiện</a>
+                <a href="/huyen-thoai" class="tab-link" data-tab="huyen-thoai"><i class="fa-solid fa-user-astronaut"></i> Huyền thoại</a>
+                <a href="/game" class="tab-link" data-tab="game"><i class="fa-solid fa-gamepad"></i> Game</a>
             </div>
-            <div class="stat-item border-x">
-                <span class="stat-value" id="current-sentiment-text">Thị trường Bò tót</span>
-                <span class="stat-sub">Trạng thái chủ đạo</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-value text-bear">HEDGE RATE</span>
-                <span class="stat-sub"><i class="fa-solid fa-shield-halved"></i> Bảo hiểm Rủi ro</span>
-            </div>
-        </section>
+        </nav>
 
-        <!-- Main Workspace Projects -->
-        <main class="projects-section">
-            <h2 class="section-title"><i class="fa-solid fa-layer-group"></i> Hệ sinh thái Công cụ</h2>
+        <!-- Tab Content Panels -->
+        <main class="tab-content-container">
             
-            <div class="projects-grid">
-                <!-- Project 1: VN Stock Dashboard -->
-                <div class="project-card border-glow">
-                    <div class="project-header-row">
-                        <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
-                        <span class="project-badge bg-badge-bull">Real-time</span>
+            <!-- PANEL 1: BẢN TIN -->
+            <div id="panel-ban-tin" class="tab-panel active">
+                <h2 class="section-title"><i class="fa-solid fa-fire-flame-curved"></i> Bản tin Tài chính nóng</h2>
+                <div class="news-list">
+                    <div class="news-card">
+                        <div class="news-meta">
+                            <span class="news-source"><i class="fa-solid fa-circle-play"></i> Terminal News</span>
+                            <span class="news-time">15 phút trước</span>
+                        </div>
+                        <h3 class="news-heading">Chỉ số VN-Index bứt phá mạnh nhờ dòng tiền khối ngoại quay trở lại mua ròng mạnh mẽ</h3>
+                        <p class="news-excerpt">Dòng tiền lớn tập trung mạnh vào các nhóm cổ phiếu trụ cột như Ngân hàng và Chứng khoán giúp VN-Index vượt mốc kháng cự tâm lý quan trọng.</p>
+                        <div class="news-footer">
+                            <span class="sentiment-indicator bullish"><i class="fa-solid fa-arrow-trend-up"></i> Tích cực</span>
+                        </div>
                     </div>
-                    <h3 class="project-title">VN Stock Dashboard</h3>
-                    <p class="project-desc">
-                        Bảng theo dõi và trực quan hóa dữ liệu giao dịch chứng khoán Việt Nam. Hỗ trợ phân tích kỹ thuật, dòng tiền và chỉ số thị trường.
-                    </p>
-                    <div class="project-footer">
-                        <span class="project-status status-active">Hoạt động</span>
-                        <a href="./vn-stock-dashboard/" class="project-link">Truy cập <i class="fa-solid fa-arrow-right"></i></a>
+                    
+                    <div class="news-card">
+                        <div class="news-meta">
+                            <span class="news-source"><i class="fa-solid fa-circle-play"></i> Macro Watch</span>
+                            <span class="news-time">2 giờ trước</span>
+                        </div>
+                        <h3 class="news-heading">Ngân hàng Nhà nước duy trì mặt bằng lãi suất thấp nhằm hỗ trợ doanh nghiệp phục hồi</h3>
+                        <p class="news-excerpt">Các chuyên gia dự báo chính sách nới lỏng tiền tệ sẽ tiếp tục duy trì trong quý tới, thúc đẩy tăng trưởng tín dụng phục hồi tốt.</p>
+                        <div class="news-footer">
+                            <span class="sentiment-indicator bullish"><i class="fa-solid fa-arrow-trend-up"></i> Tích cực</span>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Project 2: Game for Web -->
-                <div class="project-card border-glow">
-                    <div class="project-header-row">
-                        <div class="project-icon"><i class="fa-solid fa-gamepad"></i></div>
-                        <span class="project-badge bg-badge-neutral">Trình duyệt</span>
-                    </div>
-                    <h3 class="project-title">Game for Web</h3>
-                    <p class="project-desc">
-                        Các tựa game mini giải trí tích hợp trên nền tảng web, bao gồm trò chơi mô phỏng tâm lý giao dịch mua/bán và thị trường.
-                    </p>
-                    <div class="project-footer">
-                        <span class="project-status status-active">Hoạt động</span>
-                        <a href="./Game for Web/" class="project-link">Trải nghiệm <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Project 3: SSI & Fireant Inspectors -->
-                <div class="project-card border-glow">
-                    <div class="project-header-row">
-                        <div class="project-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                        <span class="project-badge bg-badge-bear">Automation</span>
-                    </div>
-                    <h3 class="project-title">Inspectors Tool</h3>
-                    <p class="project-desc">
-                        Bộ script tự động hóa trích xuất dữ liệu, quét tín hiệu phân tích kỹ thuật từ các cổng thông tin chứng khoán SSI và Fireant.
-                    </p>
-                    <div class="project-footer">
-                        <span class="project-status status-dev">Phát triển</span>
-                        <a href="./file for wed/" class="project-link">Xem tài liệu <i class="fa-solid fa-arrow-right"></i></a>
+                    <div class="news-card">
+                        <div class="news-meta">
+                            <span class="news-source"><i class="fa-solid fa-circle-play"></i> Global Market</span>
+                            <span class="news-time">5 giờ trước</span>
+                        </div>
+                        <h3 class="news-heading">Fed bỏ ngỏ khả năng tăng nhẹ lãi suất tại kỳ họp tháng sau nếu lạm phát tiếp tục neo cao</h3>
+                        <p class="news-excerpt">Nhận định này đã gây ra áp lực chốt lời ngắn hạn trên thị trường chứng khoán Mỹ và khiến USD-Index tăng nhẹ trở lại.</p>
+                        <div class="news-footer">
+                            <span class="sentiment-indicator bearish"><i class="fa-solid fa-arrow-trend-down"></i> Rủi ro</span>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- PANEL 2: VĨ MÔ -->
+            <div id="panel-vi-mo" class="tab-panel">
+                <h2 class="section-title"><i class="fa-solid fa-chart-line"></i> Chỉ số Vĩ mô chính</h2>
+                <div class="macro-grid">
+                    <div class="macro-card">
+                        <span class="macro-title">GDP Việt Nam Q1</span>
+                        <span class="macro-value text-bull">5.66%</span>
+                        <span class="macro-compare">So với cùng kỳ: +0.5%</span>
+                    </div>
+                    <div class="macro-card">
+                        <span class="macro-title">Lạm phát CPI</span>
+                        <span class="macro-value">3.97%</span>
+                        <span class="macro-compare">Mục tiêu năm: < 4.5%</span>
+                    </div>
+                    <div class="macro-card">
+                        <span class="macro-title">Lãi suất huy động</span>
+                        <span class="macro-value">4.7%</span>
+                        <span class="macro-compare">Kỳ hạn 12 tháng (Bình quân)</span>
+                    </div>
+                    <div class="macro-card">
+                        <span class="macro-title">Tỷ giá USD/VND</span>
+                        <span class="macro-value text-bear">25,450</span>
+                        <span class="macro-compare">Mức biến động: +3.2% YTD</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 3: HÀNG HÓA -->
+            <div id="panel-hang-hoa" class="tab-panel">
+                <h2 class="section-title"><i class="fa-solid fa-droplet"></i> Bảng giá Hàng hóa Toàn cầu</h2>
+                <div class="commodity-table-wrapper">
+                    <table class="commodity-table">
+                        <thead>
+                            <tr>
+                                <th>Tên hàng hóa</th>
+                                <th>Giá hiện tại</th>
+                                <th>Biến động 24h</th>
+                                <th>Xu hướng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Vàng SJC (Triệu/Lượng)</td>
+                                <td>89.50</td>
+                                <td class="text-bull">+1.25%</td>
+                                <td><span class="trend-badge bull"><i class="fa-solid fa-arrow-trend-up"></i> Tăng</span></td>
+                            </tr>
+                            <tr>
+                                <td>Dầu thô Brent (USD/Thùng)</td>
+                                <td>82.40</td>
+                                <td class="text-bear">-0.85%</td>
+                                <td><span class="trend-badge bear"><i class="fa-solid fa-arrow-trend-down"></i> Giảm</span></td>
+                            </tr>
+                            <tr>
+                                <td>Thép HRC (USD/Tấn)</td>
+                                <td>540.00</td>
+                                <td class="text-bear">-2.10%</td>
+                                <td><span class="trend-badge bear"><i class="fa-solid fa-arrow-trend-down"></i> Giảm</span></td>
+                            </tr>
+                            <tr>
+                                <td>Urea Đạm (VND/kg)</td>
+                                <td>12,500</td>
+                                <td>0.00%</td>
+                                <td><span class="trend-badge neutral">Đi ngang</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- PANEL 4: SỰ KIỆN -->
+            <div id="panel-su-kien" class="tab-panel">
+                <h2 class="section-title"><i class="fa-solid fa-clock"></i> Lịch sự kiện kinh tế quan trọng</h2>
+                <div class="events-timeline">
+                    <div class="event-item">
+                        <div class="event-time-tag">25/06</div>
+                        <div class="event-details">
+                            <span class="event-importance high">Quan trọng</span>
+                            <h4 class="event-name">Công bố chỉ số CPI tháng 6 của Việt Nam</h4>
+                            <p class="event-desc">Dữ liệu lạm phát tháng này ảnh hưởng trực tiếp đến định hướng điều hành lãi suất của Ngân hàng Nhà nước.</p>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-time-tag">30/06</div>
+                        <div class="event-details">
+                            <span class="event-importance medium">Trung bình</span>
+                            <h4 class="event-name">Cơ cấu danh mục ETF nội ngoại</h4>
+                            <p class="event-desc">Các quỹ đầu tư lớn thực hiện tái cơ cấu danh mục định kỳ, tạo thanh khoản lớn đột biến trên thị trường.</p>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-time-tag">18/07</div>
+                        <div class="event-details">
+                            <span class="event-importance high">Quan trọng</span>
+                            <h4 class="event-name">Họp định kỳ chính sách tiền tệ FOMC (Mỹ)</h4>
+                            <p class="event-desc">Quyết định lãi suất của Fed và phát biểu của chủ tịch Jerome Powell định hình dòng vốn toàn cầu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 5: HUYỀN THOẠI -->
+            <div id="panel-huyen-thoai" class="tab-panel">
+                <h2 class="section-title"><i class="fa-solid fa-crown"></i> Các nhà giao dịch huyền thoại</h2>
+                <div class="legends-grid">
+                    <div class="legend-card">
+                        <div class="legend-header">
+                            <div class="legend-avatar"><i class="fa-solid fa-brain"></i></div>
+                            <div>
+                                <h3 class="legend-name">Jim Simons</h3>
+                                <span class="legend-title">Vua Quants (Mô hình Toán)</span>
+                            </div>
+                        </div>
+                        <p class="legend-bio">Người sáng lập Renaissance Technologies. Quỹ Medallion của ông đạt hiệu suất sinh lời trung bình 66% mỗi năm từ 1988 đến 2018.</p>
+                        <blockquote class="legend-quote">
+                            "Mô hình thuật toán loại bỏ hoàn toàn yếu tố cảm xúc của con người ra khỏi việc giao dịch."
+                        </blockquote>
+                    </div>
+                    <div class="legend-card">
+                        <div class="legend-header">
+                            <div class="legend-avatar"><i class="fa-solid fa-compass"></i></div>
+                            <div>
+                                <h3 class="legend-name">Warren Buffett</h3>
+                                <span class="legend-title">Nhà đầu tư giá trị vĩ đại</span>
+                            </div>
+                        </div>
+                        <p class="legend-bio">Chủ tịch tập đoàn Berkshire Hathaway. Nổi tiếng với triết lý đầu tư dài hạn vào các công ty có lợi thế cạnh tranh bền vững.</p>
+                        <blockquote class="legend-quote">
+                            "Hãy sợ hãi khi người khác tham lam, và hãy tham lam khi người khác sợ hãi."
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 6: GAME -->
+            <div id="panel-game" class="tab-panel">
+                <h2 class="section-title"><i class="fa-solid fa-gamepad"></i> Trò chơi giả lập trading: "TÂN TERMINAL"</h2>
+                
+                <div class="game-container">
+                    <div class="game-stats">
+                        <div class="game-stat">
+                            <span class="label">Tiền mặt</span>
+                            <span id="game-cash" class="value">$10,000.00</span>
+                        </div>
+                        <div class="game-stat">
+                            <span class="label">Cổ phiếu nắm giữ</span>
+                            <span id="game-shares" class="value">0 TNT</span>
+                        </div>
+                        <div class="game-stat">
+                            <span class="label">Giá trung bình</span>
+                            <span id="game-avg-price" class="value">$0.00</span>
+                        </div>
+                        <div class="game-stat">
+                            <span class="label">Giá trị tài sản</span>
+                            <span id="game-networth" class="value text-bull">$10,000.00</span>
+                        </div>
+                    </div>
+
+                    <!-- Live Chart Area -->
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <span class="chart-ticker"><i class="fa-solid fa-bolt text-bull"></i> Mã cổ phiếu: <strong>TNT</strong></span>
+                            <span id="chart-price" class="chart-price">$100.00</span>
+                            <span id="chart-change" class="chart-change text-bull">+0.00%</span>
+                        </div>
+                        <!-- Simple visual chart line using simulated grid -->
+                        <div class="visual-chart-box">
+                            <div class="visual-grid-line"></div>
+                            <div class="visual-grid-line"></div>
+                            <div class="visual-grid-line"></div>
+                            <!-- SVG Polyline for price updates -->
+                            <svg class="game-svg-chart" id="game-svg-chart">
+                                <polyline id="chart-line" fill="none" stroke="#10b981" stroke-width="2.5" points="0,100" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Trading Buttons -->
+                    <div class="trading-controls">
+                        <button class="trade-btn buy" onclick="gameAction('buy')"><i class="fa-solid fa-circle-chevron-up"></i> MUA (LONG)</button>
+                        <button class="trade-btn sell" onclick="gameAction('sell')"><i class="fa-solid fa-circle-chevron-down"></i> BÁN (SHORT)</button>
+                        <button class="trade-btn reset" onclick="gameAction('reset')"><i class="fa-solid fa-rotate-left"></i> Làm mới</button>
+                    </div>
+                </div>
+            </div>
+
         </main>
-
-        <!-- Dynamic Tech Stack & Market Sentiment Info -->
-        <section class="info-section">
-            <h2 class="section-title"><i class="fa-solid fa-sliders"></i> Phân tích Kỹ thuật & Công nghệ</h2>
-            <div class="info-content">
-                <p id="sentiment-philosophy">
-                    Khi thị trường trong pha <strong>Tăng giá (Bull Market)</strong>, chúng tôi tập trung phát triển các bảng Dashboard tối ưu hóa hiệu năng, xử lý luồng dữ liệu thời gian thực (Websockets) để nắm bắt nhanh các cơ hội dòng tiền lớn.
-                </p>
-                <div class="tech-tags">
-                    <span class="tech-tag"><i class="fa-brands fa-react"></i> Next.js</span>
-                    <span class="tech-tag"><i class="fa-solid fa-chart-area"></i> Chart.js / Recharts</span>
-                    <span class="tech-tag"><i class="fa-solid fa-server"></i> API Streaming</span>
-                    <span class="tech-tag"><i class="fa-brands fa-cloudflare"></i> Cloudflare Workers</span>
-                    <span class="tech-tag"><i class="fa-brands fa-git-alt"></i> GitHub CI/CD</span>
-                </div>
-            </div>
-        </section>
 
         <!-- Footer -->
         <footer class="site-footer">
@@ -151,6 +308,6 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>
