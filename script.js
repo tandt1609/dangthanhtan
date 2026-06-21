@@ -77,6 +77,23 @@ function switchTab(tabId, updateUrl = true) {
     console.log(`🧭 Switched to tab: ${tabId}`);
 }
 
+function switchSubTab(subTabId) {
+    // Deactivate sub-tabs and sub-panels
+    document.querySelectorAll('.sub-tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.commodity-sub-panel').forEach(panel => panel.classList.remove('active'));
+    
+    // Activate target sub-tab button
+    const targetBtn = document.querySelector(`.sub-tab-btn[onclick="switchSubTab('${subTabId}')"]`);
+    if (targetBtn) targetBtn.classList.add('active');
+    
+    // Activate target sub-panel
+    const targetPanel = document.getElementById(`sub-panel-${subTabId}`);
+    if (targetPanel) targetPanel.classList.add('active');
+    
+    console.log(`📂 Switched commodity sub-tab to: ${subTabId}`);
+}
+
+
 // Initialize router click events
 function initRouter() {
     // Intercept click on tab navigation links
