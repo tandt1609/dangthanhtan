@@ -1071,6 +1071,9 @@ body {
     .profile-cover {
         height: 180px; /* Reduce banner height on mobile */
     }
+    .cover-image {
+        object-position: center 15%; /* Shift up to hide text at the bottom */
+    }
     .profile-card-body {
         padding: 1.5rem;
         margin-top: -3.5rem; /* Readjust avatar overlap */
