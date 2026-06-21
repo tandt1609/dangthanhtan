@@ -241,24 +241,25 @@ body {
 }
 
 .cover-poem-line {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: #ffd700;
-    line-height: 1.6;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #ffca28;
+    line-height: 1.8;
     margin: 0;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.95), 0 0 8px rgba(255, 215, 0, 0.35);
-    letter-spacing: 0.02em;
+    text-shadow: 0 0 10px rgba(255, 202, 40, 0.4), 0 2px 8px rgba(0, 0, 0, 0.9);
+    letter-spacing: 0.08em;
 }
 
 .cover-poem-line:first-child {
-    color: rgba(255, 215, 0, 0.8);
+    color: rgba(255, 202, 40, 0.7);
 }
 
 .cover-poem-line:last-child {
-    color: #fff176;
-    font-weight: 700;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.95), 0 0 15px rgba(255, 241, 118, 0.6);
+    color: #ffd54f;
+    font-weight: 500;
+    text-shadow: 0 0 15px rgba(255, 213, 79, 0.6), 0 2px 10px rgba(0, 0, 0, 0.9);
 }
 
 @keyframes poemFadeUp {
