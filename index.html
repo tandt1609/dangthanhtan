@@ -2250,124 +2250,72 @@
 
             <!-- PANEL 7: GAME -->
             <div id="panel-game" class="tab-panel">
-                <h2 class="section-title"><i class="fa-solid fa-puzzle-piece"></i> Game Xếp Hình — TETRIS TÂN</h2>
+                <h2 class="section-title">
+                    <i class="fa-solid fa-puzzle-piece"></i> Game Xếp Hình Cầm Tay
+                    <button class="tetris-fs-toggle-btn" onclick="tetrisToggleFullscreen()" title="Toàn màn hình" style="float: right; background: transparent; border: 1px solid var(--border-color); color: var(--text-primary); padding: 5px 12px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-family: var(--font-sans); display: flex; align-items: center; gap: 6px; transition: all 0.2s;">
+                        <i class="fa-solid fa-expand"></i> Toàn màn hình
+                    </button>
+                </h2>
 
-                <!-- Tetris Game Wrapper (this whole div becomes fullscreen) -->
-                <div id="tetris-wrapper" class="tetris-wrapper">
+                <div id="tetris-wrapper" class="tetris-device-container">
+                    <div class="device">
+                        <span class="screw tl"></span><span class="screw tr"></span>
+                        <span class="screw bl"></span><span class="screw br"></span>
 
-                    <!-- Top Controls Bar -->
-                    <div class="tetris-topbar">
-                        <div class="tetris-difficulty-group">
-                            <span class="tetris-label"><i class="fa-solid fa-gauge-high"></i> Độ khó:</span>
-                            <div class="tetris-difficulty-btns">
-                                <button id="diff-easy"   class="diff-btn active" onclick="tetrisSetDifficulty('easy')">Dễ</button>
-                                <button id="diff-medium" class="diff-btn"        onclick="tetrisSetDifficulty('medium')">Bình thường</button>
-                                <button id="diff-hard"   class="diff-btn"        onclick="tetrisSetDifficulty('hard')">Khó</button>
-                                <button id="diff-expert" class="diff-btn"        onclick="tetrisSetDifficulty('expert')">Cực khó</button>
-                            </div>
-                        </div>
-                        <button id="tetris-fullscreen-btn" class="tetris-fullscreen-btn" onclick="tetrisToggleFullscreen()" title="Toàn màn hình">
-                            <i class="fa-solid fa-expand"></i>
-                        </button>
-                    </div>
-
-                    <!-- Main Game Area -->
-                    <div class="tetris-main">
-
-                        <!-- Left Panel: Next + Hold -->
-                        <div class="tetris-side tetris-side-left">
-                            <div class="tetris-info-box">
-                                <div class="tetris-info-label">TIẾP THEO</div>
-                                <canvas id="tetris-next-canvas" width="120" height="120" class="tetris-preview-canvas"></canvas>
-                            </div>
-                            <div class="tetris-info-box" style="margin-top:1rem;">
-                                <div class="tetris-info-label">GIỮ <span style="font-size:0.65rem;opacity:0.6">(C)</span></div>
-                                <canvas id="tetris-hold-canvas" width="120" height="120" class="tetris-preview-canvas"></canvas>
-                            </div>
+                        <div class="brand-plate">
+                            <span class="logo">BRICK★MASTER</span>
+                            <span class="led" id="powerLed"></span>
                         </div>
 
-                        <!-- Center: Game Canvas -->
-                        <div class="tetris-board-wrap">
-                            <canvas id="tetris-canvas" class="tetris-canvas" width="300" height="600"></canvas>
-                            <!-- Overlay screens -->
-                            <div id="tetris-overlay" class="tetris-overlay active">
-                                <div class="tetris-overlay-content">
-                                    <div class="tetris-logo">🟦🟥🟧<br>TETRIS TÂN</div>
-                                    <p id="tetris-overlay-msg">Nhấn <strong>CHƠI</strong> để bắt đầu!</p>
-                                    <p id="tetris-overlay-score" class="tetris-final-score" style="display:none"></p>
-                                    <button class="tetris-play-btn" id="tetris-play-btn" onclick="tetrisStart()">
-                                        <i class="fa-solid fa-play"></i> CHƠI
-                                    </button>
+                        <div class="bezel">
+                            <div class="board-wrap" id="boardWrap">
+                                <canvas id="boardCanvas"></canvas>
+                                <div class="screen-overlay" id="overlay">
+                                    <div class="msg blink" id="overlayMsg">XẾP HÌNH</div>
+                                    <div class="sub" id="overlaySub">NHẤN START<br>ĐỂ CHƠI</div>
+                                </div>
+                            </div>
+
+                            <div class="side-panel">
+                                <div class="side-label">TIẾP</div>
+                                <div class="next-wrap"><canvas id="nextCanvas"></canvas></div>
+                                <div class="stat-block">
+                                    <div class="side-label">ĐIỂM</div>
+                                    <div class="stat-value" id="scoreValue">000000</div>
+                                </div>
+                                <div class="stat-block">
+                                    <div class="side-label">CẤP</div>
+                                    <div class="stat-value" id="levelValue">01</div>
+                                </div>
+                                <div class="stat-block">
+                                    <div class="side-label">HÀNG</div>
+                                    <div class="stat-value" id="linesValue">000</div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Right Panel: Stats -->
-                        <div class="tetris-side tetris-side-right">
-                            <div class="tetris-info-box">
-                                <div class="tetris-info-label">ĐIỂM</div>
-                                <div id="tetris-score" class="tetris-stat-val">0</div>
+                        <div class="controls">
+                            <div class="dpad">
+                                <button class="d-up" id="btnUp" aria-label="Xoay">▲</button>
+                                <button class="d-left" id="btnLeft" aria-label="Trái">◀</button>
+                                <div class="d-center"></div>
+                                <button class="d-right" id="btnRight" aria-label="Phải">▶</button>
+                                <button class="d-down" id="btnDown" aria-label="Rơi nhanh">▼</button>
                             </div>
-                            <div class="tetris-info-box">
-                                <div class="tetris-info-label">CẤP ĐỘ</div>
-                                <div id="tetris-level" class="tetris-stat-val">1</div>
-                            </div>
-                            <div class="tetris-info-box">
-                                <div class="tetris-info-label">HÀNG</div>
-                                <div id="tetris-lines" class="tetris-stat-val">0</div>
-                            </div>
-                            <div class="tetris-info-box tetris-info-box-best">
-                                <div class="tetris-info-label">KỶ LỤC</div>
-                                <div id="tetris-best" class="tetris-stat-val tetris-best-val">0</div>
-                            </div>
-                            <button class="tetris-pause-btn" id="tetris-pause-btn" onclick="tetrisPause()" style="margin-top:auto;display:none">
-                                <i class="fa-solid fa-pause" id="tetris-pause-icon"></i>
-                                <span id="tetris-pause-label">Tạm dừng</span>
-                            </button>
-                        </div>
 
-                    </div><!-- /.tetris-main -->
+                            <div class="mid-controls">
+                                <button class="start-btn" id="btnStartPause">START</button>
+                                <button class="mute-btn" id="btnMute">🔊</button>
+                            </div>
 
-                    <!-- Mobile D-Pad Controls -->
-                    <div class="tetris-dpad">
-                        <!-- Left Cluster: Movements -->
-                        <div class="dpad-cluster dpad-cluster-left">
-                            <button class="dpad-btn dpad-left" ontouchstart="tetrisInput('left')" onclick="tetrisInput('left')" title="Sang trái">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </button>
-                            <button class="dpad-btn dpad-down" id="dpad-down" ontouchstart="tetrisInput('down')" onclick="tetrisInput('down')" title="Rơi chậm">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </button>
-                            <button class="dpad-btn dpad-right" ontouchstart="tetrisInput('right')" onclick="tetrisInput('right')" title="Sang phải">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </button>
-                        </div>
-
-                        <!-- Right Cluster: Actions -->
-                        <div class="dpad-cluster dpad-cluster-right">
-                            <button class="dpad-btn dpad-hold" ontouchstart="tetrisInput('hold')" onclick="tetrisInput('hold')" title="Giữ khối (Hold)">
-                                <i class="fa-solid fa-hand"></i>
-                            </button>
-                            <button class="dpad-btn dpad-up" id="dpad-rotate" ontouchstart="tetrisInput('rotate')" onclick="tetrisInput('rotate')" title="Xoay khối">
-                                <i class="fa-solid fa-rotate-right"></i>
-                            </button>
-                            <button class="dpad-btn dpad-drop" ontouchstart="tetrisInput('drop')" onclick="tetrisInput('drop')" title="Thả nhanh (Drop)">
-                                <i class="fa-solid fa-angles-down"></i>
-                            </button>
+                            <div class="action-buttons">
+                                <button class="round-btn" id="btnRotate">XOAY</button>
+                                <button class="round-btn alt" id="btnDrop">THẢ</button>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Keyboard hints (desktop only) -->
-                    <div class="tetris-keys-hint">
-                        <span>← → Di chuyển</span>
-                        <span>↑ Xoay</span>
-                        <span>↓ Rơi chậm</span>
-                        <span>Space Thả nhanh</span>
-                        <span>C Giữ</span>
-                        <span>P Tạm dừng</span>
-                    </div>
-
-                </div><!-- /#tetris-wrapper -->
+                    <p class="controls-hint" id="controlsHint" style="text-align:center; font-size:11px; color:#7a6f72; margin-top:14px;"></p>
+                </div>
 
                 <!-- Separator -->
                 <div class="game-section-divider">
