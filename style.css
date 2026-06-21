@@ -2298,8 +2298,6 @@ color:var(--ink-soft);}
 
 /* Tetris Wrapper */
 /* ---------- TETRIS RETRO HANDHELD DEVICE STYLES ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 .tetris-device-container {
     --shell: #ef8354;
     --shell-dark: #c96a40;
