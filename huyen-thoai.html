@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/style.css?v=5">
+    <link rel="stylesheet" href="/style.css?v=6">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
@@ -2056,18 +2056,17 @@
                                 <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc hồ sơ</span>
                             </div>
                         </a>
-                        <a href="/huyen-thoai/warren-buffett" class="news-card clickable-card">
-
+                        <div class="news-card">
                             <div class="news-meta">
-                                <span class="news-source"><i class="fa-solid fa-crown"></i> Hồ sơ Huyền thoại</span>
-                                <span class="news-time">30/08/1930 – Nay</span>
+                                <span class="news-source"><i class="fa-solid fa-compass"></i> Hồ sơ Huyền thoại</span>
+                                <span class="news-time">Sắp ra mắt</span>
                             </div>
-                            <h3 class="news-heading">Warren Buffett — Nhà Đầu Tư Giá Trị Vĩ Đại Nhất</h3>
-                            <p class="news-excerpt">Chủ tịch Berkshire Hathaway. Triết lý đầu tư dài hạn vào các công ty có lợi thế cạnh tranh bền vững. Tỷ phú lâu đời nhất thế giới.</p>
+                            <h3 class="news-heading">Warren Buffett — Nhà đầu tư giá trị vĩ đại nhất</h3>
+                            <p class="news-excerpt">Chủ tịch Berkshire Hathaway. Triết lý đầu tư dài hạn vào các công ty có lợi thế cạnh tranh bền vững.</p>
                             <div class="news-footer">
-                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc hồ sơ</span>
+                                <span class="sentiment-indicator" style="color:var(--text-muted,#888)"><i class="fa-solid fa-clock"></i> Đang biên soạn</span>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
 
@@ -2659,7 +2658,262 @@
       <p>Richard Demille Wyckoff bước vào Phố Wall năm 1888 với hai tay trắng, ở tuổi mười lăm, làm công việc thấp nhất trong một công ty môi giới. Ông kết thúc sự nghiệp vào năm 1934 với tư cách là một trong những nhà phân tích thị trường có ảnh hưởng nhất trong lịch sử tài chính Hoa Kỳ, người đã hệ thống hóa cách "đọc" hành vi của những thế lực lớn nhất trên thị trường thành một bộ nguyên lý mà gần một trăm năm sau vẫn được hàng triệu nhà giao dịch trên toàn thế giới học hỏi và áp dụng, trên những thị trường mà ông chưa từng biết đến, như tiền điện tử hay hợp đồng tương lai chỉ số chứng khoán. Đó là một hành trình từ một thiếu niên chạy việc trở thành người thầy của nhiều thế hệ — và có lẽ, đó cũng chính là minh chứng rõ ràng nhất cho những điều ông luôn tin tưởng: rằng thị trường có thể được hiểu, kiến thức về nó có thể được tích lũy một cách có hệ thống, và những gì học được hoàn toàn có thể truyền lại cho người sau.</p>
     </section>
 
-  </main>
+  <!-- ===================== WARREN BUFFETT ARTICLE ===================== -->
+<div class="news-card clickable-card">
+  <div class="news-meta">
+    <span class="news-source"><i class="fa-solid fa-coins"></i> Huyền thoại & Đầu tư</span>
+    <span class="news-time">22/06/2026</span>
+  </div>
+  <h3 class="news-heading">Warren Buffett — Lược Sử, Triết Lý và Phương Pháp Đầu Tư</h3>
+  <div class="article-content">
+    <!DOCTYPE html>
+    <html lang="vi">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warren Buffett — Lược Sử, Triết Lý và Phương Pháp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@400;500;600;700;800&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --cream:#faf6ef;
+        --cream-deep:#f0e9da;
+        --cream-darker:#e6ddc8;
+        --ink:#1a1612;
+        --ink-mid:#5a4e3c;
+        --ink-light:#8a7c65;
+        --rule:#c8baa0;
+        --cobalt:#1b3a6b;
+        --cobalt-mid:#2a5298;
+        --cobalt-light:#d6e4f7;
+        --gold:#b8932a;
+        --gold-light:#f5e9c4;
+        --red-book:#8b1a1a;
+      }
+
+      *{box-sizing:border-box;}
+      body{
+        margin:0;
+        background:#faf6ef;
+        color:var(--ink);
+        font-family:'Libre Baskerville', Georgia, serif;
+        font-size:17px;
+        line-height:1.82;
+        -webkit-font-smoothing:antialiased;
+      }
+
+      /* ===================== HERO ===================== */
+      .hero{
+        background:var(--cobalt);
+        background-image: linear-gradient(135deg, #0e2144 0%, #1b3a6b 50%, #2a5298 100%);
+        color:#fff;
+        padding:70px 32px 52px;
+        text-align:center;
+        position:relative;
+        overflow:hidden;
+      }
+      .hero::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background: repeating-linear-gradient(
+          90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 60px
+        ), repeating-linear-gradient(
+          0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 60px
+        );
+      }
+      .hero-inner{ position:relative; z-index:1; }
+      .hero .eyebrow{
+        font-family:'Raleway', sans-serif; font-weight:600; font-size:0.72rem;
+        letter-spacing:0.38em; text-transform:uppercase; color:rgba(255,255,255,0.55);
+        margin-bottom:22px;
+      }
+      .hero h1{
+        font-family:'Raleway', sans-serif; font-weight:800; font-size:clamp(2.6rem, 8vw, 5rem);
+        line-height:1.0; margin:0; letter-spacing:-0.01em; color:#fff;
+      }
+      .hero h1 em{
+        display:block; font-style:normal; font-weight:400;
+        font-family:'Libre Baskerville', Georgia, serif; font-size:0.38em;
+        color:rgba(255,255,255,0.65); letter-spacing:0.12em; margin-top:10px;
+      }
+      .hero .dates{
+        font-family:'Courier Prime', monospace; font-size:0.98rem;
+        color:rgba(255,255,255,0.5); margin:22px 0 10px; letter-spacing:0.06em;
+      }
+      .hero .tagline{
+        font-family:'Libre Baskerville', serif; font-style:italic;
+        font-size:1.15rem; color:rgba(255,255,255,0.8);
+        max-width:560px; margin:16px auto 0; line-height:1.6;
+      }
+      .hero-rule{
+        width:80px; height:3px; background:var(--gold); margin:32px auto 0;
+      }
+
+      /* ===================== RIBBON ===================== */
+      .ribbon{
+        background:var(--cobalt-light); border-top:2px solid var(--cobalt-mid);
+        border-bottom:2px solid var(--cobalt-mid);
+        font-family:'Courier Prime', monospace; font-size:12.5px;
+        color:var(--cobalt); letter-spacing:0.04em; padding:13px 0;
+      }
+      .ribbon-inner{
+        max-width:900px; margin:0 auto; display:flex; flex-wrap:wrap;
+        justify-content:center; align-items:center; gap:0.6em 1.6em; padding:0 20px;
+        text-align:center;
+      }
+      .ribbon .dot{ color:var(--gold); }
+
+      /* ===================== TOC ===================== */
+      .toc{
+        max-width:620px; margin:56px auto; padding:32px 36px;
+        background:var(--cream-deep); border:1px solid var(--rule);
+        border-left:4px solid var(--cobalt);
+      }
+      .toc h2{
+        font-family:'Raleway', sans-serif; font-weight:800; font-size:1.1rem;
+        letter-spacing:0.12em; text-transform:uppercase; margin:0 0 20px;
+        text-align:center; color:var(--cobalt);
+      }
+      .toc ol{ list-style:none; margin:0; padding:0; }
+      .toc li{ margin:0; padding:8px 0; border-bottom:1px dotted var(--rule); }
+      .toc li:last-child{ border-bottom:none; }
+      .toc a{ display:flex; align-items:baseline; gap:14px; color:var(--ink); text-decoration:none; font-size:0.97rem; }
+      .toc a:hover{ color:var(--cobalt); }
+      .toc .rn{
+        font-family:'Courier Prime', monospace; color:var(--cobalt); font-size:0.84rem;
+        min-width:2.4em; font-weight:700;
+      }
+
+      /* ===================== MAIN ===================== */
+      main{ max-width:700px; margin:0 auto; padding:10px 28px 0; }
+      section{ margin-top:68px; }
+      section > h2{
+        font-family:'Raleway', sans-serif; font-weight:800; font-size:clamp(1.5rem, 4vw, 2rem);
+        display:flex; align-items:center; gap:16px; margin:0 0 28px; line-height:1.2;
+        color:var(--cobalt); text-transform:uppercase; letter-spacing:0.01em;
+      }
+      section > h2 .n{
+        font-family:'Courier Prime', monospace; font-size:0.78rem; font-weight:700;
+        background:var(--cobalt); color:#fff; padding:5px 10px; flex-shrink:0;
+        text-transform:none; letter-spacing:0.05em;
+      }
+      h3{
+        font-family:'Raleway', sans-serif; font-weight:700; font-size:1.2rem;
+        margin:38px 0 14px; color:var(--cobalt);
+      }
+      h3 .sn{ color:var(--gold); margin-right:8px; font-family:'Courier Prime', monospace; font-size:1rem; }
+      p{ margin:0 0 20px; text-align:justify; hyphens:auto; }
+      p.lead::first-letter{
+        font-family:'Raleway', sans-serif; font-weight:800; font-size:4em;
+        line-height:0.8; float:left; padding:0.05em 0.12em 0 0; color:var(--cobalt);
+      }
+      strong{ color:var(--ink); }
+      em.term{ font-style:italic; color:var(--cobalt-mid); }
+
+      /* ===================== TIMELINE ===================== */
+      .tl-wrap{
+        margin:52px 0; padding:36px 28px 14px;
+        background:var(--cream-deep); border:1px solid var(--rule);
+      }
+      .tl-wrap h2{
+        font-family:'Raleway', sans-serif; font-weight:800; font-size:1.1rem;
+        text-transform:uppercase; letter-spacing:0.12em; text-align:center;
+        margin:0 0 36px; color:var(--cobalt);
+      }
+      .tl{ position:relative; padding-left:104px; }
+      .tl::before{ content:""; position:absolute; left:70px; top:4px; bottom:4px; width:2px; background:var(--cobalt-mid); opacity:0.25; }
+      .tl-item{ position:relative; margin-bottom:26px; }
+      .tl-item:last-child{ margin-bottom:0; }
+      .tl-item::before{
+        content:""; position:absolute; left:-36px; top:7px; width:10px; height:10px;
+        border-radius:50%; background:var(--cobalt); border:2px solid var(--cream-deep);
+      }
+      .tl-item .yr{
+        position:absolute; left:-104px; width:68px; text-align:right;
+        font-family:'Courier Prime', monospace; color:var(--cobalt-mid); font-size:0.8rem; padding-top:3px;
+      }
+      .tl-item p{ margin:0; font-size:0.95rem; text-align:left; }
+
+      /* ===================== BLOCKQUOTE ===================== */
+      blockquote{
+        font-family:'Libre Baskerville', serif; font-style:italic; font-size:1.06rem;
+        line-height:1.8; color:var(--cobalt); background:var(--cobalt-light);
+        border-left:4px solid var(--cobalt-mid); padding:20px 28px; margin:34px 0;
+      }
+      blockquote .cite{
+        display:block; margin-top:12px; font-style:normal;
+        font-family:'Courier Prime', monospace; font-size:0.76rem; color:var(--ink-mid);
+        letter-spacing:0.05em;
+      }
+
+      /* ===================== TABLES ===================== */
+      table.main-tbl{ width:100%; border-collapse:collapse; margin:26px 0 34px; font-size:0.92rem; }
+      table.main-tbl th, table.main-tbl td{
+        text-align:left; padding:12px 10px; border-bottom:1px solid var(--cream-darker); vertical-align:top;
+      }
+      table.main-tbl th{
+        font-family:'Raleway', sans-serif; font-weight:700; font-size:0.68rem; letter-spacing:0.12em;
+        text-transform:uppercase; color:var(--cobalt); border-bottom:2px solid var(--cobalt-mid);
+      }
+      table.main-tbl td:first-child{
+        font-family:'Raleway', sans-serif; font-weight:700; color:var(--cobalt);
+        white-space:nowrap; width:1%; padding-right:18px;
+      }
+
+      /* ===================== FIGURES ===================== */
+      figure{ margin:44px 0; }
+      figure .df{
+        background:var(--cream-deep); border:1px solid var(--rule); padding:20px 12px;
+      }
+      figure svg{ display:block; width:100%; height:auto; }
+      figcaption{
+        font-family:'Courier Prime', monospace; font-size:0.76rem; color:var(--ink-mid);
+        text-align:center; margin-top:14px; line-height:1.6;
+      }
+      figcaption .fn{ color:var(--cobalt); font-weight:700; }
+
+      /* ===================== NOTE BOX ===================== */
+      .note{
+        background:var(--gold-light); border:1px solid var(--gold);
+        border-left:4px solid var(--gold); padding:20px 24px; margin:32px 0; font-size:0.94rem;
+      }
+      .note .nl{
+        font-family:'Raleway', sans-serif; font-size:0.68rem; letter-spacing:0.14em;
+        text-transform:uppercase; color:var(--gold); display:block; margin-bottom:8px; font-weight:700;
+      }
+      .note p{ margin-bottom:0; text-align:left; }
+
+      .note.blue{
+        background:var(--cobalt-light); border-color:var(--cobalt-mid);
+        border-left-color:var(--cobalt-mid);
+      }
+      .note.blue .nl{ color:var(--cobalt); }
+
+      /* ===================== DIVIDER ===================== */
+      .div-rule{ display:flex; align-items:center; gap:16px; margin:56px 0; }
+      .div-rule::before,.div-rule::after{ content:""; flex:1; height:1px; background:var(--rule); }
+      .div-rule span{ font-family:'Courier Prime', monospace; font-size:0.78rem; color:var(--ink-light); letter-spacing:0.18em; white-space:nowrap; }
+
+      /* ===================== FOOTER ===================== */
+      footer{
+        margin-top:80px; border-top:3px solid var(--cobalt); padding:42px 28px 60px;
+        text-align:center; background:var(--cream-deep);
+        font-family:'Courier Prime', monospace; font-size:0.76rem; color:var(--ink-mid); line-height:2;
+      }
+      footer .seal{
+        font-family:'Raleway', sans-serif; font-weight:800; font-size:1rem;
+        color:var(--cobalt); margin-bottom:16px; text-transform:uppercase; letter-spacing:0.12em;
+      }
+      footer .src{ max-width:560px; margin:18px auto 0; text-align:left; font-size:0.72rem; }
+      footer .src p{ margin:0 0 6px; text-align:left; }
+
+@media (max-width: 600px) {
+    body { font-size: 15.5px; }
+    .toc { padding: 24px 20px; }
+    .tl { padding-left: 60px; }
+}
 
   <!-- ===================== FOOTER ===================== -->
   <footer>
@@ -2669,16 +2923,6 @@
       <p>Nguồn tham khảo chính: Wikipedia — mục từ Richard Wyckoff; Wyckoff Stock Market Institute (wyckoffsmi.com) — Lịch sử và giới thiệu về Richard D. Wyckoff; Wyckoff Analytics — Phương pháp Wyckoff và Năm Bước Tiếp Cận Thị Trường; ChartSchool của StockCharts.com — Hướng dẫn về phương pháp Wyckoff; "Studies in Tape Reading" của Rollo Tape (Richard D. Wyckoff), xuất bản năm 1910 và 1919; "Wyckoff Method of Tape Reading", xuất bản năm 1934; Sacred Traders và Acme Trades — các bài viết về tiểu sử và phương pháp Wyckoff; LiteFinance, CMC Markets, FTMO và các tài liệu phân tích kỹ thuật hiện đại về Sơ Đồ Gom Hàng và Phân Phối Wyckoff.</p>
     </div>
   </footer>
-                        </div>
-                    </div>
-
-                    <div id="article-warren-buffett-panel" class="sukien-article-panel">
-                        <div class="article-warrenb">
-                            <button class="back-btn" onclick="openLegendArticle('')">
-                                <i class="fa-solid fa-arrow-left"></i> Quay lại danh sách
-                            </button>
-
-                            <iframe id="buffett-frame" style="width:100%; height:3000px; border:none; display:block; margin:0 auto;" src="/file/warren-buffett-luoc-su.html"></iframe>
                         </div>
                     </div>
 
