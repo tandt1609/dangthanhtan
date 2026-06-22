@@ -1047,13 +1047,6 @@ function openLegendArticle(articleId, updateUrl = true) {
         if (panel) panel.classList.add('active');
         if (updateUrl) history.pushState({ tabId: 'huyen-thoai', articleId: 'richard-wyckoff' }, '', '/huyen-thoai/richard-wyckoff');
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else if (articleId === 'warren-buffett') {
-        listView.classList.remove('active');
-        articleView.classList.add('active');
-        const panel = document.getElementById('article-warren-buffett-panel');
-        if (panel) panel.classList.add('active');
-        if (updateUrl) history.pushState({ tabId: 'huyen-thoai', articleId: 'warren-buffett' }, '', '/huyen-thoai/warren-buffett');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
         articleView.classList.remove('active');
         listView.classList.add('active');
