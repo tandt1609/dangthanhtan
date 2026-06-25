@@ -10,11 +10,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/style.css?v=5">
+    <link rel="stylesheet" href="/style.css?v=6">
+    <!-- Remove preload class after CSS loads to prevent flash of unstyled content -->
+    <script>document.addEventListener('DOMContentLoaded', () => document.body.classList.remove('preload'));</script>
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body class="theme-bull"> <!-- Default to Bull Theme -->
+<body class="theme-bull preload"> <!-- Default to Bull Theme; preload suppresses transitions on first render -->
     <!-- Background Glow Elements -->
     <div class="bg-glow bg-glow-left"></div>
     <div class="bg-glow bg-glow-right"></div>
