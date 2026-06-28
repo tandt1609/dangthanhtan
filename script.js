@@ -187,7 +187,9 @@ function handleRouting(path, updateUrl = false) {
     } else if (path.startsWith('/huyen-thoai')) {
         switchTab('huyen-thoai', false);
         const subPath = path.substring('/huyen-thoai'.length);
-        if (subPath === '/nicolas-darvas') {
+        if (subPath === '/fabio-valentini') {
+            openLegendArticle('fabio-valentini', updateUrl);
+        } else if (subPath === '/nicolas-darvas') {
             openLegendArticle('nicolas-darvas', updateUrl);
         } else if (subPath === '/wd-gann') {
             openLegendArticle('wd-gann', updateUrl);
@@ -1158,7 +1160,14 @@ function openLegendArticle(articleId, updateUrl = true) {
 
     document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
 
-    if (articleId === 'nicolas-darvas') {
+    if (articleId === 'fabio-valentini') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-valentini-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'huyen-thoai', articleId: 'fabio-valentini' }, '', '/huyen-thoai/fabio-valentini');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'nicolas-darvas') {
         listView.classList.remove('active');
         articleView.classList.add('active');
         const panel = document.getElementById('article-darvas-panel');
