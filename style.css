@@ -5393,7 +5393,7 @@ em { color: var(--lt-gold); font-style: normal; font-weight: 600; }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: rgba(255, 255, 255, 0.25) var(--bg-dark); }
 
 .article-daibang {
     background: var(--db-night);
