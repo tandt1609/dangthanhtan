@@ -144,6 +144,8 @@ function handleRouting(path, updateUrl = false) {
         const subPath = path.substring('/thu-vien'.length);
         if (subPath === '/dai-bang-tai-sinh') {
             openThuVienArticle('dai-bang-tai-sinh', updateUrl);
+        } else if (subPath === '/luoc-su-phat-hoc') {
+            openThuVienArticle('luoc-su-phat-hoc', updateUrl);
         } else {
             openThuVienArticle('', updateUrl);
         }
@@ -255,6 +257,13 @@ function openThuVienArticle(articleId, updateUrl = true) {
         const panel = document.getElementById('article-daibang-panel');
         if (panel) panel.classList.add('active');
         if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'dai-bang-tai-sinh' }, '', '/thu-vien/dai-bang-tai-sinh');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'luoc-su-phat-hoc') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-phathoc-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'luoc-su-phat-hoc' }, '', '/thu-vien/luoc-su-phat-hoc');
         window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
         articleView.classList.remove('active');
