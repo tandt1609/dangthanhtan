@@ -146,6 +146,8 @@ function handleRouting(path, updateUrl = false) {
             openThuVienArticle('dai-bang-tai-sinh', updateUrl);
         } else if (subPath === '/luoc-su-phat-hoc') {
             openThuVienArticle('luoc-su-phat-hoc', updateUrl);
+        } else if (subPath === '/luoc-su-kinh-dich') {
+            openThuVienArticle('luoc-su-kinh-dich', updateUrl);
         } else {
             openThuVienArticle('', updateUrl);
         }
