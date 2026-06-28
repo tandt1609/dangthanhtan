@@ -178,6 +178,8 @@ function handleRouting(path, updateUrl = false) {
         const subPath = path.substring('/huyen-thoai'.length);
         if (subPath === '/rudolf-steiner') {
             openLegendArticle('rudolf-steiner', updateUrl);
+        } else if (subPath === '/steven-cohen') {
+            openLegendArticle('steven-cohen', updateUrl);
         } else if (subPath === '/jim-simons') {
             openLegendArticle('jim-simons', updateUrl);
         } else if (subPath === '/richard-wyckoff') {
@@ -1140,6 +1142,13 @@ function openLegendArticle(articleId, updateUrl = true) {
         const panel = document.getElementById('article-steiner-panel');
         if (panel) panel.classList.add('active');
         if (updateUrl) history.pushState({ tabId: 'huyen-thoai', articleId: 'rudolf-steiner' }, '', '/huyen-thoai/rudolf-steiner');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'steven-cohen') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-cohen-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'huyen-thoai', articleId: 'steven-cohen' }, '', '/huyen-thoai/steven-cohen');
         window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (articleId === 'jim-simons') {
         listView.classList.remove('active');
