@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body class="theme-bull preload"> <!-- Default to Bull Theme; preload suppresses transitions on first render -->
     <!-- Background Glow Elements -->
@@ -5869,6 +5870,18 @@
                 <div id="huyen-thoai-list-view" class="sukien-view active">
                     <h2 class="section-title"><i class="fa-solid fa-crown"></i> Huyền thoại trong các lĩnh vực</h2>
                     <div class="news-list">
+                        <a href="/huyen-thoai/nicolas-darvas" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-arrow-trend-up"></i> Giao dịch theo đà</span>
+                                <span class="news-time">1920 – 1977</span>
+                            </div>
+                            <h3 class="news-heading"><span style="font-size:0.75em;color:#6fae6a;font-weight:500;display:block;margin-bottom:2px;letter-spacing:0.04em;">Giao dịch theo đà</span>Nicolas Darvas — Lược Sử Huyền Thoại</h3>
+                            <p class="news-excerpt">Vũ công vĩ đại đã biến 36,000 đô la thành 2 triệu đô la với Lý thuyết Hộp nổi tiếng.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc hồ sơ</span>
+                            </div>
+                        </a>
+
                         <a href="/huyen-thoai/wd-gann" class="news-card clickable-card">
                             <div class="news-meta">
                                 <span class="news-source"><i class="fa-solid fa-compass-drafting"></i> Phân tích kỹ thuật & Chu kỳ</span>
@@ -9828,6 +9841,1149 @@
 
     <div style="padding: 20px; text-align: center; background: #0A0C1A;">
         <button onclick="openLegendArticle('')" style="background: transparent; border: 1px solid rgba(184,115,51,0.5); color: #D4AF6A; padding: 7px 16px; cursor: pointer; font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.05em; border-radius: 4px;">
+            &#8592; Quay lại danh sách
+        </button>
+    </div>
+</div>
+
+                
+<div id="article-darvas-panel" class="sukien-article-panel darvas-body">
+    <style>
+#article-darvas-panel {
+
+    #article-darvas-panel {
+      --ink:        #0D0F14;
+      --paper:      #F2EDDF;
+      --gold:       #C8A04A;
+      --gold-light: #E8C97A;
+      --gold-dim:   #8A6A28;
+      --steel:      #4A7FA5;
+      --steel-dim:  #2C5270;
+      --cream-mid:  #D9D2C0;
+      --accent-red: #A03030;
+      --text-body:  #1C1E25;
+      --text-muted: #6B6352;
+      --divider:    #3A3420;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    #article-darvas-panel.darvas-html { scroll-behavior: smooth; }
+
+    #article-darvas-panel.darvas-body {
+      background-color: var(--ink);
+      color: var(--paper);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ═══════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 30%, rgba(200,160,74,0.08) 0%, transparent 70%),
+        linear-gradient(180deg, #0D0F14 0%, #111318 100%);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 39px,
+          rgba(200,160,74,0.04) 39px,
+          rgba(200,160,74,0.04) 40px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 79px,
+          rgba(200,160,74,0.03) 79px,
+          rgba(200,160,74,0.03) 80px
+        );
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 2.4rem;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(3.2rem, 8vw, 7rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--paper);
+      letter-spacing: -0.01em;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-subtitle {
+      margin-top: 1.6rem;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--cream-mid);
+      max-width: 640px;
+    }
+
+    .hero-rule {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 2.4rem auto;
+    }
+
+    .hero-years {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--gold-dim);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .hero-scroll::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(180deg, var(--gold-dim), transparent);
+    }
+
+    /* ═══════════════════════════════════════
+       LAYOUT WRAPPER
+    ═══════════════════════════════════════ */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .container-wide {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ═══════════════════════════════════════
+       SECTION STYLES
+    ═══════════════════════════════════════ */
+    .section {
+      padding: 5rem 0;
+      border-bottom: 1px solid rgba(200,160,74,0.12);
+    }
+
+    .section:last-of-type { border-bottom: none; }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(200,160,74,0.25);
+    }
+
+    .section-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--paper);
+      margin-bottom: 2rem;
+    }
+
+    .section-heading em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .prose {
+      color: rgba(242,237,223,0.88);
+      font-size: 1.05rem;
+      line-height: 1.9;
+    }
+
+    .prose p { margin-bottom: 1.4rem; }
+    .prose p:last-child { margin-bottom: 0; }
+
+    .prose strong {
+      color: var(--paper);
+      font-weight: 600;
+    }
+
+    /* ═══════════════════════════════════════
+       TIMELINE
+    ═══════════════════════════════════════ */
+    .timeline {
+      position: relative;
+      padding-left: 2.5rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      width: 1px;
+      background: linear-gradient(180deg, transparent, var(--gold) 10%, var(--gold) 90%, transparent);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.8rem;
+    }
+
+    .timeline-item:last-child { margin-bottom: 0; }
+
+    .timeline-dot {
+      position: absolute;
+      left: -2.5rem;
+      top: 0.5rem;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--ink);
+      border: 1.5px solid var(--gold);
+      transform: translateX(-4px);
+    }
+
+    .timeline-year {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--paper);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-#article-darvas-panel.darvas-body {
+      color: rgba(242,237,223,0.82);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    /* ═══════════════════════════════════════
+       PULL QUOTE
+    ═══════════════════════════════════════ */
+    .pull-quote {
+      border-left: 3px solid var(--gold);
+      margin: 3rem 0;
+      padding: 1.4rem 2rem;
+      background: rgba(200,160,74,0.05);
+    }
+
+    .pull-quote p {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--gold-light);
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+    }
+
+    .pull-quote cite {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      font-style: normal;
+    }
+
+    /* ═══════════════════════════════════════
+       HIGHLIGHT CARD
+    ═══════════════════════════════════════ */
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+
+    .highlight-card {
+      border: 1px solid rgba(200,160,74,0.2);
+      background: rgba(200,160,74,0.04);
+      padding: 1.6rem 1.8rem;
+    }
+
+    .highlight-card .number {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .highlight-card .label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--cream-mid);
+      margin-bottom: 0.6rem;
+    }
+
+    .highlight-card .desc {
+      font-size: 0.92rem;
+      color: rgba(242,237,223,0.72);
+      line-height: 1.65;
+    }
+
+    /* ═══════════════════════════════════════
+       BOX METHOD
+    ═══════════════════════════════════════ */
+    .box-diagram {
+      margin: 2.5rem 0;
+      position: relative;
+    }
+
+    .box-outer {
+      border: 1.5px solid var(--gold);
+      padding: 0.9rem 1.2rem;
+      position: relative;
+    }
+
+    .box-label-outer {
+      position: absolute;
+      top: -0.65rem;
+      left: 1rem;
+      background: var(--ink);
+      padding: 0 0.5rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .box-inner {
+      border: 1.5px solid var(--steel);
+      padding: 0.9rem 1.2rem;
+      position: relative;
+      margin-top: 0.5rem;
+    }
+
+    .box-label-inner {
+      position: absolute;
+      top: -0.65rem;
+      left: 1rem;
+      background: var(--ink);
+      padding: 0 0.5rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      color: var(--steel);
+      text-transform: uppercase;
+    }
+
+    .box-price {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      color: rgba(242,237,223,0.75);
+      margin-bottom: 0.25rem;
+    }
+
+    .box-price .val { color: var(--paper); }
+    .box-arrow {
+      text-align: center;
+      color: var(--gold);
+      font-size: 1.3rem;
+      margin: 0.3rem 0;
+    }
+
+    .box-stop {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--accent-red);
+      text-align: center;
+      margin-top: 0.6rem;
+      letter-spacing: 0.08em;
+    }
+
+    /* ═══════════════════════════════════════
+       RULES LIST
+    ═══════════════════════════════════════ */
+    .rules-list {
+      counter-reset: rules;
+      list-style: none;
+      margin: 2rem 0;
+    }
+
+    .rules-list li {
+      counter-increment: rules;
+      display: flex;
+      gap: 1.4rem;
+      align-items: flex-start;
+      margin-bottom: 1.8rem;
+      padding-bottom: 1.8rem;
+      border-bottom: 1px solid rgba(200,160,74,0.1);
+    }
+
+    .rules-list li:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .rules-list li::before {
+      content: counter(rules, decimal-leading-zero);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--gold);
+      min-width: 2.5rem;
+      padding-top: 0.15rem;
+    }
+
+    .rules-list li .rule-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--paper);
+      margin-bottom: 0.35rem;
+    }
+
+    .rules-list li .rule-#article-darvas-panel.darvas-body {
+      font-size: 0.98rem;
+      color: rgba(242,237,223,0.8);
+      line-height: 1.75;
+    }
+
+    /* ═══════════════════════════════════════
+       FAILURE / SUCCESS CARDS
+    ═══════════════════════════════════════ */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+
+    @media (max-width: 640px) {
+      .two-col { grid-template-columns: 1fr; }
+    }
+
+    .side-card {
+      border-top: 2px solid;
+      padding-top: 1.2rem;
+    }
+
+    .side-card.failure { border-color: var(--accent-red); }
+    .side-card.success { border-color: var(--gold); }
+
+    .side-card .card-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .side-card.failure .card-label { color: var(--accent-red); }
+    .side-card.success .card-label { color: var(--gold); }
+
+    .side-card ul {
+      list-style: none;
+      font-size: 0.97rem;
+      color: rgba(242,237,223,0.82);
+      line-height: 1.8;
+    }
+
+    .side-card ul li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(200,160,74,0.08);
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .side-card ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--text-muted);
+    }
+
+    .side-card ul li:last-child { border-bottom: none; }
+
+    /* ═══════════════════════════════════════
+       LEGACY SECTION
+    ═══════════════════════════════════════ */
+    .lesson-block {
+      margin-bottom: 2.5rem;
+      padding: 1.8rem 2rem;
+      border: 1px solid rgba(200,160,74,0.15);
+      background: rgba(255,255,255,0.018);
+      position: relative;
+    }
+
+    .lesson-num {
+      position: absolute;
+      top: 1.4rem;
+      right: 1.6rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: rgba(200,160,74,0.07);
+      line-height: 1;
+      user-select: none;
+    }
+
+    .lesson-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      margin-bottom: 0.8rem;
+    }
+
+    .lesson-#article-darvas-panel.darvas-body {
+      font-size: 0.98rem;
+      color: rgba(242,237,223,0.82);
+      line-height: 1.8;
+    }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════ */
+    .footer {
+      padding: 3.5rem 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(200,160,74,0.15);
+    }
+
+    .footer-rule {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+      margin: 0 auto 1.8rem;
+    }
+
+    .footer-text {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════ */
+    @media (max-width: 600px) {
+      #article-darvas-panel.darvas-body { font-size: 16px; }
+      .hero { padding: 5rem 1.5rem 3rem; }
+      .section { padding: 3.5rem 0; }
+      .container, .container-wide { padding: 0 1.25rem; }
+      .pull-quote { padding: 1.1rem 1.3rem; }
+      .pull-quote p { font-size: 1.1rem; }
+      .highlight-card .number { font-size: 2rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #article-darvas-panel.darvas-html { scroll-behavior: auto; }
+    }
+  
+}
+</style>
+    <div style="padding: 16px 20px; background: #0D0F14;">
+        <button onclick="openLegendArticle('')" style="background: transparent; border: 1px solid rgba(200,160,74,0.5); color: #C8A04A; padding: 7px 16px; cursor: pointer; font-family: 'DM Mono', monospace; font-size: 0.85rem; letter-spacing: 0.05em; border-radius: 4px;">
+            &#8592; Quay lại danh sách
+        </button>
+    </div>
+    
+
+  <!-- ════════════════════════════════════
+       HERO
+  ════════════════════════════════════ -->
+  <header class="hero">
+    <p class="hero-eyebrow">Lược Sử &nbsp;·&nbsp; Wall Street &nbsp;·&nbsp; Huyền Thoại Trading</p>
+    <h1 class="hero-title">Nicolas<br /><em>Darvas</em></h1>
+    <p class="hero-subtitle">Vũ công sàn diễn biến thành nhà đầu cơ huyền thoại — người kiếm được hai triệu đô la chỉ bằng điện báo và sức mạnh của kỷ luật.</p>
+    <div class="hero-rule"></div>
+    <p class="hero-years">1920 &nbsp;—&nbsp; 1977</p>
+    <div class="hero-scroll">Cuộn xuống</div>
+  </header>
+
+  <main>
+
+    <!-- ════════════════════════════════════
+         I. TIỂU SỬ & TUỔI THƠ
+    ════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Phần Một</p>
+        <h2 class="section-heading">Tiểu Sử và Những Năm <em>Định Hình</em></h2>
+
+        <div class="prose">
+          <p>Nicolas Darvas sinh năm 1920 tại Hungary, trong một gia đình Do Thái trí thức sống tại Budapest. Cha ông là một công chức nhà nước, mẹ ông là người phụ nữ có học vấn cao — cả hai đều chú trọng giáo dục cho con cái trong bầu không khí văn hóa đặc trưng của Budapest thời kỳ giữa hai cuộc thế chiến. Thành phố này khi ấy là một trong những trung tâm trí tuệ và nghệ thuật sầm uất bậc nhất châu Âu, nơi triết học, âm nhạc, toán học và kinh tế học đan xen nhau trong những tiệm cà phê và giảng đường đại học.</p>
+
+          <p>Darvas theo học kinh tế và ngoại thương tại Đại học Budapest, nơi ông tiếp thu nền tảng tư duy phân tích và lý luận logic một cách bài bản. Ông tốt nghiệp với tấm bằng tiến sĩ kinh tế — một thành tựu học thuật đáng kể, dù sau này ông sẽ nhận ra rằng lý thuyết hàn lâm về thị trường tài chính không phải lúc nào cũng giúp ích gì cho thực tế giao dịch.</p>
+
+          <p>Tuy nhiên, cuộc đời ông bị đứt gãy hoàn toàn bởi Chiến tranh Thế giới thứ Hai. Khi Đức Quốc xã xâm chiếm Hungary và làn sóng bài Do Thái lan rộng, gia đình Darvas trở thành đích ngắm của chính sách tiêu diệt man rợ. Trong khi phần lớn cộng đồng Do Thái Hungary bị truy đuổi, Nicolas Darvas may mắn đã rời khỏi đất nước trước khi thảm họa ập đến — ông chạy trốn sang Thổ Nhĩ Kỳ vào những năm đầu thập niên 1940, rồi tiếp tục hành trình lưu vong sang Paris và cuối cùng đặt chân đến phương Tây.</p>
+
+          <p>Cuộc sống tha hương không chỉ tôi luyện sức chịu đựng của ông mà còn nuôi dưỡng trong ông khả năng thích nghi mạnh mẽ — phẩm chất mà sau này trở thành một trong những tài sản vô giá nhất trong sự nghiệp trading của ông. Không có tổ quốc, không có chỗ dựa tài chính, ông phải tự kiến tạo bản thân từ số không.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         II. SỰ NGHIỆP VŨ CÔNG
+    ════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Phần Hai</p>
+        <h2 class="section-heading">Vũ Công Trên <em>Những Sân Khấu Lớn</em></h2>
+
+        <div class="prose">
+          <p>Ở Paris, Darvas tình cờ bước vào thế giới nghệ thuật biểu diễn. Năm 1948, ông cùng người bạn nhảy Julia Adamska — người sau trở thành người bạn đời và đối tác sân khấu của ông — hình thành bộ đôi vũ công chuyên nghiệp. Họ biểu diễn các điệu nhảy dân gian châu Âu và Latin pha trộn với phong cách hiện đại, một thể loại mới mẻ và quyến rũ đối với khán giả phương Tây.</p>
+
+          <p>Bộ đôi Darvas và Julia nhanh chóng được chú ý. Từ những sân khấu nhỏ ở Paris, họ nhận được lời mời biểu diễn tại London, rồi đến các thành phố lớn ở châu Âu và cuối cùng vượt Đại Tây Dương sang Hoa Kỳ. Từ khoảng năm 1950 trở đi, Nicolas Darvas trở thành một trong những vũ công Latin được trả cát-xê cao nhất thế giới, biểu diễn tại những hộp đêm và sân khấu hạng nhất ở New York, Miami, Las Vegas, London và khắp châu Âu.</p>
+
+          <p>Đỉnh cao sự nghiệp biểu diễn của ông là những hợp đồng biểu diễn tại các hộp đêm danh tiếng như Copacabana ở New York và những địa điểm sang trọng nhất tại Las Vegas. Mức cát-xê một tuần biểu diễn của bộ đôi có thể lên đến hàng nghìn đô la Mỹ — một con số rất lớn vào thập niên 1950. Sự nghiệp biểu diễn đưa ông đến khắp nơi trên thế giới, đồng nghĩa với việc ông liên tục sống xa Phố Wall và các trung tâm tài chính, đặc điểm này sau này trở thành một yếu tố quan trọng định hình phương pháp giao dịch độc đáo của ông.</p>
+        </div>
+
+        <div class="pull-quote">
+          <p>Tôi là vũ công vào ban đêm và nhà đầu tư vào ban ngày — nhưng chính sân khấu đã dạy tôi bài học quý giá nhất: phải thực hành kỷ luật tuyệt đối, dù cảm xúc có cuốn trôi mình đến đâu.</p>
+          <cite>— Nicolas Darvas</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         III. CƠ DUYÊN VỚI TRADING
+    ════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Phần Ba</p>
+        <h2 class="section-heading">Cơ Duyên Với <em>Thị Trường Chứng Khoán</em></h2>
+
+        <div class="prose">
+          <p>Năm 1952, sự kiện hoàn toàn tình cờ đã thay đổi mãi mãi cuộc đời Nicolas Darvas. Một ban nhạc Canada mời bộ đôi Darvas tham gia biểu diễn tại Toronto, nhưng thay vì trả tiền mặt cho cát-xê, họ đề nghị thanh toán bằng cổ phiếu của một công ty khai thác mỏ nhỏ có tên Brilund. Darvas chấp nhận vì không có lựa chọn nào khác — ông nhận 3.000 cổ phiếu với giá khoảng 0,50 đô la một cổ phiếu, tổng trị giá 1.500 đô la.</p>
+
+          <p>Điều kỳ diệu xảy ra sau đó: cổ phiếu Brilund tăng vọt lên hơn 1,90 đô la mỗi cổ phiếu, biến khoản đầu tư bất ngờ của ông thành gần 6.000 đô la — lợi nhuận gấp bốn lần chỉ trong vài tháng ngắn ngủi. Khoản lãi ngoài dự kiến này không chỉ làm giàu cho túi tiền Darvas mà còn châm ngòi cho một đam mê hoàn toàn mới: tìm hiểu tại sao giá cổ phiếu lên xuống và làm thế nào để kiếm tiền từ chuyển động đó một cách có hệ thống.</p>
+
+          <p>Darvas lao vào học hỏi với sự nhiệt tình điên cuồng đặc trưng của kẻ mới nhập môn. Ông đọc ngấu nghiến mọi quyển sách về đầu tư và đầu cơ mà ông có thể tìm được — từ các công trình kinh điển về phân tích cơ bản của Benjamin Graham đến những cuốn sách về tâm lý thị trường. Ông nghiên cứu lý thuyết Dow, tìm hiểu về phân tích kỹ thuật, đọc các bản tin đầu tư và theo dõi nhận xét của các chuyên gia tài chính. Ông mở tài khoản môi giới và bắt đầu mua bán cổ phiếu một cách tích cực.</p>
+        </div>
+
+        <div class="highlight-grid">
+          <div class="highlight-card">
+            <div class="number">1952</div>
+            <div class="label">Năm bắt đầu</div>
+            <div class="desc">Nhận cổ phiếu Brilund thay cát-xê biểu diễn — bước ngoặt định mệnh đưa ông vào thị trường chứng khoán.</div>
+          </div>
+          <div class="highlight-card">
+            <div class="number">$1.500</div>
+            <div class="label">Vốn ban đầu</div>
+            <div class="desc">Giá trị ban đầu của lô cổ phiếu Brilund nhận được — tăng lên gần 6.000 đô la chỉ sau vài tháng.</div>
+          </div>
+          <div class="highlight-card">
+            <div class="number">$2.000.000</div>
+            <div class="label">Lợi nhuận đỉnh cao</div>
+            <div class="desc">Tổng lợi nhuận tích lũy trong giai đoạn 1957–1959, chủ yếu từ giao dịch cổ phiếu tăng trưởng Mỹ.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         IV. THẤT BẠI
+    ════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Phần Bốn</p>
+        <h2 class="section-heading">Những Năm Tháng <em>Thất Bại và Học Hỏi</em></h2>
+
+        <div class="prose">
+          <p>Trong khoảng hai năm đầu từ 1952 đến 1954, Darvas không làm gì ngoài thua lỗ. Ông thử đủ mọi cách tiếp cận mà ông học được từ sách vở và các chuyên gia. Ông mua cổ phiếu theo lời khuyên của các nhà môi giới. Ông tin vào các bản tin đầu tư và "tin nóng" từ những người bên trong ngành. Ông mua cổ phiếu giá rẻ vì nghĩ chúng rẻ. Ông cố gắng dự báo đáy và đỉnh của thị trường. Kết quả: ông thua lỗ liên tiếp, mất hàng nghìn đô la đã khổ công kiếm được trên sân khấu.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="side-card failure">
+            <div class="card-label">Những Thất Bại Điển Hình</div>
+            <ul>
+              <li>Mua cổ phiếu dựa vào lời khuyên của môi giới mà không hiểu công ty</li>
+              <li>Tin vào "tin nóng nội bộ" và lời đồn đại từ người quen trong ngành tài chính</li>
+              <li>Mua cổ phiếu đơn thuần vì giá rẻ, không quan tâm đến xu hướng giá</li>
+              <li>Trung bình giá xuống khi thua lỗ, ném tiền vào những vị thế đang chết</li>
+              <li>Không cắt lỗ đúng lúc, để lỗ nhỏ phình to thành thảm họa</li>
+              <li>Giao dịch quá nhiều, chạy theo biến động ngắn hạn không có hệ thống</li>
+              <li>Phụ thuộc vào ý kiến của các chuyên gia tài chính thay vì tự phân tích</li>
+            </ul>
+          </div>
+          <div class="side-card success">
+            <div class="card-label">Những Gì Ông Học Được Từ Thất Bại</div>
+            <ul>
+              <li>Không ai có thể dự đoán chắc chắn chiều hướng của thị trường</li>
+              <li>Lời khuyên từ người khác luôn chứa đựng thiên kiến và lợi ích riêng</li>
+              <li>Giá cổ phiếu không liên quan đến giá trị tuyệt đối mà liên quan đến xu hướng</li>
+              <li>Bảo toàn vốn quan trọng hơn việc theo đuổi lợi nhuận bằng mọi giá</li>
+              <li>Kỷ luật tuân thủ quy tắc quan trọng hơn thông minh hay học vấn</li>
+              <li>Thị trường luôn đúng — nhà giao dịch cần biết nhường thị trường</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="prose">
+          <p>Một trong những thất bại đau đớn nhất của ông xảy ra khi ông đặt cược lớn vào cổ phiếu một công ty dựa trên thông tin "nội bộ" từ người quen trong giới tài chính Canada. Cổ phiếu không tăng như kỳ vọng mà còn giảm mạnh, khiến ông mất một khoản tiền đáng kể. Chính thất bại này đã dạy ông bài học cốt lõi: thông tin ưu việt không phải là lợi thế bền vững, và tin vào người khác trong thị trường tài chính là con đường chắc chắn dẫn đến thất bại.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         V. HÀNH TRÌNH KHÁM PHÁ PHƯƠNG PHÁP
+    ════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Phần Năm</p>
+        <h2 class="section-heading">Hành Trình Khám Phá <em>Phương Pháp Riêng</em></h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">1954 — 1955</div>
+            <div class="timeline-title">Từ bỏ lời khuyên và "tin nóng"</div>
+            <div class="timeline-body">Sau nhiều năm thua lỗ vì nghe theo người khác, Darvas quyết định không còn tin vào bất kỳ lời khuyên nào từ môi giới hay chuyên gia. Ông bắt đầu hành trình tự xây dựng hệ thống giao dịch của riêng mình dựa hoàn toàn trên quan sát và dữ liệu giá thực tế.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">1955</div>
+            <div class="timeline-title">Phát hiện nguyên tắc kết hợp giá và khối lượng</div>
+            <div class="timeline-body">Qua quan sát tỉ mỉ hàng trăm biểu đồ và dữ liệu giao dịch, Darvas nhận ra rằng giá và khối lượng giao dịch là hai tín hiệu quan trọng nhất cần theo dõi. Ông bắt đầu chú ý đến những cổ phiếu có khối lượng giao dịch bất thường tăng cao kèm theo sự phá vỡ ngưỡng giá quan trọng.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">1956</div>
+            <div class="timeline-title">Phát triển lý thuyết "hộp" (Box Theory)</div>
+            <div class="timeline-body">Darvas đúc kết quan sát của mình thành khái niệm "hộp" — vùng giá dao động với biên độ xác định. Ông nhận thấy rằng cổ phiếu thường giao dịch trong một hộp trước khi phá vỡ lên hộp mới cao hơn hoặc rơi xuống hộp thấp hơn. Điểm phá vỡ upward ra khỏi hộp với khối lượng lớn chính là tín hiệu mua mà ông tìm kiếm.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">1957 — 1958</div>
+            <div class="timeline-title">Kiểm chứng phương pháp qua giao dịch thực tế</div>
+            <div class="timeline-body">Darvas đặt mua cổ phiếu Lorillard với 36.000 đô la vốn và kiếm được gần 60.000 đô la lợi nhuận. Ông tiếp tục với nhiều cổ phiếu khác nhau và xác nhận rằng phương pháp của mình hoạt động nhất quán khi thị trường đang trong xu hướng tăng mạnh. Đây là giai đoạn ông bắt đầu dùng điện báo để giao dịch từ khắp nơi trên thế giới.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">1958 — 1959</div>
+            <div class="timeline-title">Đỉnh cao — Hai triệu đô la lợi nhuận</div>
+            <div class="timeline-body">Trong chưa đầy 18 tháng, Darvas tích lũy lợi nhuận hơn hai triệu đô la Mỹ từ thị trường chứng khoán. Trong suốt thời gian này, ông đang biểu diễn khắp thế giới — từ châu Á sang châu Âu — và chỉ nhận bảng giá cổ phiếu qua đường bưu điện và gửi lệnh giao dịch bằng điện báo. Sự cô lập về địa lý trở thành một lợi thế vô tình, giúp ông tránh xa tiếng ồn của Phố Wall.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         VI. PHƯƠNG PHÁP HỘP DARVAS
+    ════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Phần Sáu</p>
+        <h2 class="section-heading">Phương Pháp <em>Hộp Darvas</em> — Chi Tiết Toàn Diện</h2>
+
+        <div class="prose">
+          <p>Phương pháp Hộp Darvas (Darvas Box Theory) là một hệ thống giao dịch toàn diện kết hợp ba yếu tố cốt lõi: phân tích xu hướng giá, xác nhận qua khối lượng giao dịch, và nền tảng cơ bản về sức mạnh của ngành công nghiệp. Không phải là một hệ thống đơn giản hay một công thức kỳ diệu, phương pháp này đòi hỏi người thực hành phải hiểu sâu từng nguyên tắc và có khả năng xét đoán độc lập.</p>
+        </div>
+
+        <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;font-weight:600;color:var(--gold-light);margin:2rem 0 1.2rem;">6.1 — Định Nghĩa Hộp Darvas</h3>
+
+        <div class="box-diagram">
+          <div class="box-outer">
+            <span class="box-label-outer">Đỉnh Hộp (Box Top)</span>
+            <div class="box-price"><span>Mức cao nhất gần đây không bị vượt qua trong ít nhất 3 phiên liên tiếp</span> <span class="val">Ví dụ: 55.00</span></div>
+            <div class="box-inner">
+              <span class="box-label-inner">Vùng Tích Lũy (Box Interior)</span>
+              <div class="box-price"><span>Giá dao động trong phạm vi này — ổn định và hẹp</span><span class="val"> </span></div>
+              <div class="box-arrow">↕</div>
+              <div class="box-price"><span>Khối lượng giao dịch duy trì bình thường hoặc giảm dần</span><span class="val"> </span></div>
+            </div>
+            <div class="box-price" style="margin-top:0.6rem;"><span>Mức thấp nhất không bị xuyên thủng trong cùng giai đoạn đó</span><span class="val">Ví dụ: 48.00</span></div>
+          </div>
+          <div class="box-stop">
+            ✕ &nbsp; Điểm dừng lỗ đặt ngay dưới đáy hộp (Stop-Loss: ~47.25)
+          </div>
+        </div>
+
+        <div class="prose">
+          <p>Một "hộp" trong hệ thống Darvas là vùng giá mà cổ phiếu dao động trong một khoảng thời gian đủ để xác lập đỉnh và đáy tạm thời. Đỉnh hộp được hình thành khi giá đạt một mức cao mới nhưng không tiếp tục tăng trong ít nhất ba phiên giao dịch liên tiếp. Đáy hộp tương tự được xác nhận khi giá dừng giảm và không xuyên thủng mức thấp đó trong vài phiên tiếp theo.</p>
+
+          <p>Điều quan trọng là hộp phải đủ chặt chẽ — biên độ dao động không quá rộng. Một hộp tốt thường có biên độ từ 10 đến 15 phần trăm giữa đỉnh và đáy. Nếu biên độ quá rộng, đó không phải là tín hiệu tích lũy mà là cổ phiếu đang biến động hỗn loạn, không có hướng rõ ràng.</p>
+        </div>
+
+        <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;font-weight:600;color:var(--gold-light);margin:2rem 0 1.2rem;">6.2 — Tiêu Chí Chọn Lọc Cổ Phiếu</h3>
+
+        <div class="prose">
+          <p><strong>Yếu tố ngành công nghiệp:</strong> Darvas chỉ mua cổ phiếu thuộc những ngành đang được thị trường ưa chuộng và có sức tăng trưởng rõ ràng. Trong thập niên 1950-60, những ngành đó là điện tử, quốc phòng, hóa chất và công nghệ mới. Ông tin rằng con thuyền nào được nâng lên bởi thủy triều sẽ dễ đi hơn con thuyền chèo ngược dòng.</p>
+
+          <p><strong>Câu chuyện tăng trưởng:</strong> Darvas muốn thấy các công ty có sản phẩm mới, hợp đồng chính phủ mới, hoặc một lợi thế cạnh tranh rõ ràng đang được thị trường nhận ra. Ông không cần phải hiểu chi tiết kỹ thuật về công ty, nhưng ông cần nhận ra rằng có gì đó thực sự hấp dẫn đang kéo dòng tiền vào cổ phiếu đó.</p>
+
+          <p><strong>Giá cổ phiếu và vị thế:</strong> Ông ưa thích cổ phiếu đang giao dịch ở vùng giá cao, không phải giá rẻ bèo. Giá cao thường phản ánh kỳ vọng mạnh từ thị trường và thường có xu hướng tiếp tục tăng, trong khi giá rẻ thường rẻ vì có lý do chính đáng.</p>
+        </div>
+
+        <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;font-weight:600;color:var(--gold-light);margin:2rem 0 1.2rem;">6.3 — Tín Hiệu Mua và Cách Vào Lệnh</h3>
+
+        <div class="prose">
+          <p>Tín hiệu mua của Darvas rất cụ thể: cổ phiếu phải phá vỡ lên trên đỉnh hộp hiện tại, kèm theo khối lượng giao dịch tăng vọt đáng kể so với trung bình. Sự kết hợp giữa phá vỡ giá và khối lượng cao là bằng chứng cho thấy dòng tiền thông minh đang dịch chuyển vào cổ phiếu đó một cách tích cực.</p>
+
+          <p>Darvas sử dụng lệnh mua có điều kiện (stop-buy order) đặt ngay phía trên đỉnh hộp. Điều này có nghĩa là ông không đoán trước khi nào đỉnh hộp sẽ bị phá vỡ — ông để thị trường tự kích hoạt lệnh mua khi điều kiện hội đủ. Kỹ thuật này giúp ông loại bỏ sự phán đoán cảm tính và đảm bảo rằng ông chỉ mua khi thị trường đã xác nhận hướng đi.</p>
+
+          <p>Khi một cổ phiếu phá vỡ lên và hình thành hộp mới cao hơn, Darvas thường mua thêm ở điểm phá vỡ lên của hộp tiếp theo — chiến lược kim tự tháp (pyramiding) nhưng chỉ theo hướng thắng. Ông không bao giờ mua thêm vào vị thế đang thua lỗ.</p>
+        </div>
+
+        <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;font-weight:600;color:var(--gold-light);margin:2rem 0 1.2rem;">6.4 — Quản Lý Rủi Ro và Điểm Dừng Lỗ</h3>
+
+        <div class="prose">
+          <p>Đây là phần mà Darvas coi trọng nhất trong toàn bộ hệ thống. Ngay khi mua vào, ông đặt ngay lập tức một lệnh dừng lỗ tự động ngay dưới đáy hộp hiện tại. Nếu giá rớt xuống dưới đáy hộp, vị thế được đóng lại tự động mà không cần ông phải quyết định hay cân nhắc lại.</p>
+
+          <p>Khi giá leo lên và hình thành hộp mới cao hơn, ông nâng điểm dừng lỗ lên ngay dưới đáy của hộp mới nhất — chiến lược trailing stop. Điều này đảm bảo rằng lợi nhuận được bảo vệ khi xu hướng tiếp diễn, và vị thế chỉ bị đóng lại khi giá thực sự đảo chiều và phá vỡ xuống dưới vùng hỗ trợ quan trọng nhất gần nhất.</p>
+
+          <p>Darvas không bao giờ đặt điểm dừng lỗ theo một tỷ lệ phần trăm cố định hay theo cảm tính. Điểm dừng lỗ luôn gắn chặt với cấu trúc kỹ thuật của cổ phiếu — đặc biệt là đáy hộp. Đây là sự khác biệt then chốt giữa phương pháp của ông và nhiều hệ thống tùy tiện khác.</p>
+        </div>
+
+        <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;font-weight:600;color:var(--gold-light);margin:2rem 0 1.2rem;">6.5 — Quy Tắc Vàng về Điện Báo và Cô Lập Thông Tin</h3>
+
+        <div class="prose">
+          <p>Một trong những điểm độc đáo nhất và cũng bị hiểu lầm nhiều nhất trong phương pháp Darvas là việc ông cố ý cô lập bản thân khỏi tiếng ồn thị trường. Khi đang biểu diễn tại Nhật Bản, Thái Lan hay châu Âu, ông chỉ nhận được bảng giá đóng cửa hàng tuần qua đường bưu điện quốc tế — và chỉ giao dịch dựa trên dữ liệu đó.</p>
+
+          <p>Ông không đọc báo tài chính, không nghe tin tức về thị trường, không tiếp xúc với các nhà môi giới hay chuyên gia. Ông nhận ra rằng mỗi khi nghe quá nhiều ý kiến và thông tin, ông có xu hướng đưa ra những quyết định cảm tính tệ hơn. Sự cô lập không phải là điều kiện bất lợi — đó là điều kiện lý tưởng để giao dịch thuần túy dựa trên dữ liệu giá.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         VII. TRIẾT LÝ & NỀN TẢNG LÝ THUYẾT
+    ════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Phần Bảy</p>
+        <h2 class="section-heading">Triết Lý và <em>Nền Tảng Lý Thuyết</em></h2>
+
+        <div class="prose">
+          <p>Triết lý đầu tư của Nicolas Darvas không phải là một hệ thống đơn thuần về kỹ thuật phân tích biểu đồ. Đó là một tổng hòa độc đáo giữa phân tích kỹ thuật, phân tích cơ bản sơ bộ, và đặc biệt là triết học về tâm lý con người và bản chất của thị trường.</p>
+
+          <p><strong>Thị trường là một cơ chế đấu giá liên tục.</strong> Darvas hiểu rằng giá cổ phiếu không phản ánh giá trị nội tại của công ty theo cách trực tiếp mà phản ánh sự kỳ vọng và cảm xúc tổng hợp của hàng triệu người tham gia thị trường. Vì vậy, nhiệm vụ của nhà giao dịch không phải là định giá đúng một công ty mà là nhận diện xu hướng của dòng tiền và cưỡi lên nó.</p>
+        </div>
+
+        <div class="pull-quote">
+          <p>Tôi không quan tâm đến tên của cổ phiếu, sản phẩm của công ty, hay ban giám đốc của họ. Tôi chỉ nhìn vào giá và khối lượng giao dịch — đó là ngôn ngữ duy nhất thị trường nói thật.</p>
+          <cite>— Nicolas Darvas, trích từ "How I Made $2,000,000 in the Stock Market"</cite>
+        </div>
+
+        <div class="prose">
+          <p><strong>Xu hướng là người bạn duy nhất đáng tin cậy.</strong> Darvas không cố gắng dự đoán xu hướng sẽ bắt đầu hay kết thúc khi nào. Ông chỉ theo đuổi xu hướng đã được xác nhận và rời bỏ nó khi có dấu hiệu đảo chiều rõ ràng. Triết lý này gần với tư duy theo xu hướng (trend-following) nhưng được kết hợp với quan sát hành động giá trong các vùng tích lũy hẹp.</p>
+
+          <p><strong>Bảo toàn vốn là ưu tiên số một.</strong> Trước khi nghĩ đến lợi nhuận, Darvas luôn nghĩ đến rủi ro. Ông sẵn sàng thua nhiều lần nhỏ để bảo toàn khả năng chờ đợi những cơ hội lớn. Triết lý này thể hiện qua nguyên tắc cắt lỗ nhanh và kiên quyết mà không bao giờ thỏa hiệp.</p>
+
+          <p><strong>Loại bỏ cái tôi khỏi giao dịch.</strong> Một trong những bài học sâu sắc nhất Darvas rút ra từ kinh nghiệm thất bại là nhà giao dịch thường thua vì cái tôi — không chịu thừa nhận mình sai, không chịu cắt lỗ vì sợ mất mặt, tiếp tục giữ vị thế thua vì không muốn hiện thực hóa khoản lỗ. Ông xây dựng hệ thống lệnh tự động để loại bỏ cái tôi ra khỏi phương trình.</p>
+
+          <p><strong>Kết hợp kỹ thuật và cơ bản theo cách thực dụng.</strong> Darvas không thuần túy là nhà phân tích kỹ thuật. Ông cần có một lý do cơ bản hợp lý để tin rằng ngành công nghiệp hay công ty đó có triển vọng thực sự. Nhưng ông không dùng phân tích cơ bản để định thời điểm mua bán — thời điểm đó chỉ được quyết định bởi hành động giá và khối lượng.</p>
+        </div>
+
+        <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:1.35rem;font-weight:600;color:var(--gold-light);margin:2rem 0 1.2rem;">Ảnh Hưởng Lý Thuyết</h3>
+
+        <div class="prose">
+          <p>Phương pháp của Darvas chịu ảnh hưởng gián tiếp từ nhiều nguồn. Lý thuyết Dow của Charles Henry Dow và William Peter Hamilton về các pha thị trường (tích lũy, tăng giá, phân phối, giảm giá) đã ảnh hưởng đến tư duy của ông về xu hướng. Tác phẩm kinh điển của Jesse Livermore về đầu cơ, đặc biệt là nguyên tắc "không chống lại xu hướng chủ đạo", được Darvas tiếp thu sâu sắc. Ông cũng hấp thu nhiều tư tưởng từ cuốn sách lịch sử "Reminiscences of a Stock Operator" của Edwin Lefèvre viết về Jesse Livermore.</p>
+
+          <p>Tuy nhiên, điều phân biệt Darvas với những người chỉ đọc sách là ông đã tự mình kiểm chứng, điều chỉnh và hệ thống hóa những nguyên tắc đó thành một phương pháp thuần túy của riêng mình — được tinh chỉnh qua hàng nghìn giờ quan sát thực tế và không ít lần trả học phí bằng tiền thật cho thị trường.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         VIII. CÁC QUY TẮC CHI TIẾT
+    ════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Phần Tám</p>
+        <h2 class="section-heading">Mười Hai Quy Tắc <em>Giao Dịch Cốt Lõi</em></h2>
+
+        <ol class="rules-list">
+          <li>
+            <div>
+              <div class="rule-title">Không bao giờ giao dịch theo lời khuyên của người khác</div>
+              <div class="rule-body">Mọi quyết định mua bán phải dựa hoàn toàn vào phân tích độc lập của bản thân. Lời khuyên từ môi giới, chuyên gia hay bạn bè đều chứa đựng thiên kiến riêng và không thể thay thế phán đoán cá nhân dựa trên dữ liệu thực tế. Ai cũng có lợi ích khác nhau — nhà môi giới muốn hoa hồng, chuyên gia muốn bán bản tin, bạn bè muốn bạn đồng hành.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="rule-title">Chỉ mua cổ phiếu đang trong xu hướng tăng mạnh</div>
+              <div class="rule-body">Không bao giờ cố gắng mua cổ phiếu đang giảm vì nghĩ chúng rẻ. Darvas chỉ mua khi giá đã được thị trường xác nhận là đang đi lên — cụ thể là khi có sự phá vỡ lên trên đỉnh hộp với khối lượng cao. Mua cổ phiếu đang giảm là tranh luận với thị trường — và thị trường luôn thắng cuộc tranh luận đó.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="rule-title">Luôn đặt lệnh dừng lỗ ngay sau khi mua vào</div>
+              <div class="rule-body">Không có giao dịch nào được phép tồn tại mà không có điểm thoát lỗ được xác định trước. Điểm dừng lỗ phải được đặt theo cấu trúc kỹ thuật của cổ phiếu, ngay dưới đáy hộp hiện tại, không theo cảm xúc hay theo tỷ lệ phần trăm cố định.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="rule-title">Cắt lỗ không do dự, không thương lượng</div>
+              <div class="rule-body">Khi giá chạm điểm dừng lỗ, lệnh thoát được thực thi tự động và không có cơ chế nào cho phép "chờ thêm một chút". Darvas tin rằng khoản lỗ nhỏ được cắt nhanh là một phần bình thường của chi phí kinh doanh, không phải là dấu hiệu thất bại. Để lỗ chạy là thất bại thực sự.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="rule-title">Để lợi nhuận chạy, đừng chốt lời quá sớm</div>
+              <div class="rule-body">Hầu hết các nhà giao dịch mắc lỗi ngược lại: cắt lãi sớm và để lỗ chạy dài. Darvas làm ngược lại — nâng điểm dừng lỗ theo các hộp mới cao hơn và chỉ thoát khỏi vị thế khi cấu trúc hộp bị phá vỡ xuống. Không cố gắng đoán đỉnh.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="rule-title">Tập trung vào ít cổ phiếu nhưng với vị thế đủ lớn</div>
+              <div class="rule-body">Darvas không phân tán vốn ra nhiều cổ phiếu. Ông tập trung vào một đến bốn cổ phiếu mạnh nhất tại một thời điểm, với vị thế đủ lớn để sự tăng giá tạo ra tác động thực sự đối với tài khoản. Đa dạng hóa quá mức dẫn đến kết quả trung bình — ông muốn kết quả xuất sắc từ những lựa chọn xuất sắc.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="rule-title">Cả ngành phải đang mạnh</div>
+              <div class="rule-body">Darvas luôn kiểm tra xem cổ phiếu mình đang xem xét có đang thuộc một ngành công nghiệp đang được thị trường ưa chuộng hay không. Mua cổ phiếu tốt trong ngành đang suy yếu là bơi ngược dòng không cần thiết.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="rule-title">Khối lượng giao dịch là chỉ báo xác nhận không thể thiếu</div>
+              <div class="rule-body">Bất kỳ sự phá vỡ giá nào không đi kèm khối lượng tăng vọt đều bị nghi ngờ là phá vỡ giả. Khối lượng là bằng chứng duy nhất cho thấy dòng tiền thực sự đang đổ vào, không phải là sự biến động ngẫu nhiên.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="rule-title">Không cố gắng mua ở đáy hoặc bán ở đỉnh</div>
+              <div class="rule-body">Đáy và đỉnh chỉ biết được sau khi thực tế đã xảy ra. Darvas mua khi xu hướng đã được xác nhận là đang lên và bán khi cấu trúc hỗ trợ bị phá vỡ — ông sẵn sàng bỏ lỡ phần đầu và phần cuối của xu hướng để đổi lấy sự xác nhận và an toàn.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="rule-title">Cô lập bản thân khỏi tiếng ồn của thị trường</div>
+              <div class="rule-body">Càng ít đọc báo, nghe tin tức và tiếp xúc với ý kiến của người khác, ông càng giao dịch tốt hơn. Tiếng ồn kéo bạn ra khỏi hệ thống của chính mình và buộc bạn phản ứng cảm tính với những thông tin thường không liên quan đến giá cổ phiếu.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="rule-title">Chỉ giao dịch trong thị trường đang tăng (Bull Market)</div>
+              <div class="rule-body">Hệ thống của Darvas được thiết kế để hoạt động tốt nhất khi thị trường chung đang trong xu hướng tăng mạnh. Ông không cố gắng kiếm tiền trong thị trường giảm mạnh hay đi ngang — trong những giai đoạn đó, ông sẵn sàng nằm ngoài và giữ tiền mặt.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="rule-title">Không bao giờ trung bình giá xuống vào vị thế thua lỗ</div>
+              <div class="rule-body">Nếu giá cổ phiếu giảm sau khi mua, đó là tín hiệu rõ ràng rằng sự phán đoán của bạn sai. Mua thêm vào lúc này không sửa được lỗi phán đoán mà chỉ làm cho khoản lỗ lớn hơn khi thị trường tiếp tục đi ngược lại. Kim tự tháp chỉ được xây theo hướng thắng.</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         IX. NHỮNG GIAO DỊCH HUYỀN THOẠI
+    ════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Phần Chín</p>
+        <h2 class="section-heading">Những Giao Dịch <em>Đi Vào Lịch Sử</em></h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">1957 — Lorillard</div>
+            <div class="timeline-title">Giao Dịch Đột Phá Đầu Tiên</div>
+            <div class="timeline-body">Cổ phiếu Lorillard — công ty thuốc lá khi đó đang có làn gió mới về sản phẩm lọc nhựa thông điếu thuốc — được Darvas phát hiện khi đang hình thành hộp trong vùng 24-27 đô la. Khi giá phá vỡ lên trên 27 đô la với khối lượng cao bất thường, ông mua vào và theo đuổi cổ phiếu này qua nhiều hộp cao hơn liên tiếp cho đến khi giá vượt 65 đô la. Lợi nhuận từ giao dịch này là khoảng 21.000 đô la — con số đủ để ông tin tưởng vào hệ thống của mình.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">1958 — Thiokol Chemical</div>
+            <div class="timeline-title">Ngành Tên Lửa Khai Sinh Lợi Nhuận Khổng Lồ</div>
+            <div class="timeline-body">Khi cuộc đua vũ trụ giữa Mỹ và Liên Xô bùng nổ sau sự kiện Sputnik (1957), Darvas nhận ra rằng các công ty hóa chất làm nhiên liệu tên lửa sẽ được hưởng lợi. Cổ phiếu Thiokol Chemical bắt đầu hình thành những hộp tích lũy chắc chắn trong khi khối lượng giao dịch âm thầm tăng lên. Ông mua vào ở vùng hộp 47-50 đô la và theo đuổi cổ phiếu này lên đến hơn 100 đô la. Đây là một trong những giao dịch sinh lời nhất của ông trong giai đoạn 1958.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">1958 — Universal Controls</div>
+            <div class="timeline-title">Đỉnh Điểm Của Hệ Thống</div>
+            <div class="timeline-body">Universal Controls là giao dịch điển hình nhất và lớn nhất trong sự nghiệp của Darvas. Cổ phiếu này thuộc ngành điện tử quốc phòng đang bùng nổ. Ông mua vào ở vùng 18 đô la và theo đuổi qua nhiều hộp liên tiếp lên đến hơn 100 đô la, thu về lợi nhuận hơn 400.000 đô la từ một giao dịch duy nhất. Chính giao dịch này cùng một số giao dịch lớn khác trong cùng giai đoạn đã đóng góp phần lớn vào tổng lợi nhuận hai triệu đô la của ông.</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">1958 — Texas Instruments</div>
+            <div class="timeline-title">Làn Sóng Công Nghệ Điện Tử</div>
+            <div class="timeline-body">Texas Instruments là cổ phiếu điện tử khi đó đang ở đỉnh cao của cuộc cách mạng bán dẫn. Darvas nhận ra rằng toàn bộ ngành điện tử đang được thị trường ưa chuộng và mua vào Texas Instruments khi nó phá vỡ khỏi hộp tích lũy với khối lượng lớn. Ông nắm giữ vị thế này qua nhiều đợt tăng mạnh và chỉ thoát ra khi cấu trúc hộp bị phá vỡ về phía dưới.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         X. BÀI HỌC ĐỂ LẠI
+    ════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Phần Mười</p>
+        <h2 class="section-heading">Những Bài Học <em>Bất Tử</em> Ông Để Lại</h2>
+
+        <div class="lesson-block">
+          <div class="lesson-num">01</div>
+          <div class="lesson-heading">Hệ Thống Kỷ Luật Quan Trọng Hơn Thông Minh</div>
+          <div class="lesson-body">Darvas là người có học vấn cao nhưng ông liên tục thua lỗ khi giao dịch theo trực giác và lời khuyên của người khác. Chỉ khi ông xây dựng và nghiêm túc tuân theo một hệ thống có quy tắc rõ ràng, kết quả mới trở nên nhất quán và đáng kể. Bài học này phù hợp với mọi nhà giao dịch ở mọi thời đại: một hệ thống tầm thường được thực thi kỷ luật hoàn toàn còn tốt hơn một hệ thống xuất sắc bị phá vỡ bởi cảm xúc.</div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-num">02</div>
+          <div class="lesson-heading">Thị Trường Không Quan Tâm Đến Câu Chuyện Của Bạn</div>
+          <div class="lesson-body">Thị trường không biết bạn đã nắm giữ cổ phiếu này bao lâu, bạn mua ở giá bao nhiêu, hay bạn cần tiền gấp. Thị trường di chuyển theo cung cầu tổng hợp của hàng triệu người tham gia, và không có câu chuyện cá nhân nào có đủ sức thay đổi điều đó. Nhà giao dịch cần học cách tách biệt thực tế của thị trường khỏi thực tế cảm xúc của bản thân.</div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-num">03</div>
+          <div class="lesson-heading">Sự Tự Tri Là Lợi Thế Cạnh Tranh Thực Sự</div>
+          <div class="lesson-body">Khi phân tích các thất bại của mình, Darvas nhận ra rằng phần lớn thua lỗ không phải do phân tích sai mà do phản ứng cảm xúc sai. Ông sợ hãi khi nên mua thêm, tham lam khi nên cắt giảm, và kiêu ngạo khi nên khiêm tốn. Việc nhận ra những thiên kiến cá nhân này và xây dựng hệ thống để ngăn chặn chúng chính là bước đột phá quan trọng nhất trong hành trình của ông.</div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-num">04</div>
+          <div class="lesson-heading">Ngữ Cảnh Vĩ Mô Quyết Định Nền Tảng Thành Công</div>
+          <div class="lesson-body">Darvas kiếm được hai triệu đô la trong giai đoạn 1957-1959, một trong những thời kỳ tăng trưởng mạnh nhất của thị trường chứng khoán Mỹ sau chiến tranh. Ông nhận thức rõ điều này và không ảo tưởng rằng hệ thống của mình sẽ hoạt động như nhau trong mọi điều kiện thị trường. Bài học quan trọng: biết khi nào nên giao dịch tích cực và khi nào nên đứng ngoài và giữ tiền mặt cũng quan trọng không kém bất kỳ kỹ năng phân tích nào.</div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-num">05</div>
+          <div class="lesson-heading">Đơn Giản Thường Đánh Bại Phức Tạp</div>
+          <div class="lesson-body">Hệ thống của Darvas rất đơn giản: hộp giá, khối lượng xác nhận, điểm dừng lỗ rõ ràng. Không có công thức toán học phức tạp, không có hàng chục chỉ báo kỹ thuật chồng chất lên nhau. Đơn giản không chỉ dễ thực thi mà còn dễ kiểm tra và dễ duy trì tính kỷ luật. Kết quả của ông là bằng chứng mạnh nhất cho triết lý "ít hơn là nhiều hơn" trong giao dịch.</div>
+        </div>
+
+        <div class="lesson-block">
+          <div class="lesson-num">06</div>
+          <div class="lesson-heading">Sách Vở và Viết Lách Là Công Cụ Học Hỏi Mạnh Nhất</div>
+          <div class="lesson-body">Darvas ghi chép cẩn thận mọi giao dịch, mọi suy nghĩ và mọi bài học của mình. Cuốn sách "How I Made $2,000,000 in the Stock Market" (1960) không chỉ là hồi ký mà là tổng kết công phu của quá trình tự học và tự phát triển. Ông tin rằng việc buộc phải giải thích lý do giao dịch bằng lời văn rõ ràng giúp ông hiểu bản thân sâu hơn bất kỳ phương pháp học nào khác.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         XI. DI SẢN VÀ ẢNH HƯỞNG
+    ════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Phần Mười Một</p>
+        <h2 class="section-heading">Di Sản và <em>Ảnh Hưởng Lâu Dài</em></h2>
+
+        <div class="prose">
+          <p>Cuốn sách "How I Made $2,000,000 in the Stock Market" xuất bản năm 1960 trở thành một trong những cuốn sách về giao dịch bán chạy nhất lịch sử, với hàng triệu bản được in qua nhiều thập kỷ và được dịch ra hàng chục ngôn ngữ. Cuốn sách không chỉ mô tả phương pháp mà còn kể lại trung thực cả những thất bại, sự do dự và những quyết định sai lầm của ông — sự trung thực đó làm cho nó trở nên vượt thời gian.</p>
+
+          <p>Darvas còn viết thêm một số tác phẩm khác, trong đó "Wall Street: The Other Las Vegas" (1964) và "You Can Still Make It in the Market" (1977) tiếp tục chia sẻ những suy nghĩ của ông về thị trường và những bài học được đúc kết thêm qua nhiều năm.</p>
+
+          <p>Ảnh hưởng của Darvas có thể được nhìn thấy rõ nét trong nhiều nhà giao dịch và nhà đầu tư thành công thế hệ sau. William O'Neil, người sáng lập tờ Investor's Business Daily và cha đẻ của hệ thống CAN SLIM, công nhận sự ảnh hưởng quan trọng của Darvas trong quá trình phát triển tư duy của mình — đặc biệt là khái niệm mua cổ phiếu phá vỡ vùng tích lũy chặt chẽ với khối lượng cao. Mark Minervini, nhà vô địch giao dịch cổ phiếu Mỹ nhiều lần, cũng chia sẻ rằng Darvas là một trong những nguồn cảm hứng quan trọng của ông.</p>
+
+          <p>Ngày nay, Hộp Darvas tiếp tục là một công cụ được sử dụng rộng rãi, với nhiều phần mềm phân tích kỹ thuật chuyên dụng tích hợp tính năng tự động nhận dạng và vẽ các hộp Darvas trên biểu đồ. Cộng đồng giao dịch toàn cầu tiếp tục nghiên cứu, thảo luận và áp dụng phương pháp của ông — bằng chứng rõ ràng nhất về sự bất tử của những nguyên tắc mà ông đã dày công xây dựng.</p>
+
+          <p>Nicolas Darvas mất năm 1977 tại Monte Carlo, Monaco, ở tuổi 57. Ông ra đi nhưng để lại một di sản trí tuệ không thể xóa mờ — không phải vì ông làm giàu nhanh chóng, mà vì ông dám thành thật kể lại cả hành trình gian nan đó, từ thất bại đến thành công, như một bản đồ quý giá cho những ai dám đặt chân vào thị trường với tinh thần nghiêm túc học hỏi.</p>
+        </div>
+
+        <div class="pull-quote">
+          <p>Tôi là người học liên tục. Mỗi tổn thất dạy tôi điều gì đó mà không một quyển sách nào có thể dạy được. Và chính điều đó mới là thứ tài sản thực sự tôi tích lũy được từ thị trường.</p>
+          <cite>— Nicolas Darvas</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════
+         XII. ĐÚC KẾT VỀ THỊ TRƯỜNG
+    ════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <p class="section-label">Phần Mười Hai</p>
+        <h2 class="section-heading">Những Đúc Kết Về <em>Thị Trường và Nghề Trading</em></h2>
+
+        <div class="prose">
+          <p><strong>Thị trường không thể bị chinh phục — chỉ có thể được hiểu và theo đuổi.</strong> Suốt cuộc đời giao dịch của mình, Darvas không bao giờ tuyên bố rằng ông có thể dự đoán thị trường. Ông chỉ xây dựng một hệ thống giúp ông phản ứng đúng với những gì thị trường đang làm. Đây là sự khác biệt cơ bản giữa một nhà giao dịch trưởng thành và một người đang đánh bạc.</p>
+
+          <p><strong>Trong thị trường, việc không thua lỗ quan trọng hơn việc kiếm tiền.</strong> Darvas nhận ra rằng hầu hết nhà giao dịch mất tiền không phải vì thiếu cơ hội mà vì để những khoản lỗ nhỏ phình to thành những khoản lỗ hủy diệt. Toán học rất rõ ràng: mất 50 phần trăm đòi hỏi phải lãi 100 phần trăm chỉ để về bằng. Bảo toàn vốn không phải là thái độ thận trọng hèn nhát — đó là điều kiện cần thiết để tồn tại đủ lâu để kiếm được tiền.</p>
+
+          <p><strong>Kiên nhẫn là kỹ năng hiếm và đắt giá nhất trong thị trường.</strong> Những thương vụ lớn nhất của Darvas không đến từ sự nhanh nhẹn mà đến từ sự kiên nhẫn giữ vững vị thế khi xu hướng đang diễn ra. Ông sẵn sàng chờ đợi trong nhiều tháng trước khi cổ phiếu hình thành hộp đủ chắc chắn, và sẵn sàng giữ vị thế qua những đợt rung lắc ngắn hạn miễn là cấu trúc hộp vẫn còn nguyên vẹn.</p>
+
+          <p><strong>Không có phương pháp nào hoạt động mãi mãi mà không cần điều chỉnh.</strong> Darvas liên tục học hỏi, điều chỉnh và cải tiến hệ thống của mình qua nhiều năm. Ông không cứng nhắc với bất kỳ quy tắc nào đến mức không bao giờ xem xét lại — nhưng ông cũng không thay đổi quy tắc dưới áp lực cảm xúc tức thời. Sự cân bằng giữa tính kiên định trong nguyên tắc và sự linh hoạt trong thực thi là một trong những phẩm chất khó đạt nhất của một nhà giao dịch chuyên nghiệp.</p>
+
+          <p><strong>Thành công trong trading đòi hỏi sự kết hợp của nhiều phẩm chất tưởng như mâu thuẫn:</strong> tự tin nhưng khiêm tốn trước thị trường, quyết đoán nhưng sẵn sàng thay đổi ý kiến, kiên nhẫn nhưng hành động kịp thời khi điều kiện hội đủ. Nicolas Darvas, từ một vũ công người Hungary lưu vong không biết gì về thị trường chứng khoán, đã dần dần phát triển tất cả những phẩm chất đó thông qua hàng nghìn giờ quan sát, học hỏi từ thất bại, và sự can đảm không chịu bỏ cuộc.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-rule"></div>
+    <p class="footer-text">Nicolas Darvas &nbsp;·&nbsp; 1920 — 1977 &nbsp;·&nbsp; Nhà giao dịch · Vũ công · Tác giả</p>
+    <p class="footer-text" style="margin-top:0.6rem;color:rgba(107,99,82,0.6);">Lược sử tổng hợp &nbsp;·&nbsp; Chỉ dùng cho mục đích học thuật và tham khảo</p>
+  </footer>
+
+
+    <div style="padding: 20px; text-align: center; background: #0D0F14;">
+        <button onclick="openLegendArticle('')" style="background: transparent; border: 1px solid rgba(200,160,74,0.5); color: #C8A04A; padding: 7px 16px; cursor: pointer; font-family: 'DM Mono', monospace; font-size: 0.85rem; letter-spacing: 0.05em; border-radius: 4px;">
             &#8592; Quay lại danh sách
         </button>
     </div>
