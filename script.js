@@ -141,17 +141,14 @@ function openHomeEventArticle(articleId) {
 function handleRouting(path, updateUrl = false) {
     if (path.startsWith('/thu-vien')) {
         switchTab('thu-vien', false);
-        const subPath = path.substring('/thu-vien'.length);
-        if (subPath === '/dxy-us10y-theory') {
-            openThuVienArticle('dxy-us10y-theory', updateUrl);
-        } else {
-            openThuVienArticle('', updateUrl);
-        }
+        openThuVienArticle('', updateUrl);
     } else if (path.startsWith('/vi-mo')) {
         switchTab('vi-mo', false);
         const subPath = path.substring('/vi-mo'.length);
         if (subPath === '/dxy-us10y') {
             openVimoArticle('dxy-us10y', updateUrl);
+        } else if (subPath === '/dxy-us10y-theory') {
+            openVimoArticle('dxy-us10y-theory', updateUrl);
         } else {
             openVimoArticle('', updateUrl);
         }
@@ -226,6 +223,13 @@ function openVimoArticle(articleId, updateUrl = true) {
         if (panel) panel.classList.add('active');
         if (updateUrl) history.pushState({ tabId: 'vi-mo', articleId: 'dxy-us10y' }, '', '/vi-mo/dxy-us10y');
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'dxy-us10y-theory') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-lythuyet-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'vi-mo', articleId: 'dxy-us10y-theory' }, '', '/vi-mo/dxy-us10y-theory');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
         articleView.classList.remove('active');
         listView.classList.add('active');
@@ -239,19 +243,10 @@ function openThuVienArticle(articleId, updateUrl = true) {
     if (!listView || !articleView) return;
 
     document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
-
-    if (articleId === 'dxy-us10y-theory') {
-        listView.classList.remove('active');
-        articleView.classList.add('active');
-        const panel = document.getElementById('article-lythuyet-panel');
-        if (panel) panel.classList.add('active');
-        if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'dxy-us10y-theory' }, '', '/thu-vien/dxy-us10y-theory');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-        articleView.classList.remove('active');
-        listView.classList.add('active');
-        if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: '' }, '', '/thu-vien');
-    }
+    
+    articleView.classList.remove('active');
+    listView.classList.add('active');
+    if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: '' }, '', '/thu-vien');
 }
 
 

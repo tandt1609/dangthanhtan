@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@400;500;600;700;800&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/style.css?v=10">
+    <link rel="stylesheet" href="/style.css?v=11">
     <!-- Remove preload class after CSS loads to prevent flash of unstyled content -->
     <script>document.addEventListener('DOMContentLoaded', () => document.body.classList.remove('preload'));</script>
     <!-- FontAwesome for Icons -->
@@ -203,7 +203,18 @@
                     
                     <h2 class="section-title" style="margin-top: 40px;"><i class="fa-solid fa-magnifying-glass-chart"></i> Phân tích Chuyên sâu</h2>
                     <div class="news-list">
-                        <a href="/vi-mo/dxy-us10y" class="news-card clickable-card">
+                        <a href="/vi-mo/dxy-us10y-theory" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-book"></i> Lý thuyết Giao dịch</span>
+                                <span class="news-time">Tháng 6, 2026</span>
+                            </div>
+                            <h3 class="news-heading">Lý Thuyết Giao Dịch: Tương Quan DXY & US10Y</h3>
+                            <p class="news-excerpt">Hướng dẫn toàn diện về mối tương quan giữa Đồng Đô la Mỹ và Lợi suất Trái phiếu 10 năm, các trạng thái thị trường và ứng dụng thực tiễn.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc tài liệu</span>
+                            </div>
+                        </a>
+<a href="/vi-mo/dxy-us10y" class="news-card clickable-card">
                             <div class="news-meta">
                                 <span class="news-source"><i class="fa-solid fa-earth-americas"></i> Phân tích Vĩ mô</span>
                                 <span class="news-time">Tháng 6, 2026</span>
@@ -219,7 +230,1055 @@
                 
                 <!-- ARTICLE VIEW -->
                 <div id="vi-mo-article-view" class="sukien-view">
-                    <div id="article-dxy-us10y-panel" class="sukien-article-panel">
+                    <div id="article-lythuyet-panel" class="sukien-article-panel">
+                        <div class="article-lythuyet">
+                            <button class="back-btn" onclick="openVimoArticle('')">
+                                <i class="fa-solid fa-arrow-left"></i> Quay lại Vĩ mô
+                            </button>
+
+
+<!-- ══════════════════════════════════════════
+     SIDEBAR NAVIGATION
+══════════════════════════════════════════ -->
+<aside class="lt-sidebar">
+  <div class="lt-sidebar-logo">
+    <div class="lt-sidebar-logo-title">Lý Thuyết Giao Dịch</div>
+    <div class="lt-sidebar-logo-sub">DXY &amp; US10Y Framework</div>
+  </div>
+
+  <div class="lt-nav-group">
+    <div class="lt-nav-label">Nội dung</div>
+    <a href="#intro" class="lt-nav-link">Giới thiệu phương pháp</a>
+    <a href="#foundation" class="lt-nav-link">Nền tảng lý thuyết</a>
+    <a href="#dxy" class="lt-nav-link lt-sub">→ Chỉ số DXY</a>
+    <a href="#us10y" class="lt-nav-link lt-sub">→ Lãi suất US10Y</a>
+    <a href="#relation" class="lt-nav-link lt-sub">→ Mối quan hệ DXY &amp; US10Y</a>
+    <a href="#correlation" class="lt-nav-link">Tương quan từng mã</a>
+    <a href="#gold" class="lt-nav-link lt-sub">→ Vàng (XAU/USD)</a>
+    <a href="#btc" class="lt-nav-link lt-sub">→ Bitcoin (BTC/USD)</a>
+    <a href="#nasdaq" class="lt-nav-link lt-sub">→ NASDAQ 100</a>
+    <a href="#jp225" class="lt-nav-link lt-sub">→ Nikkei 225 (JP225)</a>
+    <a href="#eurusd" class="lt-nav-link lt-sub">→ EURUSD</a>
+    <a href="#matrix" class="lt-nav-link">Ma trận tương quan</a>
+    <a href="#states" class="lt-nav-link">Ba trạng thái thị trường</a>
+    <a href="#state-sell" class="lt-nav-link lt-sub">→ Đồng thuận bán</a>
+    <a href="#state-buy" class="lt-nav-link lt-sub">→ Đồng thuận mua</a>
+    <a href="#state-wait" class="lt-nav-link lt-sub">→ Mâu thuẫn – đứng ngoài</a>
+    <a href="#response" class="lt-nav-link">Mức độ hưởng ứng</a>
+    <a href="#position" class="lt-nav-link">Quản lý tỷ trọng</a>
+    <a href="#procon" class="lt-nav-link">Ưu điểm và hạn chế</a>
+    <a href="#conclusion" class="lt-nav-link">Kết luận</a>
+  </div>
+
+  <div class="lt-sidebar-footer">
+    Tài liệu lý thuyết<br>
+    Phiên bản dành cho nhà<br>giao dịch xu hướng vĩ mô
+  </div>
+</aside>
+
+<!-- ══════════════════════════════════════════
+     MAIN CONTENT
+══════════════════════════════════════════ -->
+<div class="lt-main">
+
+<!-- HERO -->
+<div class="lt-hero" id="intro">
+  <div class="lt-hero-eyebrow">Hệ thống phân tích vĩ mô nền tảng</div>
+  <h1 class="lt-hero-title">Lý Thuyết Giao Dịch<br>Tương Quan <span>DXY &amp; US10Y</span></h1>
+  <p class="lt-hero-desc">
+    Phương pháp sử dụng Chỉ số Đô la Mỹ (DXY) và Lãi suất Trái phiếu Kho bạc Mỹ kỳ hạn 10 năm (US10Y) làm nền tảng phân tích vĩ mô để xác định chiều giao dịch, đánh giá mức độ đồng thuận thị trường, và quản lý tỷ trọng vị thế trên năm mã giao dịch chính.
+  </p>
+  <div class="lt-hero-instruments">
+    <span class="lt-instrument-tag lt-tag-gold"><span class="lt-tag-dot"></span>Vàng (XAU/USD)</span>
+    <span class="lt-instrument-tag lt-tag-btc"><span class="lt-tag-dot"></span>Bitcoin (BTC/USD)</span>
+    <span class="lt-instrument-tag lt-tag-nas"><span class="lt-tag-dot"></span>NASDAQ 100</span>
+    <span class="lt-instrument-tag lt-tag-jp"><span class="lt-tag-dot"></span>Nikkei 225 (JP225)</span>
+    <span class="lt-instrument-tag lt-tag-eur"><span class="lt-tag-dot"></span>EURUSD</span>
+  </div>
+</div>
+
+<div class="lt-content">
+
+<!-- ══════════════════════════════════════════
+     PHẦN I – NỀN TẢNG LÝ THUYẾT
+══════════════════════════════════════════ -->
+<div class="lt-section" id="foundation">
+  <div class="lt-section-header">
+    <span class="lt-section-num">Phần I</span>
+    <div>
+      <div class="lt-section-title">Nền Tảng Lý Thuyết</div>
+      <div class="lt-section-subtitle">DXY và US10Y – Hai la bàn vĩ mô định hướng thị trường toàn cầu</div>
+    </div>
+  </div>
+
+  <!-- DXY -->
+  <div class="lt-subsection" id="dxy">
+    <div class="lt-subsection-title">Chỉ Số Đô La Mỹ (DXY) – Sức Mạnh Của Đồng Tiền Dự Trữ Toàn Cầu</div>
+    <p>DXY là chỉ số đo lường giá trị của đồng đô la Mỹ so với một rổ gồm sáu đồng tiền mạnh nhất thế giới. Rổ tiền tệ này được cấu thành bởi: đồng Euro chiếm tỷ trọng 57,6%; đồng Yên Nhật chiếm 13,6%; đồng Bảng Anh chiếm 11,9%; đồng Đô la Canada chiếm 9,1%; đồng Krona Thụy Điển chiếm 4,2%; và đồng Franc Thụy Sĩ chiếm 3,6%.</p>
+    <p>Do đồng Euro chiếm hơn một nửa tỷ trọng, diễn biến của cặp tỷ giá EURUSD có ảnh hưởng chi phối lên DXY – đây là thông tin quan trọng khi hiểu mối liên hệ giữa DXY và EURUSD.</p>
+
+    <div class="lt-card">
+      <div class="lt-card-title" style="color:var(--blue)">Các yếu tố dẫn đến DXY tăng (Đồng đô la mạnh lên)</div>
+      <ul class="lt-styled-list">
+        <li><strong>Chính sách tiền tệ thắt chặt của Cục Dự trữ Liên bang Mỹ (Fed):</strong> Khi Fed tăng lãi suất cơ bản hoặc phát biểu theo hướng thắt chặt (hawkish), đồng đô la trở nên hấp dẫn hơn với nhà đầu tư tìm kiếm lợi suất cao, làm tăng cầu USD và đẩy DXY lên.</li>
+        <li><strong>Dữ liệu kinh tế Mỹ mạnh:</strong> Chỉ số lạm phát (CPI, PCE) cao hơn kỳ vọng, tăng trưởng việc làm (Nonfarm Payrolls) tốt, tăng trưởng Tổng sản phẩm quốc nội (GDP) mạnh – những yếu tố này duy trì lập trường thắt chặt của Fed và hỗ trợ USD.</li>
+        <li><strong>Tâm lý trú ẩn an toàn (Flight to Safety):</strong> Trong các cuộc khủng hoảng địa chính trị hoặc tài chính toàn cầu, dòng vốn đổ vào USD như tài sản trú ẩn an toàn, đẩy DXY tăng bất kể điều kiện kinh tế nội tại của Mỹ.</li>
+        <li><strong>Chênh lệch lãi suất mở rộng có lợi cho USD:</strong> Khi lãi suất Mỹ cao hơn so với các nền kinh tế lớn khác (Eurozone, Nhật Bản, Anh), dòng vốn tìm kiếm lợi suất cao hơn chảy vào Mỹ, làm mạnh đồng đô la.</li>
+        <li><strong>Các nền kinh tế đối tác suy yếu:</strong> Khi khu vực Eurozone, Nhật Bản hoặc Anh gặp khó khăn kinh tế, các ngân hàng trung ương tương ứng có xu hướng cắt giảm lãi suất hoặc in thêm tiền, làm yếu đồng tiền của họ và gián tiếp đẩy DXY lên.</li>
+      </ul>
+    </div>
+
+    <div class="lt-card">
+      <div class="lt-card-title" style="color:var(--green)">Các yếu tố dẫn đến DXY giảm (Đồng đô la suy yếu)</div>
+      <ul class="lt-styled-list">
+        <li><strong>Chính sách tiền tệ nới lỏng của Fed:</strong> Khi Fed cắt giảm lãi suất, triển khai chương trình nới lỏng định lượng (QE), hoặc phát biểu theo hướng nới lỏng (dovish), USD giảm sức hấp dẫn và đồng đô la suy yếu.</li>
+        <li><strong>Dữ liệu kinh tế Mỹ yếu:</strong> Lạm phát giảm mạnh, thị trường lao động suy yếu, tăng trưởng kinh tế thấp hơn kỳ vọng – những yếu tố này mở đường cho Fed nới lỏng chính sách, gây áp lực lên USD.</li>
+        <li><strong>Tâm lý risk-on (Rủi ro được ưa chuộng):</strong> Khi kinh tế toàn cầu tăng trưởng tốt, nhà đầu tư bán USD để mua các tài sản rủi ro có lợi suất cao hơn ở các thị trường mới nổi và phát triển khác.</li>
+        <li><strong>Các ngân hàng trung ương khác thắt chặt chính sách:</strong> Khi ECB, Ngân hàng Anh (BoE) hoặc các ngân hàng khác tăng lãi suất nhanh hơn Fed, chênh lệch lãi suất thu hẹp, làm giảm sức hấp dẫn của USD tương đối.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- US10Y -->
+  <div class="lt-subsection" id="us10y">
+    <div class="lt-subsection-title">Lãi Suất Trái Phiếu Kho Bạc Mỹ Kỳ Hạn 10 Năm (US10Y) – Chi Phí Vốn Của Thế Giới</div>
+    <p>US10Y là lợi suất (yield) của trái phiếu kho bạc Mỹ kỳ hạn 10 năm, thường được xem là "lãi suất phi rủi ro" của hệ thống tài chính toàn cầu. Đây là chỉ số quan trọng bậc nhất để định giá hầu hết các tài sản tài chính trên thế giới.</p>
+
+    <div class="lt-highlight-box lt-box-blue">
+      <strong>Nguyên tắc cốt lõi:</strong> US10Y phản ánh kỳ vọng thị trường về tăng trưởng kinh tế, lạm phát, và chính sách tiền tệ trong 10 năm tới. Khi US10Y tăng, chi phí vốn của toàn bộ nền kinh tế tăng lên – từ doanh nghiệp vay tiền đầu tư cho đến người tiêu dùng mua nhà trả góp – tạo ra áp lực kiềm chế tăng trưởng và hạn chế định giá tài sản.
+    </div>
+
+    <div class="lt-card">
+      <div class="lt-card-title" style="color:var(--red)">Các yếu tố đẩy US10Y tăng</div>
+      <ul class="lt-styled-list">
+        <li><strong>Kỳ vọng lạm phát tăng cao:</strong> Khi thị trường lo ngại lạm phát dai dẳng, nhà đầu tư đòi hỏi lãi suất cao hơn để bù đắp cho sức mua bị xói mòn – đây là nguyên nhân cơ bản nhất và thường kéo dài nhất.</li>
+        <li><strong>Fed tăng lãi suất hoặc phát tín hiệu thắt chặt:</strong> Kỳ vọng về lãi suất ngắn hạn tăng kéo theo US10Y tăng theo.</li>
+        <li><strong>Tăng trưởng kinh tế mạnh:</strong> Kinh tế tốt làm tăng nhu cầu vay vốn và giảm nhu cầu trú ẩn trong trái phiếu, đẩy giá trái phiếu xuống và lãi suất lên.</li>
+        <li><strong>Cung trái phiếu tăng:</strong> Thâm hụt ngân sách lớn buộc Mỹ phát hành thêm trái phiếu, khi cung tăng mà cầu không theo kịp thì giá giảm và lãi suất tăng.</li>
+        <li><strong>Nhà đầu tư nước ngoài giảm mua:</strong> Khi Trung Quốc, Nhật Bản hoặc các quốc gia nắm giữ trái phiếu lớn giảm mua, áp lực bán tăng lên.</li>
+      </ul>
+    </div>
+
+    <div class="lt-card">
+      <div class="lt-card-title" style="color:var(--green)">Các yếu tố kéo US10Y giảm</div>
+      <ul class="lt-styled-list">
+        <li><strong>Fed cắt giảm lãi suất hoặc tín hiệu dovish:</strong> Kỳ vọng lãi suất thấp hơn trong tương lai kéo US10Y giảm ngay lập tức.</li>
+        <li><strong>Kỳ vọng lạm phát giảm:</strong> Khi thị trường tin lạm phát được kiểm soát, nhà đầu tư chấp nhận lãi suất thấp hơn trên trái phiếu.</li>
+        <li><strong>Tâm lý trú ẩn an toàn:</strong> Trong khủng hoảng, nhà đầu tư đổ xô mua trái phiếu Mỹ, đẩy giá trái phiếu lên và lãi suất xuống.</li>
+        <li><strong>Tăng trưởng kinh tế yếu hoặc lo ngại suy thoái:</strong> Dự báo suy thoái thúc đẩy mua trái phiếu như tài sản phòng thủ, kéo US10Y giảm.</li>
+      </ul>
+    </div>
+
+    <div class="lt-highlight-box lt-box-gold">
+      <strong>Khái niệm quan trọng – Lãi suất thực (Real Yield):</strong> Lãi suất thực = US10Y danh nghĩa trừ kỳ vọng lạm phát (Breakeven Inflation Rate). Khi lãi suất thực âm (US10Y thấp hơn lạm phát kỳ vọng), tiền gửi và trái phiếu không bảo toàn được sức mua, khiến vàng và các tài sản thực trở nên cực kỳ hấp dẫn. Ngược lại, khi lãi suất thực dương và tăng cao, tài sản không sinh lãi như vàng chịu áp lực bán rất lớn. Đây là cơ chế quan trọng nhất giải thích tương quan giữa US10Y và vàng.
+    </div>
+  </div>
+
+  <!-- MỐI QUAN HỆ DXY – US10Y -->
+  <div class="lt-subsection" id="relation">
+    <div class="lt-subsection-title">Mối Quan Hệ Giữa DXY và US10Y – Khi Đồng Thuận và Khi Phân Kỳ</div>
+    <p>Hiểu đúng mối quan hệ giữa DXY và US10Y là trái tim của toàn bộ phương pháp giao dịch này. Hai chỉ số này thường đồng hành cùng nhau, nhưng có những giai đoạn quan trọng chúng phân kỳ – và chính những giai đoạn phân kỳ đó tạo ra tín hiệu cảnh báo để nhà giao dịch đứng ngoài thị trường.</p>
+
+    <div class="lt-card-grid">
+      <div class="lt-signal-card lt-signal-buy" style="margin-bottom:0">
+        <div class="lt-signal-badge lt-badge-buy">Đồng thuận điển hình</div>
+        <div class="lt-signal-title">Tương quan dương bình thường</div>
+        <p style="font-size:0.8rem; color:var(--text-soft); margin-bottom:0">Trong phần lớn thời gian, DXY và US10Y chuyển động cùng chiều nhau. Khi Fed thắt chặt chính sách: lãi suất tăng (US10Y↑) đồng thời USD mạnh lên (DXY↑). Khi Fed nới lỏng: US10Y↓ và DXY↓. Đây là trạng thái thuận chiều, tạo ra tín hiệu rõ ràng nhất cho nhà giao dịch.</p>
+      </div>
+      <div class="lt-signal-card lt-signal-caution" style="margin-bottom:0">
+        <div class="lt-signal-badge lt-badge-caution">Trường hợp ngoại lệ quan trọng</div>
+        <div class="lt-signal-title">Phân kỳ – Tín hiệu cảnh báo</div>
+        <p style="font-size:0.8rem; color:var(--text-soft); margin-bottom:0">Có hai kịch bản phân kỳ cần nhận biết: (1) DXY↑ + US10Y↓ xảy ra khi khủng hoảng đẩy nhà đầu tư vào cả USD lẫn trái phiếu Mỹ cùng lúc; (2) DXY↓ + US10Y↑ xảy ra khi kỳ vọng lạm phát đẩy US10Y tăng trong khi USD suy yếu. Cả hai đều là trạng thái mâu thuẫn, tín hiệu không rõ ràng.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lt-divider"></div>
+
+<!-- ══════════════════════════════════════════
+     PHẦN II – TƯƠNG QUAN TỪNG MÃ
+══════════════════════════════════════════ -->
+<div class="lt-section" id="correlation">
+  <div class="lt-section-header">
+    <span class="lt-section-num">Phần II</span>
+    <div>
+      <div class="lt-section-title">Tương Quan Từng Mã Giao Dịch</div>
+      <div class="lt-section-subtitle">Phân tích sâu cơ chế truyền dẫn của DXY và US10Y lên từng công cụ tài chính</div>
+    </div>
+  </div>
+
+  <!-- VÀNG -->
+  <div class="lt-instrument-card" id="gold">
+    <div class="lt-instrument-header">
+      <div>
+        <div class="lt-instrument-name">Vàng – XAU/USD</div>
+        <div class="lt-instrument-alias">Kim loại quý – Tài sản phòng ngừa lạm phát và trú ẩn an toàn</div>
+      </div>
+      <span class="lt-reliability-badge lt-rel-high">Độ tin cậy cao</span>
+    </div>
+    <div class="lt-instrument-body">
+      <div class="lt-corr-indicators">
+        <div class="lt-corr-indicator">
+          <div class="lt-corr-indicator-label">Tương quan với DXY</div>
+          <div class="lt-corr-indicator-value lt-neg-strong">Âm mạnh (−0,70 đến −0,85)</div>
+        </div>
+        <div class="lt-corr-indicator">
+          <div class="lt-corr-indicator-label">Tương quan với US10Y</div>
+          <div class="lt-corr-indicator-value lt-neg-strong">Âm mạnh (−0,60 đến −0,80)</div>
+        </div>
+      </div>
+
+      <div class="lt-response-grid">
+        <div class="lt-response-item lt-resp-red">
+          <span class="lt-response-label">DXY tăng</span>
+          <span class="lt-response-arrow">Vàng ↓↓</span>
+        </div>
+        <div class="lt-response-item lt-resp-green">
+          <span class="lt-response-label">DXY giảm</span>
+          <span class="lt-response-arrow">Vàng ↑↑</span>
+        </div>
+        <div class="lt-response-item lt-resp-red">
+          <span class="lt-response-label">US10Y tăng</span>
+          <span class="lt-response-arrow">Vàng ↓</span>
+        </div>
+        <div class="lt-response-item lt-resp-green">
+          <span class="lt-response-label">US10Y giảm</span>
+          <span class="lt-response-arrow">Vàng ↑</span>
+        </div>
+      </div>
+
+      <p><strong>Cơ chế tương quan với DXY:</strong> Vàng được định giá bằng đồng đô la Mỹ trên thị trường quốc tế. Khi USD mạnh lên (DXY tăng), vàng trở nên đắt hơn với người mua sử dụng các đồng tiền khác, làm giảm cầu toàn cầu và kéo giá vàng xuống. Ngược lại, khi USD yếu (DXY giảm), vàng trở nên rẻ hơn với phần còn lại của thế giới, kích cầu và đẩy giá tăng. Đây là cơ chế thuần túy về định giá.</p>
+
+      <p><strong>Cơ chế tương quan với US10Y:</strong> Vàng là tài sản không sinh lãi suất. Khi US10Y tăng, chi phí cơ hội của việc nắm giữ vàng (thay vì gửi tiền hoặc mua trái phiếu để hưởng lãi suất cao) tăng lên, khiến nhà đầu tư bán vàng để chuyển sang tài sản sinh lãi. Yếu tố quan trọng hơn chính là <strong>lãi suất thực</strong> – khi lãi suất thực âm (US10Y thấp hơn lạm phát kỳ vọng), vàng cực kỳ hấp dẫn vì trái phiếu không bảo toàn được sức mua.</p>
+
+      <div class="lt-highlight-box lt-box-gold">
+        <strong>Trường hợp ngoại lệ – Khủng hoảng hệ thống:</strong> Trong các cuộc khủng hoảng tài chính nghiêm trọng nhất (như năm 2008), cả vàng và USD đôi khi cùng tăng do nhà đầu tư tìm kiếm bất kỳ tài sản an toàn nào. Đây là tín hiệu cảnh báo khủng hoảng cực đoan, không phải là mâu thuẫn thông thường trong framework. Ngoài ra, các ngân hàng trung ương toàn cầu (đặc biệt là Trung Quốc, Ấn Độ, Nga) có thể mua vàng với quy mô lớn bất kể DXY/US10Y, tạo ra đáy hỗ trợ mạnh cho vàng trên tất cả các kịch bản.
+      </div>
+
+      <p><strong>Kết luận:</strong> Vàng là mã <em>hưởng ứng mạnh nhất và đáng tin cậy nhất</em> với cả DXY lẫn US10Y. Khi DXY↑ + US10Y↑ (đồng thuận áp lực), vàng chịu áp lực bán kép và thường giảm mạnh. Khi DXY↓ + US10Y↓ (đồng thuận hỗ trợ), vàng thường tăng rất mạnh và bền vững.</p>
+    </div>
+  </div>
+
+  <!-- BITCOIN -->
+  <div class="lt-instrument-card" id="btc">
+    <div class="lt-instrument-header">
+      <div>
+        <div class="lt-instrument-name">Bitcoin – BTC/USD</div>
+        <div class="lt-instrument-alias">Tiền điện tử – Tài sản rủi ro cao, nhạy cảm với thanh khoản toàn cầu</div>
+      </div>
+      <span class="lt-reliability-badge lt-rel-medium">Độ tin cậy trung bình</span>
+    </div>
+    <div class="lt-instrument-body">
+      <div class="lt-corr-indicators">
+        <div class="lt-corr-indicator">
+          <div class="lt-corr-indicator-label">Tương quan với DXY</div>
+          <div class="lt-corr-indicator-value lt-neg-mod">Âm trung bình (−0,50 đến −0,70)</div>
+        </div>
+        <div class="lt-corr-indicator">
+          <div class="lt-corr-indicator-label">Tương quan với US10Y</div>
+          <div class="lt-corr-indicator-value lt-neg-mod">Âm trung bình (−0,40 đến −0,60)</div>
+        </div>
+      </div>
+
+      <div class="lt-response-grid">
+        <div class="lt-response-item lt-resp-red">
+          <span class="lt-response-label">DXY tăng</span>
+          <span class="lt-response-arrow">BTC ↓↓</span>
+        </div>
+        <div class="lt-response-item lt-resp-green">
+          <span class="lt-response-label">DXY giảm</span>
+          <span class="lt-response-arrow">BTC ↑↑</span>
+        </div>
+        <div class="lt-response-item lt-resp-red">
+          <span class="lt-response-label">US10Y tăng</span>
+          <span class="lt-response-arrow">BTC ↓</span>
+        </div>
+        <div class="lt-response-item lt-resp-green">
+          <span class="lt-response-label">US10Y giảm</span>
+          <span class="lt-response-arrow">BTC ↑</span>
+        </div>
+      </div>
+
+      <p><strong>Cơ chế tương quan với DXY:</strong> Bitcoin ngày càng được xem như "vàng kỹ thuật số" và tài sản rủi ro cao đồng thời. Khi DXY tăng (môi trường thắt chặt, USD mạnh), dòng vốn rút khỏi tài sản rủi ro và Bitcoin chịu áp lực giảm. Khi DXY giảm (môi trường nới lỏng, thanh khoản dồi dào), dòng vốn chảy vào tài sản rủi ro và Bitcoin được hưởng lợi.</p>
+
+      <p><strong>Cơ chế tương quan với US10Y:</strong> Tương tự các tài sản rủi ro khác, khi US10Y tăng (chi phí vốn cao), nhà đầu tư cắt giảm phân bổ vào tài sản rủi ro cao như Bitcoin. Tuy nhiên, Bitcoin đặc biệt nhạy cảm với cung tiền toàn cầu (Global M2) – khi Fed thực hiện QE (in tiền), một phần dòng tiền đó chảy vào Bitcoin và khuếch đại đà tăng.</p>
+
+      <div class="lt-highlight-box lt-box-amber">
+        <strong>Yếu tố đặc thù của Bitcoin làm giảm độ tin cậy của framework:</strong> (1) Chu kỳ halving Bitcoin xảy ra khoảng 4 năm một lần, có thể tạo xu hướng tăng mạnh độc lập với DXY/US10Y; (2) Dòng vốn vào các Quỹ giao dịch hoán đổi Bitcoin (ETF) tạo ra cầu cơ cấu; (3) Tâm lý đặc thù của cộng đồng tiền điện tử và các yếu tố quy định pháp lý; (4) Rủi ro hệ thống crypto nội tại (sụp đổ sàn giao dịch, hack). Vì vậy, Bitcoin cần thêm xác nhận từ phân tích kỹ thuật trước khi vào lệnh.
+      </div>
+    </div>
+  </div>
+
+  <!-- NASDAQ -->
+  <div class="lt-instrument-card" id="nasdaq">
+    <div class="lt-instrument-header">
+      <div>
+        <div class="lt-instrument-name">NASDAQ 100 – NAS100</div>
+        <div class="lt-instrument-alias">Chỉ số công nghệ Mỹ – Nhạy cảm nhất với US10Y trong nhóm mã giao dịch</div>
+      </div>
+      <span class="lt-reliability-badge lt-rel-high">Độ tin cậy cao</span>
+    </div>
+    <div class="lt-instrument-body">
+      <div class="lt-corr-indicators">
+        <div class="lt-corr-indicator">
+          <div class="lt-corr-indicator-label">Tương quan với DXY</div>
+          <div class="lt-corr-indicator-value lt-neg-mod">Âm trung bình (−0,50 đến −0,65)</div>
+        </div>
+        <div class="lt-corr-indicator">
+          <div class="lt-corr-indicator-label">Tương quan với US10Y</div>
+          <div class="lt-corr-indicator-value lt-neg-strong">Âm rất mạnh (−0,75 đến −0,90)</div>
+        </div>
+      </div>
+
+      <div class="lt-response-grid">
+        <div class="lt-response-item lt-resp-red">
+          <span class="lt-response-label">DXY tăng</span>
+          <span class="lt-response-arrow">NASDAQ ↓</span>
+        </div>
+        <div class="lt-response-item lt-resp-green">
+          <span class="lt-response-label">DXY giảm</span>
+          <span class="lt-response-arrow">NASDAQ ↑</span>
+        </div>
+        <div class="lt-response-item lt-resp-red">
+          <span class="lt-response-label">US10Y tăng</span>
+          <span class="lt-response-arrow">NASDAQ ↓↓↓</span>
+        </div>
+        <div class="lt-response-item lt-resp-green">
+          <span class="lt-response-label">US10Y giảm</span>
+          <span class="lt-response-arrow">NASDAQ ↑↑↑</span>
+        </div>
+      </div>
+
+      <p><strong>Cơ chế tương quan với US10Y – Mô hình định giá DCF:</strong> Đây là mối quan hệ quan trọng nhất cần hiểu. Giá cổ phiếu công nghệ được tính bằng cách chiết khấu các dòng tiền tương lai về giá trị hiện tại (Discounted Cash Flow – DCF). Tỷ lệ chiết khấu sử dụng thường neo vào US10Y. Khi US10Y tăng, tỷ lệ chiết khấu tăng, làm giảm giá trị hiện tại của các dòng tiền tương lai – đặc biệt là các công ty tăng trưởng cao với phần lớn dòng tiền dự kiến ở nhiều năm sau. Đây là lý do NASDAQ nhạy cảm với US10Y hơn bất kỳ mã nào trong nhóm này.</p>
+
+      <p><strong>Cơ chế tương quan với DXY:</strong> Hầu hết các công ty trong NASDAQ 100 (Apple, Microsoft, Alphabet, Meta…) có doanh thu quốc tế lớn. Khi USD mạnh lên (DXY tăng), doanh thu từ nước ngoài khi quy về USD bị giảm về mặt kế toán, ảnh hưởng đến lợi nhuận báo cáo. Ngoài ra, môi trường DXY tăng thường đi kèm với thắt chặt thanh khoản, bất lợi cho định giá cổ phiếu.</p>
+
+      <div class="lt-highlight-box lt-box-blue">
+        <strong>Quan sát thực tiễn:</strong> Trong giai đoạn 2022–2023 khi Fed tăng lãi suất mạnh, US10Y tăng từ dưới 1,5% lên trên 5%, NASDAQ giảm hơn 30% chỉ trong năm 2022 – minh họa rõ nét sức mạnh của mối quan hệ này. Ngược lại, khi US10Y bắt đầu giảm vào cuối 2023 và Fed phát tín hiệu cắt giảm lãi suất, NASDAQ phục hồi mạnh mẽ trong năm 2024. Theo dõi US10Y là chìa khóa dự báo xu hướng NASDAQ.
+      </div>
+    </div>
+  </div>
+
+  <!-- JP225 -->
+  <div class="lt-instrument-card" id="jp225">
+    <div class="lt-instrument-header">
+      <div>
+        <div class="lt-instrument-name">Nikkei 225 – JP225</div>
+        <div class="lt-instrument-alias">Chỉ số chứng khoán Nhật Bản – Mã có tương quan phức tạp nhất trong nhóm</div>
+      </div>
+      <span class="lt-reliability-badge lt-rel-low">Cần thận trọng bổ sung</span>
+    </div>
+    <div class="lt-instrument-body">
+      <div class="lt-corr-indicators">
+        <div class="lt-corr-indicator">
+          <div class="lt-corr-indicator-label">Tương quan với DXY</div>
+          <div class="lt-corr-indicator-value lt-complex-val">Phức tạp – Hai chiều</div>
+        </div>
+        <div class="lt-corr-indicator">
+          <div class="lt-corr-indicator-label">Tương quan với US10Y</div>
+          <div class="lt-corr-indicator-value lt-neg-mod">Âm nhẹ (−0,30 đến −0,50)</div>
+        </div>
+      </div>
+
+      <div class="lt-response-grid">
+        <div class="lt-response-item lt-resp-amber">
+          <span class="lt-response-label">DXY tăng</span>
+          <span class="lt-response-arrow">JP225 ↑/↓?</span>
+        </div>
+        <div class="lt-response-item lt-resp-amber">
+          <span class="lt-response-label">DXY giảm</span>
+          <span class="lt-response-arrow">JP225 ↓/↑?</span>
+        </div>
+        <div class="lt-response-item lt-resp-red">
+          <span class="lt-response-label">US10Y tăng</span>
+          <span class="lt-response-arrow">JP225 ↓</span>
+        </div>
+        <div class="lt-response-item lt-resp-green">
+          <span class="lt-response-label">US10Y giảm</span>
+          <span class="lt-response-arrow">JP225 ↑ (có điều kiện)</span>
+        </div>
+      </div>
+
+      <p><strong>Yếu tố cốt lõi – Vai trò của tỷ giá USD/JPY:</strong> Để hiểu JP225, cần thêm một biến số thứ ba: tỷ giá Đô la Mỹ – Yên Nhật (USD/JPY). Nikkei 225 có mối quan hệ âm rất mạnh với đồng Yên – khi Yên Nhật yếu (USD/JPY tăng), Nikkei thường tăng; khi Yên Nhật mạnh (USD/JPY giảm), Nikkei thường giảm.</p>
+
+      <p><strong>Lý do cấu trúc:</strong> Nền kinh tế Nhật Bản phụ thuộc lớn vào xuất khẩu (Toyota, Sony, Panasonic…). Khi Yên yếu, hàng xuất khẩu Nhật Bản rẻ hơn trên thị trường quốc tế, giúp tăng doanh thu và lợi nhuận của các tập đoàn lớn, đẩy Nikkei lên. Đây là cơ chế ngược hoàn toàn so với cách DXY ảnh hưởng lên NASDAQ hay EURUSD.</p>
+
+      <div class="lt-highlight-box lt-box-amber">
+        <strong>Mâu thuẫn nội tại khi áp dụng framework DXY/US10Y cho JP225:</strong><br><br>
+        <strong>Kịch bản 1 – DXY↑ + US10Y↑ (Áp lực bán theo framework):</strong> DXY tăng kéo USD/JPY tăng → Yên Nhật yếu → Điều này thực ra có lợi cho Nikkei thông qua kênh xuất khẩu. Tuy nhiên, US10Y tăng tạo áp lực lên chi phí vốn toàn cầu, ảnh hưởng tiêu cực. Tác động thuần phụ thuộc vào mức độ tương đối của hai yếu tố – không cho tín hiệu rõ ràng.<br><br>
+        <strong>Kịch bản 2 – DXY↓ + US10Y↓ (Mua theo framework):</strong> DXY giảm kéo USD/JPY giảm → Yên Nhật mạnh lên → Điều này có hại cho nhà xuất khẩu Nhật Bản và có thể kéo Nikkei giảm, đi ngược lại tín hiệu mua từ framework. US10Y giảm hỗ trợ equities, nhưng Yên mạnh có thể triệt tiêu lợi ích này.<br><br>
+        <strong>Khuyến nghị thực tiễn:</strong> Với JP225, luôn kiểm tra thêm xu hướng USD/JPY và chính sách của Ngân hàng Trung ương Nhật Bản (Ngân hàng Nhật Bản – BoJ) trước khi vào lệnh. JP225 là mã có <em>độ bất định cao nhất</em> trong framework này.
+      </div>
+    </div>
+  </div>
+
+  <!-- EURUSD -->
+  <div class="lt-instrument-card" id="eurusd">
+    <div class="lt-instrument-header">
+      <div>
+        <div class="lt-instrument-name">EURUSD</div>
+        <div class="lt-instrument-alias">Cặp ngoại tệ phổ biến nhất – Phản chiếu gần như trực tiếp của DXY</div>
+      </div>
+      <span class="lt-reliability-badge lt-rel-high">Độ tin cậy rất cao</span>
+    </div>
+    <div class="lt-instrument-body">
+      <div class="lt-corr-indicators">
+        <div class="lt-corr-indicator">
+          <div class="lt-corr-indicator-label">Tương quan với DXY</div>
+          <div class="lt-corr-indicator-value lt-neg-strong">Âm rất mạnh (−0,90 đến −0,97)</div>
+        </div>
+        <div class="lt-corr-indicator">
+          <div class="lt-corr-indicator-label">Tương quan với US10Y</div>
+          <div class="lt-corr-indicator-value lt-neg-strong">Âm mạnh (−0,55 đến −0,70)</div>
+        </div>
+      </div>
+
+      <div class="lt-response-grid">
+        <div class="lt-response-item lt-resp-red">
+          <span class="lt-response-label">DXY tăng</span>
+          <span class="lt-response-arrow">EURUSD ↓↓↓</span>
+        </div>
+        <div class="lt-response-item lt-resp-green">
+          <span class="lt-response-label">DXY giảm</span>
+          <span class="lt-response-arrow">EURUSD ↑↑↑</span>
+        </div>
+        <div class="lt-response-item lt-resp-red">
+          <span class="lt-response-label">US10Y tăng</span>
+          <span class="lt-response-arrow">EURUSD ↓↓</span>
+        </div>
+        <div class="lt-response-item lt-resp-green">
+          <span class="lt-response-label">US10Y giảm</span>
+          <span class="lt-response-arrow">EURUSD ↑↑</span>
+        </div>
+      </div>
+
+      <p><strong>Cơ chế tương quan với DXY – Mối quan hệ cấu trúc:</strong> Do đồng Euro chiếm 57,6% tỷ trọng trong rổ DXY, EURUSD và DXY gần như là ảnh phản chiếu của nhau. Khi DXY tăng 1%, EURUSD thường giảm khoảng 1,2–1,5% (vì EUR được tính ngược chiều trong DXY). Đây là mối quan hệ mạnh nhất và ổn định nhất trong toàn bộ nhóm 5 mã.</p>
+
+      <p><strong>Cơ chế tương quan với US10Y – Chênh lệch lãi suất:</strong> Khi US10Y tăng, chênh lệch lãi suất giữa Mỹ và Eurozone mở rộng theo hướng có lợi cho USD. Nhà đầu tư bán Euro để mua đô la hưởng lãi suất cao hơn, đẩy EURUSD giảm. Yếu tố quan trọng hơn là chênh lệch giữa US10Y và lãi suất trái phiếu Đức kỳ hạn 10 năm (DE10Y) – khi US10Y tăng mà DE10Y không tăng theo, chênh lệch mở rộng và EURUSD giảm mạnh hơn.</p>
+
+      <div class="lt-highlight-box lt-box-green">
+        <strong>Kết luận:</strong> EURUSD là mã <em>sạch nhất</em> để giao dịch theo framework DXY/US10Y. Hưởng ứng cực kỳ đáng tin cậy và ổn định. Khi DXY↑ + US10Y↑, bán EURUSD là lựa chọn tự tin nhất. Khi DXY↓ + US10Y↓, mua EURUSD là lựa chọn tự tin nhất. Ít nhiễu nội tại nhất trong số các mã giao dịch.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lt-divider"></div>
+
+<!-- ══════════════════════════════════════════
+     PHẦN III – MA TRẬN TƯƠNG QUAN
+══════════════════════════════════════════ -->
+<div class="lt-section" id="matrix">
+  <div class="lt-section-header">
+    <span class="lt-section-num">Phần III</span>
+    <div>
+      <div class="lt-section-title">Ma Trận Tương Quan Tổng Hợp</div>
+      <div class="lt-section-subtitle">Tóm tắt phản ứng của từng mã theo từng kịch bản vĩ mô</div>
+    </div>
+  </div>
+
+  <div class="lt-corr-table-wrap">
+    <table class="lt-corr-table">
+      <thead>
+        <tr>
+          <th>Mã giao dịch</th>
+          <th>DXY tăng → Mã</th>
+          <th>DXY giảm → Mã</th>
+          <th>US10Y tăng → Mã</th>
+          <th>US10Y giảm → Mã</th>
+          <th>Đồng thuận áp lực</th>
+          <th>Đồng thuận hỗ trợ</th>
+          <th>Độ tin cậy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="lt-instrument-cell">Vàng</td>
+          <td><span class="lt-cell-strong-neg">Giảm ↓↓</span></td>
+          <td><span class="lt-cell-strong-pos">Tăng ↑↑</span></td>
+          <td><span class="lt-cell-strong-neg">Giảm ↓</span></td>
+          <td><span class="lt-cell-strong-pos">Tăng ↑</span></td>
+          <td><span class="lt-cell-strong-neg">Bán mạnh</span></td>
+          <td><span class="lt-cell-strong-pos">Mua mạnh</span></td>
+          <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td class="lt-instrument-cell">EURUSD</td>
+          <td><span class="lt-cell-strong-neg">Giảm ↓↓↓</span></td>
+          <td><span class="lt-cell-strong-pos">Tăng ↑↑↑</span></td>
+          <td><span class="lt-cell-strong-neg">Giảm ↓↓</span></td>
+          <td><span class="lt-cell-strong-pos">Tăng ↑↑</span></td>
+          <td><span class="lt-cell-strong-neg">Bán mạnh</span></td>
+          <td><span class="lt-cell-strong-pos">Mua mạnh</span></td>
+          <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td class="lt-instrument-cell">NASDAQ</td>
+          <td><span class="lt-cell-mod-neg">Giảm ↓</span></td>
+          <td><span class="lt-cell-mod-pos">Tăng ↑</span></td>
+          <td><span class="lt-cell-strong-neg">Giảm ↓↓↓</span></td>
+          <td><span class="lt-cell-strong-pos">Tăng ↑↑↑</span></td>
+          <td><span class="lt-cell-strong-neg">Bán</span></td>
+          <td><span class="lt-cell-strong-pos">Mua</span></td>
+          <td>⭐⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td class="lt-instrument-cell">Bitcoin</td>
+          <td><span class="lt-cell-strong-neg">Giảm ↓↓</span></td>
+          <td><span class="lt-cell-strong-pos">Tăng ↑↑</span></td>
+          <td><span class="lt-cell-mod-neg">Giảm ↓</span></td>
+          <td><span class="lt-cell-mod-pos">Tăng ↑</span></td>
+          <td><span class="lt-cell-mod-neg">Bán (có nhiễu)</span></td>
+          <td><span class="lt-cell-mod-pos">Mua (có nhiễu)</span></td>
+          <td>⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td class="lt-instrument-cell">JP225</td>
+          <td><span class="lt-cell-complex">Hai chiều ↑↓</span></td>
+          <td><span class="lt-cell-complex">Hai chiều ↑↓</span></td>
+          <td><span class="lt-cell-mod-neg">Giảm ↓</span></td>
+          <td><span class="lt-cell-mod-pos">Tăng ↑ (có điều kiện)</span></td>
+          <td><span class="lt-cell-complex">Thận trọng cao</span></td>
+          <td><span class="lt-cell-complex">Thận trọng cao</span></td>
+          <td>⭐⭐</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="font-size:0.75rem; color:var(--text-muted)">Lưu ý: Hệ số tương quan thay đổi theo từng giai đoạn thị trường và điều kiện vĩ mô. Các giá trị trên phản ánh xu hướng trung bình dài hạn, không cố định tuyệt đối. Độ tin cậy được đánh giá dựa trên tính ổn định và khả năng dự đoán của mối quan hệ tương quan.</p>
+
+  <div class="lt-highlight-box lt-box-blue">
+    <strong>Thứ tự ưu tiên giao dịch theo framework:</strong> Khi có tín hiệu đồng thuận rõ ràng, ưu tiên giao dịch theo thứ tự: (1) EURUSD và Vàng – hưởng ứng đáng tin cậy nhất với cả DXY lẫn US10Y; (2) NASDAQ – đặc biệt mạnh khi US10Y là yếu tố dẫn dắt chính; (3) Bitcoin – cần thêm xác nhận kỹ thuật; (4) JP225 – chỉ giao dịch khi có phân tích bổ sung về USD/JPY và chính sách BoJ.
+  </div>
+</div>
+
+<div class="lt-divider"></div>
+
+<!-- ══════════════════════════════════════════
+     PHẦN IV – BA TRẠNG THÁI THỊ TRƯỜNG
+══════════════════════════════════════════ -->
+<div class="lt-section" id="states">
+  <div class="lt-section-header">
+    <span class="lt-section-num">Phần IV</span>
+    <div>
+      <div class="lt-section-title">Ba Trạng Thái Thị Trường</div>
+      <div class="lt-section-subtitle">Nhận diện bối cảnh vĩ mô để quyết định giao dịch hay đứng ngoài</div>
+    </div>
+  </div>
+
+  <div class="lt-state-matrix">
+    <div class="lt-state-item lt-st-sell">
+      <div class="lt-state-arrows">DXY ↑ + US10Y ↑</div>
+      <div class="lt-state-name">Đồng thuận áp lực</div>
+      <div class="lt-state-action">→ BÁN</div>
+      <div class="lt-state-desc">Môi trường hawkish – thắt chặt tiền tệ, USD mạnh, lãi suất cao</div>
+    </div>
+    <div class="lt-state-item lt-st-buy">
+      <div class="lt-state-arrows">DXY ↓ + US10Y ↓</div>
+      <div class="lt-state-name">Đồng thuận hỗ trợ</div>
+      <div class="lt-state-action">→ MUA</div>
+      <div class="lt-state-desc">Môi trường dovish – nới lỏng tiền tệ, USD yếu, thanh khoản dồi dào</div>
+    </div>
+    <div class="lt-state-item lt-st-wait">
+      <div class="lt-state-arrows">DXY ↑↓ ≠ US10Y</div>
+      <div class="lt-state-name">Mâu thuẫn tín hiệu</div>
+      <div class="lt-state-action">→ ĐỨNG NGOÀI</div>
+      <div class="lt-state-desc">Tín hiệu hỗn hợp – thị trường thiếu định hướng rõ ràng</div>
+    </div>
+  </div>
+
+  <!-- TRẠNG THÁI 1 – BÁN -->
+  <div class="lt-subsection" id="state-sell">
+    <div class="lt-subsection-title">Trạng Thái 1: Đồng Thuận Áp Lực – DXY Tăng và US10Y Tăng</div>
+
+    <div class="lt-signal-card lt-signal-sell">
+      <div class="lt-signal-badge lt-badge-sell">⬇ Tín hiệu bán</div>
+      <div class="lt-signal-title">Môi trường hawkish – Fed thắt chặt, USD mạnh, chi phí vốn tăng</div>
+      <div class="lt-signal-trigger">
+        <div class="lt-trigger-item lt-trigger-up">DXY ↑ Tăng</div>
+        <div class="lt-trigger-item lt-trigger-up">US10Y ↑ Tăng</div>
+      </div>
+      <p style="font-size:0.83rem; color:var(--text-soft); margin-bottom:0.75rem">Đây là môi trường rõ ràng nhất để thực hiện giao dịch bán. Cả hai yếu tố vĩ mô cùng tạo áp lực lên tài sản rủi ro và các mã giao dịch trong danh sách. Áp lực kép từ USD mạnh và chi phí vốn cao cộng hưởng tạo nên xu hướng giảm bền vững.</p>
+    </div>
+
+    <p><strong>Bối cảnh kinh tế điển hình:</strong> Fed đang trong chu kỳ tăng lãi suất, chỉ số lạm phát (CPI, PCE) cao hơn kỳ vọng, thị trường lao động mạnh (NFP vượt dự báo), hoặc Fed phát biểu theo hướng "higher for longer" (giữ lãi suất cao trong thời gian dài). Đây là môi trường mà tài sản rủi ro bị định giá lại với bội số thấp hơn.</p>
+
+    <div class="lt-card">
+      <div class="lt-card-title" style="color:var(--red)">Dấu hiệu nhận biết trên biểu đồ</div>
+      <ul class="lt-styled-list">
+        <li><strong>DXY:</strong> Vượt kháng cự quan trọng, tạo đỉnh cao mới, đường trung bình động 20 ngày cắt lên trên đường 50 ngày, khối lượng giao dịch tăng trong ngày tăng.</li>
+        <li><strong>US10Y:</strong> Phá vỡ vùng kháng cự quan trọng (ví dụ: vượt các ngưỡng tâm lý 4,0%; 4,5%; 5,0%), tạo đỉnh cao mới trong xu hướng tăng dài hạn, đường cong lãi suất không đảo chiều.</li>
+        <li><strong>Các mã giao dịch:</strong> Vàng và EURUSD phá vỡ vùng hỗ trợ, NASDAQ giảm mạnh đặc biệt khi có báo cáo kinh tế quan trọng, Bitcoin mất các ngưỡng hỗ trợ tâm lý.</li>
+        <li><strong>Chỉ số phụ trợ:</strong> Chỉ số biến động VIX tăng trên 20, lãi suất thực (TIPS yield) tăng lên vùng dương và tiếp tục tăng.</li>
+      </ul>
+    </div>
+
+    <div class="lt-card">
+      <div class="lt-card-title" style="color:var(--red)">Thứ tự ưu tiên giao dịch bán</div>
+      <div class="lt-ranking-list">
+        <div class="lt-ranking-item">
+          <div class="lt-ranking-num">01</div>
+          <div class="lt-ranking-name">EURUSD</div>
+          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:98%;background:linear-gradient(90deg,#F06868,#F04848)"></div></div>
+          <div class="lt-ranking-label" style="color:var(--red)">Hưởng ứng cao nhất</div>
+        </div>
+        <div class="lt-ranking-item">
+          <div class="lt-ranking-num">02</div>
+          <div class="lt-ranking-name">Vàng</div>
+          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:90%;background:linear-gradient(90deg,#F06868,#F04848)"></div></div>
+          <div class="lt-ranking-label" style="color:var(--red)">Hưởng ứng rất cao</div>
+        </div>
+        <div class="lt-ranking-item">
+          <div class="lt-ranking-num">03</div>
+          <div class="lt-ranking-name">NASDAQ</div>
+          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:75%;background:linear-gradient(90deg,#F08868,#F06848)"></div></div>
+          <div class="lt-ranking-label" style="color:#F0A468">Hưởng ứng cao</div>
+        </div>
+        <div class="lt-ranking-item">
+          <div class="lt-ranking-num">04</div>
+          <div class="lt-ranking-name">Bitcoin</div>
+          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:55%;background:linear-gradient(90deg,#F0A068,#F09048)"></div></div>
+          <div class="lt-ranking-label" style="color:#F0B068">Hưởng ứng trung bình</div>
+        </div>
+        <div class="lt-ranking-item">
+          <div class="lt-ranking-num">05</div>
+          <div class="lt-ranking-name">JP225</div>
+          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:30%;background:linear-gradient(90deg,var(--amber),#F09030)"></div></div>
+          <div class="lt-ranking-label" style="color:var(--amber)">Thận trọng – phức tạp</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRẠNG THÁI 2 – MUA -->
+  <div class="lt-subsection" id="state-buy">
+    <div class="lt-subsection-title">Trạng Thái 2: Đồng Thuận Hỗ Trợ – DXY Giảm và US10Y Giảm</div>
+
+    <div class="lt-signal-card lt-signal-buy">
+      <div class="lt-signal-badge lt-badge-buy">⬆ Tín hiệu mua</div>
+      <div class="lt-signal-title">Môi trường dovish – Fed nới lỏng, USD suy yếu, thanh khoản dồi dào</div>
+      <div class="lt-signal-trigger">
+        <div class="lt-trigger-item lt-trigger-down">DXY ↓ Giảm</div>
+        <div class="lt-trigger-item lt-trigger-down">US10Y ↓ Giảm</div>
+      </div>
+      <p style="font-size:0.83rem; color:var(--text-soft); margin-bottom:0.75rem">Đây là môi trường lý tưởng nhất cho giao dịch mua tất cả các mã trong nhóm (ngoại trừ JP225 cần thêm xác nhận). Áp lực từ USD yếu và chi phí vốn thấp hơn cùng nhau khuếch đại xu hướng tăng của tài sản rủi ro.</p>
+    </div>
+
+    <p><strong>Bối cảnh kinh tế điển hình:</strong> Fed đang trong chu kỳ cắt giảm lãi suất hoặc phát tín hiệu dovish pivot (chuyển hướng nới lỏng), chỉ số lạm phát giảm mạnh về vùng mục tiêu, thị trường lao động hạ nhiệt (NFP yếu hơn kỳ vọng), hoặc kinh tế Mỹ có dấu hiệu suy giảm đủ để buộc Fed hành động. Đây là môi trường dòng tiền đổ vào tài sản rủi ro.</p>
+
+    <div class="lt-card">
+      <div class="lt-card-title" style="color:var(--green)">Dấu hiệu nhận biết trên biểu đồ</div>
+      <ul class="lt-styled-list">
+        <li><strong>DXY:</strong> Phá vỡ vùng hỗ trợ quan trọng, tạo đáy thấp mới, đường trung bình động 20 ngày cắt xuống dưới đường 50 ngày, momentum (RSI, MACD) suy yếu rõ ràng.</li>
+        <li><strong>US10Y:</strong> Giảm mạnh, phá vỡ vùng hỗ trợ, đặc biệt khi xuất phát từ mức lãi suất cao (trên 4,5%) với catalyst rõ ràng như CPI thấp hơn kỳ vọng hoặc Fed meeting dovish.</li>
+        <li><strong>Các mã giao dịch:</strong> Vàng phá vỡ kháng cự để lập đỉnh mới, EURUSD phá vỡ vùng kháng cự quan trọng, NASDAQ tăng mạnh đặc biệt trong giai đoạn sau báo cáo kinh tế yếu.</li>
+        <li><strong>Chỉ số phụ trợ:</strong> VIX giảm dưới 15, lãi suất thực giảm về vùng âm hoặc giảm rõ từ vùng cao, chênh lệch tín dụng (credit spreads) thu hẹp.</li>
+      </ul>
+    </div>
+
+    <div class="lt-card">
+      <div class="lt-card-title" style="color:var(--green)">Thứ tự ưu tiên giao dịch mua</div>
+      <div class="lt-ranking-list">
+        <div class="lt-ranking-item">
+          <div class="lt-ranking-num">01</div>
+          <div class="lt-ranking-name">EURUSD</div>
+          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:98%;background:linear-gradient(90deg,#3ECFB2,#2EB89C)"></div></div>
+          <div class="lt-ranking-label" style="color:var(--green)">Hưởng ứng cao nhất</div>
+        </div>
+        <div class="lt-ranking-item">
+          <div class="lt-ranking-num">02</div>
+          <div class="lt-ranking-name">Vàng</div>
+          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:92%;background:linear-gradient(90deg,#3ECFB2,#2EB89C)"></div></div>
+          <div class="lt-ranking-label" style="color:var(--green)">Hưởng ứng rất cao</div>
+        </div>
+        <div class="lt-ranking-item">
+          <div class="lt-ranking-num">03</div>
+          <div class="lt-ranking-name">NASDAQ</div>
+          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:80%;background:linear-gradient(90deg,#3ECFB2,#2EB89C)"></div></div>
+          <div class="lt-ranking-label" style="color:var(--green)">Hưởng ứng cao</div>
+        </div>
+        <div class="lt-ranking-item">
+          <div class="lt-ranking-num">04</div>
+          <div class="lt-ranking-name">Bitcoin</div>
+          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:60%;background:linear-gradient(90deg,#F0B429,#D89E1A)"></div></div>
+          <div class="lt-ranking-label" style="color:var(--gold)">Hưởng ứng tốt</div>
+        </div>
+        <div class="lt-ranking-item">
+          <div class="lt-ranking-num">05</div>
+          <div class="lt-ranking-name">JP225</div>
+          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:25%;background:linear-gradient(90deg,var(--amber),#D09030)"></div></div>
+          <div class="lt-ranking-label" style="color:var(--amber)">Thận trọng – Yên có thể mạnh</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRẠNG THÁI 3 – MÂU THUẪN -->
+  <div class="lt-subsection" id="state-wait">
+    <div class="lt-subsection-title">Trạng Thái 3: Mâu Thuẫn Tín Hiệu – DXY và US10Y Đi Ngược Chiều</div>
+
+    <div class="lt-signal-card lt-signal-caution">
+      <div class="lt-signal-badge lt-badge-caution">⚠ Đứng ngoài thị trường</div>
+      <div class="lt-signal-title">Tín hiệu hỗn hợp – Tránh giao dịch, bảo toàn vốn</div>
+      <div class="lt-signal-trigger">
+        <div class="lt-trigger-item lt-trigger-up">DXY ↑ Tăng</div>
+        <div class="lt-trigger-item lt-trigger-down" style="border-color:rgba(62,207,178,0.25); background:rgba(62,207,178,0.07); color:var(--green)">US10Y ↓ Giảm</div>
+      </div>
+      <p style="font-size:0.83rem; color:var(--text-soft); margin-bottom:0">Hoặc kịch bản ngược lại: DXY↓ + US10Y↑. Trong cả hai trường hợp, các yếu tố vĩ mô mâu thuẫn tạo ra tín hiệu không nhất quán. Các mã khác nhau sẽ phản ứng theo các chiều khác nhau, xác suất thành công của giao dịch giảm đáng kể.</p>
+    </div>
+
+    <div class="lt-card-grid">
+      <div class="lt-card" style="margin-bottom:0">
+        <div class="lt-card-title" style="color:var(--amber)">Kịch bản A: DXY↑ + US10Y↓</div>
+        <p style="font-size:0.8rem; margin-bottom:0.75rem"><strong>Nguyên nhân điển hình:</strong> Khủng hoảng toàn cầu nghiêm trọng khiến nhà đầu tư chạy vào cả USD và trái phiếu Mỹ đồng thời như hai tài sản trú ẩn an toàn song song. Hoặc: nền kinh tế Eurozone và các khu vực khác suy yếu mạnh hơn Mỹ, đẩy DXY lên trong khi Fed nghi ngờ tăng trưởng và US10Y giảm.</p>
+        <ul class="lt-styled-list lt-warn" style="margin-bottom:0">
+          <li>EURUSD giảm (theo DXY) nhưng Vàng có thể tăng (theo US10Y và risk-off)</li>
+          <li>NASDAQ khó dự đoán vì US10Y giảm hỗ trợ nhưng risk-off nói chung gây áp lực</li>
+          <li>Tín hiệu chéo làm giảm xác suất thành công của mọi giao dịch theo chiều nào cũng vậy</li>
+        </ul>
+      </div>
+      <div class="lt-card" style="margin-bottom:0">
+        <div class="lt-card-title" style="color:var(--amber)">Kịch bản B: DXY↓ + US10Y↑</div>
+        <p style="font-size:0.8rem; margin-bottom:0.75rem"><strong>Nguyên nhân điển hình:</strong> Kỳ vọng lạm phát tăng đẩy US10Y lên (thị trường lo lạm phát) trong khi kinh tế Mỹ yếu hơn các nước khác làm USD mất giá. Hoặc: các ngân hàng trung ương khác tăng lãi suất mạnh (ECB, BoE) làm đồng tiền của họ mạnh lên, kéo DXY xuống, trong khi trái phiếu Mỹ bị bán.</p>
+        <ul class="lt-styled-list lt-warn" style="margin-bottom:0">
+          <li>Vàng được hỗ trợ từ DXY↓ nhưng chịu áp lực từ US10Y↑ – kết quả không rõ ràng</li>
+          <li>EURUSD tăng (DXY↓) nhưng chênh lệch lãi suất có thể kéo xuống</li>
+          <li>NASDAQ đặc biệt khó – DXY↓ trung tính nhưng US10Y↑ là áp lực bán rõ ràng</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lt-highlight-box lt-box-amber" style="margin-top:1rem">
+      <strong>Nguyên tắc vàng của giai đoạn mâu thuẫn:</strong> Không có giao dịch tốt nào trong môi trường tín hiệu hỗn hợp. Chi phí cơ hội của việc đứng ngoài thị trường là hoàn toàn có thể chấp nhận – nó nhỏ hơn nhiều so với rủi ro của việc giao dịch trong môi trường không có định hướng vĩ mô rõ ràng. Hãy coi giai đoạn mâu thuẫn là thời gian để quan sát, phân tích, và chờ đợi sự hội tụ trở lại.
+    </div>
+  </div>
+</div>
+
+<div class="lt-divider"></div>
+
+<!-- ══════════════════════════════════════════
+     PHẦN V – MỨC ĐỘ HƯỞNG ỨNG
+══════════════════════════════════════════ -->
+<div class="lt-section" id="response">
+  <div class="lt-section-header">
+    <span class="lt-section-num">Phần V</span>
+    <div>
+      <div class="lt-section-title">Đánh Giá Mức Độ Hưởng Ứng Xu Hướng</div>
+      <div class="lt-section-subtitle">Nhận biết mã đang hưởng ứng mạnh để tập trung giao dịch và mã đang kém hưởng ứng để hạn chế</div>
+    </div>
+  </div>
+
+  <p>Ngay cả khi DXY và US10Y đã đồng thuận rõ ràng, các mã giao dịch không phải lúc nào cũng hưởng ứng xu hướng chung với cùng mức độ. Việc nhận biết mã nào đang hưởng ứng mạnh và mã nào đang kém hưởng ứng giúp tập trung nguồn vốn vào những giao dịch có xác suất thành công cao nhất và tránh những mã đang bị ảnh hưởng bởi yếu tố riêng biệt làm triệt tiêu xu hướng chung.</p>
+
+  <div class="lt-subsection">
+    <div class="lt-subsection-title">Dấu Hiệu Nhận Biết Mã Đang Hưởng Ứng Mạnh</div>
+
+    <div class="lt-card">
+      <div class="lt-card-title" style="color:var(--green)">Các dấu hiệu xác nhận hưởng ứng mạnh</div>
+      <ul class="lt-styled-list lt-check">
+        <li><strong>Phá vỡ đồng bộ:</strong> Mã phá vỡ vùng kháng cự (hoặc hỗ trợ) quan trọng cùng thời điểm DXY và US10Y phá vỡ các ngưỡng của chúng – sự đồng bộ về thời gian là tín hiệu xác nhận mạnh.</li>
+        <li><strong>Khối lượng giao dịch tăng theo chiều thuận:</strong> Trong các phiên tăng (hoặc giảm theo xu hướng), khối lượng giao dịch (volume) cao hơn đáng kể so với các phiên điều chỉnh ngược chiều. Điều này cho thấy sự tham gia thực sự của dòng tiền lớn.</li>
+        <li><strong>Biên độ di chuyển rõ ràng:</strong> Mỗi phiên theo chiều xu hướng có biên độ lớn hơn trung bình, trong khi các phiên pullback (điều chỉnh) có biên độ nhỏ và nhanh chóng kết thúc.</li>
+        <li><strong>Cấu trúc sóng giá lành mạnh:</strong> Đỉnh sau cao hơn đỉnh trước và đáy sau cao hơn đáy trước (trong xu hướng tăng), hoặc ngược lại trong xu hướng giảm – không có dấu hiệu đảo chiều cấu trúc.</li>
+        <li><strong>Vượt trội so với các mã khác:</strong> Khi toàn nhóm đang giảm theo xu hướng bán, mã hưởng ứng mạnh nhất sẽ giảm nhiều nhất. Khi so sánh phần trăm biến động, mã hưởng ứng mạnh luôn dẫn đầu xu hướng.</li>
+        <li><strong>Tín hiệu từ momentum:</strong> Chỉ báo RSI trong trạng thái oversold (quá bán) nhưng không phục hồi mạnh (trong xu hướng giảm), hoặc overbought (quá mua) nhưng duy trì lâu (trong xu hướng tăng) – điều này cho thấy momentum mạnh.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="lt-subsection">
+    <div class="lt-subsection-title">Dấu Hiệu Cảnh Báo Mã Đang Kém Hưởng Ứng – Hạn Chế Giao Dịch</div>
+
+    <div class="lt-card">
+      <div class="lt-card-title" style="color:var(--red)">Các dấu hiệu kém hưởng ứng – Tín hiệu cảnh báo</div>
+      <ul class="lt-styled-list lt-cross">
+        <li><strong>Phân kỳ giá (Price Divergence):</strong> DXY đã giảm rõ ràng nhưng Vàng hoặc EURUSD không tăng tương ứng – hoặc ngược lại. Đây là tín hiệu rõ nhất cho thấy mã đó đang bị ảnh hưởng bởi yếu tố riêng biệt triệt tiêu xu hướng chung.</li>
+        <li><strong>Không phá vỡ được vùng kháng cự hoặc hỗ trợ quan trọng:</strong> Trong khi DXY và US10Y đã di chuyển đủ mạnh để kỳ vọng mã giao dịch phá vỡ, nhưng mã đó vẫn mắc kẹt trong vùng tích lũy – đây là tín hiệu yếu.</li>
+        <li><strong>Phục hồi ngược chiều quá mạnh và nhanh:</strong> Điều chỉnh ngược chiều xu hướng có biên độ lớn và diễn ra nhanh, cho thấy áp lực ngược chiều đang rất lớn từ yếu tố nội tại của mã đó.</li>
+        <li><strong>Khối lượng giao dịch ngược chiều:</strong> Trong các phiên theo chiều xu hướng, khối lượng thấp; trong các phiên ngược chiều, khối lượng lại cao – cho thấy dòng tiền thông minh đang giao dịch ngược lại xu hướng vĩ mô.</li>
+        <li><strong>Biến động cao nhưng không có định hướng (Whipsaw):</strong> Giá dao động mạnh lên rồi xuống mà không tạo ra xu hướng rõ ràng – dấu hiệu của việc mã đang bị giằng xé giữa các yếu tố vĩ mô và nội tại mâu thuẫn.</li>
+      </ul>
+    </div>
+
+    <div class="lt-highlight-box lt-box-red">
+      <strong>Nguyên nhân phổ biến khiến mã kém hưởng ứng:</strong> Vàng – mua bán của các ngân hàng trung ương quy mô lớn, hoặc căng thẳng địa chính trị tạo cầu tài sản trú ẩn. Bitcoin – halving chu kỳ, dòng vốn ETF, sự kiện trong hệ sinh thái crypto. JP225 – chính sách BoJ (đặc biệt là Kiểm soát đường cong lãi suất – YCC), can thiệp tỷ giá. EURUSD – quyết định lãi suất bất ngờ của Ngân hàng Trung ương Châu Âu. NASDAQ – kết quả kinh doanh mùa báo cáo lợi nhuận, sự kiện riêng của các cổ phiếu vốn hóa lớn.
+    </div>
+  </div>
+
+  <div class="lt-subsection">
+    <div class="lt-subsection-title">Phương Pháp So Sánh Tương Đối Giữa Các Mã</div>
+    <p>Khi DXY và US10Y đồng thuận, hãy so sánh mức biến động phần trăm của tất cả các mã trong cùng khung thời gian để xác định mã hưởng ứng mạnh nhất:</p>
+
+    <div class="lt-card">
+      <div class="lt-card-title" style="color:var(--blue)">Quy trình đánh giá tương đối</div>
+      <ul class="lt-styled-list">
+        <li><strong>Bước 1 – Thiết lập baseline:</strong> Khi xác định DXY và US10Y đã di chuyển rõ ràng (ví dụ: DXY giảm 1,5% trong tuần), ghi nhận đây là "sự kiện vĩ mô" cần theo dõi phản ứng.</li>
+        <li><strong>Bước 2 – Đo biến động từng mã:</strong> Tính phần trăm biến động của Vàng, Bitcoin, NASDAQ, JP225, EURUSD trong cùng khoảng thời gian DXY/US10Y di chuyển. Mã nào có biến động lớn nhất theo chiều kỳ vọng là mã hưởng ứng mạnh nhất.</li>
+        <li><strong>Bước 3 – So sánh với lịch sử:</strong> So sánh mức biến động hiện tại với mức biến động trung bình của mã đó trong các sự kiện vĩ mô tương tự trong quá khứ. Nếu biến động hiện tại cao hơn trung bình lịch sử – mã đang "hưởng ứng mạnh hơn bình thường".</li>
+        <li><strong>Bước 4 – Xếp hạng và quyết định:</strong> Tập trung vốn vào 1–2 mã hưởng ứng mạnh nhất. Hạn chế hoặc bỏ qua các mã hưởng ứng yếu hoặc có dấu hiệu phân kỳ.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="lt-divider"></div>
+
+<!-- ══════════════════════════════════════════
+     PHẦN VI – QUẢN LÝ TỶ TRỌNG
+══════════════════════════════════════════ -->
+<div class="lt-section" id="position">
+  <div class="lt-section-header">
+    <span class="lt-section-num">Phần VI</span>
+    <div>
+      <div class="lt-section-title">Quản Lý Tỷ Trọng Giao Dịch</div>
+      <div class="lt-section-subtitle">Khi nào tăng tỷ trọng, khi nào giảm và khi nào đứng hoàn toàn ngoài thị trường</div>
+    </div>
+  </div>
+
+  <p>Quản lý tỷ trọng (position sizing) trong framework này không chỉ là quản lý rủi ro thông thường – nó là cách để khuếch đại lợi nhuận khi bối cảnh vĩ mô cực kỳ thuận lợi và bảo toàn vốn khi bối cảnh không rõ ràng. Khái niệm cốt lõi là <em>tỷ trọng tỉ lệ thuận với mức độ đồng thuận vĩ mô</em>.</p>
+
+  <div class="lt-weight-grid">
+    <div class="lt-weight-card lt-wl-0">
+      <div class="lt-weight-num">0×</div>
+      <div class="lt-weight-label">Đứng ngoài</div>
+      <div class="lt-weight-desc">DXY và US10Y mâu thuẫn. Không có giao dịch.</div>
+    </div>
+    <div class="lt-weight-card lt-wl-1">
+      <div class="lt-weight-num">1×</div>
+      <div class="lt-weight-label">Tỷ trọng cơ bản</div>
+      <div class="lt-weight-desc">Một trong hai đồng thuận. Giao dịch thận trọng.</div>
+    </div>
+    <div class="lt-weight-card lt-wl-2">
+      <div class="lt-weight-num">1,5×</div>
+      <div class="lt-weight-label">Tăng nhẹ</div>
+      <div class="lt-weight-desc">Cả hai đồng thuận, kỹ thuật xác nhận, mã hưởng ứng tốt.</div>
+    </div>
+    <div class="lt-weight-card lt-wl-3">
+      <div class="lt-weight-num">2×</div>
+      <div class="lt-weight-label">Tăng mạnh</div>
+      <div class="lt-weight-desc">Đồng thuận mạnh + catalyst vĩ mô + đa khung thời gian thuận chiều.</div>
+    </div>
+  </div>
+
+  <div class="lt-subsection">
+    <div class="lt-subsection-title">Điều Kiện Đầy Đủ Để Tăng Tỷ Trọng Lên Mức Tối Đa</div>
+
+    <div class="lt-card">
+      <div class="lt-card-title" style="color:var(--blue)">Năm điều kiện đồng thời phải thỏa mãn</div>
+      <ul class="lt-styled-list lt-check">
+        <li><strong>Điều kiện 1 – Đồng thuận vĩ mô mạnh:</strong> Cả DXY lẫn US10Y đều đã phá vỡ các ngưỡng kỹ thuật quan trọng (không phải chỉ di chuyển nhẹ), và cả hai đang trong xu hướng được xác nhận, không phải dao động ngắn hạn.</li>
+        <li><strong>Điều kiện 2 – Catalyst vĩ mô rõ ràng:</strong> Có sự kiện cụ thể thúc đẩy xu hướng – CPI, NFP, Fed meeting, phát biểu của Chủ tịch Fed, GDP – và kết quả thực tế rõ ràng hơn kỳ vọng theo một chiều dứt khoát.</li>
+        <li><strong>Điều kiện 3 – Mã giao dịch hưởng ứng mạnh:</strong> Mã bạn chọn để giao dịch đang có dấu hiệu hưởng ứng mạnh (phá vỡ đồng bộ, khối lượng lớn theo chiều thuận), không có dấu hiệu phân kỳ hay kém hưởng ứng.</li>
+        <li><strong>Điều kiện 4 – Đa khung thời gian đồng thuận:</strong> Xu hướng nhất quán trên ít nhất ba khung thời gian (ví dụ: Weekly, Daily, H4 cùng theo một chiều). Không vào lệnh khi khung thời gian cao đang phân kỳ với khung thời gian giao dịch.</li>
+        <li><strong>Điều kiện 5 – Vị trí vào lệnh hợp lý:</strong> Đang ở đầu hoặc giữa xu hướng (không phải cuối xu hướng sau một chuỗi di chuyển dài mà không có điều chỉnh). Điểm vào lệnh có tỷ lệ lợi nhuận trên rủi ro (Risk:Reward) ít nhất là 2:1.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="lt-subsection">
+    <div class="lt-subsection-title">Điều Kiện Giảm Tỷ Trọng Hoặc Đứng Ngoài Hoàn Toàn</div>
+
+    <div class="lt-card">
+      <div class="lt-card-title" style="color:var(--amber)">Các tình huống cần giảm tỷ trọng</div>
+      <ul class="lt-styled-list lt-warn">
+        <li><strong>DXY và US10Y bắt đầu phân kỳ:</strong> Khi một trong hai bắt đầu đổi hướng trong khi cái kia vẫn duy trì – đây là tín hiệu sớm rằng xu hướng chung có thể đang thay đổi. Giảm ngay tỷ trọng về mức cơ bản.</li>
+        <li><strong>Mã giao dịch không còn hưởng ứng:</strong> Nếu xu hướng DXY/US10Y vẫn tiếp diễn nhưng mã giao dịch bắt đầu phân kỳ hoặc không đạt kỳ vọng về biên độ di chuyển – đây là tín hiệu có yếu tố nội tại đang can thiệp.</li>
+        <li><strong>Sự kiện rủi ro lớn sắp diễn ra:</strong> Ngay trước các sự kiện rủi ro cao (Fed meeting với kỳ vọng bất định, báo cáo CPI biến động lớn), giảm tỷ trọng để tránh rủi ro từ phản ứng trái chiều với kỳ vọng.</li>
+        <li><strong>Chỉ số biến động VIX tăng đột biến:</strong> Khi VIX vượt 25–30, biến động cực cao làm các mô hình tương quan trở nên kém đáng tin cậy hơn và rủi ro tổn thất trong ngắn hạn tăng cao.</li>
+        <li><strong>Đã ở cuối xu hướng dài:</strong> Sau một xu hướng kéo dài nhiều tuần mà không có điều chỉnh đáng kể, xác suất pullback (điều chỉnh) tăng cao. Giảm tỷ trọng hoặc chờ điểm vào lệnh mới sau điều chỉnh.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="lt-highlight-box lt-box-blue">
+    <strong>Nguyên tắc quản lý vốn nền tảng:</strong> Tổng rủi ro trên tất cả các vị thế đang mở không nên vượt quá 5–10% tổng vốn giao dịch. Ngay cả khi bối cảnh vĩ mô cực kỳ thuận lợi (tỷ trọng 2×), tăng tỷ trọng là tăng quy mô lệnh trên mỗi giao dịch, không phải tăng mức rủi ro tổng thể vượt ngưỡng an toàn. Framework vĩ mô giúp xác định chiều giao dịch, nhưng quản lý rủi ro nghiêm ngặt mới là nền tảng bảo vệ vốn dài hạn.
+  </div>
+</div>
+
+<div class="lt-divider"></div>
+
+<!-- ══════════════════════════════════════════
+     PHẦN VII – ƯU ĐIỂM VÀ HẠN CHẾ
+══════════════════════════════════════════ -->
+<div class="lt-section" id="procon">
+  <div class="lt-section-header">
+    <span class="lt-section-num">Phần VII</span>
+    <div>
+      <div class="lt-section-title">Ưu Điểm và Hạn Chế Của Phương Pháp</div>
+      <div class="lt-section-subtitle">Đánh giá khách quan để sử dụng framework này hiệu quả và an toàn</div>
+    </div>
+  </div>
+
+  <div class="lt-procon-grid">
+    <div class="lt-procon-card lt-pros">
+      <div class="lt-procon-title">⬆ Ưu điểm của phương pháp</div>
+      <div class="lt-procon-item">
+        <div class="lt-procon-item-icon">✓</div>
+        <div><strong>Nền tảng vĩ mô bền vững:</strong> Phương pháp dựa trên cơ chế kinh tế được nghiên cứu và kiểm chứng, không phụ thuộc vào chỉ báo kỹ thuật đơn thuần – những chỉ báo có thể bị nhiễu ngắn hạn.</div>
+      </div>
+      <div class="lt-procon-item">
+        <div class="lt-procon-item-icon">✓</div>
+        <div><strong>Lọc tín hiệu nhiễu hiệu quả:</strong> Cơ chế "đứng ngoài khi mâu thuẫn" tự động loại bỏ phần lớn các giao dịch kém chất lượng, giảm tần suất giao dịch nhưng tăng đáng kể tỷ lệ thắng.</div>
+      </div>
+      <div class="lt-procon-item">
+        <div class="lt-procon-item-icon">✓</div>
+        <div><strong>Hiệu quả cao với nguồn lực phân tích tiết kiệm:</strong> Một bộ phân tích DXY/US10Y có thể đồng thời định hướng chiều giao dịch cho cả năm mã, thay vì phân tích từng mã độc lập.</div>
+      </div>
+      <div class="lt-procon-item">
+        <div class="lt-procon-item-icon">✓</div>
+        <div><strong>Tạo kỷ luật giao dịch rõ ràng:</strong> Có quy tắc minh bạch về khi nào giao dịch (đồng thuận), khi nào không (mâu thuẫn), và khi nào tăng tỷ trọng – loại bỏ sự thiên vị cảm xúc.</div>
+      </div>
+      <div class="lt-procon-item">
+        <div class="lt-procon-item-icon">✓</div>
+        <div><strong>Kết hợp tốt với phân tích kỹ thuật:</strong> DXY/US10Y đóng vai trò bộ lọc vĩ mô định hướng chiều, phân tích kỹ thuật xác định điểm vào/thoát cụ thể – hai phương pháp bổ sung cho nhau hoàn hảo.</div>
+      </div>
+      <div class="lt-procon-item">
+        <div class="lt-procon-item-icon">✓</div>
+        <div><strong>Phù hợp với xu hướng dài và bền:</strong> Tốt nhất với swing trading và position trading trên khung thời gian ngày và tuần, nơi xu hướng vĩ mô có ảnh hưởng quyết định nhất.</div>
+      </div>
+    </div>
+
+    <div class="lt-procon-card lt-cons">
+      <div class="lt-procon-title">⬇ Hạn chế cần nhận thức rõ</div>
+      <div class="lt-procon-item">
+        <div class="lt-procon-item-icon">✗</div>
+        <div><strong>Độ trễ (Lag) vào lệnh:</strong> Phương pháp dựa trên xác nhận xu hướng, không dự đoán trước, nên thường vào lệnh sau khi xu hướng đã được xác nhận – bỏ lỡ phần đầu tiên (thường sinh lợi nhất) của xu hướng.</div>
+      </div>
+      <div class="lt-procon-item">
+        <div class="lt-procon-item-icon">✗</div>
+        <div><strong>Giai đoạn mâu thuẫn kéo dài:</strong> Thị trường có thể ở trạng thái DXY/US10Y phân kỳ trong nhiều tuần, khiến nhà giao dịch phải đứng ngoài trong thời gian dài – đòi hỏi sự kiên nhẫn cao.</div>
+      </div>
+      <div class="lt-procon-item">
+        <div class="lt-procon-item-icon">✗</div>
+        <div><strong>JP225 là điểm yếu của hệ thống:</strong> Nikkei có tương quan phức tạp và đôi khi ngược chiều với DXY – framework không đủ mạnh để áp dụng trực tiếp mà không có phân tích bổ sung về USD/JPY và chính sách BoJ.</div>
+      </div>
+      <div class="lt-procon-item">
+        <div class="lt-procon-item-icon">✗</div>
+        <div><strong>Không cung cấp điểm vào và thoát lệnh:</strong> Framework chỉ cho biết chiều giao dịch và mức độ tự tin – không cung cấp điểm vào lệnh, điểm dừng lỗ, hay mục tiêu lợi nhuận cụ thể. Cần kết hợp bắt buộc với phân tích kỹ thuật.</div>
+      </div>
+      <div class="lt-procon-item">
+        <div class="lt-procon-item-icon">✗</div>
+        <div><strong>Rủi ro sự kiện bất ngờ (Black Swan):</strong> Các sự kiện ngoài dự báo (khủng hoảng ngân hàng, chiến tranh đột ngột, thảm họa tự nhiên quy mô lớn) có thể đảo chiều xu hướng tức thời bất chấp sự đồng thuận DXY/US10Y trước đó.</div>
+      </div>
+      <div class="lt-procon-item">
+        <div class="lt-procon-item-icon">✗</div>
+        <div><strong>Hiệu quả giảm trong môi trường sideways:</strong> Khi DXY và US10Y dao động trong biên độ hẹp mà không có xu hướng rõ ràng, framework không tạo ra tín hiệu hành động và nhà giao dịch phải đứng ngoài trong thời gian dài.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lt-subsection">
+    <div class="lt-subsection-title">Các Chỉ Số Bổ Sung Để Củng Cố Framework</div>
+
+    <p>Để khắc phục một số hạn chế và tăng độ chắc chắn của tín hiệu giao dịch, có thể bổ sung các chỉ số sau vào quy trình phân tích:</p>
+
+    <div class="lt-card-grid">
+      <div class="lt-card" style="margin-bottom:0">
+        <div class="lt-card-title" style="color:var(--blue)">Chỉ số bổ sung nên theo dõi</div>
+        <ul class="lt-styled-list">
+          <li><strong>Cung tiền toàn cầu M2 (Global M2):</strong> Khi M2 toàn cầu tăng, thanh khoản dư thừa hỗ trợ tất cả tài sản rủi ro – đặc biệt hữu ích để xác nhận giao dịch mua Bitcoin và NASDAQ.</li>
+          <li><strong>Chỉ số biến động VIX:</strong> VIX dưới 15 (thị trường bình tĩnh, xác nhận risk-on), VIX trên 25 (thị trường sợ hãi, thận trọng cao), VIX trên 35 (biến động cực đoan, hạn chế mọi giao dịch).</li>
+          <li><strong>Chênh lệch US10Y và DE10Y:</strong> Chênh lệch mở rộng có lợi cho USD → xác nhận bán EURUSD. Thu hẹp → xác nhận mua EURUSD. Đây là công cụ tinh chỉnh quan trọng cho giao dịch EURUSD.</li>
+          <li><strong>Báo cáo vị thế của nhà đầu tư tổ chức (COT Report):</strong> Theo dõi vị thế của các quỹ đầu tư lớn trên hợp đồng tương lai DXY và vàng – khi positioning cực đoan (quá mua hoặc quá bán), rủi ro đảo chiều tăng cao.</li>
+        </ul>
+      </div>
+      <div class="lt-card" style="margin-bottom:0">
+        <div class="lt-card-title" style="color:var(--gold)">Lịch sự kiện kinh tế trọng yếu</div>
+        <ul class="lt-styled-list">
+          <li><strong>Họp Ủy ban Thị trường Mở Liên bang (FOMC):</strong> 8 lần mỗi năm – quyết định lãi suất và tuyên bố chính sách là catalyst quan trọng nhất với US10Y và DXY.</li>
+          <li><strong>Báo cáo Chỉ số Giá Tiêu Dùng (CPI):</strong> Hàng tháng – mức lạm phát cao hơn kỳ vọng → US10Y↑, DXY↑; thấp hơn kỳ vọng → US10Y↓, DXY↓.</li>
+          <li><strong>Báo cáo Việc Làm Phi Nông Nghiệp (NFP):</strong> Đầu tháng – dữ liệu lao động mạnh hỗ trợ Fed hawkish, dữ liệu yếu mở đường cho dovish pivot.</li>
+          <li><strong>Cuộc họp Ngân hàng Trung ương Châu Âu (ECB):</strong> Quan trọng cho EURUSD – quyết định lãi suất ECB có thể đi ngược lại tín hiệu từ DXY/US10Y.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lt-divider"></div>
+
+<!-- ══════════════════════════════════════════
+     PHẦN VIII – KẾT LUẬN
+══════════════════════════════════════════ -->
+<div class="lt-section" id="conclusion">
+  <div class="lt-section-header">
+    <span class="lt-section-num">Phần VIII</span>
+    <div>
+      <div class="lt-section-title">Kết Luận và Nguyên Tắc Cốt Lõi</div>
+      <div class="lt-section-subtitle">Tổng hợp triết học giao dịch và các nguyên tắc không thể thỏa hiệp</div>
+    </div>
+  </div>
+
+  <p>Framework giao dịch dựa trên tương quan DXY và US10Y là một phương pháp tiếp cận từ trên xuống (top-down approach) – bắt đầu từ bức tranh kinh tế vĩ mô lớn nhất trước khi đi vào phân tích từng mã giao dịch cụ thể. Đây là cách tiếp cận được phần lớn các nhà giao dịch chuyên nghiệp và quỹ đầu tư lớn sử dụng, vì nó đặt giao dịch trong bối cảnh kinh tế thực sự thay vì chỉ dựa vào các mô hình toán học thuần túy.</p>
+
+  <p>Sức mạnh thực sự của phương pháp này không nằm ở khả năng đúng 100% – không có phương pháp nào làm được điều đó – mà nằm ở khả năng <em>tập trung nguồn vốn và năng lượng phân tích vào những thời điểm thị trường cung cấp xác suất cao nhất</em>, và kiên nhẫn đứng ngoài trong những thời điểm tín hiệu không đủ rõ ràng.</p>
+
+  <div class="lt-principle-grid">
+    <div class="lt-principle-card">
+      <div class="lt-principle-icon">🎯</div>
+      <div class="lt-principle-name">Nguyên tắc Đồng Thuận</div>
+      <div class="lt-principle-desc">Chỉ giao dịch khi DXY và US10Y đồng thuận xu hướng rõ ràng. Một yếu tố ủng hộ và một yếu tố phản đối là lý do để đứng ngoài, không phải để giao dịch thử nghiệm.</div>
+    </div>
+    <div class="lt-principle-card">
+      <div class="lt-principle-icon">📊</div>
+      <div class="lt-principle-name">Nguyên tắc Ưu Tiên</div>
+      <div class="lt-principle-desc">Khi đồng thuận, ưu tiên giao dịch EURUSD và Vàng trước – hai mã có tương quan đáng tin cậy nhất. Chỉ thêm Bitcoin và NASDAQ khi có thêm xác nhận kỹ thuật. Thận trọng đặc biệt với JP225.</div>
+    </div>
+    <div class="lt-principle-card">
+      <div class="lt-principle-icon">⚖️</div>
+      <div class="lt-principle-name">Nguyên tắc Tỷ Lệ</div>
+      <div class="lt-principle-desc">Tỷ trọng giao dịch tỉ lệ thuận với mức độ đồng thuận và số lượng điều kiện xác nhận được thỏa mãn. Đồng thuận mạnh kèm catalyst rõ ràng và kỹ thuật xác nhận mới xứng đáng tỷ trọng tối đa.</div>
+    </div>
+    <div class="lt-principle-card">
+      <div class="lt-principle-icon">🛡️</div>
+      <div class="lt-principle-name">Nguyên tắc Bảo Toàn</div>
+      <div class="lt-principle-desc">Trong giai đoạn mâu thuẫn, đứng ngoài không phải thất bại – đó là sự bảo toàn vốn thông minh. Vốn được bảo toàn trong giai đoạn không thuận lợi chính là nguồn lực cho cơ hội tiếp theo.</div>
+    </div>
+    <div class="lt-principle-card">
+      <div class="lt-principle-icon">🔍</div>
+      <div class="lt-principle-name">Nguyên tắc Hưởng Ứng</div>
+      <div class="lt-principle-desc">Theo dõi liên tục mức độ hưởng ứng của từng mã. Nếu một mã không hưởng ứng như kỳ vọng dù DXY/US10Y đã di chuyển đủ mạnh, đó là tín hiệu có yếu tố nội tại đang can thiệp – không cố vào lệnh.</div>
+    </div>
+    <div class="lt-principle-card">
+      <div class="lt-principle-icon">🔗</div>
+      <div class="lt-principle-name">Nguyên tắc Bổ Sung</div>
+      <div class="lt-principle-desc">Framework vĩ mô không thay thế phân tích kỹ thuật – nó định hướng chiều giao dịch. Điểm vào lệnh, dừng lỗ, và mục tiêu lợi nhuận cụ thể cần được xác định bằng phân tích kỹ thuật bổ sung.</div>
+    </div>
+  </div>
+
+  <div class="lt-highlight-box lt-box-blue">
+    <strong>Triết học cốt lõi của phương pháp:</strong> Thị trường tài chính là hệ thống phức tạp bị dẫn dắt bởi dòng vốn toàn cầu. DXY và US10Y là hai trong số những lực lượng vĩ mô mạnh nhất định hướng dòng vốn đó. Khi bạn hiểu chiều của dòng vốn lớn, bạn không cần phải thông minh hơn thị trường – bạn chỉ cần đủ kiên nhẫn để chờ đợi cơ hội khi dòng vốn đó đang rõ ràng hỗ trợ vị thế của bạn, và đủ kỷ luật để đứng ngoài khi bức tranh còn chưa rõ ràng.
+  </div>
+
+  <div class="lt-card" style="margin-top:1.5rem">
+    <div class="lt-card-title" style="color:var(--text)">Tóm tắt hành động thực tiễn theo từng bước</div>
+    <ul class="lt-styled-list">
+      <li><strong>Bước 1 – Phân tích DXY:</strong> Xác định xu hướng DXY trên khung Weekly và Daily. DXY đang tăng, giảm, hay sideway?</li>
+      <li><strong>Bước 2 – Phân tích US10Y:</strong> Xác định xu hướng US10Y. Đang tăng, giảm, hay dao động ngang?</li>
+      <li><strong>Bước 3 – Xác định trạng thái:</strong> Đồng thuận tăng → chuẩn bị bán. Đồng thuận giảm → chuẩn bị mua. Mâu thuẫn → đứng ngoài, dừng lại ở đây.</li>
+      <li><strong>Bước 4 – Chọn mã:</strong> Ưu tiên EURUSD, Vàng. Thêm NASDAQ nếu US10Y là yếu tố dẫn dắt chính. Cân nhắc Bitcoin. Thận trọng với JP225.</li>
+      <li><strong>Bước 5 – Đánh giá hưởng ứng:</strong> Kiểm tra từng mã đã chọn đang hưởng ứng xu hướng hay có dấu hiệu phân kỳ. Loại bỏ mã kém hưởng ứng.</li>
+      <li><strong>Bước 6 – Vào lệnh bằng kỹ thuật:</strong> Dùng phân tích kỹ thuật (hỗ trợ/kháng cự, mô hình giá, chỉ báo) để chọn điểm vào lệnh cụ thể, đặt dừng lỗ, và mục tiêu lợi nhuận.</li>
+      <li><strong>Bước 7 – Quản lý tỷ trọng:</strong> Cân nhắc số điều kiện đồng thuận đã thỏa mãn để xác định tỷ trọng phù hợp.</li>
+      <li><strong>Bước 8 – Theo dõi liên tục:</strong> Theo dõi DXY và US10Y hàng ngày. Nếu bắt đầu phân kỳ hoặc đổi hướng, giảm tỷ trọng hoặc xem xét đóng vị thế.</li>
+    </ul>
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<div class="lt-page-footer">
+  <div style="margin-bottom:0.5rem; color:var(--text-soft); font-size:0.75rem; font-family:Inter,sans-serif; font-weight:500">Tài liệu lý thuyết giao dịch – Phương pháp tương quan DXY &amp; US10Y</div>
+  Tài liệu này được xây dựng cho mục đích nghiên cứu và tham khảo lý thuyết giao dịch. Giao dịch tài chính đòn bẩy (Forex, CFD, tiền điện tử) có rủi ro mất vốn cao. Không có phương pháp nào đảm bảo lợi nhuận. Nhà giao dịch cần tự chịu trách nhiệm về các quyết định giao dịch của mình.
+</div>
+
+</div><!-- /main -->
+
+                        </div>
+                    </div>
+<div id="article-dxy-us10y-panel" class="sukien-article-panel">
                         <div class="article-dxy-us10y">
                             <button class="back-btn" onclick="openVimoArticle('')">
                                 <i class="fa-solid fa-arrow-left"></i> Quay lại Vĩ mô
@@ -3759,1072 +4818,11 @@
             <!-- PANEL 6: THƯ VIỆN -->
             <div id="panel-thu-vien" class="tab-panel">
                 <h2 class="section-title"><i class="fa-solid fa-book-open"></i> Thư viện</h2>
-                <!-- LIST VIEW -->
-                <div id="thu-vien-list-view" class="sukien-view active">
-                    <div class="news-list">
-                        <a href="/thu-vien/dxy-us10y-theory" class="news-card clickable-card">
-                            <div class="news-meta">
-                                <span class="news-source"><i class="fa-solid fa-book"></i> Lý thuyết Giao dịch</span>
-                                <span class="news-time">Tháng 6, 2026</span>
-                            </div>
-                            <h3 class="news-heading">Lý Thuyết Giao Dịch: Tương Quan DXY & US10Y</h3>
-                            <p class="news-excerpt">Hướng dẫn toàn diện về mối tương quan giữa Đồng Đô la Mỹ và Lợi suất Trái phiếu 10 năm, các trạng thái thị trường và ứng dụng thực tiễn.</p>
-                            <div class="news-footer">
-                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc tài liệu</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- ARTICLE VIEW -->
-                <div id="thu-vien-article-view" class="sukien-view">
-                    <div id="article-lythuyet-panel" class="sukien-article-panel">
-                        <div class="article-lythuyet">
-                            <button class="back-btn" onclick="openThuVienArticle('')">
-                                <i class="fa-solid fa-arrow-left"></i> Quay lại Thư viện
-                            </button>
-
-
-<!-- ══════════════════════════════════════════
-     SIDEBAR NAVIGATION
-══════════════════════════════════════════ -->
-<aside class="lt-sidebar">
-  <div class="lt-sidebar-logo">
-    <div class="lt-sidebar-logo-title">Lý Thuyết Giao Dịch</div>
-    <div class="lt-sidebar-logo-sub">DXY &amp; US10Y Framework</div>
-  </div>
-
-  <div class="lt-nav-group">
-    <div class="lt-nav-label">Nội dung</div>
-    <a href="#intro" class="lt-nav-link">Giới thiệu phương pháp</a>
-    <a href="#foundation" class="lt-nav-link">Nền tảng lý thuyết</a>
-    <a href="#dxy" class="lt-nav-link lt-sub">→ Chỉ số DXY</a>
-    <a href="#us10y" class="lt-nav-link lt-sub">→ Lãi suất US10Y</a>
-    <a href="#relation" class="lt-nav-link lt-sub">→ Mối quan hệ DXY &amp; US10Y</a>
-    <a href="#correlation" class="lt-nav-link">Tương quan từng mã</a>
-    <a href="#gold" class="lt-nav-link lt-sub">→ Vàng (XAU/USD)</a>
-    <a href="#btc" class="lt-nav-link lt-sub">→ Bitcoin (BTC/USD)</a>
-    <a href="#nasdaq" class="lt-nav-link lt-sub">→ NASDAQ 100</a>
-    <a href="#jp225" class="lt-nav-link lt-sub">→ Nikkei 225 (JP225)</a>
-    <a href="#eurusd" class="lt-nav-link lt-sub">→ EURUSD</a>
-    <a href="#matrix" class="lt-nav-link">Ma trận tương quan</a>
-    <a href="#states" class="lt-nav-link">Ba trạng thái thị trường</a>
-    <a href="#state-sell" class="lt-nav-link lt-sub">→ Đồng thuận bán</a>
-    <a href="#state-buy" class="lt-nav-link lt-sub">→ Đồng thuận mua</a>
-    <a href="#state-wait" class="lt-nav-link lt-sub">→ Mâu thuẫn – đứng ngoài</a>
-    <a href="#response" class="lt-nav-link">Mức độ hưởng ứng</a>
-    <a href="#position" class="lt-nav-link">Quản lý tỷ trọng</a>
-    <a href="#procon" class="lt-nav-link">Ưu điểm và hạn chế</a>
-    <a href="#conclusion" class="lt-nav-link">Kết luận</a>
-  </div>
-
-  <div class="lt-sidebar-footer">
-    Tài liệu lý thuyết<br>
-    Phiên bản dành cho nhà<br>giao dịch xu hướng vĩ mô
-  </div>
-</aside>
-
-<!-- ══════════════════════════════════════════
-     MAIN CONTENT
-══════════════════════════════════════════ -->
-<div class="lt-main">
-
-<!-- HERO -->
-<div class="lt-hero" id="intro">
-  <div class="lt-hero-eyebrow">Hệ thống phân tích vĩ mô nền tảng</div>
-  <h1 class="lt-hero-title">Lý Thuyết Giao Dịch<br>Tương Quan <span>DXY &amp; US10Y</span></h1>
-  <p class="lt-hero-desc">
-    Phương pháp sử dụng Chỉ số Đô la Mỹ (DXY) và Lãi suất Trái phiếu Kho bạc Mỹ kỳ hạn 10 năm (US10Y) làm nền tảng phân tích vĩ mô để xác định chiều giao dịch, đánh giá mức độ đồng thuận thị trường, và quản lý tỷ trọng vị thế trên năm mã giao dịch chính.
-  </p>
-  <div class="lt-hero-instruments">
-    <span class="lt-instrument-tag lt-tag-gold"><span class="lt-tag-dot"></span>Vàng (XAU/USD)</span>
-    <span class="lt-instrument-tag lt-tag-btc"><span class="lt-tag-dot"></span>Bitcoin (BTC/USD)</span>
-    <span class="lt-instrument-tag lt-tag-nas"><span class="lt-tag-dot"></span>NASDAQ 100</span>
-    <span class="lt-instrument-tag lt-tag-jp"><span class="lt-tag-dot"></span>Nikkei 225 (JP225)</span>
-    <span class="lt-instrument-tag lt-tag-eur"><span class="lt-tag-dot"></span>EURUSD</span>
-  </div>
-</div>
-
-<div class="lt-content">
-
-<!-- ══════════════════════════════════════════
-     PHẦN I – NỀN TẢNG LÝ THUYẾT
-══════════════════════════════════════════ -->
-<div class="lt-section" id="foundation">
-  <div class="lt-section-header">
-    <span class="lt-section-num">Phần I</span>
-    <div>
-      <div class="lt-section-title">Nền Tảng Lý Thuyết</div>
-      <div class="lt-section-subtitle">DXY và US10Y – Hai la bàn vĩ mô định hướng thị trường toàn cầu</div>
-    </div>
-  </div>
-
-  <!-- DXY -->
-  <div class="lt-subsection" id="dxy">
-    <div class="lt-subsection-title">Chỉ Số Đô La Mỹ (DXY) – Sức Mạnh Của Đồng Tiền Dự Trữ Toàn Cầu</div>
-    <p>DXY là chỉ số đo lường giá trị của đồng đô la Mỹ so với một rổ gồm sáu đồng tiền mạnh nhất thế giới. Rổ tiền tệ này được cấu thành bởi: đồng Euro chiếm tỷ trọng 57,6%; đồng Yên Nhật chiếm 13,6%; đồng Bảng Anh chiếm 11,9%; đồng Đô la Canada chiếm 9,1%; đồng Krona Thụy Điển chiếm 4,2%; và đồng Franc Thụy Sĩ chiếm 3,6%.</p>
-    <p>Do đồng Euro chiếm hơn một nửa tỷ trọng, diễn biến của cặp tỷ giá EURUSD có ảnh hưởng chi phối lên DXY – đây là thông tin quan trọng khi hiểu mối liên hệ giữa DXY và EURUSD.</p>
-
-    <div class="lt-card">
-      <div class="lt-card-title" style="color:var(--blue)">Các yếu tố dẫn đến DXY tăng (Đồng đô la mạnh lên)</div>
-      <ul class="lt-styled-list">
-        <li><strong>Chính sách tiền tệ thắt chặt của Cục Dự trữ Liên bang Mỹ (Fed):</strong> Khi Fed tăng lãi suất cơ bản hoặc phát biểu theo hướng thắt chặt (hawkish), đồng đô la trở nên hấp dẫn hơn với nhà đầu tư tìm kiếm lợi suất cao, làm tăng cầu USD và đẩy DXY lên.</li>
-        <li><strong>Dữ liệu kinh tế Mỹ mạnh:</strong> Chỉ số lạm phát (CPI, PCE) cao hơn kỳ vọng, tăng trưởng việc làm (Nonfarm Payrolls) tốt, tăng trưởng Tổng sản phẩm quốc nội (GDP) mạnh – những yếu tố này duy trì lập trường thắt chặt của Fed và hỗ trợ USD.</li>
-        <li><strong>Tâm lý trú ẩn an toàn (Flight to Safety):</strong> Trong các cuộc khủng hoảng địa chính trị hoặc tài chính toàn cầu, dòng vốn đổ vào USD như tài sản trú ẩn an toàn, đẩy DXY tăng bất kể điều kiện kinh tế nội tại của Mỹ.</li>
-        <li><strong>Chênh lệch lãi suất mở rộng có lợi cho USD:</strong> Khi lãi suất Mỹ cao hơn so với các nền kinh tế lớn khác (Eurozone, Nhật Bản, Anh), dòng vốn tìm kiếm lợi suất cao hơn chảy vào Mỹ, làm mạnh đồng đô la.</li>
-        <li><strong>Các nền kinh tế đối tác suy yếu:</strong> Khi khu vực Eurozone, Nhật Bản hoặc Anh gặp khó khăn kinh tế, các ngân hàng trung ương tương ứng có xu hướng cắt giảm lãi suất hoặc in thêm tiền, làm yếu đồng tiền của họ và gián tiếp đẩy DXY lên.</li>
-      </ul>
-    </div>
-
-    <div class="lt-card">
-      <div class="lt-card-title" style="color:var(--green)">Các yếu tố dẫn đến DXY giảm (Đồng đô la suy yếu)</div>
-      <ul class="lt-styled-list">
-        <li><strong>Chính sách tiền tệ nới lỏng của Fed:</strong> Khi Fed cắt giảm lãi suất, triển khai chương trình nới lỏng định lượng (QE), hoặc phát biểu theo hướng nới lỏng (dovish), USD giảm sức hấp dẫn và đồng đô la suy yếu.</li>
-        <li><strong>Dữ liệu kinh tế Mỹ yếu:</strong> Lạm phát giảm mạnh, thị trường lao động suy yếu, tăng trưởng kinh tế thấp hơn kỳ vọng – những yếu tố này mở đường cho Fed nới lỏng chính sách, gây áp lực lên USD.</li>
-        <li><strong>Tâm lý risk-on (Rủi ro được ưa chuộng):</strong> Khi kinh tế toàn cầu tăng trưởng tốt, nhà đầu tư bán USD để mua các tài sản rủi ro có lợi suất cao hơn ở các thị trường mới nổi và phát triển khác.</li>
-        <li><strong>Các ngân hàng trung ương khác thắt chặt chính sách:</strong> Khi ECB, Ngân hàng Anh (BoE) hoặc các ngân hàng khác tăng lãi suất nhanh hơn Fed, chênh lệch lãi suất thu hẹp, làm giảm sức hấp dẫn của USD tương đối.</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- US10Y -->
-  <div class="lt-subsection" id="us10y">
-    <div class="lt-subsection-title">Lãi Suất Trái Phiếu Kho Bạc Mỹ Kỳ Hạn 10 Năm (US10Y) – Chi Phí Vốn Của Thế Giới</div>
-    <p>US10Y là lợi suất (yield) của trái phiếu kho bạc Mỹ kỳ hạn 10 năm, thường được xem là "lãi suất phi rủi ro" của hệ thống tài chính toàn cầu. Đây là chỉ số quan trọng bậc nhất để định giá hầu hết các tài sản tài chính trên thế giới.</p>
-
-    <div class="lt-highlight-box lt-box-blue">
-      <strong>Nguyên tắc cốt lõi:</strong> US10Y phản ánh kỳ vọng thị trường về tăng trưởng kinh tế, lạm phát, và chính sách tiền tệ trong 10 năm tới. Khi US10Y tăng, chi phí vốn của toàn bộ nền kinh tế tăng lên – từ doanh nghiệp vay tiền đầu tư cho đến người tiêu dùng mua nhà trả góp – tạo ra áp lực kiềm chế tăng trưởng và hạn chế định giá tài sản.
-    </div>
-
-    <div class="lt-card">
-      <div class="lt-card-title" style="color:var(--red)">Các yếu tố đẩy US10Y tăng</div>
-      <ul class="lt-styled-list">
-        <li><strong>Kỳ vọng lạm phát tăng cao:</strong> Khi thị trường lo ngại lạm phát dai dẳng, nhà đầu tư đòi hỏi lãi suất cao hơn để bù đắp cho sức mua bị xói mòn – đây là nguyên nhân cơ bản nhất và thường kéo dài nhất.</li>
-        <li><strong>Fed tăng lãi suất hoặc phát tín hiệu thắt chặt:</strong> Kỳ vọng về lãi suất ngắn hạn tăng kéo theo US10Y tăng theo.</li>
-        <li><strong>Tăng trưởng kinh tế mạnh:</strong> Kinh tế tốt làm tăng nhu cầu vay vốn và giảm nhu cầu trú ẩn trong trái phiếu, đẩy giá trái phiếu xuống và lãi suất lên.</li>
-        <li><strong>Cung trái phiếu tăng:</strong> Thâm hụt ngân sách lớn buộc Mỹ phát hành thêm trái phiếu, khi cung tăng mà cầu không theo kịp thì giá giảm và lãi suất tăng.</li>
-        <li><strong>Nhà đầu tư nước ngoài giảm mua:</strong> Khi Trung Quốc, Nhật Bản hoặc các quốc gia nắm giữ trái phiếu lớn giảm mua, áp lực bán tăng lên.</li>
-      </ul>
-    </div>
-
-    <div class="lt-card">
-      <div class="lt-card-title" style="color:var(--green)">Các yếu tố kéo US10Y giảm</div>
-      <ul class="lt-styled-list">
-        <li><strong>Fed cắt giảm lãi suất hoặc tín hiệu dovish:</strong> Kỳ vọng lãi suất thấp hơn trong tương lai kéo US10Y giảm ngay lập tức.</li>
-        <li><strong>Kỳ vọng lạm phát giảm:</strong> Khi thị trường tin lạm phát được kiểm soát, nhà đầu tư chấp nhận lãi suất thấp hơn trên trái phiếu.</li>
-        <li><strong>Tâm lý trú ẩn an toàn:</strong> Trong khủng hoảng, nhà đầu tư đổ xô mua trái phiếu Mỹ, đẩy giá trái phiếu lên và lãi suất xuống.</li>
-        <li><strong>Tăng trưởng kinh tế yếu hoặc lo ngại suy thoái:</strong> Dự báo suy thoái thúc đẩy mua trái phiếu như tài sản phòng thủ, kéo US10Y giảm.</li>
-      </ul>
-    </div>
-
-    <div class="lt-highlight-box lt-box-gold">
-      <strong>Khái niệm quan trọng – Lãi suất thực (Real Yield):</strong> Lãi suất thực = US10Y danh nghĩa trừ kỳ vọng lạm phát (Breakeven Inflation Rate). Khi lãi suất thực âm (US10Y thấp hơn lạm phát kỳ vọng), tiền gửi và trái phiếu không bảo toàn được sức mua, khiến vàng và các tài sản thực trở nên cực kỳ hấp dẫn. Ngược lại, khi lãi suất thực dương và tăng cao, tài sản không sinh lãi như vàng chịu áp lực bán rất lớn. Đây là cơ chế quan trọng nhất giải thích tương quan giữa US10Y và vàng.
-    </div>
-  </div>
-
-  <!-- MỐI QUAN HỆ DXY – US10Y -->
-  <div class="lt-subsection" id="relation">
-    <div class="lt-subsection-title">Mối Quan Hệ Giữa DXY và US10Y – Khi Đồng Thuận và Khi Phân Kỳ</div>
-    <p>Hiểu đúng mối quan hệ giữa DXY và US10Y là trái tim của toàn bộ phương pháp giao dịch này. Hai chỉ số này thường đồng hành cùng nhau, nhưng có những giai đoạn quan trọng chúng phân kỳ – và chính những giai đoạn phân kỳ đó tạo ra tín hiệu cảnh báo để nhà giao dịch đứng ngoài thị trường.</p>
-
-    <div class="lt-card-grid">
-      <div class="lt-signal-card lt-signal-buy" style="margin-bottom:0">
-        <div class="lt-signal-badge lt-badge-buy">Đồng thuận điển hình</div>
-        <div class="lt-signal-title">Tương quan dương bình thường</div>
-        <p style="font-size:0.8rem; color:var(--text-soft); margin-bottom:0">Trong phần lớn thời gian, DXY và US10Y chuyển động cùng chiều nhau. Khi Fed thắt chặt chính sách: lãi suất tăng (US10Y↑) đồng thời USD mạnh lên (DXY↑). Khi Fed nới lỏng: US10Y↓ và DXY↓. Đây là trạng thái thuận chiều, tạo ra tín hiệu rõ ràng nhất cho nhà giao dịch.</p>
-      </div>
-      <div class="lt-signal-card lt-signal-caution" style="margin-bottom:0">
-        <div class="lt-signal-badge lt-badge-caution">Trường hợp ngoại lệ quan trọng</div>
-        <div class="lt-signal-title">Phân kỳ – Tín hiệu cảnh báo</div>
-        <p style="font-size:0.8rem; color:var(--text-soft); margin-bottom:0">Có hai kịch bản phân kỳ cần nhận biết: (1) DXY↑ + US10Y↓ xảy ra khi khủng hoảng đẩy nhà đầu tư vào cả USD lẫn trái phiếu Mỹ cùng lúc; (2) DXY↓ + US10Y↑ xảy ra khi kỳ vọng lạm phát đẩy US10Y tăng trong khi USD suy yếu. Cả hai đều là trạng thái mâu thuẫn, tín hiệu không rõ ràng.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="lt-divider"></div>
-
-<!-- ══════════════════════════════════════════
-     PHẦN II – TƯƠNG QUAN TỪNG MÃ
-══════════════════════════════════════════ -->
-<div class="lt-section" id="correlation">
-  <div class="lt-section-header">
-    <span class="lt-section-num">Phần II</span>
-    <div>
-      <div class="lt-section-title">Tương Quan Từng Mã Giao Dịch</div>
-      <div class="lt-section-subtitle">Phân tích sâu cơ chế truyền dẫn của DXY và US10Y lên từng công cụ tài chính</div>
-    </div>
-  </div>
-
-  <!-- VÀNG -->
-  <div class="lt-instrument-card" id="gold">
-    <div class="lt-instrument-header">
-      <div>
-        <div class="lt-instrument-name">Vàng – XAU/USD</div>
-        <div class="lt-instrument-alias">Kim loại quý – Tài sản phòng ngừa lạm phát và trú ẩn an toàn</div>
-      </div>
-      <span class="lt-reliability-badge lt-rel-high">Độ tin cậy cao</span>
-    </div>
-    <div class="lt-instrument-body">
-      <div class="lt-corr-indicators">
-        <div class="lt-corr-indicator">
-          <div class="lt-corr-indicator-label">Tương quan với DXY</div>
-          <div class="lt-corr-indicator-value lt-neg-strong">Âm mạnh (−0,70 đến −0,85)</div>
-        </div>
-        <div class="lt-corr-indicator">
-          <div class="lt-corr-indicator-label">Tương quan với US10Y</div>
-          <div class="lt-corr-indicator-value lt-neg-strong">Âm mạnh (−0,60 đến −0,80)</div>
-        </div>
-      </div>
-
-      <div class="lt-response-grid">
-        <div class="lt-response-item lt-resp-red">
-          <span class="lt-response-label">DXY tăng</span>
-          <span class="lt-response-arrow">Vàng ↓↓</span>
-        </div>
-        <div class="lt-response-item lt-resp-green">
-          <span class="lt-response-label">DXY giảm</span>
-          <span class="lt-response-arrow">Vàng ↑↑</span>
-        </div>
-        <div class="lt-response-item lt-resp-red">
-          <span class="lt-response-label">US10Y tăng</span>
-          <span class="lt-response-arrow">Vàng ↓</span>
-        </div>
-        <div class="lt-response-item lt-resp-green">
-          <span class="lt-response-label">US10Y giảm</span>
-          <span class="lt-response-arrow">Vàng ↑</span>
-        </div>
-      </div>
-
-      <p><strong>Cơ chế tương quan với DXY:</strong> Vàng được định giá bằng đồng đô la Mỹ trên thị trường quốc tế. Khi USD mạnh lên (DXY tăng), vàng trở nên đắt hơn với người mua sử dụng các đồng tiền khác, làm giảm cầu toàn cầu và kéo giá vàng xuống. Ngược lại, khi USD yếu (DXY giảm), vàng trở nên rẻ hơn với phần còn lại của thế giới, kích cầu và đẩy giá tăng. Đây là cơ chế thuần túy về định giá.</p>
-
-      <p><strong>Cơ chế tương quan với US10Y:</strong> Vàng là tài sản không sinh lãi suất. Khi US10Y tăng, chi phí cơ hội của việc nắm giữ vàng (thay vì gửi tiền hoặc mua trái phiếu để hưởng lãi suất cao) tăng lên, khiến nhà đầu tư bán vàng để chuyển sang tài sản sinh lãi. Yếu tố quan trọng hơn chính là <strong>lãi suất thực</strong> – khi lãi suất thực âm (US10Y thấp hơn lạm phát kỳ vọng), vàng cực kỳ hấp dẫn vì trái phiếu không bảo toàn được sức mua.</p>
-
-      <div class="lt-highlight-box lt-box-gold">
-        <strong>Trường hợp ngoại lệ – Khủng hoảng hệ thống:</strong> Trong các cuộc khủng hoảng tài chính nghiêm trọng nhất (như năm 2008), cả vàng và USD đôi khi cùng tăng do nhà đầu tư tìm kiếm bất kỳ tài sản an toàn nào. Đây là tín hiệu cảnh báo khủng hoảng cực đoan, không phải là mâu thuẫn thông thường trong framework. Ngoài ra, các ngân hàng trung ương toàn cầu (đặc biệt là Trung Quốc, Ấn Độ, Nga) có thể mua vàng với quy mô lớn bất kể DXY/US10Y, tạo ra đáy hỗ trợ mạnh cho vàng trên tất cả các kịch bản.
-      </div>
-
-      <p><strong>Kết luận:</strong> Vàng là mã <em>hưởng ứng mạnh nhất và đáng tin cậy nhất</em> với cả DXY lẫn US10Y. Khi DXY↑ + US10Y↑ (đồng thuận áp lực), vàng chịu áp lực bán kép và thường giảm mạnh. Khi DXY↓ + US10Y↓ (đồng thuận hỗ trợ), vàng thường tăng rất mạnh và bền vững.</p>
-    </div>
-  </div>
-
-  <!-- BITCOIN -->
-  <div class="lt-instrument-card" id="btc">
-    <div class="lt-instrument-header">
-      <div>
-        <div class="lt-instrument-name">Bitcoin – BTC/USD</div>
-        <div class="lt-instrument-alias">Tiền điện tử – Tài sản rủi ro cao, nhạy cảm với thanh khoản toàn cầu</div>
-      </div>
-      <span class="lt-reliability-badge lt-rel-medium">Độ tin cậy trung bình</span>
-    </div>
-    <div class="lt-instrument-body">
-      <div class="lt-corr-indicators">
-        <div class="lt-corr-indicator">
-          <div class="lt-corr-indicator-label">Tương quan với DXY</div>
-          <div class="lt-corr-indicator-value lt-neg-mod">Âm trung bình (−0,50 đến −0,70)</div>
-        </div>
-        <div class="lt-corr-indicator">
-          <div class="lt-corr-indicator-label">Tương quan với US10Y</div>
-          <div class="lt-corr-indicator-value lt-neg-mod">Âm trung bình (−0,40 đến −0,60)</div>
-        </div>
-      </div>
-
-      <div class="lt-response-grid">
-        <div class="lt-response-item lt-resp-red">
-          <span class="lt-response-label">DXY tăng</span>
-          <span class="lt-response-arrow">BTC ↓↓</span>
-        </div>
-        <div class="lt-response-item lt-resp-green">
-          <span class="lt-response-label">DXY giảm</span>
-          <span class="lt-response-arrow">BTC ↑↑</span>
-        </div>
-        <div class="lt-response-item lt-resp-red">
-          <span class="lt-response-label">US10Y tăng</span>
-          <span class="lt-response-arrow">BTC ↓</span>
-        </div>
-        <div class="lt-response-item lt-resp-green">
-          <span class="lt-response-label">US10Y giảm</span>
-          <span class="lt-response-arrow">BTC ↑</span>
-        </div>
-      </div>
-
-      <p><strong>Cơ chế tương quan với DXY:</strong> Bitcoin ngày càng được xem như "vàng kỹ thuật số" và tài sản rủi ro cao đồng thời. Khi DXY tăng (môi trường thắt chặt, USD mạnh), dòng vốn rút khỏi tài sản rủi ro và Bitcoin chịu áp lực giảm. Khi DXY giảm (môi trường nới lỏng, thanh khoản dồi dào), dòng vốn chảy vào tài sản rủi ro và Bitcoin được hưởng lợi.</p>
-
-      <p><strong>Cơ chế tương quan với US10Y:</strong> Tương tự các tài sản rủi ro khác, khi US10Y tăng (chi phí vốn cao), nhà đầu tư cắt giảm phân bổ vào tài sản rủi ro cao như Bitcoin. Tuy nhiên, Bitcoin đặc biệt nhạy cảm với cung tiền toàn cầu (Global M2) – khi Fed thực hiện QE (in tiền), một phần dòng tiền đó chảy vào Bitcoin và khuếch đại đà tăng.</p>
-
-      <div class="lt-highlight-box lt-box-amber">
-        <strong>Yếu tố đặc thù của Bitcoin làm giảm độ tin cậy của framework:</strong> (1) Chu kỳ halving Bitcoin xảy ra khoảng 4 năm một lần, có thể tạo xu hướng tăng mạnh độc lập với DXY/US10Y; (2) Dòng vốn vào các Quỹ giao dịch hoán đổi Bitcoin (ETF) tạo ra cầu cơ cấu; (3) Tâm lý đặc thù của cộng đồng tiền điện tử và các yếu tố quy định pháp lý; (4) Rủi ro hệ thống crypto nội tại (sụp đổ sàn giao dịch, hack). Vì vậy, Bitcoin cần thêm xác nhận từ phân tích kỹ thuật trước khi vào lệnh.
-      </div>
-    </div>
-  </div>
-
-  <!-- NASDAQ -->
-  <div class="lt-instrument-card" id="nasdaq">
-    <div class="lt-instrument-header">
-      <div>
-        <div class="lt-instrument-name">NASDAQ 100 – NAS100</div>
-        <div class="lt-instrument-alias">Chỉ số công nghệ Mỹ – Nhạy cảm nhất với US10Y trong nhóm mã giao dịch</div>
-      </div>
-      <span class="lt-reliability-badge lt-rel-high">Độ tin cậy cao</span>
-    </div>
-    <div class="lt-instrument-body">
-      <div class="lt-corr-indicators">
-        <div class="lt-corr-indicator">
-          <div class="lt-corr-indicator-label">Tương quan với DXY</div>
-          <div class="lt-corr-indicator-value lt-neg-mod">Âm trung bình (−0,50 đến −0,65)</div>
-        </div>
-        <div class="lt-corr-indicator">
-          <div class="lt-corr-indicator-label">Tương quan với US10Y</div>
-          <div class="lt-corr-indicator-value lt-neg-strong">Âm rất mạnh (−0,75 đến −0,90)</div>
-        </div>
-      </div>
-
-      <div class="lt-response-grid">
-        <div class="lt-response-item lt-resp-red">
-          <span class="lt-response-label">DXY tăng</span>
-          <span class="lt-response-arrow">NASDAQ ↓</span>
-        </div>
-        <div class="lt-response-item lt-resp-green">
-          <span class="lt-response-label">DXY giảm</span>
-          <span class="lt-response-arrow">NASDAQ ↑</span>
-        </div>
-        <div class="lt-response-item lt-resp-red">
-          <span class="lt-response-label">US10Y tăng</span>
-          <span class="lt-response-arrow">NASDAQ ↓↓↓</span>
-        </div>
-        <div class="lt-response-item lt-resp-green">
-          <span class="lt-response-label">US10Y giảm</span>
-          <span class="lt-response-arrow">NASDAQ ↑↑↑</span>
-        </div>
-      </div>
-
-      <p><strong>Cơ chế tương quan với US10Y – Mô hình định giá DCF:</strong> Đây là mối quan hệ quan trọng nhất cần hiểu. Giá cổ phiếu công nghệ được tính bằng cách chiết khấu các dòng tiền tương lai về giá trị hiện tại (Discounted Cash Flow – DCF). Tỷ lệ chiết khấu sử dụng thường neo vào US10Y. Khi US10Y tăng, tỷ lệ chiết khấu tăng, làm giảm giá trị hiện tại của các dòng tiền tương lai – đặc biệt là các công ty tăng trưởng cao với phần lớn dòng tiền dự kiến ở nhiều năm sau. Đây là lý do NASDAQ nhạy cảm với US10Y hơn bất kỳ mã nào trong nhóm này.</p>
-
-      <p><strong>Cơ chế tương quan với DXY:</strong> Hầu hết các công ty trong NASDAQ 100 (Apple, Microsoft, Alphabet, Meta…) có doanh thu quốc tế lớn. Khi USD mạnh lên (DXY tăng), doanh thu từ nước ngoài khi quy về USD bị giảm về mặt kế toán, ảnh hưởng đến lợi nhuận báo cáo. Ngoài ra, môi trường DXY tăng thường đi kèm với thắt chặt thanh khoản, bất lợi cho định giá cổ phiếu.</p>
-
-      <div class="lt-highlight-box lt-box-blue">
-        <strong>Quan sát thực tiễn:</strong> Trong giai đoạn 2022–2023 khi Fed tăng lãi suất mạnh, US10Y tăng từ dưới 1,5% lên trên 5%, NASDAQ giảm hơn 30% chỉ trong năm 2022 – minh họa rõ nét sức mạnh của mối quan hệ này. Ngược lại, khi US10Y bắt đầu giảm vào cuối 2023 và Fed phát tín hiệu cắt giảm lãi suất, NASDAQ phục hồi mạnh mẽ trong năm 2024. Theo dõi US10Y là chìa khóa dự báo xu hướng NASDAQ.
-      </div>
-    </div>
-  </div>
-
-  <!-- JP225 -->
-  <div class="lt-instrument-card" id="jp225">
-    <div class="lt-instrument-header">
-      <div>
-        <div class="lt-instrument-name">Nikkei 225 – JP225</div>
-        <div class="lt-instrument-alias">Chỉ số chứng khoán Nhật Bản – Mã có tương quan phức tạp nhất trong nhóm</div>
-      </div>
-      <span class="lt-reliability-badge lt-rel-low">Cần thận trọng bổ sung</span>
-    </div>
-    <div class="lt-instrument-body">
-      <div class="lt-corr-indicators">
-        <div class="lt-corr-indicator">
-          <div class="lt-corr-indicator-label">Tương quan với DXY</div>
-          <div class="lt-corr-indicator-value lt-complex-val">Phức tạp – Hai chiều</div>
-        </div>
-        <div class="lt-corr-indicator">
-          <div class="lt-corr-indicator-label">Tương quan với US10Y</div>
-          <div class="lt-corr-indicator-value lt-neg-mod">Âm nhẹ (−0,30 đến −0,50)</div>
-        </div>
-      </div>
-
-      <div class="lt-response-grid">
-        <div class="lt-response-item lt-resp-amber">
-          <span class="lt-response-label">DXY tăng</span>
-          <span class="lt-response-arrow">JP225 ↑/↓?</span>
-        </div>
-        <div class="lt-response-item lt-resp-amber">
-          <span class="lt-response-label">DXY giảm</span>
-          <span class="lt-response-arrow">JP225 ↓/↑?</span>
-        </div>
-        <div class="lt-response-item lt-resp-red">
-          <span class="lt-response-label">US10Y tăng</span>
-          <span class="lt-response-arrow">JP225 ↓</span>
-        </div>
-        <div class="lt-response-item lt-resp-green">
-          <span class="lt-response-label">US10Y giảm</span>
-          <span class="lt-response-arrow">JP225 ↑ (có điều kiện)</span>
-        </div>
-      </div>
-
-      <p><strong>Yếu tố cốt lõi – Vai trò của tỷ giá USD/JPY:</strong> Để hiểu JP225, cần thêm một biến số thứ ba: tỷ giá Đô la Mỹ – Yên Nhật (USD/JPY). Nikkei 225 có mối quan hệ âm rất mạnh với đồng Yên – khi Yên Nhật yếu (USD/JPY tăng), Nikkei thường tăng; khi Yên Nhật mạnh (USD/JPY giảm), Nikkei thường giảm.</p>
-
-      <p><strong>Lý do cấu trúc:</strong> Nền kinh tế Nhật Bản phụ thuộc lớn vào xuất khẩu (Toyota, Sony, Panasonic…). Khi Yên yếu, hàng xuất khẩu Nhật Bản rẻ hơn trên thị trường quốc tế, giúp tăng doanh thu và lợi nhuận của các tập đoàn lớn, đẩy Nikkei lên. Đây là cơ chế ngược hoàn toàn so với cách DXY ảnh hưởng lên NASDAQ hay EURUSD.</p>
-
-      <div class="lt-highlight-box lt-box-amber">
-        <strong>Mâu thuẫn nội tại khi áp dụng framework DXY/US10Y cho JP225:</strong><br><br>
-        <strong>Kịch bản 1 – DXY↑ + US10Y↑ (Áp lực bán theo framework):</strong> DXY tăng kéo USD/JPY tăng → Yên Nhật yếu → Điều này thực ra có lợi cho Nikkei thông qua kênh xuất khẩu. Tuy nhiên, US10Y tăng tạo áp lực lên chi phí vốn toàn cầu, ảnh hưởng tiêu cực. Tác động thuần phụ thuộc vào mức độ tương đối của hai yếu tố – không cho tín hiệu rõ ràng.<br><br>
-        <strong>Kịch bản 2 – DXY↓ + US10Y↓ (Mua theo framework):</strong> DXY giảm kéo USD/JPY giảm → Yên Nhật mạnh lên → Điều này có hại cho nhà xuất khẩu Nhật Bản và có thể kéo Nikkei giảm, đi ngược lại tín hiệu mua từ framework. US10Y giảm hỗ trợ equities, nhưng Yên mạnh có thể triệt tiêu lợi ích này.<br><br>
-        <strong>Khuyến nghị thực tiễn:</strong> Với JP225, luôn kiểm tra thêm xu hướng USD/JPY và chính sách của Ngân hàng Trung ương Nhật Bản (Ngân hàng Nhật Bản – BoJ) trước khi vào lệnh. JP225 là mã có <em>độ bất định cao nhất</em> trong framework này.
-      </div>
-    </div>
-  </div>
-
-  <!-- EURUSD -->
-  <div class="lt-instrument-card" id="eurusd">
-    <div class="lt-instrument-header">
-      <div>
-        <div class="lt-instrument-name">EURUSD</div>
-        <div class="lt-instrument-alias">Cặp ngoại tệ phổ biến nhất – Phản chiếu gần như trực tiếp của DXY</div>
-      </div>
-      <span class="lt-reliability-badge lt-rel-high">Độ tin cậy rất cao</span>
-    </div>
-    <div class="lt-instrument-body">
-      <div class="lt-corr-indicators">
-        <div class="lt-corr-indicator">
-          <div class="lt-corr-indicator-label">Tương quan với DXY</div>
-          <div class="lt-corr-indicator-value lt-neg-strong">Âm rất mạnh (−0,90 đến −0,97)</div>
-        </div>
-        <div class="lt-corr-indicator">
-          <div class="lt-corr-indicator-label">Tương quan với US10Y</div>
-          <div class="lt-corr-indicator-value lt-neg-strong">Âm mạnh (−0,55 đến −0,70)</div>
-        </div>
-      </div>
-
-      <div class="lt-response-grid">
-        <div class="lt-response-item lt-resp-red">
-          <span class="lt-response-label">DXY tăng</span>
-          <span class="lt-response-arrow">EURUSD ↓↓↓</span>
-        </div>
-        <div class="lt-response-item lt-resp-green">
-          <span class="lt-response-label">DXY giảm</span>
-          <span class="lt-response-arrow">EURUSD ↑↑↑</span>
-        </div>
-        <div class="lt-response-item lt-resp-red">
-          <span class="lt-response-label">US10Y tăng</span>
-          <span class="lt-response-arrow">EURUSD ↓↓</span>
-        </div>
-        <div class="lt-response-item lt-resp-green">
-          <span class="lt-response-label">US10Y giảm</span>
-          <span class="lt-response-arrow">EURUSD ↑↑</span>
-        </div>
-      </div>
-
-      <p><strong>Cơ chế tương quan với DXY – Mối quan hệ cấu trúc:</strong> Do đồng Euro chiếm 57,6% tỷ trọng trong rổ DXY, EURUSD và DXY gần như là ảnh phản chiếu của nhau. Khi DXY tăng 1%, EURUSD thường giảm khoảng 1,2–1,5% (vì EUR được tính ngược chiều trong DXY). Đây là mối quan hệ mạnh nhất và ổn định nhất trong toàn bộ nhóm 5 mã.</p>
-
-      <p><strong>Cơ chế tương quan với US10Y – Chênh lệch lãi suất:</strong> Khi US10Y tăng, chênh lệch lãi suất giữa Mỹ và Eurozone mở rộng theo hướng có lợi cho USD. Nhà đầu tư bán Euro để mua đô la hưởng lãi suất cao hơn, đẩy EURUSD giảm. Yếu tố quan trọng hơn là chênh lệch giữa US10Y và lãi suất trái phiếu Đức kỳ hạn 10 năm (DE10Y) – khi US10Y tăng mà DE10Y không tăng theo, chênh lệch mở rộng và EURUSD giảm mạnh hơn.</p>
-
-      <div class="lt-highlight-box lt-box-green">
-        <strong>Kết luận:</strong> EURUSD là mã <em>sạch nhất</em> để giao dịch theo framework DXY/US10Y. Hưởng ứng cực kỳ đáng tin cậy và ổn định. Khi DXY↑ + US10Y↑, bán EURUSD là lựa chọn tự tin nhất. Khi DXY↓ + US10Y↓, mua EURUSD là lựa chọn tự tin nhất. Ít nhiễu nội tại nhất trong số các mã giao dịch.
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="lt-divider"></div>
-
-<!-- ══════════════════════════════════════════
-     PHẦN III – MA TRẬN TƯƠNG QUAN
-══════════════════════════════════════════ -->
-<div class="lt-section" id="matrix">
-  <div class="lt-section-header">
-    <span class="lt-section-num">Phần III</span>
-    <div>
-      <div class="lt-section-title">Ma Trận Tương Quan Tổng Hợp</div>
-      <div class="lt-section-subtitle">Tóm tắt phản ứng của từng mã theo từng kịch bản vĩ mô</div>
-    </div>
-  </div>
-
-  <div class="lt-corr-table-wrap">
-    <table class="lt-corr-table">
-      <thead>
-        <tr>
-          <th>Mã giao dịch</th>
-          <th>DXY tăng → Mã</th>
-          <th>DXY giảm → Mã</th>
-          <th>US10Y tăng → Mã</th>
-          <th>US10Y giảm → Mã</th>
-          <th>Đồng thuận áp lực</th>
-          <th>Đồng thuận hỗ trợ</th>
-          <th>Độ tin cậy</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="lt-instrument-cell">Vàng</td>
-          <td><span class="lt-cell-strong-neg">Giảm ↓↓</span></td>
-          <td><span class="lt-cell-strong-pos">Tăng ↑↑</span></td>
-          <td><span class="lt-cell-strong-neg">Giảm ↓</span></td>
-          <td><span class="lt-cell-strong-pos">Tăng ↑</span></td>
-          <td><span class="lt-cell-strong-neg">Bán mạnh</span></td>
-          <td><span class="lt-cell-strong-pos">Mua mạnh</span></td>
-          <td>⭐⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-          <td class="lt-instrument-cell">EURUSD</td>
-          <td><span class="lt-cell-strong-neg">Giảm ↓↓↓</span></td>
-          <td><span class="lt-cell-strong-pos">Tăng ↑↑↑</span></td>
-          <td><span class="lt-cell-strong-neg">Giảm ↓↓</span></td>
-          <td><span class="lt-cell-strong-pos">Tăng ↑↑</span></td>
-          <td><span class="lt-cell-strong-neg">Bán mạnh</span></td>
-          <td><span class="lt-cell-strong-pos">Mua mạnh</span></td>
-          <td>⭐⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-          <td class="lt-instrument-cell">NASDAQ</td>
-          <td><span class="lt-cell-mod-neg">Giảm ↓</span></td>
-          <td><span class="lt-cell-mod-pos">Tăng ↑</span></td>
-          <td><span class="lt-cell-strong-neg">Giảm ↓↓↓</span></td>
-          <td><span class="lt-cell-strong-pos">Tăng ↑↑↑</span></td>
-          <td><span class="lt-cell-strong-neg">Bán</span></td>
-          <td><span class="lt-cell-strong-pos">Mua</span></td>
-          <td>⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-          <td class="lt-instrument-cell">Bitcoin</td>
-          <td><span class="lt-cell-strong-neg">Giảm ↓↓</span></td>
-          <td><span class="lt-cell-strong-pos">Tăng ↑↑</span></td>
-          <td><span class="lt-cell-mod-neg">Giảm ↓</span></td>
-          <td><span class="lt-cell-mod-pos">Tăng ↑</span></td>
-          <td><span class="lt-cell-mod-neg">Bán (có nhiễu)</span></td>
-          <td><span class="lt-cell-mod-pos">Mua (có nhiễu)</span></td>
-          <td>⭐⭐⭐</td>
-        </tr>
-        <tr>
-          <td class="lt-instrument-cell">JP225</td>
-          <td><span class="lt-cell-complex">Hai chiều ↑↓</span></td>
-          <td><span class="lt-cell-complex">Hai chiều ↑↓</span></td>
-          <td><span class="lt-cell-mod-neg">Giảm ↓</span></td>
-          <td><span class="lt-cell-mod-pos">Tăng ↑ (có điều kiện)</span></td>
-          <td><span class="lt-cell-complex">Thận trọng cao</span></td>
-          <td><span class="lt-cell-complex">Thận trọng cao</span></td>
-          <td>⭐⭐</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <p style="font-size:0.75rem; color:var(--text-muted)">Lưu ý: Hệ số tương quan thay đổi theo từng giai đoạn thị trường và điều kiện vĩ mô. Các giá trị trên phản ánh xu hướng trung bình dài hạn, không cố định tuyệt đối. Độ tin cậy được đánh giá dựa trên tính ổn định và khả năng dự đoán của mối quan hệ tương quan.</p>
-
-  <div class="lt-highlight-box lt-box-blue">
-    <strong>Thứ tự ưu tiên giao dịch theo framework:</strong> Khi có tín hiệu đồng thuận rõ ràng, ưu tiên giao dịch theo thứ tự: (1) EURUSD và Vàng – hưởng ứng đáng tin cậy nhất với cả DXY lẫn US10Y; (2) NASDAQ – đặc biệt mạnh khi US10Y là yếu tố dẫn dắt chính; (3) Bitcoin – cần thêm xác nhận kỹ thuật; (4) JP225 – chỉ giao dịch khi có phân tích bổ sung về USD/JPY và chính sách BoJ.
-  </div>
-</div>
-
-<div class="lt-divider"></div>
-
-<!-- ══════════════════════════════════════════
-     PHẦN IV – BA TRẠNG THÁI THỊ TRƯỜNG
-══════════════════════════════════════════ -->
-<div class="lt-section" id="states">
-  <div class="lt-section-header">
-    <span class="lt-section-num">Phần IV</span>
-    <div>
-      <div class="lt-section-title">Ba Trạng Thái Thị Trường</div>
-      <div class="lt-section-subtitle">Nhận diện bối cảnh vĩ mô để quyết định giao dịch hay đứng ngoài</div>
-    </div>
-  </div>
-
-  <div class="lt-state-matrix">
-    <div class="lt-state-item lt-st-sell">
-      <div class="lt-state-arrows">DXY ↑ + US10Y ↑</div>
-      <div class="lt-state-name">Đồng thuận áp lực</div>
-      <div class="lt-state-action">→ BÁN</div>
-      <div class="lt-state-desc">Môi trường hawkish – thắt chặt tiền tệ, USD mạnh, lãi suất cao</div>
-    </div>
-    <div class="lt-state-item lt-st-buy">
-      <div class="lt-state-arrows">DXY ↓ + US10Y ↓</div>
-      <div class="lt-state-name">Đồng thuận hỗ trợ</div>
-      <div class="lt-state-action">→ MUA</div>
-      <div class="lt-state-desc">Môi trường dovish – nới lỏng tiền tệ, USD yếu, thanh khoản dồi dào</div>
-    </div>
-    <div class="lt-state-item lt-st-wait">
-      <div class="lt-state-arrows">DXY ↑↓ ≠ US10Y</div>
-      <div class="lt-state-name">Mâu thuẫn tín hiệu</div>
-      <div class="lt-state-action">→ ĐỨNG NGOÀI</div>
-      <div class="lt-state-desc">Tín hiệu hỗn hợp – thị trường thiếu định hướng rõ ràng</div>
-    </div>
-  </div>
-
-  <!-- TRẠNG THÁI 1 – BÁN -->
-  <div class="lt-subsection" id="state-sell">
-    <div class="lt-subsection-title">Trạng Thái 1: Đồng Thuận Áp Lực – DXY Tăng và US10Y Tăng</div>
-
-    <div class="lt-signal-card lt-signal-sell">
-      <div class="lt-signal-badge lt-badge-sell">⬇ Tín hiệu bán</div>
-      <div class="lt-signal-title">Môi trường hawkish – Fed thắt chặt, USD mạnh, chi phí vốn tăng</div>
-      <div class="lt-signal-trigger">
-        <div class="lt-trigger-item lt-trigger-up">DXY ↑ Tăng</div>
-        <div class="lt-trigger-item lt-trigger-up">US10Y ↑ Tăng</div>
-      </div>
-      <p style="font-size:0.83rem; color:var(--text-soft); margin-bottom:0.75rem">Đây là môi trường rõ ràng nhất để thực hiện giao dịch bán. Cả hai yếu tố vĩ mô cùng tạo áp lực lên tài sản rủi ro và các mã giao dịch trong danh sách. Áp lực kép từ USD mạnh và chi phí vốn cao cộng hưởng tạo nên xu hướng giảm bền vững.</p>
-    </div>
-
-    <p><strong>Bối cảnh kinh tế điển hình:</strong> Fed đang trong chu kỳ tăng lãi suất, chỉ số lạm phát (CPI, PCE) cao hơn kỳ vọng, thị trường lao động mạnh (NFP vượt dự báo), hoặc Fed phát biểu theo hướng "higher for longer" (giữ lãi suất cao trong thời gian dài). Đây là môi trường mà tài sản rủi ro bị định giá lại với bội số thấp hơn.</p>
-
-    <div class="lt-card">
-      <div class="lt-card-title" style="color:var(--red)">Dấu hiệu nhận biết trên biểu đồ</div>
-      <ul class="lt-styled-list">
-        <li><strong>DXY:</strong> Vượt kháng cự quan trọng, tạo đỉnh cao mới, đường trung bình động 20 ngày cắt lên trên đường 50 ngày, khối lượng giao dịch tăng trong ngày tăng.</li>
-        <li><strong>US10Y:</strong> Phá vỡ vùng kháng cự quan trọng (ví dụ: vượt các ngưỡng tâm lý 4,0%; 4,5%; 5,0%), tạo đỉnh cao mới trong xu hướng tăng dài hạn, đường cong lãi suất không đảo chiều.</li>
-        <li><strong>Các mã giao dịch:</strong> Vàng và EURUSD phá vỡ vùng hỗ trợ, NASDAQ giảm mạnh đặc biệt khi có báo cáo kinh tế quan trọng, Bitcoin mất các ngưỡng hỗ trợ tâm lý.</li>
-        <li><strong>Chỉ số phụ trợ:</strong> Chỉ số biến động VIX tăng trên 20, lãi suất thực (TIPS yield) tăng lên vùng dương và tiếp tục tăng.</li>
-      </ul>
-    </div>
-
-    <div class="lt-card">
-      <div class="lt-card-title" style="color:var(--red)">Thứ tự ưu tiên giao dịch bán</div>
-      <div class="lt-ranking-list">
-        <div class="lt-ranking-item">
-          <div class="lt-ranking-num">01</div>
-          <div class="lt-ranking-name">EURUSD</div>
-          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:98%;background:linear-gradient(90deg,#F06868,#F04848)"></div></div>
-          <div class="lt-ranking-label" style="color:var(--red)">Hưởng ứng cao nhất</div>
-        </div>
-        <div class="lt-ranking-item">
-          <div class="lt-ranking-num">02</div>
-          <div class="lt-ranking-name">Vàng</div>
-          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:90%;background:linear-gradient(90deg,#F06868,#F04848)"></div></div>
-          <div class="lt-ranking-label" style="color:var(--red)">Hưởng ứng rất cao</div>
-        </div>
-        <div class="lt-ranking-item">
-          <div class="lt-ranking-num">03</div>
-          <div class="lt-ranking-name">NASDAQ</div>
-          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:75%;background:linear-gradient(90deg,#F08868,#F06848)"></div></div>
-          <div class="lt-ranking-label" style="color:#F0A468">Hưởng ứng cao</div>
-        </div>
-        <div class="lt-ranking-item">
-          <div class="lt-ranking-num">04</div>
-          <div class="lt-ranking-name">Bitcoin</div>
-          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:55%;background:linear-gradient(90deg,#F0A068,#F09048)"></div></div>
-          <div class="lt-ranking-label" style="color:#F0B068">Hưởng ứng trung bình</div>
-        </div>
-        <div class="lt-ranking-item">
-          <div class="lt-ranking-num">05</div>
-          <div class="lt-ranking-name">JP225</div>
-          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:30%;background:linear-gradient(90deg,var(--amber),#F09030)"></div></div>
-          <div class="lt-ranking-label" style="color:var(--amber)">Thận trọng – phức tạp</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TRẠNG THÁI 2 – MUA -->
-  <div class="lt-subsection" id="state-buy">
-    <div class="lt-subsection-title">Trạng Thái 2: Đồng Thuận Hỗ Trợ – DXY Giảm và US10Y Giảm</div>
-
-    <div class="lt-signal-card lt-signal-buy">
-      <div class="lt-signal-badge lt-badge-buy">⬆ Tín hiệu mua</div>
-      <div class="lt-signal-title">Môi trường dovish – Fed nới lỏng, USD suy yếu, thanh khoản dồi dào</div>
-      <div class="lt-signal-trigger">
-        <div class="lt-trigger-item lt-trigger-down">DXY ↓ Giảm</div>
-        <div class="lt-trigger-item lt-trigger-down">US10Y ↓ Giảm</div>
-      </div>
-      <p style="font-size:0.83rem; color:var(--text-soft); margin-bottom:0.75rem">Đây là môi trường lý tưởng nhất cho giao dịch mua tất cả các mã trong nhóm (ngoại trừ JP225 cần thêm xác nhận). Áp lực từ USD yếu và chi phí vốn thấp hơn cùng nhau khuếch đại xu hướng tăng của tài sản rủi ro.</p>
-    </div>
-
-    <p><strong>Bối cảnh kinh tế điển hình:</strong> Fed đang trong chu kỳ cắt giảm lãi suất hoặc phát tín hiệu dovish pivot (chuyển hướng nới lỏng), chỉ số lạm phát giảm mạnh về vùng mục tiêu, thị trường lao động hạ nhiệt (NFP yếu hơn kỳ vọng), hoặc kinh tế Mỹ có dấu hiệu suy giảm đủ để buộc Fed hành động. Đây là môi trường dòng tiền đổ vào tài sản rủi ro.</p>
-
-    <div class="lt-card">
-      <div class="lt-card-title" style="color:var(--green)">Dấu hiệu nhận biết trên biểu đồ</div>
-      <ul class="lt-styled-list">
-        <li><strong>DXY:</strong> Phá vỡ vùng hỗ trợ quan trọng, tạo đáy thấp mới, đường trung bình động 20 ngày cắt xuống dưới đường 50 ngày, momentum (RSI, MACD) suy yếu rõ ràng.</li>
-        <li><strong>US10Y:</strong> Giảm mạnh, phá vỡ vùng hỗ trợ, đặc biệt khi xuất phát từ mức lãi suất cao (trên 4,5%) với catalyst rõ ràng như CPI thấp hơn kỳ vọng hoặc Fed meeting dovish.</li>
-        <li><strong>Các mã giao dịch:</strong> Vàng phá vỡ kháng cự để lập đỉnh mới, EURUSD phá vỡ vùng kháng cự quan trọng, NASDAQ tăng mạnh đặc biệt trong giai đoạn sau báo cáo kinh tế yếu.</li>
-        <li><strong>Chỉ số phụ trợ:</strong> VIX giảm dưới 15, lãi suất thực giảm về vùng âm hoặc giảm rõ từ vùng cao, chênh lệch tín dụng (credit spreads) thu hẹp.</li>
-      </ul>
-    </div>
-
-    <div class="lt-card">
-      <div class="lt-card-title" style="color:var(--green)">Thứ tự ưu tiên giao dịch mua</div>
-      <div class="lt-ranking-list">
-        <div class="lt-ranking-item">
-          <div class="lt-ranking-num">01</div>
-          <div class="lt-ranking-name">EURUSD</div>
-          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:98%;background:linear-gradient(90deg,#3ECFB2,#2EB89C)"></div></div>
-          <div class="lt-ranking-label" style="color:var(--green)">Hưởng ứng cao nhất</div>
-        </div>
-        <div class="lt-ranking-item">
-          <div class="lt-ranking-num">02</div>
-          <div class="lt-ranking-name">Vàng</div>
-          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:92%;background:linear-gradient(90deg,#3ECFB2,#2EB89C)"></div></div>
-          <div class="lt-ranking-label" style="color:var(--green)">Hưởng ứng rất cao</div>
-        </div>
-        <div class="lt-ranking-item">
-          <div class="lt-ranking-num">03</div>
-          <div class="lt-ranking-name">NASDAQ</div>
-          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:80%;background:linear-gradient(90deg,#3ECFB2,#2EB89C)"></div></div>
-          <div class="lt-ranking-label" style="color:var(--green)">Hưởng ứng cao</div>
-        </div>
-        <div class="lt-ranking-item">
-          <div class="lt-ranking-num">04</div>
-          <div class="lt-ranking-name">Bitcoin</div>
-          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:60%;background:linear-gradient(90deg,#F0B429,#D89E1A)"></div></div>
-          <div class="lt-ranking-label" style="color:var(--gold)">Hưởng ứng tốt</div>
-        </div>
-        <div class="lt-ranking-item">
-          <div class="lt-ranking-num">05</div>
-          <div class="lt-ranking-name">JP225</div>
-          <div class="lt-ranking-bar-wrap"><div class="lt-ranking-bar" style="width:25%;background:linear-gradient(90deg,var(--amber),#D09030)"></div></div>
-          <div class="lt-ranking-label" style="color:var(--amber)">Thận trọng – Yên có thể mạnh</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- TRẠNG THÁI 3 – MÂU THUẪN -->
-  <div class="lt-subsection" id="state-wait">
-    <div class="lt-subsection-title">Trạng Thái 3: Mâu Thuẫn Tín Hiệu – DXY và US10Y Đi Ngược Chiều</div>
-
-    <div class="lt-signal-card lt-signal-caution">
-      <div class="lt-signal-badge lt-badge-caution">⚠ Đứng ngoài thị trường</div>
-      <div class="lt-signal-title">Tín hiệu hỗn hợp – Tránh giao dịch, bảo toàn vốn</div>
-      <div class="lt-signal-trigger">
-        <div class="lt-trigger-item lt-trigger-up">DXY ↑ Tăng</div>
-        <div class="lt-trigger-item lt-trigger-down" style="border-color:rgba(62,207,178,0.25); background:rgba(62,207,178,0.07); color:var(--green)">US10Y ↓ Giảm</div>
-      </div>
-      <p style="font-size:0.83rem; color:var(--text-soft); margin-bottom:0">Hoặc kịch bản ngược lại: DXY↓ + US10Y↑. Trong cả hai trường hợp, các yếu tố vĩ mô mâu thuẫn tạo ra tín hiệu không nhất quán. Các mã khác nhau sẽ phản ứng theo các chiều khác nhau, xác suất thành công của giao dịch giảm đáng kể.</p>
-    </div>
-
-    <div class="lt-card-grid">
-      <div class="lt-card" style="margin-bottom:0">
-        <div class="lt-card-title" style="color:var(--amber)">Kịch bản A: DXY↑ + US10Y↓</div>
-        <p style="font-size:0.8rem; margin-bottom:0.75rem"><strong>Nguyên nhân điển hình:</strong> Khủng hoảng toàn cầu nghiêm trọng khiến nhà đầu tư chạy vào cả USD và trái phiếu Mỹ đồng thời như hai tài sản trú ẩn an toàn song song. Hoặc: nền kinh tế Eurozone và các khu vực khác suy yếu mạnh hơn Mỹ, đẩy DXY lên trong khi Fed nghi ngờ tăng trưởng và US10Y giảm.</p>
-        <ul class="lt-styled-list lt-warn" style="margin-bottom:0">
-          <li>EURUSD giảm (theo DXY) nhưng Vàng có thể tăng (theo US10Y và risk-off)</li>
-          <li>NASDAQ khó dự đoán vì US10Y giảm hỗ trợ nhưng risk-off nói chung gây áp lực</li>
-          <li>Tín hiệu chéo làm giảm xác suất thành công của mọi giao dịch theo chiều nào cũng vậy</li>
-        </ul>
-      </div>
-      <div class="lt-card" style="margin-bottom:0">
-        <div class="lt-card-title" style="color:var(--amber)">Kịch bản B: DXY↓ + US10Y↑</div>
-        <p style="font-size:0.8rem; margin-bottom:0.75rem"><strong>Nguyên nhân điển hình:</strong> Kỳ vọng lạm phát tăng đẩy US10Y lên (thị trường lo lạm phát) trong khi kinh tế Mỹ yếu hơn các nước khác làm USD mất giá. Hoặc: các ngân hàng trung ương khác tăng lãi suất mạnh (ECB, BoE) làm đồng tiền của họ mạnh lên, kéo DXY xuống, trong khi trái phiếu Mỹ bị bán.</p>
-        <ul class="lt-styled-list lt-warn" style="margin-bottom:0">
-          <li>Vàng được hỗ trợ từ DXY↓ nhưng chịu áp lực từ US10Y↑ – kết quả không rõ ràng</li>
-          <li>EURUSD tăng (DXY↓) nhưng chênh lệch lãi suất có thể kéo xuống</li>
-          <li>NASDAQ đặc biệt khó – DXY↓ trung tính nhưng US10Y↑ là áp lực bán rõ ràng</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="lt-highlight-box lt-box-amber" style="margin-top:1rem">
-      <strong>Nguyên tắc vàng của giai đoạn mâu thuẫn:</strong> Không có giao dịch tốt nào trong môi trường tín hiệu hỗn hợp. Chi phí cơ hội của việc đứng ngoài thị trường là hoàn toàn có thể chấp nhận – nó nhỏ hơn nhiều so với rủi ro của việc giao dịch trong môi trường không có định hướng vĩ mô rõ ràng. Hãy coi giai đoạn mâu thuẫn là thời gian để quan sát, phân tích, và chờ đợi sự hội tụ trở lại.
-    </div>
-  </div>
-</div>
-
-<div class="lt-divider"></div>
-
-<!-- ══════════════════════════════════════════
-     PHẦN V – MỨC ĐỘ HƯỞNG ỨNG
-══════════════════════════════════════════ -->
-<div class="lt-section" id="response">
-  <div class="lt-section-header">
-    <span class="lt-section-num">Phần V</span>
-    <div>
-      <div class="lt-section-title">Đánh Giá Mức Độ Hưởng Ứng Xu Hướng</div>
-      <div class="lt-section-subtitle">Nhận biết mã đang hưởng ứng mạnh để tập trung giao dịch và mã đang kém hưởng ứng để hạn chế</div>
-    </div>
-  </div>
-
-  <p>Ngay cả khi DXY và US10Y đã đồng thuận rõ ràng, các mã giao dịch không phải lúc nào cũng hưởng ứng xu hướng chung với cùng mức độ. Việc nhận biết mã nào đang hưởng ứng mạnh và mã nào đang kém hưởng ứng giúp tập trung nguồn vốn vào những giao dịch có xác suất thành công cao nhất và tránh những mã đang bị ảnh hưởng bởi yếu tố riêng biệt làm triệt tiêu xu hướng chung.</p>
-
-  <div class="lt-subsection">
-    <div class="lt-subsection-title">Dấu Hiệu Nhận Biết Mã Đang Hưởng Ứng Mạnh</div>
-
-    <div class="lt-card">
-      <div class="lt-card-title" style="color:var(--green)">Các dấu hiệu xác nhận hưởng ứng mạnh</div>
-      <ul class="lt-styled-list lt-check">
-        <li><strong>Phá vỡ đồng bộ:</strong> Mã phá vỡ vùng kháng cự (hoặc hỗ trợ) quan trọng cùng thời điểm DXY và US10Y phá vỡ các ngưỡng của chúng – sự đồng bộ về thời gian là tín hiệu xác nhận mạnh.</li>
-        <li><strong>Khối lượng giao dịch tăng theo chiều thuận:</strong> Trong các phiên tăng (hoặc giảm theo xu hướng), khối lượng giao dịch (volume) cao hơn đáng kể so với các phiên điều chỉnh ngược chiều. Điều này cho thấy sự tham gia thực sự của dòng tiền lớn.</li>
-        <li><strong>Biên độ di chuyển rõ ràng:</strong> Mỗi phiên theo chiều xu hướng có biên độ lớn hơn trung bình, trong khi các phiên pullback (điều chỉnh) có biên độ nhỏ và nhanh chóng kết thúc.</li>
-        <li><strong>Cấu trúc sóng giá lành mạnh:</strong> Đỉnh sau cao hơn đỉnh trước và đáy sau cao hơn đáy trước (trong xu hướng tăng), hoặc ngược lại trong xu hướng giảm – không có dấu hiệu đảo chiều cấu trúc.</li>
-        <li><strong>Vượt trội so với các mã khác:</strong> Khi toàn nhóm đang giảm theo xu hướng bán, mã hưởng ứng mạnh nhất sẽ giảm nhiều nhất. Khi so sánh phần trăm biến động, mã hưởng ứng mạnh luôn dẫn đầu xu hướng.</li>
-        <li><strong>Tín hiệu từ momentum:</strong> Chỉ báo RSI trong trạng thái oversold (quá bán) nhưng không phục hồi mạnh (trong xu hướng giảm), hoặc overbought (quá mua) nhưng duy trì lâu (trong xu hướng tăng) – điều này cho thấy momentum mạnh.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="lt-subsection">
-    <div class="lt-subsection-title">Dấu Hiệu Cảnh Báo Mã Đang Kém Hưởng Ứng – Hạn Chế Giao Dịch</div>
-
-    <div class="lt-card">
-      <div class="lt-card-title" style="color:var(--red)">Các dấu hiệu kém hưởng ứng – Tín hiệu cảnh báo</div>
-      <ul class="lt-styled-list lt-cross">
-        <li><strong>Phân kỳ giá (Price Divergence):</strong> DXY đã giảm rõ ràng nhưng Vàng hoặc EURUSD không tăng tương ứng – hoặc ngược lại. Đây là tín hiệu rõ nhất cho thấy mã đó đang bị ảnh hưởng bởi yếu tố riêng biệt triệt tiêu xu hướng chung.</li>
-        <li><strong>Không phá vỡ được vùng kháng cự hoặc hỗ trợ quan trọng:</strong> Trong khi DXY và US10Y đã di chuyển đủ mạnh để kỳ vọng mã giao dịch phá vỡ, nhưng mã đó vẫn mắc kẹt trong vùng tích lũy – đây là tín hiệu yếu.</li>
-        <li><strong>Phục hồi ngược chiều quá mạnh và nhanh:</strong> Điều chỉnh ngược chiều xu hướng có biên độ lớn và diễn ra nhanh, cho thấy áp lực ngược chiều đang rất lớn từ yếu tố nội tại của mã đó.</li>
-        <li><strong>Khối lượng giao dịch ngược chiều:</strong> Trong các phiên theo chiều xu hướng, khối lượng thấp; trong các phiên ngược chiều, khối lượng lại cao – cho thấy dòng tiền thông minh đang giao dịch ngược lại xu hướng vĩ mô.</li>
-        <li><strong>Biến động cao nhưng không có định hướng (Whipsaw):</strong> Giá dao động mạnh lên rồi xuống mà không tạo ra xu hướng rõ ràng – dấu hiệu của việc mã đang bị giằng xé giữa các yếu tố vĩ mô và nội tại mâu thuẫn.</li>
-      </ul>
-    </div>
-
-    <div class="lt-highlight-box lt-box-red">
-      <strong>Nguyên nhân phổ biến khiến mã kém hưởng ứng:</strong> Vàng – mua bán của các ngân hàng trung ương quy mô lớn, hoặc căng thẳng địa chính trị tạo cầu tài sản trú ẩn. Bitcoin – halving chu kỳ, dòng vốn ETF, sự kiện trong hệ sinh thái crypto. JP225 – chính sách BoJ (đặc biệt là Kiểm soát đường cong lãi suất – YCC), can thiệp tỷ giá. EURUSD – quyết định lãi suất bất ngờ của Ngân hàng Trung ương Châu Âu. NASDAQ – kết quả kinh doanh mùa báo cáo lợi nhuận, sự kiện riêng của các cổ phiếu vốn hóa lớn.
-    </div>
-  </div>
-
-  <div class="lt-subsection">
-    <div class="lt-subsection-title">Phương Pháp So Sánh Tương Đối Giữa Các Mã</div>
-    <p>Khi DXY và US10Y đồng thuận, hãy so sánh mức biến động phần trăm của tất cả các mã trong cùng khung thời gian để xác định mã hưởng ứng mạnh nhất:</p>
-
-    <div class="lt-card">
-      <div class="lt-card-title" style="color:var(--blue)">Quy trình đánh giá tương đối</div>
-      <ul class="lt-styled-list">
-        <li><strong>Bước 1 – Thiết lập baseline:</strong> Khi xác định DXY và US10Y đã di chuyển rõ ràng (ví dụ: DXY giảm 1,5% trong tuần), ghi nhận đây là "sự kiện vĩ mô" cần theo dõi phản ứng.</li>
-        <li><strong>Bước 2 – Đo biến động từng mã:</strong> Tính phần trăm biến động của Vàng, Bitcoin, NASDAQ, JP225, EURUSD trong cùng khoảng thời gian DXY/US10Y di chuyển. Mã nào có biến động lớn nhất theo chiều kỳ vọng là mã hưởng ứng mạnh nhất.</li>
-        <li><strong>Bước 3 – So sánh với lịch sử:</strong> So sánh mức biến động hiện tại với mức biến động trung bình của mã đó trong các sự kiện vĩ mô tương tự trong quá khứ. Nếu biến động hiện tại cao hơn trung bình lịch sử – mã đang "hưởng ứng mạnh hơn bình thường".</li>
-        <li><strong>Bước 4 – Xếp hạng và quyết định:</strong> Tập trung vốn vào 1–2 mã hưởng ứng mạnh nhất. Hạn chế hoặc bỏ qua các mã hưởng ứng yếu hoặc có dấu hiệu phân kỳ.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="lt-divider"></div>
-
-<!-- ══════════════════════════════════════════
-     PHẦN VI – QUẢN LÝ TỶ TRỌNG
-══════════════════════════════════════════ -->
-<div class="lt-section" id="position">
-  <div class="lt-section-header">
-    <span class="lt-section-num">Phần VI</span>
-    <div>
-      <div class="lt-section-title">Quản Lý Tỷ Trọng Giao Dịch</div>
-      <div class="lt-section-subtitle">Khi nào tăng tỷ trọng, khi nào giảm và khi nào đứng hoàn toàn ngoài thị trường</div>
-    </div>
-  </div>
-
-  <p>Quản lý tỷ trọng (position sizing) trong framework này không chỉ là quản lý rủi ro thông thường – nó là cách để khuếch đại lợi nhuận khi bối cảnh vĩ mô cực kỳ thuận lợi và bảo toàn vốn khi bối cảnh không rõ ràng. Khái niệm cốt lõi là <em>tỷ trọng tỉ lệ thuận với mức độ đồng thuận vĩ mô</em>.</p>
-
-  <div class="lt-weight-grid">
-    <div class="lt-weight-card lt-wl-0">
-      <div class="lt-weight-num">0×</div>
-      <div class="lt-weight-label">Đứng ngoài</div>
-      <div class="lt-weight-desc">DXY và US10Y mâu thuẫn. Không có giao dịch.</div>
-    </div>
-    <div class="lt-weight-card lt-wl-1">
-      <div class="lt-weight-num">1×</div>
-      <div class="lt-weight-label">Tỷ trọng cơ bản</div>
-      <div class="lt-weight-desc">Một trong hai đồng thuận. Giao dịch thận trọng.</div>
-    </div>
-    <div class="lt-weight-card lt-wl-2">
-      <div class="lt-weight-num">1,5×</div>
-      <div class="lt-weight-label">Tăng nhẹ</div>
-      <div class="lt-weight-desc">Cả hai đồng thuận, kỹ thuật xác nhận, mã hưởng ứng tốt.</div>
-    </div>
-    <div class="lt-weight-card lt-wl-3">
-      <div class="lt-weight-num">2×</div>
-      <div class="lt-weight-label">Tăng mạnh</div>
-      <div class="lt-weight-desc">Đồng thuận mạnh + catalyst vĩ mô + đa khung thời gian thuận chiều.</div>
-    </div>
-  </div>
-
-  <div class="lt-subsection">
-    <div class="lt-subsection-title">Điều Kiện Đầy Đủ Để Tăng Tỷ Trọng Lên Mức Tối Đa</div>
-
-    <div class="lt-card">
-      <div class="lt-card-title" style="color:var(--blue)">Năm điều kiện đồng thời phải thỏa mãn</div>
-      <ul class="lt-styled-list lt-check">
-        <li><strong>Điều kiện 1 – Đồng thuận vĩ mô mạnh:</strong> Cả DXY lẫn US10Y đều đã phá vỡ các ngưỡng kỹ thuật quan trọng (không phải chỉ di chuyển nhẹ), và cả hai đang trong xu hướng được xác nhận, không phải dao động ngắn hạn.</li>
-        <li><strong>Điều kiện 2 – Catalyst vĩ mô rõ ràng:</strong> Có sự kiện cụ thể thúc đẩy xu hướng – CPI, NFP, Fed meeting, phát biểu của Chủ tịch Fed, GDP – và kết quả thực tế rõ ràng hơn kỳ vọng theo một chiều dứt khoát.</li>
-        <li><strong>Điều kiện 3 – Mã giao dịch hưởng ứng mạnh:</strong> Mã bạn chọn để giao dịch đang có dấu hiệu hưởng ứng mạnh (phá vỡ đồng bộ, khối lượng lớn theo chiều thuận), không có dấu hiệu phân kỳ hay kém hưởng ứng.</li>
-        <li><strong>Điều kiện 4 – Đa khung thời gian đồng thuận:</strong> Xu hướng nhất quán trên ít nhất ba khung thời gian (ví dụ: Weekly, Daily, H4 cùng theo một chiều). Không vào lệnh khi khung thời gian cao đang phân kỳ với khung thời gian giao dịch.</li>
-        <li><strong>Điều kiện 5 – Vị trí vào lệnh hợp lý:</strong> Đang ở đầu hoặc giữa xu hướng (không phải cuối xu hướng sau một chuỗi di chuyển dài mà không có điều chỉnh). Điểm vào lệnh có tỷ lệ lợi nhuận trên rủi ro (Risk:Reward) ít nhất là 2:1.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="lt-subsection">
-    <div class="lt-subsection-title">Điều Kiện Giảm Tỷ Trọng Hoặc Đứng Ngoài Hoàn Toàn</div>
-
-    <div class="lt-card">
-      <div class="lt-card-title" style="color:var(--amber)">Các tình huống cần giảm tỷ trọng</div>
-      <ul class="lt-styled-list lt-warn">
-        <li><strong>DXY và US10Y bắt đầu phân kỳ:</strong> Khi một trong hai bắt đầu đổi hướng trong khi cái kia vẫn duy trì – đây là tín hiệu sớm rằng xu hướng chung có thể đang thay đổi. Giảm ngay tỷ trọng về mức cơ bản.</li>
-        <li><strong>Mã giao dịch không còn hưởng ứng:</strong> Nếu xu hướng DXY/US10Y vẫn tiếp diễn nhưng mã giao dịch bắt đầu phân kỳ hoặc không đạt kỳ vọng về biên độ di chuyển – đây là tín hiệu có yếu tố nội tại đang can thiệp.</li>
-        <li><strong>Sự kiện rủi ro lớn sắp diễn ra:</strong> Ngay trước các sự kiện rủi ro cao (Fed meeting với kỳ vọng bất định, báo cáo CPI biến động lớn), giảm tỷ trọng để tránh rủi ro từ phản ứng trái chiều với kỳ vọng.</li>
-        <li><strong>Chỉ số biến động VIX tăng đột biến:</strong> Khi VIX vượt 25–30, biến động cực cao làm các mô hình tương quan trở nên kém đáng tin cậy hơn và rủi ro tổn thất trong ngắn hạn tăng cao.</li>
-        <li><strong>Đã ở cuối xu hướng dài:</strong> Sau một xu hướng kéo dài nhiều tuần mà không có điều chỉnh đáng kể, xác suất pullback (điều chỉnh) tăng cao. Giảm tỷ trọng hoặc chờ điểm vào lệnh mới sau điều chỉnh.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="lt-highlight-box lt-box-blue">
-    <strong>Nguyên tắc quản lý vốn nền tảng:</strong> Tổng rủi ro trên tất cả các vị thế đang mở không nên vượt quá 5–10% tổng vốn giao dịch. Ngay cả khi bối cảnh vĩ mô cực kỳ thuận lợi (tỷ trọng 2×), tăng tỷ trọng là tăng quy mô lệnh trên mỗi giao dịch, không phải tăng mức rủi ro tổng thể vượt ngưỡng an toàn. Framework vĩ mô giúp xác định chiều giao dịch, nhưng quản lý rủi ro nghiêm ngặt mới là nền tảng bảo vệ vốn dài hạn.
-  </div>
-</div>
-
-<div class="lt-divider"></div>
-
-<!-- ══════════════════════════════════════════
-     PHẦN VII – ƯU ĐIỂM VÀ HẠN CHẾ
-══════════════════════════════════════════ -->
-<div class="lt-section" id="procon">
-  <div class="lt-section-header">
-    <span class="lt-section-num">Phần VII</span>
-    <div>
-      <div class="lt-section-title">Ưu Điểm và Hạn Chế Của Phương Pháp</div>
-      <div class="lt-section-subtitle">Đánh giá khách quan để sử dụng framework này hiệu quả và an toàn</div>
-    </div>
-  </div>
-
-  <div class="lt-procon-grid">
-    <div class="lt-procon-card lt-pros">
-      <div class="lt-procon-title">⬆ Ưu điểm của phương pháp</div>
-      <div class="lt-procon-item">
-        <div class="lt-procon-item-icon">✓</div>
-        <div><strong>Nền tảng vĩ mô bền vững:</strong> Phương pháp dựa trên cơ chế kinh tế được nghiên cứu và kiểm chứng, không phụ thuộc vào chỉ báo kỹ thuật đơn thuần – những chỉ báo có thể bị nhiễu ngắn hạn.</div>
-      </div>
-      <div class="lt-procon-item">
-        <div class="lt-procon-item-icon">✓</div>
-        <div><strong>Lọc tín hiệu nhiễu hiệu quả:</strong> Cơ chế "đứng ngoài khi mâu thuẫn" tự động loại bỏ phần lớn các giao dịch kém chất lượng, giảm tần suất giao dịch nhưng tăng đáng kể tỷ lệ thắng.</div>
-      </div>
-      <div class="lt-procon-item">
-        <div class="lt-procon-item-icon">✓</div>
-        <div><strong>Hiệu quả cao với nguồn lực phân tích tiết kiệm:</strong> Một bộ phân tích DXY/US10Y có thể đồng thời định hướng chiều giao dịch cho cả năm mã, thay vì phân tích từng mã độc lập.</div>
-      </div>
-      <div class="lt-procon-item">
-        <div class="lt-procon-item-icon">✓</div>
-        <div><strong>Tạo kỷ luật giao dịch rõ ràng:</strong> Có quy tắc minh bạch về khi nào giao dịch (đồng thuận), khi nào không (mâu thuẫn), và khi nào tăng tỷ trọng – loại bỏ sự thiên vị cảm xúc.</div>
-      </div>
-      <div class="lt-procon-item">
-        <div class="lt-procon-item-icon">✓</div>
-        <div><strong>Kết hợp tốt với phân tích kỹ thuật:</strong> DXY/US10Y đóng vai trò bộ lọc vĩ mô định hướng chiều, phân tích kỹ thuật xác định điểm vào/thoát cụ thể – hai phương pháp bổ sung cho nhau hoàn hảo.</div>
-      </div>
-      <div class="lt-procon-item">
-        <div class="lt-procon-item-icon">✓</div>
-        <div><strong>Phù hợp với xu hướng dài và bền:</strong> Tốt nhất với swing trading và position trading trên khung thời gian ngày và tuần, nơi xu hướng vĩ mô có ảnh hưởng quyết định nhất.</div>
-      </div>
-    </div>
-
-    <div class="lt-procon-card lt-cons">
-      <div class="lt-procon-title">⬇ Hạn chế cần nhận thức rõ</div>
-      <div class="lt-procon-item">
-        <div class="lt-procon-item-icon">✗</div>
-        <div><strong>Độ trễ (Lag) vào lệnh:</strong> Phương pháp dựa trên xác nhận xu hướng, không dự đoán trước, nên thường vào lệnh sau khi xu hướng đã được xác nhận – bỏ lỡ phần đầu tiên (thường sinh lợi nhất) của xu hướng.</div>
-      </div>
-      <div class="lt-procon-item">
-        <div class="lt-procon-item-icon">✗</div>
-        <div><strong>Giai đoạn mâu thuẫn kéo dài:</strong> Thị trường có thể ở trạng thái DXY/US10Y phân kỳ trong nhiều tuần, khiến nhà giao dịch phải đứng ngoài trong thời gian dài – đòi hỏi sự kiên nhẫn cao.</div>
-      </div>
-      <div class="lt-procon-item">
-        <div class="lt-procon-item-icon">✗</div>
-        <div><strong>JP225 là điểm yếu của hệ thống:</strong> Nikkei có tương quan phức tạp và đôi khi ngược chiều với DXY – framework không đủ mạnh để áp dụng trực tiếp mà không có phân tích bổ sung về USD/JPY và chính sách BoJ.</div>
-      </div>
-      <div class="lt-procon-item">
-        <div class="lt-procon-item-icon">✗</div>
-        <div><strong>Không cung cấp điểm vào và thoát lệnh:</strong> Framework chỉ cho biết chiều giao dịch và mức độ tự tin – không cung cấp điểm vào lệnh, điểm dừng lỗ, hay mục tiêu lợi nhuận cụ thể. Cần kết hợp bắt buộc với phân tích kỹ thuật.</div>
-      </div>
-      <div class="lt-procon-item">
-        <div class="lt-procon-item-icon">✗</div>
-        <div><strong>Rủi ro sự kiện bất ngờ (Black Swan):</strong> Các sự kiện ngoài dự báo (khủng hoảng ngân hàng, chiến tranh đột ngột, thảm họa tự nhiên quy mô lớn) có thể đảo chiều xu hướng tức thời bất chấp sự đồng thuận DXY/US10Y trước đó.</div>
-      </div>
-      <div class="lt-procon-item">
-        <div class="lt-procon-item-icon">✗</div>
-        <div><strong>Hiệu quả giảm trong môi trường sideways:</strong> Khi DXY và US10Y dao động trong biên độ hẹp mà không có xu hướng rõ ràng, framework không tạo ra tín hiệu hành động và nhà giao dịch phải đứng ngoài trong thời gian dài.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="lt-subsection">
-    <div class="lt-subsection-title">Các Chỉ Số Bổ Sung Để Củng Cố Framework</div>
-
-    <p>Để khắc phục một số hạn chế và tăng độ chắc chắn của tín hiệu giao dịch, có thể bổ sung các chỉ số sau vào quy trình phân tích:</p>
-
-    <div class="lt-card-grid">
-      <div class="lt-card" style="margin-bottom:0">
-        <div class="lt-card-title" style="color:var(--blue)">Chỉ số bổ sung nên theo dõi</div>
-        <ul class="lt-styled-list">
-          <li><strong>Cung tiền toàn cầu M2 (Global M2):</strong> Khi M2 toàn cầu tăng, thanh khoản dư thừa hỗ trợ tất cả tài sản rủi ro – đặc biệt hữu ích để xác nhận giao dịch mua Bitcoin và NASDAQ.</li>
-          <li><strong>Chỉ số biến động VIX:</strong> VIX dưới 15 (thị trường bình tĩnh, xác nhận risk-on), VIX trên 25 (thị trường sợ hãi, thận trọng cao), VIX trên 35 (biến động cực đoan, hạn chế mọi giao dịch).</li>
-          <li><strong>Chênh lệch US10Y và DE10Y:</strong> Chênh lệch mở rộng có lợi cho USD → xác nhận bán EURUSD. Thu hẹp → xác nhận mua EURUSD. Đây là công cụ tinh chỉnh quan trọng cho giao dịch EURUSD.</li>
-          <li><strong>Báo cáo vị thế của nhà đầu tư tổ chức (COT Report):</strong> Theo dõi vị thế của các quỹ đầu tư lớn trên hợp đồng tương lai DXY và vàng – khi positioning cực đoan (quá mua hoặc quá bán), rủi ro đảo chiều tăng cao.</li>
-        </ul>
-      </div>
-      <div class="lt-card" style="margin-bottom:0">
-        <div class="lt-card-title" style="color:var(--gold)">Lịch sự kiện kinh tế trọng yếu</div>
-        <ul class="lt-styled-list">
-          <li><strong>Họp Ủy ban Thị trường Mở Liên bang (FOMC):</strong> 8 lần mỗi năm – quyết định lãi suất và tuyên bố chính sách là catalyst quan trọng nhất với US10Y và DXY.</li>
-          <li><strong>Báo cáo Chỉ số Giá Tiêu Dùng (CPI):</strong> Hàng tháng – mức lạm phát cao hơn kỳ vọng → US10Y↑, DXY↑; thấp hơn kỳ vọng → US10Y↓, DXY↓.</li>
-          <li><strong>Báo cáo Việc Làm Phi Nông Nghiệp (NFP):</strong> Đầu tháng – dữ liệu lao động mạnh hỗ trợ Fed hawkish, dữ liệu yếu mở đường cho dovish pivot.</li>
-          <li><strong>Cuộc họp Ngân hàng Trung ương Châu Âu (ECB):</strong> Quan trọng cho EURUSD – quyết định lãi suất ECB có thể đi ngược lại tín hiệu từ DXY/US10Y.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="lt-divider"></div>
-
-<!-- ══════════════════════════════════════════
-     PHẦN VIII – KẾT LUẬN
-══════════════════════════════════════════ -->
-<div class="lt-section" id="conclusion">
-  <div class="lt-section-header">
-    <span class="lt-section-num">Phần VIII</span>
-    <div>
-      <div class="lt-section-title">Kết Luận và Nguyên Tắc Cốt Lõi</div>
-      <div class="lt-section-subtitle">Tổng hợp triết học giao dịch và các nguyên tắc không thể thỏa hiệp</div>
-    </div>
-  </div>
-
-  <p>Framework giao dịch dựa trên tương quan DXY và US10Y là một phương pháp tiếp cận từ trên xuống (top-down approach) – bắt đầu từ bức tranh kinh tế vĩ mô lớn nhất trước khi đi vào phân tích từng mã giao dịch cụ thể. Đây là cách tiếp cận được phần lớn các nhà giao dịch chuyên nghiệp và quỹ đầu tư lớn sử dụng, vì nó đặt giao dịch trong bối cảnh kinh tế thực sự thay vì chỉ dựa vào các mô hình toán học thuần túy.</p>
-
-  <p>Sức mạnh thực sự của phương pháp này không nằm ở khả năng đúng 100% – không có phương pháp nào làm được điều đó – mà nằm ở khả năng <em>tập trung nguồn vốn và năng lượng phân tích vào những thời điểm thị trường cung cấp xác suất cao nhất</em>, và kiên nhẫn đứng ngoài trong những thời điểm tín hiệu không đủ rõ ràng.</p>
-
-  <div class="lt-principle-grid">
-    <div class="lt-principle-card">
-      <div class="lt-principle-icon">🎯</div>
-      <div class="lt-principle-name">Nguyên tắc Đồng Thuận</div>
-      <div class="lt-principle-desc">Chỉ giao dịch khi DXY và US10Y đồng thuận xu hướng rõ ràng. Một yếu tố ủng hộ và một yếu tố phản đối là lý do để đứng ngoài, không phải để giao dịch thử nghiệm.</div>
-    </div>
-    <div class="lt-principle-card">
-      <div class="lt-principle-icon">📊</div>
-      <div class="lt-principle-name">Nguyên tắc Ưu Tiên</div>
-      <div class="lt-principle-desc">Khi đồng thuận, ưu tiên giao dịch EURUSD và Vàng trước – hai mã có tương quan đáng tin cậy nhất. Chỉ thêm Bitcoin và NASDAQ khi có thêm xác nhận kỹ thuật. Thận trọng đặc biệt với JP225.</div>
-    </div>
-    <div class="lt-principle-card">
-      <div class="lt-principle-icon">⚖️</div>
-      <div class="lt-principle-name">Nguyên tắc Tỷ Lệ</div>
-      <div class="lt-principle-desc">Tỷ trọng giao dịch tỉ lệ thuận với mức độ đồng thuận và số lượng điều kiện xác nhận được thỏa mãn. Đồng thuận mạnh kèm catalyst rõ ràng và kỹ thuật xác nhận mới xứng đáng tỷ trọng tối đa.</div>
-    </div>
-    <div class="lt-principle-card">
-      <div class="lt-principle-icon">🛡️</div>
-      <div class="lt-principle-name">Nguyên tắc Bảo Toàn</div>
-      <div class="lt-principle-desc">Trong giai đoạn mâu thuẫn, đứng ngoài không phải thất bại – đó là sự bảo toàn vốn thông minh. Vốn được bảo toàn trong giai đoạn không thuận lợi chính là nguồn lực cho cơ hội tiếp theo.</div>
-    </div>
-    <div class="lt-principle-card">
-      <div class="lt-principle-icon">🔍</div>
-      <div class="lt-principle-name">Nguyên tắc Hưởng Ứng</div>
-      <div class="lt-principle-desc">Theo dõi liên tục mức độ hưởng ứng của từng mã. Nếu một mã không hưởng ứng như kỳ vọng dù DXY/US10Y đã di chuyển đủ mạnh, đó là tín hiệu có yếu tố nội tại đang can thiệp – không cố vào lệnh.</div>
-    </div>
-    <div class="lt-principle-card">
-      <div class="lt-principle-icon">🔗</div>
-      <div class="lt-principle-name">Nguyên tắc Bổ Sung</div>
-      <div class="lt-principle-desc">Framework vĩ mô không thay thế phân tích kỹ thuật – nó định hướng chiều giao dịch. Điểm vào lệnh, dừng lỗ, và mục tiêu lợi nhuận cụ thể cần được xác định bằng phân tích kỹ thuật bổ sung.</div>
-    </div>
-  </div>
-
-  <div class="lt-highlight-box lt-box-blue">
-    <strong>Triết học cốt lõi của phương pháp:</strong> Thị trường tài chính là hệ thống phức tạp bị dẫn dắt bởi dòng vốn toàn cầu. DXY và US10Y là hai trong số những lực lượng vĩ mô mạnh nhất định hướng dòng vốn đó. Khi bạn hiểu chiều của dòng vốn lớn, bạn không cần phải thông minh hơn thị trường – bạn chỉ cần đủ kiên nhẫn để chờ đợi cơ hội khi dòng vốn đó đang rõ ràng hỗ trợ vị thế của bạn, và đủ kỷ luật để đứng ngoài khi bức tranh còn chưa rõ ràng.
-  </div>
-
-  <div class="lt-card" style="margin-top:1.5rem">
-    <div class="lt-card-title" style="color:var(--text)">Tóm tắt hành động thực tiễn theo từng bước</div>
-    <ul class="lt-styled-list">
-      <li><strong>Bước 1 – Phân tích DXY:</strong> Xác định xu hướng DXY trên khung Weekly và Daily. DXY đang tăng, giảm, hay sideway?</li>
-      <li><strong>Bước 2 – Phân tích US10Y:</strong> Xác định xu hướng US10Y. Đang tăng, giảm, hay dao động ngang?</li>
-      <li><strong>Bước 3 – Xác định trạng thái:</strong> Đồng thuận tăng → chuẩn bị bán. Đồng thuận giảm → chuẩn bị mua. Mâu thuẫn → đứng ngoài, dừng lại ở đây.</li>
-      <li><strong>Bước 4 – Chọn mã:</strong> Ưu tiên EURUSD, Vàng. Thêm NASDAQ nếu US10Y là yếu tố dẫn dắt chính. Cân nhắc Bitcoin. Thận trọng với JP225.</li>
-      <li><strong>Bước 5 – Đánh giá hưởng ứng:</strong> Kiểm tra từng mã đã chọn đang hưởng ứng xu hướng hay có dấu hiệu phân kỳ. Loại bỏ mã kém hưởng ứng.</li>
-      <li><strong>Bước 6 – Vào lệnh bằng kỹ thuật:</strong> Dùng phân tích kỹ thuật (hỗ trợ/kháng cự, mô hình giá, chỉ báo) để chọn điểm vào lệnh cụ thể, đặt dừng lỗ, và mục tiêu lợi nhuận.</li>
-      <li><strong>Bước 7 – Quản lý tỷ trọng:</strong> Cân nhắc số điều kiện đồng thuận đã thỏa mãn để xác định tỷ trọng phù hợp.</li>
-      <li><strong>Bước 8 – Theo dõi liên tục:</strong> Theo dõi DXY và US10Y hàng ngày. Nếu bắt đầu phân kỳ hoặc đổi hướng, giảm tỷ trọng hoặc xem xét đóng vị thế.</li>
-    </ul>
-  </div>
-</div>
-
-</div><!-- /content -->
-
-<div class="lt-page-footer">
-  <div style="margin-bottom:0.5rem; color:var(--text-soft); font-size:0.75rem; font-family:Inter,sans-serif; font-weight:500">Tài liệu lý thuyết giao dịch – Phương pháp tương quan DXY &amp; US10Y</div>
-  Tài liệu này được xây dựng cho mục đích nghiên cứu và tham khảo lý thuyết giao dịch. Giao dịch tài chính đòn bẩy (Forex, CFD, tiền điện tử) có rủi ro mất vốn cao. Không có phương pháp nào đảm bảo lợi nhuận. Nhà giao dịch cần tự chịu trách nhiệm về các quyết định giao dịch của mình.
-</div>
-
-</div><!-- /main -->
-
-                        </div>
+                <div class="news-list">
+                    <div class="news-card" style="text-align:center; padding: 3rem 2rem;">
+                        <p style="font-size:3rem; margin-bottom:1rem;">📚</p>
+                        <h3 class="news-heading" style="margin-bottom:0.5rem;">Đang xây dựng</h3>
+                        <p style="color:var(--text-muted,#888); font-size:0.95rem;">Thư viện tài liệu, sách và nghiên cứu sẽ sớm ra mắt.</p>
                     </div>
                 </div>
             </div>
