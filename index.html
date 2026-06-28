@@ -20,6 +20,7 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body class="theme-bull preload"> <!-- Default to Bull Theme; preload suppresses transitions on first render -->
     <!-- Background Glow Elements -->
@@ -2157,6 +2158,18 @@
                     <h3 class="section-title" style="margin-top: 1.5rem;"><i class="fa-solid fa-square-rss"></i> Bài viết mới nhất</h3>
                     
                     <div class="news-list">
+                        <a href="/hang-hoa/luoc-su-dau-mo" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-oil-well"></i> Năng lượng</span>
+                                <span class="news-time">Lược sử vĩ đại</span>
+                            </div>
+                            <h3 class="news-heading">Dầu Mỏ — Vàng Đen Của Nền Văn Minh: Một Lược Sử Toàn Diện</h3>
+                            <p class="news-excerpt">Lịch sử khai thác, cuộc chiến giành giật quyền lực và tác động sâu sắc của dầu mỏ đến kinh tế - chính trị toàn cầu.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc hồ sơ</span>
+                            </div>
+                        </a>
+
                         <!-- Post 1: Tien Si Dong -->
                         <a href="/hang-hoa/tien-si-dong" class="news-card clickable-card">
 
@@ -2189,6 +2202,1891 @@
 
                 <!-- Commodity Article View (Full article content container) -->
                 <div id="commodity-article-view" class="commodity-view">
+
+<div id="article-oil-panel" class="commodity-article-panel oil-body">
+    <style>
+#article-oil-panel {
+
+  
+  #article-oil-panel{
+    --bg:#15110d;
+    --bg-card:#1e1812;
+    --bg-card-2:#241c14;
+    --ink:#ece2d0;
+    --ink-soft:#bfb29c;
+    --ink-dim:#8a7c69;
+    --gold:#d9a24b;
+    --rust:#bd5b33;
+    --petrol:#5b9090;
+    --line:#3a2f24;
+  }
+
+  *{ box-sizing:border-box; }
+
+  #article-oil-panel.oil-html { scroll-behavior:smooth; }
+
+  #article-oil-panel.oil-body {
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Literata', Georgia, serif;
+    font-size:18px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:700;
+    line-height:1.15;
+    margin:0;
+  }
+
+  .mono{ font-family:'JetBrains Mono', monospace; }
+
+  a{ color:var(--gold); text-decoration:none; border-bottom:1px solid rgba(217,162,75,0.35); }
+  a:hover{ border-bottom-color:var(--gold); }
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    padding:5rem 1.5rem 4rem;
+    text-align:center;
+    background:
+      radial-gradient(ellipse at 50% -10%, rgba(217,162,75,0.18), transparent 55%),
+      linear-gradient(180deg, #0d0a07 0%, #15110d 70%);
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(115deg, rgba(217,162,75,0.05) 0px, rgba(217,162,75,0.05) 1px, transparent 1px, transparent 90px);
+    pointer-events:none;
+  }
+  .hero-eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.78rem;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    color:var(--petrol);
+    margin-bottom:1.4rem;
+    position:relative; z-index:1;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 7vw, 5rem);
+    font-weight:900;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+    position:relative; z-index:1;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--gold);
+    font-weight:600;
+  }
+  .hero-sub{
+    max-width:620px;
+    margin:1.6rem auto 0;
+    color:var(--ink-soft);
+    font-size:1.1rem;
+    line-height:1.7;
+    position:relative; z-index:1;
+  }
+  .hero-meta{
+    margin-top:2.2rem;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.75rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+    position:relative; z-index:1;
+  }
+
+  /* ============ LAYOUT ============ */
+  main{
+    max-width:740px;
+    margin:0 auto;
+    padding:0 1.5rem 2rem;
+  }
+
+  /* ============ TOC ============ */
+  .toc{
+    margin:3.5rem 0;
+    border:1px solid var(--line);
+    border-radius:4px;
+    background:var(--bg-card);
+    overflow:hidden;
+  }
+  .toc-head{
+    padding:1.1rem 1.4rem;
+    border-bottom:1px solid var(--line);
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--petrol);
+  }
+  .toc ol{
+    list-style:none;
+    margin:0; padding:0;
+    counter-reset: toc;
+  }
+  .toc li{
+    counter-increment: toc;
+    display:flex;
+    align-items:baseline;
+    gap:1rem;
+    padding:0.7rem 1.4rem;
+    border-bottom:1px solid var(--line);
+    font-size:0.95rem;
+  }
+  .toc li:last-child{ border-bottom:none; }
+  .toc li::before{
+    content: counter(toc, decimal-leading-zero);
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.8rem;
+    color:var(--gold);
+    flex-shrink:0;
+    width:1.6em;
+  }
+  .toc a{
+    color:var(--ink);
+    border-bottom:1px dotted var(--ink-dim);
+    flex:1;
+  }
+  .toc a:hover{ color:var(--gold); border-bottom-color:var(--gold); }
+  .toc-tag{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.7rem;
+    color:var(--ink-dim);
+    white-space:nowrap;
+  }
+
+  /* ============ STRATA DIVIDER / CHAPTER HEAD ============ */
+  .strata{
+    display:flex;
+    height:22px;
+    border-radius:2px;
+    overflow:hidden;
+    margin-bottom:1.6rem;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.25);
+  }
+  .strata span{ display:block; height:100%; }
+
+  .chapter{
+    margin-top:5.5rem;
+  }
+  .chapter-eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.75rem;
+    letter-spacing:0.3em;
+    text-transform:uppercase;
+    color:var(--petrol);
+    margin-bottom:0.6rem;
+  }
+  .chapter h2{
+    font-size:clamp(1.7rem, 5vw, 2.5rem);
+    color:var(--ink);
+    margin-bottom:0.3rem;
+  }
+  .chapter-dek{
+    color:var(--ink-soft);
+    font-style:italic;
+    font-size:1.05rem;
+    margin:0.7rem 0 2rem;
+    padding-left:1rem;
+    border-left:2px solid var(--rust);
+  }
+
+  .chapter h3{
+    font-size:1.25rem;
+    color:var(--gold);
+    margin:2.4rem 0 0.8rem;
+  }
+
+  .chapter p{ margin:0 0 1.15rem; color:var(--ink); }
+  .chapter p.lead{
+    font-size:1.12rem;
+    color:var(--ink);
+  }
+  .chapter strong{ color:var(--gold); font-weight:600; }
+
+  .chapter ul, .chapter ol{
+    margin:0 0 1.2rem;
+    padding-left:1.4rem;
+  }
+  .chapter li{ margin-bottom:0.55rem; }
+
+  .pull{
+    margin:2rem 0;
+    padding:1.2rem 1.4rem;
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:4px;
+    font-size:0.98rem;
+    color:var(--ink-soft);
+  }
+  .pull b{ color:var(--gold); font-weight:600; }
+  .pull .pull-label{
+    display:block;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.7rem;
+    letter-spacing:0.25em;
+    text-transform:uppercase;
+    color:var(--rust);
+    margin-bottom:0.5rem;
+  }
+
+  /* ============ TIMELINE ============ */
+  .timeline{ margin:1.5rem 0 2rem; }
+  .tl-item{
+    display:grid;
+    grid-template-columns:108px 1fr;
+    gap:1.2rem;
+    padding:1.1rem 0;
+    border-top:1px solid var(--line);
+  }
+  .tl-item:last-child{ border-bottom:1px solid var(--line); }
+  .tl-year{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.85rem;
+    color:var(--gold);
+    padding-top:0.15rem;
+  }
+  .tl-body h4{
+    font-family:'Fraunces', Georgia, serif;
+    font-size:1.05rem;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:0.35rem;
+  }
+  .tl-body p{ margin:0; font-size:0.97rem; color:var(--ink-soft); }
+
+  /* ============ TABLE ============ */
+  .tbl-wrap{ overflow-x:auto; margin:1.5rem 0 2rem; border:1px solid var(--line); border-radius:4px; }
+  table{ width:100%; border-collapse:collapse; font-size:0.92rem; min-width:560px; }
+  th,td{ padding:0.7rem 0.9rem; text-align:left; border-bottom:1px solid var(--line); }
+  th{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.7rem;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    color:var(--petrol);
+    background:var(--bg-card);
+  }
+  tr:last-child td{ border-bottom:none; }
+  td.num{ font-family:'JetBrains Mono', monospace; color:var(--gold); }
+
+  /* ============ FOOTER ============ */
+  footer{
+    margin-top:6rem;
+    padding:2.5rem 1.5rem 3rem;
+    border-top:1px solid var(--line);
+    text-align:center;
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.75rem;
+    letter-spacing:0.15em;
+    color:var(--ink-dim);
+    text-transform:uppercase;
+  }
+
+  @media (max-width:600px){
+    #article-oil-panel.oil-body { font-size:16.5px; }
+    .tl-item{ grid-template-columns:1fr; gap:0.3rem; }
+    .tl-year{ color:var(--gold); }
+  }
+
+}
+</style>
+    <div style="padding: 16px 20px; background: #15110d;">
+        <button onclick="openCommodityArticle('')" style="background: transparent; border: 1px solid rgba(217,162,75,0.5); color: #d9a24b; padding: 7px 16px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.05em; border-radius: 4px;">
+            &#8592; Quay lại danh sách
+        </button>
+    </div>
+    
+
+<header class="hero">
+  <div class="hero-eyebrow">Một lược sử toàn diện · từ đá mẹ đến trật tự thế giới</div>
+  <h1>Dầu Mỏ —<br><em>Vàng Đen</em> Của Nền Văn Minh</h1>
+  <p class="hero-sub">
+    Trước khi trở thành thứ định hình các cuộc chiến, các đồng tiền và cả khí hậu của hành tinh,
+    dầu mỏ chỉ là một dòng chất lỏng sệt, có mùi, rỉ ra từ khe đá — thứ mà con người cổ đại
+    dùng để trám thuyền và dán gạch. Bài viết này tổng hợp toàn bộ hành trình của dầu mỏ:
+    từ quá trình hình thành trong lòng đất qua hàng trăm triệu năm, những lần đầu tiên con người
+    chạm vào và sử dụng nó, các giai đoạn phát triển của một ngành công nghiệp đã viết lại bản đồ
+    quyền lực toàn cầu, cho đến những biến động mới nhất của năm 2026.
+  </p>
+  <div class="hero-meta">Cập nhật đến tháng 6 năm 2026</div>
+</header>
+
+<main>
+
+  <nav class="toc">
+    <div class="toc-head">Mục lục — Các lớp của lược sử</div>
+    <ol>
+      <li><a href="#c1">Nguồn gốc hình thành dầu mỏ trong tự nhiên</a><span class="toc-tag">Địa chất</span></li>
+      <li><a href="#c2">Những lần đầu tiên con người phát hiện và sử dụng dầu mỏ</a><span class="toc-tag">Cổ đại → 1859</span></li>
+      <li><a href="#c3">Các giai đoạn phát triển của công nghiệp dầu mỏ</a><span class="toc-tag">1859 → nay</span></li>
+      <li><a href="#c4">Những nhân vật và sự kiện làm nên lịch sử dầu mỏ</a><span class="toc-tag">Con người</span></li>
+      <li><a href="#c5">Dầu mỏ, chiến tranh và trật tự thế giới</a><span class="toc-tag">Địa chính trị</span></li>
+      <li><a href="#c6">Bản đồ dầu mỏ thế giới — nơi nhiều, nơi ít và vì sao</a><span class="toc-tag">Phân bố</span></li>
+      <li><a href="#c7">Các loại dầu mỏ và sự khác biệt về chất lượng</a><span class="toc-tag">Phân loại</span></li>
+      <li><a href="#c8">Petrodollar — sự thật phía sau "đồng đô la dầu mỏ"</a><span class="toc-tag">Tiền tệ</span></li>
+      <li><a href="#c9">Ngành dầu mỏ hôm nay và con đường phía trước</a><span class="toc-tag">2026</span></li>
+      <li><a href="#c10">Dầu mỏ trong đời sống và kinh tế</a><span class="toc-tag">Ý nghĩa</span></li>
+      <li><a href="#c11">Cái giá của vàng đen — tác động đến tự nhiên</a><span class="toc-tag">Môi trường</span></li>
+      <li><a href="#ket">Lời kết</a><span class="toc-tag">Tổng kết</span></li>
+    </ol>
+  </nav>
+
+  <!-- ================= CHAPTER 1 ================= -->
+  <section class="chapter" id="c1">
+    <div class="strata">
+      <span style="flex:3; background:#2b211a;"></span>
+      <span style="flex:5; background:#4a3424;"></span>
+      <span style="flex:2; background:#7a4a2a;"></span>
+      <span style="flex:6; background:#bd5b33;"></span>
+      <span style="flex:4; background:#d9a24b;"></span>
+      <span style="flex:3; background:#5b9090;"></span>
+    </div>
+    <div class="chapter-eyebrow">Lớp 01 · Địa tầng sâu nhất</div>
+    <h2>Nguồn gốc hình thành dầu mỏ trong tự nhiên</h2>
+    <p class="chapter-dek">
+      Mỗi lít dầu bơm lên từ giếng khoan hôm nay là kết quả của một quá trình bắt đầu từ
+      hàng chục đến hàng trăm triệu năm trước — lâu hơn rất nhiều so với toàn bộ lịch sử loài người.
+    </p>
+
+    <p class="lead">
+      Theo thuyết được giới khoa học địa chất chấp nhận rộng rãi nhất — thuyết nguồn gốc sinh học
+      (sinh vật học) — dầu mỏ và khí tự nhiên là sản phẩm biến đổi của xác sinh vật phù du, tảo
+      biển, vi sinh vật và một phần thực vật, đã sống và chết trong các vùng biển, hồ nông cổ đại
+      cách đây từ vài chục đến hơn một trăm năm mươi triệu năm.
+    </p>
+
+    <h3>Từ xác sinh vật đến "đá mẹ"</h3>
+    <p>
+      Trong các vùng nước tĩnh, ít oxy như đáy biển sâu, đáy hồ lớn hoặc các đầm phá ven bờ, xác
+      sinh vật phù du và tảo lắng xuống đáy cùng với bùn, cát mịn và sét. Vì thiếu oxy, vi khuẩn
+      không thể phân hủy hoàn toàn lượng vật chất hữu cơ này. Theo thời gian, các lớp trầm tích
+      chứa hữu cơ chồng lên nhau, bị nén chặt và biến thành một loại đá phiến sét giàu chất hữu cơ,
+      gọi là "đá mẹ" (rock nguồn). Vật chất hữu cơ bị giữ lại trong đá mẹ ở dạng một hỗn hợp sệt,
+      gọi là kerogen — tiền thân hóa học của dầu mỏ và khí thiên nhiên.
+    </p>
+
+    <h3>"Cửa sổ sinh dầu" — nơi nhiệt độ và áp suất biến đá thành dầu</h3>
+    <p>
+      Khi đá mẹ tiếp tục bị chôn sâu thêm bởi các lớp trầm tích mới — có thể tới độ sâu vài nghìn
+      mét — nhiệt độ và áp suất trong lòng đất tăng dần theo độ sâu. Trong một khoảng nhiệt độ
+      nhất định, thường vào khoảng sáu mươi đến một trăm năm mươi độ C, kerogen bắt đầu bị phân
+      hủy bởi nhiệt (quá trình mà các nhà địa chất gọi là "catagenesis"), giải phóng ra các phân
+      tử hydrocarbon mạch dài và mạch ngắn — chính là dầu thô. Khoảng độ sâu và nhiệt độ này được
+      gọi là "cửa sổ sinh dầu". Nếu đá mẹ bị chôn quá sâu và chịu nhiệt độ quá cao, các phân tử
+      hydrocarbon sẽ tiếp tục bị bẻ gãy thành các phân tử nhỏ hơn, cho ra chủ yếu là khí thiên
+      nhiên (khí methane) thay vì dầu lỏng. Vì vậy, một bể trầm tích có thể sinh ra dầu ở những
+      khu vực có độ chôn lấp vừa phải, và sinh ra khí ở những khu vực bị chôn sâu hơn.
+    </p>
+
+    <h3>Hành trình di cư và "cái bẫy" giữ dầu lại</h3>
+    <p>
+      Dầu và khí mới hình thành nhẹ hơn nước có sẵn trong các lỗ rỗng của đá, nên chúng có xu
+      hướng di chuyển dần lên phía trên qua các lớp đá có độ rỗng và độ thấm cao — gọi là "đá
+      chứa", thường là cát kết hoặc đá vôi nứt nẻ. Nếu không có gì cản lại, dầu sẽ tiếp tục di
+      chuyển lên đến khi rò rỉ ra bề mặt (tạo thành các vũng nhựa hắc ín tự nhiên mà con người cổ
+      đại từng gặp). Nhưng nếu trên đường di chuyển, dầu gặp một lớp "đá chắn" không thấm — thường
+      là sét hoặc muối mỏ — nằm trong một cấu trúc địa chất phù hợp như nếp uốn dạng vòm, đứt gãy
+      kín hoặc cấu tạo muối, thì dầu và khí sẽ bị giữ lại và tích tụ thành một mỏ. Cấu trúc này
+      được gọi là "bẫy dầu". Một mỏ dầu thương mại, do đó, là kết quả của sự trùng hợp của ít nhất
+      năm yếu tố: đá mẹ giàu hữu cơ, đủ độ chôn lấp và nhiệt để sinh dầu, đá chứa có độ rỗng tốt,
+      đá chắn kín, và một cấu trúc bẫy hình thành đúng thời điểm dầu di cư qua.
+    </p>
+
+    <div class="pull">
+      <span class="pull-label">Một con số đáng nhớ</span>
+      Phần lớn dầu mỏ đang được khai thác trên thế giới ngày nay được hình thành trong một số
+      "giai đoạn vàng" của lịch sử Trái Đất, đặc biệt là vào cuối kỷ Jura và kỷ Phấn Trắng — cách
+      đây khoảng một trăm bốn mươi đến một trăm năm mươi triệu năm — khi các đại dương ấm, nông và
+      có năng suất sinh học rất cao đồng thời thường thiếu oxy ở đáy. Đây cũng là lý do vì sao một
+      tỷ lệ rất lớn trữ lượng dầu thế giới tập trung tại một số bể trầm tích hình thành trong giai
+      đoạn này, đặc biệt là khu vực Vịnh Ba Tư — điều sẽ được phân tích kỹ ở phần sau.
+    </div>
+
+    <h3>Một giả thuyết khác: nguồn gốc vô sinh</h3>
+    <p>
+      Bên cạnh thuyết sinh học chiếm vị trí chủ đạo, có một số nhà khoa học — đáng chú ý nhất là
+      các nhà nghiên cứu thuộc trường phái Liên Xô và Ukraine từ giữa thế kỷ hai mươi — đưa ra giả
+      thuyết về nguồn gốc vô sinh (abiogenic), cho rằng hydrocarbon có thể được tổng hợp từ các
+      phản ứng hóa học giữa carbon, hydro ở điều kiện nhiệt độ và áp suất cực cao trong lớp phủ
+      của Trái Đất, không cần đến vật chất sinh học. Giả thuyết này được dùng để giải thích sự tồn
+      tại của hydrocarbon trên một số hành tinh và vệ tinh không có sự sống, như khí methane trên
+      Titan — vệ tinh của Sao Thổ. Tuy nhiên, đối với các mỏ dầu khí thương mại trên Trái Đất, các
+      bằng chứng địa hóa — như sự hiện diện của các phân tử "dấu vân tay sinh học" (biomarkers) có
+      nguồn gốc rõ ràng từ sinh vật cổ — vẫn ủng hộ mạnh mẽ thuyết nguồn gốc sinh học, và đây vẫn
+      là cơ sở khoa học cho toàn bộ ngành công nghiệp tìm kiếm, thăm dò dầu khí hiện nay.
+    </p>
+
+    <h3>Thành phần hóa học của dầu thô — hỗn hợp phức tạp của hàng nghìn hợp chất</h3>
+    <p>
+      Dầu thô không phải là một chất đơn thuần mà là một hỗn hợp phức tạp của hàng nghìn hợp chất
+      hydrocarbon khác nhau, chủ yếu gồm: các alkan (paraffin) — chuỗi hydrocarbon mạch thẳng hoặc
+      nhánh, từ khí nhẹ như methane và etan cho đến các chất rắn sáp dài chuỗi; các cycloalkan
+      (naphthene) — vòng hydrocarbon bão hòa, phổ biến trong dầu từ nhiều nguồn gốc địa chất khác
+      nhau; các aromatic — vòng benzen và các vòng thơm liên hợp, thường gặp trong dầu nặng hơn;
+      và một lượng nhỏ các hợp chất chứa lưu huỳnh, nitơ và oxy, cùng với vết kim loại như vanadi
+      và niken. Chính sự đa dạng trong thành phần hóa học này quyết định đặc tính vật lý của từng
+      loại dầu thô — độ nhớt, màu sắc, điểm chớp cháy — cũng như giá trị kinh tế và công nghệ
+      lọc cần thiết để chế biến chúng thành các sản phẩm thương mại.
+    </p>
+
+    <p>
+      Chính vì cần có sự trùng hợp của nhiều điều kiện địa chất hiếm gặp và kéo dài hàng trăm
+      triệu năm để hình thành, dầu mỏ được xem là một dạng "năng lượng Mặt Trời được lưu trữ" qua
+      một quá trình cực kỳ chậm — và cũng chính vì vậy, trên thang thời gian của con người, dầu mỏ
+      là một tài nguyên không thể tái tạo: lượng dầu con người đang sử dụng được tích lũy qua một
+      khoảng thời gian dài hơn gấp hàng nghìn lần tuổi của toàn bộ nền văn minh nhân loại. Mỗi
+      lần đốt nhiên liệu trong động cơ xe hơi hay máy bay, ta đang giải phóng năng lượng Mặt Trời
+      được tảo biển cổ đại lưu trữ từ hàng trăm triệu năm trước — một hành động mà, trên thang
+      địa chất, là hoàn toàn không thể đảo ngược trong bất kỳ khoảng thời gian nào có ý nghĩa
+      với loài người.
+    </p>
+  </section>
+
+  <!-- ================= CHAPTER 2 ================= -->
+  <section class="chapter" id="c2">
+    <div class="strata">
+      <span style="flex:4; background:#3a2f24;"></span>
+      <span style="flex:2; background:#6b4a2a;"></span>
+      <span style="flex:5; background:#8b4226;"></span>
+      <span style="flex:3; background:#bd5b33;"></span>
+      <span style="flex:4; background:#d9a24b;"></span>
+      <span style="flex:2; background:#5b9090;"></span>
+      <span style="flex:3; background:#ece2d0;"></span>
+    </div>
+    <div class="chapter-eyebrow">Lớp 02 · Vết tích con người</div>
+    <h2>Những lần đầu tiên con người phát hiện và sử dụng dầu mỏ</h2>
+    <p class="chapter-dek">
+      Hàng nghìn năm trước khi có giếng khoan, con người đã biết đến dầu mỏ — nhưng dưới một
+      hình dạng rất khác: những vũng nhựa hắc ín đen sệt, rỉ tự nhiên lên từ các khe đá.
+    </p>
+
+    <h3>Dầu mỏ trong thế giới cổ đại</h3>
+    <p>
+      Ở nhiều nơi trên thế giới, dầu mỏ và các sản phẩm tự nhiên liên quan — chủ yếu là nhựa
+      hắc ín (bitum) và nhựa đường tự nhiên — đã rỉ lên mặt đất từ rất lâu trước khi có bất kỳ
+      hoạt động khai thác nào. Tại vùng Lưỡng Hà cổ đại, khoảng năm đến sáu nghìn năm trước, các
+      nền văn minh Sumer và Babylon đã thu gom bitum từ các mạch lộ tự nhiên gần khu vực Hit, ở
+      Iraq ngày nay, để dùng làm chất kết dính trong xây dựng — trộn với gạch để xây thành, đường
+      và các công trình lớn — đồng thời dùng để trám kín thuyền và các bể chứa nước, chống thấm
+      cho các công trình thủy lợi. Ở Ai Cập cổ đại, một số tài liệu cho thấy nhựa hắc ín cũng được
+      sử dụng trong quá trình ướp xác.
+    </p>
+    <p>
+      Tại Trung Quốc, từ khoảng thế kỷ thứ tư trước Công nguyên, người dân ở khu vực Tứ Xuyên đã
+      biết khoan các giếng nông bằng dụng cụ tre để lấy khí tự nhiên và một phần dầu, dẫn qua các
+      ống tre để làm nhiên liệu đun sôi nước biển nhằm sản xuất muối — một trong những ví dụ sớm
+      nhất về việc khai thác và vận chuyển nhiên liệu hóa thạch một cách có hệ thống. Các bộ sách
+      kỹ thuật cổ của Trung Quốc sau này còn ghi chép về việc dùng dầu mỏ ("thạch du" — dầu đá)
+      để thắp sáng và làm thuốc.
+    </p>
+    <h3>Dầu mỏ ở châu Mỹ bản địa và Trung Đông cổ đại</h3>
+    <p>
+      Ở châu Mỹ, các bộ lạc bản địa từ lâu đã biết đến các "hố nhựa hắc ín" tự nhiên — nổi tiếng
+      nhất là khu vực La Brea ngày nay thuộc Los Angeles — và dùng nhựa hắc ín để trám thuyền,
+      chống thấm, gắn các dụng cụ, thậm chí làm thuốc bôi ngoài da. Tại Trung Đông và vùng Caspi,
+      dầu mỏ rỉ ra cùng khí tự nhiên đôi khi tự bốc cháy, tạo ra những "ngọn lửa vĩnh cửu" cháy
+      liên tục trên mặt đất — hiện tượng này gắn liền với tôn giáo thờ lửa Zoroastrian của Ba Tư
+      cổ đại, vốn coi những ngọn lửa tự nhiên này là biểu tượng thần thánh.
+    </p>
+    <p>
+      Tại Đông Nam Á — khu vực có nền địa chất phong phú với nhiều bể trầm tích — người dân bản
+      địa ở Borneo (đảo Kalimantan) và Sumatra đã biết đến các mạch dầu và nhựa tự nhiên từ rất
+      lâu trước khi người phương Tây đặt chân đến. Dầu mỏ tự nhiên được dùng để thắp sáng, chống
+      thấm cho thuyền bè, và trong một số trường hợp được dùng như thuốc chữa bệnh trong y học
+      dân gian. Khi người Hà Lan thiết lập sự kiểm soát thuộc địa đối với quần đảo này — sau này
+      trở thành Indonesia — các cuộc thăm dò hệ thống vào cuối thế kỷ mười chín đã xác nhận sự
+      tồn tại của trữ lượng dầu khí thương mại, hình thành nên Royal Dutch Petroleum — một trong
+      những tiền thân của tập đoàn Shell ngày nay.
+    </p>
+    <p>
+      Một trong những ứng dụng quân sự sớm và bí ẩn nhất liên quan đến dầu mỏ là "lửa Hy Lạp" —
+      một loại vũ khí gây cháy được Đế quốc Đông La Mã (Byzantine) sử dụng từ khoảng thế kỷ thứ
+      bảy sau Công nguyên để đốt cháy tàu chiến của đối phương ngay trên mặt biển. Công thức chính
+      xác của lửa Hy Lạp đến nay vẫn còn là một bí mật lịch sử, nhưng nhiều nhà nghiên cứu cho rằng
+      dầu mỏ thô hoặc các sản phẩm chưng cất nhẹ từ dầu mỏ là một thành phần quan trọng.
+    </p>
+
+    <h3>Baku — thành phố của những ngọn lửa</h3>
+    <p>
+      Nếu phải chọn một địa danh gắn liền nhất với dầu mỏ trước thời hiện đại, đó chắc chắn là
+      Baku, ngày nay là thủ đô của Azerbaijan, nằm trên bán đảo Absheron ven biển Caspi. Khu vực
+      này có vô số điểm rò khí và dầu tự nhiên, một số cháy liên tục thành những "ngọn lửa không
+      bao giờ tắt" được người dân địa phương và các tín đồ Zoroastrian coi là thánh địa. Vào thế
+      kỷ mười ba, nhà du hành người Venice Marco Polo, trong các ghi chép về hành trình của mình,
+      đã mô tả việc người dân khu vực Baku thu gom dầu để đốt đèn và dùng làm thuốc bôi cho người
+      và lạc đà bị các bệnh ngoài da. Đến thế kỷ mười bảy và mười tám, các "giếng dầu" thủ công —
+      thực chất là những hố đào tay sâu vài mét đến vài chục mét — đã xuất hiện rải rác quanh
+      Baku, được coi là một trong những hình thức khai thác dầu có tổ chức sớm nhất trong lịch sử,
+      đi trước cuộc khoan dầu hiện đại ở phương Tây hàng thế kỷ.
+    </p>
+
+    <h3>Cuộc khủng hoảng ánh sáng và sự ra đời của ngành công nghiệp dầu mỏ hiện đại</h3>
+    <p>
+      Trong nhiều thế kỷ, dầu mỏ chỉ là một sản phẩm phụ, mang tính địa phương — một thứ "thuốc
+      dân gian" hoặc nguyên liệu trám gắn, chứ chưa phải là một nguồn năng lượng có giá trị kinh
+      tế lớn. Bước ngoặt thực sự đến từ một nhu cầu rất cụ thể của thế kỷ mười chín: ánh sáng. Vào
+      giữa thế kỷ mười chín, nguồn nhiên liệu chiếu sáng chủ yếu của thế giới phương Tây là dầu cá
+      voi — được dùng để đốt trong các loại đèn dầu phổ biến ở châu Âu và Bắc Mỹ. Tuy nhiên, do
+      săn bắt quá mức, số lượng cá voi suy giảm nhanh chóng, khiến giá dầu cá voi tăng vọt và trở
+      thành mặt hàng xa xỉ, đẩy thế giới vào một dạng "khủng hoảng năng lượng" của thời đại đèn
+      dầu.
+    </p>
+    <p>
+      Trong bối cảnh đó, các nhà hóa học đã phát hiện ra rằng có thể chưng cất dầu mỏ thô — hoặc
+      đá phiến dầu — để thu được một loại nhiên liệu lỏng cháy sáng, ít khói, có giá thành rẻ hơn
+      dầu cá voi: đó là dầu hỏa (kerosene). Nhu cầu về kerosene tăng vọt đã tạo ra động lực kinh
+      tế đầu tiên để con người tìm cách khai thác dầu mỏ ở quy mô lớn, một cách có hệ thống, thay
+      vì chỉ thu gom từ các điểm rò rỉ tự nhiên.
+    </p>
+    <p>
+      Đáp lại nhu cầu đó, ngày hai mươi bảy tháng tám năm một nghìn tám trăm năm mươi chín, tại
+      Titusville, bang Pennsylvania, Hoa Kỳ, một nhóm do Edwin L. Drake dẫn đầu đã hoàn thành
+      giếng dầu đầu tiên được khoan bằng thiết bị cơ học chuyên dụng (kiểu tháp khoan derrick) với
+      mục đích tìm dầu một cách có chủ đích — ở độ sâu khoảng hai mươi mét. Giếng Drake không phải
+      là giếng dầu đầu tiên trong lịch sử nhân loại — như đã nói, các giếng đào tay ở Baku và một
+      số khu vực khác đã xuất hiện trước đó — nhưng đây được coi là cột mốc khởi đầu cho ngành
+      công nghiệp dầu mỏ hiện đại ở phương Tây, vì nó chứng minh rằng có thể khoan tìm dầu một
+      cách chủ động, dự đoán được và lặp lại được, mở đường cho một "cơn sốt dầu" lan rộng khắp
+      Pennsylvania chỉ trong vài năm sau đó, tương tự như các cơn sốt vàng từng làm thay đổi bản
+      đồ dân cư ở Bắc Mỹ.
+    </p>
+
+    <div class="pull">
+      <span class="pull-label">Vì sao mốc 1859 quan trọng</span>
+      Trước năm 1859, dầu mỏ là một nguồn tài nguyên ngoài lề — hữu ích nhưng nhỏ lẻ. Sau năm
+      1859, lần đầu tiên trong lịch sử, dầu mỏ trở thành đối tượng của một <b>ngành công nghiệp</b>
+      thực sự: có hoạt động thăm dò, khoan, vận chuyển bằng đường ống và xe goòng, lọc dầu thành
+      kerosene để bán ra thị trường đại chúng, và — chỉ vài thập niên sau — trở thành nền tảng cho
+      một trong những đế chế kinh doanh lớn nhất mọi thời đại.
+    </div>
+
+    <h3>Những kỹ thuật ban đầu của ngành lọc dầu và chưng cất</h3>
+    <p>
+      Ngay sau giếng Drake, một loạt các nhà máy lọc dầu thô sơ mọc lên dọc vùng Oil Creek ở
+      Pennsylvania. Công đoạn lọc dầu ban đầu hết sức đơn giản: dầu thô được đun nóng trong các
+      nồi chưng cất, các phần có nhiệt độ bay hơi khác nhau sẽ tách ra ở các nhiệt độ khác nhau.
+      Kerosene — với điểm sôi trong khoảng một trăm năm mươi đến ba trăm độ C — là phần được thu
+      gom và bán làm nhiên liệu đèn. Xăng, có điểm sôi thấp hơn, bốc lên trước kerosene và ban
+      đầu bị xả ra ngoài hoặc đốt bỏ vì chưa có ứng dụng. Dầu nặng hơn được dùng làm chất bôi
+      trơn hoặc nhựa đường. Chỉ sau khi động cơ đốt trong xuất hiện từ những năm 1880 và ô tô
+      bắt đầu phổ biến vào đầu thế kỷ hai mươi, xăng mới trở thành sản phẩm có giá trị kinh tế
+      lớn nhất từ dầu thô — một sự đảo ngược hoàn toàn so với thời kỳ đầu.
+    </p>
+    <p>
+      Người tiên phong trong việc đưa ngành lọc dầu lên trình độ khoa học thực sự là nhà bác học
+      người Canada <strong>Abraham Gesner</strong>, người đã phát triển và đặt tên cho kerosene
+      (từ tiếng Hy Lạp "keras" — sáp) từ năm 1846, bằng cách chưng cất than đá bituminous. Công
+      trình của ông đặt nền tảng lý thuyết cho việc xử lý dầu mỏ thô sau này. Trong khi đó, tại
+      Ba Lan, nhà dược sĩ <strong>Ignacy Łukasiewicz</strong> năm 1853 đã thắp sáng ngọn đèn
+      kerosene đầu tiên từ dầu mỏ trong một bệnh viện tại Lwów — một trong những lần đầu tiên
+      dầu mỏ được chưng cất và dùng làm ánh sáng ở châu Âu, trước cả giếng Drake gần một thập
+      kỷ.
+    </p>
+  </section>
+
+  <!-- ================= CHAPTER 3 ================= -->
+  <section class="chapter" id="c3">
+    <div class="strata">
+      <span style="flex:6; background:#241c14;"></span>
+      <span style="flex:3; background:#5e3a21;"></span>
+      <span style="flex:4; background:#8b4226;"></span>
+      <span style="flex:5; background:#d9a24b;"></span>
+      <span style="flex:3; background:#bd5b33;"></span>
+      <span style="flex:2; background:#5b9090;"></span>
+    </div>
+    <div class="chapter-eyebrow">Lớp 03 · Lịch sử công nghiệp</div>
+    <h2>Các giai đoạn phát triển của công nghiệp dầu mỏ</h2>
+    <p class="chapter-dek">
+      Từ một sản phẩm thắp sáng tầm thường, dầu mỏ đã trải qua mười giai đoạn biến hình để trở
+      thành mạch máu của nền kinh tế công nghiệp toàn cầu — và đến năm 2026, vẫn đang tiếp tục
+      biến hình.
+    </p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">1859 – 1900</div>
+        <div class="tl-body">
+          <h4>Kỷ nguyên dầu hỏa</h4>
+          <p>
+            Sau giếng Drake, ngành công nghiệp non trẻ bùng nổ tại Pennsylvania rồi lan sang
+            Ohio và các bang khác. Năm 1870, John D. Rockefeller thành lập Standard Oil; bằng
+            chiến lược sáp nhập, mua lại và đàm phán giá vận chuyển ưu đãi với đường sắt, tập
+            đoàn này dần kiểm soát phần lớn hoạt động lọc dầu của Hoa Kỳ. Sản phẩm chủ lực của
+            thời kỳ này là dầu hỏa dùng để thắp đèn; xăng — sản phẩm chủ lực của tương lai — lúc
+            này gần như là phụ phẩm bị bỏ đi.
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">1901 – 1918</div>
+        <div class="tl-body">
+          <h4>Spindletop và sự lên ngôi của động cơ đốt trong</h4>
+          <p>
+            Năm 1901, giếng Spindletop ở bang Texas phun dầu với lưu lượng chưa từng thấy, mở ra
+            kỷ nguyên dầu Texas và làm giá dầu giảm mạnh. Gần như cùng thời điểm, ô tô — đặc biệt
+            là Ford Model T từ năm 1908 — bắt đầu phổ biến, và Hải quân Hoàng gia Anh, dưới sự
+            thúc đẩy của Bộ trưởng Hải quân Winston Churchill, chuyển đổi hạm đội từ chạy bằng
+            than sang chạy bằng dầu. Xăng và dầu diesel dần thay thế dầu hỏa làm sản phẩm trung
+            tâm. Thế chiến thứ nhất (1914–1918) trở thành cuộc chiến cơ giới hóa quy mô lớn đầu
+            tiên — xe tăng, tàu chiến và máy bay đều phụ thuộc vào dầu mỏ.
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">1908 – 1938</div>
+        <div class="tl-body">
+          <h4>Dầu mỏ tìm đến Trung Đông</h4>
+          <p>
+            Năm 1908, một công ty Anh — tiền thân của tập đoàn BP sau này — phát hiện dầu với
+            khối lượng thương mại tại Iran. Năm 1927, mỏ Kirkuk khổng lồ được phát hiện tại Iraq.
+            Năm 1938, một công ty Mỹ phát hiện mỏ dầu lớn tại Dammam, Saudi Arabia — khởi đầu cho
+            công ty sau này trở thành Saudi Aramco. Chỉ trong ba mươi năm, Trung Đông từ một khu
+            vực gần như vô danh trên bản đồ năng lượng đã trở thành nơi nắm giữ trữ lượng dầu lớn
+            nhất thế giới.
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">1939 – 1945</div>
+        <div class="tl-body">
+          <h4>Dầu mỏ quyết định Thế chiến thứ hai</h4>
+          <p>
+            Trong Thế chiến thứ hai, khả năng tiếp cận dầu mỏ trở thành yếu tố sống còn đối với
+            cả hai phía. Thiếu nguồn dầu nội địa, Đức Quốc xã mở chiến dịch tấn công vùng
+            Kavkaz (Caucasus) của Liên Xô nhằm chiếm các mỏ dầu Baku — một trong những mục tiêu
+            chiến lược quan trọng nhất của mặt trận phía Đông. Ở mặt trận Thái Bình Dương, sau
+            khi bị Hoa Kỳ áp đặt cấm vận dầu mỏ năm 1941, Nhật Bản tiến hành các chiến dịch quân
+            sự xuống Đông Nam Á để giành quyền kiểm soát các mỏ dầu ở Đông Ấn thuộc Hà Lan (Indonesia
+            ngày nay) — một trong những động cơ trực tiếp dẫn tới cuộc tấn công Pearl Harbor.
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">1945 – 1973</div>
+        <div class="tl-body">
+          <h4>Kỷ nguyên "Bảy Chị Em" và dầu giá rẻ</h4>
+          <p>
+            Thời kỳ hậu chiến được thống trị bởi bảy tập đoàn dầu khí phương Tây — thường được
+            gọi là "Bảy Chị Em" — tiền thân của các tập đoàn ngày nay như ExxonMobil, Chevron,
+            BP và Shell. Các tập đoàn này kiểm soát phần lớn hoạt động khai thác, định giá và
+            vận chuyển dầu từ Trung Đông, giữ giá dầu ở mức rất thấp và tương đối ổn định — một
+            điều kiện quan trọng cho "kỷ nguyên vàng" tăng trưởng kinh tế của Tây Âu, Nhật Bản và
+            Hoa Kỳ. Để giành lại quyền kiểm soát giá và sản lượng, năm 1960, đại diện của Iran,
+            Iraq, Kuwait, Saudi Arabia và Venezuela họp tại Baghdad và thành lập Tổ chức Các nước
+            Xuất khẩu Dầu mỏ — OPEC.
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">1973 – 1985</div>
+        <div class="tl-body">
+          <h4>Các cú sốc dầu mỏ và làn sóng quốc hữu hóa</h4>
+          <p>
+            Năm 1973, sau cuộc chiến Yom Kippur giữa Israel và liên quân Ả Rập, các thành viên Ả
+            Rập của OPEC áp đặt cấm vận dầu mỏ với Hoa Kỳ và các nước phương Tây ủng hộ Israel,
+            khiến giá dầu tăng gấp khoảng bốn lần chỉ trong vài tháng — cú sốc dầu mỏ lần thứ
+            nhất. Năm 1979, Cách mạng Iran lật đổ chế độ quân chủ và làm gián đoạn xuất khẩu dầu
+            của nước này, gây ra cú sốc dầu mỏ lần thứ hai. Trong giai đoạn này, hầu hết các
+            nước sản xuất lớn ở Trung Đông tiến hành quốc hữu hóa ngành dầu mỏ, chấm dứt sự kiểm
+            soát trực tiếp của các tập đoàn phương Tây — quyền lực trên thị trường dầu chuyển
+            mạnh từ các công ty sang các quốc gia sản xuất.
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">1986 – 2000</div>
+        <div class="tl-body">
+          <h4>Phản ứng, tái cấu trúc và toàn cầu hóa thị trường dầu</h4>
+          <p>
+            Năm 1986, Saudi Arabia tăng mạnh sản lượng để giành lại thị phần đã mất, khiến giá
+            dầu sụp đổ — một bài học cho thấy OPEC không thể luôn luôn kiểm soát giá. Thị trường
+            dầu dần chuyển sang giao dịch theo hợp đồng tương lai trên các sàn giao dịch lớn,
+            với hai loại dầu chuẩn quốc tế — WTI của Mỹ và Brent của Biển Bắc — trở thành thước
+            đo giá tham chiếu toàn cầu. Sự sụp đổ của Liên Xô năm 1991 mở cửa ngành dầu khí Nga
+            cho đầu tư phương Tây, trong khi cuộc Chiến tranh Vùng Vịnh năm 1990–1991 — bùng phát
+            sau khi Iraq xâm lược Kuwait, một phần vì tranh chấp về dầu mỏ và nợ — cho thấy dầu
+            mỏ tiếp tục là nguyên nhân trực tiếp của xung đột quân sự quy mô lớn.
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">2000 – 2014</div>
+        <div class="tl-body">
+          <h4>Siêu chu kỳ giá dầu cao</h4>
+          <p>
+            Sự trỗi dậy của Trung Quốc và các nền kinh tế mới nổi đẩy nhu cầu dầu toàn cầu tăng
+            với tốc độ chưa từng thấy, đưa giá dầu từ khoảng hai mươi đô-la một thùng lên hơn một
+            trăm bốn mươi đô-la một thùng vào năm 2008. Cuộc chiến Iraq năm 2003 — một lần nữa
+            đặt câu hỏi về vai trò của dầu mỏ trong các quyết định can thiệp quân sự của phương
+            Tây tại Trung Đông — diễn ra trong giai đoạn này. Lo ngại về "đỉnh dầu" (peak oil) —
+            ý tưởng cho rằng sản lượng dầu toàn cầu sẽ đạt đỉnh và suy giảm vĩnh viễn — trở thành
+            đề tài tranh luận phổ biến.
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">2008 – 2020</div>
+        <div class="tl-body">
+          <h4>Cách mạng dầu đá phiến Hoa Kỳ</h4>
+          <p>
+            Sự kết hợp giữa công nghệ khoan ngang và nứt vỉa thủy lực (fracking) giúp Hoa Kỳ khai
+            thác được khối lượng lớn dầu và khí từ các tầng đá phiến — đặc biệt là các bể Bakken
+            và Permian — biến nước này từ một nước nhập khẩu dầu lớn thành nước sản xuất dầu lớn
+            nhất thế giới vào khoảng năm 2018, vượt qua cả Saudi Arabia và Nga. Sự bùng nổ nguồn
+            cung này góp phần gây ra hai lần sụp đổ giá dầu — năm 2014–2016 và đặc biệt là năm
+            2020, khi đại dịch COVID-19 khiến nhu cầu đi lại và sản xuất toàn cầu sụp đổ, có thời
+            điểm hợp đồng tương lai dầu WTI của Mỹ giao dịch ở mức giá âm lần đầu tiên trong lịch
+            sử — người bán phải trả tiền cho người mua để họ nhận dầu.
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year">2021 – 2026</div>
+        <div class="tl-body">
+          <h4>Kỷ nguyên chuyển đổi và bất ổn địa chính trị</h4>
+          <p>
+            Sau khi phục hồi từ đại dịch, thị trường dầu bước vào một giai đoạn nhiều biến động
+            chưa từng có. Cuộc chiến Nga – Ukraine bùng phát năm 2022 làm đảo lộn các dòng chảy
+            dầu khí truyền thống: châu Âu cấm vận dầu Nga, còn Nga chuyển hướng phần lớn xuất
+            khẩu sang châu Á. Liên minh OPEC cộng với Nga và các nước sản xuất lớn khác — gọi tắt
+            là OPEC+ — trở thành cơ chế điều tiết thị trường chính. Đồng thời, làn sóng chuyển
+            đổi năng lượng — xe điện, năng lượng tái tạo, lưu trữ pin — tăng tốc tại nhiều nền
+            kinh tế phát triển, dù nhu cầu dầu toàn cầu vẫn tiếp tục tăng nhờ châu Á. Đến đầu năm
+            2026, một cuộc chiến giữa Hoa Kỳ – Israel và Iran, cùng cuộc khủng hoảng tại eo biển
+            Hormuz, đã gây ra một trong những cú sốc cung dầu lớn nhất trong lịch sử hiện đại —
+            sẽ được phân tích kỹ ở các chương sau.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CHAPTER 4 ================= -->
+  <section class="chapter" id="c4">
+    <div class="strata">
+      <span style="flex:5; background:#1f1812;"></span>
+      <span style="flex:3; background:#8b4226;"></span>
+      <span style="flex:2; background:#bd5b33;"></span>
+      <span style="flex:6; background:#d9a24b;"></span>
+      <span style="flex:4; background:#ece2d0;"></span>
+    </div>
+    <div class="chapter-eyebrow">Lớp 04 · Những vân tay trong đá</div>
+    <h2>Những nhân vật và sự kiện làm nên lịch sử dầu mỏ</h2>
+    <p class="chapter-dek">
+      Phía sau những con số sản lượng và giá dầu là những cá nhân — nhà phát minh, nhà tài
+      phiệt, bộ trưởng, nhà địa chất, và cả những người làm đảo chính — đã định hình ngành công
+      nghiệp này.
+    </p>
+
+    <h3>Những người đặt nền móng</h3>
+    <p>
+      <strong>Edwin L. Drake</strong>, như đã đề cập, là người đứng tên cho giếng dầu khoan cơ
+      học đầu tiên năm 1859 tại Pennsylvania — sự kiện mở đầu cho ngành công nghiệp dầu mỏ hiện
+      đại. Chỉ hơn một thập niên sau, năm 1870, <strong>John D. Rockefeller</strong> thành lập
+      Standard Oil tại Ohio. Bằng các chiến lược sáp nhập quyết liệt, thỏa thuận chiết khấu vận
+      tải đường sắt và kiểm soát gần như toàn bộ khâu lọc dầu của Hoa Kỳ, Rockefeller trở thành
+      người giàu nhất thế giới vào thời của mình. Năm 1911, Tòa án Tối cao Hoa Kỳ ra lệnh chia
+      tách Standard Oil thành hơn ba mươi công ty độc lập vì vi phạm luật chống độc quyền — những
+      công ty này, qua nhiều lần sáp nhập sau đó, trở thành tiền thân của các tập đoàn như
+      ExxonMobil, Chevron và Marathon ngày nay.
+    </p>
+    <p>
+      Cùng thời điểm đó tại châu Âu, gia đình <strong>Samuel</strong> — ban đầu kinh doanh vỏ sò
+      trang trí — chuyển sang vận chuyển dầu bằng các tàu chở dầu chuyên dụng đầu tiên đi qua
+      kênh đào Suez, lập ra công ty Shell Transport and Trading. Năm 1907, công ty này hợp nhất
+      với công ty dầu khí Hà Lan Royal Dutch để hình thành Royal Dutch Shell — một trong những
+      tập đoàn dầu khí lớn nhất thế giới trong hơn một thế kỷ sau đó.
+    </p>
+
+    <h3>Những người mở cửa Trung Đông</h3>
+    <p>
+      Năm 1901, nhà đầu tư người Anh <strong>William Knox D'Arcy</strong> giành được nhượng
+      quyền thăm dò dầu khí trên một vùng lãnh thổ rộng lớn của Iran. Sau nhiều năm thất bại và
+      gần như cạn vốn, năm 1908 nhóm của ông phát hiện ra mỏ dầu thương mại đầu tiên, dẫn đến sự
+      thành lập của Anglo-Persian Oil Company — tiền thân của BP. Tại Iraq, doanh nhân gốc
+      Armenia <strong>Calouste Gulbenkian</strong>, được biết đến với biệt danh "Ông Năm Phần
+      Trăm" vì giữ năm phần trăm cổ phần trong Iraq Petroleum Company, đóng vai trò trung tâm
+      trong việc đàm phán các thỏa thuận khai thác dầu phức tạp giữa các tập đoàn phương Tây tại
+      khu vực này. Tại bán đảo Ả Rập, quốc vương <strong>Ibn Saud</strong> — người thống nhất
+      Saudi Arabia — đã ký nhượng quyền khai thác với một công ty con của Standard Oil của
+      California năm 1933, dẫn tới việc phát hiện mỏ dầu khổng lồ Dammam năm 1938 và đặt nền
+      móng cho Saudi Aramco, công ty dầu khí lớn nhất thế giới hiện nay.
+    </p>
+
+    <h3>Mohammad Mossadegh và cuộc đảo chính năm 1953</h3>
+    <p>
+      Một trong những sự kiện có ảnh hưởng lâu dài nhất đến cách thế giới nhìn nhận mối liên hệ
+      giữa dầu mỏ và quyền lực chính trị diễn ra tại Iran. Năm 1951, Thủ tướng Iran
+      <strong>Mohammad Mossadegh</strong> tiến hành quốc hữu hóa Anglo-Iranian Oil Company —
+      công ty kế thừa của Anglo-Persian Oil Company, vốn đang khai thác phần lớn lợi nhuận từ dầu
+      mỏ Iran trong khi chính phủ Iran chỉ nhận được một phần nhỏ. Đáp lại, Anh áp đặt cấm vận
+      kinh tế với Iran, và đến năm 1953, cơ quan tình báo Anh và Hoa Kỳ — trong một chiến dịch bí
+      mật thường được biết đến với tên gọi Chiến dịch Ajax — đã hậu thuẫn một cuộc đảo chính lật
+      đổ Mossadegh, đưa Quốc vương (Shah) Mohammad Reza Pahlavi trở lại nắm toàn quyền. Sự kiện
+      này thường được nhắc đến như một trong những ví dụ rõ ràng nhất, sớm nhất của thời kỳ Chiến
+      tranh Lạnh về việc các cường quốc phương Tây sử dụng các biện pháp ngầm để bảo vệ lợi ích
+      dầu mỏ — và những hậu quả chính trị của nó, theo nhiều nhà nghiên cứu lịch sử, vẫn còn được
+      cảm nhận trong quan hệ giữa Iran và phương Tây cho đến tận ngày nay.
+    </p>
+
+    <h3>Những người tạo ra OPEC và làm rung chuyển thị trường</h3>
+    <p>
+      Năm 1959 và 1960, hai bộ trưởng dầu mỏ — <strong>Juan Pablo Pérez Alfonzo</strong> của
+      Venezuela và <strong>Abdullah Tariki</strong> của Saudi Arabia — đã cùng vận động để các
+      nước sản xuất dầu lớn liên kết lại, nhằm chống lại việc các tập đoàn dầu phương Tây đơn
+      phương cắt giảm mức giá trả cho các nước này. Nỗ lực của họ dẫn đến việc thành lập OPEC tại
+      Baghdad năm 1960, với các thành viên sáng lập là Iran, Iraq, Kuwait, Saudi Arabia và
+      Venezuela. Hơn một thập niên sau, <strong>Sheikh Ahmed Zaki Yamani</strong>, Bộ trưởng Dầu
+      mỏ của Saudi Arabia, trở thành một trong những nhân vật có ảnh hưởng lớn nhất đến giá dầu
+      thế giới — ông giữ vai trò trung tâm trong cả cú sốc dầu mỏ năm 1973 và quyết định tăng sản
+      lượng gây sụp đổ giá dầu năm 1986.
+    </p>
+    <p>
+      Ở một khía cạnh khác của quyền lực dầu mỏ, Ngoại trưởng Hoa Kỳ <strong>Henry
+      Kissinger</strong> là kiến trúc sư chính của các thỏa thuận kinh tế và an ninh giữa Hoa Kỳ
+      và Saudi Arabia được thiết lập từ năm 1974, ngay sau cú sốc dầu mỏ đầu tiên — những thỏa
+      thuận thường được gắn với thuật ngữ "petrodollar", một chủ đề sẽ được phân tích chi tiết và
+      có phần gây tranh cãi ở chương tám của bài viết này.
+    </p>
+
+    <h3>Nhà địa chất và lời tiên đoán về "đỉnh dầu"</h3>
+    <p>
+      Năm 1956, nhà địa vật lý người Mỹ <strong>M. King Hubbert</strong> trình bày một mô hình
+      toán học cho rằng sản lượng khai thác của một mỏ dầu hoặc một khu vực sản xuất dầu sẽ tăng
+      dần, đạt đỉnh, rồi suy giảm theo một đường cong hình chuông — về sau được gọi là "đường
+      cong Hubbert". Ông dự báo sản lượng dầu thông thường của Hoa Kỳ sẽ đạt đỉnh vào khoảng năm
+      1970 — một dự báo khá chính xác vào thời điểm đó. Mô hình của Hubbert trở thành nền tảng lý
+      thuyết cho khái niệm "đỉnh dầu toàn cầu" (peak oil), từng gây ra nhiều cuộc tranh luận lớn
+      trong suốt nhiều thập kỷ về việc liệu sản lượng dầu thế giới có sớm đạt đỉnh và suy giảm
+      không thể đảo ngược hay không. Tuy vậy, cuộc cách mạng dầu đá phiến tại Hoa Kỳ từ cuối những
+      năm 2000 đã làm thay đổi hoàn toàn bức tranh sản lượng của chính quốc gia mà Hubbert từng
+      nghiên cứu, cho thấy công nghệ có thể định hình lại đáng kể các quy luật tưởng như đã được
+      xác lập.
+    </p>
+
+    <h3>Những người viết lại bản đồ kỹ thuật — từ đường ống đến khoan ngang</h3>
+    <p>
+      Ngành dầu mỏ không chỉ được định hình bởi các nhân vật kinh doanh và chính trị mà còn bởi
+      những nhà phát minh và kỹ sư đã tạo ra các đột phá kỹ thuật. <strong>Samuel Van Syckel</strong>
+      xây dựng đường ống dẫn dầu bằng sắt đầu tiên tại Pennsylvania năm 1865, giải quyết bài toán
+      vận chuyển tốn kém và rủi ro bằng xe ngựa trên các con đường lầy lội. Đường ống trở thành
+      xương sống của toàn bộ hệ thống phân phối dầu khí và là yếu tố then chốt giúp Rockefeller xây
+      dựng đế chế Standard Oil. Gần một thế kỷ sau, các kỹ sư tại các công ty dầu khí độc lập của
+      Hoa Kỳ trong những năm 1980 và 1990 đã kết hợp hai kỹ thuật từng tồn tại riêng lẻ — khoan
+      ngang và nứt vỉa thủy lực — để tạo ra cuộc cách mạng dầu đá phiến, một trong những đột phá
+      kỹ thuật lớn nhất trong lịch sử ngành năng lượng kể từ thời giếng Drake.
+    </p>
+
+    <h3>Những nhân vật định hình trật tự dầu mỏ hậu chiến</h3>
+    <p>
+      <strong>Enrico Mattei</strong>, Chủ tịch công ty dầu khí quốc gia Ý ENI từ sau Thế chiến
+      thứ hai, là người đầu tiên công khai thách thức sự độc quyền của "Bảy Chị Em" bằng cách
+      đàm phán trực tiếp với các nước Trung Đông theo các điều khoản chia sẻ lợi nhuận bình đẳng
+      hơn, thường là năm mươi-năm mươi hoặc thậm chí nghiêng về phía nước chủ nhà hơn — phá vỡ
+      mô hình nhượng quyền một chiều của các tập đoàn Anglo-American. Chính Mattei là người đặt ra
+      thuật ngữ "Bảy Chị Em" như một cách chỉ trích sự liên kết độc quyền của bảy tập đoàn phương
+      Tây. Ông thiệt mạng trong một vụ tai nạn máy bay năm 1962 mà nhiều nhà nghiên cứu cho đến
+      nay vẫn nghi ngờ không phải là tai nạn thuần túy.
+    </p>
+    <p>
+      <strong>T. Boone Pickens</strong> — nhà đầu tư dầu khí người Mỹ và một trong những nhân vật
+      đặc sắc nhất phố Wall trong những năm 1980 — đã tiên phong trong chiến lược thôn tính thù
+      địch các tập đoàn dầu lớn thông qua thị trường chứng khoán, buộc ngành dầu khí Mỹ phải cải
+      tổ và tăng hiệu quả sau thời kỳ dầu giá rẻ của những năm 1980 làm tan chảy các kế hoạch
+      kinh doanh béo bở trước đó. Cuối cuộc đời, ông trở thành một tiếng nói bất ngờ về năng lượng
+      tái tạo — minh họa cho sự phức tạp của những con người gắn bó cả cuộc đời với dầu mỏ nhưng
+      đủ thực tế để nhìn thấy giới hạn của nó.
+    </p>
+  </section>
+
+  <!-- ================= CHAPTER 5 ================= -->
+  <section class="chapter" id="c5">
+    <div class="strata">
+      <span style="flex:2; background:#15110d;"></span>
+      <span style="flex:5; background:#6b1f1f;"></span>
+      <span style="flex:3; background:#8b4226;"></span>
+      <span style="flex:4; background:#bd5b33;"></span>
+      <span style="flex:6; background:#d9a24b;"></span>
+      <span style="flex:2; background:#5b9090;"></span>
+    </div>
+    <div class="chapter-eyebrow">Lớp 05 · Đứt gãy địa chính trị</div>
+    <h2>Dầu mỏ, chiến tranh và trật tự thế giới</h2>
+    <p class="chapter-dek">
+      Hiếm có loại tài nguyên nào trong lịch sử hiện đại lại gắn bó chặt chẽ với các cuộc chiến,
+      các hiệp ước và sự trỗi dậy — suy tàn của các cường quốc như dầu mỏ.
+    </p>
+
+    <h3>Dầu mỏ như một vũ khí chiến lược trong hai cuộc thế chiến</h3>
+    <p>
+      Như đã đề cập ở chương ba, dầu mỏ đã thay đổi bản chất của chiến tranh hiện đại. Quyết định
+      của Hải quân Hoàng gia Anh chuyển từ than sang dầu trước Thế chiến thứ nhất buộc nước Anh
+      phải đảm bảo nguồn cung dầu từ Trung Đông — một trong những lý do khiến khu vực này trở
+      thành tâm điểm tranh giành ảnh hưởng giữa các cường quốc châu Âu sau khi Đế quốc Ottoman
+      sụp đổ. Đến Thế chiến thứ hai, việc thiếu hụt dầu mỏ là một trong những nguyên nhân trực
+      tiếp dẫn cả Đức và Nhật Bản đến các quyết định quân sự mang tính bước ngoặt — chiến dịch
+      tấn công vùng Kavkaz của Đức và các chiến dịch của Nhật Bản tại Đông Nam Á — và sự thiếu hụt
+      nhiên liệu trong giai đoạn cuối cuộc chiến cũng là một yếu tố góp phần vào sự sụp đổ của cả
+      hai phe phát xít.
+    </p>
+
+    <h3>Trung Đông trở thành bàn cờ của Chiến tranh Lạnh</h3>
+    <p>
+      Sau Thế chiến thứ hai, khi các đế quốc châu Âu cũ suy yếu, Trung Đông — nơi nắm giữ phần
+      lớn trữ lượng dầu mỏ thế giới — trở thành đấu trường cạnh tranh ảnh hưởng giữa Hoa Kỳ và
+      Liên Xô. Cuộc đảo chính năm 1953 tại Iran, đã nói ở chương trước, là một ví dụ điển hình.
+      Năm 1956, cuộc khủng hoảng Suez — khi Tổng thống Egypt Gamal Abdel Nasser quốc hữu hóa kênh
+      đào Suez, một tuyến vận chuyển dầu sống còn từ Trung Đông sang châu Âu, khiến Anh, Pháp và
+      Israel phát động một cuộc can thiệp quân sự — đã cho thấy rõ sự suy yếu của các cường quốc
+      thực dân cũ trong việc kiểm soát các tuyến đường dầu mỏ, đồng thời mở đường cho ảnh hưởng
+      ngày càng lớn của Hoa Kỳ và Liên Xô tại khu vực.
+    </p>
+    <p>
+      Trong cuộc Chiến tranh Iran – Iraq kéo dài từ năm 1980 đến năm 1988, cả hai nước đã tấn công
+      lẫn nhau vào các cơ sở dầu khí và các tàu chở dầu của nhau cũng như của nước thứ ba đi qua
+      Vịnh Ba Tư — giai đoạn này thường được gọi là "cuộc chiến tàu chở dầu" (tanker war), và là
+      một trong những lần đầu tiên thế giới chứng kiến quy mô của việc dầu mỏ và các tuyến vận
+      chuyển của nó trở thành mục tiêu quân sự trực tiếp trong một cuộc chiến kéo dài.
+    </p>
+
+    <h3>Năm 1973: khi dầu mỏ trở thành vũ khí và bắt đầu một trật tự tiền tệ mới</h3>
+    <p>
+      Cú sốc dầu mỏ năm 1973, đã được nói đến ở chương ba, không chỉ là một cú sốc kinh tế mà còn
+      là một bước ngoặt địa chính trị: lần đầu tiên, các nước sản xuất dầu — chứ không phải các
+      cường quốc quân sự truyền thống — chứng minh được rằng họ có thể gây áp lực lên cả những
+      nền kinh tế lớn nhất thế giới chỉ bằng cách điều chỉnh dòng chảy của một loại hàng hóa.
+      Ngay sau cú sốc này, các thỏa thuận kinh tế — an ninh giữa Hoa Kỳ và Saudi Arabia được
+      thiết lập, đặt nền tảng cho một hệ thống tài chính toàn cầu xoay quanh đồng đô la Mỹ và dầu
+      mỏ — hệ thống mà chương tám của bài viết này sẽ phân tích kỹ, bao gồm cả những gì là sự
+      thật và những gì chỉ là huyền thoại được lan truyền rộng rãi.
+    </p>
+
+    <h3>Chiến tranh Vùng Vịnh và cuộc chiến Iraq</h3>
+    <p>
+      Năm 1990, Iraq dưới thời Saddam Hussein xâm lược Kuwait, với tranh chấp về sản lượng dầu,
+      nợ chiến tranh từ cuộc chiến với Iran, và việc khai thác chung tại mỏ dầu Rumaila là những
+      nguyên nhân trực tiếp. Một liên minh quốc tế do Hoa Kỳ dẫn đầu đã can thiệp quân sự để giải
+      phóng Kuwait vào năm 1991; trong quá trình rút quân, lực lượng Iraq đã đốt hàng trăm giếng
+      dầu của Kuwait, gây ra một trong những thảm họa môi trường do con người gây ra lớn nhất
+      trong lịch sử — nội dung sẽ được nhắc lại ở chương về tác động môi trường.
+    </p>
+    <p>
+      Hơn một thập niên sau, cuộc chiến Iraq năm 2003 do Hoa Kỳ và các đồng minh phát động, với lý
+      do chính thức được đưa ra là nghi ngờ Iraq sở hữu vũ khí hủy diệt hàng loạt và liên hệ với
+      khủng bố. Tuy nhiên, vai trò của dầu mỏ Iraq — nước có trữ lượng dầu vào hàng lớn nhất thế
+      giới — trong các quyết định chiến lược của cuộc chiến này vẫn là một đề tài gây tranh cãi
+      kéo dài: nhiều nhà phân tích và cựu quan chức cho rằng việc bảo đảm khả năng tiếp cận và ổn
+      định nguồn cung dầu Trung Đông là một yếu tố được tính đến trong các tính toán chiến lược
+      rộng hơn, trong khi các quan chức chính phủ liên quan tại thời điểm đó luôn khẳng định dầu
+      mỏ không phải là động cơ của cuộc chiến. Đây là một trong những ví dụ rõ nhất cho thấy việc
+      đánh giá vai trò thực sự của dầu mỏ trong các quyết định chiến tranh hiện đại thường không
+      có một câu trả lời đơn giản, và phụ thuộc nhiều vào góc nhìn chính trị của người phân tích.
+    </p>
+
+    <h3>Trừng phạt dầu mỏ — vũ khí địa chính trị của thế kỷ hai mươi mốt</h3>
+    <p>
+      Trong những thập niên gần đây, bên cạnh các biện pháp quân sự trực tiếp, các lệnh trừng
+      phạt nhằm vào hoạt động xuất khẩu dầu mỏ đã trở thành một trong những công cụ địa chính trị
+      được sử dụng thường xuyên nhất. Hoa Kỳ và các đồng minh đã áp đặt các lệnh trừng phạt nhằm
+      hạn chế xuất khẩu dầu của Iran, nhằm gây áp lực lên chương trình hạt nhân của nước này; áp
+      đặt các biện pháp tương tự với Nga sau khi nước này tiến hành chiến dịch quân sự tại Ukraine
+      năm 2022, nhằm hạn chế nguồn thu từ dầu mỏ — nguồn thu chiếm tỷ trọng rất lớn trong ngân
+      sách Nga; và áp đặt các lệnh trừng phạt kéo dài với Venezuela, quốc gia có trữ lượng dầu
+      được xác minh lớn nhất thế giới nhưng sản lượng khai thác thực tế lại rất thấp so với tiềm
+      năng, một phần chính vì các lệnh trừng phạt này. Hiệu quả thực sự của các lệnh trừng phạt
+      dầu mỏ — liệu chúng có đạt được mục tiêu chính trị đặt ra hay không, và ai phải gánh chịu
+      hậu quả kinh tế nặng nề nhất — vẫn là chủ đề được tranh luận sôi nổi giữa các nhà kinh tế và
+      hoạch định chính sách.
+    </p>
+
+    <h3>Năm 2026: trật tự dầu mỏ một lần nữa bị rung chuyển</h3>
+    <p>
+      Trong giai đoạn cuối năm 2025 và đầu năm 2026, hai sự kiện lớn tiếp tục cho thấy dầu mỏ vẫn
+      là trung tâm của các biến động địa chính trị toàn cầu. Thứ nhất, tại Venezuela — quốc gia
+      đang nắm giữ trữ lượng dầu được xác minh lớn nhất thế giới, với khoảng ba trăm tỷ thùng,
+      tương đương khoảng mười bảy phần trăm tổng trữ lượng dầu toàn cầu — một chiến dịch quân sự
+      của Hoa Kỳ vào cuối năm 2025 đã dẫn đến việc bắt giữ Tổng thống Nicolás Maduro, người sau đó
+      phải đối mặt với các thủ tục pháp lý tại Hoa Kỳ. Tổng thống Hoa Kỳ Donald Trump tuyên bố
+      nước này sẽ tham gia kiểm soát và mời các công ty Mỹ đầu tư khôi phục ngành dầu khí đã suy
+      yếu nghiêm trọng của Venezuela sau nhiều năm bị trừng phạt và quản lý kém. Sự kiện này một
+      lần nữa làm dấy lên các tranh luận quen thuộc trong lịch sử dầu mỏ: về việc liệu quyền tiếp
+      cận các nguồn tài nguyên dầu mỏ khổng lồ có đóng vai trò trong các quyết định can thiệp của
+      các cường quốc hay không — một câu hỏi mà, như đã thấy ở các sự kiện trước đây, hiếm khi có
+      câu trả lời được tất cả các bên đồng thuận.
+    </p>
+    <p>
+      Thứ hai, và có quy mô tác động lớn hơn nhiều đối với thị trường dầu toàn cầu, là cuộc chiến
+      bùng phát ngày hai mươi tám tháng hai năm 2026 giữa Hoa Kỳ, Israel và Iran. Sau các đợt
+      không kích quy mô lớn nhằm vào các cơ sở quân sự và hạt nhân của Iran, Iran đã đáp trả bằng
+      cách tấn công các tàu chở dầu và cơ sở năng lượng tại nhiều quốc gia vùng Vịnh, đồng thời
+      tuyên bố "đóng cửa" eo biển Hormuz — tuyến đường mà trước khủng hoảng, khoảng một phần tư
+      lượng dầu vận chuyển bằng đường biển của thế giới và một phần năm lượng khí tự nhiên hóa
+      lỏng toàn cầu phải đi qua. Các cuộc tấn công bằng tên lửa, máy bay không người lái và thủy
+      lôi đã khiến nhiều hãng vận tải biển lớn ngừng hoạt động qua khu vực này, hàng chục tàu chở
+      dầu bị hư hại hoặc bị bắt giữ, và Hoa Kỳ tiến hành phong tỏa hải quân đối với các cảng của
+      Iran trong nhiều tuần. Đây được nhiều nhà phân tích năng lượng coi là sự gián đoạn nguồn
+      cung dầu mỏ do xung đột địa chính trị nghiêm trọng nhất trong lịch sử hiện đại, vượt xa cả
+      "cuộc chiến tàu chở dầu" trong thập niên 1980. Những tác động cụ thể của cuộc khủng hoảng
+      này đối với thị trường dầu năm 2026 sẽ được phân tích kỹ hơn ở chương chín.
+    </p>
+
+    <h3>Dầu mỏ và sự trỗi dậy của Trung Quốc — trận địa địa chính trị mới</h3>
+    <p>
+      Một xu hướng địa chính trị lớn của thế kỷ hai mươi mốt mà bất kỳ phân tích nào về dầu mỏ
+      cũng không thể bỏ qua là sự trỗi dậy của Trung Quốc như là nước nhập khẩu dầu lớn nhất
+      thế giới kể từ đầu những năm 2010. Để đảm bảo nguồn cung năng lượng cho tăng trưởng kinh
+      tế, Trung Quốc đã đầu tư hàng trăm tỷ đô-la vào các dự án năng lượng ở châu Phi, Trung
+      Đông, Trung Á và Mỹ Latinh thông qua cả đầu tư trực tiếp lẫn các khoản vay đổi lấy quyền
+      tiếp cận tài nguyên. Sáng kiến "Vành đai và Con đường" — bao gồm nhiều tuyến đường ống và
+      hành lang vận tải năng lượng — có một phần quan trọng là nhằm giảm phụ thuộc của Trung Quốc
+      vào việc vận chuyển dầu mỏ qua các eo biển có thể bị Hải quân Hoa Kỳ kiểm soát như eo biển
+      Malacca. Cuộc cạnh tranh địa chính trị này — giữa Hoa Kỳ và Trung Quốc về quyền truy cập
+      và ảnh hưởng tại các khu vực giàu tài nguyên — là một trong những mạch chủ đạo của quan hệ
+      quốc tế trong những thập kỷ đầu thế kỷ hai mươi mốt.
+    </p>
+
+    <div class="pull">
+      <span class="pull-label">Một mạch xuyên suốt</span>
+      Từ quyết định chuyển hạm đội Anh sang chạy bằng dầu trước năm 1914, đến cuộc khủng hoảng
+      Hormuz năm 2026, có một mạch xuyên suốt: bất cứ khi nào một phần đáng kể của nguồn cung dầu
+      thế giới bị đe dọa — bởi chiến tranh, cấm vận, cách mạng hay trừng phạt — giá dầu và cán cân
+      quyền lực toàn cầu đều rung chuyển theo. Dầu mỏ chưa từng chỉ là một loại hàng hóa; nó luôn
+      đồng thời là một loại quyền lực.
+    </div>
+  </section>
+
+
+  <!-- ================= CHAPTER 6 ================= -->
+  <section class="chapter" id="c6">
+    <div class="strata">
+      <span style="flex:4; background:#1a1a2e;"></span>
+      <span style="flex:6; background:#2d4a3e;"></span>
+      <span style="flex:3; background:#5b8a6a;"></span>
+      <span style="flex:5; background:#d9a24b;"></span>
+      <span style="flex:2; background:#bd5b33;"></span>
+      <span style="flex:4; background:#5b9090;"></span>
+    </div>
+    <div class="chapter-eyebrow">Lớp 06 · Bản đồ tài nguyên</div>
+    <h2>Bản đồ dầu mỏ thế giới — nơi nhiều, nơi ít và vì sao</h2>
+    <p class="chapter-dek">
+      Phân bố dầu mỏ trên hành tinh không hề đồng đều, và đây không phải là sự ngẫu nhiên —
+      đó là di sản hàng trăm triệu năm của địa chất, khí hậu và kiến tạo mảng.
+    </p>
+
+    <h3>Trung Đông — vùng đất của những bể dầu vĩ đại</h3>
+    <p>
+      Theo số liệu của Cơ quan Năng lượng Quốc tế và các tổ chức địa chất toàn cầu, khu vực
+      Trung Đông — đặc biệt là vùng Vịnh Ba Tư gồm Saudi Arabia, Iraq, Iran, Các Tiểu vương quốc
+      Ả Rập Thống nhất, Kuwait và Qatar — nắm giữ khoảng từ bốn mươi đến bốn mươi tám phần trăm
+      tổng trữ lượng dầu mỏ đã được xác minh trên toàn thế giới. Mỏ Ghawar của Saudi Arabia,
+      với chiều dài gần ba trăm kilômét và chiều rộng hơn ba mươi kilômét, là mỏ dầu trên đất
+      liền lớn nhất thế giới từ trước đến nay — ước tính đã sản xuất hơn bảy mươi tỷ thùng dầu
+      và vẫn còn tiềm năng lớn.
+    </p>
+    <p>
+      Lý do địa chất cho sự tập trung này gắn liền trực tiếp với lịch sử địa tầng mà chương một
+      đã mô tả. Vào kỷ Jura và kỷ Phấn Trắng — cách đây khoảng chín mươi đến một trăm năm mươi
+      triệu năm — khu vực mà ngày nay là Trung Đông từng là một vùng biển nông, ấm áp, rất giàu
+      sinh vật phù du, nằm gần đường xích đạo cổ đại của Đại dương Tethys. Khi vùng biển này
+      thu hẹp dần do chuyển động kiến tạo mảng, hàng tỷ tấn vật chất hữu cơ bị chôn vùi dưới
+      các lớp muối và trầm tích dày đặc, tạo thành những bể đá mẹ cực kỳ phong phú. Đồng thời,
+      các cấu trúc địa chất tại đây — đặc biệt là các nếp uốn và vòm muối — tạo thành vô số
+      "bẫy dầu" lý tưởng để giữ hydrocarbon không thoát ra ngoài. Sự kết hợp hoàn hảo giữa
+      đá mẹ giàu có, đá chứa có độ rỗng tốt, đá chắn kín và bẫy dầu dạng vòm chính là lý do
+      Trung Đông trở thành "kho báu dầu mỏ" của thế giới.
+    </p>
+
+    <h3>Venezuela và Canada — những gã khổng lồ dầu nặng</h3>
+    <p>
+      Theo tiêu chí trữ lượng dầu được xác minh bao gồm cả dầu thông thường lẫn dầu siêu nặng
+      và cát dầu (oil sands), Venezuela hiện có trữ lượng được xác minh lớn nhất thế giới —
+      khoảng ba trăm tỷ thùng, vượt qua cả Saudi Arabia. Tuy nhiên, phần lớn trữ lượng này nằm
+      ở vành đai dầu siêu nặng Orinoco, một dạng dầu có độ nhớt rất cao, cần phải được pha
+      loãng hoặc nâng cấp trước khi có thể đưa vào nhà máy lọc dầu thông thường — khiến chi
+      phí khai thác cao hơn đáng kể so với dầu thông thường ở Trung Đông. Canada, với các bể
+      cát dầu Athabasca khổng lồ ở tỉnh Alberta, cũng nằm trong nhóm có trữ lượng lớn nhất
+      thế giới theo cách tính tương tự, nhưng đây là nguồn tài nguyên có tác động môi trường
+      đặc biệt lớn trong quá trình khai thác — một chủ đề sẽ được đề cập ở chương mười một.
+    </p>
+
+    <h3>Nga, Hoa Kỳ và biên giới của dầu phi truyền thống</h3>
+    <p>
+      Nga là nhà sản xuất và xuất khẩu dầu thô hàng đầu thế giới trong nhiều thập kỷ, với các
+      mỏ dầu lớn trải dài từ Siberia phía Tây đến vùng Siberia Đông và bán đảo Sakhalin. Dầu
+      mỏ và khí thiên nhiên chiếm tỷ trọng rất lớn trong tổng thu nhập ngân sách Nga — một điều
+      đặt nền kinh tế nước này vào trạng thái dễ tổn thương đặc biệt với các biến động giá dầu
+      và các lệnh trừng phạt quốc tế. Hoa Kỳ, nhờ cuộc cách mạng dầu đá phiến đã mô tả ở
+      chương ba, hiện là nhà sản xuất dầu thô lớn nhất thế giới, với sản lượng tập trung chủ
+      yếu ở các bể Permian (Texas và New Mexico), Eagle Ford (Texas) và Bakken (North Dakota).
+    </p>
+    <p>
+      Châu Phi — đặc biệt là khu vực Tây Phi với Nigeria, Angola và Gabon, cùng với các phát
+      hiện mới gần đây ở Đông Phi như Tanzania và Mozambique — cũng là khu vực có tiềm năng
+      dầu khí đáng kể, dù thường gắn với những thách thức về quản trị và tham nhũng. Đông Nam
+      Á, với các bể dầu ngoài khơi ở vùng biển giữa Indonesia, Malaysia và Brunei, từng là
+      khu vực sản xuất lớn nhưng các mỏ truyền thống đã qua đỉnh sản lượng; các phát hiện mới
+      hơn ở Biển Đông đang là đối tượng của tranh chấp lãnh hải phức tạp.
+    </p>
+
+    <h3>Vì sao một số khu vực lại ít dầu hơn?</h3>
+    <p>
+      Các khu vực địa chất ít có dầu mỏ thường thiếu ít nhất một trong những điều kiện cần thiết
+      đã mô tả ở chương một. Các vùng nền cổ (cratons) — như phần lớn diện tích lục địa châu
+      Phi, Tây Úc hay vùng nội địa châu Âu — là những khối địa chất đã ổn định hàng tỷ năm,
+      không có các bể trầm tích sâu từ kỷ Mesozoi phù hợp để sinh dầu, hoặc nếu có thì quá trình
+      biến chất đã phá hủy kerogen trước khi nó kịp chuyển hóa thành dầu. Các vùng núi trẻ như
+      dãy Alps hay Himalaya đã trải qua các quá trình kiến tạo mạnh mẽ có thể phá vỡ các cấu
+      trúc bẫy dầu, khiến dầu thoát ra trước khi được tích lũy đủ lớn để khai thác thương mại.
+      Tóm lại, dầu mỏ tập trung ở nơi nào lịch sử địa chất hội tụ đủ các yếu tố thuận lợi —
+      và đây là một "di sản địa chất" mà không một chính sách năng lượng hay sức mạnh kinh tế
+      nào có thể tạo ra được từ đầu.
+    </p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Khu vực / Quốc gia</th>
+            <th>Trữ lượng xác minh (tỷ thùng, ước tính)</th>
+            <th>Tỷ lệ toàn cầu</th>
+            <th>Đặc điểm địa chất chính</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Venezuela</td><td class="num">≈ 300</td><td class="num">≈ 17%</td><td>Dầu siêu nặng vành đai Orinoco</td></tr>
+          <tr><td>Saudi Arabia</td><td class="num">≈ 267</td><td class="num">≈ 15%</td><td>Dầu thông thường nhẹ, mỏ Ghawar</td></tr>
+          <tr><td>Iran</td><td class="num">≈ 208</td><td class="num">≈ 12%</td><td>Bể trầm tích Zagros, Biển Caspi</td></tr>
+          <tr><td>Iraq</td><td class="num">≈ 145</td><td class="num">≈ 8%</td><td>Bể Mesopotamian, mỏ Rumaila, Kirkuk</td></tr>
+          <tr><td>Canada</td><td class="num">≈ 170</td><td class="num">≈ 10%</td><td>Cát dầu Athabasca (Alberta)</td></tr>
+          <tr><td>Nga</td><td class="num">≈ 80</td><td class="num">≈ 5%</td><td>Siberia Tây, Siberia Đông</td></tr>
+          <tr><td>Hoa Kỳ</td><td class="num">≈ 68</td><td class="num">≈ 4%</td><td>Permian, Bakken, Eagle Ford (dầu đá phiến)</td></tr>
+          <tr><td>Kuwait &amp; UAE</td><td class="num">≈ 100</td><td class="num">≈ 6%</td><td>Bể vùng Vịnh Ba Tư</td></tr>
+          <tr><td>Phần còn lại</td><td class="num">≈ 400</td><td class="num">≈ 23%</td><td>Nigeria, Libya, Kazakhstan, Brazil, v.v.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:0.85rem;color:var(--ink-dim);margin-top:-1rem;">
+      Lưu ý: Các con số trên là ước tính tổng hợp từ nhiều nguồn và có thể thay đổi theo kết quả thăm dò mới, phương pháp tính và định nghĩa về "trữ lượng xác minh" — đặc biệt là đối với dầu phi truyền thống.
+    </p>
+
+    <div class="pull">
+      <span class="pull-label">Nghịch lý địa lý</span>
+      Một trong những điểm đáng chú ý nhất của bản đồ dầu mỏ thế giới là sự mất cân đối hoàn
+      toàn giữa nơi dầu được tìm thấy và nơi dầu được tiêu thụ nhiều nhất. Hoa Kỳ, Trung Quốc
+      và châu Âu là những nền kinh tế tiêu thụ dầu mỏ lớn nhất thế giới, nhưng không một khu
+      vực nào trong số này có đủ nguồn dầu nội địa để tự cung cấp. Trung Đông — nơi nắm giữ
+      phần lớn trữ lượng — lại tiêu thụ rất ít so với lượng họ sản xuất. Sự bất cân đối này là
+      nền tảng của toàn bộ hệ thống thương mại dầu mỏ quốc tế và phần lớn những căng thẳng địa
+      chính trị gắn với dầu mỏ mà chương năm đã mô tả.
+    </div>
+  </section>
+
+  <!-- ================= CHAPTER 7 ================= -->
+  <section class="chapter" id="c7">
+    <div class="strata">
+      <span style="flex:3; background:#0d1a2e;"></span>
+      <span style="flex:4; background:#1e3a5f;"></span>
+      <span style="flex:5; background:#5b9090;"></span>
+      <span style="flex:6; background:#d9a24b;"></span>
+      <span style="flex:3; background:#8b4226;"></span>
+      <span style="flex:2; background:#ece2d0;"></span>
+    </div>
+    <div class="chapter-eyebrow">Lớp 07 · Phân tích hóa học</div>
+    <h2>Các loại dầu mỏ và sự khác biệt về chất lượng</h2>
+    <p class="chapter-dek">
+      Không phải tất cả dầu mỏ đều giống nhau — và sự khác biệt về chất lượng có thể tạo ra
+      chênh lệch hàng chục đô-la mỗi thùng, cũng như quyết định nhà máy lọc dầu nào có thể
+      xử lý được loại dầu đó.
+    </p>
+
+    <h3>Hai thước đo cơ bản: tỷ trọng API và hàm lượng lưu huỳnh</h3>
+    <p>
+      Dầu thô được phân loại chủ yếu dựa trên hai đặc tính: tỷ trọng API (American Petroleum
+      Institute gravity) — một thước đo độ nhẹ hay nặng của dầu so với nước — và hàm lượng
+      lưu huỳnh, thể hiện mức độ "ngọt" hay "chua" của dầu. Hai tiêu chí này không chỉ phản
+      ánh thành phần hóa học của dầu mà còn quyết định trực tiếp đến giá trị thương mại và
+      công nghệ lọc dầu cần thiết.
+    </p>
+    <p>
+      Tỷ trọng API được tính theo công thức dựa trên tỷ trọng tương đối của dầu so với nước
+      ở điều kiện tiêu chuẩn. Dầu có chỉ số API cao hơn thì nhẹ hơn (ít đặc hơn), nhiều phần
+      trăm các thành phần hydrocarbon nhẹ có giá trị hơn như xăng và dầu hỏa, do đó thường
+      được định giá cao hơn. Ngược lại, dầu có chỉ số API thấp — dầu nặng hoặc siêu nặng —
+      chứa nhiều thành phần nặng, có độ nhớt cao, khó bơm và cần nhiều năng lượng hơn để lọc.
+    </p>
+
+    <h3>Dầu nhẹ ngọt (light sweet crude) — tiêu chuẩn vàng của ngành lọc dầu</h3>
+    <p>
+      Dầu nhẹ ngọt — chỉ số API thường trên ba mươi lăm, hàm lượng lưu huỳnh dưới nửa phần
+      trăm theo khối lượng — là loại dầu được thị trường ưa chuộng nhất vì cho ra tỷ lệ cao
+      các sản phẩm có giá trị cao như xăng, dầu hỏa và dầu diesel khi qua chưng cất phân đoạn
+      đơn giản, đồng thời yêu cầu ít công đoạn xử lý lưu huỳnh (desulfurization) hơn — một
+      bước tốn kém trong công nghệ lọc dầu hiện đại.
+    </p>
+    <p>
+      <strong>Dầu Brent</strong> — khai thác từ vùng biển Bắc ngoài khơi Anh và Na Uy — là
+      chuẩn giá tham chiếu quan trọng nhất cho thị trường dầu quốc tế, đặc biệt đối với châu
+      Âu, châu Phi và phần lớn châu Á. Là loại dầu nhẹ ngọt điển hình với chỉ số API khoảng
+      ba mươi tám và hàm lượng lưu huỳnh khoảng nửa phần trăm, giá dầu Brent được dùng để
+      định giá khoảng hai phần ba tổng lượng dầu giao dịch toàn cầu.
+    </p>
+    <p>
+      <strong>Dầu WTI</strong> (West Texas Intermediate) — khai thác chủ yếu ở Texas và New
+      Mexico — là chuẩn giá tham chiếu chính của thị trường Bắc Mỹ và thị trường hàng hóa
+      phái sinh tại Sở Giao dịch Hàng hóa New York (NYMEX). Với chỉ số API khoảng bốn mươi
+      và hàm lượng lưu huỳnh khoảng ba mươi phần trăm nghìn — một trong những loại dầu ngọt
+      nhất — WTI thường giao dịch ở mức giá xấp xỉ hoặc đôi khi cao hơn Brent một chút, dù
+      chênh lệch này biến động tùy theo điều kiện vận chuyển và cung cầu khu vực.
+    </p>
+    <p>
+      <strong>Arab Light</strong> của Saudi Arabia — loại dầu chiếm tỷ lệ lớn trong xuất khẩu
+      của nước này — có chỉ số API khoảng ba mươi ba và hàm lượng lưu huỳnh khoảng một phần
+      tám phần trăm, được phân loại là dầu trung bình hơi chua. Đây là loại dầu mà phần lớn
+      các nhà máy lọc dầu châu Á — đặc biệt là ở Hàn Quốc, Nhật Bản và Ấn Độ — được thiết
+      kế để xử lý.
+    </p>
+
+    <h3>Dầu nặng, dầu siêu nặng và cát dầu</h3>
+    <p>
+      Dầu nặng và siêu nặng — có chỉ số API dưới hai mươi hoặc thậm chí dưới mười — là những
+      loại dầu gần như sệt đặc ở điều kiện nhiệt độ phòng, giống hắc ín hơn là chất lỏng thông
+      thường. Dầu siêu nặng tập trung chủ yếu ở vành đai Orinoco của Venezuela. Cát dầu
+      (oil sands hay tar sands) của Canada là dạng cực đoan nhất: bitum được trộn lẫn vào
+      cát và đất sét, cần phải được đào bới từ bề mặt (khai thác lộ thiên) hoặc bơm hơi nóng
+      xuống lòng đất để làm loãng trước khi có thể bơm lên. Chi phí khai thác cao hơn đáng kể
+      so với dầu thông thường, và lượng khí nhà kính phát thải trong quá trình khai thác cũng
+      lớn hơn nhiều.
+    </p>
+
+    <h3>Dầu chua và sự cần thiết của xử lý lưu huỳnh</h3>
+    <p>
+      Hàm lượng lưu huỳnh cao — thường trên nửa phần trăm, và đôi khi lên đến hai đến ba phần
+      trăm ở một số loại dầu Trung Đông và Nga — tạo ra nhiều vấn đề trong cả lọc dầu lẫn sử
+      dụng sản phẩm cuối. Khi đốt cháy, hợp chất lưu huỳnh tạo ra khí sulfur dioxide gây mưa
+      axit và ô nhiễm không khí. Các quy định môi trường ngày càng nghiêm ngặt tại châu Âu và
+      nhiều khu vực khác đã buộc các nhà máy lọc dầu phải đầu tư vào công nghệ khử lưu huỳnh
+      (hydrodesulfurization), và điều này trực tiếp tạo ra mức chiết khấu giá cho các loại
+      dầu chua so với dầu ngọt cùng tỷ trọng.
+    </p>
+
+    <h3>Dầu đá phiến — cuộc cách mạng về cả loại hình lẫn công nghệ</h3>
+    <p>
+      Dầu đá phiến (shale oil hay tight oil) về mặt hóa học thường là loại dầu nhẹ, thậm chí
+      rất nhẹ và rất ngọt — như dầu từ bể Bakken có chỉ số API thường trên bốn mươi hai. Điều
+      khác biệt chính không phải ở chất lượng hóa học mà ở phương pháp khai thác: dầu đá phiến
+      không tập trung trong các bẫy dầu truyền thống mà thấm rải rác trong các tầng đá có độ
+      thấm rất thấp, đòi hỏi kỹ thuật khoan ngang kết hợp nứt vỉa thủy lực để giải phóng dầu.
+      Sự xuất hiện ồ ạt của dầu nhẹ ngọt từ đá phiến của Hoa Kỳ từ khoảng năm 2010 đã tạo ra
+      tình trạng dư thừa loại dầu nhẹ, khiến chênh lệch giá giữa dầu nhẹ và dầu nặng biến động
+      mạnh và gây ra những khó khăn nhất định cho các nhà máy lọc dầu được thiết kế để xử lý
+      dầu nặng truyền thống từ Trung Đông và Canada.
+    </p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Phân loại</th>
+            <th>Chỉ số API</th>
+            <th>Lưu huỳnh</th>
+            <th>Ví dụ tiêu biểu</th>
+            <th>Giá trị tương đối</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Siêu nhẹ / Condensate</td><td class="num">&gt; 45°</td><td class="num">Rất thấp</td><td>WTI (biến thể nhẹ nhất), Eagle Ford</td><td>Cao, nhưng phụ thuộc nhà máy</td></tr>
+          <tr><td>Nhẹ ngọt</td><td class="num">35 – 45°</td><td class="num">&lt; 0.5%</td><td>Brent, WTI, Saharan Blend</td><td>Cao nhất (chuẩn thị trường)</td></tr>
+          <tr><td>Trung bình</td><td class="num">25 – 35°</td><td class="num">0.5 – 1.5%</td><td>Arab Light, Urals (Nga)</td><td>Trung bình</td></tr>
+          <tr><td>Nặng chua</td><td class="num">10 – 25°</td><td class="num">&gt; 1.5%</td><td>Maya (Mexico), Basra Heavy (Iraq)</td><td>Chiết khấu đáng kể</td></tr>
+          <tr><td>Siêu nặng / Dầu đá</td><td class="num">&lt; 10°</td><td class="num">Cao</td><td>Dầu Orinoco (Venezuela), cát dầu Alberta</td><td>Thấp nhất; chi phí khai thác cao</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Ý nghĩa thực tiễn của sự phân loại — tại sao không phải mọi nhà máy lọc dầu đều xử lý được mọi loại dầu</h3>
+    <p>
+      Sự khác biệt về loại dầu có ý nghĩa thực tiễn rất lớn đối với chuỗi cung ứng toàn cầu. Một
+      nhà máy lọc dầu được thiết kế để xử lý dầu nặng chua từ Venezuela hay Iraq cần hệ thống
+      cracker chuyên sâu và thiết bị khử lưu huỳnh đặc biệt — đầu tư có thể lên đến hàng tỷ đô-la.
+      Nhà máy đó không thể tối ưu hóa công suất khi nhận dầu nhẹ ngọt từ Libya hay đá phiến Mỹ,
+      vì các thiết bị xử lý nặng sẽ không được sử dụng đúng công suất. Ngược lại, một nhà máy
+      lọc dầu đơn giản chỉ được trang bị cho dầu nhẹ ngọt sẽ không có khả năng xử lý dầu nặng
+      một cách hiệu quả về kinh tế.
+    </p>
+    <p>
+      Điều này giải thích tại sao, ngay cả khi có sự thay đổi lớn về nguồn cung — ví dụ khi sản
+      lượng dầu nhẹ ngọt của Mỹ tăng đột biến trong giai đoạn cách mạng đá phiến — không phải
+      tất cả các nhà máy lọc dầu trên thế giới đều có thể hưởng lợi ngay lập tức. Nhiều nhà máy
+      lọc dầu lớn tại châu Á, vốn được thiết kế để xử lý dầu Arab nặng vừa từ Saudi Arabia, cần
+      phải đầu tư lại đáng kể hoặc tìm kiếm nguồn pha trộn thích hợp nếu muốn chuyển sang xử lý
+      nhiều dầu nhẹ hơn. Sự "không khớp" giữa đặc tính của nguồn dầu sẵn có và năng lực xử lý
+      của hệ thống lọc dầu toàn cầu là một yếu tố quan trọng — và thường bị bỏ qua — trong các
+      phân tích về thị trường dầu mỏ.
+    </p>
+  </section>
+
+  <!-- ================= CHAPTER 8 ================= -->
+  <section class="chapter" id="c8">
+    <div class="strata">
+      <span style="flex:5; background:#0d1a2e;"></span>
+      <span style="flex:4; background:#1a3a6e;"></span>
+      <span style="flex:6; background:#2a5a9e;"></span>
+      <span style="flex:3; background:#d9a24b;"></span>
+      <span style="flex:4; background:#bd5b33;"></span>
+      <span style="flex:2; background:#5b9090;"></span>
+    </div>
+    <div class="chapter-eyebrow">Lớp 08 · Tiền tệ và quyền lực</div>
+    <h2>Petrodollar — sự thật phía sau "đồng đô la dầu mỏ"</h2>
+    <p class="chapter-dek">
+      Ít khái niệm nào trong lĩnh vực kinh tế và địa chính trị bị hiểu sai nhiều như
+      "petrodollar" — một thuật ngữ vừa phản ánh một thực tế kinh tế có thật, vừa bị bao
+      phủ bởi nhiều lớp huyền thoại và thuyết âm mưu.
+    </p>
+
+    <h3>Xuất phát điểm: từ Bretton Woods đến cú sốc Nixon</h3>
+    <p>
+      Để hiểu hệ thống petrodollar, cần bắt đầu từ hệ thống tiền tệ quốc tế được thiết lập sau
+      Thế chiến thứ hai tại hội nghị Bretton Woods năm 1944. Trong hệ thống này, đồng đô-la Mỹ
+      được neo vào vàng theo tỷ lệ cố định (ba mươi lăm đô-la một ounce vàng), và các đồng tiền
+      khác được neo vào đô-la. Hoa Kỳ — nền kinh tế lớn nhất thế giới, chủ nợ lớn nhất, và nắm
+      giữ phần lớn dự trữ vàng thế giới — là cường quốc tự nhiên đứng sau hệ thống này.
+    </p>
+    <p>
+      Tuy nhiên, đến cuối những năm 1960 và đầu 1970, chi phí của Chiến tranh Việt Nam và các
+      chương trình xã hội lớn buộc Hoa Kỳ phải in nhiều đô-la hơn so với lượng vàng dự trữ.
+      Năm 1971, Tổng thống Nixon chấm dứt khả năng chuyển đổi đô-la thành vàng — một quyết định
+      thường được gọi là "Nixon Shock" — chính thức kết thúc hệ thống Bretton Woods và đưa thế
+      giới vào kỷ nguyên tỷ giá hối đoái thả nổi.
+    </p>
+
+    <h3>Thỏa thuận Hoa Kỳ – Saudi Arabia và sự ra đời của hệ thống petrodollar</h3>
+    <p>
+      Ngay sau cú sốc dầu mỏ năm 1973, Ngoại trưởng Hoa Kỳ Henry Kissinger và Bộ trưởng Tài
+      chính William Simon dẫn đầu nhiều vòng đàm phán với Saudi Arabia, kết thúc vào năm 1974
+      bằng một loạt thỏa thuận song phương. Theo các thỏa thuận được công bố và tái hiện qua
+      nhiều nguồn lịch sử, Saudi Arabia đồng ý định giá dầu xuất khẩu của mình bằng đô-la Mỹ
+      và tái đầu tư phần lớn doanh thu dầu mỏ dư thừa vào trái phiếu kho bạc Hoa Kỳ và các
+      tài sản bằng đô-la. Đổi lại, Hoa Kỳ cam kết cung cấp bảo đảm an ninh — bao gồm bảo vệ
+      quân sự — cho chế độ Saudi. Sau đó, các nước OPEC khác cũng tiếp bước áp dụng quy ước
+      định giá dầu bằng đô-la.
+    </p>
+    <p>
+      Hệ quả của thỏa thuận này là: vì dầu mỏ — thứ mà gần như tất cả các nền kinh tế đều cần
+      — được mua bán bằng đô-la, các nước trên thế giới phải duy trì dự trữ đô-la đáng kể để
+      nhập khẩu năng lượng. Điều này tạo ra và duy trì một nhu cầu cấu trúc toàn cầu đối với
+      đồng đô-la, giúp Hoa Kỳ duy trì vị thế đồng tiền dự trữ thế giới và có thể vay với lãi
+      suất thấp hơn so với các nước khác — lợi thế mà nhà kinh tế Pháp Valéry Giscard d'Estaing
+      từng gọi là "đặc quyền thái quá" của Hoa Kỳ.
+    </p>
+
+    <h3>Đâu là sự thật, đâu là huyền thoại?</h3>
+    <p>
+      Thuật ngữ "petrodollar" và hệ thống đi kèm với nó thường bị thổi phồng hoặc diễn giải
+      sai trong nhiều luận điểm phổ biến trên mạng và trong một số tài liệu chính trị. Dưới đây
+      là một số điểm cần làm rõ dựa trên bằng chứng kinh tế và lịch sử hiện có.
+    </p>
+    <p>
+      <strong>Thực tế có căn cứ:</strong> Dầu mỏ quốc tế phần lớn được định giá và giao dịch bằng
+      đô-la Mỹ. Điều này tạo ra nhu cầu cấu trúc đối với đô-la và giúp Hoa Kỳ hưởng lợi từ
+      vai trò đồng tiền dự trữ thế giới. Các nước xuất khẩu dầu thu về lượng lớn đô-la và tái
+      đầu tư vào tài sản Mỹ — đặc biệt là trái phiếu kho bạc. Cơ chế này là thật và có thể
+      đo lường được.
+    </p>
+    <p>
+      <strong>Bị phóng đại hoặc hiểu sai:</strong> Nhiều phiên bản "petrodollar" được lưu truyền
+      mô tả một hợp đồng bí mật, ràng buộc tuyệt đối, trong đó Saudi Arabia "phải" bán dầu bằng
+      đô-la theo một thỏa thuận pháp lý cứng nhắc, và bất kỳ quốc gia nào cố thoát khỏi hệ
+      thống này đều ngay lập tức bị Hoa Kỳ trừng phạt quân sự — điển hình là luận điểm cho
+      rằng chính việc Iraq và Libya muốn bán dầu bằng đồng tiền khác đô-la đã dẫn đến các cuộc
+      can thiệp quân sự vào hai nước này. Bằng chứng lịch sử cho thấy bức tranh phức tạp hơn
+      nhiều: quyết định can thiệp quân sự vào Iraq và Libya có nhiều nguyên nhân và động lực,
+      và mối liên hệ nhân quả trực tiếp từ "đe dọa petrodollar" đến can thiệp quân sự là một
+      đơn giản hóa quá mức mà các nhà nghiên cứu kinh tế học lịch sử chủ đạo không xem là
+      giải thích chính xác hay đủ.
+    </p>
+    <p>
+      Ngoài ra, một số đồng tiền khác đã và đang được sử dụng trong các hợp đồng dầu mỏ song
+      phương — ví dụ đồng nhân dân tệ trong giao dịch giữa Trung Quốc và một số nước xuất
+      khẩu dầu, đặc biệt là từ sau năm 2022 khi Nga cần tìm cách lách các lệnh trừng phạt.
+      Điều này không làm sụp đổ hệ thống petrodollar, nhưng cho thấy hệ thống này không phải
+      là bất biến hay hoàn toàn cứng nhắc.
+    </p>
+
+    <h3>Petrodollar tái tuần hoàn — vòng quay tài chính toàn cầu</h3>
+    <p>
+      Một khía cạnh ít được công luận biết đến nhưng quan trọng về mặt kinh tế là cơ chế "tái
+      tuần hoàn petrodollar" (petrodollar recycling). Khi giá dầu tăng cao, các nước xuất khẩu
+      dầu thu về lượng đô-la lớn hơn mức họ có thể tiêu dùng ngay lập tức. Số dô-la dư thừa
+      này phần lớn được đầu tư trở lại vào hệ thống tài chính toàn cầu — chủ yếu qua việc mua
+      trái phiếu Kho bạc Hoa Kỳ, đầu tư vào cổ phiếu và bất động sản tại các nền kinh tế phát
+      triển, hoặc thông qua các quỹ tài sản quốc gia. Điều này có nghĩa là các cú sốc giá dầu
+      không chỉ là câu chuyện năng lượng mà còn là câu chuyện tài chính: tiền chảy từ các nền
+      kinh tế tiêu dùng vào các nước xuất khẩu dầu, rồi một phần lớn chảy trở lại vào hệ thống
+      tài chính phương Tây theo các kênh khác nhau.
+    </p>
+
+    <h3>Tương lai của hệ thống petrodollar</h3>
+    <p>
+      Sự trỗi dậy của Trung Quốc như là nước nhập khẩu dầu lớn nhất thế giới, tham vọng của
+      Bắc Kinh trong việc quốc tế hóa đồng nhân dân tệ, và sức ép từ các lệnh trừng phạt đối
+      với Nga đang tạo ra áp lực nhất định lên hệ thống đô-la dầu mỏ. Tuy nhiên, việc thay
+      thế đô-la bằng một đồng tiền khác trong giao dịch dầu mỏ toàn cầu là một quá trình cực
+      kỳ phức tạp — đòi hỏi không chỉ là quyết định chính trị mà còn là sự tồn tại của một
+      hệ thống tài chính quốc tế đủ sâu, đủ thanh khoản và đủ tin cậy để thay thế. Tính đến
+      giữa năm 2026, đô-la Mỹ vẫn chiếm tỷ lệ áp đảo trong giao dịch dầu mỏ quốc tế, nhưng
+      phần ngoại lệ đang dần lớn hơn.
+    </p>
+
+    <div class="pull">
+      <span class="pull-label">Tóm lược</span>
+      Petrodollar là thật — nhưng là một thực tế kinh tế và địa chính trị phức tạp, không phải
+      một âm mưu toàn diện hay một hợp đồng bất biến. Nó đang thay đổi chậm chạp theo sự dịch
+      chuyển của quyền lực kinh tế toàn cầu — và quá trình thay đổi đó chính nó cũng là một
+      trong những câu chuyện lớn của địa chính trị thế kỷ hai mươi mốt.
+    </div>
+  </section>
+
+  <!-- ================= CHAPTER 9 ================= -->
+  <section class="chapter" id="c9">
+    <div class="strata">
+      <span style="flex:4; background:#1a2a1a;"></span>
+      <span style="flex:3; background:#2d5a2d;"></span>
+      <span style="flex:5; background:#5b8a5b;"></span>
+      <span style="flex:4; background:#d9a24b;"></span>
+      <span style="flex:3; background:#bd5b33;"></span>
+      <span style="flex:5; background:#5b9090;"></span>
+    </div>
+    <div class="chapter-eyebrow">Lớp 09 · Hiện tại và tương lai</div>
+    <h2>Ngành dầu mỏ hôm nay và con đường phía trước</h2>
+    <p class="chapter-dek">
+      Ngành dầu mỏ năm 2026 đang đối mặt đồng thời với một cuộc khủng hoảng địa chính trị
+      nghiêm trọng tại eo biển Hormuz và một quá trình chuyển đổi cơ cấu năng lượng toàn cầu
+      chưa từng có tiền lệ.
+    </p>
+
+    <h3>Cú sốc Hormuz năm 2026 và hậu quả thị trường</h3>
+    <p>
+      Cuộc xung đột giữa Hoa Kỳ – Israel và Iran bùng phát vào tháng hai năm 2026 đã tạo ra
+      một trong những cú sốc nguồn cung dầu mỏ nghiêm trọng nhất trong lịch sử hiện đại. Trong
+      những tuần đầu của cuộc xung đột, khi Iran tuyên bố "đóng cửa" eo biển Hormuz và tiến
+      hành các vụ tấn công vào tàu chở dầu cùng các cơ sở năng lượng trong vùng Vịnh, giá dầu
+      Brent tăng vọt. Các nước tiêu thụ lớn như Nhật Bản, Hàn Quốc và Ấn Độ — vốn phụ thuộc
+      rất nhiều vào dầu mỏ từ vùng Vịnh vận chuyển qua Hormuz — phải kích hoạt dự trữ chiến
+      lược và tìm kiếm nguồn cung thay thế.
+    </p>
+    <p>
+      Hoa Kỳ và các đồng minh phương Tây đã giải phóng một phần kho dự trữ dầu chiến lược để
+      ổn định thị trường, đồng thời tăng cường hoạt động hộ tống hải quân cho các tàu chở dầu
+      còn dám hoạt động trong khu vực. Sau một số tuần gián đoạn nghiêm trọng, với sự leo thang
+      và hạ nhiệt xen kẽ, các tuyến vận chuyển dần được tái lập một phần — dù căng thẳng vẫn
+      duy trì ở mức cao và nhiều hãng bảo hiểm vận tải biển tiếp tục áp mức phí rủi ro chiến
+      tranh đặc biệt cao. Đến tháng sáu năm 2026, thị trường dầu vẫn đang giao dịch với mức
+      "phần bù rủi ro địa chính trị" đáng kể so với các điều kiện bình thường, và tình hình
+      tại Trung Đông vẫn còn nhiều bất ổn chưa được giải quyết.
+    </p>
+
+    <h3>OPEC+ trong kỷ nguyên nhiều biến số</h3>
+    <p>
+      Liên minh OPEC+, bao gồm các thành viên OPEC truyền thống và Nga cùng một số nước sản
+      xuất lớn khác, tiếp tục là công cụ điều tiết nguồn cung chính của thị trường dầu thế
+      giới. Tuy nhiên, liên minh này ngày càng khó duy trì sự đồng thuận trong bối cảnh nhu
+      cầu nội địa tăng mạnh của một số thành viên, áp lực của các lệnh trừng phạt lên Nga và
+      Iran, và nhu cầu duy trì doanh thu trong khi đối mặt với triển vọng dài hạn không chắc
+      chắn của dầu mỏ.
+    </p>
+
+    <h3>Làn sóng chuyển đổi năng lượng — thực tế và tốc độ</h3>
+    <p>
+      Cuộc chuyển đổi từ nhiên liệu hóa thạch sang năng lượng tái tạo đang diễn ra ở nhiều
+      nền kinh tế, nhưng tốc độ và mức độ của sự chuyển đổi này không đồng đều và không đủ
+      nhanh để thay thế ngay nhu cầu dầu mỏ toàn cầu. Ở các nền kinh tế phát triển — đặc biệt
+      là châu Âu — tỷ lệ xe điện tăng nhanh, chi phí năng lượng mặt trời và gió giảm mạnh trong
+      một thập kỷ qua, và nhiều nước đặt mục tiêu giảm phụ thuộc vào dầu mỏ nhập khẩu. Tuy
+      nhiên, ở các nền kinh tế mới nổi và đang phát triển — chiếm phần lớn tăng trưởng dân số
+      và kinh tế toàn cầu — nhu cầu về dầu diesel, dầu mazut và nhiên liệu hàng không vẫn tiếp
+      tục tăng, bù đắp cho sự giảm sút tại các nền kinh tế phát triển.
+    </p>
+    <p>
+      Theo nhiều dự báo từ Cơ quan Năng lượng Quốc tế và các tổ chức nghiên cứu năng lượng,
+      nhu cầu dầu toàn cầu có thể đạt đỉnh trong khoảng những năm 2030 trong kịch bản chuyển
+      đổi năng lượng tương đối thuận lợi — nhưng dù đạt đỉnh, nhu cầu vẫn sẽ duy trì ở mức
+      cao trong nhiều thập kỷ sau đó, đặc biệt trong các lĩnh vực như hóa dầu (nguyên liệu
+      cho nhựa, phân bón và hóa chất), vận tải biển và hàng không mà việc điện khí hóa còn
+      rất hạn chế về mặt công nghệ.
+    </p>
+
+    <h3>Dầu đá phiến và năng lực sản xuất của Hoa Kỳ</h3>
+    <p>
+      Hoa Kỳ vẫn là nước sản xuất dầu thô lớn nhất thế giới, và ngành dầu đá phiến tiếp tục
+      đóng vai trò điều tiết thị trường: khi giá dầu tăng cao, các công ty dầu đá phiến nhanh
+      chóng mở thêm giàn khoan để tăng sản lượng; khi giá giảm thấp, họ thu hẹp hoạt động.
+      Tính linh hoạt này khác biệt hoàn toàn so với các dự án dầu ngoài khơi sâu hay dầu cát,
+      vốn đòi hỏi đầu tư vốn khổng lồ và vài năm chuẩn bị trước khi cho ra sản lượng.
+    </p>
+
+    <h3>Những vấn đề cốt lõi của ngành dầu mỏ đến năm 2030 và xa hơn</h3>
+    <p>
+      Ngành dầu mỏ toàn cầu đang phải đồng thời quản lý nhiều sức ép đối lập: nhu cầu đầu tư
+      vào các mỏ mới để duy trì sản lượng bù đắp cho các mỏ cũ đang cạn kiệt tự nhiên; áp lực
+      từ các nhà đầu tư và quy định pháp lý yêu cầu giảm phát thải carbon; nguy cơ "tài sản bị
+      mắc kẹt" nếu các chính sách khí hậu làm giảm nhu cầu nhanh hơn dự kiến; và đồng thời
+      là nhu cầu vẫn đang tăng thực tế từ các nền kinh tế đang phát triển. Bức tranh phức tạp
+      này làm cho "tương lai của dầu mỏ" không phải là một câu hỏi có câu trả lời rõ ràng, mà
+      là một vùng bất định phụ thuộc vào tốc độ phát triển công nghệ, quyết định chính sách
+      và biến động địa chính trị — tất cả đang thay đổi rất nhanh.
+    </p>
+
+    <h3>Hydrogen, amoniac và kỷ nguyên nhiên liệu sạch — cạnh tranh hay bổ sung?</h3>
+    <p>
+      Một trong những câu hỏi chiến lược cho ngành năng lượng trong những thập kỷ tới là liệu
+      hydrogen — đặc biệt là "hydrogen xanh" được tạo ra bằng cách điện phân nước dùng điện từ
+      năng lượng tái tạo — có thể thay thế dầu mỏ trong các lĩnh vực khó điện khí hóa như vận
+      tải hàng không, vận tải biển và sản xuất thép hay không. Nhiều chính phủ và công ty năng
+      lượng lớn đang rót hàng chục tỷ đô-la vào nghiên cứu và phát triển hydrogen xanh và
+      amoniac xanh (sản xuất từ hydrogen xanh). Tuy nhiên, thách thức về chi phí sản xuất, lưu
+      trữ và vận chuyển hydrogen vẫn còn rất lớn, và đa số các nhà phân tích năng lượng cho
+      rằng dầu mỏ và các sản phẩm từ dầu sẽ vẫn đóng vai trò quan trọng trong ít nhất hai đến
+      ba thập kỷ nữa, ngay cả trong các kịch bản chuyển đổi năng lượng tham vọng nhất.
+    </p>
+    <p>
+      Một thực tế đáng chú ý là chính các tập đoàn dầu khí lớn — ExxonMobil, Shell, BP, Total —
+      đang là những nhà đầu tư lớn vào năng lượng tái tạo và hydrogen, một phần vì họ nhận ra
+      áp lực dài hạn từ quá trình chuyển đổi, một phần vì các kỹ năng kỹ thuật về khai thác,
+      vận chuyển và phân phối năng lượng của họ có thể chuyển sang các lĩnh vực mới. Ngành dầu
+      mỏ không đứng ngoài cuộc chuyển đổi mà đang dần biến đổi từ bên trong — dù tốc độ và
+      quy mô của sự biến đổi này còn là chủ đề tranh luận sôi nổi.
+    </p>
+
+    <div class="pull">
+      <span class="pull-label">Câu hỏi không có câu trả lời đơn giản</span>
+      Ngành dầu mỏ không đang "chết" — nhu cầu toàn cầu vẫn ở mức cao và sẽ còn duy trì trong
+      nhiều thập kỷ tới. Nhưng nó cũng không còn là ngành tăng trưởng vô tận của thế kỷ hai
+      mươi. Ngành đang ở giai đoạn chuyển đổi đặc biệt phức tạp — vừa không thể thiếu trong
+      hiện tại, vừa mang nhiều rủi ro dài hạn. Đây là điều chưa từng xảy ra trong hơn một thế
+      kỷ rưỡi lịch sử của dầu mỏ hiện đại.
+    </div>
+  </section>
+
+  <!-- ================= CHAPTER 10 ================= -->
+  <section class="chapter" id="c10">
+    <div class="strata">
+      <span style="flex:3; background:#2a1a0a;"></span>
+      <span style="flex:4; background:#5e3a21;"></span>
+      <span style="flex:5; background:#8b6234;"></span>
+      <span style="flex:6; background:#d9a24b;"></span>
+      <span style="flex:3; background:#ece2d0;"></span>
+      <span style="flex:3; background:#5b9090;"></span>
+    </div>
+    <div class="chapter-eyebrow">Lớp 10 · Tác động kinh tế và xã hội</div>
+    <h2>Dầu mỏ trong đời sống và kinh tế</h2>
+    <p class="chapter-dek">
+      Ít có phát minh nào — hay đúng hơn, ít có nguồn tài nguyên nào — lại thay đổi đời sống
+      con người sâu sắc và toàn diện như dầu mỏ. Sự hiện diện của nó ăn sâu vào mọi ngóc ngách
+      của nền kinh tế hiện đại theo những cách mà ta thường không nhận ra.
+    </p>
+
+    <h3>Nhiên liệu — nền tảng của nền kinh tế vận động</h3>
+    <p>
+      Ứng dụng trực tiếp và dễ thấy nhất của dầu mỏ là nhiên liệu giao thông. Toàn bộ hệ thống
+      vận tải đường bộ toàn cầu — hàng tỷ chiếc xe hơi, hàng trăm triệu xe tải, xe buýt —
+      vận hành bằng xăng và dầu diesel. Hệ thống hàng không thương mại, vận chuyển hàng trăm
+      triệu hành khách mỗi năm và kết nối các nền kinh tế toàn cầu, gần như hoàn toàn phụ
+      thuộc vào dầu hỏa phản lực (jet fuel) mà chưa có công nghệ thay thế quy mô lớn. Vận
+      tải biển — xương sống của thương mại quốc tế, vận chuyển khoảng tám mươi phần trăm
+      khối lượng hàng hóa toàn cầu — phần lớn vẫn dùng dầu nặng (heavy fuel oil) làm nhiên
+      liệu. Không có dầu mỏ, không chỉ là hệ thống vận tải sụp đổ — toàn bộ chuỗi cung ứng
+      toàn cầu như ta biết ngày nay sẽ không thể tồn tại.
+    </p>
+
+    <h3>Dầu mỏ — nguyên liệu cho nền kinh tế vật chất</h3>
+    <p>
+      Một trong những điều mà nhiều người không ý thức đầy đủ là dầu mỏ không chỉ là nhiên
+      liệu — nó còn là nguyên liệu thô cho một phần rất lớn các sản phẩm vật chất của đời
+      sống hiện đại. Ngành hóa dầu (petrochemical industry) biến dầu thô và khí thiên nhiên
+      thành vô số sản phẩm: nhựa (polyethylene, polypropylene, PVC, PET — có mặt trong mọi
+      thứ từ chai lọ, bao bì, đồ nội thất đến linh kiện điện tử), sợi tổng hợp (polyester,
+      nylon — chiếm tỷ lệ lớn trong ngành dệt may toàn cầu), phân bón hóa học (amoniac được
+      sản xuất từ khí thiên nhiên qua quy trình Haber-Bosch là nền tảng của nông nghiệp công
+      nghiệp hiện đại, nuôi sống phần lớn nhân loại), thuốc trừ sâu và thuốc diệt cỏ, dược
+      phẩm, chất bôi trơn, nhựa đường làm đường, bitum xây dựng, và hàng nghìn loại hóa chất
+      công nghiệp khác.
+    </p>
+    <p>
+      Theo nhiều ước tính, khoảng mười phần trăm nhu cầu dầu thô toàn cầu là cho mục đích
+      hóa dầu (không đốt làm nhiên liệu), và tỷ lệ này đang tăng lên trong khi nhu cầu làm
+      nhiên liệu có thể đã hoặc sắp đạt đỉnh. Điều này có nghĩa là dầu mỏ sẽ còn được dùng
+      như một nguyên liệu hóa học quan trọng rất lâu sau khi vai trò nhiên liệu của nó giảm
+      đi.
+    </p>
+
+    <h3>Điện và nhiệt — vai trò đang giảm nhưng vẫn đáng kể</h3>
+    <p>
+      Dầu mỏ cũng từng đóng vai trò lớn trong sản xuất điện — đặc biệt là ở các nước vùng
+      Vịnh và một số đảo quốc — nhưng vai trò này đã giảm mạnh trong vài thập kỷ qua khi
+      than đá, khí tự nhiên, điện hạt nhân và năng lượng tái tạo trở nên cạnh tranh hơn.
+      Ngoại lệ đáng chú ý là dầu và các sản phẩm từ dầu vẫn được dùng để sưởi ấm ở nhiều
+      vùng nông thôn và các khu vực không có đường ống khí, cũng như là nhiên liệu dự phòng
+      cho các máy phát điện.
+    </p>
+
+    <h3>Tác động kinh tế vĩ mô — dầu mỏ và chu kỳ kinh tế</h3>
+    <p>
+      Giá dầu là một trong những biến số kinh tế vĩ mô quan trọng nhất, với ảnh hưởng lan rộng
+      qua nhiều kênh. Khi giá dầu tăng cao, chi phí vận tải và sản xuất tăng theo, gây áp lực
+      lạm phát lên toàn bộ nền kinh tế — một cơ chế được thể hiện rõ trong các cú sốc dầu mỏ
+      năm 1973, 1979 và giai đoạn 2021–2022. Ngược lại, khi giá dầu giảm mạnh, nó có thể là
+      liều thuốc kích thích kinh tế tự nhiên cho các nước nhập khẩu dầu, nhưng lại là đòn
+      giáng mạnh vào các nền kinh tế phụ thuộc xuất khẩu dầu như Nga, Nigeria hay Venezuela.
+    </p>
+    <p>
+      Ở tầm vi mô hơn, ngành dầu mỏ là một trong những ngành tạo ra nhiều việc làm có thu
+      nhập cao tại các nước sản xuất — từ công nhân khoan thăm dò, kỹ sư dầu khí, đến nhân
+      viên lọc dầu và vận chuyển. Tuy nhiên, mô hình kinh tế phụ thuộc vào dầu mỏ của nhiều
+      quốc gia — như các nước vùng Vịnh, Nga, hay Nigeria — cũng có những rủi ro cấu trúc
+      nghiêm trọng: khi giá dầu thấp, ngân sách nhà nước bị thâm hụt lớn; nguồn doanh thu
+      dầu mỏ dồi dào đôi khi cũng gây ra "lời nguyền tài nguyên" — khiến các nền kinh tế
+      này ít đa dạng hóa và kém đổi mới hơn các nước không có dầu.
+    </p>
+
+    <h3>Ý nghĩa đối với tiêu chuẩn sống và cuộc cách mạng nông nghiệp</h3>
+    <p>
+      Không thể đánh giá đầy đủ tầm quan trọng của dầu mỏ đối với đời sống mà không nhắc đến
+      tác động gián tiếp của nó qua ngành nông nghiệp. Phân bón hóa học — đặc biệt là các
+      loại phân đạm (phân urê, ammonium nitrate) được sản xuất từ khí thiên nhiên — là yếu tố
+      then chốt của "Cách mạng Xanh" trong nông nghiệp từ những năm 1960, cho phép sản lượng
+      nông nghiệp toàn cầu tăng vọt và nuôi sống dân số thế giới tăng từ ba tỷ người năm 1960
+      lên hơn tám tỷ người vào thập kỷ 2020. Khi các nhà khoa học và triết gia hỏi rằng nền
+      văn minh hiện đại có khả năng nuôi sống số lượng người này không có dầu mỏ và khí thiên
+      nhiên, câu trả lời thẳng thắn là: không, không theo cách mà nó đang làm ngày nay.
+    </p>
+
+    <h3>Dầu mỏ và bất bình đẳng địa lý</h3>
+    <p>
+      Việc phân bố dầu mỏ không đồng đều đã tạo ra những bất đồng kinh tế và địa chính trị
+      sâu sắc: một số quốc gia nhỏ như Kuwait, Qatar hay Brunei, nhờ nguồn dầu khí khổng lồ,
+      có thu nhập bình quân đầu người thuộc hàng cao nhất thế giới; trong khi nhiều nước đông
+      dân, nghèo tài nguyên phải dùng phần lớn ngoại hối để nhập khẩu năng lượng — một gánh
+      nặng cấu trúc cho sự phát triển. Bản đồ địa kinh tế của thế giới hiện đại sẽ trông rất
+      khác nếu dầu mỏ được phân bố đều hơn trên hành tinh.
+    </p>
+
+    <h3>Dầu mỏ và sức khỏe — từ nhựa y tế đến hóa dược phẩm</h3>
+    <p>
+      Một khía cạnh ít được công luận để ý là tầm quan trọng của dầu mỏ đối với ngành y tế hiện
+      đại. Vô số vật tư y tế thiết yếu — từ bơm kim tiêm, túi đựng dịch truyền, ống thông, găng
+      tay y tế, cho đến nhiều loại bao bì vô trùng — được làm từ các loại nhựa có nguồn gốc từ
+      hóa dầu. Ngành dược phẩm sử dụng nhiều dung môi hữu cơ và hóa chất trung gian có nguồn
+      gốc từ hóa dầu trong quá trình sản xuất thuốc. Aspirin, nhiều loại kháng sinh tổng hợp,
+      và hàng loạt dược phẩm hiện đại đều có chuỗi sản xuất liên quan đến hóa chất từ dầu mỏ.
+      Điều này tạo ra một nghịch lý đáng suy ngẫm: dầu mỏ vừa là nguyên nhân của nhiều vấn đề
+      sức khỏe cộng đồng (ô nhiễm không khí, biến đổi khí hậu), vừa là một thành phần không thể
+      thiếu trong chuỗi sản xuất nhiều loại thuốc và vật tư y tế cứu sống con người.
+    </p>
+  </section>
+
+  <!-- ================= CHAPTER 11 ================= -->
+  <section class="chapter" id="c11">
+    <div class="strata">
+      <span style="flex:3; background:#0a1a0a;"></span>
+      <span style="flex:5; background:#1a3a1a;"></span>
+      <span style="flex:4; background:#2d5a2d;"></span>
+      <span style="flex:3; background:#5b8a5b;"></span>
+      <span style="flex:4; background:#bd5b33;"></span>
+      <span style="flex:5; background:#8b1a1a;"></span>
+    </div>
+    <div class="chapter-eyebrow">Lớp 11 · Vết thương hành tinh</div>
+    <h2>Cái giá của vàng đen — tác động đến tự nhiên</h2>
+    <p class="chapter-dek">
+      Mỗi thùng dầu được đốt cháy là kết quả của hàng triệu năm tích lũy carbon; mỗi lần
+      đốt cháy, lượng carbon đó được giải phóng vào khí quyển chỉ trong vài giây. Tác động
+      tích lũy của quá trình này đang là thách thức lớn nhất của nền văn minh hiện đại.
+    </p>
+
+    <h3>Biến đổi khí hậu — di sản carbon của kỷ nguyên dầu mỏ</h3>
+    <p>
+      Khoa học khí hậu hiện đại — với sự đồng thuận áp đảo từ các tổ chức khoa học uy tín
+      toàn cầu — xác định rằng việc đốt cháy nhiên liệu hóa thạch (than đá, dầu mỏ và khí
+      thiên nhiên) từ thời cách mạng công nghiệp đến nay là nguyên nhân chính dẫn đến sự gia
+      tăng nồng độ khí carbon dioxide và các khí nhà kính khác trong khí quyển, kéo theo sự
+      nóng lên của nhiệt độ bề mặt Trái Đất. Nhiệt độ trung bình toàn cầu hiện nay đã cao
+      hơn khoảng một phần tư đến hơn một độ C so với mức trung bình thời tiền công nghiệp,
+      và tốc độ tăng đang gia tăng.
+    </p>
+    <p>
+      Dầu mỏ — khi đốt cháy làm nhiên liệu — là nguồn phát thải khí nhà kính lớn thứ hai
+      trong số các nhiên liệu hóa thạch, sau than đá và trước khí thiên nhiên. Ngành giao
+      thông vận tải, chủ yếu chạy bằng dầu, chiếm tỷ lệ đáng kể trong tổng lượng phát thải
+      khí nhà kính toàn cầu. Ngoài khí carbon dioxide, ngành khai thác và vận chuyển dầu khí
+      cũng phát thải khí methane — một khí nhà kính có hiệu lực làm ấm ngắn hạn mạnh hơn
+      nhiều so với carbon dioxide — qua rò rỉ tại các giếng khoan, đường ống và cơ sở xử lý.
+    </p>
+
+    <h3>Tràn dầu — thảm họa cục bộ với hậu quả lâu dài</h3>
+    <p>
+      Bên cạnh biến đổi khí hậu là tác động toàn cầu và dài hạn, dầu mỏ còn gây ra các thảm
+      họa môi trường cục bộ mà tác động có thể kéo dài hàng thập kỷ. Vụ tràn dầu Exxon Valdez
+      năm 1989 ngoài khơi Alaska — khi tàu chở dầu đâm vào đá ngầm và tràn hơn bốn mươi
+      triệu lít dầu thô ra biển — đã gây thiệt hại nghiêm trọng và lâu dài cho hệ sinh thái
+      biển và bờ biển Alaska. Nghiêm trọng hơn, vụ nổ giàn khoan Deepwater Horizon của BP
+      năm 2010 ngoài khơi vịnh Mexico đã phun khoảng bảy trăm triệu lít dầu ra đại dương
+      trong suốt tám mươi bảy ngày — thảm họa tràn dầu lớn nhất trong lịch sử ngành dầu
+      khí ngoài khơi — gây hậu quả nghiêm trọng đối với hệ sinh thái vịnh Mexico, ngành
+      đánh bắt cá và du lịch ven biển các bang miền Nam Hoa Kỳ trong nhiều năm sau đó.
+    </p>
+    <p>
+      Như đã đề cập trong chương năm, trong cuộc chiến Vùng Vịnh năm 1991, quân đội Iraq đã
+      đốt hơn bảy trăm giếng dầu của Kuwait khi rút lui. Các đám cháy này — một số kéo dài
+      nhiều tháng trước khi được dập tắt — tạo ra những đám mây khói đen bao phủ một vùng rộng
+      lớn và thải ra lượng khí ô nhiễm và hạt bụi khổng lồ vào khí quyển, gây hậu quả đối
+      với sức khỏe con người và sinh thái khu vực.
+    </p>
+
+    <h3>Ô nhiễm không khí và tác động sức khỏe</h3>
+    <p>
+      Việc đốt xăng và dầu diesel trong động cơ đốt trong không hoàn toàn tạo ra nhiều chất
+      ô nhiễm không khí nguy hiểm, bao gồm: các hạt bụi mịn (PM2.5 và PM10), khí nitrogen
+      oxide (tạo mưa axit và khói quang hóa), carbon monoxide, và các hợp chất hữu cơ dễ bay
+      hơi. Ô nhiễm không khí từ phương tiện giao thông và đốt nhiên liệu hóa thạch là nguyên
+      nhân dẫn đến hàng triệu ca tử vong sớm mỗi năm trên toàn thế giới — đặc biệt là ở các
+      đô thị lớn của châu Á và châu Phi có mật độ phương tiện cao.
+    </p>
+
+    <h3>Tác động của khai thác đối với hệ sinh thái địa phương</h3>
+    <p>
+      Hoạt động khai thác dầu mỏ — đặc biệt ở các khu vực nhạy cảm — gây ra nhiều tác động
+      trực tiếp đến môi trường địa phương. Xây dựng đường ống, đường tiếp cận và cơ sở hạ
+      tầng chia cắt và làm suy giảm môi trường sống của nhiều loài động thực vật. Các hoạt
+      động khoan thăm dò và khai thác ngoài khơi có thể gây tiếng ồn dưới nước ảnh hưởng đến
+      hệ thống định hướng của cá voi và cá heo. Khai thác cát dầu ở Alberta, Canada đòi hỏi
+      phá bỏ rừng taiga diện tích lớn, tạo ra lượng khổng lồ chất thải lỏng phải chứa trong
+      các hồ chứa nhân tạo. Ở đồng bằng sông Niger, Nigeria, lịch sử khai thác dầu gắn liền
+      với vô số vụ rò rỉ và tràn dầu — nhiều vụ xảy ra do phá hoại đường ống hoặc thiếu bảo
+      trì — đã gây ô nhiễm nghiêm trọng cho đất và nước tại khu vực có mật độ dân số đông và
+      phụ thuộc nhiều vào nông nghiệp và đánh bắt cá.
+    </p>
+
+    <h3>Khai thác bằng nứt vỉa thủy lực và những tranh cãi môi trường</h3>
+    <p>
+      Công nghệ nứt vỉa thủy lực (hydraulic fracturing, hay fracking) — nền tảng của cuộc
+      cách mạng dầu đá phiến Hoa Kỳ — đã mang lại lợi ích kinh tế lớn nhưng cũng đặt ra
+      nhiều lo ngại môi trường. Các lo ngại chính bao gồm khả năng rò rỉ khí methane vào
+      tầng nước ngầm, lượng nước khổng lồ cần dùng (và thường bị ô nhiễm sau sử dụng), nguy
+      cơ gây ra các trận động đất nhỏ do bơm nước thải vào lòng đất, và tác động đến cảnh
+      quan tại các khu vực nông thôn do mật độ cao của giếng khoan và đường ống. Mức độ thực
+      tế của các nguy cơ này đang được tranh luận trong giới khoa học và chính sách, nhưng
+      chúng đủ nghiêm trọng để nhiều quốc gia và bang đặt ra các hạn chế hoặc lệnh cấm đối
+      với hoạt động nứt vỉa.
+    </p>
+
+    <h3>Sự căng thẳng không thể giải quyết đơn giản</h3>
+    <p>
+      Tác động môi trường của dầu mỏ đặt ra một căng thẳng cơ bản mà không có giải pháp dễ
+      dàng: dầu mỏ đã và đang là nền tảng của mức sống cao hơn cho hàng tỷ người — nhưng
+      các chi phí môi trường và khí hậu của nó đang ngày càng trở nên cấp bách. Quá trình
+      chuyển đổi khỏi dầu mỏ là cần thiết về mặt khí hậu, nhưng cần được quản lý cẩn thận
+      để không gây ra khủng hoảng năng lượng và kinh tế cho những người dễ bị tổn thương
+      nhất — một thách thức mà thế giới vẫn chưa tìm ra câu trả lời đủ thuyết phục.
+    </p>
+  </section>
+
+  <!-- ================= KẾT ================= -->
+  <section class="chapter" id="ket">
+    <div class="strata">
+      <span style="flex:4; background:#15110d;"></span>
+      <span style="flex:3; background:#3a2f24;"></span>
+      <span style="flex:5; background:#6b4a2a;"></span>
+      <span style="flex:4; background:#bd5b33;"></span>
+      <span style="flex:5; background:#d9a24b;"></span>
+      <span style="flex:3; background:#5b9090;"></span>
+    </div>
+    <div class="chapter-eyebrow">Lớp Cuối · Đọng lại</div>
+    <h2>Lời kết — Vàng đen và số phận của nền văn minh</h2>
+    <p class="chapter-dek">
+      Hành trình của dầu mỏ — từ đáy biển cổ đại đến trận chiến Hormuz năm 2026 — là một trong
+      những câu chuyện phức tạp, nhiều mâu thuẫn và đáng kinh ngạc nhất trong lịch sử loài người.
+    </p>
+
+    <p>
+      Có lẽ không có loại tài nguyên nào trong lịch sử hiện đại vừa trao cho nhân loại nhiều đến
+      thế — về sự di chuyển, về vật chất, về lương thực, về ánh sáng, về sức mạnh quân sự — vừa
+      để lại những hóa đơn chưa trả nặng đến thế: một khí quyển đang ấm lên, những hệ sinh thái
+      bị ô nhiễm, những cuộc chiến tranh bùng nổ và những trật tự thế giới bị định hình bởi ai
+      kiểm soát dòng chảy của chất lỏng đen này.
+    </p>
+    <p>
+      Dầu mỏ, trong hơn một thế kỷ rưỡi, không chỉ là nhiên liệu mà còn là một nhân vật — đôi
+      khi thậm chí là nhân vật trung tâm — trong nhiều câu chuyện lớn nhất của nền văn minh:
+      câu chuyện về sự giàu có và đói nghèo, về chiến tranh và hòa bình, về thống trị và giải
+      phóng, về tăng trưởng và sự hủy hoại.
+    </p>
+    <p>
+      Khi thế giới đứng trước cột mốc của quá trình chuyển đổi năng lượng, điều quan trọng là
+      nhìn nhận dầu mỏ không phải như một kẻ phản diện đơn giản hay một vị cứu tinh đã mất.
+      Dầu mỏ là một gương phản chiếu — nó phản ánh những lựa chọn, những ham muốn, những mâu
+      thuẫn và những giới hạn của chính nền văn minh đã sử dụng nó. Cách chúng ta hiểu lịch sử
+      của dầu mỏ và những gì nó đã tạo ra — và hủy hoại — là một phần quan trọng trong việc
+      đưa ra những lựa chọn khôn ngoan hơn cho những thập kỷ tiếp theo.
+    </p>
+    <p>
+      Và câu chuyện vẫn chưa kết thúc.
+    </p>
+
+    <div class="pull">
+      <span class="pull-label">Nhìn lại toàn bộ hành trình</span>
+      Từ hàng chục triệu năm sinh thành trong lòng đất, đến những vũng hắc ín đầu tiên người
+      Sumer dùng để trám thuyền, đến giếng Drake năm 1859 mở ra kỷ nguyên công nghiệp, đến
+      Ghawar và những bể dầu vùng Vịnh, đến Standard Oil và Bảy Chị Em, đến các cuộc chiến
+      tranh mang động cơ dầu mỏ, đến hệ thống petrodollar, đến cách mạng dầu đá phiến, đến
+      làn sóng xe điện, đến cuộc khủng hoảng Hormuz năm 2026 — dầu mỏ đã đi một hành trình
+      dài đến mức khó có thể nắm bắt đầy đủ chỉ trong một bài viết. Nhưng bất kỳ sự hiểu biết
+      nào về thế giới hiện đại — về kinh tế, chính trị, chiến tranh, môi trường hay đời sống
+      hàng ngày — mà không có sự hiểu biết về dầu mỏ đều là một sự hiểu biết không đầy đủ.
+    </div>
+
+    <div class="pull" style="margin-top:1.5rem; border-color: var(--petrol);">
+      <span class="pull-label" style="color: var(--petrol);">Một số con số để nhớ</span>
+      Dầu mỏ hình thành qua <b>hàng chục đến hàng trăm triệu năm</b>. Ngành công nghiệp dầu mỏ
+      hiện đại mới có <b>khoảng 165 năm tuổi</b>. Nhân loại đã tiêu thụ phần lớn lượng dầu dễ
+      khai thác nhất của Trái Đất trong <b>chưa đầy hai thế kỷ</b>. Eo biển Hormuz — huyết mạch
+      dầu mỏ của thế giới — rộng chỉ khoảng <b>năm mươi kilômét</b> ở điểm hẹp nhất, nhưng
+      khoảng <b>một phần tư lượng dầu thương mại thế giới</b> phải đi qua đây hàng ngày. Và mỗi
+      chiếc xe hơi đang chạy đốt cháy năng lượng Mặt Trời được tảo biển cổ đại tích lũy từ
+      <b>hàng trăm triệu năm trước</b> — trong vài giây.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Lược sử Dầu Mỏ · Tài liệu tổng hợp tham khảo · Tháng 6, 2026
+</footer>
+
+
+    <div style="padding: 20px; text-align: center; background: #15110d;">
+        <button onclick="openCommodityArticle('')" style="background: transparent; border: 1px solid rgba(217,162,75,0.5); color: #d9a24b; padding: 7px 16px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 0.05em; border-radius: 4px;">
+            &#8592; Quay lại danh sách
+        </button>
+    </div>
+</div>
+
                     <button class="back-to-list-btn" onclick="openCommodityArticle('')"><i class="fa-solid fa-arrow-left"></i> Quay lại danh sách</button>
                     
                     <div id="article-tiensidong-panel" class="commodity-article-panel">

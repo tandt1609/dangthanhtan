@@ -96,7 +96,14 @@ function openCommodityArticle(articleId, updateUrl = true) {
     // Deactivate all article panels
     document.querySelectorAll('.commodity-article-panel').forEach(panel => panel.classList.remove('active'));
     
-    if (articleId === 'tien-si-dong') {
+    if (articleId === 'luoc-su-dau-mo') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-oil-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'hang-hoa', articleId: 'luoc-su-dau-mo' }, '', '/hang-hoa/luoc-su-dau-mo');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'tien-si-dong') {
         listView.classList.remove('active');
         articleView.classList.add('active');
         const targetPanel = document.getElementById('article-tiensidong-panel');
@@ -168,7 +175,9 @@ function handleRouting(path, updateUrl = false) {
     } else if (path.startsWith('/hang-hoa')) {
         switchTab('hang-hoa', false);
         const subPath = path.substring('/hang-hoa'.length);
-        if (subPath === '/tien-si-dong') {
+        if (subPath === '/luoc-su-dau-mo') {
+            openCommodityArticle('luoc-su-dau-mo', updateUrl);
+        } else if (subPath === '/tien-si-dong') {
             openCommodityArticle('tien-si-dong', updateUrl);
         } else if (subPath === '/luoc-su-dong') {
             openCommodityArticle('luoc-su-dong', updateUrl);
