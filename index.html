@@ -19,6 +19,7 @@
     <script>document.addEventListener('DOMContentLoaded', () => document.body.classList.remove('preload'));</script>
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body class="theme-bull preload"> <!-- Default to Bull Theme; preload suppresses transitions on first render -->
     <!-- Background Glow Elements -->
@@ -3970,6 +3971,18 @@
                 <div id="huyen-thoai-list-view" class="sukien-view active">
                     <h2 class="section-title"><i class="fa-solid fa-crown"></i> Huyền thoại trong các lĩnh vực</h2>
                     <div class="news-list">
+                        <a href="/huyen-thoai/wd-gann" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-compass-drafting"></i> Phân tích kỹ thuật & Chu kỳ</span>
+                                <span class="news-time">06/06/1878 – 18/06/1955</span>
+                            </div>
+                            <h3 class="news-heading"><span style="font-size:0.75em;color:#6fae6a;font-weight:500;display:block;margin-bottom:2px;letter-spacing:0.04em;">Phân tích kỹ thuật & Chu kỳ</span>W.D. Gann — Lược Sử Huyền Thoại</h3>
+                            <p class="news-excerpt">Nhà giao dịch huyền thoại nổi tiếng với các phương pháp dự báo thị trường dựa trên hình học, thiên văn học và toán học cổ đại.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc hồ sơ</span>
+                            </div>
+                        </a>
+
                         <a href="/huyen-thoai/rudolf-steiner" class="news-card clickable-card">
                             <div class="news-meta">
                                 <span class="news-source"><i class="fa-solid fa-brain"></i> Triết học & Giáo dục</span>
@@ -6619,6 +6632,1305 @@
     <div style="padding: 20px; text-align: center;">
         <button class="back-btn" onclick="openLegendArticle('')" style="border: 1px solid #c9b696; padding: 6px 14px; cursor: pointer; background: #f3e9d6; font-family: inherit; color: #2c2316; border-radius: 3px;">
             <i class="fa-solid fa-arrow-left"></i> Quay lại danh sách
+        </button>
+    </div>
+</div>
+
+                
+<div id="article-gann-panel" class="sukien-article-panel gann-body">
+    <style>
+#article-gann-panel {
+
+    #article-gann-panel {
+      --void:       #0A0C1A;
+      --deep:       #0F1224;
+      --copper:     #B87333;
+      --copper-lt:  #D4AF6A;
+      --copper-dim: #7A4E22;
+      --parchment:  #EDE8DC;
+      --parch-dim:  #C8C0AB;
+      --crimson:    #6B1F2A;
+      --crimson-lt: #A03040;
+      --star:       #E8D9B0;
+      --muted:      #5A5870;
+      --rule:       rgba(184,115,51,0.22);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    #article-gann-panel.gann-html { scroll-behavior: smooth; }
+
+    #article-gann-panel.gann-body {
+      background-color: var(--void);
+      color: var(--parchment);
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 19px;
+      line-height: 1.78;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─────────────────────────────────────
+       HERO
+    ───────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5rem 2rem 5rem;
+      overflow: hidden;
+      background: radial-gradient(ellipse 80% 70% at 50% 40%,
+        rgba(184,115,51,0.10) 0%,
+        rgba(107,31,42,0.06) 40%,
+        transparent 70%),
+        var(--void);
+    }
+
+    /* Starfield dots */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 12% 18%, rgba(232,217,176,0.55) 0%, transparent 100%),
+        radial-gradient(1px 1px at 34% 7%,  rgba(232,217,176,0.35) 0%, transparent 100%),
+        radial-gradient(1px 1px at 58% 23%, rgba(232,217,176,0.45) 0%, transparent 100%),
+        radial-gradient(1px 1px at 77% 11%, rgba(232,217,176,0.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 91% 31%, rgba(232,217,176,0.50) 0%, transparent 100%),
+        radial-gradient(1px 1px at 6%  42%, rgba(232,217,176,0.40) 0%, transparent 100%),
+        radial-gradient(1px 1px at 47% 55%, rgba(232,217,176,0.25) 0%, transparent 100%),
+        radial-gradient(1px 1px at 83% 67%, rgba(232,217,176,0.45) 0%, transparent 100%),
+        radial-gradient(1px 1px at 22% 79%, rgba(232,217,176,0.35) 0%, transparent 100%),
+        radial-gradient(1px 1px at 65% 88%, rgba(232,217,176,0.30) 0%, transparent 100%),
+        radial-gradient(1px 1px at 39% 93%, rgba(232,217,176,0.40) 0%, transparent 100%),
+        radial-gradient(1px 1px at 88% 84%, rgba(232,217,176,0.50) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .hero-glyph {
+      margin-bottom: 2.5rem;
+    }
+
+    /* Gann Square SVG */
+    .gann-square-svg {
+      width: 120px;
+      height: 120px;
+      opacity: 0.75;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.30em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.8rem, 7.5vw, 6.5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: 0.04em;
+      color: var(--parchment);
+      text-shadow: 0 0 60px rgba(184,115,51,0.3);
+    }
+
+    .hero-title .initial {
+      color: var(--copper-lt);
+    }
+
+    .hero-subtitle {
+      margin-top: 1.8rem;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--parch-dim);
+      max-width: 600px;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    .hero-ornament {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin: 2rem auto;
+      width: fit-content;
+      color: var(--copper-dim);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+    }
+
+    .hero-ornament::before,
+    .hero-ornament::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--copper-dim));
+    }
+
+    .hero-ornament::after {
+      background: linear-gradient(90deg, var(--copper-dim), transparent);
+    }
+
+    .hero-years {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      margin-top: 0.4rem;
+    }
+
+    /* ─────────────────────────────────────
+       LAYOUT
+    ───────────────────────────────────── */
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ─────────────────────────────────────
+       SECTIONS
+    ───────────────────────────────────── */
+    .sec {
+      padding: 5rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .sec:last-of-type { border-bottom: none; }
+
+    .sec-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.60rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--copper);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .sec-tag::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .sec-h {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      color: var(--parchment);
+      margin-bottom: 2rem;
+    }
+
+    .sec-h em {
+      font-style: italic;
+      color: var(--copper-lt);
+      font-family: 'Crimson Pro', Georgia, serif;
+      font-size: 1.05em;
+      letter-spacing: 0;
+    }
+
+    /* ─────────────────────────────────────
+       PROSE
+    ───────────────────────────────────── */
+    .prose {
+      color: rgba(237,232,220,0.88);
+      font-size: 1.04rem;
+      line-height: 1.88;
+    }
+
+    .prose p { margin-bottom: 1.5rem; }
+    .prose p:last-child { margin-bottom: 0; }
+
+    .prose strong {
+      color: var(--star);
+      font-weight: 600;
+    }
+
+    /* ─────────────────────────────────────
+       INSCRIPTION (pull quote)
+    ───────────────────────────────────── */
+    .inscription {
+      position: relative;
+      margin: 3rem 0;
+      padding: 2rem 2.4rem 2rem 3rem;
+      background: rgba(184,115,51,0.06);
+      border: 1px solid rgba(184,115,51,0.28);
+    }
+
+    .inscription::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, transparent, var(--copper), transparent);
+    }
+
+    .inscription p {
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      line-height: 1.65;
+      color: var(--copper-lt);
+      letter-spacing: 0.02em;
+      margin-bottom: 0.9rem;
+    }
+
+    .inscription cite {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    /* ─────────────────────────────────────
+       TIMELINE
+    ───────────────────────────────────── */
+    .timeline {
+      position: relative;
+      padding-left: 2.8rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 0.6rem;
+      bottom: 0.6rem;
+      width: 1px;
+      background: linear-gradient(180deg, transparent, var(--copper) 8%, var(--copper) 92%, transparent);
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    .tl-item:last-child { margin-bottom: 0; }
+
+    .tl-gem {
+      position: absolute;
+      left: -2.8rem;
+      top: 0.55rem;
+      width: 9px;
+      height: 9px;
+      background: var(--copper);
+      transform: rotate(45deg) translateX(-4px);
+      box-shadow: 0 0 6px rgba(184,115,51,0.5);
+    }
+
+    .tl-year {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      color: var(--copper);
+      margin-bottom: 0.3rem;
+    }
+
+    .tl-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--parchment);
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.02em;
+    }
+
+    .tl-#article-gann-panel.gann-body {
+      font-size: 1rem;
+      color: rgba(237,232,220,0.8);
+      line-height: 1.82;
+    }
+
+    /* ─────────────────────────────────────
+       STAT CARDS
+    ───────────────────────────────────── */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.4rem;
+      margin: 2.5rem 0;
+    }
+
+    .stat-card {
+      border: 1px solid rgba(184,115,51,0.25);
+      padding: 1.5rem 1.6rem;
+      background: rgba(184,115,51,0.04);
+      position: relative;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 24px; height: 24px;
+      border-top: 1px solid var(--copper);
+      border-left: 1px solid var(--copper);
+    }
+
+    .stat-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 24px; height: 24px;
+      border-bottom: 1px solid var(--copper);
+      border-right: 1px solid var(--copper);
+    }
+
+    .stat-num {
+      font-family: 'Cinzel', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--copper-lt);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .stat-lbl {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--parch-dim);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-desc {
+      font-size: 0.92rem;
+      color: rgba(237,232,220,0.68);
+      line-height: 1.62;
+    }
+
+    /* ─────────────────────────────────────
+       TWO-COL
+    ───────────────────────────────────── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+
+    @media (max-width: 640px) {
+      .two-col { grid-template-columns: 1fr; }
+    }
+
+    .col-card {
+      border-top: 2px solid;
+      padding-top: 1.2rem;
+    }
+
+    .col-card.fail { border-color: var(--crimson-lt); }
+    .col-card.win  { border-color: var(--copper); }
+
+    .col-lbl {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.60rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .col-card.fail .col-lbl { color: var(--crimson-lt); }
+    .col-card.win  .col-lbl { color: var(--copper); }
+
+    .col-card ul {
+      list-style: none;
+      font-size: 0.97rem;
+      color: rgba(237,232,220,0.82);
+    }
+
+    .col-card ul li {
+      padding: 0.5rem 0 0.5rem 1.3rem;
+      border-bottom: 1px solid rgba(184,115,51,0.08);
+      position: relative;
+      line-height: 1.7;
+    }
+
+    .col-card ul li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      font-size: 0.4rem;
+      top: 0.9rem;
+      color: var(--muted);
+    }
+
+    .col-card ul li:last-child { border-bottom: none; }
+
+    /* ─────────────────────────────────────
+       METHOD BLOCKS (numbered principle)
+    ───────────────────────────────────── */
+    .method-list {
+      list-style: none;
+      margin: 2rem 0;
+      counter-reset: method;
+    }
+
+    .method-list > li {
+      counter-increment: method;
+      display: flex;
+      gap: 1.8rem;
+      margin-bottom: 2.2rem;
+      padding-bottom: 2.2rem;
+      border-bottom: 1px solid var(--rule);
+      align-items: flex-start;
+    }
+
+    .method-list > li:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .method-list > li::before {
+      content: counter(method, decimal-leading-zero);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--copper);
+      min-width: 2.4rem;
+      padding-top: 0.2rem;
+      flex-shrink: 0;
+    }
+
+    .m-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--parchment);
+      margin-bottom: 0.45rem;
+      letter-spacing: 0.02em;
+    }
+
+    .m-#article-gann-panel.gann-body {
+      font-size: 0.98rem;
+      color: rgba(237,232,220,0.80);
+      line-height: 1.82;
+    }
+
+    /* ─────────────────────────────────────
+       GANN ANGLES TABLE
+    ───────────────────────────────────── */
+    .angle-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 0.95rem;
+    }
+
+    .angle-table th {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.60rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--copper);
+      border-bottom: 1px solid var(--copper-dim);
+      padding: 0.7rem 1rem;
+      text-align: left;
+      font-weight: 400;
+    }
+
+    .angle-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(184,115,51,0.1);
+      color: rgba(237,232,220,0.84);
+      vertical-align: top;
+    }
+
+    .angle-table tr:last-child td { border-bottom: none; }
+
+    .angle-table .angle-name {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--copper-lt);
+      white-space: nowrap;
+    }
+
+    .angle-table .angle-val {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--star);
+    }
+
+    .angle-table tr.highlight td {
+      background: rgba(184,115,51,0.08);
+    }
+
+    /* ─────────────────────────────────────
+       LESSON BLOCK
+    ───────────────────────────────────── */
+    .lesson {
+      margin-bottom: 2.2rem;
+      padding: 1.8rem 2rem;
+      border: 1px solid rgba(184,115,51,0.16);
+      background: rgba(15,18,36,0.6);
+      position: relative;
+    }
+
+    .lesson-num {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: rgba(184,115,51,0.07);
+      line-height: 1;
+      user-select: none;
+    }
+
+    .lesson-h {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--copper-lt);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .lesson-b {
+      font-size: 0.98rem;
+      color: rgba(237,232,220,0.80);
+      line-height: 1.84;
+    }
+
+    /* ─────────────────────────────────────
+       SECTION DIVIDER
+    ───────────────────────────────────── */
+    .sec-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 0.5rem 0 2rem;
+    }
+
+    .sec-divider::before,
+    .sec-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .sec-divider-gem {
+      width: 7px;
+      height: 7px;
+      background: var(--copper);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* ─────────────────────────────────────
+       SUB HEADING
+    ───────────────────────────────────── */
+    .sub-h {
+      font-family: 'Cinzel', serif;
+      font-size: 1.18rem;
+      font-weight: 600;
+      color: var(--copper-lt);
+      letter-spacing: 0.03em;
+      margin: 2.2rem 0 1.1rem;
+    }
+
+    /* ─────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────── */
+    .footer {
+      padding: 3.5rem 2rem;
+      text-align: center;
+      border-top: 1px solid var(--rule);
+    }
+
+    .footer-gem-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .footer-gem-row span {
+      width: 5px; height: 5px;
+      background: var(--copper);
+      transform: rotate(45deg);
+      display: inline-block;
+    }
+
+    .footer-gem-row span.large {
+      width: 7px; height: 7px;
+    }
+
+    .footer-line {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ─────────────────────────────────────
+       RESPONSIVE
+    ───────────────────────────────────── */
+    @media (max-width: 600px) {
+      #article-gann-panel.gann-body { font-size: 17px; }
+      .hero { padding: 4rem 1.5rem 4rem; }
+      .sec { padding: 3.5rem 0; }
+      .wrap { padding: 0 1.25rem; }
+      .inscription { padding: 1.4rem 1.4rem 1.4rem 2rem; }
+      .gann-square-svg { width: 90px; height: 90px; }
+      .angle-table th, .angle-table td { padding: 0.6rem 0.7rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #article-gann-panel.gann-html { scroll-behavior: auto; }
+    }
+  
+}
+</style>
+    <div style="padding: 16px 20px; background: #0A0C1A;">
+        <button onclick="openLegendArticle('')" style="background: transparent; border: 1px solid rgba(184,115,51,0.5); color: #D4AF6A; padding: 7px 16px; cursor: pointer; font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.05em; border-radius: 4px;">
+            &#8592; Quay lại danh sách
+        </button>
+    </div>
+    
+
+  <!-- ══════════════════════════════════
+       HERO
+  ══════════════════════════════════ -->
+  <header class="hero">
+    <div class="hero-glyph">
+      <!-- Gann Square of Nine schematic SVG -->
+      <svg class="gann-square-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Outer ring -->
+        <rect x="2"  y="2"  width="116" height="116" fill="none" stroke="#B87333" stroke-width="0.7" opacity="0.6"/>
+        <rect x="15" y="15" width="90"  height="90"  fill="none" stroke="#B87333" stroke-width="0.5" opacity="0.5"/>
+        <rect x="28" y="28" width="64"  height="64"  fill="none" stroke="#B87333" stroke-width="0.5" opacity="0.4"/>
+        <rect x="41" y="41" width="38"  height="38"  fill="none" stroke="#B87333" stroke-width="0.5" opacity="0.4"/>
+        <rect x="54" y="54" width="12"  height="12"  fill="#B87333" opacity="0.7"/>
+        <!-- Diagonal cross -->
+        <line x1="2"  y1="2"   x2="118" y2="118" stroke="#B87333" stroke-width="0.4" opacity="0.35"/>
+        <line x1="118" y1="2"  x2="2"   y2="118" stroke="#B87333" stroke-width="0.4" opacity="0.35"/>
+        <!-- Cardinal cross -->
+        <line x1="60" y1="2"   x2="60"  y2="118" stroke="#D4AF6A" stroke-width="0.5" opacity="0.45"/>
+        <line x1="2"  y1="60"  x2="118" y2="60"  stroke="#D4AF6A" stroke-width="0.5" opacity="0.45"/>
+        <!-- Center dot -->
+        <circle cx="60" cy="60" r="2.5" fill="#D4AF6A" opacity="0.9"/>
+        <!-- Corner marks -->
+        <circle cx="2"   cy="2"   r="1.5" fill="#B87333" opacity="0.6"/>
+        <circle cx="118" cy="2"   r="1.5" fill="#B87333" opacity="0.6"/>
+        <circle cx="2"   cy="118" r="1.5" fill="#B87333" opacity="0.6"/>
+        <circle cx="118" cy="118" r="1.5" fill="#B87333" opacity="0.6"/>
+      </svg>
+    </div>
+
+    <p class="hero-eyebrow">Lược Sử &nbsp;·&nbsp; Huyền Học Thị Trường &nbsp;·&nbsp; Huyền Thoại Trading</p>
+
+    <h1 class="hero-title">
+      <span class="initial">W</span>illiam<br />
+      <span class="initial">D</span>elbert<br />
+      <span class="initial">G</span>ann
+    </h1>
+
+    <p class="hero-subtitle">
+      Người đàn ông đo thị trường bằng thước của các nhà hình học,<br />
+      lịch của các nhà thiên văn, và trí tuệ của những người ẩn tu cổ đại.
+    </p>
+
+    <div class="hero-ornament">1878 — 1955</div>
+    <p class="hero-years">Lufkin, Texas &nbsp;·&nbsp; New York &nbsp;·&nbsp; Miami</p>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════
+         I. TIỂU SỬ & TUỔI THƠ
+    ══════════════════════════════════ -->
+    <section class="sec">
+      <div class="wrap">
+        <p class="sec-tag">Phần Một</p>
+        <h2 class="sec-h">Tiểu Sử và Những Năm <em>Định Hình Số Phận</em></h2>
+
+        <div class="prose">
+          <p>William Delbert Gann sinh ngày 6 tháng 6 năm 1878 tại thị trấn nhỏ Lufkin, bang Texas, Hoa Kỳ. Ông là con cả trong một gia đình có tám người con của Samuel Houston Gann và Susan Rebecca Gann. Gia đình Gann có gốc rễ Anglo-Irish, định cư tại miền Nam Hoa Kỳ từ nhiều thế hệ trước. Cha ông là một nông dân trồng bông và người buôn bán ngựa, sống cuộc đời giản dị và kính đạo theo truyền thống Thiên Chúa giáo Tin Lành tại miền Nam.</p>
+
+          <p>Tuổi thơ của Gann gắn liền với đồng bông Texas — một thế giới của chu kỳ mùa màng, thời tiết khắc nghiệt, giá cả lên xuống thất thường, và sự phụ thuộc hoàn toàn vào thiên nhiên. Ngay từ nhỏ, ông đã quan sát thấy rằng tự nhiên có những quy luật lặp lại, và những chu kỳ này ảnh hưởng đến cuộc sống của gia đình ông một cách trực tiếp và không thể cưỡng lại.</p>
+
+          <p>Điều đặc biệt trong nền tảng giáo dục của Gann là sự hòa trộn giữa tư duy thực tế của người miền Nam và niềm tin mãnh liệt vào Kinh Thánh. Cha mẹ ông không đủ điều kiện cho ông đến trường thường xuyên — Gann chỉ hoàn thành chương trình tiểu học, và sau đó phải tự học suốt cuộc đời. Nhưng ông đọc Kinh Thánh từ đầu đến cuối nhiều lần, coi đó không chỉ là sách thiêng liêng mà còn là kho tri thức về toán số học, thiên văn học, và các chu kỳ lịch sử. Đây là nền tảng tinh thần và trí tuệ quan trọng nhất định hình toàn bộ tư tưởng của ông về thị trường.</p>
+
+          <p>Năm 1894, khi 16 tuổi, Gann rời quê nhà và bắt đầu làm việc tại nhiều nơi khác nhau — từ các văn phòng bông tại Texarkana đến các văn phòng môi giới nhỏ ở miền Nam. Những năm tháng này cho ông cơ hội tiếp xúc trực tiếp với thị trường hàng hóa, đặc biệt là thị trường bông — loại hàng hóa mà ông đã quen thuộc từ thuở ấu thơ. Ông quan sát cách giá bông dao động, cách tin tức ảnh hưởng đến tâm lý nhà giao dịch, và cách những người đầu cơ thắng và thua.</p>
+        </div>
+
+        <div class="inscription">
+          <p>Tất cả những gì tồn tại trong thời gian và không gian đều tuân theo quy luật toán học. Thị trường không phải là ngoại lệ.</p>
+          <cite>— William Delbert Gann</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         II. HỌC VẤN & TỰ HỌC
+    ══════════════════════════════════ -->
+    <section class="sec">
+      <div class="wrap">
+        <p class="sec-tag">Phần Hai</p>
+        <h2 class="sec-h">Con Đường <em>Tự Học Không Ngừng Nghỉ</em></h2>
+
+        <div class="prose">
+          <p>Gann không có bằng cấp đại học, không có thầy giáo chính thức về tài chính hay kỹ thuật. Toàn bộ kiến thức đồ sộ của ông được xây dựng qua hàng thập kỷ tự nghiên cứu với kỷ luật sắt đá. Đây là một trong những điểm đặc biệt nhất trong cuộc đời của ông — một người xuất thân từ tầng lớp lao động bình thường, không được thụ hưởng nền giáo dục chính quy, đã tự mình xây dựng một hệ thống phân tích thị trường phức tạp đến mức các học giả ngày nay vẫn còn tranh luận về ý nghĩa của nó.</p>
+
+          <p>Năm 1902, Gann chuyển đến New York và bắt đầu làm việc cho một công ty môi giới. Đây là khoảng thời gian ông lao vào nghiên cứu với cường độ không tưởng. Ông dành hàng đêm trong các thư viện của thành phố, đọc và ghi chép về lịch sử tài chính, toán học cổ đại, thiên văn học, hình học, và các hệ thống triết học phương Đông lẫn phương Tây.</p>
+
+          <p>Ông đặc biệt bị thu hút bởi các tác phẩm toán học cổ đại: từ hình học Euclid đến Cung bậc Pythagoras, từ con số Fibonacci đến thiên văn học Babylon cổ đại. Ông nghiên cứu lịch sử giá ngũ cốc tại London kéo dài hàng trăm năm, tìm kiếm những mẫu hình lặp lại. Ông đọc tất cả những gì có thể tìm được về thị trường bông, ngũ cốc, và chứng khoán từ thế kỷ trước.</p>
+
+          <p>Quan trọng hơn, Gann thực hiện những chuyến nghiên cứu thực địa mà ngay cả những học giả giàu có cũng ít khi dám làm. Ông được cho là đã du hành đến Ấn Độ và Anh Quốc để tìm kiếm những tài liệu cổ đại về thiên văn học và toán học. Ông nghiên cứu các bản ghi thương mại cổ tại Luân Đôn, tìm kiếm mẫu hình trong hàng trăm năm dữ liệu giá. Đây là những chuyến điền dã học thuật không khác gì các nhà khoa học tự nhiên thế kỷ mười chín.</p>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat-card">
+            <div class="stat-num">50+</div>
+            <div class="stat-lbl">Năm nghiên cứu</div>
+            <div class="stat-desc">Thời gian ông dành để xây dựng và tinh chỉnh hệ thống phân tích thị trường của mình.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">45+</div>
+            <div class="stat-lbl">Tác phẩm xuất bản</div>
+            <div class="stat-desc">Sách, khóa học, bản tin và tài liệu phân tích mà ông để lại cho hậu thế trong suốt sự nghiệp.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">1909</div>
+            <div class="stat-lbl">Năm xác nhận huyền thoại</div>
+            <div class="stat-desc">Năm tờ Ticker and Investment Digest ghi lại các dự báo chính xác đến kinh ngạc của ông trước giới báo chí tài chính.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         III. CƠ DUYÊN VỚI TRADING
+    ══════════════════════════════════ -->
+    <section class="sec">
+      <div class="wrap">
+        <p class="sec-tag">Phần Ba</p>
+        <h2 class="sec-h">Cơ Duyên Với <em>Thị Trường Tài Chính</em></h2>
+
+        <div class="prose">
+          <p>Gann bắt đầu giao dịch thực sự vào khoảng năm 1902 khi làm việc tại các công ty môi giới ở New York. Khác với Nicolas Darvas, người tiếp cận thị trường hoàn toàn tình cờ, Gann bước vào thị trường với một câu hỏi mà ông đã ấp ủ từ những ngày quan sát giá bông tại Texas: liệu thị trường có tuân theo những quy luật toán học không thể thay đổi, giống như các hành tinh tuân theo quỹ đạo của chúng không?</p>
+
+          <p>Những năm đầu giao dịch, Gann áp dụng mọi phương pháp phổ biến thời đó — phân tích cơ bản, theo dõi báo cáo sản lượng bông, nghe thông tin từ những người bên trong ngành. Kết quả không nhất quán — đôi khi thắng lớn, đôi khi thua nặng. Sự thất thường đó củng cố niềm tin của ông rằng có một quy luật sâu xa hơn đang vận hành phía sau những biến động hàng ngày của thị trường, và ông cần tìm ra nó.</p>
+
+          <p>Bước ngoặt quan trọng đến khoảng năm 1906 đến 1908 khi ông bắt đầu ứng dụng các khái niệm về góc độ hình học, chu kỳ thời gian và tỷ lệ toán học vào việc phân tích dữ liệu giá. Ông vẽ tay hàng nghìn biểu đồ, tính toán tỷ lệ và chu kỳ bằng tay — không có máy tính, không có phần mềm, chỉ có bàn tay, cây bút, và bộ óc của một người đàn ông đang tìm kiếm trật tự trong sự hỗn loạn.</p>
+
+          <p>Năm 1908, Gann đưa ra dự báo mà sau đó được ghi lại như một trong những khoảnh khắc thiết lập danh tiếng của ông: ông dự báo giá bông sẽ đạt 1,00 đô la một pound vào tháng 12 năm đó. Thực tế xảy ra đúng như dự báo. Sự kiện này không phải ngẫu nhiên — Gann đã xây dựng đủ niềm tin vào hệ thống của mình để đặt cược vào đó.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         IV. THẤT BẠI VÀ THÀNH CÔNG
+    ══════════════════════════════════ -->
+    <section class="sec">
+      <div class="wrap">
+        <p class="sec-tag">Phần Bốn</p>
+        <h2 class="sec-h">Thất Bại, Thành Công và <em>Con Đường Gian Nan</em></h2>
+
+        <div class="two-col">
+          <div class="col-card fail">
+            <div class="col-lbl">Những Thất Bại và Thử Thách</div>
+            <ul>
+              <li>Thua lỗ nặng nề trong những năm đầu khi chưa có hệ thống hoàn chỉnh, giao dịch theo trực giác và tin đồn</li>
+              <li>Hôn nhân đầu tiên tan vỡ — áp lực nghề nghiệp và phong cách sống tập trung cao độ vào nghiên cứu đã gây ra những căng thẳng cá nhân sâu sắc</li>
+              <li>Nhiều học trò mua khóa học đắt tiền của ông rồi không áp dụng được hoặc áp dụng sai, dẫn đến thua lỗ và những hoài nghi về phương pháp</li>
+              <li>Cuộc Đại Suy Thoái 1929 gây thiệt hại đáng kể cho tài sản của ông dù ông đã dự báo đúng thời điểm sụp đổ</li>
+              <li>Phá sản lần cuối đời — nhiều nguồn cho rằng khi ông mất năm 1955, tài sản để lại không lớn như huyền thoại về ông</li>
+              <li>Bị giới học thuật và nhiều nhà phân tích chuyên nghiệp coi là người huyền bí, thiếu cơ sở khoa học</li>
+            </ul>
+          </div>
+          <div class="col-card win">
+            <div class="col-lbl">Những Thành Công Đỉnh Cao</div>
+            <ul>
+              <li>Dự báo chính xác sự sụp đổ của thị trường năm 1929 và thời điểm đáy của nó năm 1932</li>
+              <li>Năm 1909, thực hiện 286 giao dịch trong 25 ngày trước giới báo chí và đạt tỷ lệ thành công hơn 92 phần trăm</li>
+              <li>Dự báo đúng thời điểm kết thúc Chiến tranh Thế giới thứ Nhất dựa trên phân tích chu kỳ lịch sử</li>
+              <li>Xây dựng đế chế đào tạo với hàng chục khóa học và tác phẩm được bán với giá cực kỳ cao ngay từ đầu thế kỷ hai mươi</li>
+              <li>Được công nhận là một trong những nhà phân tích kỹ thuật có ảnh hưởng nhất lịch sử ngành tài chính</li>
+              <li>Di sản trí tuệ tiếp tục sống mãi — hàng nghìn nhà giao dịch trên toàn thế giới vẫn nghiên cứu và áp dụng phương pháp của ông</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="prose">
+          <p>Câu chuyện năm 1909 là sự kiện được ghi chép cẩn thận nhất về tài năng của Gann. Tạp chí Ticker and Investment Digest đã cử phóng viên Richard Wyckoff — sau này cũng trở thành một huyền thoại phân tích kỹ thuật — đến quan sát Gann giao dịch trong 25 ngày. Trong khoảng thời gian đó, Gann thực hiện 286 giao dịch và chỉ thua 22 lần — tỷ lệ thắng khoảng 92 phần trăm. Wyckoff ghi lại rằng ông đã tận mắt chứng kiến Gann dự báo chính xác cả thời điểm và mức giá của nhiều biến động thị trường, bao gồm cả một dự báo gây sốc khi ông nói "vào lúc 10 giờ 15 phút sáng nay, thị trường sẽ xảy ra điều này và điều kia" — và điều đó đã xảy ra đúng như vậy.</p>
+
+          <p>Tuy nhiên, cuộc đời của Gann không phải chỉ toàn vinh quang. Những thông tin về tài chính cá nhân của ông ở giai đoạn cuối đời còn nhiều mâu thuẫn. Một số nguồn cho rằng ông đã tích lũy tài sản hàng triệu đô la qua giao dịch và giảng dạy, nhưng nhiều nguồn khác ghi nhận rằng di sản ông để lại cho gia đình không lớn. Sự không nhất quán này làm cho huyền thoại xung quanh Gann càng trở nên bí ẩn hơn.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         V. TRIẾT LÝ CỐT LÕI
+    ══════════════════════════════════ -->
+    <section class="sec">
+      <div class="wrap">
+        <p class="sec-tag">Phần Năm</p>
+        <h2 class="sec-h">Triết Lý Nền Tảng — <em>Trật Tự Trong Hỗn Loạn</em></h2>
+
+        <div class="prose">
+          <p>Triết lý của William Gann không thể tách rời khỏi thế giới quan sâu xa của ông — một thế giới quan kết hợp giữa đức tin Thiên Chúa giáo sùng đạo, toán học và hình học cổ đại, thiên văn học, và lý thuyết về chu kỳ lịch sử. Đối với Gann, thị trường tài chính không phải là một cơ chế ngẫu nhiên bị chi phối bởi tâm lý đám đông mà là một hệ thống hoàn toàn có trật tự, tuân theo những quy luật toán học bất biến giống như các hành tinh tuân theo các quy luật thiên văn học của Newton.</p>
+        </div>
+
+        <div class="inscription">
+          <p>Thị trường không bao giờ thay đổi. Chỉ có con người thay đổi. Tâm lý con người cũng không thay đổi — nó chỉ lặp đi lặp lại trong những chu kỳ nhất định. Người nào hiểu được chu kỳ đó sẽ hiểu được thị trường.</p>
+          <cite>— W. D. Gann, "Truth of the Stock Tape"</cite>
+        </div>
+
+        <div class="sub-h">Nguyên Lý Thứ Nhất — Giá, Thời Gian và Không Gian</div>
+        <div class="prose">
+          <p>Gann tin rằng ba yếu tố cơ bản vận hành mọi thị trường tài chính là giá, thời gian và không gian (hay biên độ biến động). Ba yếu tố này không tồn tại độc lập mà liên kết chặt chẽ với nhau theo những tỷ lệ hình học cụ thể. Khi giá và thời gian cân bằng nhau — tức là chúng đạt đến một tỷ lệ toán học nhất định — thị trường sẽ đảo chiều. Ông gọi đây là trạng thái "bình phương giá và thời gian" — một khái niệm trung tâm trong toàn bộ hệ thống của ông.</p>
+        </div>
+
+        <div class="sub-h">Nguyên Lý Thứ Hai — Chu Kỳ Lịch Sử</div>
+        <div class="prose">
+          <p>Gann tin chắc rằng lịch sử thị trường lặp lại theo các chu kỳ xác định — không giống hệt nhau nhưng tương đồng đến mức có thể dự báo được. Ông nghiên cứu lịch sử giá ngũ cốc, bông và chứng khoán qua hàng thế kỷ và xác định các chu kỳ quan trọng như chu kỳ 10 năm, 20 năm, 30 năm, 60 năm — mỗi chu kỳ gắn với một hành tinh hoặc một hiện tượng thiên văn cụ thể. Khi các chu kỳ này hội tụ, khả năng xảy ra một biến động lớn trên thị trường tăng lên đáng kể.</p>
+        </div>
+
+        <div class="sub-h">Nguyên Lý Thứ Ba — Thiên Văn Học và Thị Trường</div>
+        <div class="prose">
+          <p>Đây là phần gây tranh cãi nhất trong tư tưởng của Gann. Ông tin rằng chuyển động của các hành tinh, đặc biệt là Sao Thổ, Sao Mộc và Mặt Trời, có mối liên hệ thực sự với các biến động thị trường. Không phải theo kiểu chiêm tinh học bói toán mà theo một lý thuyết mà ông gọi là thiên văn tài chính — rằng các chu kỳ thiên văn tạo ra những thay đổi trong tâm lý tập thể của con người, điều đó ảnh hưởng đến hành vi mua bán trên thị trường. Ông xác định các ngày và tháng quan trọng trong năm dựa trên vị trí của các hành tinh và sự kiện thiên văn, rồi đối chiếu với dữ liệu lịch sử giá để tìm ra mối tương quan.</p>
+        </div>
+
+        <div class="sub-h">Nguyên Lý Thứ Tư — Tâm Lý Là Không Đổi</div>
+        <div class="prose">
+          <p>Dù có nhiều yếu tố huyền học, Gann cũng có một nền tảng tâm lý học thực dụng rất sắc sảo. Ông quan sát rằng con người trong thị trường luôn phản ứng theo cùng một cách khi đối mặt với thua lỗ, lợi nhuận, sợ hãi và lòng tham. Sự lặp lại của các mẫu hình giá chính là kết quả của sự lặp lại trong tâm lý con người. Do đó, người nào hiểu được các mẫu hình tâm lý đó và khi nào chúng xuất hiện sẽ có lợi thế quyết định.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         VI. PHƯƠNG PHÁP CHI TIẾT
+    ══════════════════════════════════ -->
+    <section class="sec">
+      <div class="wrap">
+        <p class="sec-tag">Phần Sáu</p>
+        <h2 class="sec-h">Phương Pháp Gann — <em>Chi Tiết Từng Công Cụ</em></h2>
+
+        <!-- 6A: Gann Angles -->
+        <div class="sub-h">6.1 — Các Góc Gann (Gann Angles)</div>
+        <div class="prose">
+          <p>Góc Gann là công cụ nổi tiếng nhất và được sử dụng rộng rãi nhất trong hệ thống của ông. Ý tưởng cốt lõi là: trên một biểu đồ giá được vẽ với tỷ lệ đặc biệt (một đơn vị giá bằng một đơn vị thời gian), các đường thẳng kéo từ đỉnh và đáy quan trọng theo các góc độ hình học nhất định sẽ đóng vai trò là các đường hỗ trợ và kháng cự mạnh mẽ trong tương lai. Không phải mọi góc độ đều có ý nghĩa như nhau — Gann xác định chín góc quan trọng nhất dựa trên tỷ lệ giá-thời gian.</p>
+        </div>
+
+        <table class="angle-table">
+          <thead>
+            <tr>
+              <th>Tên Góc</th>
+              <th>Góc Độ</th>
+              <th>Tỷ Lệ Giá / Thời Gian</th>
+              <th>Ý Nghĩa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight">
+              <td class="angle-name">1×1 (Gann 45°)</td>
+              <td class="angle-val">45°</td>
+              <td>1 đơn vị giá : 1 đơn vị thời gian</td>
+              <td>Góc quan trọng nhất — đường cân bằng lý tưởng giữa giá và thời gian. Nếu giá nằm trên đường này, thị trường mạnh; bên dưới là yếu.</td>
+            </tr>
+            <tr>
+              <td class="angle-name">2×1</td>
+              <td class="angle-val">63,75°</td>
+              <td>2 đơn vị giá : 1 đơn vị thời gian</td>
+              <td>Đường tăng nhanh — kháng cự hoặc hỗ trợ mạnh trong xu hướng tăng mạnh.</td>
+            </tr>
+            <tr>
+              <td class="angle-name">4×1</td>
+              <td class="angle-val">75,96°</td>
+              <td>4 đơn vị giá : 1 đơn vị thời gian</td>
+              <td>Đường tăng rất nhanh — thị trường trong trạng thái tăng trưởng bùng nổ.</td>
+            </tr>
+            <tr>
+              <td class="angle-name">8×1</td>
+              <td class="angle-val">82,5°</td>
+              <td>8 đơn vị giá : 1 đơn vị thời gian</td>
+              <td>Đường gần thẳng đứng — thị trường đang trong trạng thái tăng phi mã cực đoan.</td>
+            </tr>
+            <tr>
+              <td class="angle-name">1×2</td>
+              <td class="angle-val">26,25°</td>
+              <td>1 đơn vị giá : 2 đơn vị thời gian</td>
+              <td>Đường tăng chậm — hỗ trợ tốt trong xu hướng tăng nhẹ hoặc hồi phục.</td>
+            </tr>
+            <tr>
+              <td class="angle-name">1×4</td>
+              <td class="angle-val">14,04°</td>
+              <td>1 đơn vị giá : 4 đơn vị thời gian</td>
+              <td>Đường rất thoải — thị trường trong giai đoạn tích lũy hoặc phục hồi chậm.</td>
+            </tr>
+            <tr>
+              <td class="angle-name">1×8</td>
+              <td class="angle-val">7,5°</td>
+              <td>1 đơn vị giá : 8 đơn vị thời gian</td>
+              <td>Đường gần nằm ngang — hỗ trợ hoặc kháng cự yếu trong giai đoạn đi ngang.</td>
+            </tr>
+            <tr>
+              <td class="angle-name">3×1</td>
+              <td class="angle-val">71,57°</td>
+              <td>3 đơn vị giá : 1 đơn vị thời gian</td>
+              <td>Góc trung gian giữa 2×1 và 4×1 — kháng cự quan trọng thứ hai.</td>
+            </tr>
+            <tr>
+              <td class="angle-name">1×3</td>
+              <td class="angle-val">18,43°</td>
+              <td>1 đơn vị giá : 3 đơn vị thời gian</td>
+              <td>Góc thoải — hỗ trợ quan trọng thứ hai trong xu hướng tăng chậm.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="prose">
+          <p>Điều then chốt trong việc sử dụng các góc Gann là việc xác định tỷ lệ tỷ lệ của biểu đồ — một điểm mà nhiều người học Gann bỏ qua và sau đó kết luận rằng phương pháp không hiệu quả. Gann nhấn mạnh rằng biểu đồ phải được vẽ với tỷ lệ "tự nhiên" — nghĩa là một đơn vị thay đổi giá phải bằng một đơn vị thay đổi thời gian theo giá trị vật chất của nó, không phải tùy tiện. Mỗi thị trường có thể có tỷ lệ tự nhiên riêng.</p>
+        </div>
+
+        <div class="sec-divider"><div class="sec-divider-gem"></div></div>
+
+        <!-- 6B: Square of Nine -->
+        <div class="sub-h">6.2 — Bình Phương Số Chín (Square of Nine)</div>
+        <div class="prose">
+          <p>Bình Phương Số Chín là công cụ bí ẩn và được bàn luận nhiều nhất trong toàn bộ hệ thống của Gann. Đây là một bảng số hình xoắn ốc vuông, bắt đầu từ số 1 ở tâm và xoắn ra ngoài theo hướng kim đồng hồ với các số tăng dần. Bảng số này tạo ra các mối liên hệ hình học giữa các số dựa trên góc 45 độ, 90 độ, 120 độ, 180 độ và 360 độ — các góc cơ bản của hình học.</p>
+
+          <p>Gann sử dụng công cụ này để tìm ra các mức giá hỗ trợ và kháng cự, các điểm đảo chiều tiềm năng, và cả các mốc thời gian quan trọng. Nguyên tắc là: một mức giá quan trọng hiện tại có mối liên hệ về mặt hình học với các mức giá trong tương lai thông qua các góc trên bảng. Ví dụ, nếu giá đang ở mức 50 đô la, thì các mức giá nằm ở góc 90 độ, 180 độ, hay 360 độ so với số 50 trong bảng Bình Phương Số Chín sẽ là các mức kháng cự hoặc hỗ trợ tiềm năng mạnh.</p>
+
+          <p>Nhiều nhà giao dịch hiện đại áp dụng Bình Phương Số Chín cho cả các tài sản hiện đại như cổ phiếu công nghệ và tiền mã hóa, và báo cáo rằng các mức giá tính từ công cụ này thường trùng khớp với các điểm đảo chiều thực tế một cách đáng ngạc nhiên.</p>
+        </div>
+
+        <div class="sec-divider"><div class="sec-divider-gem"></div></div>
+
+        <!-- 6C: Cycles -->
+        <div class="sub-h">6.3 — Lý Thuyết Chu Kỳ (Master Time Cycle)</div>
+        <div class="prose">
+          <p>Gann xác định một số chu kỳ thời gian quan trọng nhất trong lịch sử thị trường. Chu kỳ 360 ngày gắn với một năm Mặt Trời đầy đủ là chu kỳ cơ bản nhất. Chu kỳ 30 năm gắn với quỹ đạo của Sao Thổ. Chu kỳ 60 năm là hai lần chu kỳ Sao Thổ và theo Gann là chu kỳ thị trường lớn nhất và quan trọng nhất. Ông tin rằng các thị trường có xu hướng lặp lại những biến động lớn sau mỗi 60 năm.</p>
+
+          <p>Ngoài ra, Gann xác định nhiều chu kỳ con quan trọng như chu kỳ 7 năm (gắn với khái niệm "năm Sa-bát" trong Kinh Thánh), chu kỳ 10 năm, chu kỳ 20 năm. Ông áp dụng tất cả các chu kỳ này lên biểu đồ và tìm kiếm những thời điểm khi nhiều chu kỳ hội tụ — những lúc đó ông coi là thời điểm biến động thị trường quan trọng có xác suất xảy ra cao nhất.</p>
+        </div>
+
+        <div class="sec-divider"><div class="sec-divider-gem"></div></div>
+
+        <!-- 6D: Price Retracement -->
+        <div class="sub-h">6.4 — Mức Thoái Lui Giá (Price Retracements)</div>
+        <div class="prose">
+          <p>Gann xác định các mức thoái lui giá quan trọng dựa trên các tỷ lệ phần của một toàn thể — một phần tư (25 phần trăm), một phần ba (33 phần trăm), một nửa (50 phần trăm), hai phần ba (67 phần trăm), và ba phần tư (75 phần trăm). Trong số đó, mức 50 phần trăm được ông coi là quan trọng nhất — điểm giữa của một biến động là điểm mà thị trường thường dừng lại, kiểm tra lại, trước khi tiếp tục xu hướng hoặc đảo chiều.</p>
+
+          <p>Đặc biệt, Gann cũng sử dụng mức 12,5 phần trăm (một phần tám) và các bội số của nó — gọi là "octaves" hay "bát cung" — dựa trên sự tương đồng với các quãng âm nhạc. Ông tin rằng thị trường, giống như âm nhạc, có những điểm cộng hưởng hài hòa tự nhiên theo các tỷ lệ toán học này.</p>
+        </div>
+
+        <div class="sec-divider"><div class="sec-divider-gem"></div></div>
+
+        <!-- 6E: Vibration -->
+        <div class="sub-h">6.5 — Lý Thuyết Dao Động (Law of Vibration)</div>
+        <div class="prose">
+          <p>Đây là phần bí ẩn nhất và ít được hiểu nhất trong hệ thống của Gann. Trong bài phỏng vấn năm 1909, Gann nói rằng ông đã phát hiện ra "Quy Luật Dao Động" — một nguyên lý cho phép ông xác định trước xu hướng và điểm đảo chiều của bất kỳ cổ phiếu hay hàng hóa nào. Ông mô tả điều này theo cách rất gợi ý đến vật lý học: mỗi cổ phiếu có một "tần số dao động" riêng, giống như âm thoa rung ở một tần số cố định khi được gõ. Khi nắm được tần số dao động riêng của một cổ phiếu, nhà giao dịch có thể dự báo được các điểm đảo chiều trong tương lai.</p>
+
+          <p>Gann giữ chi tiết cụ thể của phương pháp này như bí mật suốt cuộc đời và không bao giờ giải thích đầy đủ trong bất kỳ tài liệu nào. Nhiều nhà nghiên cứu sau này cho rằng đây có thể liên quan đến việc phân tích biên độ và tần suất biến động giá theo các tỷ lệ hình học, hoặc liên quan đến lý thuyết số học từ Pythagoras. Cho đến nay, không ai có thể xác nhận chắc chắn Quy Luật Dao Động là gì.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         VII. NỀN TẢNG LÝ THUYẾT
+    ══════════════════════════════════ -->
+    <section class="sec">
+      <div class="wrap">
+        <p class="sec-tag">Phần Bảy</p>
+        <h2 class="sec-h">Nền Tảng Lý Thuyết — <em>Những Nguồn Gốc Xa Xưa</em></h2>
+
+        <div class="prose">
+          <p>Phương pháp của Gann không ra đời trong khoảng không — nó được xây dựng trên một nền tảng lý thuyết rộng lớn và đa dạng đến mức khiến nhiều học giả ngạc nhiên khi nhận ra độ sâu của kiến thức mà ông đã tích lũy.</p>
+        </div>
+
+        <ol class="method-list">
+          <li>
+            <div>
+              <div class="m-title">Hình Học Pythagoras và Triết Học Số Học</div>
+              <div class="m-body">Pythagoras và trường phái của ông tin rằng số học là ngôn ngữ của vũ trụ và mọi hiện tượng tự nhiên đều có thể được biểu diễn bằng các mối quan hệ số học. Gann thấm nhuần tư tưởng này và ứng dụng vào thị trường — số 3, số 4, số 7, số 9 và số 12 có những ý nghĩa đặc biệt trong hệ thống của ông, không phải vì mê tín mà vì ông tìm thấy bằng chứng thực nghiệm về sự lặp lại của chúng trong dữ liệu lịch sử giá.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="m-title">Hình Học Euclid và Khái Niệm Tỷ Lệ Vàng</div>
+              <div class="m-body">Gann sử dụng các nguyên lý hình học Euclid — đặc biệt là mối quan hệ giữa các góc và tỷ lệ trong hình tứ giác, tam giác và hình tròn — làm cơ sở cho hệ thống các góc của mình. Tỷ lệ vàng 0,618 và các biến thể của nó (gần giống nhưng không hoàn toàn là Fibonacci) xuất hiện trong nhiều công cụ của ông, đặc biệt trong việc xác định các mức thoái lui giá.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="m-title">Thiên Văn Học Babylon và Chu Kỳ Hành Tinh</div>
+              <div class="m-body">Các nền văn minh cổ đại như Babylon và Ai Cập đã quan sát thiên văn học với độ chính xác đáng kinh ngạc hàng nghìn năm trước Công Nguyên. Họ xác định các chu kỳ chính xác của Sao Thổ, Sao Mộc và các hành tinh khác. Gann nghiên cứu những chu kỳ này và cho rằng chúng tương ứng với các chu kỳ kinh tế và thị trường. Ông đặc biệt chú ý đến vòng quay của Sao Thổ (29,5 năm) và Sao Mộc (11,86 năm) và sự kết hợp của chúng.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="m-title">Kinh Thánh và Chu Kỳ Lịch Sử Thiêng Liêng</div>
+              <div class="m-body">Gann đọc Kinh Thánh không chỉ như sách đức tin mà còn như một bản ghi chép về các chu kỳ lịch sử. Ông đặc biệt chú ý đến khái niệm "năm Jubilee" (năm Hân Hỉ) trong Sách Leviticus — cứ 50 năm một lần, tất cả nợ được xóa và đất đai được trả về chủ cũ. Ông coi đây là nền tảng Kinh Thánh cho chu kỳ 50 năm mà ông quan sát thấy trong lịch sử kinh tế. Chu kỳ 7 năm (tuần) và 49 năm (bảy tuần) cũng được ông tham chiếu nhiều lần.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="m-title">Lý Thuyết Dow và Phân Tích Kỹ Thuật Cổ Điển</div>
+              <div class="m-body">Gann không phủ nhận những nền tảng kỹ thuật cổ điển mà nhiều đồng nghiệp thời ông đang xây dựng. Ông chấp nhận và tích hợp các khái niệm cơ bản của Lý Thuyết Dow về ba pha thị trường, tầm quan trọng của xác nhận giữa các chỉ số, và sự cần thiết của khối lượng giao dịch làm bằng chứng xác nhận. Nhưng ông đi xa hơn nhiều bằng cách thêm vào chiều thứ ba là thời gian và chiều thứ tư là chu kỳ thiên văn.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="m-title">Kinh Dịch và Tư Tưởng Phương Đông</div>
+              <div class="m-body">Mặc dù ít được đề cập trong các tài liệu chính thức của ông, nhiều nhà nghiên cứu tin rằng chuyến du hành đến châu Á của Gann đã tiếp xúc ông với tư tưởng Đạo gia và Kinh Dịch — khái niệm về sự thay đổi có chu kỳ, sự cân bằng giữa âm và dương, và việc đọc các dấu hiệu của thiên nhiên để dự đoán tương lai. Những khái niệm này cộng hưởng rất mạnh với hệ thống chu kỳ thời gian của ông.</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         VIII. CÁC QUY TẮC GIAO DỊCH
+    ══════════════════════════════════ -->
+    <section class="sec">
+      <div class="wrap">
+        <p class="sec-tag">Phần Tám</p>
+        <h2 class="sec-h">Hai Mươi Tám Quy Tắc <em>Gann Để Lại</em></h2>
+
+        <div class="prose">
+          <p>Trong tác phẩm "How to Make Profits in Commodities" (1942), Gann đưa ra một danh sách các quy tắc giao dịch cụ thể mà ông đúc kết từ hơn bốn mươi năm kinh nghiệm. Đây là phần thực dụng và dễ áp dụng nhất trong toàn bộ hệ thống của ông. Dưới đây là các quy tắc quan trọng nhất:</p>
+        </div>
+
+        <ol class="method-list">
+          <li>
+            <div>
+              <div class="m-title">Phân Bổ Vốn — Không Bao Giờ Đặt Cược Quá Nhiều</div>
+              <div class="m-body">Gann khuyến nghị không bao giờ rủi ro quá 10 phần trăm tổng vốn trong một giao dịch duy nhất. Ông chia vốn thành mười phần bằng nhau và chỉ sử dụng một phần cho mỗi giao dịch. Quy tắc này đảm bảo rằng dù thua lỗ liên tiếp, nhà giao dịch vẫn còn đủ vốn để tiếp tục và phục hồi.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="m-title">Luôn Đặt Lệnh Dừng Lỗ Trước Khi Vào Giao Dịch</div>
+              <div class="m-body">Không có giao dịch nào được mở ra mà không có điểm thoát lỗ được xác định trước và thực thi qua lệnh tự động. Đây là quy tắc sắt mà Gann không bao giờ thỏa hiệp, dù ông tin chắc vào phân tích của mình đến đâu. Thị trường luôn có thể làm điều bất ngờ, và không ai thoát khỏi quy luật đó.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="m-title">Không Bao Giờ Trung Bình Giá Xuống Vào Vị Thế Thua</div>
+              <div class="m-body">Gann coi đây là một trong những sai lầm tốn kém nhất mà nhà giao dịch có thể mắc phải. Khi một vị thế đang thua lỗ, đó là thị trường đang nói rằng phân tích của bạn sai. Mua thêm không sửa được lỗi phân tích — nó chỉ gia tăng thiệt hại khi thị trường tiếp tục đi ngược lại.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="m-title">Không Được Phép Cơ Hội Biến Thành Thua Lỗ</div>
+              <div class="m-body">Khi một giao dịch đã trở nên có lợi nhuận đủ để bù đắp hoa hồng và chi phí giao dịch, phải nâng điểm dừng lỗ lên mức hòa vốn ít nhất. Không bao giờ được phép để một giao dịch đang lãi biến thành thua lỗ do không bảo vệ kịp thời.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="m-title">Không Giao Dịch Khi Không Có Xu Hướng Rõ Ràng</div>
+              <div class="m-body">Gann tin rằng kiên nhẫn chờ đợi điều kiện thuận lợi quan trọng hơn nhiều so với việc liên tục giao dịch để cảm thấy bận rộn. Trong những giai đoạn thị trường đi ngang không có xu hướng, chiến lược tốt nhất là đứng ngoài và giữ tiền mặt. Mất cơ hội không tệ bằng mất tiền.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="m-title">Giao Dịch Theo Hướng Của Xu Hướng Chủ Đạo</div>
+              <div class="m-body">Khi thị trường đang trong xu hướng tăng dài hạn, chỉ mua vào ở những điểm điều chỉnh và không mở vị thế bán khống. Khi đang trong xu hướng giảm, làm ngược lại. Cưỡng lại xu hướng chính là đặt cược chống lại đa số sức mạnh của thị trường — một cuộc chiến mà nhà giao dịch cá nhân hầu như không thể thắng trong dài hạn.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="m-title">Đa Dạng Hóa Nhưng Không Phân Tán Quá Mức</div>
+              <div class="m-body">Gann khuyến nghị giao dịch không quá ba đến bốn thị trường khác nhau cùng một lúc. Nhiều hơn thế sẽ dẫn đến việc không theo dõi được đầy đủ bất kỳ thị trường nào, và sự tập trung bị phân tán dẫn đến quyết định kém chất lượng hơn.</div>
+            </div>
+          </li>
+          <li>
+            <div>
+              <div class="m-title">Ghi Chép Mọi Giao Dịch và Học Hỏi Từ Lịch Sử Cá Nhân</div>
+              <div class="m-body">Gann là một người ghi chép cực kỳ cẩn thận. Ông ghi lại lý do của mọi giao dịch, kết quả, và những bài học rút ra. Ông tin rằng nhật ký giao dịch là người thầy quan trọng nhất của một nhà giao dịch — bởi vì nó là gương phản chiếu trung thực nhất về những điểm mạnh và điểm yếu của bạn.</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         IX. NHỮNG DỰ BÁO HUYỀN THOẠI
+    ══════════════════════════════════ -->
+    <section class="sec">
+      <div class="wrap">
+        <p class="sec-tag">Phần Chín</p>
+        <h2 class="sec-h">Những Dự Báo <em>Gây Chấn Động Thế Giới</em></h2>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-gem"></div>
+            <div class="tl-year">1908</div>
+            <div class="tl-title">Dự Báo Giá Bông Đạt 1,00 Đô La</div>
+            <div class="tl-body">Gann dự báo giá bông sẽ đạt mức 1,00 đô la một pound vào tháng 12 năm 1908. Đây là thời điểm nhiều người còn coi đây là mức giá bất khả thi. Thực tế đã diễn ra đúng như dự báo — sự kiện này bắt đầu xây dựng danh tiếng của ông trong giới giao dịch hàng hóa.</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-gem"></div>
+            <div class="tl-year">1909</div>
+            <div class="tl-title">Thử Nghiệm Công Khai Trước Báo Chí — 286 Giao Dịch</div>
+            <div class="tl-body">Trước sự chứng kiến của phóng viên Richard Wyckoff và tạp chí Ticker and Investment Digest, Gann thực hiện 286 giao dịch trong 25 ngày giao dịch liên tiếp. Ông đạt tỷ lệ thắng 264 trong số 286 giao dịch — tương đương hơn 92 phần trăm chính xác. Wyckoff ghi lại rằng nhiều dự báo chính xác đến mức độ cụ thể về mức giá và thời điểm khiến ông không tìm được lời giải thích hợp lý nào ngoài việc thừa nhận đó là hệ thống làm việc thực sự.</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-gem"></div>
+            <div class="tl-year">1914</div>
+            <div class="tl-title">Dự Báo Chiến Tranh Thế Giới Thứ Nhất Và Thị Trường</div>
+            <div class="tl-body">Trước năm 1914, Gann đã cảnh báo khách hàng về một biến cố lớn sắp xảy ra trên thế giới sẽ gây ra biến động thị trường nghiêm trọng. Khi Thế Chiến Thứ Nhất bùng nổ vào tháng 8 năm 1914, ông đã dự báo trước sự ảnh hưởng của nó đến các thị trường hàng hóa. Ông cũng được cho là đã dự báo đúng năm kết thúc chiến tranh dựa trên phân tích chu kỳ.</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-gem"></div>
+            <div class="tl-year">1929</div>
+            <div class="tl-title">Dự Báo Đại Sụp Đổ Thị Trường</div>
+            <div class="tl-body">Đây là dự báo nổi tiếng nhất của Gann. Trong bản tin năm 1928 và đầu năm 1929, ông đã cảnh báo rằng thị trường đang trong giai đoạn nguy hiểm và sẽ xảy ra sự sụp đổ lớn. Vào tháng 10 năm 1929, thị trường sụp đổ thảm khốc trong sự kiện mà sau này gọi là "Thứ Ba Đen" và "Thứ Năm Đen". Gann còn dự báo rằng thị trường sẽ chạm đáy vào năm 1932 — điều này cũng xảy ra đúng như vậy khi chỉ số Dow Jones chạm mức thấp nhất vào tháng 7 năm 1932.</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-gem"></div>
+            <div class="tl-year">1932</div>
+            <div class="tl-title">Dự Báo Bắt Đầu Giai Đoạn Hồi Phục</div>
+            <div class="tl-body">Khi thị trường đang trong giai đoạn bi quan tuyệt đối của Đại Suy Thoái, Gann dự báo rằng năm 1932 sẽ là năm đáy và bắt đầu một chu kỳ phục hồi dài hạn mới. Sự hồi phục bắt đầu đúng vào mùa hè năm 1932 và tiếp tục trong nhiều năm sau đó, xác nhận dự báo này.</div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-gem"></div>
+            <div class="tl-year">1954</div>
+            <div class="tl-title">Dự Báo Về Thị Trường Bò Dài Hạn</div>
+            <div class="tl-body">Chỉ một năm trước khi mất, Gann đưa ra dự báo về một thị trường tăng mạnh và kéo dài trong những năm tiếp theo. Thực tế, thập niên 1950 và đầu thập niên 1960 chứng kiến một trong những giai đoạn tăng trưởng dài và mạnh nhất của thị trường chứng khoán Mỹ — giai đoạn mà Nicolas Darvas đã kiếm được hàng triệu đô la.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         X. BÀI HỌC ĐỂ LẠI
+    ══════════════════════════════════ -->
+    <section class="sec">
+      <div class="wrap">
+        <p class="sec-tag">Phần Mười</p>
+        <h2 class="sec-h">Những Bài Học <em>Ông Để Lại Cho Thế Hệ Sau</em></h2>
+
+        <div class="lesson">
+          <div class="lesson-num">01</div>
+          <div class="lesson-h">Thị Trường Có Trật Tự, Không Phải Ngẫu Nhiên</div>
+          <div class="lesson-b">Bài học quan trọng nhất từ cuộc đời Gann là không bao giờ chấp nhận rằng thị trường tài chính là hệ thống ngẫu nhiên không thể hiểu được. Ông dành cả cuộc đời để chứng minh rằng dưới lớp hỗn loạn bên ngoài của thị trường có những quy luật toán học và chu kỳ có thể nghiên cứu, hiểu và ứng dụng. Dù bạn đồng ý hay không với các phương pháp cụ thể của ông, thái độ tìm kiếm trật tự đó là nền tảng của mọi nhà phân tích giỏi.</div>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-num">02</div>
+          <div class="lesson-h">Thời Gian Quan Trọng Không Kém Giá</div>
+          <div class="lesson-b">Hầu hết các nhà đầu tư chỉ tập trung vào giá — mức nào cần mua, mức nào cần bán. Gann dạy rằng thời gian là chiều thứ hai không kém phần quan trọng. Một phân tích giá đúng nhưng sai thời điểm vẫn dẫn đến thua lỗ vì bạn có thể bị gạt ra khỏi thị trường trước khi dự báo thành hiện thực. Hiểu chu kỳ thời gian giúp nhà giao dịch kiên nhẫn đúng lúc và hành động đúng lúc.</div>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-num">03</div>
+          <div class="lesson-h">Kiến Thức Đa Ngành Tạo Ra Lợi Thế Cạnh Tranh Thực Sự</div>
+          <div class="lesson-b">Gann là người xuyên qua ranh giới giữa các ngành học — toán học, thiên văn học, lịch sử, thần học, âm nhạc, hình học. Chính sự kết hợp không ngờ giữa các lĩnh vực này đã tạo ra những phát hiện mà người chỉ nghiên cứu chuyên sâu một ngành không thể có được. Trong thế giới tài chính ngày nay, lợi thế cạnh tranh thực sự thường đến từ khả năng nhìn thấy kết nối giữa những thứ mà người khác không nghĩ chúng liên quan đến nhau.</div>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-num">04</div>
+          <div class="lesson-h">Kỷ Luật Quản Lý Rủi Ro Không Bao Giờ Thỏa Hiệp</div>
+          <div class="lesson-b">Dù phương pháp phân tích của Gann phức tạp đến đâu, các quy tắc quản lý rủi ro của ông lại đơn giản và không khoan nhượng: luôn có điểm dừng lỗ, không bao giờ rủi ro quá nhiều trong một giao dịch, không bao giờ trung bình giá xuống vị thế thua lỗ. Những quy tắc này hoàn toàn phù hợp với mọi hệ thống giao dịch hiện đại và vẫn là nền tảng không thể thiếu của bất kỳ nhà giao dịch chuyên nghiệp nào.</div>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-num">05</div>
+          <div class="lesson-h">Tâm Lý Học Là Nền Tảng Không Thể Bỏ Qua</div>
+          <div class="lesson-b">Gann hiểu sâu sắc rằng thị trường là tổng hợp của tâm lý con người, và tâm lý con người không thay đổi qua các thế hệ. Lòng tham và sợ hãi vận hành năm 1909 giống hệt cách chúng vận hành năm 2024. Do đó, những mẫu hình tâm lý học tập thể tạo ra các mẫu hình giá lặp lại có thể nhận ra và khai thác. Đây là bài học vượt thời gian nhất của ông.</div>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-num">06</div>
+          <div class="lesson-h">Sự Bí Ẩn Không Có Nghĩa Là Không Thực</div>
+          <div class="lesson-b">Nhiều nhà phê bình bác bỏ Gann vì tư tưởng huyền học của ông. Nhưng thực tế là những kết quả mà ông đạt được — đặc biệt là năm 1909 trước giới báo chí — rất khó phủ nhận. Bài học ở đây không phải là hãy tin vào thiên văn tài chính hay bảng số huyền bí, mà là đừng vội vàng bác bỏ những gì mình chưa hiểu. Đôi khi sự thật ẩn sau những ngôn ngữ mà chúng ta chưa học được cách đọc.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         XI. DI SẢN VÀ ẢNH HƯỞNG
+    ══════════════════════════════════ -->
+    <section class="sec">
+      <div class="wrap">
+        <p class="sec-tag">Phần Mười Một</p>
+        <h2 class="sec-h">Di Sản và <em>Ảnh Hưởng Không Thể Xóa Mờ</em></h2>
+
+        <div class="prose">
+          <p>William Delbert Gann mất ngày 18 tháng 6 năm 1955 tại Miami, Florida, ở tuổi 77. Ông ra đi và để lại sau lưng một khối di sản trí tuệ khổng lồ — hàng chục cuốn sách, khóa học, bản tin phân tích và hàng nghìn trang tài liệu nghiên cứu. Trong số các tác phẩm quan trọng nhất của ông có "Speculation a Profitable Profession" (1910), "Truth of the Stock Tape" (1923), "Tunnel Thru the Air" (1927) — một cuốn tiểu thuyết kỳ lạ mà nhiều người tin rằng ẩn chứa các phương pháp giao dịch bí mật của ông dưới dạng mã hóa — "Wall Street Stock Selector" (1930), và "How to Make Profits in Commodities" (1942).</p>
+
+          <p>Ảnh hưởng của Gann trong thế giới phân tích kỹ thuật hiện đại là rộng lớn đến mức khó đo đếm. Hầu hết các phần mềm phân tích kỹ thuật chuyên nghiệp ngày nay đều tích hợp công cụ Góc Gann và Bình Phương Số Chín. Có hàng chục tổ chức trên toàn thế giới chuyên nghiên cứu và giảng dạy phương pháp Gann. Cộng đồng những người theo đuổi phương pháp Gann bao gồm cả các nhà quản lý quỹ, nhà kinh tế học, và nhà phân tích từ khắp nơi trên thế giới.</p>
+
+          <p>Điều thú vị là di sản của Gann được bảo tồn không phải vì dễ hiểu mà chính vì sự bí ẩn của nó. Không như hầu hết các hệ thống giao dịch khác, phương pháp Gann không bao giờ hoàn toàn bị giải mã. Mỗi thế hệ nhà giao dịch lại tìm ra một cách hiểu mới, một cách ứng dụng mới, một tầng ý nghĩa mới trong những tác phẩm mà ông để lại. Điều này làm cho Gann trở thành một nhân vật độc nhất vô nhị trong lịch sử tài chính — không đơn thuần là một nhà phân tích, mà gần hơn với một triết gia hay thậm chí một nhà thần bí học của thị trường tài chính.</p>
+        </div>
+
+        <div class="inscription">
+          <p>Không phải những gì tôi biết là quan trọng. Quan trọng là những gì bạn sẵn sàng học — và bao lâu bạn kiên nhẫn để quan sát trước khi hành động.</p>
+          <cite>— W. D. Gann</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         XII. ĐÚC KẾT VỀ THỊ TRƯỜNG
+    ══════════════════════════════════ -->
+    <section class="sec">
+      <div class="wrap">
+        <p class="sec-tag">Phần Mười Hai</p>
+        <h2 class="sec-h">Những Đúc Kết Về <em>Thị Trường và Nghề Trading</em></h2>
+
+        <div class="prose">
+          <p><strong>Lịch sử không lặp lại hoàn toàn nhưng luôn có vần điệu.</strong> Câu nói thường được gán cho Mark Twain này phản ánh hoàn hảo nhất tư tưởng cốt lõi của Gann. Ông không tin rằng thị trường sẽ lặp lại giống hệt nhau — nhưng ông tin chắc rằng các mẫu hình lớn, các chu kỳ tâm lý và những con số quan trọng sẽ xuất hiện lại dưới hình thức biến thể. Người nào nhận ra vần điệu đó sẽ có lợi thế.</p>
+
+          <p><strong>Phân tích thị trường đòi hỏi sự kết hợp của khoa học và nghệ thuật.</strong> Gann là bằng chứng sống cho thấy kỹ năng phân tích thị trường không phải là một kỹ năng đơn thuần kỹ thuật có thể học trong vài tháng. Đó là sự tổng hòa của nhiều năm quan sát, nền tảng triết học sâu rộng, kỷ luật cá nhân nghiêm khắc, và một trực giác được mài giũa qua hàng nghìn giờ thực hành. Không có đường tắt.</p>
+
+          <p><strong>Tính kiên nhẫn và tính kỷ luật là hai phẩm chất không thể thay thế bằng bất kỳ phương pháp nào.</strong> Gann có thể dự báo đỉnh và đáy của thị trường một cách ấn tượng, nhưng ngay cả ông cũng trải qua những giai đoạn khó khăn và thua lỗ khi kỷ luật của mình bị thử thách. Những quy tắc quản lý rủi ro đơn giản của ông — không rủi ro quá nhiều, luôn có điểm dừng lỗ, không trung bình giá xuống — là những thứ mà ông coi quan trọng hơn bất kỳ phương pháp phân tích nào.</p>
+
+          <p><strong>Thị trường tài chính là gương phản chiếu bản chất con người.</strong> Một trong những đóng góp sâu sắc nhất của Gann là quan điểm rằng thị trường không phải là một thực thể tách biệt bên ngoài — nó là hình chiếu của tập thể tâm lý con người vào không gian và thời gian. Hiểu thị trường nghĩa là hiểu con người — hiểu sợ hãi, lòng tham, hy vọng và tuyệt vọng ở quy mô tập thể. Đây là lý do tại sao không có hệ thống thuần túy cơ học nào có thể thay thế hoàn toàn cho sự hiểu biết về hành vi con người.</p>
+
+          <p><strong>Di sản bí ẩn nhất là bài học về sự khiêm tốn.</strong> Cuối cùng, dù Gann để lại hệ thống phân tích phức tạp và ấn tượng đến mức nào, ông cũng là người liên tục nhắc nhở học trò rằng thị trường luôn lớn hơn bất kỳ phương pháp phân tích nào. Sự khiêm tốn trước thị trường — luôn đặt lệnh dừng lỗ, không bao giờ tự tin đến mức bỏ qua quản lý rủi ro — là thứ mà ông thể hiện rõ nhất trong các quy tắc thực dụng của mình, dù triết lý của ông có vẻ cao siêu đến đâu.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-gem-row">
+      <span></span><span></span>
+      <span class="large"></span>
+      <span></span><span></span>
+    </div>
+    <p class="footer-line">William Delbert Gann &nbsp;·&nbsp; 1878 — 1955</p>
+    <p class="footer-line" style="margin-top:0.5rem;color:rgba(90,88,112,0.55);">Lược sử tổng hợp &nbsp;·&nbsp; Chỉ dùng cho mục đích học thuật và tham khảo</p>
+  </footer>
+
+
+    <div style="padding: 20px; text-align: center; background: #0A0C1A;">
+        <button onclick="openLegendArticle('')" style="background: transparent; border: 1px solid rgba(184,115,51,0.5); color: #D4AF6A; padding: 7px 16px; cursor: pointer; font-family: 'Space Mono', monospace; font-size: 0.85rem; letter-spacing: 0.05em; border-radius: 4px;">
+            &#8592; Quay lại danh sách
         </button>
     </div>
 </div>
