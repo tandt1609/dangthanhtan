@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@400;500;600;700;800&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/style.css?v=8">
+    <link rel="stylesheet" href="/style.css?v=9">
     <!-- Remove preload class after CSS loads to prevent flash of unstyled content -->
     <script>document.addEventListener('DOMContentLoaded', () => document.body.classList.remove('preload'));</script>
     <!-- FontAwesome for Icons -->
@@ -148,7 +148,9 @@
 
             <!-- PANEL 2: VĨ MÔ -->
             <div id="panel-vi-mo" class="tab-panel">
-                <h2 class="section-title"><i class="fa-solid fa-chart-line"></i> Chỉ số Vĩ mô chính</h2>
+                <!-- LIST VIEW -->
+                <div id="vi-mo-list-view" class="sukien-view active">
+                    <h2 class="section-title"><i class="fa-solid fa-chart-line"></i> Chỉ số Vĩ mô chính</h2>
                 <div class="macro-grid">
                     <div class="macro-card">
                         <span class="macro-title">GDP Việt Nam Q1</span>
@@ -171,8 +173,828 @@
                         <span class="macro-compare">Mức biến động: +3.2% YTD</span>
                     </div>
                 </div>
-            </div>
+                    
+                    <h2 class="section-title" style="margin-top: 40px;"><i class="fa-solid fa-magnifying-glass-chart"></i> Phân tích Chuyên sâu</h2>
+                    <div class="news-list">
+                        <a href="/vi-mo/dxy-us10y" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-earth-americas"></i> Phân tích Vĩ mô</span>
+                                <span class="news-time">Tháng 6, 2026</span>
+                            </div>
+                            <h3 class="news-heading">DXY & Lợi Suất Trái Phiếu 10 Năm Mỹ — Phân Tích Toàn Diện</h3>
+                            <p class="news-excerpt">Nghiên cứu về mối tương quan giữa sức mạnh đồng Đô la Mỹ và lợi suất trái phiếu Kho bạc 10 năm, tác động đến thị trường tài chính toàn cầu.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc bài viết</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- ARTICLE VIEW -->
+                <div id="vi-mo-article-view" class="sukien-view">
+                    <div id="article-dxy-us10y-panel" class="sukien-article-panel">
+                        <div class="article-dxy-us10y">
+                            <button class="back-btn" onclick="openVimoArticle('')">
+                                <i class="fa-solid fa-arrow-left"></i> Quay lại Vĩ mô
+                            </button>
 
+
+<!-- ─── HEADER ─── -->
+<header class="dxy-site-header">
+  <div class="dxy-header-inner">
+    <div class="dxy-header-eyebrow">Phân Tích Vĩ Mô Liên Thị Trường</div>
+    <h1 class="dxy-header-title"><em>DXY</em> & Lợi Suất Trái Phiếu 10 Năm Mỹ — Tương Quan Nền Tảng Của Mọi Thị Trường</h1>
+    <p class="dxy-header-subtitle">Phân tích toàn diện mối quan hệ giữa chỉ số đô la Mỹ và lợi suất trái phiếu kho bạc Mỹ kỳ hạn 10 năm, tác động lan truyền đến chứng khoán, vàng, tiền điện tử và chính sách tiền tệ toàn cầu.</p>
+    <div class="dxy-header-meta">
+      <div class="dxy-meta-item">Phiên bản <span>2.0</span></div>
+      <div class="dxy-meta-item">Ngôn ngữ <span>Tiếng Việt</span></div>
+      <div class="dxy-meta-item">Cập nhật <span>Tháng 6 / 2026</span></div>
+      <div class="dxy-meta-item">Tác giả <span>dangthanhtan.pages.dev</span></div>
+    </div>
+  </div>
+  <!-- Heartbeat SVG decoration -->
+  <svg class="dxy-header-heartbeat" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="0,40 100,40 130,40 160,10 190,65 220,20 250,55 280,40 400,40 430,38 460,25 490,52 520,30 550,50 580,40 700,40 730,35 760,15 790,60 820,22 850,50 880,40 1000,40 1030,38 1060,20 1090,55 1120,25 1150,45 1200,40" fill="none" stroke="#C9A94E" stroke-width="1.5"/>
+  </svg>
+</header>
+
+<!-- ─── TICKER ─── -->
+<div class="dxy-ticker-bar">
+  <div class="dxy-ticker-track">
+    <div class="dxy-ticker-item"><span class="dxy-label">DXY ↑</span> <span>USD mạnh lên → XAUUSD chịu áp lực</span></div>
+    <div class="dxy-ticker-item"><span class="dxy-label">US10Y ↑</span> <span>Lợi suất tăng → Cổ phiếu tăng trưởng định giá lại</span></div>
+    <div class="dxy-ticker-item"><span class="dxy-label">FED TĂNG LÃI SUẤT</span> <span>→ EUR/USD, USD/JPY phản ứng trước</span></div>
+    <div class="dxy-ticker-item"><span class="dxy-label">REAL YIELD ↑</span> <span>Lợi suất thực dương → Vàng yếu, USD mạnh</span></div>
+    <div class="dxy-ticker-item"><span class="dxy-label">ĐƯỜNG CONG PHẲNG</span> <span>→ Tín hiệu suy thoái tiềm năng</span></div>
+    <div class="dxy-ticker-item"><span class="dxy-label">ECB SAU FED</span> <span>→ Châu Âu thường đi theo sau 3–6 tháng</span></div>
+    <!-- Repeat for infinite scroll -->
+    <div class="dxy-ticker-item"><span class="dxy-label">DXY ↑</span> <span>USD mạnh lên → XAUUSD chịu áp lực</span></div>
+    <div class="dxy-ticker-item"><span class="dxy-label">US10Y ↑</span> <span>Lợi suất tăng → Cổ phiếu tăng trưởng định giá lại</span></div>
+    <div class="dxy-ticker-item"><span class="dxy-label">FED TĂNG LÃI SUẤT</span> <span>→ EUR/USD, USD/JPY phản ứng trước</span></div>
+    <div class="dxy-ticker-item"><span class="dxy-label">REAL YIELD ↑</span> <span>Lợi suất thực dương → Vàng yếu, USD mạnh</span></div>
+    <div class="dxy-ticker-item"><span class="dxy-label">ĐƯỜNG CONG PHẲNG</span> <span>→ Tín hiệu suy thoái tiềm năng</span></div>
+    <div class="dxy-ticker-item"><span class="dxy-label">ECB SAU FED</span> <span>→ Châu Âu thường đi theo sau 3–6 tháng</span></div>
+  </div>
+</div>
+
+<!-- ─── MAIN LAYOUT ─── -->
+<div class="dxy-layout">
+
+  <!-- ─── SIDEBAR ─── -->
+  <aside class="dxy-sidebar">
+    <div class="dxy-nav-label">Mục lục</div>
+    <nav>
+      <ul class="dxy-nav-list">
+        <li><a href="#s1">Định nghĩa cơ bản</a></li>
+        <li><a href="#s2">Quan hệ DXY & US10Y</a></li>
+        <li><a href="#s3">Tương quan theo chu kỳ</a></li>
+        <li><a href="#s4">DXY & Nền kinh tế</a></li>
+        <li><a href="#s5">US10Y & Nền kinh tế</a></li>
+        <li><a href="#s6">Chỉ số nào phản ứng trước?</a></li>
+        <li><a href="#s7">Tương quan với chứng khoán</a></li>
+        <li><a href="#s8">Tương quan với vàng</a></li>
+        <li><a href="#s9">Tương quan với Crypto</a></li>
+        <li><a href="#s10">Tác động đến Châu Âu</a></li>
+        <li><a href="#s11">Tác động đến Nhật Bản</a></li>
+        <li><a href="#s12">Ma trận tóm tắt</a></li>
+        <li><a href="#s13">Ứng dụng thực tiễn</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ─── MAIN ─── -->
+  <main class="dxy-main-content">
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 1 — ĐỊNH NGHĨA
+    ════════════════════════════════════════════ -->
+    <section class="dxy-section" id="s1">
+      <div class="dxy-section-eyebrow">Nền tảng</div>
+      <h2 class="dxy-section-title">Định Nghĩa Cơ Bản: <em>DXY</em> Là Gì & Lợi Suất Trái Phiếu 10 Năm Là Gì?</h2>
+      <div class="dxy-section-body">
+        <p><strong>Chỉ số đô la Mỹ (DXY — US Dollar Index)</strong> là một chỉ số đo lường sức mạnh của đồng đô la Mỹ so với một rổ sáu loại tiền tệ chính: đồng euro (EUR, trọng số 57,6%), yên Nhật (JPY, 13,6%), bảng Anh (GBP, 11,9%), đô la Canada (CAD, 9,1%), krona Thụy Điển (SEK, 4,2%) và franc Thụy Sĩ (CHF, 3,6%). Chỉ số này được giới thiệu lần đầu năm 1973, ngay sau khi Hoa Kỳ rời bỏ chế độ Bretton Woods và giá trị cơ sở ban đầu được đặt ở mức 100.</p>
+        <p><strong>Lợi suất trái phiếu kho bạc Mỹ kỳ hạn 10 năm (US 10-Year Treasury Yield — US10Y)</strong> là tỷ lệ lãi suất hàng năm mà chính phủ Mỹ phải trả cho các nhà đầu tư nắm giữ trái phiếu kỳ hạn 10 năm. Đây là <mark>lãi suất chuẩn quan trọng nhất thế giới</mark>, ảnh hưởng trực tiếp đến lãi suất vay mua nhà, tín dụng doanh nghiệp, và chi phí vốn toàn cầu. Lợi suất di chuyển ngược chiều với giá trái phiếu: khi nhà đầu tư bán tháo trái phiếu (giá giảm), lợi suất tăng lên.</p>
+
+        <div class="dxy-callout">
+          <div class="dxy-callout-label">Điểm cốt lõi cần nhớ</div>
+          <p><strong>DXY đo sức mạnh tương đối của đồng đô la</strong> — nó phản ánh cung cầu USD trên thị trường ngoại hối toàn cầu. <strong>US10Y đo kỳ vọng về lãi suất, lạm phát và tăng trưởng</strong> trong 10 năm tới — nó phản ánh giá mà thị trường trái phiếu sẵn sàng cho vay tiền cho chính phủ Mỹ. Hai chỉ số này là <em>hai mặt khác nhau của cùng một đồng tiền</em>: lợi suất hấp dẫn kéo vốn vào Mỹ, khiến USD tăng giá.</p>
+        </div>
+
+        <p>Về mặt kỹ thuật, lợi suất thực (real yield) mới là biến số quan trọng nhất trong mối quan hệ này. Lợi suất thực bằng lợi suất danh nghĩa trừ đi kỳ vọng lạm phát, được đo bằng lợi suất của trái phiếu được bảo vệ lạm phát TIPS (Treasury Inflation-Protected Securities).</p>
+
+        <div class="dxy-formula-block">
+          <span class="dxy-comment">// Công thức lợi suất thực</span><br>
+          Lợi Suất Thực (Real Yield) = US10Y Danh Nghĩa − Kỳ Vọng Lạm Phát (TIPS)<br><br>
+          <span class="dxy-comment">// Ví dụ: Năm 2022</span><br>
+          US10Y = <span class="dxy-value">4,25%</span> — Kỳ Vọng Lạm Phát = <span class="dxy-value">2,4%</span> <span class="dxy-arrow">→</span> Real Yield = <span class="dxy-value">+1,85%</span><br><br>
+          <span class="dxy-comment">// Ví dụ: Năm 2021 (khi Fed giữ lãi suất thấp)</span><br>
+          US10Y = <span class="dxy-value">1,5%</span> — Kỳ Vọng Lạm Phát = <span class="dxy-value">3,2%</span> <span class="dxy-arrow">→</span> Real Yield = <span class="dxy-value">−1,7%</span>
+        </div>
+
+        <p>Khi lợi suất thực âm (như năm 2020–2021), USD suy yếu và dòng vốn chạy khỏi tài sản có thu nhập cố định sang vàng, cổ phiếu tăng trưởng và Bitcoin. Khi lợi suất thực dương và tăng cao (như năm 2022–2023), USD mạnh lên và các tài sản rủi ro chịu áp lực bán mạnh.</p>
+      </div>
+    </section>
+
+    <hr class="dxy-divider">
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 2 — MỐI QUAN HỆ CHÍNH
+    ════════════════════════════════════════════ -->
+    <section class="dxy-section" id="s2">
+      <div class="dxy-section-eyebrow">Cơ chế vận hành</div>
+      <h2 class="dxy-section-title">Mối Quan Hệ Giữa <em>DXY</em> và <em>US10Y</em>: Đồng Chiều Hay Ngược Chiều?</h2>
+      <div class="dxy-section-body">
+
+        <p>Câu trả lời ngắn gọn là: <strong>trong hầu hết các trường hợp, DXY và US10Y có xu hướng đồng chiều</strong> — khi lợi suất tăng, đô la Mỹ thường mạnh lên, và ngược lại. Tuy nhiên, mối quan hệ này <em>không phải lúc nào cũng nhất quán</em> và có những giai đoạn cụ thể mà chúng đi ngược chiều nhau hoặc mất tương quan.</p>
+
+        <h3 class="dxy-sub-heading">Cơ chế đồng chiều: Dòng vốn theo lợi suất</h3>
+        <p>Cơ chế cơ bản như sau: khi lợi suất trái phiếu Mỹ tăng, đầu tư vào trái phiếu Mỹ trở nên hấp dẫn hơn so với trái phiếu của các nước khác. Các nhà đầu tư nước ngoài cần mua USD để mua trái phiếu Mỹ, khiến cầu USD tăng, đẩy DXY tăng theo. Đây là cơ chế carry trade và dòng vốn toàn cầu — tiền chạy về nơi có lợi suất cao hơn.</p>
+
+        <div class="dxy-flow-diagram">
+          <div class="dxy-flow-title">Cơ Chế Dòng Vốn: Lợi Suất → USD</div>
+          <div class="dxy-flow-row">
+            <div class="dxy-flow-node dxy-highlight">FED tăng lãi suất</div>
+            <div class="dxy-flow-arrow">→</div>
+            <div class="dxy-flow-node">US10Y tăng</div>
+            <div class="dxy-flow-arrow">→</div>
+            <div class="dxy-flow-node dxy-green">Trái phiếu Mỹ hấp dẫn hơn</div>
+          </div>
+          <div class="dxy-flow-row">
+            <div class="dxy-flow-node dxy-green">Nhà đầu tư ngoài mua USD</div>
+            <div class="dxy-flow-arrow">→</div>
+            <div class="dxy-flow-node dxy-highlight">DXY tăng</div>
+            <div class="dxy-flow-arrow">→</div>
+            <div class="dxy-flow-node dxy-red">Tài sản không phải USD chịu áp lực</div>
+          </div>
+          <div class="dxy-flow-note">Cơ chế này hoạt động rõ nhất trong chu kỳ thắt chặt tiền tệ (2022–2023). Tuy nhiên khi thị trường trái phiếu sụp đổ do khủng hoảng tín dụng, USD tăng do trú ẩn an toàn chứ không phải vì lợi suất.</div>
+        </div>
+
+        <h3 class="dxy-sub-heading">Khi nào DXY và US10Y đi ngược chiều?</h3>
+        <p>Có hai kịch bản quan trọng mà DXY và US10Y có thể đi ngược chiều nhau:</p>
+
+        <p><strong>Kịch bản 1 — Khủng hoảng "Bay to Safety" (Chạy trốn sang an toàn):</strong> Trong các giai đoạn khủng hoảng cấp tính (như tháng 3/2020 khi đại dịch COVID-19 bùng phát, hoặc khủng hoảng tài chính 2008), DXY tăng mạnh do cầu USD như tài sản trú ẩn tăng vọt. Tuy nhiên, đồng thời lợi suất US10Y lại giảm vì nhà đầu tư đổ xô mua trái phiếu Mỹ (giá trái phiếu tăng, lợi suất giảm). Đây là trường hợp điển hình mà DXY tăng trong khi US10Y giảm.</p>
+
+        <p><strong>Kịch bản 2 — Lo ngại về thâm hụt tài khóa và mất niềm tin:</strong> Khi nhà đầu tư lo lắng về sức khỏe tài chính của chính phủ Mỹ, họ có thể bán tháo cả trái phiếu Mỹ lẫn USD cùng lúc. Kịch bản hiếm nhưng nguy hiểm này được gọi là "dollar-gilt tantrum" — lợi suất tăng (bán trái phiếu) nhưng USD cũng giảm (mất niềm tin vào Mỹ). Một ví dụ gần đây là biến động thị trường trái phiếu Mỹ trong bối cảnh tranh luận về trần nợ năm 2023 và lo ngại thâm hụt năm 2025.</p>
+
+        <div class="dxy-example-box">
+          <div class="dxy-example-header">
+            <span class="dxy-example-badge">Ví dụ thực tế</span>
+            <span class="dxy-example-year">Tháng 3/2020 — Đại dịch COVID-19</span>
+          </div>
+          <h4>Khủng hoảng "Tất cả cùng bán" (Dash for Cash)</h4>
+          <p>Ngày 9–20 tháng 3/2020 là giai đoạn bất thường nhất trong lịch sử tài chính hiện đại: thị trường bán tháo mọi thứ để lấy tiền mặt USD. DXY tăng từ <span class="dxy-data-inline">94</span> lên <span class="dxy-data-inline dxy-data-up">103</span> (tăng hơn 9% trong hai tuần). Đồng thời, lợi suất US10Y <em>giảm</em> từ <span class="dxy-data-inline">1,2%</span> xuống <span class="dxy-data-inline dxy-data-down">0,5%</span> khi vốn đổ vào trái phiếu Mỹ như hầm trú ẩn. Khi FED can thiệp với gói QE vô hạn và swap line, DXY hạ nhiệt và lợi suất bắt đầu phục hồi nhẹ. Đây là ví dụ kinh điển về mối quan hệ <strong>ngược chiều</strong> giữa DXY và US10Y trong khủng hoảng cấp tính.</p>
+        </div>
+
+        <div class="dxy-example-box">
+          <div class="dxy-example-header">
+            <span class="dxy-example-badge">Ví dụ thực tế</span>
+            <span class="dxy-example-year">2022 — Chu kỳ thắt chặt của FED</span>
+          </div>
+          <h4>Mối quan hệ đồng chiều rõ nét nhất trong 40 năm</h4>
+          <p>Năm 2022 là minh chứng hoàn hảo cho mối quan hệ <strong>đồng chiều</strong>: FED tăng lãi suất 425 điểm cơ bản (từ 0–0,25% lên 4,25–4,5%). US10Y tăng từ <span class="dxy-data-inline">1,5%</span> đầu năm lên <span class="dxy-data-inline dxy-data-up">4,25%</span> cuối năm. DXY tăng từ <span class="dxy-data-inline">95</span> lên mức đỉnh <span class="dxy-data-inline dxy-data-up">114,7</span> vào tháng 9/2022 — mức cao nhất trong 20 năm. Cả hai chỉ số cùng tăng mạnh, xác nhận cơ chế dòng vốn theo lợi suất trong chu kỳ thắt chặt.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="dxy-divider">
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 3 — TƯƠNG QUAN THEO CHU KỲ
+    ════════════════════════════════════════════ -->
+    <section class="dxy-section" id="s3">
+      <div class="dxy-section-eyebrow">Chu kỳ kinh tế</div>
+      <h2 class="dxy-section-title">Tương Quan Theo Từng <em>Giai Đoạn</em> Kinh Tế</h2>
+      <div class="dxy-section-body">
+        <p>Mối quan hệ giữa DXY và US10Y thay đổi rõ rệt theo từng giai đoạn của chu kỳ kinh tế. Việc xác định đúng giai đoạn kinh tế hiện tại là chìa khóa để đọc đúng tín hiệu từ hai chỉ số này.</p>
+
+        <div class="dxy-phase-grid">
+          <div class="dxy-phase-card dxy-expansion">
+            <div class="dxy-phase-tag">Mở rộng kinh tế</div>
+            <h4>Tăng trưởng & Lạm phát leo thang</h4>
+            <p>Tăng trưởng mạnh thúc đẩy kỳ vọng FED thắt chặt. US10Y tăng trước do thị trường phản chiếu kỳ vọng. DXY tăng theo khi vốn toàn cầu chạy về Mỹ. Tương quan: <strong>đồng chiều mạnh</strong>.</p>
+            <div class="dxy-phase-metrics">
+              <span class="dxy-phase-metric">US10Y ↑</span>
+              <span class="dxy-phase-metric">DXY ↑</span>
+              <span class="dxy-phase-metric">S&P500 ↑ (sớm)</span>
+              <span class="dxy-phase-metric">Vàng: trung tính</span>
+            </div>
+          </div>
+
+          <div class="dxy-phase-card dxy-peak">
+            <div class="dxy-phase-tag">Đỉnh chu kỳ — FED tăng lãi suất</div>
+            <h4>Thắt chặt chính sách tối đa</h4>
+            <p>FED tăng lãi suất mạnh. US10Y đạt đỉnh và có thể bắt đầu quay đầu khi thị trường dự đoán FED dừng. DXY đạt đỉnh muộn hơn. Tương quan: <strong>đồng chiều, sau đó phân kỳ</strong>.</p>
+            <div class="dxy-phase-metrics">
+              <span class="dxy-phase-metric">US10Y ↑ đỉnh</span>
+              <span class="dxy-phase-metric">DXY ↑ chậm lại</span>
+              <span class="dxy-phase-metric">S&P500 ↓</span>
+              <span class="dxy-phase-metric">Vàng ↓ tạm thời</span>
+            </div>
+          </div>
+
+          <div class="dxy-phase-card dxy-contraction">
+            <div class="dxy-phase-tag">Suy thoái — khủng hoảng</div>
+            <h4>Bay to Safety & FED cắt lãi suất</h4>
+            <p>Trong suy thoái nhẹ: FED cắt lãi suất → US10Y giảm → DXY giảm (tương quan đồng chiều). Trong khủng hoảng cấp tính: DXY tăng đột biến do nhu cầu thanh khoản USD, trong khi US10Y giảm mạnh (tương quan <em>ngược chiều</em>).</p>
+            <div class="dxy-phase-metrics">
+              <span class="dxy-phase-metric">US10Y ↓</span>
+              <span class="dxy-phase-metric">DXY: phân kỳ</span>
+              <span class="dxy-phase-metric">S&P500 ↓</span>
+              <span class="dxy-phase-metric">Vàng ↑ (sau đó)</span>
+            </div>
+          </div>
+
+          <div class="dxy-phase-card dxy-trough">
+            <div class="dxy-phase-tag">Phục hồi — nới lỏng</div>
+            <h4>QE, lãi suất thấp, phục hồi tài sản rủi ro</h4>
+            <p>FED duy trì lãi suất thấp, in tiền QE. US10Y ở vùng thấp hoặc tăng nhẹ. DXY yếu. Lợi suất thực thường âm — đây là môi trường tốt nhất cho vàng, crypto và cổ phiếu tăng trưởng. Tương quan: <strong>đồng chiều yếu</strong>.</p>
+            <div class="dxy-phase-metrics">
+              <span class="dxy-phase-metric">US10Y: thấp / tăng nhẹ</span>
+              <span class="dxy-phase-metric">DXY ↓</span>
+              <span class="dxy-phase-metric">S&P500 ↑ mạnh</span>
+              <span class="dxy-phase-metric">Vàng ↑, BTC ↑</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dxy-callout dxy-teal">
+          <div class="dxy-callout-label">Quy tắc thực tế quan trọng</div>
+          <p>Khi đọc tín hiệu từ DXY và US10Y, hãy luôn đặt câu hỏi: <strong>"DXY tăng/giảm vì lợi suất, hay vì lo ngại rủi ro?"</strong> Nếu là vì lợi suất → DXY và US10Y đồng chiều, tài sản rủi ro chịu áp lực có hệ thống. Nếu là vì lo ngại rủi ro → DXY tăng nhưng US10Y có thể giảm (mua trái phiếu trú ẩn), và phản ứng thị trường sẽ khác hoàn toàn.</p>
+        </div>
+
+        <h3 class="dxy-sub-heading">Lịch sử các giai đoạn tiêu biểu</h3>
+
+        <table class="dxy-compare-table">
+          <thead>
+            <tr>
+              <th>Giai đoạn</th>
+              <th>US10Y</th>
+              <th>DXY</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Khủng hoảng 2008–2009</td>
+              <td>Giảm mạnh từ 5% → 2%</td>
+              <td>Tăng mạnh (bay to safety) rồi giảm khi FED in tiền</td>
+            </tr>
+            <tr>
+              <td>QE & phục hồi 2010–2013</td>
+              <td>Thấp 1,5–3%, biến động theo tin FED</td>
+              <td>Yếu và giằng co, không có xu hướng rõ</td>
+            </tr>
+            <tr>
+              <td>Taper Tantrum 2013</td>
+              <td>Tăng đột biến từ 1,6% → 3% trong 3 tháng</td>
+              <td>Tăng đồng chiều, EM bán tháo mạnh</td>
+            </tr>
+            <tr>
+              <td>Giảm phát 2015–2016</td>
+              <td>Thấp 1,3–2,5%, kỳ vọng FED thay đổi</td>
+              <td>Mạnh vì FED tăng lãi suất, EM yếu</td>
+            </tr>
+            <tr>
+              <td>COVID-19 2020</td>
+              <td>Giảm mạnh → dưới 1%, sau đó phục hồi</td>
+              <td>Tăng đột biến tháng 3/2020, rồi giảm mạnh</td>
+            </tr>
+            <tr>
+              <td>Lạm phát 2021–2022</td>
+              <td>Tăng mạnh từ 1% → 4,25%</td>
+              <td>Tăng mạnh đồng chiều, đỉnh 114,7</td>
+            </tr>
+            <tr>
+              <td>FED pivot 2023–2024</td>
+              <td>Đỉnh 5,02% (10/2023), sau đó giảm</td>
+              <td>Yếu dần khi thị trường kỳ vọng cắt lãi suất</td>
+            </tr>
+            <tr>
+              <td>Bất ổn tài khóa 2025–2026</td>
+              <td>Dao động 4,2–4,8% với lo ngại thâm hụt</td>
+              <td>Biến động phân kỳ — lo ngại tài khóa làm giảm uy tín USD</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <hr class="dxy-divider">
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 4 — DXY & NỀN KINH TẾ
+    ════════════════════════════════════════════ -->
+    <section class="dxy-section" id="s4">
+      <div class="dxy-section-eyebrow">Tác động kinh tế vĩ mô</div>
+      <h2 class="dxy-section-title">DXY & <em>Nền Kinh Tế</em> Mỹ và Thế Giới</h2>
+      <div class="dxy-section-body">
+        <p>DXY không chỉ là con số trên màn hình giao dịch — nó là nhiệt kế đo sức nóng của đồng đô la trong hệ thống tài chính toàn cầu. Vì khoảng <strong>88% giao dịch ngoại hối thế giới</strong> có liên quan đến USD, và khoảng <strong>60% dự trữ ngoại hối toàn cầu</strong> được giữ bằng USD, sự biến động của DXY có tác động lan truyền sâu rộng.</p>
+
+        <h3 class="dxy-sub-heading">Khi DXY tăng mạnh</h3>
+        <p>Đô la Mỹ mạnh hơn mang lại lợi ích trực tiếp cho người tiêu dùng Mỹ vì hàng nhập khẩu rẻ hơn, giúp giảm lạm phát. Tuy nhiên, nó đồng thời gây tổn hại cho xuất khẩu Mỹ vì hàng hóa trở nên đắt hơn với người mua nước ngoài. Đối với các nước đang phát triển, DXY tăng là gánh nặng kép: nợ nước ngoài tính bằng USD trở nên đắt hơn, và hàng hóa xuất khẩu (thường định giá bằng USD) nhận được ít nội tệ hơn.</p>
+
+        <div class="dxy-callout dxy-red">
+          <div class="dxy-callout-label">Tác động toàn cầu của USD mạnh</div>
+          <p><strong>Nghịch lý Triffin:</strong> Mỹ được hưởng đặc quyền phát hành đồng tiền dự trữ thế giới, nhưng điều đó cũng có nghĩa là chính sách tiền tệ của FED tác động đến toàn bộ nền kinh tế thế giới — một "thuế đặc quyền" mà Mỹ thu, nhưng cũng là gánh nặng khi thế giới đòi hỏi ổn định từ USD.</p>
+          <p>Khi DXY tăng mạnh: các thị trường mới nổi (EM) như Argentina, Thổ Nhĩ Kỳ, Ai Cập phải đối mặt với nguy cơ khủng hoảng nợ. Đây là lý do "FED tăng lãi suất" thường đi kèm với "khủng hoảng nợ EM" sau khoảng 12–18 tháng.</p>
+        </div>
+
+        <h3 class="dxy-sub-heading">DXY như thước đo điều kiện tài chính toàn cầu</h3>
+        <p>Các nhà kinh tế học thường dùng DXY như một thành phần của chỉ số "Điều kiện Tài chính Toàn cầu" (Global Financial Conditions Index — GFI). Khi USD mạnh, dòng vốn toàn cầu co lại — các ngân hàng quốc tế giảm cho vay bằng USD, các doanh nghiệp EM khó tiếp cận tín dụng hơn, và thanh khoản toàn cầu co hẹp. Đây là cơ chế truyền dẫn chính sách tiền tệ của Mỹ ra phần còn lại của thế giới mà không cần Mỹ trực tiếp can thiệp.</p>
+      </div>
+    </section>
+
+    <hr class="dxy-divider">
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 5 — US10Y & NỀN KINH TẾ
+    ════════════════════════════════════════════ -->
+    <section class="dxy-section" id="s5">
+      <div class="dxy-section-eyebrow">Tác động kinh tế vĩ mô</div>
+      <h2 class="dxy-section-title">Lợi Suất US10Y & Nền Kinh Tế: <em>La Bàn</em> Của Mọi Quyết Định Đầu Tư</h2>
+      <div class="dxy-section-body">
+        <p>Lợi suất US10Y được mệnh danh là "lãi suất quan trọng nhất thế giới" vì nó ảnh hưởng trực tiếp đến chi phí vay vốn trong mọi loại giao dịch tài chính: từ lãi suất thế chấp mua nhà tại Mỹ, đến lãi suất trái phiếu doanh nghiệp, đến định giá cổ phiếu qua mô hình chiết khấu dòng tiền (DCF).</p>
+
+        <h3 class="dxy-sub-heading">Ba thành phần của lợi suất 10 năm</h3>
+        <p>Về mặt lý thuyết, US10Y = Kỳ vọng lãi suất ngắn hạn trung bình + Phần bù kỳ hạn (term premium) + Phần bù lạm phát. Khi phân tích US10Y, cần xác định <em>tại sao</em> nó tăng hay giảm: do kỳ vọng lạm phát cao hơn, hay do FED dự kiến tăng lãi suất, hay do nhà đầu tư đòi mức bù rủi ro cao hơn? Ba kịch bản này có ý nghĩa rất khác nhau cho thị trường.</p>
+
+        <h3 class="dxy-sub-heading">Đường cong lợi suất (Yield Curve) — chỉ báo suy thoái hàng đầu</h3>
+        <p>Mối quan hệ giữa lợi suất trái phiếu ngắn hạn (2 năm — US2Y) và dài hạn (10 năm — US10Y) tạo ra "đường cong lợi suất" — một trong những chỉ báo kinh tế tin cậy nhất trong lịch sử. Khi US10Y thấp hơn US2Y (đường cong đảo ngược — inverted yield curve), điều đó báo hiệu thị trường tin rằng FED sẽ cần cắt lãi suất mạnh trong tương lai vì suy thoái đang đến.</p>
+
+        <div class="dxy-formula-block">
+          <span class="dxy-comment">// Đường cong lợi suất và tín hiệu kinh tế</span><br>
+          US10Y − US2Y <span class="dxy-arrow">&gt;</span> 0 <span class="dxy-arrow">→</span> <span class="dxy-value">Bình thường</span> — Kinh tế tăng trưởng, lạm phát hợp lý<br>
+          US10Y − US2Y ≈ 0 <span class="dxy-arrow">→</span> <span class="dxy-value">Phẳng</span> — Cảnh báo tăng trưởng chậm lại<br>
+          US10Y − US2Y <span class="dxy-arrow">&lt;</span> 0 <span class="dxy-arrow">→</span> <span class="dxy-value">ĐẢO NGƯỢC</span> — Tín hiệu suy thoái (độ trễ 12–18 tháng)<br><br>
+          <span class="dxy-comment">// Ví dụ: Đường cong đảo ngược dự báo suy thoái</span><br>
+          2006–2007: Đảo ngược <span class="dxy-arrow">→</span> Khủng hoảng 2008<br>
+          2019: Đảo ngược nhẹ <span class="dxy-arrow">→</span> COVID làm lộ ra điểm yếu sẵn có (2020)<br>
+          2022–2023: Đảo ngược sâu nhất 40 năm <span class="dxy-arrow">→</span> Hạ cánh mềm (2024) — trường hợp ngoại lệ hiếm
+        </div>
+
+        <div class="dxy-callout">
+          <div class="dxy-callout-label">US10Y như chỉ báo tổng hợp</div>
+          <p>Nếu chỉ được theo dõi một chỉ số kinh tế, nhiều nhà kinh tế vĩ mô sẽ chọn US10Y. Nó tổng hợp mọi kỳ vọng của thị trường: lạm phát, tăng trưởng, chính sách FED, rủi ro địa chính trị, và tình trạng tài khóa của chính phủ Mỹ — tất cả trong một con số duy nhất.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="dxy-divider">
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 6 — CHỈ SỐ NÀO PHẢN ỨNG TRƯỚC?
+    ════════════════════════════════════════════ -->
+    <section class="dxy-section" id="s6">
+      <div class="dxy-section-eyebrow">Cơ chế dẫn dắt — phản ứng trước</div>
+      <h2 class="dxy-section-title">DXY Hay US10Y <em>Phản Ứng Trước</em> Khi Chính Sách Tiền Tệ Thay Đổi?</h2>
+      <div class="dxy-section-body">
+        <p>Đây là một trong những câu hỏi thực tiễn quan trọng nhất đối với nhà giao dịch vĩ mô. Câu trả lời: <strong>Lợi suất US10Y thường phản ứng trước DXY</strong>, và cả hai thường phản ứng <em>trước khi FED chính thức hành động</em>. Đây là bản chất của thị trường tài chính: định giá dựa trên kỳ vọng, không phải sự kiện đã xảy ra.</p>
+
+        <h3 class="dxy-sub-heading">Trình tự phản ứng điển hình</h3>
+
+        <div class="dxy-flow-diagram">
+          <div class="dxy-flow-title">Trình Tự Dẫn Dắt — Từ Tín Hiệu Đến Thực Tế</div>
+          <div class="dxy-flow-row">
+            <div class="dxy-flow-node">Dữ liệu kinh tế mạnh (CPI, NFP)</div>
+            <div class="dxy-flow-arrow">→</div>
+            <div class="dxy-flow-node dxy-highlight">US10Y tăng (trước tiên)</div>
+            <div class="dxy-flow-arrow">→</div>
+            <div class="dxy-flow-node">FED phát biểu diều hâu</div>
+          </div>
+          <div class="dxy-flow-row">
+            <div class="dxy-flow-arrow">→</div>
+            <div class="dxy-flow-node dxy-green">DXY tăng theo (sau 1–5 ngày)</div>
+            <div class="dxy-flow-arrow">→</div>
+            <div class="dxy-flow-node dxy-highlight">FED chính thức tăng lãi suất</div>
+            <div class="dxy-flow-arrow">→</div>
+            <div class="dxy-flow-node dxy-red">Thị trường có thể "buy the rumor, sell the news"</div>
+          </div>
+          <div class="dxy-flow-note">Ví dụ: Trước cuộc họp FOMC tháng 3/2022, US10Y đã tăng từ 1,7% → 2,1% trong hai tuần trước khi FED chính thức tăng lãi suất 25bp. DXY theo sau một ngày sau. Vào ngày FED tuyên bố, cả hai có thể quay đầu giảm theo cơ chế "sell the news".</div>
+        </div>
+
+        <h3 class="dxy-sub-heading">Tại sao US10Y phản ứng trước DXY?</h3>
+        <p>Thị trường trái phiếu Mỹ là thị trường lớn và thanh khoản nhất thế giới, với khối lượng giao dịch hàng ngày khoảng <strong>700 tỷ đô la</strong>. Các nhà đầu tư tổ chức lớn — quỹ hưu trí, ngân hàng trung ương, quỹ bảo hiểm — liên tục định giá lại kỳ vọng thông qua mua bán trái phiếu. Khi dữ liệu lạm phát hoặc việc làm cao hơn dự đoán, trái phiếu bị bán ngay lập tức (lợi suất tăng). Thị trường ngoại hối phản ứng sau khi "đọc" tín hiệu từ thị trường trái phiếu.</p>
+
+        <p><strong>Khi phân tích tương quan với thị trường khác:</strong> US10Y là chỉ số dẫn dắt tốt hơn DXY trong hầu hết trường hợp. Đặc biệt với cổ phiếu tăng trưởng (Nasdaq, công nghệ) và vàng — lợi suất thực US10Y là biến số giải thích tốt hơn DXY. Với tiền tệ và thị trường ngoại hối — DXY trực tiếp hơn. Với hàng hóa (dầu, đồng) — DXY trực tiếp hơn vì chúng được định giá bằng USD.</p>
+
+        <div class="dxy-callout">
+          <div class="dxy-callout-label">Nguyên tắc giao dịch thực tiễn</div>
+          <p>Khi US10Y tăng mà DXY chưa tăng → <strong>cơ hội mua DXY hoặc bán EUR/USD sớm</strong>. Khi DXY tăng mà US10Y không đồng pha → tín hiệu đồng chiều yếu, có thể là sự kiện địa chính trị hoặc dòng vốn kỹ thuật, không bền vững. Luôn kiểm tra xem hai chỉ số có đồng thuận không trước khi vào lệnh dựa trên một trong hai.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="dxy-divider">
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 7 — THỊ TRƯỜNG CHỨNG KHOÁN
+    ════════════════════════════════════════════ -->
+    <section class="dxy-section" id="s7">
+      <div class="dxy-section-eyebrow">Tài sản tài chính</div>
+      <h2 class="dxy-section-title">Tương Quan với <em>Thị Trường Chứng Khoán</em></h2>
+      <div class="dxy-section-body">
+        <p>Mối quan hệ giữa lợi suất trái phiếu, DXY và thị trường chứng khoán là phức tạp và phụ thuộc mạnh vào <em>nguyên nhân</em> khiến lợi suất tăng hay giảm, không chỉ đơn giản là hướng di chuyển.</p>
+
+        <h3 class="dxy-sub-heading">US10Y và cổ phiếu — cơ chế định giá DCF</h3>
+        <p>Cổ phiếu được định giá bằng phương pháp chiết khấu dòng tiền (DCF — Discounted Cash Flow): giá trị hiện tại của tất cả lợi nhuận tương lai chiết khấu về hiện tại. Tỷ lệ chiết khấu (discount rate) được xây dựng từ lợi suất trái phiếu cộng thêm phần bù rủi ro cổ phiếu. <strong>Khi US10Y tăng, tỷ lệ chiết khấu tăng → giá trị hiện tại của lợi nhuận tương lai giảm → cổ phiếu rẻ hơn về lý thuyết.</strong></p>
+
+        <p>Tuy nhiên quan trọng là: nếu US10Y tăng <em>vì kinh tế tốt</em> (tăng trưởng mạnh, việc làm nhiều), thì lợi nhuận doanh nghiệp cũng tăng, có thể bù lại tác động của tỷ lệ chiết khấu cao hơn. Nhưng nếu US10Y tăng <em>vì lạm phát</em>, thì chi phí đầu vào tăng nhưng sức mua giảm — bóp nghẹt biên lợi nhuận.</p>
+
+        <div class="dxy-callout dxy-teal">
+          <div class="dxy-callout-label">Quy tắc "Tốc độ thay đổi" (Rate of Change)</div>
+          <p>Điều ảnh hưởng cổ phiếu không phải là <em>mức</em> lợi suất mà là <em>tốc độ thay đổi</em>. Lợi suất tăng chậm từ 2% → 4% trong 2 năm → thị trường thích nghi được. Lợi suất tăng nhanh từ 1,5% → 4% trong 9 tháng (như 2022) → cú sốc định giá lại toàn bộ thị trường, đặc biệt tàn khốc với cổ phiếu tăng trưởng có P/E cao.</p>
+        </div>
+
+        <h3 class="dxy-sub-heading">DXY và cổ phiếu Mỹ (S&P500)</h3>
+        <p>Với S&P500, mối quan hệ với DXY thường là <strong>ngược chiều nhẹ</strong>: USD mạnh làm giảm lợi nhuận của các công ty đa quốc gia Mỹ khi quy đổi từ ngoại tệ về USD. Khoảng 40% doanh thu của S&P500 đến từ nước ngoài, vì vậy USD mạnh 10% có thể làm giảm EPS (lợi nhuận mỗi cổ phiếu) của S&P500 khoảng 2–3%. Tuy nhiên, mối quan hệ này yếu hơn nhiều so với tác động của US10Y.</p>
+
+        <h3 class="dxy-sub-heading">Tương quan với NAS100 (Nasdaq)</h3>
+        <p>Nasdaq (đặc biệt là các công ty công nghệ như Apple, Microsoft, Meta, Alphabet) nhạy cảm hơn S&P500 với lợi suất vì các công ty này có nhiều dòng tiền ở tương lai xa hơn. Khi lợi suất tăng, giá trị hiện tại của các dòng tiền xa trong tương lai giảm nhiều hơn (hiệu ứng duration dài hơn). Đây là lý do Nasdaq thường bán mạnh hơn S&P500 khi US10Y tăng đột biến.</p>
+
+        <div class="dxy-example-box">
+          <div class="dxy-example-header">
+            <span class="dxy-example-badge">Ví dụ kinh điển</span>
+            <span class="dxy-example-year">Năm 2022 — "Năm tồi tệ nhất trong 50 năm"</span>
+          </div>
+          <h4>US10Y tăng → NAS100 giảm 33%, S&P500 giảm 19%</h4>
+          <p>Năm 2022: US10Y tăng từ <span class="dxy-data-inline">1,5%</span> lên <span class="dxy-data-inline dxy-data-up">4,25%</span>. NAS100 (QQQ) giảm <span class="dxy-data-inline dxy-data-down">−33%</span>. S&P500 giảm <span class="dxy-data-inline dxy-data-down">−19%</span>. Cổ phiếu tăng trưởng như Meta giảm <span class="dxy-data-inline dxy-data-down">−64%</span>, Netflix giảm <span class="dxy-data-inline dxy-data-down">−51%</span>. Trong khi đó, cổ phiếu giá trị (value stocks) như năng lượng (XOM, CVX) lại tăng mạnh vì lợi nhuận ngay hiện tại của họ không bị ảnh hưởng nhiều bởi lãi suất chiết khấu. Đây là bài học xương máu về mối quan hệ lợi suất — định giá cổ phiếu.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="dxy-divider">
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 8 — VÀNG
+    ════════════════════════════════════════════ -->
+    <section class="dxy-section" id="s8">
+      <div class="dxy-section-eyebrow">Tài sản trú ẩn</div>
+      <h2 class="dxy-section-title">Tương Quan với <em>Giá Vàng</em> (XAUUSD)</h2>
+      <div class="dxy-section-body">
+        <p>Vàng là tài sản nhạy cảm nhất với mối quan hệ DXY–US10Y. Vàng không tạo ra thu nhập (không có lợi tức, cổ tức), nên chi phí cơ hội của việc nắm giữ vàng chính là lợi suất thực của trái phiếu Mỹ. <strong>Đây là mối quan hệ cực kỳ chặt chẽ: lợi suất thực tăng → vàng giảm; lợi suất thực giảm hoặc âm → vàng tăng.</strong></p>
+
+        <div class="dxy-formula-block">
+          <span class="dxy-comment">// Công thức tư duy về vàng</span><br>
+          Giá Vàng ≈ <span class="dxy-value">f(Lợi Suất Thực, USD, Rủi Ro Địa Chính Trị, Cung Tiền Toàn Cầu)</span><br><br>
+          Lợi Suất Thực ↑ → Chi phí cơ hội nắm vàng ↑ → Vàng ↓<br>
+          Lợi Suất Thực ↓ (hoặc âm) → Chi phí cơ hội nắm vàng ↓ → Vàng ↑<br>
+          DXY ↑ → Vàng đắt hơn với người mua ngoài Mỹ → Cầu giảm → Vàng ↓<br>
+          DXY ↓ → Vàng rẻ hơn với người mua ngoài Mỹ → Cầu tăng → Vàng ↑
+        </div>
+
+        <h3 class="dxy-sub-heading">Tương quan lịch sử vàng — lợi suất thực</h3>
+        <p>Giai đoạn <strong>2020–2021</strong>: Lợi suất thực US10Y xuống mức âm kỷ lục (−1,5% đến −2%), DXY yếu. Vàng tăng từ <span class="dxy-data-inline">1470</span> USD/oz lên đỉnh <span class="dxy-data-inline dxy-data-up">2075</span> USD/oz (tháng 8/2020). Giai đoạn <strong>2022</strong>: Lợi suất thực tăng mạnh từ âm lên dương +1,5%. Vàng giảm từ 2000 về gần <span class="dxy-data-inline dxy-data-down">1620</span> USD/oz dù bất ổn địa chính trị (Nga–Ukraine) vẫn cao.</p>
+
+        <div class="dxy-callout">
+          <div class="dxy-callout-label">Ngoại lệ quan trọng: Khi vàng tách khỏi lợi suất</div>
+          <p>Từ năm 2023 đến 2025, vàng đã phá vỡ tương quan truyền thống: lợi suất thực vẫn dương và DXY không giảm mạnh, nhưng vàng vẫn tăng mạnh từ 1800 lên trên 3300 USD/oz. Lý do: các ngân hàng trung ương thế giới (đặc biệt Trung Quốc, Nga, Ba Lan, Ấn Độ) mua vàng với khối lượng kỷ lục để đa dạng hóa khỏi USD — hiện tượng "de-dollarization" (giảm phụ thuộc đô la). Đây là tín hiệu cho thấy mô hình tương quan có thể thay đổi khi có sự thay đổi cấu trúc của hệ thống tiền tệ toàn cầu.</p>
+        </div>
+
+        <p>Đối với nhà giao dịch vàng, bộ công cụ phân tích vĩ mô tối thiểu cần theo dõi gồm: lợi suất thực (TIPS 10 năm), DXY, COT data vàng (vị thế tổ chức), tỷ lệ vàng/bạch kim (gold/platinum ratio — chỉ báo rủi ro hệ thống), và dự trữ vàng của ngân hàng trung ương (WGC — World Gold Council).</p>
+      </div>
+    </section>
+
+    <hr class="dxy-divider">
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 9 — CRYPTO
+    ════════════════════════════════════════════ -->
+    <section class="dxy-section" id="s9">
+      <div class="dxy-section-eyebrow">Tài sản kỹ thuật số</div>
+      <h2 class="dxy-section-title">Tương Quan với <em>Tiền Điện Tử</em> — Bitcoin và Thị Trường Crypto</h2>
+      <div class="dxy-section-body">
+        <p>Crypto, đặc biệt là Bitcoin, là tài sản tương đối mới nên tương quan lịch sử còn ngắn. Tuy nhiên, kể từ khoảng 2018–2019, khi Bitcoin trở nên đủ lớn để thu hút sự tham gia của tổ chức, mối quan hệ với các chỉ số vĩ mô trở nên rõ ràng hơn.</p>
+
+        <h3 class="dxy-sub-heading">Bitcoin — "Vàng kỹ thuật số" hay "Cổ phiếu tăng trưởng có đòn bẩy"?</h3>
+        <p>Trong giai đoạn 2020–2021, Bitcoin được nhiều người gọi là "vàng kỹ thuật số" — một tài sản lưu trữ giá trị chống lạm phát. Tuy nhiên, dữ liệu thực tế cho thấy hành vi của Bitcoin gần hơn với <strong>cổ phiếu tăng trưởng công nghệ có đòn bẩy</strong> (beta cao hơn NAS100) thay vì vàng.</p>
+
+        <p>Trong năm 2022, khi FED thắt chặt và US10Y tăng mạnh: Bitcoin giảm từ đỉnh <span class="dxy-data-inline">69.000</span> USD xuống <span class="dxy-data-inline dxy-data-down">16.000</span> USD (giảm 76%). NAS100 giảm 33% trong cùng giai đoạn. Bitcoin giảm gấp hơn 2 lần NAS100 — đúng với hành vi của cổ phiếu tăng trưởng có đòn bẩy cao.</p>
+
+        <div class="dxy-callout dxy-teal">
+          <div class="dxy-callout-label">Khung phân tích crypto theo vĩ mô</div>
+          <p><strong>Môi trường thuận lợi cho crypto:</strong> Lợi suất thực âm hoặc thấp + DXY yếu + FED nới lỏng + Rủi ro thị trường thấp (VIX thấp). Đây là môi trường 2020–2021 và 2023 (sau khủng hoảng ngân hàng SVB khi thị trường kỳ vọng FED dừng tăng).</p>
+          <p><strong>Môi trường bất lợi:</strong> Lợi suất thực tăng nhanh + DXY mạnh + FED thắt chặt + Rủi ro tăng (VIX cao). Năm 2022 là ví dụ điển hình nhất.</p>
+        </div>
+
+        <h3 class="dxy-sub-heading">Sự khác biệt giữa Bitcoin và Altcoin</h3>
+        <p>Bitcoin có thanh khoản cao nhất và tương quan với vĩ mô tương đối dễ đoán hơn. Altcoin (Ethereum, Solana, các token nhỏ hơn) có beta cao hơn Bitcoin — trong giai đoạn tăng, altcoin tăng nhiều hơn; trong giai đoạn giảm, altcoin giảm nhanh và sâu hơn. Khi DXY và US10Y đồng chiều tăng mạnh, toàn bộ thị trường crypto đều chịu áp lực, nhưng altcoin chịu áp lực nặng nề hơn nhiều.</p>
+
+        <div class="dxy-example-box">
+          <div class="dxy-example-header">
+            <span class="dxy-example-badge">Ví dụ thực tế</span>
+            <span class="dxy-example-year">Tháng 3/2023 — Khủng hoảng SVB</span>
+          </div>
+          <h4>Bitcoin ngược dòng: tăng trong khủng hoảng ngân hàng</h4>
+          <p>Khi ngân hàng Silicon Valley Bank (SVB) sụp đổ vào tháng 3/2023 và lo ngại về hệ thống ngân hàng Mỹ bùng phát, thị trường kỳ vọng FED sẽ phải dừng tăng lãi suất để bảo vệ hệ thống tài chính. US10Y giảm mạnh. Bitcoin <em>tăng</em> mạnh từ <span class="dxy-data-inline">20.000</span> lên <span class="dxy-data-inline dxy-data-up">28.000</span> USD trong vài tuần — phản ánh cả câu chuyện "phòng ngừa rủi ro hệ thống ngân hàng" và kỳ vọng lợi suất giảm. Đây là lúc Bitcoin hành xử giống vàng hơn là cổ phiếu công nghệ — một ngoại lệ thú vị trong mô hình tương quan.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="dxy-divider">
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 10 — CHÂU ÂU
+    ════════════════════════════════════════════ -->
+    <section class="dxy-section" id="s10">
+      <div class="dxy-section-eyebrow">Lan truyền chính sách tiền tệ</div>
+      <h2 class="dxy-section-title">FED Thay Đổi Chính Sách → Tác Động Đến <em>Châu Âu</em></h2>
+      <div class="dxy-section-body">
+        <p>Ngân hàng Trung ương Châu Âu (ECB) điều hành chính sách tiền tệ cho 20 quốc gia thuộc khu vực đồng euro (Eurozone). Mặc dù ECB hoạt động độc lập về mặt chính thức, nhưng trên thực tế chính sách của FED tạo ra áp lực và định hướng mạnh mẽ đối với ECB thông qua nhiều kênh truyền dẫn.</p>
+
+        <h3 class="dxy-sub-heading">Kênh truyền dẫn số 1: Tỷ giá EUR/USD</h3>
+        <p>Khi FED tăng lãi suất, DXY tăng và EUR/USD giảm. Đồng euro yếu khiến hàng nhập khẩu vào Châu Âu (đặc biệt dầu mỏ được định giá bằng USD) trở nên đắt hơn, gây lạm phát nhập khẩu. ECB phải đối mặt với áp lực tăng lãi suất để ngăn đồng euro tiếp tục mất giá và kiểm soát lạm phát, ngay cả khi điều kiện kinh tế Châu Âu không đòi hỏi điều đó.</p>
+
+        <p><strong>Năm 2022 là ví dụ điển hình:</strong> FED tăng lãi suất 425 điểm cơ bản trong khi ECB ban đầu do dự (kinh tế Châu Âu yếu hơn, đặc biệt sau cú sốc năng lượng từ Nga–Ukraine). EUR/USD giảm từ <span class="dxy-data-inline">1,15</span> xuống dưới <span class="dxy-data-inline dxy-data-down">0,96</span> — dưới parity lần đầu tiên trong 20 năm. Sức ép trên đồng euro buộc ECB phải bắt đầu tăng lãi suất mạnh từ tháng 7/2022 dù điều này gây thêm áp lực cho kinh tế Châu Âu vốn đang chịu ảnh hưởng của cuộc chiến Nga–Ukraine.</p>
+
+        <h3 class="dxy-sub-heading">Kênh truyền dẫn số 2: Spread lợi suất và dòng vốn</h3>
+        <p>Khi US10Y tăng cao hơn lợi suất trái phiếu Đức (Bund 10 năm), vốn toàn cầu chạy từ Châu Âu sang Mỹ để hưởng lợi suất cao hơn. Điều này làm yếu EUR và buộc ECB phải phản ứng. Spread (chênh lệch) lợi suất US10Y − Bund10Y là một chỉ báo quan trọng cho hướng đi của EUR/USD.</p>
+
+        <div class="dxy-formula-block">
+          <span class="dxy-comment">// Quy tắc tỷ giá theo spread lợi suất</span><br>
+          USD/EUR Spread = US10Y − Bund10Y<br><br>
+          USD/EUR Spread ↑ (Mỹ tốt hơn Châu Âu) <span class="dxy-arrow">→</span> EUR/USD ↓<br>
+          USD/EUR Spread ↓ (Châu Âu bắt kịp hoặc Mỹ chậm lại) <span class="dxy-arrow">→</span> EUR/USD ↑<br><br>
+          <span class="dxy-comment">// Ví dụ: 2022</span><br>
+          US10Y = <span class="dxy-value">4,25%</span> | Bund10Y = <span class="dxy-value">2,3%</span> <span class="dxy-arrow">→</span> Spread = <span class="dxy-value">+1,95%</span> → EUR/USD giảm xuống 0,96
+        </div>
+
+        <h3 class="dxy-sub-heading">Trình tự phản ứng: ECB thường đi sau FED 3–6 tháng</h3>
+        <p>Trong lịch sử, ECB có xu hướng <strong>đi theo sau FED với độ trễ khoảng 3–6 tháng</strong> trong chu kỳ thắt chặt, và gần hơn trong chu kỳ nới lỏng. Lý do là kinh tế Châu Âu thường có cấu trúc khác và phục hồi sau cú sốc chậm hơn Mỹ. Ngược lại, ECB lại đi <em>trước</em> FED trong chu kỳ cắt lãi suất gần nhất (2024): ECB cắt lãi suất từ tháng 6/2024 trong khi FED chỉ bắt đầu vào tháng 9/2024 — phản ánh kinh tế Eurozone yếu hơn và rủi ro lạm phát thấp hơn.</p>
+
+        <div class="dxy-example-box">
+          <div class="dxy-example-header">
+            <span class="dxy-example-badge">Phân tích chu kỳ</span>
+            <span class="dxy-example-year">2022–2024 — Chu kỳ thắt chặt và nới lỏng</span>
+          </div>
+          <h4>FED dẫn đầu, ECB chạy theo — rồi ECB đi trước trong nới lỏng</h4>
+          <p><strong>Thắt chặt:</strong> FED bắt đầu tháng 3/2022. ECB bắt đầu tháng 7/2022 (trễ 4 tháng). FED đạt đỉnh 5,25–5,5% tháng 7/2023. ECB đạt đỉnh 4,5% tháng 9/2023 (trễ 2 tháng).</p>
+          <p><strong>Nới lỏng:</strong> ECB cắt lãi suất lần đầu tháng 6/2024. FED cắt lần đầu tháng 9/2024 — lần này ECB <em>đi trước</em> FED 3 tháng vì kinh tế Eurozone yếu hơn. Điều này gây áp lực giảm cho EUR/USD trong mùa hè 2024.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="dxy-divider">
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 11 — NHẬT BẢN
+    ════════════════════════════════════════════ -->
+    <section class="dxy-section" id="s11">
+      <div class="dxy-section-eyebrow">Trường hợp đặc biệt</div>
+      <h2 class="dxy-section-title">FED Thay Đổi Chính Sách → Tác Động Đến <em>Nhật Bản</em> và Chính Sách YCC</h2>
+      <div class="dxy-section-body">
+        <p>Nhật Bản là trường hợp đặc biệt và thú vị nhất trong bức tranh chính sách tiền tệ toàn cầu. Trong khi toàn thế giới thắt chặt năm 2022, Ngân hàng Trung ương Nhật Bản (Bank of Japan — BoJ) kiên trì với chính sách lãi suất âm và kiểm soát đường cong lợi suất (YCC — Yield Curve Control), khiến USD/JPY trở thành một trong những cặp tỷ giá biến động mạnh nhất trong lịch sử gần đây.</p>
+
+        <h3 class="dxy-sub-heading">Chính sách YCC của Nhật Bản là gì?</h3>
+        <p>Từ năm 2016, BoJ áp dụng YCC — chính sách giữ lợi suất trái phiếu chính phủ Nhật (JGB) kỳ hạn 10 năm gần mức 0% bằng cách cam kết mua không giới hạn trái phiếu để giữ lợi suất không vượt quá ngưỡng đã định. Mục tiêu là kích thích kinh tế Nhật Bản vốn mắc bẫy giảm phát trong nhiều thập kỷ.</p>
+
+        <h3 class="dxy-sub-heading">Carry trade JPY — bom hẹn giờ của thị trường toàn cầu</h3>
+        <p>Sự phân kỳ chính sách giữa FED (tăng mạnh) và BoJ (giữ nguyên lãi suất âm) tạo ra spread lợi suất USD-JPY cực lớn, khuyến khích một lượng khổng lồ <strong>carry trade</strong>: nhà đầu tư vay yên Nhật với lãi suất gần 0%, đổi sang USD và mua trái phiếu Mỹ hoặc cổ phiếu để hưởng lợi suất cao hơn. Ước tính tổng khối lượng carry trade JPY lên đến hàng trăm tỷ đô la.</p>
+
+        <p>USD/JPY tăng từ <span class="dxy-data-inline">115</span> đầu 2022 lên <span class="dxy-data-inline dxy-data-up">151,9</span> cuối 2022 — mức thấp nhất của yên trong 32 năm. Điều này buộc BoJ phải bắt đầu điều chỉnh dần chính sách YCC từ cuối 2022.</p>
+
+        <div class="dxy-callout dxy-red">
+          <div class="dxy-callout-label">Sự kiện lịch sử: Tháng 8/2024 — Carry Trade Unwind</div>
+          <p>Tháng 7–8/2024, BoJ bất ngờ tăng lãi suất và tín hiệu siết chặt chính sách. Lãi suất JPY tăng → carry trade tháo gỡ (unwind) với quy mô lớn: nhà đầu tư phải bán tài sản rủi ro để mua lại yên trả nợ. Kết quả: S&P500 giảm hơn 5% trong 3 ngày, NAS100 giảm hơn 7%, Bitcoin giảm hơn 20%, Nikkei (chứng khoán Nhật) giảm gần 13% chỉ trong một ngày — mức giảm lớn nhất kể từ năm 1987. Đây là bằng chứng rõ ràng nhất cho thấy chính sách BoJ có thể gây chấn động toàn cầu khi thay đổi đột ngột, và carry trade JPY là "bom hẹn giờ" tiềm ẩn của thị trường tài chính toàn cầu.</p>
+        </div>
+
+        <h3 class="dxy-sub-heading">Trình tự ảnh hưởng FED → BoJ</h3>
+
+        <div class="dxy-flow-diagram">
+          <div class="dxy-flow-title">Cơ Chế Truyền Dẫn: FED → BoJ → Thị Trường Toàn Cầu</div>
+          <div class="dxy-flow-row">
+            <div class="dxy-flow-node dxy-highlight">FED tăng lãi suất</div>
+            <div class="dxy-flow-arrow">→</div>
+            <div class="dxy-flow-node">Spread USD–JPY lợi suất mở rộng</div>
+            <div class="dxy-flow-arrow">→</div>
+            <div class="dxy-flow-node">Carry trade JPY bùng nổ</div>
+          </div>
+          <div class="dxy-flow-row">
+            <div class="dxy-flow-node dxy-red">Yên giảm mạnh</div>
+            <div class="dxy-flow-arrow">→</div>
+            <div class="dxy-flow-node">BoJ chịu áp lực can thiệp / điều chỉnh YCC</div>
+            <div class="dxy-flow-arrow">→</div>
+            <div class="dxy-flow-node dxy-green">BoJ dần bình thường hóa chính sách</div>
+          </div>
+          <div class="dxy-flow-row">
+            <div class="dxy-flow-node dxy-red">Carry trade tháo gỡ</div>
+            <div class="dxy-flow-arrow">→</div>
+            <div class="dxy-flow-node dxy-highlight">Bán tháo tài sản rủi ro toàn cầu</div>
+          </div>
+          <div class="dxy-flow-note">Vòng lặp này giải thích tại sao USD/JPY là cặp tỷ giá quan trọng nhất để theo dõi khi FED thay đổi chính sách — nó phản ánh quy mô carry trade toàn cầu và rủi ro "unwind" tiềm ẩn.</div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="dxy-divider">
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 12 — MA TRẬN TÓM TẮT
+    ════════════════════════════════════════════ -->
+    <section class="dxy-section" id="s12">
+      <div class="dxy-section-eyebrow">Tổng hợp</div>
+      <h2 class="dxy-section-title"><em>Ma Trận</em> Tương Quan Tổng Hợp</h2>
+      <div class="dxy-section-body">
+        <p>Bảng dưới đây tóm tắt mối tương quan điển hình giữa DXY, US10Y và các tài sản khác trong từng kịch bản chính sách tiền tệ. Lưu ý: đây là xu hướng <em>thống kê trung bình</em>, không phải quy luật tuyệt đối — mỗi chu kỳ có đặc thù riêng.</p>
+
+        <table class="dxy-corr-matrix">
+          <thead>
+            <tr>
+              <th>Tài sản / Chỉ số</th>
+              <th>US10Y ↑ (nhanh)</th>
+              <th>US10Y ↑ (chậm)</th>
+              <th>US10Y ↓</th>
+              <th>DXY ↑</th>
+              <th>DXY ↓</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>S&P500 (US500)</td>
+              <td class="dxy-corr-strong-neg">Giảm mạnh</td>
+              <td class="dxy-corr-weak-pos">Tăng nhẹ</td>
+              <td class="dxy-corr-strong-pos">Tăng</td>
+              <td class="dxy-corr-weak-neg">Giảm nhẹ</td>
+              <td class="dxy-corr-weak-pos">Tăng nhẹ</td>
+            </tr>
+            <tr>
+              <td>NAS100 (Nasdaq)</td>
+              <td class="dxy-corr-strong-neg">Giảm rất mạnh</td>
+              <td class="dxy-corr-neutral">Trung tính</td>
+              <td class="dxy-corr-strong-pos">Tăng mạnh</td>
+              <td class="dxy-corr-weak-neg">Giảm nhẹ</td>
+              <td class="dxy-corr-weak-pos">Tăng nhẹ</td>
+            </tr>
+            <tr>
+              <td>XAUUSD (Vàng)</td>
+              <td class="dxy-corr-strong-neg">Giảm mạnh</td>
+              <td class="dxy-corr-weak-neg">Giảm nhẹ</td>
+              <td class="dxy-corr-strong-pos">Tăng mạnh</td>
+              <td class="dxy-corr-strong-neg">Giảm mạnh</td>
+              <td class="dxy-corr-strong-pos">Tăng mạnh</td>
+            </tr>
+            <tr>
+              <td>Bitcoin (BTC)</td>
+              <td class="dxy-corr-strong-neg">Giảm rất mạnh</td>
+              <td class="dxy-corr-neutral">Trung tính</td>
+              <td class="dxy-corr-strong-pos">Tăng mạnh</td>
+              <td class="dxy-corr-weak-neg">Giảm</td>
+              <td class="dxy-corr-strong-pos">Tăng mạnh</td>
+            </tr>
+            <tr>
+              <td>EUR/USD</td>
+              <td class="dxy-corr-weak-neg">Giảm</td>
+              <td class="dxy-corr-weak-neg">Giảm nhẹ</td>
+              <td class="dxy-corr-weak-pos">Tăng nhẹ</td>
+              <td class="dxy-corr-strong-neg">Giảm mạnh</td>
+              <td class="dxy-corr-strong-pos">Tăng mạnh</td>
+            </tr>
+            <tr>
+              <td>USD/JPY</td>
+              <td class="dxy-corr-strong-pos">Tăng mạnh</td>
+              <td class="dxy-corr-weak-pos">Tăng</td>
+              <td class="dxy-corr-strong-neg">Giảm</td>
+              <td class="dxy-corr-strong-pos">Tăng mạnh</td>
+              <td class="dxy-corr-strong-neg">Giảm mạnh</td>
+            </tr>
+            <tr>
+              <td>Dầu thô (WTI)</td>
+              <td class="dxy-corr-neutral">Trung tính</td>
+              <td class="dxy-corr-weak-pos">Tăng nhẹ</td>
+              <td class="dxy-corr-neutral">Trung tính</td>
+              <td class="dxy-corr-weak-neg">Giảm nhẹ</td>
+              <td class="dxy-corr-weak-pos">Tăng nhẹ</td>
+            </tr>
+            <tr>
+              <td>DXY (vs US10Y)</td>
+              <td class="dxy-corr-strong-pos">Tăng đồng chiều</td>
+              <td class="dxy-corr-strong-pos">Tăng đồng chiều</td>
+              <td class="dxy-corr-strong-neg">Giảm đồng chiều</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="font-size:13px; color: var(--text-muted); margin-top: 8px;"><em>Chú thích màu: <span class="dxy-corr-strong-pos">Tăng mạnh</span> | <span class="dxy-corr-weak-pos">Tăng nhẹ</span> | <span class="dxy-corr-neutral">Trung tính / không rõ ràng</span> | <span class="dxy-corr-weak-neg">Giảm nhẹ</span> | <span class="dxy-corr-strong-neg">Giảm mạnh</span></em></p>
+
+        <div class="dxy-callout">
+          <div class="dxy-callout-label">Lưu ý quan trọng về bảng trên</div>
+          <p>Bảng này phản ánh xu hướng trung bình trong điều kiện chính sách tiền tệ là yếu tố dẫn dắt chính. Trong các giai đoạn khủng hoảng địa chính trị, khủng hoảng tài chính, hoặc sự kiện thiên nga đen, các mối tương quan có thể đảo ngược hoàn toàn trong ngắn hạn. Đặc biệt vàng ngày càng có thêm nguồn cầu cơ cấu từ ngân hàng trung ương, có thể khiến nó tách khỏi mô hình lợi suất thực truyền thống.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="dxy-divider">
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 13 — ỨNG DỤNG THỰC TIỄN
+    ════════════════════════════════════════════ -->
+    <section class="dxy-section" id="s13">
+      <div class="dxy-section-eyebrow">Ứng dụng đầu tư</div>
+      <h2 class="dxy-section-title">Ý Nghĩa Thực Tiễn Trong <em>Đầu Tư và Giao Dịch</em></h2>
+      <div class="dxy-section-body">
+        <p>Kiến thức về DXY và US10Y chỉ có giá trị khi được chuyển hóa thành quyết định đầu tư và quản trị rủi ro cụ thể. Dưới đây là những nguyên tắc thực tiễn quan trọng nhất.</p>
+
+        <div class="dxy-tips-grid">
+          <div class="dxy-tip-card">
+            <div class="dxy-tip-icon dxy-gold">🧭</div>
+            <h4>Xây dựng bản đồ vĩ mô trước khi giao dịch</h4>
+            <p>Mỗi ngày, trước khi mở chart kỹ thuật, kiểm tra: US10Y đang ở đâu trong xu hướng? DXY mạnh hay yếu? Hai chỉ số có đồng thuận không? Đây là "la bàn hướng gió" để biết mình đang giao dịch thuận hay nghịch xu hướng vĩ mô.</p>
+          </div>
+          <div class="dxy-tip-card">
+            <div class="dxy-tip-icon dxy-teal">⚡</div>
+            <h4>Theo dõi lịch kinh tế: CPI, NFP, FOMC</h4>
+            <p>Ba sự kiện quan trọng nhất: Chỉ số giá tiêu dùng (CPI), Bảng lương phi nông nghiệp (NFP), và cuộc họp FOMC. Những sự kiện này là "cú đấm" thay đổi kỳ vọng US10Y và DXY chỉ trong vài phút — chuẩn bị trước và quản lý rủi ro cẩn thận.</p>
+          </div>
+          <div class="dxy-tip-card">
+            <div class="dxy-tip-icon dxy-blue">📊</div>
+            <h4>Phân biệt "lợi suất tốt" và "lợi suất xấu"</h4>
+            <p>Lợi suất tăng vì kinh tế tốt (tăng trưởng) → có thể tốt cho cổ phiếu cyclical (tài chính, năng lượng). Lợi suất tăng vì lạm phát cao + FED diều hâu → xấu cho gần như tất cả tài sản, đặc biệt là tài sản rủi ro cao (tech, crypto, vàng).</p>
+          </div>
+          <div class="dxy-tip-card">
+            <div class="dxy-tip-icon dxy-red">⚠️</div>
+            <h4>Nhận diện điểm phân kỳ tương quan</h4>
+            <p>Khi DXY và US10Y di chuyển ngược chiều → cảnh báo đỏ. Hỏi ngay: Đây là khủng hoảng trú ẩn? Hay lo ngại tài khóa? Mỗi kịch bản có hàm ý khác nhau và cần phân tích thêm trước khi hành động.</p>
+          </div>
+        </div>
+
+        <h3 class="dxy-sub-heading">Checklist vĩ mô hàng tuần</h3>
+        <div class="dxy-formula-block">
+          <span class="dxy-comment">// Checklist phân tích vĩ mô hàng tuần cho nhà giao dịch</span><br><br>
+          1. US10Y: Xu hướng tuần (tăng / giảm / đi ngang)?<br>
+          <span class="dxy-value">→ Tác động: Định hướng NAS100, vàng, BTC</span><br><br>
+          2. Lợi suất thực TIPS 10Y: Dương hay âm?<br>
+          <span class="dxy-value">→ Tác động: Định hướng vàng chính xác hơn US10Y danh nghĩa</span><br><br>
+          3. DXY: Trên hay dưới EMA20/50 tuần?<br>
+          <span class="dxy-value">→ Tác động: EUR/USD, XAUUSD, hàng hóa EM</span><br><br>
+          4. Spread US10Y − Bund10Y: Tăng hay giảm?<br>
+          <span class="dxy-value">→ Tác động: Xu hướng EUR/USD</span><br><br>
+          5. USD/JPY: Carry trade còn nguyên vẹn?<br>
+          <span class="dxy-value">→ Tác động: Rủi ro "unwind" tiềm ẩn cho tài sản rủi ro</span><br><br>
+          6. Đường cong lợi suất US10Y − US2Y: Dương hay âm?<br>
+          <span class="dxy-value">→ Tác động: Kỳ vọng suy thoái và hướng FED tiếp theo</span>
+        </div>
+
+        <h3 class="dxy-sub-heading">Ứng dụng cụ thể cho từng loại tài sản</h3>
+
+        <table class="dxy-compare-table">
+          <thead>
+            <tr>
+              <th>Tài sản</th>
+              <th>Tín hiệu vào lệnh tốt (vĩ mô)</th>
+              <th>Tín hiệu thận trọng (vĩ mô)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>XAUUSD</td>
+              <td>Lợi suất thực giảm + DXY yếu + FED dovish + Mua ròng ngân hàng trung ương</td>
+              <td>Lợi suất thực tăng nhanh + DXY mạnh breakout + FED hawkish mạnh</td>
+            </tr>
+            <tr>
+              <td>NAS100</td>
+              <td>US10Y ổn định hoặc giảm + FED dừng tăng + Tăng trưởng EPS tốt</td>
+              <td>US10Y tăng nhanh > 50 bps trong 1 tháng + Lạm phát tái tăng</td>
+            </tr>
+            <tr>
+              <td>Bitcoin</td>
+              <td>Lợi suất thực âm + DXY yếu + Kỳ vọng QE / nới lỏng + Halving cycle</td>
+              <td>US10Y tăng nhanh + DXY breakout + Carry trade tháo gỡ (JPY mạnh đột ngột)</td>
+            </tr>
+            <tr>
+              <td>USD/JPY</td>
+              <td>US10Y tăng + BoJ tiếp tục nới lỏng + Carry trade mở rộng</td>
+              <td>BoJ tín hiệu thắt chặt + US10Y giảm + Rủi ro tháo gỡ carry trade</td>
+            </tr>
+            <tr>
+              <td>EUR/USD</td>
+              <td>ECB hawkish hơn FED + Spread Bund thu hẹp + Kinh tế Eurozone cải thiện</td>
+              <td>Spread US10Y − Bund mở rộng + FED hawkish + Khủng hoảng nợ Eurozone</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="dxy-callout dxy-teal">
+          <div class="dxy-callout-label">Triết lý đầu tư vĩ mô tổng hợp</div>
+          <p>DXY và US10Y không phải là công cụ dự đoán thời gian và điểm vào lệnh chính xác — đó là nhiệm vụ của phân tích kỹ thuật. Chúng là <strong>bộ lọc định hướng vĩ mô</strong>: giúp bạn biết mình nên thiên về mua hay bán, và tài sản nào có lợi thế cấu trúc trong môi trường tiền tệ hiện tại. Giao dịch thuận xu hướng vĩ mô không đảm bảo thắng, nhưng giao dịch nghịch xu hướng vĩ mô mà không có lý do rõ ràng gần như chắc chắn thua trong dài hạn.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<footer class="dxy-site-footer">
+  <p><strong>DXY & US10Y — Phân Tích Liên Thị Trường Toàn Diện</strong></p>
+  <p>Tài liệu dành cho mục đích giáo dục và nghiên cứu. Không phải lời khuyên đầu tư tài chính.</p>
+  <p>dangthanhtan.pages.dev · Cập nhật tháng 6/2026</p>
+</footer>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- PANEL 3: HÀNG HÓA -->
             <div id="panel-hang-hoa" class="tab-panel">
                 <h2 class="section-title"><i class="fa-solid fa-droplet"></i> Bảng giá & Phân tích Hàng hóa</h2>

@@ -139,7 +139,15 @@ function openHomeEventArticle(articleId) {
 
 // Router matching logic for paths
 function handleRouting(path, updateUrl = false) {
-    if (path.startsWith('/hang-hoa')) {
+    if (path.startsWith('/vi-mo')) {
+        switchTab('vi-mo', false);
+        const subPath = path.substring('/vi-mo'.length);
+        if (subPath === '/dxy-us10y') {
+            openVimoArticle('dxy-us10y', updateUrl);
+        } else {
+            openVimoArticle('', updateUrl);
+        }
+    } else if (path.startsWith('/hang-hoa')) {
         switchTab('hang-hoa', false);
         const subPath = path.substring('/hang-hoa'.length);
         if (subPath === '/tien-si-dong') {
@@ -195,6 +203,28 @@ function openEventArticle(articleId, updateUrl = true) {
         if (updateUrl) history.pushState({ tabId: 'su-kien', articleId: '' }, '', '/su-kien');
     }
 }
+
+function openVimoArticle(articleId, updateUrl = true) {
+    const listView   = document.getElementById('vi-mo-list-view');
+    const articleView = document.getElementById('vi-mo-article-view');
+    if (!listView || !articleView) return;
+
+    document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
+
+    if (articleId === 'dxy-us10y') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-dxy-us10y-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'vi-mo', articleId: 'dxy-us10y' }, '', '/vi-mo/dxy-us10y');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+        articleView.classList.remove('active');
+        listView.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'vi-mo', articleId: '' }, '', '/vi-mo');
+    }
+}
+
 
 
 // Initialize router click events
