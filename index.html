@@ -23,6 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body class="theme-bull preload"> <!-- Default to Bull Theme; preload suppresses transitions on first render -->
     <!-- Background Glow Elements -->
@@ -2160,6 +2161,18 @@
                     <h3 class="section-title" style="margin-top: 1.5rem;"><i class="fa-solid fa-square-rss"></i> Bài viết mới nhất</h3>
                     
                     <div class="news-list">
+                        <a href="/hang-hoa/luoc-su-vang" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-coins"></i> Kim loại quý</span>
+                                <span class="news-time">Lược sử vĩ đại</span>
+                            </div>
+                            <h3 class="news-heading">Lược Sử Vàng — Kim Loại Của Mọi Thời Đại</h3>
+                            <p class="news-excerpt">Từ biểu tượng của thần linh, trụ cột của hệ thống tiền tệ, đến công cụ phòng hộ tối thượng trong thời đại bất ổn.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc hồ sơ</span>
+                            </div>
+                        </a>
+
                         <a href="/hang-hoa/luoc-su-dau-mo" class="news-card clickable-card">
                             <div class="news-meta">
                                 <span class="news-source"><i class="fa-solid fa-oil-well"></i> Năng lượng</span>
@@ -2204,6 +2217,1402 @@
 
                 <!-- Commodity Article View (Full article content container) -->
                 <div id="commodity-article-view" class="commodity-view">
+
+<div id="article-gold-panel" class="commodity-article-panel gold-body">
+    <style>
+#article-gold-panel {
+
+#article-gold-panel {
+  --gold-bright:   #F5C842;
+  --gold-mid:      #D4A017;
+  --gold-dark:     #A07810;
+  --gold-deep:     #6B5000;
+  --gold-shine:    #FFE680;
+  --onyx:          #0A0A0A;
+  --onyx-2:        #111111;
+  --onyx-3:        #181818;
+  --onyx-4:        #222222;
+  --onyx-5:        #2E2E2E;
+  --cream:         #F8F0DC;
+  --cream-dim:     #C8B88A;
+  --text-main:     #EDE0C0;
+  --text-dim:      #9A8A6A;
+  --border-gold:   rgba(212,160,23,0.22);
+  --border-bright: rgba(245,200,66,0.45);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+#article-gold-panel.gold-html { scroll-behavior:smooth; }
+
+#article-gold-panel.gold-body {
+  font-family: 'Jost', 'Georgia', sans-serif;
+  background: var(--onyx);
+  color: var(--text-main);
+  line-height: 1.9;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--onyx-2); }
+::-webkit-scrollbar-thumb { background: var(--gold-mid); }
+
+/* ============================
+   HERO — Art Deco Luxury
+   ============================ */
+.hero {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 40px 80px;
+  background: var(--onyx-2);
+  overflow: hidden;
+}
+
+/* Radial gold glow from center */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 60%, rgba(212,160,23,0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 50% 50%, rgba(245,200,66,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Art Deco geometric corner ornaments */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 24px;
+  border: 1px solid rgba(212,160,23,0.15);
+  pointer-events: none;
+}
+
+/* Horizontal decorative lines */
+.deco-top, .deco-bot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  pointer-events: none;
+}
+.deco-top { top: 48px; }
+.deco-bot { bottom: 48px; }
+
+.deco-line { flex: 1; height: 1px; background: linear-gradient(to right, transparent, rgba(212,160,23,0.5), transparent); }
+.deco-diamond {
+  width: 8px; height: 8px;
+  background: var(--gold-mid);
+  transform: rotate(45deg);
+  margin: 0 12px;
+  flex-shrink: 0;
+}
+
+.hero-overline {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 7px;
+  color: var(--gold-mid);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.hero-Au {
+  font-family: 'Cinzel', serif;
+  font-size: 90px;
+  font-weight: 900;
+  line-height: 0.85;
+  background: linear-gradient(160deg, var(--gold-shine) 0%, var(--gold-bright) 30%, var(--gold-mid) 60%, var(--gold-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  margin-bottom: 4px;
+  filter: drop-shadow(0 0 40px rgba(212,160,23,0.3));
+  position: relative;
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { filter: drop-shadow(0 0 30px rgba(212,160,23,0.25)); }
+  50%       { filter: drop-shadow(0 0 60px rgba(245,200,66,0.5)); }
+}
+
+.hero-element {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--gold-dark);
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(28px, 4.5vw, 52px);
+  font-weight: 600;
+  color: var(--cream);
+  line-height: 1.2;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.hero h1 .g { color: var(--gold-bright); }
+
+.hero-sub {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--cream-dim);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* ============================
+   PRICE TICKER BAR
+   ============================ */
+.ticker {
+  background: var(--gold-deep);
+  border-top: 1px solid var(--border-bright);
+  border-bottom: 1px solid var(--border-bright);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.ticker-inner {
+  display: inline-flex;
+  gap: 60px;
+  animation: ticker-scroll 30s linear infinite;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.tick-item {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--gold-bright);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tick-dot {
+  width: 5px; height: 5px;
+  background: var(--gold-mid);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ============================
+   LAYOUT
+   ============================ */
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ============================
+   CHAPTER
+   ============================ */
+.chapter {
+  padding: 80px 0 60px;
+  border-bottom: 1px solid rgba(212,160,23,0.1);
+  position: relative;
+}
+.chapter:last-child { border-bottom: none; }
+
+/* Big decorative chapter number */
+.ch-bg-num {
+  position: absolute;
+  right: -10px;
+  top: 60px;
+  font-family: 'Cinzel', serif;
+  font-size: 160px;
+  font-weight: 900;
+  color: var(--gold-mid);
+  opacity: 0.035;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.ch-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.ch-ornament {
+  flex-shrink: 0;
+  width: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8px;
+  gap: 6px;
+}
+
+.ch-diamond-top {
+  width: 10px; height: 10px;
+  background: var(--gold-mid);
+  transform: rotate(45deg);
+}
+
+.ch-vert-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--gold-mid), transparent);
+}
+
+.ch-num-label {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--gold-dark);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  margin-top: 8px;
+}
+
+.ch-titles {}
+
+.ch-epoch {
+  font-family: 'Cinzel', serif;
+  font-size: 10.5px;
+  letter-spacing: 4px;
+  color: var(--gold-mid);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.ch-epoch::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-gold);
+}
+
+.ch-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(22px, 3.2vw, 36px);
+  font-weight: 600;
+  color: var(--cream);
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.ch-title .accent { color: var(--gold-bright); }
+
+.ch-subtitle {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+/* ============================
+   PROSE
+   ============================ */
+.prose {
+  font-family: 'EB Garamond', serif;
+  font-size: 17px;
+  line-height: 1.95;
+  color: var(--text-main);
+}
+.prose p { margin-bottom: 20px; }
+.prose strong { color: var(--gold-bright); font-weight: 600; font-family: 'Jost', sans-serif; font-size: 15px; }
+.prose em { color: var(--gold-mid); font-style: normal; }
+
+/* ============================
+   EVENT CARDS
+   ============================ */
+.events-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin: 36px 0;
+  position: relative;
+  padding-left: 32px;
+}
+.events-grid::before {
+  content: '';
+  position: absolute;
+  left: 9px; top: 8px; bottom: 8px;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--gold-mid), rgba(212,160,23,0.1));
+}
+
+.ev-card {
+  position: relative;
+  padding: 0 0 32px 24px;
+}
+.ev-card::before {
+  content: '';
+  position: absolute;
+  left: -23px;
+  top: 8px;
+  width: 10px; height: 10px;
+  border: 2px solid var(--gold-mid);
+  background: var(--onyx-2);
+  transform: rotate(45deg);
+}
+
+.ev-year {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--onyx);
+  background: var(--gold-mid);
+  padding: 3px 12px;
+  margin-bottom: 8px;
+}
+
+.ev-name {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.ev-desc {
+  font-family: 'EB Garamond', serif;
+  font-size: 15.5px;
+  color: var(--text-dim);
+  line-height: 1.75;
+}
+
+/* ============================
+   FIGURE GRID
+   ============================ */
+.fig-section { margin: 36px 0; }
+
+.sec-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.sec-head-text {
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+.sec-head-line { flex:1; height:1px; background:var(--border-gold); }
+.sec-head-diam {
+  width:6px; height:6px;
+  background:var(--gold-dark);
+  transform:rotate(45deg);
+  flex-shrink:0;
+}
+
+.fig-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.fig-card {
+  background: var(--onyx-3);
+  border: 1px solid var(--border-gold);
+  padding: 20px 22px;
+  position: relative;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.fig-card:hover {
+  border-color: var(--gold-mid);
+  box-shadow: 0 0 24px rgba(212,160,23,0.12);
+}
+.fig-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: linear-gradient(to bottom, var(--gold-bright), var(--gold-dark));
+}
+
+.fig-name {
+  font-family: 'Cinzel', serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--gold-bright);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+.fig-role {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.fig-desc {
+  font-family: 'EB Garamond', serif;
+  font-size: 14.5px;
+  color: var(--text-dim);
+  line-height: 1.65;
+}
+
+/* ============================
+   LESSON / INSIGHT BOX
+   ============================ */
+.insight {
+  background: linear-gradient(135deg, var(--onyx-3) 0%, var(--onyx-4) 100%);
+  border: 1px solid var(--border-gold);
+  border-left: 4px solid var(--gold-bright);
+  padding: 32px 36px;
+  margin: 36px 0;
+  position: relative;
+  overflow: hidden;
+}
+.insight::before {
+  content: '◆';
+  position: absolute;
+  top: -10px; right: 24px;
+  font-size: 80px;
+  color: var(--gold-mid);
+  opacity: 0.06;
+  line-height: 1;
+  font-family: 'Cinzel', serif;
+}
+
+.insight-label {
+  font-family: 'Cinzel', serif;
+  font-size: 9.5px;
+  letter-spacing: 4px;
+  color: var(--gold-mid);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.insight-label::after { content:''; flex:1; height:1px; background:var(--border-gold); }
+
+.insight-#article-gold-panel.gold-body {
+  font-family: 'EB Garamond', serif;
+  font-size: 16.5px;
+  line-height: 1.85;
+  color: var(--cream-dim);
+}
+.insight-body strong { color: var(--gold-bright); font-family: 'Jost'; font-size: 15px; font-weight: 600; }
+.insight-body em { color: var(--gold-mid); font-style: italic; }
+
+/* ============================
+   PULL QUOTE
+   ============================ */
+.pull-q {
+  border-left: 3px solid var(--gold-mid);
+  padding: 20px 28px;
+  margin: 28px 0;
+  background: rgba(212,160,23,0.04);
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 19px;
+  color: var(--cream);
+  line-height: 1.65;
+}
+.pull-q cite {
+  display: block;
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--gold-dark);
+  font-style: normal;
+  margin-top: 12px;
+  text-transform: uppercase;
+}
+
+/* ============================
+   DATA METRICS
+   ============================ */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  margin: 30px 0;
+}
+
+.metric {
+  background: var(--onyx-3);
+  border: 1px solid var(--border-gold);
+  padding: 20px 16px;
+  text-align: center;
+  position: relative;
+}
+.metric::after {
+  content:'';
+  position:absolute;
+  bottom:0; left:0; right:0;
+  height:2px;
+  background:linear-gradient(to right, transparent, var(--gold-mid), transparent);
+}
+
+.metric-val {
+  font-family: 'Cinzel', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--gold-bright);
+  display: block;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+.metric-label {
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+/* ============================
+   PRICE TIMELINE CHART (CSS only)
+   ============================ */
+.price-chart {
+  background: var(--onyx-3);
+  border: 1px solid var(--border-gold);
+  padding: 28px 28px 20px;
+  margin: 32px 0;
+}
+
+.price-chart-title {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--gold-mid);
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 140px;
+}
+
+.bar-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.bar {
+  width: 100%;
+  background: linear-gradient(to top, var(--gold-dark), var(--gold-bright));
+  border-radius: 2px 2px 0 0;
+  transition: opacity 0.3s;
+  min-height: 4px;
+}
+.bar:hover { opacity: 0.8; }
+
+.bar-year {
+  font-family: 'Cinzel', serif;
+  font-size: 8.5px;
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+.bar-price {
+  font-family: 'Cinzel', serif;
+  font-size: 7.5px;
+  color: var(--gold-mid);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+/* ============================
+   COMPARISON TABLE
+   ============================ */
+.gold-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 14px;
+}
+.gold-table th {
+  background: var(--gold-deep);
+  color: var(--gold-bright);
+  padding: 13px 16px;
+  text-align: left;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--gold-mid);
+}
+.gold-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(212,160,23,0.08);
+  color: var(--text-main);
+  vertical-align: top;
+  line-height: 1.65;
+  font-family: 'EB Garamond', serif;
+  font-size: 15px;
+}
+.gold-table tr:nth-child(even) td { background: rgba(212,160,23,0.03); }
+.gold-table tr:hover td { background: rgba(212,160,23,0.07); }
+.gold-table td:first-child {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  color: var(--gold-mid);
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* ============================
+   DIVIDER
+   ============================ */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 0 36px;
+}
+.divider::before, .divider::after {
+  content:'';
+  flex:1;
+  height:1px;
+  background: linear-gradient(to right, transparent, var(--gold-dark), transparent);
+}
+.divider-icon {
+  color: var(--gold-mid);
+  font-size: 14px;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 3px;
+}
+
+/* ============================
+   MODERN SECTION BANNER
+   ============================ */
+.section-banner {
+  background: linear-gradient(135deg, var(--onyx-2) 0%, #0D0A00 100%);
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
+  padding: 52px 40px;
+  text-align: center;
+  margin: 0;
+}
+.section-banner h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  color: var(--gold-bright);
+  margin-bottom: 10px;
+}
+.section-banner p {
+  color: var(--text-dim);
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+  background: var(--onyx-2);
+  border-top: 1px solid var(--border-gold);
+  color: var(--text-dim);
+  text-align: center;
+  padding: 48px 40px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  line-height: 1.9;
+  font-family: 'Cinzel', serif;
+}
+footer strong { color: var(--gold-mid); }
+footer p+p { margin-top: 8px; }
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media(max-width:640px){
+  .fig-grid { grid-template-columns: 1fr; }
+  .metrics { grid-template-columns: 1fr 1fr; }
+  .hero { padding: 80px 20px 60px; }
+  .hero-Au { font-size: 64px; }
+  .bars { gap: 3px; }
+  .bar-year, .bar-price { font-size: 7px; }
+  .deco-top, .deco-bot { width: 90%; }
+}
+
+}
+</style>
+    <div style="padding: 16px 20px; background: #0A0A0A;">
+        <button onclick="openCommodityArticle('')" style="background: transparent; border: 1px solid rgba(212,160,23,0.5); color: #D4A017; padding: 7px 16px; cursor: pointer; font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.05em; border-radius: 4px;">
+            &#8592; Quay lại danh sách
+        </button>
+    </div>
+    
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="deco-top">
+    <div class="deco-line"></div>
+    <div class="deco-diamond"></div>
+    <div class="deco-line"></div>
+  </div>
+
+  <span class="hero-overline">Lược Sử Toàn Biên · Kim Loại Quý</span>
+  <span class="hero-Au">Au</span>
+  <span class="hero-element">Aurum · Nguyên Tố 79 · Khối Lượng 196.97</span>
+  <h1><span class="g">Vàng</span> — Kim Loại<br>Của Mọi Thời Đại</h1>
+  <p class="hero-sub">Từ những hạt vàng đầu tiên dưới đáy sông cổ đại đến đỉnh cao $5.593/oz năm 2026 — hành trình 6.000 năm của kim loại không bao giờ mất giá trị</p>
+
+  <div class="deco-bot">
+    <div class="deco-line"></div>
+    <div class="deco-diamond"></div>
+    <div class="deco-line"></div>
+  </div>
+</header>
+
+<!-- ===== TICKER ===== -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="tick-item"><span class="tick-dot"></span>XAU/USD ~$4,612 (5/2026)</span>
+    <span class="tick-item"><span class="tick-dot"></span>ATH: $5,593 (01/2026)</span>
+    <span class="tick-item"><span class="tick-dot"></span>+55% trong năm 2025</span>
+    <span class="tick-item"><span class="tick-dot"></span>Khai thác toàn cầu 2025: 3.300 tấn/năm</span>
+    <span class="tick-item"><span class="tick-dot"></span>Dự trữ trung ương TG: 36.200 tấn</span>
+    <span class="tick-item"><span class="tick-dot"></span>Au: Nguyên tố 79 — Không oxy hóa — Không gỉ</span>
+    <span class="tick-item"><span class="tick-dot"></span>1971: Nixon Shock — Chấm dứt bản vị vàng</span>
+    <span class="tick-item"><span class="tick-dot"></span>XAU/USD ~$4,612 (5/2026)</span>
+    <span class="tick-item"><span class="tick-dot"></span>ATH: $5,593 (01/2026)</span>
+    <span class="tick-item"><span class="tick-dot"></span>+55% trong năm 2025</span>
+    <span class="tick-item"><span class="tick-dot"></span>Khai thác toàn cầu 2025: 3.300 tấn/năm</span>
+    <span class="tick-item"><span class="tick-dot"></span>Dự trữ trung ương TG: 36.200 tấn</span>
+    <span class="tick-item"><span class="tick-dot"></span>Au: Nguyên tố 79 — Không oxy hóa — Không gỉ</span>
+    <span class="tick-item"><span class="tick-dot"></span>1971: Nixon Shock — Chấm dứt bản vị vàng</span>
+  </div>
+</div>
+
+<!-- ===== CONTENT ===== -->
+<div class="wrap">
+
+<!-- ==================== CHAPTER 1 ==================== -->
+<section class="chapter" id="c1">
+  <div class="ch-bg-num">I</div>
+  <div class="ch-top">
+    <div class="ch-ornament">
+      <div class="ch-diamond-top"></div>
+      <div class="ch-vert-line"></div>
+      <div class="ch-num-label">Chương I</div>
+    </div>
+    <div class="ch-titles">
+      <div class="ch-epoch">Khoảng 4000 TCN – 600 TCN</div>
+      <h2 class="ch-title">Khởi Nguyên — Loài Người <span class="accent">Phát Hiện Vàng</span></h2>
+      <p class="ch-subtitle">Kim loại đầu tiên được con người nhận ra là "đặc biệt" — và tại sao nó không bao giờ bị lãng quên</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Trước khi có văn minh, trước khi có chữ viết, trước khi có nhà nước — con người đã nhặt vàng. Những hạt vàng tự nhiên long lanh dưới ánh mặt trời ở đáy những con sông cổ đại vùng Trung Đông, Ai Cập và Tiểu Á đã thu hút sự chú ý của người tiền sử từ khoảng <strong>6.000 năm trước</strong>.</p>
+    <p>Vàng có những tính chất độc nhất vô nhị trong tự nhiên mà không kim loại nào sánh được: <em>không gỉ sét, không oxy hóa, không bị axit thông thường ăn mòn</em>, dẻo đến mức có thể dát mỏng bằng tờ giấy, và quan trọng hơn cả — có màu sắc và ánh kim đẹp đến huyền ảo. Với người cổ đại, một vật thể giữ nguyên vẻ đẹp dù qua bao thế kỷ chính là biểu tượng của <strong>sự bất tử và quyền năng thần thánh</strong>.</p>
+    <p>Bằng chứng khảo cổ học sớm nhất về vàng được tìm thấy tại nghĩa địa Varna ở Bulgaria (khoảng 4.600 – 4.200 TCN) — những đồ trang sức và dụng cụ nghi lễ bằng vàng được chôn theo người quá cố. Điều này nói lên nhiều hơn ta nghĩ: ngay từ buổi đầu văn minh, vàng đã gắn liền với <em>sự thiêng liêng, quyền lực và thế giới bên kia</em>.</p>
+  </div>
+
+  <div class="fig-section">
+    <div class="sec-head">
+      <div class="sec-head-diam"></div>
+      <span class="sec-head-text">Tại Sao Vàng Được Chọn?</span>
+      <div class="sec-head-line"></div>
+    </div>
+    <div class="fig-grid">
+      <div class="fig-card">
+        <div class="fig-name">Hiếm nhưng có thể tìm thấy</div>
+        <div class="fig-role">Tính khan hiếm</div>
+        <div class="fig-desc">Vàng đủ hiếm để có giá trị nhưng không quá hiếm đến mức vô dụng. Tổng vàng đã khai thác trong toàn lịch sử nhân loại chỉ khoảng 212.000 tấn — vừa đủ lấp đầy 3,5 bể bơi Olympic.</div>
+      </div>
+      <div class="fig-card">
+        <div class="fig-name">Không hủy hoại — Không gỉ</div>
+        <div class="fig-role">Tính bất biến</div>
+        <div class="fig-desc">Vàng trong mộ pharaoh sau 3.000 năm vẫn sáng như mới. Đây là tính chất không kim loại nào sánh được — vàng là vật thể duy nhất mà con người cổ đại biết có thể tồn tại mãi mãi.</div>
+      </div>
+      <div class="fig-card">
+        <div class="fig-name">Dễ chia nhỏ, dễ đúc</div>
+        <div class="fig-role">Tính tiện dụng</div>
+        <div class="fig-desc">Nhiệt độ nóng chảy thấp (1.064°C), rất mềm và dẻo — có thể đúc thành bất kỳ hình dạng nào. Một ounce vàng có thể dát thành tờ mỏng 100 m² hoặc kéo thành sợi dài 80 km.</div>
+      </div>
+      <div class="fig-card">
+        <div class="fig-name">Đồng nhất toàn cầu</div>
+        <div class="fig-role">Tính phổ quát</div>
+        <div class="fig-desc">Vàng ở Ai Cập, Trung Quốc, hay Peru đều có cùng tính chất. Một nén vàng Babylon không khác một thỏi vàng Tần triều — điều này làm vàng trở thành ngôn ngữ thương mại đầu tiên của nhân loại.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-label">Bài Học Khai Nguyên</div>
+    <div class="insight-body">
+      <strong>Vàng được chọn là tiền tệ không phải do quy ước — mà do bản chất vật lý của nó.</strong> Trong số 118 nguyên tố hóa học, chỉ vàng hội tụ đủ tất cả tính chất cần thiết của một đồng tiền lý tưởng: <em>hiếm, bền, đồng nhất, có thể chia nhỏ, không thể làm giả dễ dàng và đẹp</em>. Bạc, đồng và các kim loại khác đều thiếu một hoặc nhiều tính chất này. Đây là lý do trong 6.000 năm, dù nền văn minh thay đổi, <strong>vàng vẫn là thứ mà tất cả mọi người đều hiểu và chấp nhận.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 2 ==================== -->
+<section class="chapter" id="c2">
+  <div class="ch-bg-num">II</div>
+  <div class="ch-top">
+    <div class="ch-ornament">
+      <div class="ch-diamond-top"></div>
+      <div class="ch-vert-line"></div>
+      <div class="ch-num-label">Chương II</div>
+    </div>
+    <div class="ch-titles">
+      <div class="ch-epoch">4000 TCN – 500 TCN</div>
+      <h2 class="ch-title">Vàng Trong <span class="accent">Các Đế Chế Cổ Đại</span></h2>
+      <p class="ch-subtitle">Ai Cập, Mesopotamia, Hy Lạp — vàng định hình quyền lực và trật tự thế giới cổ đại</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p><strong>Ai Cập cổ đại</strong> là nền văn minh đầu tiên khai thác vàng có hệ thống quy mô lớn. Các mỏ Nubia (vùng Sudan ngày nay) cung cấp vàng để các pharaoh trang trí đền thờ, làm đồ nghi lễ và khẳng định vị thế thiêng liêng. Bản đồ mỏ vàng Nubia vẽ trên tờ giấy papyrus còn tồn tại đến ngày nay là <em>bản đồ địa chất học cổ nhất thế giới</em> (khoảng 1.300 TCN).</p>
+    <p>Mặt nạ pharaoh <strong>Tutankhamun</strong> (khoảng 1.323 TCN) nặng 11 kg vàng nguyên chất là biểu tượng vĩ đại nhất của vàng trong thế giới cổ đại. Người Ai Cập tin rằng da thịt của các vị thần làm bằng vàng — đó là lý do các bức tượng thần đều được dát vàng.</p>
+    <p>Ở vùng Mesopotamia, <strong>người Babylon và Assyria</strong> đã dùng vàng như đơn vị trao đổi từ khoảng 2.000 TCN. Đây là mầm mống đầu tiên của khái niệm "tiền tệ bằng vàng" — từ vật trang sức và nghi lễ, vàng bắt đầu có chức năng kinh tế.</p>
+    <p>Bước ngoặt lớn xảy ra khoảng <strong>650 TCN tại Lydia</strong> (Thổ Nhĩ Kỳ ngày nay): vua Croesus đúc những đồng tiền vàng đầu tiên trong lịch sử — tiêu chuẩn hóa trọng lượng và độ tinh khiết. <em>"Giàu như Croesus"</em> trở thành thành ngữ bất hủ, và đồng tiền vàng Lydia là khởi điểm của hệ thống tiền tệ hiện đại.</p>
+  </div>
+
+  <div class="events-grid">
+    <div class="ev-card">
+      <div class="ev-year">~4600 TCN</div>
+      <div class="ev-name">Nghĩa địa Varna — Bằng chứng vàng sớm nhất</div>
+      <div class="ev-desc">Ở Bulgaria ngày nay, hàng nghìn đồ vật vàng được tìm thấy trong các ngôi mộ cổ — bằng chứng vật chất sớm nhất về việc con người coi vàng là vật phẩm thiêng liêng và có giá trị đặc biệt.</div>
+    </div>
+    <div class="ev-card">
+      <div class="ev-year">~3000 TCN</div>
+      <div class="ev-name">Ai Cập khai thác vàng Nubia có hệ thống</div>
+      <div class="ev-desc">Các pharaoh triều Cổ đại bắt đầu tổ chức khai thác vàng quy mô lớn từ Nubia. Vàng là độc quyền của hoàng gia — biểu tượng của quyền lực thần thánh không thể thách thức.</div>
+    </div>
+    <div class="ev-card">
+      <div class="ev-year">~1323 TCN</div>
+      <div class="ev-name">Mặt nạ vàng Tutankhamun</div>
+      <div class="ev-desc">11 kg vàng nguyên chất, đúc hoàn hảo — tác phẩm nghệ thuật bằng vàng vĩ đại nhất còn lại đến ngày nay. Khi Howard Carter mở lăng mộ năm 1922, mặt nạ vẫn sáng như ngày mới đúc sau 3.300 năm — minh chứng sống cho tính bất biến của vàng.</div>
+    </div>
+    <div class="ev-card">
+      <div class="ev-year">~650 TCN</div>
+      <div class="ev-name">Vua Croesus đúc đồng tiền vàng đầu tiên</div>
+      <div class="ev-desc">Vương quốc Lydia (Thổ Nhĩ Kỳ) phát minh đồng tiền vàng tiêu chuẩn. Đây là bước nhảy vọt của văn minh nhân loại: từ trao đổi hàng hóa sang tiền tệ — vàng chính thức trở thành ngôn ngữ kinh tế toàn cầu.</div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-label">Bài Học Lịch Sử</div>
+    <div class="insight-body">
+      <strong>Vàng không "được quy ước" là có giá trị — nó được công nhận là có giá trị.</strong> Sự khác biệt này quan trọng: tiền giấy ngày nay có giá trị vì chính phủ quy định như vậy. Vàng có giá trị vì con người ở mọi nền văn minh, mọi thời đại, không hề liên lạc với nhau, đều đồng thuận rằng nó xứng đáng. <em>Đây là điểm khác biệt căn bản nhất giữa vàng và mọi hình thức tiền tệ khác trong lịch sử.</em>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 3 ==================== -->
+<section class="chapter" id="c3">
+  <div class="ch-bg-num">III</div>
+  <div class="ch-top">
+    <div class="ch-ornament">
+      <div class="ch-diamond-top"></div>
+      <div class="ch-vert-line"></div>
+      <div class="ch-num-label">Chương III</div>
+    </div>
+    <div class="ch-titles">
+      <div class="ch-epoch">500 TCN – 1500 CN</div>
+      <h2 class="ch-title">Vàng Kết Nối <span class="accent">Đông Tây</span></h2>
+      <p class="ch-subtitle">Con đường Tơ lụa, đế chế La Mã, và cơn khát vàng của thời Trung cổ</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Đế chế Ba Tư (Achaemenid, 550–330 TCN) thiết lập hệ thống tiền tệ vàng-bạc song hành đầu tiên: đồng <strong>Daric</strong> bằng vàng cho hoàng gia và thương mại lớn, đồng bạc cho dân thường. Mô hình này được Alexander Đại đế tiếp thu và phát triển sau khi chinh phục Ba Tư — ông lấy hàng nghìn tấn vàng từ kho báu Ba Tư và dùng để trả lương cho đội quân khổng lồ, đẩy lưu thông tiền tệ rộng khắp từ Hy Lạp đến Ấn Độ.</p>
+    <p><strong>Đế chế La Mã</strong> nâng hệ thống tiền vàng lên tầm mới với đồng <em>Aureus</em> (từ chữ Aurum — vàng). Các tuyến thương mại La Mã kết nối châu Âu, Trung Đông, Ấn Độ và Trung Quốc — và vàng là ngôn ngữ chung của toàn bộ mạng lưới này. Khi La Mã suy tàn do phá vỡ chuẩn vàng (pha đồng vào tiền), lạm phát bùng nổ — bài học đầu tiên trong lịch sử về việc <strong>phá vỡ bản vị vàng dẫn đến khủng hoảng tiền tệ</strong>.</p>
+    <p>Ở châu Á, <strong>Con đường Tơ lụa</strong> — nối Trung Quốc, Ấn Độ, Ba Tư và La Mã — vận hành bằng vàng và bạc. Thương nhân Arab, Trung Á và Trung Quốc đều chấp nhận vàng không cần thỏa thuận trước — bởi vì mọi người đều biết giá trị của nó. Vàng là <em>ngôn ngữ thương mại quốc tế đầu tiên của nhân loại</em>.</p>
+    <p>Thời <strong>Trung cổ châu Âu</strong>, vàng tập trung vào tay nhà thờ và vương quyền. Đồng <em>Florin</em> của Florence (1252) và đồng <em>Ducat</em> của Venice trở thành tiêu chuẩn thương mại toàn châu Âu — khởi đầu thời kỳ ngân hàng và tài chính hiện đại.</p>
+  </div>
+
+  <div class="insight">
+    <div class="insight-label">Bài Học Lịch Sử</div>
+    <div class="insight-body">
+      <strong>Bài học La Mã: Phá bản vị vàng = Tự phá hoại đế chế.</strong> Khi hoàng đế La Mã pha thêm đồng vào tiền vàng để đúc nhiều tiền hơn, dân chúng nhận ra ngay — họ tích trữ tiền vàng thật và tiêu tiền xấu. Đồng tiền mất giá, giá cả tăng vọt, niềm tin sụp đổ. <em>Đây là nguyên mẫu đầu tiên của lạm phát do in tiền — và là bài học mà nhiều chính phủ hiện đại vẫn chưa thuộc.</em>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 4 ==================== -->
+<section class="chapter" id="c4">
+  <div class="ch-bg-num">IV</div>
+  <div class="ch-top">
+    <div class="ch-ornament">
+      <div class="ch-diamond-top"></div>
+      <div class="ch-vert-line"></div>
+      <div class="ch-num-label">Chương IV</div>
+    </div>
+    <div class="ch-titles">
+      <div class="ch-epoch">1492 – 1850</div>
+      <h2 class="ch-title">Cơn Sốt Vàng — <span class="accent">Định Hình Thế Giới Mới</span></h2>
+      <p class="ch-subtitle">Tìm kiếm vàng thay đổi bản đồ địa lý, xoá sổ các nền văn minh và tạo ra trật tự thế giới hiện đại</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Không có gì thay đổi thế giới nhanh và triệt để hơn cơn khát vàng của người châu Âu. Khi Columbus đặt chân lên châu Mỹ năm 1492, động lực chính không phải "khám phá" — mà là <strong>tìm vàng</strong>. Câu hỏi đầu tiên ông hỏi thổ dân không phải về địa lý hay con người — mà là "vàng ở đâu?"</p>
+    <p>Người Tây Ban Nha phát hiện vàng bạc khổng lồ tại các đế chế Aztec (Mexico) và Inca (Peru). <strong>Hernán Cortés</strong> phá hủy đế chế Aztec (1519–1521), <strong>Francisco Pizarro</strong> tiêu diệt đế chế Inca (1532–1572). Hàng trăm triệu ounce vàng và bạc đổ về Tây Ban Nha — nhưng nghịch lý thay, vì quá nhiều vàng đổ vào châu Âu, lạm phát bùng nổ, Tây Ban Nha cuối cùng bị phá sản.</p>
+    <p>Cơn sốt vàng California (1848–1855) và Australia (1851–1861) là những cuộc di dân quy mô lớn nhất trong lịch sử. Hơn <em>300.000 người</em> đổ về California trong vài năm — San Francisco từ làng chài nhỏ trở thành thành phố lớn. <strong>Cơn sốt vàng định hình nước Mỹ hiện đại</strong>: đường sắt xuyên lục địa, hệ thống ngân hàng, luật đất đai, và tinh thần khởi nghiệp dám-làm-giàu đặc trưng Mỹ.</p>
+  </div>
+
+  <div class="events-grid">
+    <div class="ev-card">
+      <div class="ev-year">1492–1600</div>
+      <div class="ev-name">Vàng châu Mỹ đổ về châu Âu — "Price Revolution"</div>
+      <div class="ev-desc">Tây Ban Nha nhập khẩu hơn 150 tấn vàng và 7.000 tấn bạc từ châu Mỹ. Cung tiền tăng gấp 3–4 lần khiến giá cả châu Âu tăng 300–400% trong 100 năm — cuộc lạm phát đầu tiên do "in tiền kim loại" trong lịch sử hiện đại.</div>
+    </div>
+    <div class="ev-card">
+      <div class="ev-year">1532</div>
+      <div class="ev-name">Pizarro và kho báu Inca — Ransom của Atahualpa</div>
+      <div class="ev-desc">Vua Inca Atahualpa trả tiền chuộc bằng cách lấp đầy một căn phòng bằng vàng — khoảng 6 tấn vàng và 12 tấn bạc. Pizarro nhận xong rồi vẫn xử tử ông. Vụ này cướp được lượng vàng tương đương hàng chục tỷ USD ngày nay.</div>
+    </div>
+    <div class="ev-card">
+      <div class="ev-year">1848</div>
+      <div class="ev-name">Cơn sốt vàng California — Định hình nước Mỹ</div>
+      <div class="ev-desc">Phát hiện vàng tại Sutter's Mill ngày 24/1/1848 châm ngòi làn sóng di dân lớn nhất lịch sử Mỹ. 300.000 người đổ về từ khắp thế giới. California trở thành bang năm 1850, San Francisco bùng nổ. Cơn sốt vàng tạo ra văn hóa "American Dream" — ai cũng có thể làm giàu.</div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-label">Bài Học Lịch Sử</div>
+    <div class="insight-body">
+      <strong>Nghịch lý của vàng: Nhiều vàng hơn không có nghĩa là giàu hơn.</strong> Tây Ban Nha cướp được nhiều vàng nhất thế giới nhưng lại là đế chế phá sản nhanh nhất. Vì sao? Vì vàng chỉ có giá trị khi <em>hiếm</em>. Khi bạn in thêm tiền (hay nhập thêm vàng vượt quá tốc độ tăng trưởng kinh tế), bạn không tạo ra giàu có — bạn chỉ pha loãng giá trị của mỗi đơn vị tiền. <strong>Đây là bài học mà Fed và các ngân hàng trung ương hiện đại đang phải đối mặt trong thế kỷ XXI.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 5 ==================== -->
+<section class="chapter" id="c5">
+  <div class="ch-bg-num">V</div>
+  <div class="ch-top">
+    <div class="ch-ornament">
+      <div class="ch-diamond-top"></div>
+      <div class="ch-vert-line"></div>
+      <div class="ch-num-label">Chương V</div>
+    </div>
+    <div class="ch-titles">
+      <div class="ch-epoch">1816 – 1971</div>
+      <h2 class="ch-title">Bản Vị Vàng — <span class="accent">Nền Tảng Trật Tự Tiền Tệ Thế Giới</span></h2>
+      <p class="ch-subtitle">150 năm vàng cai trị hệ thống tài chính toàn cầu — và sự sụp đổ chấn động ngày 15/8/1971</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Năm 1816, Anh Quốc chính thức áp dụng <strong>Gold Standard</strong> — bản vị vàng: mỗi đồng bảng Anh tương ứng với một lượng vàng cố định. Thương mại quốc tế bùng nổ vì các quốc gia biết chính xác giá trị đồng tiền của nhau. Đây là thời kỳ ổn định tiền tệ nhất trong lịch sử — lạm phát gần như bằng 0 trong nhiều thập kỷ.</p>
+    <p>Sau Thế chiến II, Hội nghị <strong>Bretton Woods</strong> (1944) thiết lập trật tự mới: đô-la Mỹ chốt ở mức <em>$35/ounce vàng</em>, các đồng tiền khác chốt theo đô-la. Mỹ cam kết bất kỳ ngân hàng trung ương nào cũng có thể đổi đô-la lấy vàng tại giá này. Đây là lý do đô-la Mỹ trở thành đồng tiền dự trữ thế giới — vì đô-la <em>gần như bằng vàng</em>.</p>
+    <p>Nhưng chiến tranh Triều Tiên, Việt Nam và các chương trình xã hội "Great Society" buộc Mỹ in thêm đô-la vượt quá lượng vàng dự trữ. Pháp và Đức bắt đầu đổi đô-la lấy vàng thực sự từ Fort Knox. Đến năm 1971, lượng đô-la lưu thông vượt xa lượng vàng dự trữ của Mỹ. Ngày <strong>15/8/1971</strong>, Tổng thống Nixon tuyên bố: <em>"Cửa sổ vàng đóng lại."</em> — đô-la không còn được đổi lấy vàng. <strong>Nixon Shock</strong> chấm dứt 155 năm bản vị vàng và bắt đầu kỷ nguyên tiền fiat.</p>
+  </div>
+
+  <div class="events-grid">
+    <div class="ev-card">
+      <div class="ev-year">1816</div>
+      <div class="ev-name">Anh Quốc áp dụng Gold Standard đầu tiên</div>
+      <div class="ev-desc">Đồng bảng Anh chính thức gắn với vàng — khởi đầu 155 năm kỷ nguyên bản vị vàng. Thương mại quốc tế bùng nổ vì tỷ giá ổn định. Lạm phát thực tế gần bằng 0 trong suốt thế kỷ XIX.</div>
+    </div>
+    <div class="ev-card">
+      <div class="ev-year">1944</div>
+      <div class="ev-name">Hội nghị Bretton Woods — Đô-la gắn với vàng</div>
+      <div class="ev-desc">44 quốc gia họp tại New Hampshire thiết lập trật tự tiền tệ hậu chiến: $35 = 1 ounce vàng. IMF và World Bank ra đời. Đô-la Mỹ trở thành tiền dự trữ thế giới — về bản chất là đại diện cho vàng.</div>
+    </div>
+    <div class="ev-card">
+      <div class="ev-year">15/8/1971</div>
+      <div class="ev-name">Nixon Shock — Chấm dứt bản vị vàng</div>
+      <div class="ev-desc">Nixon đóng "cửa sổ vàng" — đô-la không còn đổi được lấy vàng. Khoảnh khắc này thay đổi toàn bộ hệ thống tài chính toàn cầu. Từ đây, mọi đồng tiền trên thế giới đều là tiền fiat — giá trị do chính phủ quy định, không bảo chứng bằng vàng hay bất kỳ thứ gì.</div>
+    </div>
+    <div class="ev-card">
+      <div class="ev-year">1974</div>
+      <div class="ev-name">Mỹ hợp pháp hóa lại việc sở hữu vàng</div>
+      <div class="ev-desc">Từ 1933, Roosevelt đã cấm dân Mỹ giữ vàng (Executive Order 6102). Năm 1974, lệnh cấm được bãi bỏ. Tháng 1/1980, vàng chạm $850/oz — tăng 24 lần so với giá bản vị $35, là cột mốc kinh hoàng đầu tiên của kỷ nguyên hậu bản vị vàng.</div>
+    </div>
+  </div>
+
+  <div class="pull-q">
+    "Vàng là tiền. Mọi thứ khác chỉ là tín dụng."
+    <cite>— J.P. Morgan, lời khai trước Quốc hội Mỹ, 1912</cite>
+  </div>
+
+  <div class="insight">
+    <div class="insight-label">Bài Học Lịch Sử Quan Trọng Nhất</div>
+    <div class="insight-body">
+      <strong>Nixon Shock 1971 là sự kiện tài chính quan trọng nhất thế kỷ XX — nhưng ít người hiểu tác động của nó.</strong> Trước 1971, chính phủ không thể in tiền vô hạn vì bị ràng buộc bởi vàng dự trữ. Sau 1971, không có giới hạn nào cả. Nợ quốc gia Mỹ năm 1971: <em>$400 tỷ</em>. Nợ quốc gia Mỹ năm 2026: <em>$36.000 tỷ</em> — tăng 90 lần. Đây là lý do vàng tăng từ $35 lên $4.600 trong cùng khoảng thời gian — <strong>vàng không tăng giá, vàng chỉ phản ánh sự mất giá của đô-la.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 6 ==================== -->
+<section class="chapter" id="c6">
+  <div class="ch-bg-num">VI</div>
+  <div class="ch-top">
+    <div class="ch-ornament">
+      <div class="ch-diamond-top"></div>
+      <div class="ch-vert-line"></div>
+      <div class="ch-num-label">Chương VI</div>
+    </div>
+    <div class="ch-titles">
+      <div class="ch-epoch">1971 – 2024</div>
+      <h2 class="ch-title">Kỷ Nguyên Hậu Bản Vị Vàng — <span class="accent">Hành Trình Từ $35 đến $3.000</span></h2>
+      <p class="ch-subtitle">Vàng tự do nổi, phản ứng với mọi khủng hoảng và trở thành thước đo thực sự của nỗi sợ hãi toàn cầu</p>
+    </div>
+  </div>
+
+  <!-- Price chart CSS -->
+  <div class="price-chart">
+    <div class="price-chart-title">Hành Trình Giá Vàng Qua Các Thập Kỷ (USD/oz)</div>
+    <div class="bars">
+      <div class="bar-wrap">
+        <div class="bar-price">$35</div>
+        <div class="bar" style="height:1%"></div>
+        <div class="bar-year">1971</div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-price">$850</div>
+        <div class="bar" style="height:15%"></div>
+        <div class="bar-year">1980</div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-price">$300</div>
+        <div class="bar" style="height:5.3%"></div>
+        <div class="bar-year">1999</div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-price">$1.900</div>
+        <div class="bar" style="height:33.5%"></div>
+        <div class="bar-year">2011</div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-price">$1.200</div>
+        <div class="bar" style="height:21%"></div>
+        <div class="bar-year">2015</div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-price">$2.070</div>
+        <div class="bar" style="height:36.5%"></div>
+        <div class="bar-year">2020</div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-price">$2.624</div>
+        <div class="bar" style="height:46.5%"></div>
+        <div class="bar-year">2024</div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-price">$4.381</div>
+        <div class="bar" style="height:77.5%"></div>
+        <div class="bar-year">Aug'25</div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-price">$5.593</div>
+        <div class="bar" style="height:99%"></div>
+        <div class="bar-year">Jan'26 ★</div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar-price">$4.612</div>
+        <div class="bar" style="height:81.5%"></div>
+        <div class="bar-year">May'26</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Sau Nixon Shock, vàng bước vào kỷ nguyên tự do nổi — giá phản ánh tâm lý thị trường thực sự. Thập niên 1970 là địa ngục lạm phát với hai cuộc khủng hoảng dầu mỏ, lạm phát Mỹ lên 14%/năm — vàng vọt từ $35 lên <strong>$850 (1/1980)</strong>, tăng 24 lần trong 9 năm.</p>
+    <p>Thập niên 1980–1990: Fed chủ tịch Paul Volcker tăng lãi suất lên 20% để diệt lạm phát. Vàng sụt về $300–400 và nằm im gần 20 năm. <em>Đây là bài học: vàng tốt khi lạm phát cao và lãi suất thực âm; vàng kém khi lãi suất thực cao và kinh tế ổn định.</em></p>
+    <p>Khủng hoảng tài chính <strong>2008</strong> — Fed và các ngân hàng trung ương bắt đầu "Quantitative Easing" (QE) — in hàng nghìn tỷ đô-la. Vàng tăng từ $800 lên <strong>$1.900 (2011)</strong>. Đại dịch COVID-2020 — QE còn mạnh hơn, vàng vượt <strong>$2.000</strong> lần đầu. Và trong giai đoạn 2024–2026, chiến tranh thương mại Mỹ–Trung, bất ổn địa chính trị, ngân hàng trung ương mua vàng kỷ lục đẩy vàng lên <strong>$5.593 (1/2026)</strong> — mức giá cao nhất lịch sử nhân loại.</p>
+  </div>
+
+  <div class="metrics">
+    <div class="metric">
+      <span class="metric-val">$35</span>
+      <span class="metric-label">Giá năm 1971 (bản vị Bretton Woods)</span>
+    </div>
+    <div class="metric">
+      <span class="metric-val">$850</span>
+      <span class="metric-label">Đỉnh 1980 (khủng hoảng dầu)</span>
+    </div>
+    <div class="metric">
+      <span class="metric-val">$1.900</span>
+      <span class="metric-label">Đỉnh 2011 (hậu QE1/2)</span>
+    </div>
+    <div class="metric">
+      <span class="metric-val">$5.593</span>
+      <span class="metric-label">ATH 01/2026 — Kỷ lục mọi thời đại</span>
+    </div>
+    <div class="metric">
+      <span class="metric-val">+15.894%</span>
+      <span class="metric-label">Tổng tăng từ 1971 đến ATH 2026</span>
+    </div>
+    <div class="metric">
+      <span class="metric-val">+55%</span>
+      <span class="metric-label">Tăng trưởng trong năm 2025 đơn lẻ</span>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-label">Bài Học Thị Trường</div>
+    <div class="insight-body">
+      <strong>Giá vàng là "nhiệt kế" đo nhiệt độ nỗi sợ hãi và bất tín nhiệm vào tiền fiat.</strong> Khi chính phủ in tiền → vàng tăng. Khi lạm phát cao → vàng tăng. Khi địa chính trị căng thẳng → vàng tăng. Khi ngân hàng trung ương mua vàng → vàng tăng. Khi tất cả những yếu tố này xảy ra <em>đồng thời</em> như giai đoạn 2024–2026, vàng tăng phi mã. <strong>Người nắm vàng không phải vì muốn vàng lên giá — mà vì họ không tin vào sức mua của đồng tiền giấy theo thời gian.</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 7 — MODERN ==================== -->
+<section class="chapter" id="c7">
+  <div class="ch-bg-num">VII</div>
+  <div class="ch-top">
+    <div class="ch-ornament">
+      <div class="ch-diamond-top"></div>
+      <div class="ch-vert-line"></div>
+      <div class="ch-num-label">Chương VII</div>
+    </div>
+    <div class="ch-titles">
+      <div class="ch-epoch">Hiện Tại — 2026</div>
+      <h2 class="ch-title">Vai Trò Vàng <span class="accent">Trong Thế Giới Hiện Đại</span></h2>
+      <p class="ch-subtitle">Từ trang sức đến vũ khí địa chính trị — vàng quan trọng hơn bao giờ hết trong thế kỷ XXI</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p>Trong thế giới hiện đại, vàng đóng nhiều vai trò cùng lúc — và vai trò nào cũng đang ngày càng quan trọng hơn.</p>
+    <p><strong>Dự trữ của ngân hàng trung ương:</strong> Tổng dự trữ vàng toàn cầu của các ngân hàng trung ương hiện là <em>~36.200 tấn</em> — chiếm ~20% tổng dự trữ ngoại hối, tăng từ 15% năm 2023. Từ 2022, ngân hàng trung ương toàn cầu mua vàng với tốc độ kỷ lục 55 năm — đặc biệt Trung Quốc, Ấn Độ, Thổ Nhĩ Kỳ, Ba Lan, UAE. Đây là tín hiệu rõ ràng: các nhà quản lý tiền tệ hàng đầu thế giới đang <strong>giảm tỷ trọng đô-la và tăng tỷ trọng vàng</strong>.</p>
+    <p><strong>Công nghệ:</strong> Vàng là vật liệu không thể thay thế trong điện tử — mỗi chiếc smartphone chứa khoảng 0,03 gram vàng trong mạch dẫn điện. Ngành công nghiệp điện tử, y tế và hàng không vũ trụ tiêu thụ hơn <em>300 tấn vàng/năm</em>.</p>
+    <p><strong>Đầu tư và ETF:</strong> Sự ra đời của Gold ETF (SPDR GLD, 2004) mở cửa cho hàng triệu nhà đầu tư nhỏ lẻ tiếp cận vàng. Tổng tài sản trong Gold ETF toàn cầu hiện vượt <em>$200 tỷ</em>. Vàng đang chiếm 2,8% tổng danh mục đầu tư toàn cầu (2025) — và J.P. Morgan dự báo con số này sẽ tăng lên 4–5%.</p>
+  </div>
+
+  <div class="fig-section">
+    <div class="sec-head">
+      <div class="sec-head-diam"></div>
+      <span class="sec-head-text">Nguồn Cầu Vàng Hiện Đại</span>
+      <div class="sec-head-line"></div>
+    </div>
+    <div class="fig-grid">
+      <div class="fig-card">
+        <div class="fig-name">Trang sức ~45%</div>
+        <div class="fig-role">Nhu cầu lớn nhất</div>
+        <div class="fig-desc">Ấn Độ và Trung Quốc chiếm 50% nhu cầu trang sức toàn cầu. Ấn Độ có tập tục cưới hỏi và lễ hội đòi hỏi vàng — nhu cầu mang tính văn hóa, không thay thế được.</div>
+      </div>
+      <div class="fig-card">
+        <div class="fig-name">Ngân hàng trung ương ~25%</div>
+        <div class="fig-role">Tăng mạnh nhất từ 2022</div>
+        <div class="fig-desc">Mua kỷ lục 1.136 tấn năm 2022, 863 tấn năm 2025. Xu hướng de-dollarization (giảm phụ thuộc đô-la) đang thúc đẩy các ngân hàng trung ương ở thị trường mới nổi tích lũy vàng.</div>
+      </div>
+      <div class="fig-card">
+        <div class="fig-name">Đầu tư ETF & thỏi vàng ~20%</div>
+        <div class="fig-role">Nhà đầu tư cá nhân & tổ chức</div>
+        <div class="fig-desc">Gold ETF mở đường cho đầu tư vàng đại chúng. Hedge fund, quỹ hưu trí, và cá nhân tích lũy vàng như "bảo hiểm danh mục" — phòng vệ lạm phát và rủi ro hệ thống.</div>
+      </div>
+      <div class="fig-card">
+        <div class="fig-name">Công nghệ ~10%</div>
+        <div class="fig-role">Điện tử & Y tế</div>
+        <div class="fig-desc">Chip bán dẫn, mạch điện, thiết bị y tế, hàng không vũ trụ. Nhu cầu này chỉ tăng theo thời gian khi công nghệ phát triển — và không thể thay thế bằng vật liệu khác.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="insight-label">Xu Hướng Địa Chính Trị Quan Trọng</div>
+    <div class="insight-body">
+      <strong>De-dollarization — Xu hướng địa chính trị định hình giá vàng thập kỷ tới.</strong> Sau khi Mỹ đóng băng dự trữ ngoại hối của Nga ($300 tỷ) năm 2022, các quốc gia như Trung Quốc, Ấn Độ, Ả Rập Saudi bắt đầu lo ngại: <em>nếu đô-la có thể bị đóng băng bởi quyết định chính trị của Washington, liệu nó có còn là tài sản dự trữ an toàn?</em> Câu trả lời của họ là mua vàng — vì vàng <strong>không thuộc quyền kiểm soát của bất kỳ chính phủ nào.</strong> Đây là yếu tố cấu trúc sẽ hỗ trợ giá vàng trong dài hạn bất kể điều kiện kinh tế nào.
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 8 — CÂU HỎI LỚN ==================== -->
+<section class="chapter" id="c8">
+  <div class="ch-bg-num">VIII</div>
+  <div class="ch-top">
+    <div class="ch-ornament">
+      <div class="ch-diamond-top"></div>
+      <div class="ch-vert-line"></div>
+      <div class="ch-num-label">Chương VIII</div>
+    </div>
+    <div class="ch-titles">
+      <div class="ch-epoch">Phân Tích Sâu</div>
+      <h2 class="ch-title">Ba Câu Hỏi <span class="accent">Trăm Năm</span></h2>
+      <p class="ch-subtitle">Vàng có phải tiền tệ của mọi tiền tệ? Giá có còn tăng mãi? Và bài học nào cho nhà đầu tư?</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    <p style="font-size:18px; color:var(--gold-bright); font-family:'Cinzel',serif; margin-bottom:6px;">Câu hỏi 1: Vàng có phải "tiền tệ của mọi tiền tệ" không?</p>
+    <p>Câu trả lời ngắn: <strong>Có — về mặt lịch sử và triết học, nhưng không — về mặt vận hành trong thế giới hiện đại.</strong></p>
+    <p>Vàng là tiền tệ duy nhất không là nợ của bất kỳ ai. Đô-la là IOU (giấy nợ) của Fed. Trái phiếu chính phủ là nợ của nhà nước. Tiền gửi ngân hàng là nợ của ngân hàng. <em>Chỉ có vàng trong tay là tài sản không có đối ứng nợ.</em> Đây là lý do J.P. Morgan nói "Vàng là tiền, mọi thứ khác là tín dụng." Vàng không bị phá giá bởi quyết định của bất kỳ chính phủ hay ngân hàng trung ương nào.</p>
+    <p>Tuy nhiên, vàng không phải tiền tệ trong giao dịch hàng ngày — bạn không dùng vàng mua cà phê. Vai trò của vàng trong thế giới hiện đại là <strong>tài sản dự trữ cuối cùng</strong> (ultimate store of value) và <strong>bảo hiểm hệ thống</strong> (systemic insurance) — không phải phương tiện trao đổi thường ngày.</p>
+
+    <p style="font-size:18px; color:var(--gold-bright); font-family:'Cinzel',serif; margin-bottom:6px; margin-top:28px;">Câu hỏi 2: Giá vàng có còn tăng theo thời gian không?</p>
+    <p>Câu trả lời: <strong>Tính bằng đô-la — gần chắc chắn. Tính bằng sức mua thực — tùy thuộc.</strong></p>
+    <p>Có <em>ba lực cấu trúc</em> đang ủng hộ vàng trong dài hạn: (1) Nợ công toàn cầu tiếp tục tăng, buộc các chính phủ in tiền — vàng sẽ tăng tương ứng. (2) De-dollarization — ngân hàng trung ương mua vàng thay thế đô-la trong dự trữ. (3) Nguồn cung bị giới hạn — tổng vàng chưa khai thác ước tính chỉ còn 50.000–60.000 tấn. J.P. Morgan dự báo vàng hướng đến <strong>$5.000–6.000/oz</strong> trong 2026–2027. Dài hạn hơn, với xu hướng nợ toàn cầu hiện tại, vàng $10.000/oz không phải kịch bản không thể.</p>
+    <p>Tuy nhiên, cần lưu ý: trong ngắn hạn, vàng có thể biến động mạnh. Như giai đoạn 1980–2000: vàng mất 65% giá trị trong 20 năm. Nếu Fed tăng lãi suất mạnh và ổn định hóa tiền tệ, vàng có thể điều chỉnh sâu. <em>Vàng là tài sản dài hạn — không phải công cụ đầu cơ ngắn hạn.</em></p>
+
+    <p style="font-size:18px; color:var(--gold-bright); font-family:'Cinzel',serif; margin-bottom:6px; margin-top:28px;">Câu hỏi 3: Bài học gì cho nhà đầu tư và trader?</p>
+  </div>
+
+  <div class="gold-table">
+    <thead>
+      <tr>
+        <th>Nguyên Tắc</th>
+        <th>Ý Nghĩa Thực Tiễn</th>
+        <th>Cảnh Báo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Vàng = Bảo hiểm, không phải đầu tư</td>
+        <td>Giữ 5–15% danh mục là vàng như bảo hiểm lạm phát và khủng hoảng. Không kỳ vọng lợi nhuận cao như cổ phiếu.</td>
+        <td>Vàng không tạo ra thu nhập (không lãi, không cổ tức). Chi phí cơ hội cao khi kinh tế tăng trưởng.</td>
+      </tr>
+      <tr>
+        <td>Mua khi lãi suất thực âm</td>
+        <td>Lãi suất thực = Lãi suất danh nghĩa – Lạm phát. Khi lãi suất thực âm (giữ tiền mặt mất sức mua), vàng là lựa chọn tối ưu.</td>
+        <td>Khi Fed tăng lãi suất mạnh (như 2022), vàng có thể sụt giảm đáng kể dù lạm phát cao.</td>
+      </tr>
+      <tr>
+        <td>Tích lũy khi thị trường tham lam, giữ khi sợ hãi</td>
+        <td>Vàng thường đắt nhất khi mọi người lo sợ nhất — đó là lúc bán, không phải mua. Mua vàng trong giai đoạn ổn định, giữ như bảo hiểm.</td>
+        <td>FOMO (sợ bỏ lỡ) khi vàng tăng nhanh thường dẫn đến mua đỉnh. ATH $5.593 (1/2026) theo sau là pullback về $4.600.</td>
+      </tr>
+      <tr>
+        <td>Vàng vật chất > Giấy vàng</td>
+        <td>ETF và hợp đồng vàng là tiện lợi nhưng là "giấy nợ" — trong khủng hoảng hệ thống, vàng vật chất mới thực sự an toàn.</td>
+        <td>Vàng vật chất có chi phí lưu trữ và bảo hiểm. Thanh khoản thấp hơn ETF. Không phù hợp cho trading ngắn hạn.</td>
+      </tr>
+      <tr>
+        <td>Đừng để vàng chiếm quá nhiều danh mục</td>
+        <td>Tỷ lệ lý tưởng: 5–15% tổng danh mục đầu tư. Phần còn lại: cổ phiếu, trái phiếu, bất động sản, tiền mặt.</td>
+        <td>100% vàng là sai lầm — vàng underperform cổ phiếu trong chu kỳ kinh tế mở rộng dài hạn.</td>
+      </tr>
+    </tbody>
+  </div>
+
+  <div class="insight">
+    <div class="insight-label">Kết Luận Của Lịch Sử 6.000 Năm</div>
+    <div class="insight-body">
+      <strong>Mọi đồng tiền fiat trong lịch sử cuối cùng đều mất giá về 0. Vàng thì không.</strong> Đồng Denarius La Mã, đồng tiền giấy Trung Hoa thời Tống, đồng Mark Đức 1923, đồng Zimbawe dollar — tất cả về 0. <em>Không một tờ tiền giấy nào sống sót qua 500 năm.</em> Vàng đã là tiền trong 6.000 năm — và ngay hôm nay, năm 2026, ounce vàng vẫn có thể mua được bộ quần áo đẹp như thời La Mã cổ đại (1 ounce vàng = 1 bộ toga thời La Mã; ngày nay = 1 bộ vest tốt). Sức mua thực tế giữ nguyên qua thiên niên kỷ.
+      <br><br>
+      <strong>Vàng không phải đầu tư để làm giàu — vàng là công cụ để bảo tồn sự giàu có đã có qua thời gian.</strong> Đó là sứ mệnh duy nhất và bất biến của nó trong 6.000 năm lịch sử nhân loại.
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 9 — TÓM TẮT ==================== -->
+<section class="chapter" id="c9">
+  <div class="ch-bg-num">IX</div>
+  <div class="ch-top">
+    <div class="ch-ornament">
+      <div class="ch-diamond-top"></div>
+      <div class="ch-vert-line"></div>
+      <div class="ch-num-label">Tổng Kết</div>
+    </div>
+    <div class="ch-titles">
+      <div class="ch-epoch">6.000 Năm — Những Quy Luật Bất Biến</div>
+      <h2 class="ch-title">Vàng Qua Lăng Kính <span class="accent">Lịch Sử</span></h2>
+      <p class="ch-subtitle">Điều gì đã thay đổi và điều gì không bao giờ thay đổi về kim loại vàng</p>
+    </div>
+  </div>
+
+  <div class="gold-table">
+    <thead>
+      <tr>
+        <th>Giai Đoạn</th>
+        <th>Vai Trò Của Vàng</th>
+        <th>Bài Học Chính</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>4600 TCN – 600 TCN</td>
+        <td>Trang sức, nghi lễ tôn giáo, biểu tượng quyền lực</td>
+        <td>Vàng được chọn vì tính chất vật lý — không phải quy ước xã hội.</td>
+      </tr>
+      <tr>
+        <td>600 TCN – 1816</td>
+        <td>Tiền tệ chính thức, thương mại quốc tế, dự trữ quốc gia</td>
+        <td>Vàng kết nối các nền văn minh cách nhau ngàn km và ngàn năm.</td>
+      </tr>
+      <tr>
+        <td>1816 – 1971</td>
+        <td>Chuẩn mực tiền tệ toàn cầu — neo đô-la và hệ thống tài chính</td>
+        <td>Bản vị vàng tạo kỷ nguyên ổn định nhất trong lịch sử tài chính.</td>
+      </tr>
+      <tr>
+        <td>1971 – 2020</td>
+        <td>Tài sản tự do nổi, phòng vệ lạm phát, thước đo nỗi sợ</td>
+        <td>Giá vàng = Thước đo mức độ mất tin vào tiền fiat và hệ thống tài chính.</td>
+      </tr>
+      <tr>
+        <td>2020 – Nay</td>
+        <td>Tài sản dự trữ chiến lược, vũ khí địa chính trị, bảo vệ de-dollarization</td>
+        <td>Vàng đang giành lại vị thế dự trữ quốc tế trong thế giới đa cực.</td>
+      </tr>
+      <tr>
+        <td>Mọi thời đại</td>
+        <td>Bảo toàn sức mua qua thiên niên kỷ</td>
+        <td>Không đồng tiền giấy nào tồn tại 500 năm. Vàng tồn tại 6.000 năm và vẫn có giá trị.</td>
+      </tr>
+    </tbody>
+  </div>
+
+  <div class="divider">
+    <div class="divider-icon">◆ Au ◆</div>
+  </div>
+
+  <div class="pull-q">
+    "Trong ngắn hạn, vàng là kim loại. Trong trung hạn, vàng là hàng hóa. Trong dài hạn, vàng là tiền tệ. Và trong lịch sử, vàng là thước đo lương tâm của các nhà quản lý tiền tệ."
+    <cite>— Tổng hợp từ nhiều học giả kinh tế lịch sử</cite>
+  </div>
+
+  <div class="insight">
+    <div class="insight-label">Lời Kết — Vàng Trong Thế Kỷ XXI</div>
+    <div class="insight-body">
+      Chúng ta đang sống trong thời kỳ phi thường của lịch sử vàng. Sau 50 năm vắng mặt khỏi hệ thống tiền tệ chính thức, vàng đang <strong>trở lại qua cửa sau</strong> — ngân hàng trung ương mua vàng kỷ lục, vàng trở thành tài sản dự trữ lớn thứ 2 thế giới sau đô-la, giá leo lên đỉnh lịch sử $5.593. Đây không phải ngẫu nhiên — đây là phản ứng có lý trí trước nợ toàn cầu không kiểm soát, in tiền vô hạn và bất ổn địa chính trị leo thang.
+      <br><br>
+      <em>6.000 năm lịch sử nhân loại đã thử nghiệm mọi hình thức tiền tệ: vỏ sò, đá, đồng, bạc, giấy, kỹ thuật số.</em> Chỉ một thứ đã vượt qua tất cả mọi thử thách — tất cả mọi đế chế sụp đổ, mọi cuộc khủng hoảng, mọi chiến tranh, mọi cuộc cách mạng. <strong>Đó là vàng. Và điều đó nói lên rất nhiều.</strong>
+    </div>
+  </div>
+</section>
+
+</div><!-- /wrap -->
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>◆</p>
+  <p style="margin-top:14px"><strong>Lược Sử Vàng — Kim Loại Của Mọi Thời Đại</strong></p>
+  <p>Biên soạn tổng hợp từ World Gold Council · J.P. Morgan Research · Federal Reserve History</p>
+  <p>Investing News Network · JM Bullion · Trading Economics · LiteFinance</p>
+  <p style="margin-top:14px; font-size:11px; opacity:0.5; letter-spacing:2px">"GOLD IS MONEY — EVERYTHING ELSE IS CREDIT" — J.P. MORGAN, 1912</p>
+</footer>
+
+
+    <div style="padding: 20px; text-align: center; background: #0A0A0A;">
+        <button onclick="openCommodityArticle('')" style="background: transparent; border: 1px solid rgba(212,160,23,0.5); color: #D4A017; padding: 7px 16px; cursor: pointer; font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.05em; border-radius: 4px;">
+            &#8592; Quay lại danh sách
+        </button>
+    </div>
+</div>
+
 
 <div id="article-oil-panel" class="commodity-article-panel oil-body">
     <style>
