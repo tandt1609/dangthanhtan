@@ -267,6 +267,13 @@ function openThuVienArticle(articleId, updateUrl = true) {
         if (panel) panel.classList.add('active');
         if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'luoc-su-phat-hoc' }, '', '/thu-vien/luoc-su-phat-hoc');
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'luoc-su-kinh-dich') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-kinhdich-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'luoc-su-kinh-dich' }, '', '/thu-vien/luoc-su-kinh-dich');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
         articleView.classList.remove('active');
         listView.classList.add('active');
