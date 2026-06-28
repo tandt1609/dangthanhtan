@@ -148,6 +148,8 @@ function handleRouting(path, updateUrl = false) {
             openThuVienArticle('luoc-su-phat-hoc', updateUrl);
         } else if (subPath === '/luoc-su-kinh-dich') {
             openThuVienArticle('luoc-su-kinh-dich', updateUrl);
+        } else if (subPath === '/luoc-su-tu-vi') {
+            openThuVienArticle('luoc-su-tu-vi', updateUrl);
         } else {
             openThuVienArticle('', updateUrl);
         }
@@ -273,6 +275,13 @@ function openThuVienArticle(articleId, updateUrl = true) {
         const panel = document.getElementById('article-kinhdich-panel');
         if (panel) panel.classList.add('active');
         if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'luoc-su-kinh-dich' }, '', '/thu-vien/luoc-su-kinh-dich');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'luoc-su-tu-vi') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-tuvi-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'luoc-su-tu-vi' }, '', '/thu-vien/luoc-su-tu-vi');
         window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
         articleView.classList.remove('active');
