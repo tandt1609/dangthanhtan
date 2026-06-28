@@ -3714,7 +3714,7 @@ color:var(--ink-soft);}
     --wb-red-book:#8b1a1a;
     background: var(--wb-cream);
     color: var(--wb-ink);
-    font-family: 'Libre Baskerville', Georgia, serif;
+    font-family: 'EB Garamond', Georgia, serif;
     font-size: 17px;
     line-height: 1.82;
     -webkit-font-smoothing: antialiased;
@@ -3757,7 +3757,7 @@ color:var(--ink-soft);}
 }
 .wb-h1-em {
     display: block; font-style: normal; font-weight: 400;
-    font-family: 'Libre Baskerville', Georgia, serif; font-size: 0.38em;
+    font-family: 'EB Garamond', Georgia, serif; font-size: 0.38em;
     color: rgba(255,255,255,0.65); letter-spacing: 0.12em; margin-top: 10px;
 }
 .wb-dates {
@@ -3765,7 +3765,7 @@ color:var(--ink-soft);}
     color: rgba(255,255,255,0.5); margin: 22px 0 10px; letter-spacing: 0.06em;
 }
 .wb-tagline {
-    font-family: 'Libre Baskerville', serif; font-style: italic;
+    font-family: 'EB Garamond', Georgia, serif; font-style: italic;
     font-size: 1.15rem; color: rgba(255,255,255,0.8);
     max-width: 560px; margin: 16px auto 0; line-height: 1.6;
 }
@@ -3855,7 +3855,7 @@ color:var(--ink-soft);}
 .wb-tl-p { margin: 0; font-size: 0.95rem; text-align: left; }
 
 .wb-blockquote {
-    font-family: 'Libre Baskerville', serif; font-style: italic; font-size: 1.06rem;
+    font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-size: 1.06rem;
     line-height: 1.8; color: var(--wb-cobalt); background: var(--wb-cobalt-light);
     border-left: 4px solid var(--wb-cobalt-mid); padding: 20px 28px; margin: 34px 0;
 }
