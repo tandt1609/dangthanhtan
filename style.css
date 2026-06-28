@@ -1645,7 +1645,7 @@ color:var(--ink-soft);}
     radial-gradient(ellipse 60vw 50vh at 100% 20%, rgba(92,158,122,0.06), transparent 60%);
   color: var(--ink-soft);
   font-family: var(--serif-b);
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.78;
   -webkit-font-smoothing: antialiased;
 }
@@ -2670,7 +2670,7 @@ color:var(--ink-soft);}
     --achx-ice: #A8C4D8;
     --achx-green: #4A7A5A;
     font-family: 'Source Serif 4', 'Georgia', serif;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.85;
     color: var(--achx-bone);
     overflow-x: hidden;
@@ -3174,7 +3174,7 @@ color:var(--ink-soft);}
 
 /* ── Body paragraphs ── */
 .article-jimsimons p {
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.85;
     color: #1a1814;
     margin-bottom: 1.4em;
@@ -3224,7 +3224,7 @@ color:var(--ink-soft);}
 }
 
 .jsi-timeline-title {
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 600;
     color: #2c3042;
     margin-bottom: 4px;
@@ -3523,7 +3523,7 @@ color:var(--ink-soft);}
       radial-gradient(ellipse at top, rgba(255,255,255,0.35), transparent 60%);
     color: var(--ink);
     font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.78;
     border-radius: 4px;
     overflow: hidden;
@@ -3715,7 +3715,7 @@ color:var(--ink-soft);}
     background: var(--wb-cream);
     color: var(--wb-ink);
     font-family: 'EB Garamond', Georgia, serif;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.82;
     -webkit-font-smoothing: antialiased;
     border-radius: 4px;
@@ -5386,7 +5386,7 @@ em { color: var(--lt-gold); font-style: normal; font-weight: 600; }
     background: var(--db-night);
     color: var(--db-parchment);
     font-family: 'Noto Serif', 'Cormorant Garamond', Georgia, serif;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.85;
     overflow-x: hidden;
   }
