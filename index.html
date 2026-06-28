@@ -9,9 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@400;500;600;700;800&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/style.css?v=11">
+    <link rel="stylesheet" href="/style.css?v=12">
     <!-- Remove preload class after CSS loads to prevent flash of unstyled content -->
     <script>document.addEventListener('DOMContentLoaded', () => document.body.classList.remove('preload'));</script>
     <!-- FontAwesome for Icons -->
@@ -88,6 +89,18 @@
             <div id="panel-trang-chu" class="tab-panel active">
                 <h2 class="section-title"><i class="fa-solid fa-fire-flame-curved"></i> Bài viết mới</h2>
                 <div class="news-list">
+                    <!-- Post: Dai Bang (Thu Vien) -->
+                    <a href="/thu-vien/dai-bang-tai-sinh" class="news-card clickable-card">
+                        <div class="news-meta">
+                            <span class="news-source"><i class="fa-solid fa-feather-pointed"></i> Triết học &amp; Tâm lý</span>
+                            <span class="news-time">Tháng 6, 2026</span>
+                        </div>
+                        <h3 class="news-heading">Đại Bàng Tái Sinh &amp; Tuổi 35 — Cuộc Cách Mệnh Nội Tâm</h3>
+                        <p class="news-excerpt">Khi nào một con người dừng lại để tự đốt cháy và tái sinh? Huyền thoại về đại bàng 150 tuổi — và những gì nó thực sự muốn nói với chúng ta.</p>
+                        <div class="news-footer">
+                            <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc bài viết</span>
+                        </div>
+                    </a>
 <a href="/vi-mo/dxy-us10y" class="news-card clickable-card">
                             <div class="news-meta">
                                 <span class="news-source"><i class="fa-solid fa-earth-americas"></i> Phân tích Vĩ mô</span>
@@ -4818,15 +4831,461 @@
             <!-- PANEL 6: THƯ VIỆN -->
             <div id="panel-thu-vien" class="tab-panel">
                 <h2 class="section-title"><i class="fa-solid fa-book-open"></i> Thư viện</h2>
-                <div class="news-list">
-                    <div class="news-card" style="text-align:center; padding: 3rem 2rem;">
-                        <p style="font-size:3rem; margin-bottom:1rem;">📚</p>
-                        <h3 class="news-heading" style="margin-bottom:0.5rem;">Đang xây dựng</h3>
-                        <p style="color:var(--text-muted,#888); font-size:0.95rem;">Thư viện tài liệu, sách và nghiên cứu sẽ sớm ra mắt.</p>
+
+                <!-- LIST VIEW -->
+                <div id="thu-vien-list-view" class="sukien-view active">
+                    <div class="news-list">
+                        <a href="/thu-vien/dai-bang-tai-sinh" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-feather-pointed"></i> Triết học &amp; Tâm lý</span>
+                                <span class="news-time">Tháng 6, 2026</span>
+                            </div>
+                            <h3 class="news-heading">Đại Bàng Tái Sinh &amp; Tuổi 35 — Cuộc Cách Mệnh Nội Tâm</h3>
+                            <p class="news-excerpt">Khi nào một con người dừng lại để tự đốt cháy và tái sinh? Huyền thoại về đại bàng 150 tuổi — và những gì nó thực sự muốn nói với chúng ta.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc bài viết</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ARTICLE VIEW -->
+                <div id="thu-vien-article-view" class="sukien-view">
+                    <div id="article-daibang-panel" class="sukien-article-panel">
+                        <div class="article-daibang">
+                            <button class="back-btn" onclick="openThuVienArticle('')" style="position:fixed;top:16px;right:20px;z-index:9999;background:rgba(0,0,0,.7);color:#e8c97a;border:1px solid #8b3a1a;padding:7px 16px;border-radius:4px;cursor:pointer;font-size:.85rem;">
+                                <i class="fa-solid fa-arrow-left"></i> Quay lại Thư viện
+                            </button>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     COVER
+════════════════════════════════════════════════════════ -->
+<div class="db-cover">
+  <p class="db-cover-eyebrow">Thiên — Địa — Nhân &nbsp;·&nbsp; Cổ kim Đông Tây</p>
+  <div class="db-cover-symbol">🦅</div>
+  <h1>Đại Bàng <em>Tái Sinh</em> &amp; Tuổi 35<br>Cuộc Cách Mệnh Nội Tâm</h1>
+  <p class="db-cover-sub">Khi nửa đời trước sụp đổ, nửa đời sau mới có thể bừng sáng — đó không phải là tai họa, đó là lửa tôi luyện.</p>
+  <div class="db-cover-divider"></div>
+  <p class="db-cover-meta">Tử vi · Kinh Dịch · Tâm lý học · Huyền học phương Tây</p>
+  <div class="db-scroll-hint">▾</div>
+</div>
+
+
+<main class="db-page">
+
+<!-- ═══════════════════════════════════════════════════════
+     CHƯƠNG 1 — ĐẠI BÀNG
+════════════════════════════════════════════════════════ -->
+<section class="db-chapter">
+  <div class="db-chapter-number">I</div>
+  <span class="db-chapter-tag">Huyền thoại &amp; Biểu tượng</span>
+  <h2>Huyền Thoại <em>150 Ngày Rỉ Máu</em><br>của Đại Bàng</h2>
+
+  <p class="db-chapter-lead">
+    Trong thế giới tự nhiên, đại bàng có thể sống đến 70 năm — nhưng chỉ khi nó dám trả giá cho cuộc tái sinh đau đớn nhất vào giữa đời. Đó không phải cái chết. Đó là sự lột xác có chủ ý.
+  </p>
+
+  <p>Khi đại bàng đạt đến khoảng 40 tuổi, móng vuốt của nó mất đi sự sắc bén và linh hoạt — không còn đủ sức bắt mồi. Mỏ trở nên cong vẹo, dài quá mức, khiến việc ăn uống trở nên khó khăn. Lông vũ dày cứng đến mức đôi cánh trở nên nặng nề, không thể bay cao. <strong>Đại bàng đứng trước ngưỡng cửa của sự chấm dứt.</strong></p>
+
+  <p>Nhưng loài chim này không chọn cái chết lặng lẽ. Thay vào đó, nó trèo lên đỉnh núi cao nhất — cô độc, không ai chứng kiến — và bắt đầu một hành trình tàn khốc kéo dài <strong>150 ngày</strong>.</p>
+
+  <div class="db-sep"><span class="db-sep-icon">✦</span></div>
+
+  <div class="db-phases">
+    <div class="db-phase">
+      <div class="db-phase-dot">🪨</div>
+      <div class="db-phase-content">
+        <div class="db-phase-days">Ngày 1 — 30</div>
+        <div class="db-phase-title">Đập vỡ cái mỏ — Từ bỏ công cụ cũ</div>
+        <p>Đại bàng đập mỏ vào vách đá cho đến khi mỏ gãy, rỉ máu và rụng hẳn. Không còn khả năng kiếm ăn. Cơn đau mãnh liệt. Sau đó là chờ đợi trong đói khát — cho đến khi cái mỏ mới mọc trở lại, cứng rắn và bén nhọn hơn trước.</p>
+      </div>
+    </div>
+
+    <div class="db-phase">
+      <div class="db-phase-dot">🩸</div>
+      <div class="db-phase-content">
+        <div class="db-phase-days">Ngày 30 — 80</div>
+        <div class="db-phase-title">Nhổ móng vuốt — Xóa bỏ sức mạnh giả</div>
+        <p>Dùng cái mỏ mới, đại bàng nhổ từng cái móng vuốt đã cùn mòn ra khỏi chân. Máu chảy từng giọt. Trong suốt thời gian này, nó không thể chiến đấu, không thể săn mồi, không thể bảo vệ chính mình. Đó là trạng thái hoàn toàn buông bỏ mọi thứ từng cho nó quyền năng.</p>
+      </div>
+    </div>
+
+    <div class="db-phase">
+      <div class="db-phase-dot">🪶</div>
+      <div class="db-phase-content">
+        <div class="db-phase-days">Ngày 80 — 150</div>
+        <div class="db-phase-title">Rứt lông cũ — Lột bỏ bản sắc quá khứ</div>
+        <p>Cuối cùng, đại bàng rứt từng chiếc lông vũ dày nặng ra khỏi thân mình. Mỗi cọng lông là một phần ký ức, một thói quen, một cách tồn tại quen thuộc bị cắt đứt. Rồi trong trạng thái trần trụi hoàn toàn, những chiếc lông mới — nhẹ hơn, mạnh hơn, tươi hơn — bắt đầu mọc ra.</p>
+      </div>
+    </div>
+
+    <div class="db-phase">
+      <div class="db-phase-dot">🌅</div>
+      <div class="db-phase-content">
+        <div class="db-phase-days">Sau 150 ngày</div>
+        <div class="db-phase-title">Bay lên — Sống thêm 30 năm cuộc đời thứ hai</div>
+        <p>Đại bàng bước ra khỏi cuộc tái sinh với móng vuốt bén hơn, mỏ sắc hơn, lông nhẹ hơn. Nó có thể sống thêm 30 năm nữa — thậm chí hùng dũng hơn thập kỷ đầu của mình. Điều khiến cuộc đời thứ hai khác biệt không phải là may mắn, mà là sự dũng cảm đập vỡ bản thân cũ.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="db-callout">
+    <div class="db-callout-title">Ý nghĩa biểu tượng</div>
+    <p>Huyền thoại đại bàng — dù mang tính ẩn dụ nhiều hơn sinh học — là một trong những biểu tượng phổ quát nhất về <strong>sự chuyển hóa có ý thức</strong>. Điểm cốt lõi không phải là đau khổ, mà là: <em>đau khổ có chủ đích là phương tiện duy nhất dẫn đến tái sinh thực sự</em>. Không có tái sinh nào mà không có cơn đau của sự từ bỏ.</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     CHƯƠNG 2 — TUỔI 35
+════════════════════════════════════════════════════════ -->
+<section class="db-chapter">
+  <div class="db-chapter-number">II</div>
+  <span class="db-chapter-tag">Nhân sinh học &amp; Chu kỳ</span>
+  <h2>Tuổi 35 — <em>Bước Ngoặt Không Thể Lảng Tránh</em></h2>
+
+  <p class="db-chapter-lead">
+    Không phải ngẫu nhiên mà mọi nền minh triết từ Đông sang Tây đều đặt một dấu mốc quan trọng ở ngưỡng giữa đời. Đây không chỉ là con số — đây là một cửa ải vũ trụ.
+  </p>
+
+  <p>Ở tuổi 35, con người kết thúc một đại chu kỳ phát triển. Thể chất đạt đỉnh và bắt đầu giảm. Hormone thay đổi. Não bộ chuyển từ "tìm kiếm và xây dựng" sang "bảo vệ và củng cố". <strong>Hệ thần kinh, thay vì tạo ra các đường liên kết mới dễ dàng như thuở đôi mươi, nay đòi hỏi nỗ lực nhiều hơn gấp bội để thay đổi.</strong></p>
+
+  <p>Nhưng nguy hiểm thực sự không nằm ở thể xác — nó nằm ở tâm lý. Ở tuổi 35, người ta đã <em>đủ ổn định để ngừng biến hóa</em>. Và đó chính xác là lúc sự mục nát bắt đầu — không ầm ĩ, không dữ dội — mà lặng thầm như gỗ bị mối sâu từ bên trong.</p>
+
+  <div class="db-callout">
+    <div class="db-callout-title">Chu kỳ 7 năm theo nhân học phương Tây</div>
+    <p>Trường phái nhân học Rudolf Steiner chia đời người theo chu kỳ 7 năm. Tuổi 35 = 5 × 7 năm, đánh dấu kết thúc giai đoạn "phát triển cái Tôi bề mặt" và mở ra "cái Tôi thứ hai" — sâu hơn, thực hơn, hoặc nếu bị bỏ qua, trở thành cái vỏ rỗng cứng nhắc không thể biến đổi.</p>
+  </div>
+
+  <div class="db-sep"><span class="db-sep-icon">✦</span></div>
+
+  <p>Trong nhiều nền văn hóa, 35 tuổi là ngưỡng mà <strong>"vận mệnh dứt khoát không còn chờ đợi nữa"</strong>. Dante Alighieri mở đầu Thần Khúc bằng câu bất hủ: <em>"Giữa đường đời, tôi lạc vào một khu rừng tối tăm"</em> — ông viết điều này khi ông 35 tuổi. Khổng Tử đứng vững lúc 30, không còn nghi hoặc lúc 40 — giữa hai cột mốc đó là giai đoạn đau đớn nhất của sự minh triết.</p>
+
+  <p>Lý do tuổi 35 là bước ngoặt của <strong>nửa đời sau</strong>, không phải nửa đời trước, chính xác vì: nửa đời trước đi lên bởi quán tính và năng lượng tự nhiên của tuổi trẻ. <strong>Nửa đời sau chỉ đi lên được bởi sự lựa chọn có ý thức.</strong> Không chủ động tái sinh — là ngầm chọn sự suy thoái.</p>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     CHƯƠNG 3 — KINH DỊCH
+════════════════════════════════════════════════════════ -->
+<section class="db-chapter">
+  <div class="db-chapter-number">III</div>
+  <span class="db-chapter-tag">Kinh Dịch · Quẻ &amp; Chu kỳ</span>
+  <h2>Kinh Dịch Nói Gì Về <em>Giữa Hành Trình</em>?</h2>
+
+  <p class="db-chapter-lead">
+    Kinh Dịch không phải sách bói toán — đó là bản đồ vũ trụ về sự biến hóa. Và nó nhất quán: không có quẻ nào mô tả sự đình trệ như một trạng thái bền vững. Sự ngừng biến hóa là khởi đầu của sụp đổ.
+  </p>
+
+  <p>Trong Kinh Dịch, mọi sự vật đều vận hành theo quy luật <strong>thái cực — âm dương — tứ tượng — bát quái</strong>. Không có trạng thái nào là bất biến. Đỉnh cao nhất tất yếu chuyển hóa thành sự suy giảm nếu không có sự tự đổi mới từ bên trong. Đây là nền tảng của toàn bộ Dịch học.</p>
+
+  <div class="db-hexagram-grid">
+    <div class="db-hexagram-card">
+      <span class="db-hex-symbol">䷱</span>
+      <div class="db-hex-name">Quẻ Đỉnh (50)
+        <span>Cauldron — Luyện Kim</span>
+      </div>
+      <p class="db-hex-desc">Biểu tượng lò luyện — cái cũ bị nấu chảy hoàn toàn để đúc thành cái mới. Đây là quẻ của sự chuyển hóa giữa đời: phải chịu lửa mới thành vàng. Từ chối lửa là từ chối sự trưởng thành thực sự.</p>
+    </div>
+
+    <div class="db-hexagram-card">
+      <span class="db-hex-symbol">䷯</span>
+      <div class="db-hex-name">Quẻ Tỉnh (48)
+        <span>The Well — Giếng nước</span>
+      </div>
+      <p class="db-hex-desc">Giếng nước không thay đổi vị trí — nhưng nếu không được khai thông, nó sẽ bị bùn lắp đầy. Đây là hình ảnh hoàn hảo của tuổi 35: tiềm năng vẫn còn đó nhưng cần được khai quật khỏi lớp bùn tích tụ của thói quen và sợ hãi.</p>
+    </div>
+
+    <div class="db-hexagram-card">
+      <span class="db-hex-symbol">䷙</span>
+      <div class="db-hex-name">Quẻ Đại Súc (26)
+        <span>Great Accumulation — Tích lũy lớn</span>
+      </div>
+      <p class="db-hex-desc">Năng lượng đã tích đủ — nhưng nếu không được giải phóng đúng thời điểm, nó trở thành áp lực phá hủy từ bên trong. Giai đoạn 35+ là lúc năng lượng cuộc đời đòi được bùng phát theo hướng mới hoặc tự phá vỡ.</p>
+    </div>
+
+    <div class="db-hexagram-card">
+      <span class="db-hex-symbol">䷀</span>
+      <div class="db-hex-name">Quẻ Cách (49)
+        <span>Revolution — Cách mạng</span>
+      </div>
+      <p class="db-hex-desc"><em>Ngày dứt khoát mới thành.</em> Đây là quẻ của sự cách mạng bắt buộc — không phải phá hủy vô nghĩa mà là thay thế cái lỗi thời bằng cái phù hợp với thời đại mới của đời người. Sợ cách mạng là sợ sống.</p>
+    </div>
+
+    <div class="db-hexagram-card">
+      <span class="db-hex-symbol">䷥</span>
+      <div class="db-hex-name">Quẻ Khốn (47)
+        <span>Exhaustion — Cạn kiệt</span>
+      </div>
+      <p class="db-hex-desc">Người quân tử trong khốn cảnh vẫn giữ chí hướng. Quẻ này không mô tả sự thất bại — nó mô tả giai đoạn kiệt sức trước bình minh. Đây là trải nghiệm chính xác của tuổi 35: mọi thứ cũ đều cạn, chưa có gì mới thế chỗ. Đây là khoảng trống thiêng liêng.</p>
+    </div>
+
+    <div class="db-hexagram-card">
+      <span class="db-hex-symbol">䷱</span>
+      <div class="db-hex-name">Quẻ Phục (24)
+        <span>Return — Trở về</span>
+      </div>
+      <p class="db-hex-desc"><em>Sau bảy ngày lại trở về.</em> Trong Kinh Dịch, sự quay trở lại sau chu kỳ tối tăm không phải thụt lùi — đó là hành động dũng cảm nhất. Trở về với bản ngã thực, với giá trị lõi, là bước đầu tiên của sự tái sinh.</p>
+    </div>
+  </div>
+
+  <div class="db-sep"><span class="db-sep-icon">☯</span></div>
+
+  <p>Trong hệ thống Can Chi, <strong>tuổi 35-36 thường trùng với giao điểm của các đại vận</strong> — những chu kỳ 10 năm trong tử vi Đông phương. Đây là lúc đại vận cũ kết thúc và đại vận mới chưa bắt đầu tròn. <em>Khoảng trống giữa hai đại vận chính là thời điểm nguy hiểm và quyền năng nhất của đời người.</em></p>
+
+  <p>Kinh Dịch dạy rằng: <strong>"Cùng tắc biến, biến tắc thông, thông tắc cửu"</strong> — đến đường cùng thì phải biến đổi, biến đổi thì thông suốt, thông suốt thì bền lâu. Tuổi 35 là cái "cùng" đó. Không phải tận cùng của đời — mà là tận cùng của cách tồn tại cũ.</p>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     CHƯƠNG 4 — SỰ MỤC NÁT
+════════════════════════════════════════════════════════ -->
+<section class="db-chapter">
+  <div class="db-chapter-number">IV</div>
+  <span class="db-chapter-tag">Tâm lý học chiều sâu</span>
+  <h2>Sự Mục Nát <em>Thầm Lặng</em> — Kẻ Giết Người Vô Hình</h2>
+
+  <p class="db-chapter-lead">
+    Đời người không mục nát trong tai họa. Nó mục nát trong sự bình ổn giả tạo — trong những ngày yên ổn quá mức, trong những mối quan hệ đủ tốt để không cần cải thiện, trong những công việc đủ an toàn để không cần phát triển.
+  </p>
+
+  <p>Carl Jung gọi đây là <strong>"individuation crisis"</strong> — cuộc khủng hoảng cá thể hóa. Khoảng 35-45 tuổi, con người bắt đầu đối mặt với <em>Shadow</em> — phần bóng tối bị chôn vùi từ tuổi thơ: những khao khát bị từ chối, những tổn thương chưa lành, những phiên bản của chính mình bị phủ nhận để phù hợp với xã hội. <strong>Nếu không nhìn thẳng vào bóng tối này, nó sẽ điều khiển nửa đời còn lại từ phía sau.</strong></p>
+
+  <p>Người ta thường trải qua điều này dưới dạng: đột ngột mất phương hướng dù "khách quan" mọi thứ vẫn ổn, cảm giác trống rỗng không lý do, nóng giận bất thường, mệt mỏi mãn tính không liên quan đến công việc, hay bắt đầu nghi ngờ toàn bộ những lựa chọn đã qua.</p>
+
+  <div class="db-callout">
+    <div class="db-callout-title">Hệ lụy của sự ngừng biến hóa</div>
+    <p>Khi con người ngừng biến đổi ở tuổi 35, những hệ lụy tích lũy theo thời gian thường là: <strong>cứng nhắc về nhận thức</strong> (không tiếp thu được thông tin trái chiều), <strong>sợ hãi mãn tính</strong> (dưới dạng kiểm soát hoặc tránh né), <strong>mất kết nối với cảm xúc thật</strong> (sống bằng thói quen và vai diễn xã hội), <strong>cô đơn sâu sắc giữa đám đông</strong>, và đặc biệt — <strong>cơ thể bắt đầu nói lên điều mà tâm trí từ chối thừa nhận</strong> qua bệnh tật.</p>
+  </div>
+
+  <div class="db-sep"><span class="db-sep-icon">✦</span></div>
+
+  <p>Trong y học cổ truyền phương Đông, khái niệm <strong>"Thổ khắc Thủy — Tỳ Thổ suy thì Thận Thủy kiệt"</strong> ở trung niên mô tả chính xác hiện tượng này: nền tảng cảm xúc (Tỳ) bị ứ đọng, suy kiệt, không còn nuôi dưỡng được năng lượng sống (Thận). Bệnh tật trung niên thường không phải bệnh của thể xác — đó là ngôn ngữ của tâm hồn bị bóp nghẹt.</p>
+
+  <p>Đời người mục nát thầm lặng từ tuổi 35 vì một lý do đơn giản và tàn nhẫn: <strong>lần đầu tiên trong đời, quán tính không còn đủ mạnh để che giấu những vết nứt bên trong.</strong> Tuổi trẻ có năng lượng đủ để ẩn đi mọi vết thương. Trung niên thì không.</p>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     CHƯƠNG 5 — PHƠI BÀY
+════════════════════════════════════════════════════════ -->
+<section class="db-chapter">
+  <div class="db-chapter-number">V</div>
+  <span class="db-chapter-tag">Phép nhiệm màu của khủng hoảng</span>
+  <h2>Bắt Buộc <em>Phơi Bày</em> — Sâu Mọt Phải Lộ Diện</h2>
+
+  <p class="db-chapter-lead">
+    Giai đoạn 35-40 không phải là thời điểm chọn lựa giữa "phơi bày" hay "che giấu". Vũ trụ đã thay bạn chọn. Câu hỏi duy nhất là: bạn phối hợp với quá trình này, hay bạn chống lại nó?
+  </p>
+
+  <p>Khi đại bàng leo lên đỉnh núi, nó không còn che giấu những chiếc móng vuốt cùn mòn nữa. Nó phô bày tất cả — sự yếu đuối, sự bất lực, sự trần trụi — để chính sự phơi bày đó trở thành điều kiện tiên quyết cho sự tái sinh. <strong>Không thể nhổ móng vuốt cũ nếu vẫn giả vờ chúng còn sắc.</strong></p>
+
+  <p>Ở tuổi 35, cuộc sống sắp xếp những tình huống buộc bạn phải nhìn thấy những gì đã mục nát trong mình:</p>
+
+  <ul class="db-truth-list">
+    <li>
+      <div class="db-truth-text"><strong>Mối quan hệ trở thành gương chiếu</strong> — những căng thẳng vợ chồng, tình bạn rạn nứt, khoảng cách với cha mẹ bắt đầu lộ ra không phải vì hoàn cảnh thay đổi, mà vì những vết thương cũ không còn đủ năng lượng để che giấu. Đây là cơ hội, không phải thảm họa.</div>
+    </li>
+    <li>
+      <div class="db-truth-text"><strong>Sự nghiệp đặt câu hỏi ngược lại</strong> — không còn là "tôi có thể làm được gì?" mà là "tôi đang làm điều này vì ai, vì sao, và điều này thực sự có ý nghĩa với tôi không?" Khoảng trống giữa công việc và ý nghĩa sống trở nên rõ ràng đến đau đớn.</div>
+    </li>
+    <li>
+      <div class="db-truth-text"><strong>Cơ thể nổi loạn</strong> — những bệnh tật không rõ nguyên nhân, mệt mỏi kinh niên, mất ngủ, hay các triệu chứng tâm lý cơ thể là ngôn ngữ của phần bên trong đang đòi được lắng nghe. Dùng thuốc để im lặng cơ thể là tiếp tục trả nợ với lãi suất cộng dồn.</div>
+    </li>
+    <li>
+      <div class="db-truth-text"><strong>Nỗi sợ hãi bộc lộ hình hài</strong> — có thể là sợ không còn trẻ, sợ bị bỏ lại, sợ đã lãng phí quá nhiều năm, sợ không còn cơ hội làm lại. Những nỗi sợ này không phải kẻ thù — chúng là bản đồ chỉ đúng chỗ nào cần được chữa lành.</div>
+    </li>
+    <li>
+      <div class="db-truth-text"><strong>Giá trị bị thách thức</strong> — nhiều người 35 tuổi phát hiện mình đang sống theo giá trị của cha mẹ, xã hội, hoặc phiên bản bản thân ở tuổi 20. Câu hỏi "tôi thực sự tin vào điều gì?" trở thành một cuộc khủng hoảng nhận thức sâu sắc.</div>
+    </li>
+  </ul>
+
+  <div class="db-callout">
+    <div class="db-callout-title">Sâu mọt phải được phơi bày — đó là ân sủng</div>
+    <p>Trong kiến trúc truyền thống, khi gỗ bị mối ăn bên trong, người thợ giỏi sẽ gõ vào từng ô để nghe âm thanh rỗng — <em>để tìm đúng chỗ mục mà thay</em>. Nếu không làm điều này, ngôi nhà sẽ sụp đổ vào một ngày không ai ngờ tới. Khủng hoảng trung niên không phải ngôi nhà sụp đổ — đó là người thợ đang gõ vào từng ô. Nghe được âm thanh rỗng là bắt đầu hàn gắn.</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     CHƯƠNG 6 — TỬ VI ĐÔNG TÂY
+════════════════════════════════════════════════════════ -->
+<section class="db-chapter">
+  <div class="db-chapter-number">VI</div>
+  <span class="db-chapter-tag">Chiêm tinh Đông &amp; Tây</span>
+  <h2>Tử Vi Đông Tây <em>Cùng Chỉ Về Một Cửa Ải</em></h2>
+
+  <p class="db-chapter-lead">
+    Từ astrology phương Tây đến tử vi Bắc Đẩu, từ bát tự đến numerology — mọi hệ thống dự báo vận mệnh đều đặt một dấu mốc đặc biệt ở ngưỡng 35-36 tuổi. Đây không phải trùng hợp ngẫu nhiên.
+  </p>
+
+  <div class="db-astro-grid">
+    <div class="db-astro-card">
+      <span class="db-astro-icon">♄</span>
+      <span class="db-astro-label">Chiêm tinh Tây phương</span>
+      <div class="db-astro-title">Saturn Return lần II</div>
+      <p class="db-astro-body">Sao Thổ mất khoảng 29,5 năm để hoàn tất một vòng quỹ đạo. Ở tuổi 35, bạn đang chuẩn bị hoặc vừa bước qua điểm giữa của "Saturn dạy bài học thứ hai". Đây là hành tinh của kỷ luật, giới hạn, và sự trưởng thành cứng rắn. Mọi ảo tưởng còn sót lại từ tuổi 30 đều sẽ bị Thổ tinh nghiền nát.</p>
+    </div>
+
+    <div class="db-astro-card">
+      <span class="db-astro-icon">♃</span>
+      <span class="db-astro-label">Chiêm tinh Tây phương</span>
+      <div class="db-astro-title">Jupiter Opposition</div>
+      <p class="db-astro-body">Ở tuổi 35-36, Mộc Tinh ở vị trí đối lập với điểm xuất phát. Đây là thời điểm mở rộng nhận thức lớn nhất — nhưng cũng dễ vỡ mộng nhất nếu sự mở rộng đó không dựa trên nền tảng nội tâm vững chắc. Đây là cơ hội nhận ra đâu là tự do thật, đâu là tự do trốn chạy.</p>
+    </div>
+
+    <div class="db-astro-card">
+      <span class="db-astro-icon">☯</span>
+      <span class="db-astro-label">Tử vi Đông phương</span>
+      <div class="db-astro-title">Đại Vận &amp; Lưu Niên</div>
+      <p class="db-astro-body">Trong tử vi Bắc Đẩu, các đại vận 10 năm giao thoa với lưu niên tạo ra "năm hội" — khi nhiều sao hung cùng vào mệnh. Tuổi 35-36 của nhiều người trùng với giao điểm đại vận 3-4, tức là lúc đại vận mang theo nghiệp lực từ những lựa chọn của thời trẻ bắt đầu "đòi nợ".</p>
+    </div>
+
+    <div class="db-astro-card">
+      <span class="db-astro-icon">🔢</span>
+      <span class="db-astro-label">Thần số học</span>
+      <div class="db-astro-title">Chu kỳ số 8</div>
+      <p class="db-astro-body">Trong numerology, 3+5=8. Số 8 là con số của quyền lực, chu kỳ karma, và sự cân bằng giữa thế giới vật chất và tâm linh. Năm tuổi 35 là năm của sự thu hoạch — thu hoạch những gì đã gieo, tốt lẫn xấu. Không thể tránh né, chỉ có thể đối diện hoặc trốn chạy.</p>
+    </div>
+
+    <div class="db-astro-card">
+      <span class="db-astro-icon">🀄</span>
+      <span class="db-astro-label">Bát tự &amp; Can Chi</span>
+      <div class="db-astro-title">Trung niên Vận Trình</div>
+      <p class="db-astro-body">Trong Bát Tự, trung vận (từ khoảng 30-50) quyết định chất lượng toàn bộ cuộc đời. Những sao hỷ dụng thần trong lá số sẽ biểu hiện mạnh mẽ — tích cực lẫn tiêu cực — trong giai đoạn này. Ở tuổi 35, những "kỵ thần" tích tụ từ lâu bắt đầu biểu hiện thành các sự kiện cuộc đời.</p>
+    </div>
+
+    <div class="db-astro-card">
+      <span class="db-astro-icon">🌙</span>
+      <span class="db-astro-label">Chiêm tinh Chiều sâu</span>
+      <div class="db-astro-title">Progressed Moon Return</div>
+      <p class="db-astro-body">Mặt Trăng tiến triển (Progressed Moon) hoàn thành vòng đầu tiên ở khoảng 27-29 tuổi và đang ở giữa vòng thứ hai vào tuổi 35. Đây là thời điểm cảm xúc và bản năng sâu nhất của con người đòi được nhìn nhận — không phải bằng lý trí mà bằng sự thành thật với chính mình.</p>
+    </div>
+  </div>
+
+  <div class="db-pull-quote">
+    <blockquote>"Giữa đường đời, tôi tỉnh ra và thấy mình đang đứng trong rừng tối. Con đường thẳng đã bị lạc mất."</blockquote>
+    <cite>— Dante Alighieri, Thần Khúc, mở đầu — viết lúc 35 tuổi</cite>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     CHƯƠNG 7 — ĐAU KHỔ CÁCH MỆNH
+════════════════════════════════════════════════════════ -->
+<section class="db-chapter">
+  <div class="db-chapter-number">VII</div>
+  <span class="db-chapter-tag">Sự thật khó nuốt</span>
+  <h2>Đau Khổ của <em>Cách Mệnh</em> — Những Sự Thật Không Thể Bỏ Qua</h2>
+
+  <p class="db-chapter-lead">
+    Không có tái sinh nào không đau. Không có bình minh thực sự nào mà không trải qua đêm dài nhất. Những ai hứa hẹn sự chuyển hóa không đau khổ đang bán cho bạn ảo giác — nguy hiểm hơn bất kỳ loại khủng hoảng nào.
+  </p>
+
+  <p>Đây là những sự thật về cuộc cách mệnh nội tâm ở tuổi 35 mà không ai muốn nghe — nhưng chính vì không muốn nghe mà người ta phải trả giá gấp đôi sau này:</p>
+
+  <ol class="db-truth-list">
+    <li>
+      <div class="db-truth-text">
+        <strong>Nhiều thứ bạn đã xây sẽ phải buông bỏ.</strong>
+        Không phải tất cả — nhưng một số thứ bạn đã dành cả nửa đời để xây dựng: một mối quan hệ, một sự nghiệp, một hình ảnh bản thân, một niềm tin — sẽ phải được đặt xuống. Không phải vì chúng sai, mà vì chúng đã hoàn thành vai trò của mình và bây giờ đang giữ bạn lại.
+      </div>
+    </li>
+    <li>
+      <div class="db-truth-text">
+        <strong>Người xung quanh sẽ không hiểu.</strong>
+        Khi bạn thay đổi, những người quen với phiên bản cũ của bạn sẽ hoặc lo lắng, hoặc chống đối, hoặc hoang mang. Đây không phải là dấu hiệu bạn sai. Đây là dấu hiệu sự thay đổi đủ thật để gây ra ma sát với thực tế.
+      </div>
+    </li>
+    <li>
+      <div class="db-truth-text">
+        <strong>Có một giai đoạn bạn sẽ không biết mình là ai.</strong>
+        Giữa cái cũ đã tan rã và cái mới chưa hình thành, có một khoảng trống tối tăm mà tâm lý học gọi là "liminal space" — ngưỡng cửa. Đây là giai đoạn nguy hiểm nhất vì cám dỗ quay lại những gì cũ sẽ rất mãnh liệt. Chịu đựng khoảng trống này là đức hạnh cao nhất của sự trưởng thành.
+      </div>
+    </li>
+    <li>
+      <div class="db-truth-text">
+        <strong>Những vết thương thời thơ ấu sẽ trở lại.</strong>
+        Cuộc cách mệnh trung niên không tạo ra những tổn thương — nó khai quật những gì đã bị chôn. Sự sợ hãi bị bỏ rơi, vết thương về lòng tự trọng, mẫu quan hệ bị tổn hại từ gia đình gốc — tất cả sẽ xuất hiện đúng vào lúc bạn đang mỏi mệt nhất.
+      </div>
+    </li>
+    <li>
+      <div class="db-truth-text">
+        <strong>Không ai có thể làm thay bạn.</strong>
+        Liều thuốc, người chữa lành, nhà tư vấn, sách hay — tất cả chỉ là đèn soi đường. Cuộc hành trình qua rừng tối, bạn phải tự bước. Ý thức này vừa cô đơn, vừa là tin tốt nhất bạn từng nhận được.
+      </div>
+    </li>
+    <li>
+      <div class="db-truth-text">
+        <strong>Thời gian không chữa lành — chỉ có sự đối diện mới chữa lành.</strong>
+        Nhiều người trải qua tuổi 35-45 mà không hề biến đổi — họ chỉ gây tê liệt bản thân bằng công việc, giải trí, hay những mối quan hệ mới che giấu vấn đề cũ. 20 năm sau, những vết thương cũ vẫn còn đó — chỉ là được bọc thêm vài lớp hói đầu và đau lưng.
+      </div>
+    </li>
+  </ol>
+
+  <div class="db-callout">
+    <div class="db-callout-title">Lửa tôi luyện vs lửa thiêu hủy</div>
+    <p>Trong Kinh Dịch, quẻ Ly (☲) đại diện cho lửa — ánh sáng và sự rõ ràng. Lửa cách mệnh ở tuổi 35 không phải để thiêu hủy con người bạn, mà để <strong>thiêu sạch những gì bạn chưa bao giờ thực sự là</strong> — những vai diễn, những mặt nạ, những bản năng sinh tồn xã hội đã từng cứu bạn ở tuổi trẻ nhưng nay đang giam cầm bạn. Cái còn lại sau ngọn lửa đó mới là vàng.</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     CHƯƠNG 8 — BÌNH MINH
+════════════════════════════════════════════════════════ -->
+<section class="db-chapter">
+  <div class="db-chapter-number">VIII</div>
+  <span class="db-chapter-tag">Ánh bình minh thực sự</span>
+  <h2>Hướng Tới <em>Ánh Bình Minh Thật Sự</em> Của Nửa Đời Sau</h2>
+
+  <p class="db-chapter-lead">
+    Bình minh không đến với người đang chạy trốn bóng tối. Nó đến với người đã dám ngồi yên trong bóng tối đủ lâu để nhận ra rằng bóng tối không phải kẻ thù — đó là nền để ánh sáng xuất hiện.
+  </p>
+
+  <div class="db-dawn-section">
+    <h3>☀️ Nửa Đời Sau — Cuộc Sống Được Chọn Lựa</h3>
+    <p>Đại bàng sau 150 ngày rỉ máu không trở thành một con chim khác. Nó trở thành phiên bản đầy đủ nhất của chính mình. Nửa đời sau của con người, nếu được sống trọn vẹn, cũng như vậy — không phải một cuộc đời mới, mà là cuộc đời thật bắt đầu từ bây giờ.</p>
+    <p>Sự khác biệt giữa người sống nửa đời sau bằng quán tính và người sống bằng sự tỉnh thức không phải ở hoàn cảnh — mà ở <strong>chất lượng hiện diện</strong>. Người thứ nhất sẽ ngày càng cứng nhắc, sợ hãi, và cô đơn hơn dù có thể thành công về vật chất. Người thứ hai sẽ ngày càng mềm mại hơn, can đảm hơn, và thực sự kết nối hơn.</p>
+    <p>Đây không phải lời hứa của tôn giáo hay triết học. Đây là mẫu hình xuất hiện nhất quán xuyên suốt mọi nền văn minh, mọi hệ thống minh triết: <strong>những người dũng cảm nhất không phải là những người không sợ hãi — mà là những người đã ngồi trong nỗi sợ của mình đủ lâu để nhận ra rằng nỗi sợ không phải là họ.</strong></p>
+  </div>
+
+  <div class="db-sep"><span class="db-sep-icon">🌅</span></div>
+
+  <p>Kinh Dịch kết thúc 64 quẻ không phải bằng sự hoàn hảo mà bằng quẻ <strong>Vị Tế (64) — Chưa hoàn thành</strong>. Đây là thông điệp sâu sắc nhất: hành trình không có điểm kết. <em>Luôn luôn là Vị Tế</em> — luôn còn điều để học, để chữa lành, để trở thành. Đó không phải là bi kịch. Đó là ý nghĩa.</p>
+
+  <p>Người nào ở tuổi 35 dám hỏi câu hỏi khó — dám nhìn vào mình thật sự, dám đập vỡ những chiếc mỏ đã cong, dám nhổ những chiếc móng vuốt đã cùn — người đó sẽ bước ra khỏi cuộc tái sinh với một thứ không thể mua được bằng tiền hay tài năng: <strong>sự tự do của người biết mình là ai và lựa chọn sống như vậy.</strong></p>
+
+  <div class="db-pull-quote">
+    <blockquote>"Người không trải qua bóng tối sẽ không bao giờ biết ánh sáng thực sự trông như thế nào."</blockquote>
+    <cite>— Carl Gustav Jung, Tâm lý học và Tôn giáo</cite>
+  </div>
+
+  <p>Ánh bình minh thật sự của nửa đời sau không phải là sự bình yên kiểu không còn đau khổ. Đó là sự bình yên kiểu <strong>đứng vững ngay cả khi đau khổ</strong> — vì bạn đã biết rằng cơn đau không phải tận cùng, và bình minh luôn theo sau đêm dài nhất, không phải bằng phép màu mà bằng quy luật tất yếu của vũ trụ.</p>
+</section>
+
+</main>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="db-footer-symbol">🦅</div>
+  <p>
+    Tổng hợp từ Kinh Dịch · Tử Vi Đông phương · Chiêm tinh Tây phương · Tâm lý học Jung<br>
+    Nhân học Steiner · Thần số học · Triết học Dante · Y học cổ truyền phương Đông<br><br>
+    <em>"Cùng tắc biến — Biến tắc thông — Thông tắc cửu"</em><br>
+    Kinh Dịch, Hệ Từ Truyện
+  </p>
+</footer>
+
+
+                        </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- PANEL 7: GAME -->
             <div id="panel-game" class="tab-panel">
                 <h2 class="section-title">

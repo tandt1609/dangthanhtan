@@ -141,7 +141,12 @@ function openHomeEventArticle(articleId) {
 function handleRouting(path, updateUrl = false) {
     if (path.startsWith('/thu-vien')) {
         switchTab('thu-vien', false);
-        openThuVienArticle('', updateUrl);
+        const subPath = path.substring('/thu-vien'.length);
+        if (subPath === '/dai-bang-tai-sinh') {
+            openThuVienArticle('dai-bang-tai-sinh', updateUrl);
+        } else {
+            openThuVienArticle('', updateUrl);
+        }
     } else if (path.startsWith('/vi-mo')) {
         switchTab('vi-mo', false);
         const subPath = path.substring('/vi-mo'.length);
@@ -243,10 +248,19 @@ function openThuVienArticle(articleId, updateUrl = true) {
     if (!listView || !articleView) return;
 
     document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
-    
-    articleView.classList.remove('active');
-    listView.classList.add('active');
-    if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: '' }, '', '/thu-vien');
+
+    if (articleId === 'dai-bang-tai-sinh') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-daibang-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'dai-bang-tai-sinh' }, '', '/thu-vien/dai-bang-tai-sinh');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+        articleView.classList.remove('active');
+        listView.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: '' }, '', '/thu-vien');
+    }
 }
 
 
