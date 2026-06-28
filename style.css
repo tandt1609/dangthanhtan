@@ -275,11 +275,11 @@ body {
 
 /* Profile Card Body containing text and links */
 .profile-card-body {
-    padding: 2.5rem;
+    padding: 1.5rem 2.5rem 1.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.25rem;
+    gap: 0.6rem;
     width: 100%;
     margin-top: -4.5rem; /* Pull up to overlap avatar on cover */
     position: relative;
@@ -540,7 +540,7 @@ body {
 .news-list {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 0.6rem;
 }
 
 .news-card {
@@ -629,7 +629,7 @@ body {
 .macro-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    gap: 1.25rem;
+    gap: 0.6rem;
 }
 
 .macro-card {
@@ -849,7 +849,7 @@ body {
     padding: 2rem 1.75rem;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 0.6rem;
 }
 
 .legend-header {
@@ -1134,7 +1134,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.25rem;
+    gap: 0.6rem;
     animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -2967,7 +2967,7 @@ color:var(--ink-soft);}
     justify-content: center;
     gap: 0.5rem;
     flex-wrap: wrap;
-    margin: 0.6rem 0 1.4rem;
+    margin: 0.4rem 0 0.5rem;
     letter-spacing: 0.18em;
 }
 .disc-tag {
@@ -5250,7 +5250,7 @@ em { color: var(--lt-gold); font-style: normal; font-weight: 600; }
 .lt-wl-3 .lt-weight-num, .lt-wl-3 .lt-weight-label { color: var(--lt-blue); }
 
 /* ── PRO/CON CARDS ────────────────────────────────── */
-.lt-procon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.5rem; }
+.lt-procon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-bottom: 1.5rem; }
 .lt-procon-card {
   border-radius: 10px;
   padding: 1.5rem;
