@@ -4629,6 +4629,9 @@ color:var(--ink-soft);}
     border-left: 3px solid var(--dxy-gold);
   }
 
+
+.article-dxy-us10y .back-btn { position: absolute; z-index: 1000; top: 10px; right: 20px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid #333; padding: 5px 10px; cursor: pointer; border-radius: 4px; }
+
 /* ===================== LY THUYET DXY US10Y ===================== */
 .article-lythuyet {
   /* CSS custom properties */
@@ -5355,7 +5358,7 @@ em { color: var(--lt-gold); font-style: normal; font-weight: 600; }
   .lt-corr-indicators, .lt-response-grid { grid-template-columns: 1fr; }
 }
 
-.article-lythuyet .lt-back-btn { position: absolute; z-index: 1000; top: 10px; right: 20px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid #333; padding: 5px 10px; cursor: pointer; border-radius: 4px; }
+.article-lythuyet .back-btn { position: absolute; z-index: 1000; top: 10px; right: 20px; background: rgba(0,0,0,0.5); color: #fff; border: 1px solid #333; padding: 5px 10px; cursor: pointer; border-radius: 4px; }
 
 /* ===================== DAI BANG TAI SINH ===================== */
 .article-daibang {
