@@ -1231,7 +1231,7 @@ body {
 /* Scoped Article Styles for Tien Si Dong */
 .article-tiensidong {
 
-    --bg:#181511;
+    --bg:#0e0b08;
     --bg-alt:#1E1A14;
     --panel:#231F18;
     --panel-2:#2A2419;
@@ -1243,7 +1243,7 @@ body {
     --patina:#5E8B79;
     --patina-light:#86AC9C;
     --rust:#B25339;
-    --ink:#F1E8D9;
+    --ink:#f5ede0;
     --ink-soft:#CCC1AD;
     --ink-mute:#8F8576;
     --serif:'Source Serif 4', Georgia, serif;
@@ -1624,7 +1624,7 @@ color:var(--ink-soft);}
 /* Scoped Article Styles for Luoc Su Dong */
 .article-luocsudong {
 
-  --bg:          #0D1610;
+  --bg:          #0e0b08;
   --bg2:         #111D14;
   --panel:       #162019;
   --panel2:      #1C2B1F;
@@ -1638,7 +1638,7 @@ color:var(--ink-soft);}
   --verd-light:  #85C4A1;
   --gold:        #BF9B30;
   --gold-light:  #DDB94A;
-  --ink:         #EEF2EE;
+  --ink:         #f5ede0;
   --ink-soft:    #BCC8BC;
   --ink-mute:    #718071;
   --serif-d: 'Playfair Display', Georgia, serif;
@@ -2670,7 +2670,7 @@ color:var(--ink-soft);}
 /* sukien-view rules moved to line ~1170 */
 
 .article-chicxulub {
-    --achx-void: #05050A;
+    --achx-void: #0e0b08;
     --achx-deep: #0D0D1A;
     --achx-abyss: #12121F;
     --achx-slate: #1C1C30;
@@ -2678,7 +2678,7 @@ color:var(--ink-soft);}
     --achx-ember: #FF4500;
     --achx-lava: #CC2200;
     --achx-gold: #D4A853;
-    --achx-bone: #F2EAD8;
+    --achx-bone: #f5ede0;
     --achx-ash: #B0A898;
     --achx-ice: #A8C4D8;
     --achx-green: #4A7A5A;
@@ -4648,8 +4648,8 @@ color:var(--ink-soft);}
 /* ===================== LY THUYET DXY US10Y ===================== */
 .article-lythuyet {
   /* CSS custom properties */
-  --lt-bg:          #05091A;
-  --lt-bg-card:     #090E20;
+  --lt-bg:          #0e0b08;
+  --lt-bg-card:     #1a1410;
   --lt-bg-card2:    #0C1425;
   --lt-bg-hover:    #101829;
   --lt-border:      #1A2B44;
@@ -4670,7 +4670,7 @@ color:var(--ink-soft);}
   --lt-amber-dim:   #3A1E06;
   --lt-amber-glow:  rgba(247,168,79,0.10);
   --lt-purple:      #A78BFA;
-  --lt-text:        #D8E4F5;
+  --lt-text:        #f5ede0;
   --lt-text-soft:   #8FA6C8;
   --lt-text-muted:  #546B8A;
   --lt-sidebar-w:   252px;
