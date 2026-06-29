@@ -294,6 +294,13 @@ function openThuVienArticle(articleId, updateUrl = true) {
         if (panel) panel.classList.add('active');
         if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'dai-bang-tai-sinh' }, '', '/thu-vien/dai-bang-tai-sinh');
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'khoa-hoc-thuc-nghiem') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-empirical-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'khoa-hoc-thuc-nghiem' }, '', '/thu-vien/khoa-hoc-thuc-nghiem');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (articleId === 'luoc-su-phat-hoc') {
         listView.classList.remove('active');
         articleView.classList.add('active');
