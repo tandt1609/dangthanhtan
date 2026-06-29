@@ -1244,7 +1244,7 @@ body {
     --patina-light:#86AC9C;
     --rust:#B25339;
     --ink:#f5ede0;
-    --ink-soft:#CCC1AD;
+    --ink-soft:#f5ede0;
     --ink-mute:#8F8576;
     --serif:'Source Serif 4', Georgia, serif;
     --sans:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -1639,7 +1639,7 @@ color:var(--ink-soft);}
   --gold:        #BF9B30;
   --gold-light:  #DDB94A;
   --ink:         #f5ede0;
-  --ink-soft:    #BCC8BC;
+  --ink-soft:    #f5ede0;
   --ink-mute:    #718071;
   --serif-d: 'Playfair Display', Georgia, serif;
   --serif-b: 'Source Serif 4', Georgia, serif;
