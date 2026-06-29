@@ -158,6 +158,8 @@ function handleRouting(path, updateUrl = false) {
         const subPath = path.substring('/thu-vien'.length);
         if (subPath === '/dai-bang-tai-sinh') {
             openThuVienArticle('dai-bang-tai-sinh', updateUrl);
+        } else if (subPath === '/khoa-hoc-thuc-nghiem') {
+            openThuVienArticle('khoa-hoc-thuc-nghiem', updateUrl);
         } else if (subPath === '/luoc-su-phat-hoc') {
             openThuVienArticle('luoc-su-phat-hoc', updateUrl);
         } else if (subPath === '/luoc-su-kinh-dich') {
