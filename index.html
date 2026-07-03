@@ -16,6 +16,35 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/style.css?v=26">
     <style>
+/* ===== GLOBAL OVERFLOW LOCK — prevents horizontal scroll on all screens ===== */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+/* All article panels must stay within viewport */
+.sukien-article-panel,
+.commodity-article-panel {
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+    box-sizing: border-box;
+}
+/* All inner elements must not exceed viewport */
+.sukien-article-panel *,
+.commodity-article-panel * {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+/* Tables and pre blocks are allowed to scroll internally */
+.sukien-article-panel table,
+.commodity-article-panel table,
+.sukien-article-panel pre,
+.commodity-article-panel pre {
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
 /* ===== GLOBAL ARTICLE COLOR FIX ===== */
 /* Override global colors so they inherit from their specific article scopes */
 .sukien-article-panel p,

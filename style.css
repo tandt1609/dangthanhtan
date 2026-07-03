@@ -46,6 +46,11 @@
     transition: none !important;
 }
 
+html {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 body {
     background-color: var(--bg-dark);
     color: var(--text-primary);
@@ -56,6 +61,7 @@ body {
     align-items: flex-start;
     padding: 2rem 1.5rem;
     overflow-x: hidden;
+    max-width: 100%;
     position: relative;
 }
 
@@ -1186,6 +1192,10 @@ body {
 }
 .commodity-article-panel {
     display: none;
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+    box-sizing: border-box;
 }
 .commodity-article-panel.active {
     display: block;
@@ -1194,7 +1204,13 @@ body {
 /* Scoped sub-views inside Su Kien + Huyen Thoai */
 .sukien-view { display: none; }
 .sukien-view.active { display: block; animation: panelFadeIn 0.5s ease; }
-.sukien-article-panel { display: none; }
+.sukien-article-panel {
+    display: none;
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+    box-sizing: border-box;
+}
 .sukien-article-panel.active { display: block; }
 .clickable-card {
     cursor: pointer;
