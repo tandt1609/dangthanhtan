@@ -7594,8 +7594,16 @@ footer p+p { margin-top: 8px; }
   }
 
   /* ===== FIGURES TABLE ===== */
+  .figures-wrap{
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    padding:0 4px;
+    margin-top:14px;
+  }
   .figures{
     width:100%;
+    min-width:480px;
     border-collapse:collapse;
     margin-top:14px;
     font-size:0.98rem;
@@ -7677,6 +7685,11 @@ footer p+p { margin-top: 8px; }
     & .ledger{padding-left:26px;}
     & section.era::before{left:-32px;}
     &{font-size:16.5px;}
+    & .shell{padding:0 16px 10vh;}
+    & .figures{min-width:380px; font-size:0.88rem;}
+    & .figures td, & .figures th{padding:10px 8px;}
+    & .hero{padding:5vh 5vw 6vh;}
+    & .stamp{width:72px; height:72px; font-size:10px; top:-12px; right:10px;}
   }
 
   @media print{
@@ -7873,7 +7886,7 @@ footer p+p { margin-top: 8px; }
     <div class="rule"></div>
   </div>
 
-  <div class="shell" style="padding:0;">
+  <div class="figures-wrap">
     <table class="figures">
       <tr><th>Nhân vật</th><th>Thời kỳ</th><th>Đóng góp</th></tr>
       <tr>
