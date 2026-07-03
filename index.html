@@ -7656,7 +7656,7 @@ footer p+p { margin-top: 8px; }
   }
 
   /* ===== FOOTER ===== */
-  footer{
+  & footer{
     text-align:center;
     padding:70px 28px 50px;
     color:rgba(28,44,74,0.55);
@@ -7664,23 +7664,23 @@ footer p+p { margin-top: 8px; }
     font-size:12.5px;
     letter-spacing:0.05em;
   }
-  footer .line{
+  & footer .line{
     width:120px; height:1px; background:var(--line);
     margin:0 auto 20px;
   }
 
   @media (min-width:640px){
-    .cards{grid-template-columns:1fr 1fr;}
+    & .cards{grid-template-columns:1fr 1fr;}
   }
 
   @media (max-width:480px){
-    .ledger{padding-left:26px;}
-    section.era::before{left:-32px;}
+    & .ledger{padding-left:26px;}
+    & section.era::before{left:-32px;}
     &{font-size:16.5px;}
   }
 
   @media print{
-    .hero{min-height:auto;}
+    & .hero{min-height:auto;}
   }
 
 }
