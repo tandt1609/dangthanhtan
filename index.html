@@ -6722,7 +6722,21 @@ footer p+p { margin-top: 8px; }
                         </a>
                     </div>
 
-                    <!-- Calendar events -->
+                    <!-- Article Card: Lược Sử Ngành Ngân Hàng -->
+                    <div class="news-list" style="margin-bottom:2rem;">
+                        <a href="/su-kien/nganh-ngan-hang" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-building-columns"></i> Tài chính &amp; Lịch sử</span>
+                                <span class="news-time">03/07/2026</span>
+                            </div>
+                            <h3 class="news-heading">Lược Sử Ngành Ngân Hàng — Từ Kho Thóc Đến Đám Mây</h3>
+                            <p class="news-excerpt">Một hành trình vài nghìn năm của loài người đi tìm cách cho người khác giữ hộ tiền, rồi tính phí vì đã giữ hộ. Từ đền thờ Lưỡng Hà, qua Florence, đến Phố Wall và ví điện tử trong túi bạn hôm nay.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc bài viết</span>
+                            </div>
+                        </a>
+                    </div>
+
                     <h3 class="section-title" style="margin-top:1rem; font-size:1.1rem;"><i class="fa-solid fa-calendar-days"></i> Lịch sự kiện kinh tế quan trọng</h3>
                     <div class="events-timeline">
                         <div class="event-item">
@@ -7295,7 +7309,705 @@ footer p+p { margin-top: 8px; }
 </footer>
 
                         </div><!-- /.article-chicxulub -->
-                    </div><!-- /#article-chicxulub-panel -->
+                    </div>
+
+<div id="article-nganhang-panel" class="sukien-article-panel nganhang-body">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+#article-nganhang-panel {
+
+  &{
+    --vault-green: #14312a;
+    --vault-green-2: #1e4438;
+    --parchment: #efe6d2;
+    --parchment-2: #e6dabf;
+    --ink-navy: #1c2c4a;
+    --gold: #b1893a;
+    --gold-bright: #cf9f43;
+    --rust: #8a3527;
+    --line: rgba(28,44,74,0.22);
+    --shadow: rgba(20,49,42,0.18);
+  }
+
+  & * { box-sizing: border-box; }
+
+  /* html rule scoped out */
+
+  &{
+    margin:0;
+    background:
+      radial-gradient(1200px 700px at 15% -10%, rgba(177,137,58,0.10), transparent 60%),
+      radial-gradient(1000px 800px at 100% 10%, rgba(30,68,56,0.08), transparent 55%),
+      var(--parchment);
+    background-attachment:fixed;
+    color:var(--ink-navy);
+    font-family:'Newsreader', Georgia, serif;
+    font-size:18px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  & ::selection{background:var(--gold-bright); color:var(--vault-green);}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    min-height:78vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:6vh 6vw 8vh;
+    background:
+      linear-gradient(180deg, var(--vault-green) 0%, var(--vault-green-2) 78%, var(--parchment) 100%);
+    color:var(--parchment);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      repeating-linear-gradient(90deg, rgba(239,230,210,0.045) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(0deg, rgba(239,230,210,0.045) 0 1px, transparent 1px 64px);
+    pointer-events:none;
+  }
+  .hero .eyebrow{
+    font-family:'Courier Prime', monospace;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    font-size:12.5px;
+    color:var(--gold-bright);
+    border:1px solid rgba(207,159,67,0.55);
+    padding:6px 16px;
+    border-radius:999px;
+    margin-bottom:28px;
+    position:relative;
+  }
+  .hero h1{
+    font-family:'Fraunces', serif;
+    font-weight:900;
+    font-optical-sizing:auto;
+    font-size:clamp(2.6rem, 6.4vw, 5.3rem);
+    line-height:1.02;
+    margin:0 0 22px;
+    max-width:16ch;
+    position:relative;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--gold-bright);
+    font-weight:600;
+  }
+  .hero p.sub{
+    max-width:52ch;
+    font-size:clamp(1.02rem, 1.6vw, 1.22rem);
+    color:rgba(239,230,210,0.85);
+    position:relative;
+  }
+  .seal{
+    margin-top:44px;
+    width:118px; height:118px;
+    border-radius:50%;
+    border:2px dashed rgba(207,159,67,0.6);
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+    transform:rotate(-8deg);
+  }
+  .seal .ring{
+    width:96px;height:96px;border-radius:50%;
+    border:1px solid rgba(207,159,67,0.75);
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;
+    font-family:'Courier Prime',monospace;
+    font-size:9.5px;
+    letter-spacing:0.14em;
+    color:var(--gold-bright);
+    padding:8px;
+    line-height:1.35;
+  }
+
+  /* ===== SHELL ===== */
+  .shell{
+    max-width:780px;
+    margin:0 auto;
+    padding:0 28px 10vh;
+  }
+
+  .intro{
+    padding-top:64px;
+    font-size:1.14rem;
+    color:#26314f;
+  }
+  .intro p{margin:0 0 20px;}
+  .drop::first-letter{
+    font-family:'Fraunces', serif;
+    font-weight:800;
+    font-size:4.4rem;
+    line-height:0.78;
+    float:left;
+    padding:6px 10px 0 0;
+    color:var(--vault-green);
+  }
+
+  /* ===== TIMELINE SECTIONS ===== */
+  .ledger{
+    position:relative;
+    margin-top:70px;
+    padding-left:38px;
+    border-left:1.5px solid var(--line);
+  }
+  section.era{
+    position:relative;
+    padding-bottom:64px;
+  }
+  section.era:last-child{padding-bottom:0;}
+  section.era::before{
+    content:"";
+    position:absolute;
+    left:-44px; top:6px;
+    width:12px; height:12px;
+    border-radius:50%;
+    background:var(--parchment);
+    border:2.5px solid var(--gold);
+  }
+  .era .tag{
+    font-family:'Courier Prime', monospace;
+    font-size:12.5px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--gold);
+    display:block;
+    margin-bottom:6px;
+  }
+  .era h2{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:clamp(1.5rem, 3vw, 2.05rem);
+    color:var(--vault-green);
+    margin:0 0 4px;
+    line-height:1.15;
+  }
+  .era .period{
+    font-family:'Courier Prime', monospace;
+    font-size:13px;
+    color:var(--rust);
+    margin-bottom:18px;
+    display:inline-block;
+  }
+  .era p{margin:0 0 16px;}
+  .era ul{margin:0 0 16px; padding-left:20px;}
+  .era li{margin-bottom:8px;}
+  .era strong{color:var(--vault-green);}
+
+  .quote{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:1.22rem;
+    color:var(--vault-green-2);
+    border-left:3px solid var(--gold);
+    padding:4px 0 4px 20px;
+    margin:22px 0;
+  }
+
+  /* ===== SECTION DIVIDER TITLES ===== */
+  .part-title{
+    margin:96px 0 44px;
+    text-align:center;
+  }
+  .part-title .num{
+    font-family:'Courier Prime', monospace;
+    font-size:13px;
+    letter-spacing:0.3em;
+    color:var(--gold);
+    display:block;
+    margin-bottom:10px;
+  }
+  .part-title h2{
+    font-family:'Fraunces', serif;
+    font-weight:900;
+    font-size:clamp(1.9rem, 4vw, 2.7rem);
+    color:var(--vault-green);
+    margin:0;
+  }
+  .part-title .rule{
+    width:60px; height:3px; background:var(--gold);
+    margin:18px auto 0;
+    border-radius:2px;
+  }
+
+  /* ===== EVOLUTION CHAIN ===== */
+  .chain{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+    margin:36px 0 8px;
+  }
+  .chain .node{
+    background:var(--vault-green);
+    color:var(--parchment);
+    font-family:'Courier Prime', monospace;
+    font-size:12.5px;
+    padding:9px 14px;
+    border-radius:6px;
+    letter-spacing:0.01em;
+  }
+  .chain .arrow{
+    align-self:center;
+    color:var(--gold);
+    font-weight:700;
+  }
+
+  /* ===== BANK TYPE CARDS ===== */
+  .cards{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+    margin-top:12px;
+  }
+  .card{
+    background:linear-gradient(180deg, rgba(255,255,255,0.5), rgba(255,255,255,0.15));
+    border:1px solid var(--line);
+    border-left:4px solid var(--gold);
+    border-radius:10px;
+    padding:20px 24px;
+    box-shadow:0 8px 22px -14px var(--shadow);
+  }
+  .card h3{
+    font-family:'Fraunces', serif;
+    font-size:1.18rem;
+    color:var(--vault-green);
+    margin:0 0 8px;
+  }
+  .card p{margin:0; font-size:1rem; color:#2c3a5c;}
+  .card .badge{
+    font-family:'Courier Prime', monospace;
+    font-size:11px;
+    color:var(--rust);
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    margin-bottom:6px;
+    display:block;
+  }
+
+  /* ===== FIGURES TABLE ===== */
+  .figures{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:14px;
+    font-size:0.98rem;
+  }
+  .figures th{
+    font-family:'Courier Prime', monospace;
+    font-size:11.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--gold);
+    text-align:left;
+    padding:10px 12px;
+    border-bottom:2px solid var(--vault-green);
+  }
+  .figures td{
+    padding:14px 12px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  .figures td.name{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    color:var(--vault-green);
+    white-space:nowrap;
+  }
+  .figures td.era{
+    font-family:'Courier Prime', monospace;
+    font-size:12px;
+    color:var(--rust);
+    white-space:nowrap;
+  }
+
+  /* ===== STAMP for controversial section ===== */
+  .stamp-wrap{
+    position:relative;
+    padding:32px 26px;
+    margin:28px 0;
+    background:rgba(30,68,56,0.05);
+    border:1px solid var(--line);
+    border-radius:12px;
+  }
+  .stamp{
+    position:absolute;
+    top:-18px; right:18px;
+    width:98px; height:98px;
+    border-radius:50%;
+    border:3px solid var(--rust);
+    color:var(--rust);
+    display:flex; align-items:center; justify-content:center;
+    text-align:center;
+    font-family:'Courier Prime', monospace;
+    font-weight:700;
+    font-size:11px;
+    letter-spacing:0.08em;
+    transform:rotate(9deg);
+    opacity:0.85;
+    background:rgba(239,230,210,0.9);
+  }
+
+  /* ===== FOOTER ===== */
+  footer{
+    text-align:center;
+    padding:70px 28px 50px;
+    color:rgba(28,44,74,0.55);
+    font-family:'Courier Prime', monospace;
+    font-size:12.5px;
+    letter-spacing:0.05em;
+  }
+  footer .line{
+    width:120px; height:1px; background:var(--line);
+    margin:0 auto 20px;
+  }
+
+  @media (min-width:640px){
+    .cards{grid-template-columns:1fr 1fr;}
+  }
+
+  @media (max-width:480px){
+    .ledger{padding-left:26px;}
+    section.era::before{left:-32px;}
+    &{font-size:16.5px;}
+  }
+
+  @media print{
+    .hero{min-height:auto;}
+  }
+
+}
+    </style>
+    <div style="padding: 14px 20px; background: #14312a;">
+        <button onclick="openEventArticle('')" style="background: transparent; border: 1px solid rgba(255,255,255,0.45); color: #efe6d2; padding: 7px 16px; cursor: pointer; font-family: 'Courier Prime', monospace; font-size: 0.85rem; letter-spacing: 0.05em; border-radius: 4px;">
+            &#8592; Quay lại Sự kiện
+        </button>
+    </div>
+    <div class="hero">
+  <span class="eyebrow">Hồ sơ lưu trữ · Không thời hạn</span>
+  <h1>Lược Sử Ngành <em>Ngân Hàng</em><br>Từ Kho Thóc Đến Đám Mây</h1>
+  <p class="sub">Một hành trình vài nghìn năm của loài người đi tìm cách cho người khác giữ hộ tiền, rồi tính phí vì đã giữ hộ.</p>
+  <div class="seal">
+    <div class="ring">ĐÃ<br>KIỂM<br>TOÁN</div>
+  </div>
+</div>
+
+<div class="shell">
+
+  <div class="intro">
+    <p class="drop">Ngân hàng, xét cho cùng, là một trong những phát minh kỳ lạ nhất của loài người: chúng ta mang tài sản quý giá nhất của mình giao cho một người xa lạ ngồi sau quầy, đổi lại một tờ giấy hoặc gần đây hơn là một dòng số trên màn hình, rồi tin tưởng tuyệt đối rằng khi cần, con số ấy sẽ biến trở lại thành thứ có thể tiêu được. Nghe có vẻ liều lĩnh, nhưng nhân loại đã làm điều này suốt bốn nghìn năm, và phần lớn thời gian nó hoạt động khá ổn, trừ một vài lần sụp đổ ngoạn mục mà lịch sử vẫn nhắc đến bằng giọng run rẩy.</p>
+    <p>Bài viết này lần theo dấu vết ngành ngân hàng từ những nhà kho chứa thóc ở vùng Lưỡng Hà, qua các băng ghế dài ở quảng trường Florence, đến những tòa tháp kính ở Phố Wall và cuối cùng là ứng dụng nằm gọn trong túi quần của mỗi người hôm nay. Đọc xong, người đọc sẽ hiểu vì sao từ ngân hàng trong tiếng Anh, ngân hàng, lại bắt nguồn từ một cái ghế, và vì sao khi ai đó phá sản, người ta nói cái ghế ấy đã bị bẻ gãy.</p>
+  </div>
+
+  <!-- ===================== PHẦN I: NGUỒN GỐC ===================== -->
+  <div class="part-title">
+    <span class="num">PHẦN I</span>
+    <h2>Thuở Sơ Khai — Khi Ngân Hàng Còn Là Cái Kho Thóc</h2>
+    <div class="rule"></div>
+  </div>
+
+  <div class="ledger">
+
+    <section class="era">
+      <span class="tag">Chương một</span>
+      <h2>Đền thờ, kho thóc và những viên chức tay đầy đất sét</h2>
+      <span class="period">Khoảng 3000 đến 2000 năm trước Công Nguyên · Lưỡng Hà và Ai Cập cổ đại</span>
+      <p>Trước khi có tiền, đã có thứ đáng giữ hơn cả tiền: lúa mạch. Tại các đền thờ vùng Lưỡng Hà, nông dân mang thóc và gia súc đến gửi cho các thầy tế, những người ghi chép cẩn thận trên phiến đất sét bằng chữ hình nêm, rồi phát cho người gửi một biên nhận. Về bản chất, đó chính là nghiệp vụ nhận tiền gửi và phát hành chứng từ đầu tiên trong lịch sử loài người, chỉ khác là tài sản bảo đảm có thể bị chuột gặm.</p>
+      <p>Các đền thờ dần nhận ra một sự thật mà mọi ngân hàng sau này đều thuộc lòng: không phải ai cũng đến rút thóc cùng một lúc. Vậy là phần thóc nhàn rỗi được đem cho vay lại, kèm lãi suất. Bộ luật Hammurabi ban hành khoảng năm một nghìn bảy trăm năm mươi trước Công Nguyên thậm chí đã quy định rõ mức lãi suất trần cho vay thóc và bạc, cùng các điều khoản xử lý khi mùa màng thất bát. Nói cách khác, quy định về trần lãi suất và cơ chế xử lý nợ xấu đã tồn tại trước khi từ ngân hàng ra đời gần ba nghìn năm.</p>
+      <div class="quote">Nếu một người vay thóc hoặc bạc mà không có gì để trả, khoản nợ ấy có thể được hoãn — điều khoản gần giống cơ cấu lại nợ ngày nay, chỉ khác là không có bộ phận chăm sóc khách hàng qua tổng đài.</div>
+    </section>
+
+    <section class="era">
+      <span class="tag">Chương hai</span>
+      <h2>Người đổi bàn của Hy Lạp và các argentarii La Mã</h2>
+      <span class="period">Khoảng thế kỷ năm trước Công Nguyên đến thế kỷ năm sau Công Nguyên</span>
+      <p>Người Hy Lạp cổ đại có một nhóm thương nhân gọi là trapezitai, nghĩa đen là người ngồi sau cái bàn, chuyên đổi các loại tiền xu khác nhau giữa các thành bang vốn mỗi nơi đúc một kiểu tiền riêng. Họ cũng nhận giữ tiền, cho vay và làm trung gian thanh toán cho thương nhân đi biển, tức là đã có sơ khai của dịch vụ chuyển tiền quốc tế, chỉ thiếu mã SWIFT.</p>
+      <p>La Mã tiếp nối truyền thống ấy với các argentarii, những người hoạt động quanh khu chợ trung tâm, quản lý sổ sách bằng phương pháp kế toán khá tinh vi, thậm chí đã biết đến khái niệm chuyển khoản giữa hai tài khoản mà không cần trao tay tiền mặt. Đế chế La Mã sụp đổ vào thế kỷ thứ năm cũng kéo theo sự tan rã của hệ thống tài chính này, và châu Âu bước vào một giai đoạn dài mà sử sách quen gọi là đêm trường trung cổ, còn ngành ngân hàng thì gọi thẳng là giai đoạn thất nghiệp tập thể.</p>
+    </section>
+
+  </div>
+
+  <!-- ===================== PHẦN II ===================== -->
+  <div class="part-title">
+    <span class="num">PHẦN II</span>
+    <h2>Trung Cổ Đến Phục Hưng — Cái Ghế Dài Định Hình Cả Một Ngành</h2>
+    <div class="rule"></div>
+  </div>
+
+  <div class="ledger">
+
+    <section class="era">
+      <span class="tag">Chương ba</span>
+      <h2>Banca, chiếc ghế dài ở chợ phiên Ý</h2>
+      <span class="period">Thế kỷ mười hai đến mười bốn · Các thành bang Ý</span>
+      <p>Từ ngân hàng, bank trong tiếng Anh hay banque trong tiếng Pháp, đều xuất phát từ chữ banca trong tiếng Ý, nghĩa đơn giản là cái ghế dài hoặc cái bàn. Tại các phiên chợ ở Genoa, Venice, Florence, những người đổi tiền ngồi trên các băng ghế đặt ngoài quảng trường để đổi ngoại tệ cho thương nhân từ khắp châu Âu đến buôn bán. Khi một người đổi tiền phá sản hoặc lừa đảo khách hàng, dân chúng có tục lệ đập gãy cái ghế của người đó ngay tại chỗ, gọi là banca rotta, tức ghế bị gãy. Từ đó tiếng Anh có chữ bankrupt, nghĩa là phá sản, và đây có lẽ là ví dụ hiếm hoi trong lịch sử kinh tế mà thuật ngữ tài chính bắt nguồn trực tiếp từ một hành vi bạo lực đối với đồ nội thất.</p>
+      <p>Giáo hội Công giáo thời kỳ này cấm hành vi cho vay nặng lãi giữa các tín đồ Cơ Đốc, coi đó là tội lỗi. Điều này vô tình tạo ra khoảng trống thị trường mà các cộng đồng khác, đặc biệt là một số gia đình Do Thái, lấp đầy, đồng thời buộc các thương gia Ý phải sáng tạo ra những công cụ tài chính lách luật một cách tinh vi, chẳng hạn hối phiếu, để khoản lợi nhuận không bị gọi thẳng tên là lãi suất mà được ngụy trang dưới hình thức phí đổi tiền hoặc chênh lệch tỷ giá. Có thể nói, nghệ thuật gọi lãi suất bằng một cái tên khác đã có lịch sử tám trăm năm.</p>
+    </section>
+
+    <section class="era">
+      <span class="tag">Chương bốn</span>
+      <h2>Vương triều tài chính: Medici và Fugger</h2>
+      <span class="period">Thế kỷ mười bốn đến mười sáu · Florence và Augsburg</span>
+      <p>Gia tộc Medici tại Florence, khởi nghiệp từ nghề buôn len rồi chuyển sang ngân hàng vào cuối thế kỷ mười bốn, đã xây dựng một mạng lưới chi nhánh trải khắp châu Âu, từ Rome, Venice đến London và Bruges. Họ phát minh ra hệ thống sổ sách kế toán kép hoàn thiện, giúp theo dõi lãi lỗ minh bạch hơn, đồng thời trở thành ngân hàng riêng của giáo hoàng, một khách hàng vừa giàu có vừa quyền lực bậc nhất châu Âu thời bấy giờ. Tiền bạc từ ngân hàng Medici sau đó tài trợ cho nghệ thuật, kiến trúc, giúp khơi mào thời kỳ Phục Hưng, khiến người ta có thể nói không ngoa rằng bức tượng David và nhiều kiệt tác khác một phần được dựng lên nhờ tiền lãi cho vay.</p>
+      <p>Cùng thời điểm đó, tại Đức, gia tộc Fugger ở Augsburg xây dựng đế chế tài chính khổng lồ bằng cách cho vay đối với các vị vua và hoàng đế, đáng chú ý nhất là khoản vay khổng lồ giúp Charles Đệ Ngũ mua chuộc phiếu bầu để trở thành Hoàng đế La Mã Thần thánh năm một nghìn năm trăm mười chín. Đây là minh chứng sớm cho một quy luật muôn thuở của ngành ngân hàng: ai nắm dòng tiền, người đó có thể góp phần định đoạt cả bản đồ chính trị.</p>
+    </section>
+
+    <section class="era">
+      <span class="tag">Chương năm</span>
+      <h2>Ngân hàng trung ương chào đời</h2>
+      <span class="period">Thế kỷ mười bảy · Thụy Điển và Anh Quốc</span>
+      <p>Năm một nghìn sáu trăm sáu mươi tám, Thụy Điển thành lập Sveriges Riksbank, được xem là ngân hàng trung ương lâu đời nhất còn hoạt động đến ngày nay, ra đời một phần để dọn dẹp hậu quả sau khi một ngân hàng tư nhân trước đó phát hành quá nhiều giấy nợ và sụp đổ. Năm 1694, Ngân hàng Anh Quốc, Bank of England, được thành lập với mục đích ban đầu khá trần trụi: cho chính phủ Anh vay tiền để tài trợ cuộc chiến với Pháp, đổi lại ngân hàng này được độc quyền phát hành một số loại giấy bạc. Có thể nói ngân hàng trung ương hiện đại ra đời không phải từ một kế hoạch cao siêu về ổn định kinh tế vĩ mô, mà từ nhu cầu rất thực tế là nhà vua cần tiền đánh nhau và không muốn tăng thuế khiến dân chúng nổi loạn.</p>
+    </section>
+
+  </div>
+
+  <!-- ===================== PHẦN III ===================== -->
+  <div class="part-title">
+    <span class="num">PHẦN III</span>
+    <h2>Cách Mạng Công Nghiệp Đến Thế Kỷ Hai Mươi — Ngân Hàng Trở Thành Cường Quốc</h2>
+    <div class="rule"></div>
+  </div>
+
+  <div class="ledger">
+
+    <section class="era">
+      <span class="tag">Chương sáu</span>
+      <h2>Vốn cổ phần và những huyết mạch của công nghiệp hóa</h2>
+      <span class="period">Thế kỷ mười tám đến mười chín</span>
+      <p>Cách mạng công nghiệp cần một thứ mà không nhà máy nào tự có sẵn: vốn khổng lồ để xây đường sắt, nhà máy dệt, hầm mỏ. Ngân hàng thương mại và ngân hàng đầu tư bước vào giai đoạn hoàng kim, huy động tiền tiết kiệm từ dân chúng và cổ phần từ nhà đầu tư để rót vào các dự án hạ tầng quy mô lớn. Gia tộc Rothschild, khởi nghiệp từ Mayer Amschel Rothschild ở Frankfurt, xây dựng mạng lưới ngân hàng xuyên quốc gia trải khắp năm thủ đô châu Âu, nổi tiếng với khả năng huy động vốn cho chính phủ và doanh nghiệp nhanh đến mức người đương thời đồn rằng họ biết trước kết quả trận Waterloo trước cả chính phủ Anh, một câu chuyện có phần thêu dệt nhưng phản ánh đúng nỗi ám ảnh của công chúng trước quyền lực thông tin của giới ngân hàng.</p>
+      <p>Tại Hoa Kỳ, John Pierpont Morgan trở thành biểu tượng của thời đại này khi ngân hàng của ông không chỉ tài trợ cho đường sắt và United States Steel, mà còn đóng vai trò như một ngân hàng trung ương không chính thức, đứng ra giải cứu thị trường tài chính Mỹ trong cuộc khủng hoảng năm một nghìn chín trăm lẻ bảy bằng chính uy tín và tiền túi của mình. Sự kiện này khiến giới lập pháp Mỹ giật mình nhận ra rằng để vận mệnh cả nền kinh tế phụ thuộc vào thiện chí của một cá nhân, dù tài giỏi đến đâu, là một rủi ro không thể chấp nhận, và đó chính là một trong những lý do trực tiếp dẫn đến sự ra đời của Cục Dự trữ Liên bang Hoa Kỳ năm một nghìn chín trăm mười ba.</p>
+    </section>
+
+    <section class="era">
+      <span class="tag">Chương bảy</span>
+      <h2>Sụp đổ, cải tổ, rồi lại sụp đổ</h2>
+      <span class="period">1929 đến 1944</span>
+      <p>Đại khủng hoảng năm một nghìn chín trăm hai mươi chín phơi bày một sự thật cay đắng: khi ngân hàng vừa nhận tiền gửi của người dân vừa tự doanh đầu cơ chứng khoán bằng chính số tiền ấy, một cú sụp thị trường có thể cuốn bay tiền tiết kiệm của hàng triệu gia đình chỉ trong vài tuần. Đạo luật Glass-Steagall năm một nghìn chín trăm ba mươi ba ra đời tại Mỹ, buộc tách bạch ngân hàng thương mại nhận tiền gửi khỏi ngân hàng đầu tư chuyên kinh doanh chứng khoán, đồng thời khai sinh cơ chế bảo hiểm tiền gửi liên bang để dân chúng không còn phải xếp hàng rút tiền trong hoảng loạn mỗi khi có tin đồn.</p>
+      <p>Sau Chiến tranh Thế giới thứ hai, hội nghị Bretton Woods năm một nghìn chín trăm bốn mươi bốn thiết lập trật tự tiền tệ quốc tế mới, gắn đồng đô la Mỹ với vàng và các đồng tiền khác gắn với đô la, đồng thời khai sinh Quỹ Tiền tệ Quốc tế và Ngân hàng Thế giới, hai định chế tài chính đa phương định hình dòng vốn toàn cầu suốt nhiều thập niên sau đó.</p>
+    </section>
+
+  </div>
+
+  <!-- ===================== PHẦN IV: TIẾN HÓA HÌNH THÁI ===================== -->
+  <div class="part-title">
+    <span class="num">PHẦN IV</span>
+    <h2>Từ Hình Thái Nào Đến Hình Thái Nào</h2>
+    <div class="rule"></div>
+  </div>
+
+  <div class="shell" style="padding:0;">
+    <p>Nhìn lại toàn bộ hành trình, ngành ngân hàng đã đi qua bảy hình thái tiến hóa chính, mỗi hình thái là một câu trả lời cho cùng một câu hỏi cũ kỹ: làm sao giữ tiền của người khác an toàn mà vẫn kiếm lời từ đó.</p>
+    <div class="chain">
+      <span class="node">Đổi chác trực tiếp</span><span class="arrow">→</span>
+      <span class="node">Kho lưu trữ của đền thờ</span><span class="arrow">→</span>
+      <span class="node">Người đổi tiền cá thể</span><span class="arrow">→</span>
+      <span class="node">Ngân hàng gia tộc thương gia</span><span class="arrow">→</span>
+      <span class="node">Ngân hàng cổ phần công chúng</span><span class="arrow">→</span>
+      <span class="node">Ngân hàng trung ương quốc gia</span><span class="arrow">→</span>
+      <span class="node">Tập đoàn tài chính đa quốc gia</span><span class="arrow">→</span>
+      <span class="node">Ngân hàng số và nền tảng phi ngân hàng</span>
+    </div>
+    <p style="margin-top:28px;">Điểm mấu chốt là quyền lực trong ngành ngân hàng đã dịch chuyển ba lần lớn: từ cá nhân và gia tộc sang các định chế có cổ phần đại chúng, từ định chế tư nhân sang bàn tay điều tiết của nhà nước thông qua ngân hàng trung ương, và gần đây nhất là từ các tòa nhà bằng đá cẩm thạch sang các trung tâm dữ liệu, nơi phần lớn giao dịch ngân hàng ngày nay không còn liên quan đến tờ giấy bạc nào cả.</p>
+  </div>
+
+  <!-- ===================== PHẦN V: CÁC LOẠI NGÂN HÀNG HIỆN NAY ===================== -->
+  <div class="part-title">
+    <span class="num">PHẦN V</span>
+    <h2>Bản Đồ Ngành Ngân Hàng Hiện Đại</h2>
+    <div class="rule"></div>
+  </div>
+
+  <div class="shell" style="padding:0;">
+    <p>Ngày nay, khi ai đó nói ngân hàng, họ thực chất đang gộp chung ít nhất bảy loại hình khác nhau, mỗi loại có mô hình kinh doanh và khẩu vị rủi ro riêng biệt.</p>
+
+    <div class="cards">
+      <div class="card">
+        <span class="badge">Loại một</span>
+        <h3>Ngân hàng trung ương</h3>
+        <p>Không phục vụ dân thường mà phục vụ chính các ngân hàng khác và chính phủ. Nhiệm vụ chính là phát hành tiền, điều hành chính sách tiền tệ, kiểm soát lạm phát và đóng vai trò người cho vay cuối cùng khi hệ thống gặp khủng hoảng. Không cạnh tranh lợi nhuận, vì bản thân họ chính là nơi tạo ra luật chơi cho phần còn lại.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Loại hai</span>
+        <h3>Ngân hàng thương mại bán lẻ</h3>
+        <p>Loại quen thuộc nhất, có chi nhánh, có thẻ ATM, nhận tiền gửi tiết kiệm, cho vay mua nhà, mua xe, tiêu dùng cá nhân. Nguồn thu chính đến từ chênh lệch giữa lãi suất huy động và lãi suất cho vay, cộng thêm các loại phí dịch vụ mà không phải khách hàng nào cũng đọc kỹ trong hợp đồng.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Loại ba</span>
+        <h3>Ngân hàng đầu tư</h3>
+        <p>Không chăm sóc người gửi tiền lẻ mà phục vụ tập đoàn lớn, chính phủ và nhà đầu tư tổ chức, chuyên tư vấn phát hành cổ phiếu, trái phiếu, dàn xếp thương vụ mua bán sáp nhập. Đây là mảnh đất sinh ra những khoản thưởng cuối năm khiến báo chí kinh tế phải viết bài mỗi mùa đông.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Loại bốn</span>
+        <h3>Ngân hàng chính sách và phát triển</h3>
+        <p>Thường do nhà nước sở hữu, mục tiêu không phải tối đa hóa lợi nhuận mà tài trợ những lĩnh vực thị trường tư nhân ngại rót vốn, như nông nghiệp, hạ tầng, nhà ở xã hội, doanh nghiệp nhỏ ở vùng khó khăn. Lợi nhuận thấp nhưng sứ mệnh xã hội cao.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Loại năm</span>
+        <h3>Ngân hàng hợp tác xã và quỹ tín dụng</h3>
+        <p>Thuộc sở hữu chung của chính các thành viên gửi tiền và vay tiền, hoạt động phi lợi nhuận hoặc lợi nhuận thấp, phổ biến ở khu vực nông thôn hoặc cộng đồng nhỏ, nơi các ngân hàng thương mại lớn thường không mặn mà mở chi nhánh vì quy mô giao dịch nhỏ lẻ.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Loại sáu</span>
+        <h3>Ngân hàng số và công ty công nghệ tài chính</h3>
+        <p>Không có chi nhánh vật lý, vận hành hoàn toàn qua ứng dụng di động, chi phí vận hành thấp nên có thể trả lãi suất tiết kiệm cao hơn và thu phí thấp hơn. Một số công ty công nghệ tài chính không có giấy phép ngân hàng đầy đủ mà hợp tác với ngân hàng truyền thống phía sau hậu trường để cung cấp dịch vụ.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Loại bảy</span>
+        <h3>Hệ thống ngân hàng bóng</h3>
+        <p>Bao gồm quỹ đầu cơ, quỹ thị trường tiền tệ, công ty cho vay ngang hàng, thực hiện các chức năng giống ngân hàng như cho vay và tạo thanh khoản nhưng lại không chịu sự giám sát chặt chẽ như ngân hàng chính thức. Đây chính là khu vực bị chỉ mặt đặt tên là một trong những nguyên nhân châm ngòi khủng hoảng tài chính toàn cầu năm 2008.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== PHẦN VI: NHÂN VẬT TIÊU BIỂU ===================== -->
+  <div class="part-title">
+    <span class="num">PHẦN VI</span>
+    <h2>Những Gương Mặt Đã Viết Nên Ngành</h2>
+    <div class="rule"></div>
+  </div>
+
+  <div class="shell" style="padding:0;">
+    <table class="figures">
+      <tr><th>Nhân vật</th><th>Thời kỳ</th><th>Đóng góp</th></tr>
+      <tr>
+        <td class="name">Vua Hammurabi</td>
+        <td class="era">~1750 TCN</td>
+        <td>Ban hành bộ luật cổ đại quy định trần lãi suất và nghĩa vụ trả nợ, đặt nền móng pháp lý sớm nhất cho hoạt động tín dụng.</td>
+      </tr>
+      <tr>
+        <td class="name">Cosimo và Giovanni de Medici</td>
+        <td class="era">Thế kỷ 14-15</td>
+        <td>Xây dựng mạng lưới chi nhánh ngân hàng xuyên châu Âu đầu tiên, hoàn thiện kế toán sổ kép, dùng tài sản ngân hàng tài trợ nghệ thuật Phục Hưng.</td>
+      </tr>
+      <tr>
+        <td class="name">Jakob Fugger</td>
+        <td class="era">1459-1525</td>
+        <td>Biến ngân hàng gia tộc thành thế lực có thể tài trợ cả một cuộc bầu chọn hoàng đế, minh chứng sớm cho mối liên hệ giữa tài chính và quyền lực chính trị.</td>
+      </tr>
+      <tr>
+        <td class="name">Mayer Amschel Rothschild</td>
+        <td class="era">1744-1812</td>
+        <td>Sáng lập mạng lưới ngân hàng gia tộc xuyên quốc gia, tiên phong mô hình huy động vốn quốc tế phối hợp giữa nhiều thủ đô châu Âu.</td>
+      </tr>
+      <tr>
+        <td class="name">John Pierpont Morgan</td>
+        <td class="era">1837-1913</td>
+        <td>Tài trợ công nghiệp hóa nước Mỹ, đơn thân giải cứu thị trường tài chính năm 1907, gián tiếp thúc đẩy sự ra đời của Cục Dự trữ Liên bang.</td>
+      </tr>
+      <tr>
+        <td class="name">Marriner Eccles</td>
+        <td class="era">1890-1977</td>
+        <td>Chủ tịch Cục Dự trữ Liên bang thời Đại khủng hoảng, định hình lại chính sách tiền tệ hiện đại và vai trò điều tiết chu kỳ kinh tế của ngân hàng trung ương.</td>
+      </tr>
+      <tr>
+        <td class="name">Paul Volcker</td>
+        <td class="era">1927-2019</td>
+        <td>Mạnh tay nâng lãi suất để dập tắt lạm phát phi mã cuối thập niên bảy mươi, chứng minh sức mạnh và cả cái giá phải trả của chính sách tiền tệ thắt chặt.</td>
+      </tr>
+      <tr>
+        <td class="name">Muhammad Yunus</td>
+        <td class="era">Sinh 1940</td>
+        <td>Sáng lập Ngân hàng Grameen tại Bangladesh, khai sinh mô hình tín dụng vi mô, chứng minh người nghèo cũng có thể là khách hàng tín dụng đáng tin cậy, đoạt giải Nobel Hòa Bình năm 2006.</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ===================== PHẦN VII: VAI TRÒ KINH TẾ ===================== -->
+  <div class="part-title">
+    <span class="num">PHẦN VII</span>
+    <h2>Vai Trò Của Ngân Hàng Với Nền Kinh Tế</h2>
+    <div class="rule"></div>
+  </div>
+
+  <div class="shell" style="padding:0;">
+    <p>Xuyên suốt lịch sử, dù hình thái có thay đổi từ kho thóc đến ứng dụng di động, chức năng cốt lõi của ngân hàng gần như không đổi, chỉ được bổ sung thêm theo từng thời kỳ.</p>
+    <ul style="padding-left:20px;">
+      <li><strong>Trung gian tài chính:</strong> gom tiền nhàn rỗi từ người có thừa, chuyển đến người cần vốn để sản xuất kinh doanh, giúp dòng vốn trong nền kinh tế không bị nằm im dưới gối.</li>
+      <li><strong>Tạo tiền qua tín dụng:</strong> khi ngân hàng cho vay, về bản chất họ đang tạo thêm tiền trong lưu thông thông qua cơ chế dự trữ một phần, điều khiến cung tiền của một quốc gia luôn lớn hơn lượng tiền mặt vật lý đang tồn tại.</li>
+      <li><strong>Hạ tầng thanh toán:</strong> từ hối phiếu thời trung cổ đến chuyển khoản tức thời hôm nay, ngân hàng là huyết mạch giúp thương mại vận hành mà không cần mọi giao dịch đều phải trao tay tiền mặt.</li>
+      <li><strong>Ổn định kinh tế vĩ mô:</strong> thông qua ngân hàng trung ương, hệ thống ngân hàng là công cụ chính để kiềm chế lạm phát, điều tiết chu kỳ kinh tế, và trong những lúc nguy cấp, là chốt chặn cuối cùng ngăn một cuộc khủng hoảng tài chính biến thành sụp đổ toàn diện.</li>
+      <li><strong>Tài trợ phát triển:</strong> từ đường sắt thế kỷ mười chín đến hạ tầng năng lượng tái tạo hôm nay, phần lớn các dự án thay đổi bộ mặt một quốc gia đều cần đến vốn vay ngân hàng ở đâu đó trong chuỗi tài trợ.</li>
+    </ul>
+  </div>
+
+  <!-- ===================== PHẦN VIII: CÂU HỎI GAI GÓC ===================== -->
+  <div class="part-title">
+    <span class="num">PHẦN VIII</span>
+    <h2>Ngân Hàng Có Phải Luật Chơi Bí Mật Của Giới Tinh Hoa?</h2>
+    <div class="rule"></div>
+  </div>
+
+  <div class="shell" style="padding:0;">
+    <div class="stamp-wrap">
+      <div class="stamp">GÓC NHÌN<br>ĐA CHIỀU</div>
+      <p style="margin-bottom:0;">Đây là câu hỏi mà bất cứ ai từng đọc một cuốn sách về Rothschild trên mạng xã hội đều từng tự hỏi, và câu trả lời trung thực nhất là: vừa đúng một phần, vừa bị thổi phồng quá mức thành thuyết âm mưu.</p>
+    </div>
+
+    <p><strong>Phần có cơ sở của lời chỉ trích</strong> nằm ở chỗ ngành ngân hàng, do bản chất nắm giữ dòng vốn, luôn có xu hướng tích tụ ảnh hưởng chính trị. Lịch sử cho thấy rõ điều này, từ gia tộc Fugger tài trợ cuộc bầu chọn hoàng đế, đến hiện tượng cửa xoay giữa các ngân hàng lớn Phố Wall và các vị trí hoạch định chính sách tài chính ở Washington. Cuộc khủng hoảng tài chính năm 2008 cũng phơi bày thực tế rằng một số ngân hàng đã trở nên lớn đến mức chính phủ buộc phải cứu trợ vì sợ hệ thống sụp đổ theo, hiện tượng thường được gọi là quá lớn để sụp đổ, khiến nhiều người đặt câu hỏi công bằng về việc lợi nhuận thuộc về tư nhân còn rủi ro lại được xã hội hóa.</p>
+
+    <p><strong>Phần phản biện lại luận điểm âm mưu</strong> là ngành ngân hàng hiện đại thuộc nhóm bị giám sát và điều tiết chặt chẽ bậc nhất trong nền kinh tế, với hàng loạt cơ quan thanh tra, quy định về vốn tối thiểu, kiểm toán độc lập, bảo hiểm tiền gửi và nghĩa vụ công bố thông tin minh bạch, những thứ không hề tồn tại nếu mục tiêu duy nhất là phục vụ một nhóm nhỏ trong bóng tối. Thị trường ngân hàng cũng có tính cạnh tranh thực sự, khách hàng hoàn toàn có thể chuyển từ ngân hàng này sang ngân hàng khác, và sự trỗi dậy của ngân hàng số, quỹ tín dụng vi mô hay hợp tác xã tín dụng cho thấy rào cản gia nhập ngành không phải bất khả xâm phạm.</p>
+
+    <p>Nhìn một cách công bằng, có lẽ chính xác hơn khi nói rằng ngành ngân hàng không phải một âm mưu bí mật được thiết kế sẵn cho giới tinh hoa, mà là một hệ thống mà cấu trúc của nó, tập trung vốn lớn, thông tin bất đối xứng, quan hệ gần gũi với quyền lực nhà nước, khiến những người đã giàu có và có quan hệ dễ tận dụng lợi thế hơn người bình thường. Đây là chủ đề vẫn còn gây tranh cãi giữa các nhà kinh tế học, nhà sử học và nhà hoạt động xã hội, và bài viết này xin phép không thay mặt độc giả đưa ra phán quyết cuối cùng, chỉ trình bày các góc nhìn để mỗi người tự cân nhắc.</p>
+  </div>
+
+  <!-- ===================== PHẦN IX: TƯƠNG LAI ===================== -->
+  <div class="part-title">
+    <span class="num">PHẦN IX</span>
+    <h2>Ngân Hàng Sẽ Trông Như Thế Nào Trong Tương Lai</h2>
+    <div class="rule"></div>
+  </div>
+
+  <div class="ledger">
+    <section class="era">
+      <span class="tag">Xu hướng một</span>
+      <h2>Ngân hàng mở và tài chính nhúng</h2>
+      <span class="period">Đang diễn ra</span>
+      <p>Dữ liệu tài khoản ngân hàng dần được chia sẻ có kiểm soát với bên thứ ba thông qua giao diện lập trình ứng dụng, cho phép dịch vụ tài chính len lỏi vào những nơi vốn chẳng liên quan gì đến ngân hàng, ví dụ mua trước trả sau ngay tại trang thanh toán của một cửa hàng trực tuyến. Ngân hàng dần trở thành một lớp hạ tầng vô hình phía sau, thay vì một nơi chốn cụ thể phải ghé thăm.</p>
+    </section>
+    <section class="era">
+      <span class="tag">Xu hướng hai</span>
+      <h2>Tiền kỹ thuật số của ngân hàng trung ương</h2>
+      <span class="period">Đang thí điểm tại nhiều quốc gia</span>
+      <p>Nhiều ngân hàng trung ương trên thế giới đang thử nghiệm phát hành đồng tiền kỹ thuật số chính thức, một hình thức tiền mặt số hóa do nhà nước bảo đảm, hứa hẹn giảm chi phí in ấn và lưu thông tiền giấy, đồng thời đặt ra câu hỏi mới về quyền riêng tư khi mọi giao dịch đều có thể truy vết.</p>
+    </section>
+    <section class="era">
+      <span class="tag">Xu hướng ba</span>
+      <h2>Trí tuệ nhân tạo trong thẩm định và vận hành</h2>
+      <span class="period">Đang tăng tốc</span>
+      <p>Từ chấm điểm tín dụng, phát hiện gian lận, đến trợ lý ảo chăm sóc khách hàng, trí tuệ nhân tạo đang thay thế dần các quy trình vốn cần đến hàng trăm nhân viên thẩm định hồ sơ. Điều này giúp tăng tốc độ xử lý nhưng cũng gây tranh cãi về việc liệu thuật toán có vô tình lặp lại những định kiến cũ trong dữ liệu lịch sử hay không.</p>
+    </section>
+    <section class="era">
+      <span class="tag">Xu hướng bốn</span>
+      <h2>Ngân hàng phi tập trung và công nghệ chuỗi khối</h2>
+      <span class="period">Còn nhiều tranh cãi</span>
+      <p>Các nền tảng tài chính phi tập trung cố gắng tái tạo chức năng cho vay, gửi tiết kiệm mà không cần một tổ chức trung gian truyền thống nào đứng giữa, vận hành hoàn toàn bằng hợp đồng tự động trên chuỗi khối. Đây vẫn là lĩnh vực còn non trẻ, biến động mạnh và thiếu khung pháp lý hoàn chỉnh, nhưng đại diện cho một câu hỏi triết học thú vị: liệu ngành ngân hàng bốn nghìn năm tuổi có thể tồn tại mà không cần ngân hàng hay không.</p>
+    </section>
+    <section class="era">
+      <span class="tag">Xu hướng năm</span>
+      <h2>Tài chính bền vững và trách nhiệm xã hội</h2>
+      <span class="period">Ngày càng được yêu cầu</span>
+      <p>Áp lực từ nhà đầu tư, cơ quan quản lý và chính công chúng đang buộc các ngân hàng cân nhắc yếu tố môi trường và xã hội khi quyết định tài trợ dự án, đánh dấu bước chuyển từ tư duy chỉ tối đa hóa lợi nhuận ngắn hạn sang cân bằng với tác động dài hạn lên hành tinh và cộng đồng.</p>
+    </section>
+  </div>
+
+  <div class="quote" style="margin-top:20px;">Tóm lại, sau bốn nghìn năm, ngân hàng đã đi từ một thầy tế ghi chép trên đất sét đến một thuật toán chấm điểm tín dụng trong tích tắc, nhưng câu hỏi cốt lõi vẫn y nguyên như thuở ban đầu: ai được tin tưởng để giữ tiền của người khác, và họ sẽ làm gì với nó khi không ai đang nhìn.</div>
+
+</div>
+
+<footer>
+  <div class="line"></div>
+  Tài liệu tổng hợp mang tính tham khảo và giải trí học thuật · Trình bày theo phong cách sổ cái lưu trữ<br>
+  Không có mục nào trong tài liệu này cấu thành lời khuyên đầu tư hoặc pháp lý
+</footer>
+</div>
+<!-- /#article-chicxulub-panel -->
                 </div><!-- /#sukien-article-view -->
             </div>
 

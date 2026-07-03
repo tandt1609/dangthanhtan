@@ -222,6 +222,8 @@ function handleRouting(path, updateUrl = false) {
         const subPath = path.substring('/su-kien'.length);
         if (subPath === '/chicxulub') {
             openEventArticle('chicxulub', updateUrl);
+        } else if (subPath === '/nganh-ngan-hang') {
+            openEventArticle('nganh-ngan-hang', updateUrl);
         } else {
             openEventArticle('', updateUrl);
         }
@@ -244,6 +246,13 @@ function openEventArticle(articleId, updateUrl = true) {
         const panel = document.getElementById('article-chicxulub-panel');
         if (panel) panel.classList.add('active');
         if (updateUrl) history.pushState({ tabId: 'su-kien', articleId: 'chicxulub' }, '', '/su-kien/chicxulub');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'nganh-ngan-hang') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-nganhang-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'su-kien', articleId: 'nganh-ngan-hang' }, '', '/su-kien/nganh-ngan-hang');
         window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
         articleView.classList.remove('active');
