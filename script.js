@@ -168,6 +168,8 @@ function handleRouting(path, updateUrl = false) {
             openThuVienArticle('su-im-lang-va-tai-tao-than-kinh', updateUrl);
         } else if (subPath === '/luoc-su-tu-vi') {
             openThuVienArticle('luoc-su-tu-vi', updateUrl);
+        } else if (subPath === '/snoopy') {
+            openThuVienArticle('snoopy', updateUrl);
         } else {
             openThuVienArticle('', updateUrl);
         }
@@ -337,6 +339,13 @@ function openThuVienArticle(articleId, updateUrl = true) {
         const panel = document.getElementById('article-tuvi-panel');
         if (panel) panel.classList.add('active');
         if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'luoc-su-tu-vi' }, '', '/thu-vien/luoc-su-tu-vi');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'snoopy') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-snoopy-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'snoopy' }, '', '/thu-vien/snoopy');
         window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
         articleView.classList.remove('active');
