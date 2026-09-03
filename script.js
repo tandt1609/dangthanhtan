@@ -1,4 +1,4 @@
-﻿// ====================================================
+// ====================================================
 // FINANCIAL TERMINAL ROUTER & INTERACTIVE CONTROLLER
 // ====================================================
 
@@ -1272,3 +1272,24 @@ function openHomeLegendArticle(articleId) {
     switchTab('huyen-thoai', false);
     openLegendArticle(articleId, true);
 }
+
+// --- SPA INITIALIZATION ---
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Route to correct view based on current URL (supports direct links & refresh)
+    handleRouting(window.location.pathname, false);
+
+    // 2. Intercept clicks on SPA cards (.clickable-card) so we don't reload the page
+    document.body.addEventListener('click', (e) => {
+        const card = e.target.closest('a.clickable-card');
+        if (!card) return;
+        const href = card.getAttribute('href');
+        if (!href || href.startsWith('http') || href.startsWith('//')) return;
+        e.preventDefault();
+        handleRouting(href, true);
+    });
+
+    // 3. Handle browser back/forward navigation
+    window.addEventListener('popstate', () => {
+        handleRouting(window.location.pathname, false);
+    });
+});
