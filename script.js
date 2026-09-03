@@ -1,4 +1,4 @@
-// ====================================================
+﻿// ====================================================
 // FINANCIAL TERMINAL ROUTER & INTERACTIVE CONTROLLER
 // ====================================================
 
@@ -156,7 +156,9 @@ function handleRouting(path, updateUrl = false) {
     if (path.startsWith('/thu-vien')) {
         switchTab('thu-vien', false);
         const subPath = path.substring('/thu-vien'.length);
-        if (subPath === '/dai-bang-tai-sinh') {
+        if (subPath === '/thoi-dai-truc') {
+            openThuVienArticle('thoi-dai-truc', updateUrl);
+        } else if (subPath === '/dai-bang-tai-sinh') {
             openThuVienArticle('dai-bang-tai-sinh', updateUrl);
         } else if (subPath === '/khoa-hoc-thuc-nghiem') {
             openThuVienArticle('khoa-hoc-thuc-nghiem', updateUrl);
@@ -298,7 +300,14 @@ function openThuVienArticle(articleId, updateUrl = true) {
 
     document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
 
-    if (articleId === 'dai-bang-tai-sinh') {
+    if (articleId === 'thoi-dai-truc') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-thoidaitruc-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'thoi-dai-truc' }, '', '/thu-vien/thoi-dai-truc');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'dai-bang-tai-sinh') {
         listView.classList.remove('active');
         articleView.classList.add('active');
         const panel = document.getElementById('article-daibang-panel');
