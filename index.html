@@ -159,7 +159,20 @@ html, body {
                     
 
                         <!-- Post: Snoopy (Thu Vien) -->
-                        <a href="/thu-vien/snoopy" class="news-card clickable-card">
+                        <!-- Post: Thoi Dai Truc (Thu Vien) -->
+                        <a href="/thu-vien/thoi-dai-truc" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-scroll"></i> Lịch sử &amp; Triết học</span>
+                                <span class="news-time">Tháng 9, 2026</span>
+                            </div>
+                            <h3 class="news-heading">Thời Đại Trục — Lược Sử Thế Kỷ VIII đến III TCN</h3>
+                            <p class="news-excerpt">Lược sử cuộc cách mạng tư tưởng vĩ đại nhất trong lịch sử nhân loại từ thế kỷ thứ VIII đến thế kỷ thứ III trước Công nguyên</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc tài liệu</span>
+                            </div>
+                        </a>
+
+<a href="/thu-vien/snoopy" class="news-card clickable-card">
                             <div class="news-meta">
                                 <span class="news-source"><i class="fa-solid fa-paw"></i> Văn hóa &amp; Nghệ thuật</span>
                                 <span class="news-time">Tháng 7, 2026</span>
@@ -14045,7 +14058,20 @@ footer p+p { margin-top: 8px; }
                 <!-- LIST VIEW -->
                 <div id="thu-vien-list-view" class="sukien-view active">
                     <div class="news-list">
-                        <a href="/thu-vien/snoopy" class="news-card clickable-card">
+                        <!-- Post: Thoi Dai Truc (Thu Vien) -->
+                        <a href="/thu-vien/thoi-dai-truc" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-scroll"></i> Lịch sử &amp; Triết học</span>
+                                <span class="news-time">Tháng 9, 2026</span>
+                            </div>
+                            <h3 class="news-heading">Thời Đại Trục — Lược Sử Thế Kỷ VIII đến III TCN</h3>
+                            <p class="news-excerpt">Lược sử cuộc cách mạng tư tưởng vĩ đại nhất trong lịch sử nhân loại từ thế kỷ thứ VIII đến thế kỷ thứ III trước Công nguyên</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc tài liệu</span>
+                            </div>
+                        </a>
+
+<a href="/thu-vien/snoopy" class="news-card clickable-card">
                             <div class="news-meta">
                                 <span class="news-source"><i class="fa-solid fa-paw"></i> Văn hóa &amp; Nghệ thuật</span>
                                 <span class="news-time">Tháng 7, 2026</span>
@@ -14134,6 +14160,1053 @@ footer p+p { margin-top: 8px; }
                 <!-- ARTICLE VIEW -->
                 <div id="thu-vien-article-view" class="sukien-view">
 
+
+<div id="article-thoidaitruc-panel" class="sukien-article-panel thoidaitruc-body">
+<style>
+#article-thoidaitruc-panel {
+  & p, & h1, & h2, & h3, & h4, & h5, & h6, & li, & span, & td, & th, & blockquote, & strong, & em, & div {
+    color: inherit;
+    font-family: inherit;
+  }
+
+  & *, & *::before, & *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  & {
+    --ink: #1a1410;
+    --ink-soft: #3d2e1e;
+    --ink-muted: #7a6552;
+    --parchment: #f7f1e8;
+    --parchment-dark: #ede5d5;
+    --parchment-deep: #d4c8b0;
+    --gold: #b8893a;
+    --gold-light: #d4a84b;
+    --gold-pale: #f0e0b8;
+    --red-accent: #8b2020;
+    --teal-accent: #1a5252;
+    --purple-accent: #3d1f5c;
+    --divider: rgba(184,137,58,0.35);
+    --shadow: rgba(26,20,16,0.12);
+  }
+
+  /* html rule removed to avoid global pollution */
+
+  & {
+    background-color: #2a1f12;
+    background-image:
+      radial-gradient(ellipse at 20% 0%, rgba(184,137,58,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 100%, rgba(184,137,58,0.06) 0%, transparent 50%);
+    font-family: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+    color: var(--ink);
+    min-height: 100vh;
+    padding: 0 0 80px;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* ─── HEADER ─── */
+  .site-header {
+    position: relative;
+    text-align: center;
+    padding: 70px 24px 50px;
+    background: linear-gradient(180deg, #1a1008 0%, #2a1f12 100%);
+    border-bottom: 1px solid var(--divider);
+    overflow: hidden;
+  }
+
+  .site-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(184,137,58,0.03) 60px, rgba(184,137,58,0.03) 61px),
+      repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(184,137,58,0.03) 60px, rgba(184,137,58,0.03) 61px);
+    pointer-events: none;
+  }
+
+  .header-ornament {
+    font-size: 28px;
+    color: var(--gold);
+    letter-spacing: 24px;
+    margin-bottom: 28px;
+    opacity: 0.7;
+    display: block;
+  }
+
+  .site-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 400;
+    color: var(--gold-light);
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    text-shadow: 0 2px 20px rgba(184,137,58,0.3);
+    margin-bottom: 16px;
+  }
+
+  .site-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(14px, 2.5vw, 20px);
+    font-weight: 300;
+    color: rgba(240,224,184,0.75);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+
+  .header-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto 20px;
+    max-width: 400px;
+  }
+
+  .header-line::before,
+  .header-line::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .header-line span {
+    color: var(--gold);
+    font-size: 22px;
+    opacity: 0.8;
+  }
+
+  .header-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(14px, 2vw, 18px);
+    color: rgba(240,224,184,0.55);
+    letter-spacing: 0.05em;
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* ─── NAV ─── */
+  .toc-strip {
+    background: #1a1008;
+    border-bottom: 1px solid rgba(184,137,58,0.2);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .toc-strip::-webkit-scrollbar { display: none; }
+
+  .toc-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 0 24px;
+    min-width: max-content;
+    margin: 0 auto;
+  }
+
+  .toc-item {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: rgba(184,137,58,0.65);
+    text-decoration: none;
+    padding: 14px 18px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+
+  .toc-item:hover {
+    color: var(--gold-light);
+    border-bottom-color: var(--gold);
+  }
+
+  .toc-sep {
+    color: rgba(184,137,58,0.25);
+    font-size: 10px;
+  }
+
+  /* ─── MAIN CONTENT ─── */
+  .page-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ─── SECTIONS ─── */
+  .section {
+    background: var(--parchment);
+    border-radius: 2px;
+    margin: 48px 0;
+    box-shadow:
+      0 2px 4px var(--shadow),
+      0 8px 32px rgba(26,20,16,0.2),
+      inset 0 0 0 1px rgba(184,137,58,0.15);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .section-inner {
+    padding: 52px 60px;
+  }
+
+  @media (max-width: 640px) {
+    .section-inner { padding: 36px 28px; }
+  }
+
+  /* ─── SECTION HEADER ─── */
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--divider);
+  }
+
+  .section-number {
+    font-family: 'Cinzel', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: rgba(184,137,58,0.12);
+    line-height: 1;
+    position: absolute;
+    top: 40px; right: 52px;
+    letter-spacing: -0.02em;
+    user-select: none;
+  }
+
+  .section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(18px, 3vw, 26px);
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+    line-height: 1.35;
+    margin-bottom: 28px;
+  }
+
+  .section h3 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 400;
+    color: var(--ink-soft);
+    letter-spacing: 0.06em;
+    margin: 36px 0 16px;
+  }
+
+  .section h3::before {
+    content: '❧ ';
+    color: var(--gold);
+    font-size: 14px;
+  }
+
+  .section p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(16px, 1.8vw, 19px);
+    line-height: 1.9;
+    color: var(--ink-soft);
+    margin-bottom: 20px;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .section p:last-child { margin-bottom: 0; }
+
+  .lead-paragraph {
+    font-size: clamp(18px, 2.2vw, 22px);
+    font-style: italic;
+    color: var(--ink);
+    line-height: 1.75;
+  }
+
+  .lead-paragraph::first-letter {
+    font-family: 'Cinzel', serif;
+    font-size: 4.5em;
+    float: left;
+    line-height: 0.75;
+    margin: 8px 10px 0 0;
+    color: var(--gold);
+    text-shadow: 2px 2px 4px rgba(184,137,58,0.2);
+  }
+
+  /* ─── BLOCKQUOTE ─── */
+  blockquote {
+    border-left: 3px solid var(--gold);
+    margin: 32px 0;
+    padding: 20px 28px;
+    background: rgba(184,137,58,0.06);
+    border-radius: 0 2px 2px 0;
+    position: relative;
+  }
+
+  blockquote::before {
+    content: '\201C';
+    font-family: 'Cinzel', serif;
+    font-size: 72px;
+    color: var(--gold);
+    opacity: 0.2;
+    position: absolute;
+    top: -10px; left: 10px;
+    line-height: 1;
+  }
+
+  blockquote p {
+    font-style: italic;
+    font-size: clamp(16px, 1.8vw, 20px);
+    color: var(--ink);
+    margin-bottom: 8px !important;
+  }
+
+  blockquote cite {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    display: block;
+    margin-top: 10px;
+  }
+
+  /* ─── THINKERS GRID ─── */
+  .thinkers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 32px 0;
+  }
+
+  .thinker-card {
+    background: var(--parchment-dark);
+    border: 1px solid var(--divider);
+    border-radius: 2px;
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .thinker-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--accent-color, var(--gold));
+    opacity: 0.6;
+  }
+
+  .thinker-era {
+    font-family: 'Cinzel', serif;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .thinker-name {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(14px, 1.8vw, 16px);
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 6px;
+    letter-spacing: 0.03em;
+    line-height: 1.3;
+  }
+
+  .thinker-origin {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-muted);
+    margin-bottom: 12px;
+  }
+
+  .thinker-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(13px, 1.4vw, 15px);
+    line-height: 1.65;
+    color: var(--ink-soft);
+  }
+
+  /* ─── COLORED ACCENT CARDS ─── */
+  .insight-box {
+    background: linear-gradient(135deg, rgba(26,82,82,0.08) 0%, rgba(26,82,82,0.04) 100%);
+    border: 1px solid rgba(26,82,82,0.25);
+    border-radius: 2px;
+    padding: 28px 32px;
+    margin: 28px 0;
+    position: relative;
+  }
+
+  .insight-box.gold {
+    background: linear-gradient(135deg, rgba(184,137,58,0.1) 0%, rgba(184,137,58,0.05) 100%);
+    border-color: rgba(184,137,58,0.3);
+  }
+
+  .insight-box.crimson {
+    background: linear-gradient(135deg, rgba(139,32,32,0.08) 0%, rgba(139,32,32,0.03) 100%);
+    border-color: rgba(139,32,32,0.2);
+  }
+
+  .insight-box.purple {
+    background: linear-gradient(135deg, rgba(61,31,92,0.08) 0%, rgba(61,31,92,0.03) 100%);
+    border-color: rgba(61,31,92,0.2);
+  }
+
+  .insight-title {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .insight-box.crimson .insight-title { color: var(--red-accent); }
+  .insight-box.purple .insight-title { color: var(--purple-accent); }
+
+  .insight-box p {
+    margin-bottom: 12px !important;
+  }
+
+  /* ─── TIMELINE ─── */
+  .timeline {
+    position: relative;
+    margin: 32px 0;
+    padding-left: 32px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px; top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, var(--gold), transparent);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 28px;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -28px; top: 8px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 3px var(--parchment);
+  }
+
+  .timeline-year {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .timeline-content {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(14px, 1.6vw, 17px);
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+
+  /* ─── COMMON THREADS ─── */
+  .thread-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+  }
+
+  .thread-icon {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: var(--gold);
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 3px;
+    width: 28px;
+    text-align: center;
+  }
+
+  .thread-body { flex: 1; }
+
+  .thread-title {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  .thread-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(14px, 1.6vw, 17px);
+    line-height: 1.75;
+    color: var(--ink-soft);
+  }
+
+  /* ─── DIVIDER ─── */
+  .ornament-divider {
+    text-align: center;
+    margin: 16px 0;
+    color: var(--gold);
+    font-size: 16px;
+    letter-spacing: 16px;
+    opacity: 0.5;
+  }
+
+  /* ─── FOOTER ─── */
+  .site-footer {
+    text-align: center;
+    padding: 48px 24px;
+    margin-top: 60px;
+  }
+
+  .site-footer p {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: rgba(184,137,58,0.4);
+    text-transform: uppercase;
+    line-height: 2;
+  }
+
+  /* ─── INTRO BANNER ─── */
+  .intro-banner {
+    background: linear-gradient(135deg, #1a1008 0%, #2a1f12 50%, #1a1008 100%);
+    border-top: 1px solid rgba(184,137,58,0.2);
+    border-bottom: 1px solid rgba(184,137,58,0.2);
+    margin: 0 0 48px;
+    padding: 48px 24px;
+    text-align: center;
+  }
+
+  .intro-banner .epigraph {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.5vw, 26px);
+    color: rgba(240,224,184,0.85);
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.7;
+  }
+
+  .intro-banner .attribution {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: rgba(184,137,58,0.65);
+    text-transform: uppercase;
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    .thinkers-grid { grid-template-columns: 1fr; }
+    .section-number { display: none; }
+  }
+
+  /* Print */
+  @media print {
+    & { background: white; color: black; }
+    .toc-strip { position: static; }
+    .section { box-shadow: none; border: 1px solid #ccc; }
+  }
+
+}
+</style>
+    <div style="padding: 14px 20px; background: #1a1008; border-bottom: 1px solid rgba(184,137,58,0.2);">
+        <button class="back-btn" onclick="openThuVienArticle('')" style="background: transparent; border: 1px solid rgba(184,137,58,0.45); color: #d4a84b; padding: 7px 16px; cursor: pointer; font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.05em; border-radius: 4px; display: inline-flex; align-items: center; gap: 8px;"><i class="fa-solid fa-arrow-left"></i> Quay lại Thư viện</button>
+    </div>
+
+
+<!-- HEADER -->
+<header class="site-header">
+  <span class="header-ornament">✦ ✦ ✦</span>
+  <h1>Thời Đại Trục</h1>
+  <h2>Axial Age · Achsenzeit · 枢軸時代</h2>
+  <div class="header-line"><span>✦</span></div>
+  <p class="header-subtitle">Lược sử cuộc cách mạng tư tưởng vĩ đại nhất trong lịch sử nhân loại<br>từ thế kỷ thứ VIII đến thế kỷ thứ III trước Công nguyên</p>
+</header>
+
+<!-- NAV -->
+<nav class="toc-strip" aria-label="Mục lục">
+  <div class="toc-inner">
+    <a class="toc-item" href="#boi-canh">Bối cảnh</a>
+    <span class="toc-sep">·</span>
+    <a class="toc-item" href="#nhan-vat">Nhân vật</a>
+    <span class="toc-sep">·</span>
+    <a class="toc-item" href="#tu-tuong">Tư tưởng</a>
+    <span class="toc-sep">·</span>
+    <a class="toc-item" href="#lien-ket">Liên kết</a>
+    <span class="toc-sep">·</span>
+    <a class="toc-item" href="#nguyen-nhan">Nguyên nhân</a>
+    <span class="toc-sep">·</span>
+    <a class="toc-item" href="#di-san">Di sản</a>
+    <span class="toc-sep">·</span>
+    <a class="toc-item" href="#y-nghia">Ý nghĩa</a>
+  </div>
+</nav>
+
+<!-- EPIGRAPH -->
+<div class="intro-banner">
+  <p class="epigraph">"Có những khoảnh khắc trong lịch sử mà toàn bộ nhân loại dường như tỉnh thức cùng một lúc — đặt ra những câu hỏi sâu thẳm nhất về ý nghĩa của sự tồn tại, về đạo đức, về vũ trụ và về vị trí của con người trong đó."</p>
+  <p class="attribution">— Karl Jaspers · Nguồn gốc và Mục tiêu của Lịch sử, 1949</p>
+</div>
+
+<div class="page-wrap">
+
+  <!-- I. BỐI CẢNH -->
+  <section class="section" id="boi-canh">
+    <div class="section-inner">
+      <span class="section-number">I</span>
+      <p class="section-label">Chương thứ nhất</p>
+      <h2>Bối Cảnh Xã Hội Thế Kỷ VIII–III Trước Công Nguyên</h2>
+
+      <p class="lead-paragraph">Vào khoảng năm 800 trước Công nguyên, thế giới loài người đang trải qua một cuộc khủng hoảng toàn diện. Những đế chế cổ đại hùng mạnh — Ai Cập, Babylon, Mycenae — đã sụp đổ hoặc suy tàn sau Thời Đại Đồng Tối (khoảng 1200–900 TCN). Từ trong đống tro tàn đó, một thế giới mới đang hình thành, mang theo những mâu thuẫn và bất an chưa từng thấy.</p>
+
+      <h3>Sự trỗi dậy của các đô thị và thương nghiệp</h3>
+      <p>Trên khắp các vùng đất màu mỡ từ Địa Trung Hải đến Hoàng Hà, các đô thị bắt đầu bùng nổ. Ở Hy Lạp, những polis (thành bang) như Athens, Sparta, Corinth hình thành và cạnh tranh quyết liệt. Ở Trung Đông, các trung tâm thương mại như Babylon, Nineveh vươn lên trở thành những thành phố triệu dân đầu tiên trong lịch sử. Tại Ấn Độ, vùng lưu vực sông Hằng chứng kiến sự nở rộ của những đô thị thương nghiệp như Varanasi, Rajagriha. Ở Trung Quốc, thời Xuân Thu — Chiến Quốc (770–221 TCN) là thời kỳ của trăm quốc gia tranh bá.</p>
+
+      <p>Sự phát triển của kinh tế tiền tệ và thương mại đường dài đã tạo ra một tầng lớp mới: những thương nhân, thợ thủ công, và trí thức không còn lệ thuộc hoàn toàn vào giới quý tộc và tăng lữ truyền thống. Đây là điều kiện vật chất căn bản cho việc tư duy tự do.</p>
+
+      <h3>Khủng hoảng chính trị và chiến tranh liên miên</h3>
+      <p>Đây là thời kỳ của những cuộc chiến tranh tàn bạo và không ngừng nghỉ. Ở Trung Quốc, các chư hầu của nhà Chu thống trị liên tục giao chiến, binh đao không dứt trong suốt 550 năm. Ở Hy Lạp, các thành bang chìm trong những cuộc xung đột như Chiến tranh Peloponnesian. Ở Cận Đông, đế quốc Assyria rồi Babylon rồi Ba Tư lần lượt trỗi dậy và lao vào những cuộc chinh phục đẫm máu.</p>
+
+      <blockquote>
+        <p>Chính sự hỗn loạn và đau thương vô tận của chiến tranh đã thôi thúc các nhà tư tưởng tìm kiếm những câu trả lời sâu xa hơn: Tại sao con người lại gây khổ đau cho nhau? Phải sống như thế nào? Đâu là trật tự đúng đắn của xã hội và vũ trụ?</p>
+        <cite>— Từ bối cảnh chiến tranh đến khởi nguồn triết học</cite>
+      </blockquote>
+
+      <h3>Khủng hoảng tôn giáo và sự nghi ngờ thần linh</h3>
+      <p>Các tín ngưỡng đa thần truyền thống bắt đầu bị thách thức. Con người nhận ra rằng việc thờ phụng thần linh qua nghi lễ và hiến tế không còn đủ để giải thích — hay chấm dứt — nỗi đau và sự bất công. Ở Ấn Độ, hệ thống nghi lễ Vệ Đà của đẳng cấp Bà La Môn bị nghi ngờ. Ở Trung Đông, người Do Thái sau thảm họa bị lưu đày tại Babylon bắt đầu suy nghĩ lại về bản chất của Thượng Đế. Ở Hy Lạp, các triết gia bắt đầu giải thích thế giới mà không cần đến thần thoại.</p>
+
+      <h3>Sự hình thành của tầng lớp trí thức độc lập</h3>
+      <p>Có lẽ điều quan trọng nhất là lần đầu tiên trong lịch sử, xuất hiện một tầng lớp người có thể chuyên tâm vào việc suy nghĩ, giảng dạy và viết lách như một nghề nghiệp. Khổng Tử là nhà giáo chuyên nghiệp đầu tiên ở Trung Quốc. Các triết gia Hy Lạp dạy học trong những trường học (Academy, Lyceum). Các tu sĩ Phật giáo và Kỳ Na giáo lập ra những tăng đoàn chuyên tu. Đây là thời điểm mà tư duy trở thành một hoạt động xã hội có tổ chức.</p>
+
+      <div class="insight-box gold">
+        <p class="insight-title">✦ Đặc điểm cốt lõi của thời kỳ</p>
+        <p>Thời Đại Trục là giao điểm của ba cuộc khủng hoảng song hành: khủng hoảng chính trị (chiến tranh và sụp đổ của các trật tự cũ), khủng hoảng tôn giáo (hoài nghi về thần linh và nghi lễ truyền thống), và khủng hoảng kinh tế - xã hội (sự hình thành của các đô thị, thương nghiệp và giai cấp trung gian mới). Ba cuộc khủng hoảng này cộng hưởng với nhau tạo ra áp lực chưa từng có, buộc con người phải suy nghĩ lại từ đầu về tất cả mọi thứ.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- II. NHÂN VẬT -->
+  <section class="section" id="nhan-vat">
+    <div class="section-inner">
+      <span class="section-number">II</span>
+      <p class="section-label">Chương thứ hai</p>
+      <h2>Những Nhân Vật Tiêu Biểu Của Thời Đại Trục</h2>
+
+      <p class="lead-paragraph">Trên bốn vùng địa lý lớn của thế giới cổ đại — Trung Quốc, Ấn Độ, Ba Tư, và vùng Địa Trung Hải — hàng chục nhà tư tưởng vĩ đại đã xuất hiện gần như cùng một thời điểm lịch sử. Đây là những cá nhân đã đặt nền móng cho hầu hết mọi nền văn minh, tôn giáo và hệ thống tư tưởng còn tồn tại đến ngày nay.</p>
+
+      <h3>Trung Quốc — Thời Xuân Thu và Chiến Quốc</h3>
+      <div class="thinkers-grid">
+        <div class="thinker-card" style="--accent-color: #8b2020;">
+          <p class="thinker-era">551 – 479 TCN</p>
+          <p class="thinker-name">Khổng Khâu (Khổng Tử)</p>
+          <p class="thinker-origin">Nước Lỗ, Trung Quốc</p>
+          <p class="thinker-desc">Nhà giáo, nhà chính trị và triết gia vĩ đại nhất Trung Hoa. Người sáng lập Nho giáo, hệ thống tư tưởng ảnh hưởng đến hơn 1,5 tỷ người suốt hơn 2.500 năm.</p>
+        </div>
+        <div class="thinker-card" style="--accent-color: #1a5252;">
+          <p class="thinker-era">khoảng 571 – 471 TCN</p>
+          <p class="thinker-name">Lão Tử (Lý Nhĩ)</p>
+          <p class="thinker-origin">Nước Sở, Trung Quốc</p>
+          <p class="thinker-desc">Tác giả của Đạo Đức Kinh — 81 chương ngắn đặt nền móng cho Đạo giáo. Tư tưởng về Đạo (con đường vũ trụ) và Vô Vi (không hành động cưỡng ép).</p>
+        </div>
+        <div class="thinker-card" style="--accent-color: #3d1f5c;">
+          <p class="thinker-era">544 – 474 TCN</p>
+          <p class="thinker-name">Mặc Địch (Mặc Tử)</p>
+          <p class="thinker-origin">Trung Quốc</p>
+          <p class="thinker-desc">Người sáng lập Mặc gia, chủ trương tình yêu phổ quát (kiêm ái), chống chiến tranh tấn công, và nhà nước phúc lợi sớm nhất lịch sử.</p>
+        </div>
+        <div class="thinker-card" style="--accent-color: #4a3000;">
+          <p class="thinker-era">372 – 289 TCN</p>
+          <p class="thinker-name">Mạnh Kha (Mạnh Tử)</p>
+          <p class="thinker-origin">Nước Trâu, Trung Quốc</p>
+          <p class="thinker-desc">Người phát triển Nho giáo, chủ trương bản tính thiện của con người và quyền lật đổ bạo chúa. Được gọi là "á thánh" sau Khổng Tử.</p>
+        </div>
+        <div class="thinker-card" style="--accent-color: #1a5252;">
+          <p class="thinker-era">khoảng 369 – 286 TCN</p>
+          <p class="thinker-name">Trang Chu (Trang Tử)</p>
+          <p class="thinker-origin">Nước Tống, Trung Quốc</p>
+          <p class="thinker-desc">Nhà tư tưởng Đạo giáo vĩ đại thứ hai, nổi tiếng với những ẩn dụ triết học sâu sắc. Câu hỏi nổi tiếng: "Ta là người mơ thấy mình là bướm, hay bướm đang mơ thấy mình là người?"</p>
+        </div>
+        <div class="thinker-card" style="--accent-color: #2a1a0a;">
+          <p class="thinker-era">khoảng 313 – 238 TCN</p>
+          <p class="thinker-name">Tuân Huống (Tuân Tử)</p>
+          <p class="thinker-origin">Nước Triệu, Trung Quốc</p>
+          <p class="thinker-desc">Nhà Nho duy lý, chủ trương bản tính ác của con người cần được giáo hóa bởi lễ nghĩa. Thầy của Hàn Phi Tử và Lý Tư.</p>
+        </div>
+      </div>
+
+      <h3>Ấn Độ — Thời Kỳ Sáng Lập Các Tôn Giáo Lớn</h3>
+      <div class="thinkers-grid">
+        <div class="thinker-card" style="--accent-color: #b8893a;">
+          <p class="thinker-era">khoảng 563 – 483 TCN</p>
+          <p class="thinker-name">Siddhartha Gautama (Đức Phật)</p>
+          <p class="thinker-origin">Lumbini, Nepal ngày nay</p>
+          <p class="thinker-desc">Người sáng lập Phật giáo — tôn giáo có khoảng 500 triệu tín đồ hiện nay. Giáo lý Tứ Diệu Đế và Bát Chánh Đạo về con đường giải thoát khổ đau.</p>
+        </div>
+        <div class="thinker-card" style="--accent-color: #3d1f5c;">
+          <p class="thinker-era">khoảng 599 – 527 TCN</p>
+          <p class="thinker-name">Vardhamana (Mahavira)</p>
+          <p class="thinker-origin">Vaishali, Ấn Độ</p>
+          <p class="thinker-desc">Người cải cách và hệ thống hóa Kỳ Na giáo (Jainism). Chủ trương Ahimsa (bất bạo động) tuyệt đối, ảnh hưởng sâu sắc đến Gandhi sau này.</p>
+        </div>
+        <div class="thinker-card" style="--accent-color: #8b2020;">
+          <p class="thinker-era">khoảng thế kỷ VIII–VI TCN</p>
+          <p class="thinker-name">Các ẩn giả Upanishad</p>
+          <p class="thinker-origin">Lưu vực sông Hằng, Ấn Độ</p>
+          <p class="thinker-desc">Những tư tưởng gia vô danh và hữu danh đã viết các Upanishad — văn bản triết học Ấn Độ cổ điển, khám phá khái niệm Atman (linh hồn) và Brahman (thực tại tối thượng).</p>
+        </div>
+      </div>
+
+      <h3>Ba Tư và Trung Đông — Thời Kỳ Các Tiên Tri</h3>
+      <div class="thinkers-grid">
+        <div class="thinker-card" style="--accent-color: #b8893a;">
+          <p class="thinker-era">khoảng 1500–600 TCN (tranh luận)</p>
+          <p class="thinker-name">Zarathustra (Zoroaster)</p>
+          <p class="thinker-origin">Ba Tư cổ đại (Iran ngày nay)</p>
+          <p class="thinker-desc">Người sáng lập Hỏa giáo (Zoroastrianism) — tôn giáo nhị nguyên luận đầu tiên về cuộc chiến giữa Thiện và Ác, ảnh hưởng lớn đến Do Thái giáo, Kitô giáo và Hồi giáo.</p>
+        </div>
+        <div class="thinker-card" style="--accent-color: #1a5252;">
+          <p class="thinker-era">thế kỷ VIII–VI TCN</p>
+          <p class="thinker-name">Các tiên tri Israel</p>
+          <p class="thinker-origin">Israel, Judah</p>
+          <p class="thinker-desc">Amos, Hosea, Isaiah, Jeremiah, Ezekiel — những tiên tri đã chuyển hóa Do Thái giáo từ tín ngưỡng dân tộc thành đạo đức học phổ quát, nhấn mạnh công lý xã hội.</p>
+        </div>
+      </div>
+
+      <h3>Hy Lạp — Thời Kỳ Vàng Son của Triết Học</h3>
+      <div class="thinkers-grid">
+        <div class="thinker-card" style="--accent-color: #1a5252;">
+          <p class="thinker-era">khoảng 624 – 546 TCN</p>
+          <p class="thinker-name">Thales xứ Miletus</p>
+          <p class="thinker-origin">Miletus, Hy Lạp</p>
+          <p class="thinker-desc">Người đầu tiên giải thích thế giới bằng các nguyên nhân tự nhiên thay vì thần thoại. Được coi là cha đẻ của triết học và khoa học phương Tây.</p>
+        </div>
+        <div class="thinker-card" style="--accent-color: #8b2020;">
+          <p class="thinker-era">khoảng 570 – 495 TCN</p>
+          <p class="thinker-name">Pythagoras</p>
+          <p class="thinker-origin">Samos, Hy Lạp</p>
+          <p class="thinker-desc">Nhà toán học và triết học huyền bí. Khám phá nền tảng toán học của âm nhạc và vũ trụ. Thuyết linh hồn bất tử và luân hồi (ảnh hưởng từ Ấn Độ).</p>
+        </div>
+        <div class="thinker-card" style="--accent-color: #3d1f5c;">
+          <p class="thinker-era">khoảng 540 – 480 TCN</p>
+          <p class="thinker-name">Heraclitus</p>
+          <p class="thinker-origin">Ephesus, Hy Lạp</p>
+          <p class="thinker-desc">"Không ai tắm hai lần trong cùng một dòng sông." Triết gia của sự biến đổi và mâu thuẫn. Khái niệm Logos — lý trí chi phối vũ trụ.</p>
+        </div>
+        <div class="thinker-card" style="--accent-color: #b8893a;">
+          <p class="thinker-era">khoảng 515 – 450 TCN</p>
+          <p class="thinker-name">Parmenides</p>
+          <p class="thinker-origin">Elea, Hy Lạp</p>
+          <p class="thinker-desc">Người đối lập với Heraclitus: thực tại là bất biến và vĩnh cửu. Tư tưởng nền tảng cho siêu hình học phương Tây về tính nhất thể của thực tại.</p>
+        </div>
+        <div class="thinker-card" style="--accent-color: #4a3000;">
+          <p class="thinker-era">470 – 399 TCN</p>
+          <p class="thinker-name">Socrates</p>
+          <p class="thinker-origin">Athens, Hy Lạp</p>
+          <p class="thinker-desc">"Tôi chỉ biết rằng tôi không biết gì." Người sáng lập phương pháp đối thoại Socratic. Bị xử tử vì "làm hỏng tư tưởng của giới trẻ" — thực ra vì dám đặt câu hỏi.</p>
+        </div>
+        <div class="thinker-card" style="--accent-color: #1a5252;">
+          <p class="thinker-era">428 – 348 TCN</p>
+          <p class="thinker-name">Plato</p>
+          <p class="thinker-origin">Athens, Hy Lạp</p>
+          <p class="thinker-desc">Học trò của Socrates. Lý thuyết về Hình thức (Forms) — thế giới lý tưởng nằm sau thế giới vật chất. Alfred North Whitehead nói: "Triết học phương Tây chỉ là chú thích cho Plato."</p>
+        </div>
+        <div class="thinker-card" style="--accent-color: #8b2020;">
+          <p class="thinker-era">384 – 322 TCN</p>
+          <p class="thinker-name">Aristotle</p>
+          <p class="thinker-origin">Stagira, Hy Lạp</p>
+          <p class="thinker-desc">Bách khoa toàn thư sống của thế giới cổ đại. Đặt nền móng cho logic học, sinh học, vật lý, đạo đức học, chính trị học và nhiều lĩnh vực khác.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- III. TƯ TƯỞNG -->
+  <section class="section" id="tu-tuong">
+    <div class="section-inner">
+      <span class="section-number">III</span>
+      <p class="section-label">Chương thứ ba</p>
+      <h2>Tư Tưởng, Triết Lý và Di Sản Cho Hậu Thế</h2>
+
+      <p class="lead-paragraph">Điều đáng kinh ngạc của Thời Đại Trục không chỉ là sự xuất hiện của các nhà tư tưởng vĩ đại, mà còn là sự đa dạng phi thường và chiều sâu của những tư tưởng họ để lại — những tư tưởng vẫn còn nguyên vẹn sức sống trong thế giới hiện đại.</p>
+
+      <h3>Nho giáo — Đạo Đức Học của Mối Quan Hệ</h3>
+      <p>Khổng Tử đặt ra một hệ thống đạo đức dựa trên năm mối quan hệ cơ bản (ngũ luân): vua — tôi, cha — con, chồng — vợ, anh — em, bạn bè. Ở trung tâm là khái niệm Nhân (仁) — tình người, lòng nhân từ — như là đức tính cao nhất. Khổng Tử tin rằng xã hội tốt đẹp được xây dựng từ bên trong, từ việc tu dưỡng bản thân (tu thân) rồi đến quản lý gia đình (tề gia), rồi mới đến trị quốc và bình thiên hạ.</p>
+
+      <div class="insight-box">
+        <p class="insight-title">✦ Di sản Nho giáo</p>
+        <p>Hệ thống giáo dục dựa trên kinh điển, hệ thống thi cử quan lại (ảnh hưởng đến cả phương Tây qua kỳ thi công chức hiện đại), khái niệm nhà nước phúc lợi dựa trên đạo đức, và triết lý quản trị nhấn mạnh vào tư cách đạo đức của người lãnh đạo. Khổng giáo tiếp tục là nền tảng văn hóa của Trung Quốc, Hàn Quốc, Nhật Bản và Việt Nam.</p>
+      </div>
+
+      <h3>Đạo Giáo — Sự Hài Hòa với Thiên Nhiên</h3>
+      <p>Nếu Nho giáo tập trung vào xã hội và mối quan hệ giữa người với người, Đạo giáo hướng đến sự hài hòa giữa con người và vũ trụ. Lão Tử dạy rằng Đạo (道) — con đường tự nhiên của vũ trụ — là vô hình nhưng toàn năng. Vô Vi không có nghĩa là không làm gì, mà là không hành động chống lại tự nhiên. Trang Tử phát triển tư tưởng này thành một triết học về tự do tinh thần và sự chấp nhận tính tương đối của mọi quan điểm.</p>
+
+      <div class="insight-box gold">
+        <p class="insight-title">✦ Di sản Đạo Giáo</p>
+        <p>Ảnh hưởng sâu sắc đến y học truyền thống Trung Hoa, thiền định, võ thuật nội gia (Thái Cực Quyền), và mỹ học Đông Á. Trong thế giới hiện đại, tư tưởng Đạo giáo được tìm thấy trong phong trào sinh thái học, tâm lý học phương Đông, và các khái niệm về "dòng chảy" (flow) trong tâm lý học tích cực.</p>
+      </div>
+
+      <h3>Phật Giáo — Con Đường Giải Thoát Khỏi Khổ Đau</h3>
+      <p>Đức Phật Thích Ca Mâu Ni bắt đầu từ một câu hỏi đơn giản nhưng căn bản: Tại sao con người khổ đau? Câu trả lời của Ngài là Tứ Diệu Đế — bốn sự thật cao quý: (1) Khổ là đặc tính của cuộc sống, (2) Khổ phát sinh từ tham ái và chấp thủ, (3) Có thể chấm dứt khổ, (4) Con đường Bát Chánh Đạo dẫn đến chấm dứt khổ. Đặc biệt, giáo lý Vô Ngã (Anatman) — phủ nhận một linh hồn bất biến — là một cuộc cách mạng tư tưởng táo bạo nhất thời cổ đại.</p>
+
+      <div class="insight-box crimson">
+        <p class="insight-title">✦ Di sản Phật Giáo</p>
+        <p>Phật giáo là tôn giáo toàn cầu đầu tiên — không dựa trên dân tộc hay địa lý. Thiền định (Meditation) từ Phật giáo đang được khoa học thần kinh học hiện đại nghiên cứu và áp dụng trong y học. Khái niệm vô thường và chánh niệm (Mindfulness) đang trở thành nền tảng của tâm lý học thế kỷ XXI.</p>
+      </div>
+
+      <h3>Triết Học Hy Lạp — Lý Trí như Công Cụ Tối Thượng</h3>
+      <p>Triết học Hy Lạp đặt ra ba câu hỏi lớn mà phương Tây vẫn còn đang trả lời: Thực tại là gì (siêu hình học)? Chúng ta biết gì và bằng cách nào (nhận thức luận)? Chúng ta nên sống như thế nào (đạo đức học)? Socrates với phương pháp đối thoại (elenchus) đã dạy rằng tự nhận thức là nền tảng của đạo đức. Plato với lý thuyết Hình thức đặt nền móng cho chủ nghĩa duy tâm. Aristotle với logic học và phương pháp quan sát thực nghiệm đặt nền móng cho khoa học.</p>
+
+      <div class="insight-box purple">
+        <p class="insight-title">✦ Di sản Triết Học Hy Lạp</p>
+        <p>Hầu hết nền khoa học, luật pháp, dân chủ và triết học phương Tây đều có nguồn gốc trực tiếp từ Hy Lạp cổ đại. Logic học của Aristotle là nền tảng của toán học và lập trình máy tính. Khái niệm dân chủ (demokratia) của Athens là mô hình cho hầu hết các nền dân chủ hiện đại. Đạo đức học của Plato và Aristotle tiếp tục được giảng dạy trong các trường triết học và y khoa.</p>
+      </div>
+
+      <h3>Hỏa Giáo và Các Tiên Tri Israel — Đạo Đức Học Phổ Quát</h3>
+      <p>Zarathustra và các tiên tri Israel đóng góp một yếu tố chưa từng có: khái niệm về đạo đức phổ quát vượt qua ranh giới bộ tộc và dân tộc. Các tiên tri Israel như Amos kêu gọi công lý xã hội cho người nghèo và người yếu thế — không phải vì họ thuộc dân tộc ta, mà vì đó là điều đúng đắn theo một quy luật đạo đức cao hơn. Zarathustra mô tả cuộc chiến vũ trụ giữa Thiện (Ahura Mazda) và Ác (Angra Mainyu) — một khuôn mẫu tư duy ảnh hưởng đến ba tôn giáo Áp-ra-ham.</p>
+
+      <div class="insight-box gold">
+        <p class="insight-title">✦ Di sản Đạo Đức Học Phổ Quát</p>
+        <p>Khái niệm nhân quyền, bình đẳng trước pháp luật, và nghĩa vụ đạo đức với người không cùng nhóm — tất cả đều có nguồn gốc sâu xa từ cuộc cách mạng đạo đức học của Thời Đại Trục. Tuyên ngôn Nhân Quyền Quốc Tế năm 1948 là hậu duệ trực tiếp của tư tưởng này.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IV. LIÊN KẾT -->
+  <section class="section" id="lien-ket">
+    <div class="section-inner">
+      <span class="section-number">IV</span>
+      <p class="section-label">Chương thứ tư</p>
+      <h2>Những Điểm Chung và Liên Kết Giữa Các Tư Tưởng</h2>
+
+      <p class="lead-paragraph">Dù xuất hiện ở bốn góc trời khác nhau, không hề biết đến nhau, các nhà tư tưởng của Thời Đại Trục lại hội tụ ở những điểm chung kỳ lạ — như thể họ đang trả lời cùng một câu hỏi do thời đại đặt ra.</p>
+
+      <div class="thread-item">
+        <div class="thread-icon">①</div>
+        <div class="thread-body">
+          <p class="thread-title">Quy tắc vàng — Đạo đức đối ứng</p>
+          <p class="thread-text">Điều đáng kinh ngạc nhất là hầu như tất cả các nhà tư tưởng lớn của thời kỳ này đều độc lập đưa ra một nguyên tắc đạo đức gần như giống hệt nhau. Khổng Tử: "Điều gì mình không muốn, đừng làm cho người khác" (Kỷ sở bất dục, vật thi ư nhân). Đức Phật: "Đừng làm hại người khác theo cách mà bạn sẽ bị tổn thương." Hillel (Do Thái giáo): "Điều gì ghét cho bản thân, đừng làm cho người hàng xóm." Socrates: "Không bao giờ trả ác cho ác." Đây không phải trùng hợp ngẫu nhiên — đây là loài người cùng nhau khám phá ra một quy luật đạo đức cơ bản nhất của xã hội.</p>
+        </div>
+      </div>
+
+      <div class="thread-item">
+        <div class="thread-icon">②</div>
+        <div class="thread-body">
+          <p class="thread-title">Phê phán nghi lễ trống rỗng và thẩm quyền giáo điều</p>
+          <p class="thread-text">Khổng Tử, Đức Phật, Socrates, và các tiên tri Israel đều chống lại những nghi lễ tôn giáo và thực hành xã hội trống rỗng về ý nghĩa đạo đức. Các tiên tri Israel thẳng thắn tuyên bố rằng Thượng Đế không muốn lễ vật hiến tế mà muốn công lý. Đức Phật từ chối hệ thống tế thần của Bà La Môn giáo. Khổng Tử nhấn mạnh rằng lễ nghĩa mà không có nhân tâm thì vô nghĩa. Socrates đặt câu hỏi về mọi điều được coi là hiển nhiên.</p>
+        </div>
+      </div>
+
+      <div class="thread-item">
+        <div class="thread-icon">③</div>
+        <div class="thread-body">
+          <p class="thread-title">Khám phá nội tâm và tự nhận thức</p>
+          <p class="thread-text">Tất cả đều nhấn mạnh tầm quan trọng của việc hướng vào bên trong. Socrates với "Hãy tự biết mình" (Gnothi seauton). Đức Phật với thiền định và quan sát nội tâm. Các Upanishad Ấn Độ với khám phá Atman — linh hồn sâu thẳm nhất. Đây là lần đầu tiên trong lịch sử, con người được kêu gọi nhìn vào trong, chứ không chỉ nhìn ra ngoài và cúi đầu trước thần linh.</p>
+        </div>
+      </div>
+
+      <div class="thread-item">
+        <div class="thread-icon">④</div>
+        <div class="thread-body">
+          <p class="thread-title">Vượt qua ranh giới bộ lạc — Đạo đức phổ quát</p>
+          <p class="thread-text">Đây có lẽ là bước nhảy vọt vĩ đại nhất: sự chuyển dịch từ đạo đức "chúng ta" (ưu tiên nhóm mình) sang đạo đức phổ quát áp dụng cho tất cả. Mặc Tử kêu gọi kiêm ái — yêu thương tất cả mọi người như nhau. Đức Phật tuyên bố không có hệ thống đẳng cấp trong Phật pháp. Các tiên tri Israel đòi công lý cho người ngoại bang. Triết học Hy Lạp Stoic sau này (vẫn trong dòng chảy của Thời Đại Trục) sẽ đặt ra khái niệm cosmopolitan — công dân thế giới.</p>
+        </div>
+      </div>
+
+      <div class="thread-item">
+        <div class="thread-icon">⑤</div>
+        <div class="thread-body">
+          <p class="thread-title">Tìm kiếm nguyên lý thống nhất đằng sau vẻ đa dạng</p>
+          <p class="thread-text">Logos của Heraclitus, Brahman của Upanishad, Đạo của Lão Tử, Hình thức tuyệt đối của Plato, Ahura Mazda của Zoroaster — tất cả đều là những nỗ lực tìm kiếm một nguyên lý thống nhất, một thực tại tối thượng đằng sau thế giới hiện tượng hỗn loạn. Đây là khởi đầu của tư duy trừu tượng và khoa học — nỗ lực tìm quy luật đằng sau sự hỗn loạn.</p>
+        </div>
+      </div>
+
+      <div class="thread-item">
+        <div class="thread-icon">⑥</div>
+        <div class="thread-body">
+          <p class="thread-title">Đề cao đức hạnh hơn quyền lực và giàu sang</p>
+          <p class="thread-text">Không có ngoại lệ: tất cả các nhà tư tưởng lớn của Thời Đại Trục đều đặt đức hạnh (virtue, dharma, ren, arête) cao hơn quyền lực chính trị hay của cải vật chất. Socrates chọn cái chết thay vì từ bỏ triết học. Đức Phật từ bỏ ngai vàng và cung điện. Khổng Tử chu du thiên hạ trong nghèo khó thay vì bán rẻ lý tưởng. Đây là sự đảo lộn hoàn toàn hệ giá trị của thế giới cổ đại vốn đề cao quyền lực và chinh phục.</p>
+        </div>
+      </div>
+
+      <blockquote>
+        <p>Nhà nghiên cứu Karen Armstrong đã tóm tắt điểm chung cốt lõi này: "Tất cả các truyền thống của Thời Đại Trục đều đồng ý rằng lòng trắc ẩn — khả năng đặt mình vào vị trí của người khác — là điều kiện thiết yếu của tính người đích thực."</p>
+        <cite>— Karen Armstrong · Lịch sử của Thượng Đế (1993)</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- V. NGUYÊN NHÂN -->
+  <section class="section" id="nguyen-nhan">
+    <div class="section-inner">
+      <span class="section-number">V</span>
+      <p class="section-label">Chương thứ năm</p>
+      <h2>Tại Sao Các Nhà Tư Tưởng Lớn Xuất Hiện Đồng Thời?</h2>
+
+      <p class="lead-paragraph">Đây là câu hỏi hấp dẫn và bí ẩn nhất của lịch sử nhân loại. Tại sao trong vòng khoảng 300–500 năm, ở bốn góc trời không có quan hệ giao lưu với nhau, lại cùng xuất hiện những nhà tư tưởng vĩ đại đặt ra những câu hỏi và tìm ra những câu trả lời tương tự nhau?</p>
+
+      <h3>Giải thích vật chất — Điều kiện xã hội</h3>
+      <p>Nhà triết học Karl Jaspers, người đặt ra thuật ngữ "Thời Đại Trục" (Axial Age/Achsenzeit) vào năm 1949, cho rằng bốn vùng văn hóa lớn đều đang trải qua cùng một loại khủng hoảng xã hội: sự sụp đổ của các cấu trúc truyền thống, chiến tranh liên miên, và sự hình thành của một tầng lớp trí thức mới không còn lệ thuộc vào hệ thống phong kiến và tăng lữ cũ. Áp lực xã hội như nhau, câu trả lời cũng hướng đến những điểm tương đồng.</p>
+
+      <p>Ngoài ra, thương mại và con đường tơ lụa sơ khai đã cho phép một số ý tưởng lan truyền. Pythagoras có thể đã tiếp xúc với triết học Ấn Độ qua các nhà buôn. Triết học Hy Lạp ảnh hưởng đến Do Thái giáo qua cuộc chinh phục của Alexander Đại Đế (dù đó là sau Thời Đại Trục). Hỏa giáo ảnh hưởng đến Do Thái giáo trong thời gian lưu đày tại Babylon.</p>
+
+      <h3>Giải thích nhận thức — Sự tiến hóa của ý thức</h3>
+      <p>Nhà nhân học Julian Jaynes đề xuất rằng ý thức phản tư (reflective consciousness) — khả năng tự quan sát bản thân từ bên ngoài — là một bước tiến hóa nhận thức xảy ra vào đúng thời kỳ này. Trước đó, con người hành động theo "giọng nói của thần" (hallucination) mà họ gọi là thần linh. Thời Đại Trục là thời điểm con người nhận ra rằng "giọng nói" đó là của chính mình — và bắt đầu tự chịu trách nhiệm về hành động và ý nghĩa.</p>
+
+      <p>Robert Bellah, nhà xã hội học tôn giáo, bổ sung rằng sự phát triển của chữ viết trong thời kỳ này — cho phép ghi lại, phân tích và phê phán tư tưởng — là điều kiện kỹ thuật thiết yếu cho cuộc cách mạng tư tưởng này. Không có chữ viết, không có triết học.</p>
+
+      <h3>Giải thích tâm linh — Cùng nguồn gốc sâu thẳm</h3>
+      <p>Có những nhà tư tưởng tâm linh cho rằng sự đồng bộ này không thể giải thích hoàn toàn bằng các nguyên nhân vật chất. Một số theo truyền thống của Phrennis Sophia (Triết học trường cửu) như Aldous Huxley cho rằng có một "sự thật ngàn đời" (perennial philosophy) — một tầng nhận thức sâu hơn mà các nhà tư tưởng lớn của mọi thời và mọi nơi đều có thể chạm đến khi họ đào sâu đủ vào nội tâm. Đây không phải là sự trùng hợp ngẫu nhiên, mà là sự hội tụ về một nguồn chân lý chung.</p>
+
+      <div class="insight-box gold">
+        <p class="insight-title">✦ Tổng hợp — Ba tầng giải thích</p>
+        <p>Câu trả lời thuyết phục nhất là sự tổng hợp của cả ba: Điều kiện xã hội (khủng hoảng) tạo ra nhu cầu; sự tiến hóa nhận thức (chữ viết, ý thức phản tư) tạo ra công cụ; và sự hướng đến chiều sâu bên trong (tâm linh) tạo ra định hướng. Khi cả ba gặp nhau, một cuộc cách mạng tư tưởng là tất yếu.</p>
+      </div>
+
+      <h3>Lý thuyết Chuyển đổi Pha của David Graeber</h3>
+      <p>Nhà nhân học David Graeber và David Wengrow trong tác phẩm "Bình Minh của Mọi Thứ" (2021) đặt ra một cái nhìn khác: Thời Đại Trục là thời điểm mà con người đang thực sự tranh luận và thử nghiệm các hình thức xã hội khác nhau. Các nhà tư tưởng không chỉ là "triết gia ngồi trong phòng" — họ là những người đang cố gắng trả lời các câu hỏi thực tế về tổ chức xã hội, và sự đa dạng của câu trả lời phản ánh sự đa dạng thực sự của các thử nghiệm xã hội đang diễn ra.</p>
+    </div>
+  </section>
+
+  <!-- VI. DI SẢN -->
+  <section class="section" id="di-san">
+    <div class="section-inner">
+      <span class="section-number">VI</span>
+      <p class="section-label">Chương thứ sáu</p>
+      <h2>Di Sản và Sự Phát Triển Đến Thời Nay</h2>
+
+      <p class="lead-paragraph">Thời Đại Trục không kết thúc vào thế kỷ III TCN — nó tiếp tục sống, tiếp tục phát triển và biến đổi trong 2.500 năm tiếp theo, và vẫn đang định hình thế giới mà chúng ta đang sống.</p>
+
+      <h3>Truyền thống Đông Á — Sự kế thừa và biến đổi</h3>
+      <p>Nho giáo sau Khổng Tử đã trải qua hàng chục làn sóng phục hưng và cải biến. Tống Nho (thế kỷ X–XII) của Chu Hy tổng hợp Nho giáo với triết học vũ trụ học Phật giáo và Đạo giáo. Tân Nho giáo (Neo-Confucianism) trở thành hệ tư tưởng chính thống ở Trung Quốc, Hàn Quốc, Nhật Bản và Việt Nam suốt nhiều thế kỷ. Hiện nay, "Chủ nghĩa tư bản Khổng giáo" được dùng để giải thích sự phát triển kinh tế thần kỳ của Đông Á — nhấn mạnh giáo dục, kỷ luật tập thể và tôn trọng thẩm quyền.</p>
+
+      <h3>Phật Giáo — Tôn Giáo Toàn Cầu</h3>
+      <p>Từ Ấn Độ, Phật giáo lan rộng qua con đường tơ lụa đến Trung Á, Trung Quốc, Triều Tiên, Nhật Bản, Việt Nam, Thái Lan, Sri Lanka. Mỗi vùng đất đều tạo ra một hình thức Phật giáo riêng — Phật giáo Thiền Tông Nhật Bản (Zen) với tính thẩm mỹ cực đoan, Phật giáo Mật Tông Tây Tạng với hệ thống nghi lễ phức tạp, Phật giáo Nguyên Thủy ở Đông Nam Á với sự bảo tồn giáo lý cổ xưa. Hôm nay, thiền định chánh niệm (Mindfulness-Based Stress Reduction) được Đại học Y Harvard sử dụng như một phương pháp y khoa.</p>
+
+      <h3>Triết Học Tây Phương — Từ Athens đến Silicon Valley</h3>
+      <p>Logic học của Aristotle → Toán học của Euclid → Khoa học của Newton và Galileo → Triết học Khai Sáng của Kant và Descartes → Khoa học máy tính của Turing → Trí tuệ nhân tạo hiện đại. Đây là một đường thẳng liên tục từ Thời Đại Trục đến thế kỷ XXI. Khái niệm về nhân phẩm (dignity), quyền cá nhân, và nhà nước pháp quyền — tất cả đều có gốc rễ từ triết học Hy Lạp cổ đại được hệ thống hóa qua các nhà tư tưởng Khai Sáng.</p>
+
+      <h3>Do Thái Giáo, Kitô Giáo và Hồi Giáo</h3>
+      <p>Ba tôn giáo Áp-ra-ham lớn nhất thế giới đều là hậu duệ trực tiếp của các tiên tri Israel và tư tưởng Hỏa giáo của Thời Đại Trục. Kitô giáo với hai tỷ tín đồ và Hồi giáo với 1,8 tỷ tín đồ đang tiếp tục định hình chính trị, văn hóa và đạo đức của hơn một nửa nhân loại.</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <p class="timeline-year">Thế kỷ I – IV SCN</p>
+          <p class="timeline-content">Kitô giáo kết hợp đạo đức học của các tiên tri Israel với triết học Hy Lạp (đặc biệt là Plato và Stoicism) để tạo ra thần học Kitô giáo.</p>
+        </div>
+        <div class="timeline-item">
+          <p class="timeline-year">Thế kỷ VIII – XIII SCN</p>
+          <p class="timeline-content">Triết học Ả Rập (Avicenna, Averroes) dịch và phát triển tư tưởng Aristotle, truyền lại cho châu Âu thời Trung Cổ, tạo ra cuộc Phục Hưng.</p>
+        </div>
+        <div class="timeline-item">
+          <p class="timeline-year">Thế kỷ XVII – XVIII SCN</p>
+          <p class="timeline-content">Khai Sáng châu Âu tái khám phá triết học Hy Lạp và kết hợp với khoa học tự nhiên, tạo ra nền dân chủ hiện đại, nhân quyền và chủ nghĩa khoa học.</p>
+        </div>
+        <div class="timeline-item">
+          <p class="timeline-year">Thế kỷ XIX – XX SCN</p>
+          <p class="timeline-content">Phương Tây "tái khám phá" Phật giáo và Đạo giáo. Schopenhauer, Nietzsche, Carl Jung và nhiều nhà tư tưởng phương Tây chịu ảnh hưởng sâu sắc từ Đông phương.</p>
+        </div>
+        <div class="timeline-item">
+          <p class="timeline-year">Thế kỷ XXI SCN</p>
+          <p class="timeline-content">Khoa học thần kinh học đang xác nhận nhiều trực giác của Phật giáo về ý thức và khổ đau. Tâm lý học tích cực (Positive Psychology) tái phát hiện các ý tưởng về eudaimonia (hạnh phúc thực sự) của Aristotle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VII. Ý NGHĨA -->
+  <section class="section" id="y-nghia">
+    <div class="section-inner">
+      <span class="section-number">VII</span>
+      <p class="section-label">Chương thứ bảy và chương cuối</p>
+      <h2>Ý Nghĩa Sâu Sắc và Những Chuyển Biến Vĩnh Cửu</h2>
+
+      <p class="lead-paragraph">Nhìn lại từ khoảng cách 2.500 năm, Thời Đại Trục hiện ra không chỉ là một giai đoạn lịch sử — mà là một ngưỡng cửa. Một khoảnh khắc trong đó loài người bước qua từ một giai đoạn ý thức sang một giai đoạn khác, và không bao giờ có thể quay trở lại.</p>
+
+      <h3>Sự ra đời của Cá Nhân (The Individual)</h3>
+      <p>Trước Thời Đại Trục, con người hiểu mình chủ yếu qua tập thể — bộ tộc, gia tộc, vương quốc, thần linh bảo hộ. Thời Đại Trục đã tạo ra một cuộc cách mạng: lần đầu tiên, cá nhân được đặt vào trung tâm của tư duy đạo đức và tâm linh. Socrates hỏi: "Bạn — cá nhân bạn — sẽ sống như thế nào?" Đức Phật dạy: "Mỗi người phải tự mình đi trên con đường." Khổng Tử nói về tu thân là bước đầu tiên. Đây là nguồn gốc của chủ nghĩa nhân văn hiện đại.</p>
+
+      <h3>Sự ra đời của Đạo Đức Nội Tâm</h3>
+      <p>Trong thế giới trước Thời Đại Trục, đạo đức chủ yếu là đạo đức ngoại vi — tuân theo luật lệ, thực hiện nghi lễ, làm đẹp lòng thần linh. Thời Đại Trục chuyển dịch trọng tâm vào bên trong: đạo đức là trạng thái của tâm (intention, niyat, zhengxin — chính tâm). Không phải bạn làm gì, mà bạn làm với tâm thế nào. Đây là nền tảng của tất cả các hệ thống đạo đức học hiện đại, từ đạo đức học nghĩa vụ (Kant) đến đạo đức học đức hạnh (Virtue Ethics).</p>
+
+      <h3>Sự ra đời của Tư Duy Phê Phán</h3>
+      <p>Lần đầu tiên trong lịch sử, những người được tôn trọng xã hội không phải là những người có nhiều đất đai hay chiến thắng nhiều trận chiến, mà là những người có thể đặt câu hỏi hay nhất. Socrates không có gia sản và bại trong mọi cuộc chiến — nhưng ông trở thành biểu tượng của nhân loại. Đây là sự đảo lộn triệt để hệ giá trị, và nó đặt nền móng cho toàn bộ truyền thống khoa học và học thuật sau này.</p>
+
+      <h3>Sự ra đời của Khái Niệm Tâm Linh Cá Nhân</h3>
+      <p>Trước Thời Đại Trục, quan hệ với thần linh là quan hệ tập thể — cộng đồng cúng tế, thầy tế lễ trung gian. Thời Đại Trục tạo ra khả năng quan hệ tâm linh cá nhân: thiền định một mình (Phật giáo), cầu nguyện trực tiếp với Thượng Đế (Do Thái giáo sau lưu đày), triết học như con đường tâm linh (Plato, Pythagoras), tự tu dưỡng (Khổng Tử). Đây là nguồn gốc của tất cả truyền thống tâm linh cá nhân — từ tu sĩ Thiên Chúa giáo đến thiền sinh Phật giáo đến triết gia Stoic.</p>
+
+      <h3>Yếu Tố Tâm Linh và Văn Hóa — Điều Mà Khoa Học Chưa Giải Thích Được</h3>
+      <p>Có một điều kỳ lạ và khó giải thích: tất cả các nhà tư tưởng lớn của Thời Đại Trục đều trải qua những kinh nghiệm tâm linh sâu sắc. Đức Phật giác ngộ dưới cây Bồ Đề. Socrates có "daimon" — một tiếng nói nội tâm thần bí. Các tiên tri Israel trải qua những "kinh nghiệm gặp gỡ Thượng Đế" (theo cách họ mô tả). Zarathustra nhận khải thị từ Ahura Mazda. Dù chúng ta giải thích những kinh nghiệm này như thế nào, rõ ràng chúng đã tạo ra những con người có khả năng thấy sâu hơn, hiểu rộng hơn và truyền đạt mạnh mẽ hơn bất kỳ người bình thường nào.</p>
+
+      <div class="insight-box purple">
+        <p class="insight-title">✦ Điều Thời Đại Trục Để Lại</p>
+        <p>Thời Đại Trục không cho chúng ta câu trả lời cuối cùng — mà cho chúng ta những câu hỏi đúng đắn. "Sống tốt là sống như thế nào?" "Điều gì là thực?" "Trách nhiệm của tôi với người khác là gì?" "Nguồn gốc của khổ đau là gì và làm thế nào để vượt qua?" Đây là những câu hỏi mà mỗi thế hệ phải tự trả lời — nhưng cái khung để đặt ra câu hỏi, ngôn ngữ để suy nghĩ về chúng, và một số gợi ý về hướng trả lời, đó là di sản vô giá của Thời Đại Trục.</p>
+      </div>
+
+      <h3>Bài Học Cho Thế Kỷ XXI</h3>
+      <p>Chúng ta đang sống trong một thời kỳ mà nhiều học giả gọi là "Thời Đại Trục Thứ Hai" — một giai đoạn khủng hoảng và chuyển biến toàn cầu tương tự. Biến đổi khí hậu, bất bình đẳng toàn cầu, sự sụp đổ của các định chế truyền thống, và cuộc cách mạng trí tuệ nhân tạo đang đặt ra những thách thức chưa từng có. Điều mà Thời Đại Trục thứ nhất dạy chúng ta: trong những thời kỳ khủng hoảng sâu sắc, con người có khả năng — và nhu cầu — thực hiện những bước nhảy vọt tư duy chưa từng có. Và những bước nhảy vọt đó không đến từ công nghệ hay quyền lực — mà đến từ sự suy nghĩ sâu sắc, lòng trắc ẩn, và sự sẵn sàng đặt câu hỏi về tất cả mọi thứ được coi là hiển nhiên.</p>
+
+      <blockquote>
+        <p>Điều đáng ngạc nhiên không phải là tại sao Thời Đại Trục đã xảy ra — mà là tại sao nó không xảy ra thường xuyên hơn. Và có lẽ, trong thế kỷ XXI đầy biến động này, chúng ta đang đứng trước ngưỡng cửa của Thời Đại Trục tiếp theo.</p>
+        <cite>— Karen Armstrong · Thời Đại Trục (2006)</cite>
+      </blockquote>
+
+      <div class="ornament-divider">✦ ✦ ✦</div>
+
+      <p style="text-align: center; font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.15em; color: var(--ink-muted); margin-top: 32px;">Kết thúc Lược sử Thời Đại Trục</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>Lược sử Thời Đại Trục — Thế kỷ VIII đến III Trước Công Nguyên</p>
+  <p>Dựa trên các công trình của Karl Jaspers · Karen Armstrong · Robert Bellah · Jan Assmann</p>
+  <p>Tài liệu chỉ đọc — không có tương tác</p>
+</footer>
+
+
+    <div style="padding: 24px 20px 36px; text-align: center; background: #1a1008; border-top: 1px solid rgba(184,137,58,0.2);">
+        <button class="back-btn" onclick="openThuVienArticle('')" style="background: transparent; border: 1px solid rgba(184,137,58,0.45); color: #d4a84b; padding: 8px 20px; cursor: pointer; font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.05em; border-radius: 4px; display: inline-flex; align-items: center; gap: 8px;"><i class="fa-solid fa-arrow-left"></i> Quay lại Thư viện</button>
+    </div>
+</div>
 
 <div id="article-snoopy-panel" class="sukien-article-panel snoopy-body">
 <style>
