@@ -156,7 +156,9 @@ function handleRouting(path, updateUrl = false) {
     if (path.startsWith('/thu-vien')) {
         switchTab('thu-vien', false);
         const subPath = path.substring('/thu-vien'.length);
-        if (subPath === '/thoi-dai-truc') {
+        if (subPath === '/luoc-su-vat-ly-luong-tu') {
+            openThuVienArticle('luoc-su-vat-ly-luong-tu', updateUrl);
+        } else if (subPath === '/thoi-dai-truc') {
             openThuVienArticle('thoi-dai-truc', updateUrl);
         } else if (subPath === '/dai-bang-tai-sinh') {
             openThuVienArticle('dai-bang-tai-sinh', updateUrl);
