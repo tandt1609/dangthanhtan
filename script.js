@@ -1,4 +1,4 @@
-// ====================================================
+﻿// ====================================================
 // FINANCIAL TERMINAL ROUTER & INTERACTIVE CONTROLLER
 // ====================================================
 
@@ -300,7 +300,14 @@ function openThuVienArticle(articleId, updateUrl = true) {
 
     document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
 
-    if (articleId === 'thoi-dai-truc') {
+    if (articleId === 'luoc-su-vat-ly-luong-tu') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-luongtu-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'luoc-su-vat-ly-luong-tu' }, '', '/thu-vien/luoc-su-vat-ly-luong-tu');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'thoi-dai-truc') {
         listView.classList.remove('active');
         articleView.classList.add('active');
         const panel = document.getElementById('article-thoidaitruc-panel');
