@@ -1,4 +1,4 @@
-﻿// ====================================================
+// ====================================================
 // FINANCIAL TERMINAL ROUTER & INTERACTIVE CONTROLLER
 // ====================================================
 
@@ -210,7 +210,9 @@ function handleRouting(path, updateUrl = false) {
     } else if (path.startsWith('/huyen-thoai')) {
         switchTab('huyen-thoai', false);
         const subPath = path.substring('/huyen-thoai'.length);
-        if (subPath === '/fabio-valentini') {
+        if (subPath === '/mark-douglas') {
+            openLegendArticle('mark-douglas', updateUrl);
+        } else if (subPath === '/fabio-valentini') {
             openLegendArticle('fabio-valentini', updateUrl);
         } else if (subPath === '/nicolas-darvas') {
             openLegendArticle('nicolas-darvas', updateUrl);
@@ -1241,7 +1243,14 @@ function openLegendArticle(articleId, updateUrl = true) {
 
     document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
 
-    if (articleId === 'fabio-valentini') {
+    if (articleId === 'mark-douglas') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-mark-douglas-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'huyen-thoai', articleId: 'mark-douglas' }, '', '/huyen-thoai/mark-douglas');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'fabio-valentini') {
         listView.classList.remove('active');
         articleView.classList.add('active');
         const panel = document.getElementById('article-valentini-panel');
