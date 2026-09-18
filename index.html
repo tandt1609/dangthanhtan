@@ -156,6 +156,19 @@ html, body {
             <div id="panel-trang-chu" class="tab-panel active">
                 <h2 class="section-title"><i class="fa-solid fa-fire-flame-curved"></i> Bài viết mới</h2>
                 <div class="news-list">
+                        <!-- Post: FDR (Thu Vien) -->
+                        <a href="/thu-vien/fdr-luoc-su" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-landmark"></i> Lịch sử & Chính trị</span>
+                                <span class="news-time">Tháng 9, 2026</span>
+                            </div>
+                            <h3 class="news-heading">Franklin D. Roosevelt — Người Đàn Ông Không Chân Nhưng Đứng Vững Hơn Cả Nước Mỹ</h3>
+                            <p class="news-excerpt">Cậu ấm không biết buộc dây giày, lớn lên thành tổng thống bốn nhiệm kỳ — dẫn dắt nước Mỹ vượt Đại Suy thoái và Thế chiến II bằng đôi chân liệt nhưng ý chí thép.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc hồ sơ</span>
+                            </div>
+                        </a>
+
                         <!-- Post: Mark Douglas (Huyen Thoai) -->
                         <a href="/huyen-thoai/mark-douglas" class="news-card clickable-card">
                             <div class="news-meta">
@@ -14140,6 +14153,19 @@ footer p+p { margin-top: 8px; }
                 <!-- LIST VIEW -->
                 <div id="thu-vien-list-view" class="sukien-view active">
                     <div class="news-list">
+                        <!-- Post: FDR Luoc Su (Thu Vien) -->
+                        <a href="/thu-vien/fdr-luoc-su" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-landmark"></i> Lịch sử & Chính trị</span>
+                                <span class="news-time">Tháng 9, 2026</span>
+                            </div>
+                            <h3 class="news-heading">Franklin D. Roosevelt — Người Đàn Ông Không Chân Nhưng Đứng Vững Hơn Cả Nước Mỹ</h3>
+                            <p class="news-excerpt">Cậu ấm không biết buộc dây giày, lớn lên thành tổng thống bốn nhiệm kỳ — dẫn dắt nước Mỹ vượt Đại Suy thoái và Thế chiến II bằng đôi chân liệt nhưng ý chí thép.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc hồ sơ</span>
+                            </div>
+                        </a>
+
                         <!-- Post: Luoc Su Con Duong To Lua (Thu Vien) -->
                         <a href="/thu-vien/luoc-su-con-duong-to-lua" class="news-card clickable-card">
                             <div class="news-meta">
@@ -22718,6 +22744,432 @@ footer p+p { margin-top: 8px; }
 
                 </div>
             </div>
+
+<div id="article-fdr-panel" class="sukien-article-panel fdr-body">
+    <style>
+#article-fdr-panel {
+
+  #article-fdr-panel{
+    --parchment:#fdf6ec;
+    --parchment-dark:#f3e8d5;
+    --ink:#2c1a0e;
+    --ink-soft:#4a3626;
+    --gold:#a07830;
+    --gold-light:#c9a769;
+    --shadow: rgba(44,26,14,0.12);
+  }
+  *{box-sizing:border-box;}
+  #article-fdr-panel.fdr-body {
+    margin:0;
+    background:var(--parchment);
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(160,120,48,0.05), transparent 40%),
+      radial-gradient(circle at 80% 90%, rgba(160,120,48,0.06), transparent 45%);
+    color:var(--ink);
+    font-family:'EB Garamond', serif;
+    font-size:19px;
+    line-height:1.75;
+  }
+  .page{
+    max-width:860px;
+    margin:0 auto;
+    padding:70px 48px 120px;
+  }
+  header.masthead{
+    text-align:center;
+    border-bottom:3px double var(--gold);
+    padding-bottom:34px;
+    margin-bottom:50px;
+  }
+  .eyebrow{
+    font-family:'EB Garamond', serif;
+    letter-spacing:0.35em;
+    text-transform:uppercase;
+    font-size:13px;
+    color:var(--gold);
+    margin-bottom:14px;
+  }
+  h1.title{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    font-size:56px;
+    line-height:1.1;
+    margin:0 0 16px;
+    color:var(--ink);
+  }
+  .subtitle{
+    font-style:italic;
+    font-size:20px;
+    color:var(--ink-soft);
+    max-width:600px;
+    margin:0 auto;
+  }
+  .byline{
+    margin-top:22px;
+    font-size:15px;
+    color:var(--gold);
+    letter-spacing:0.08em;
+  }
+  h2.section{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    font-size:34px;
+    color:var(--ink);
+    margin:64px 0 8px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+  }
+  h2.section::before{
+    content:"";
+    display:inline-block;
+    width:36px;height:2px;
+    background:var(--gold);
+  }
+  .section-number{
+    font-family:'Cormorant Garamond', serif;
+    color:var(--gold-light);
+    font-size:16px;
+    letter-spacing:0.2em;
+    text-transform:uppercase;
+    margin:0 0 4px 52px;
+  }
+  p{margin:0 0 22px;}
+  p.lead::first-letter{
+    font-family:'Cormorant Garamond', serif;
+    font-size:74px;
+    font-weight:700;
+    float:left;
+    line-height:0.8;
+    padding:8px 10px 0 0;
+    color:var(--gold);
+  }
+  blockquote{
+    margin:34px 0;
+    padding:22px 30px;
+    border-left:4px solid var(--gold);
+    border-top:1px solid var(--gold-light);
+    border-bottom:1px solid var(--gold-light);
+    background:var(--parchment-dark);
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:23px;
+    color:var(--ink-soft);
+    position:relative;
+  }
+  blockquote cite{
+    display:block;
+    margin-top:10px;
+    font-style:normal;
+    font-size:14px;
+    letter-spacing:0.05em;
+    color:var(--gold);
+  }
+  .callout{
+    background:linear-gradient(135deg, rgba(160,120,48,0.08), rgba(160,120,48,0.02));
+    border:1px solid var(--gold-light);
+    border-radius:2px;
+    padding:24px 28px;
+    margin:32px 0;
+  }
+  .callout .callout-title{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    font-size:20px;
+    color:var(--gold);
+    margin-bottom:10px;
+    letter-spacing:0.03em;
+  }
+  .two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:26px;
+    margin:30px 0;
+  }
+  .card{
+    background:var(--parchment-dark);
+    border:1px solid var(--gold-light);
+    padding:22px 24px;
+  }
+  .card h3{
+    font-family:'Cormorant Garamond', serif;
+    font-size:22px;
+    margin:0 0 12px;
+    color:var(--ink);
+    border-bottom:1px solid var(--gold-light);
+    padding-bottom:8px;
+  }
+  .card ul{margin:0;padding-left:20px;}
+  .card li{margin-bottom:8px;}
+  .divider{
+    text-align:center;
+    color:var(--gold);
+    font-size:22px;
+    letter-spacing:0.5em;
+    margin:56px 0;
+  }
+  table.timeline{
+    width:100%;
+    border-collapse:collapse;
+    margin:30px 0;
+    font-size:17px;
+  }
+  table.timeline td{
+    padding:10px 14px;
+    border-bottom:1px solid var(--gold-light);
+    vertical-align:top;
+  }
+  table.timeline td.year{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:700;
+    color:var(--gold);
+    white-space:nowrap;
+    width:110px;
+    font-size:19px;
+  }
+  .figure-caption{
+    text-align:center;
+    font-size:14px;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin-top:-10px;
+  }
+  footer.endnote{
+    margin-top:80px;
+    padding-top:30px;
+    border-top:3px double var(--gold);
+    text-align:center;
+    font-size:14px;
+    color:var(--ink-soft);
+    letter-spacing:0.04em;
+  }
+  .drop-ornament{
+    text-align:center;
+    font-family:'Cormorant Garamond', serif;
+    font-size:28px;
+    color:var(--gold-light);
+    margin:40px 0;
+  }
+  strong{color:var(--ink);}
+  em.highlight{
+    color:var(--gold);
+    font-style:italic;
+  }
+  @media (max-width:640px){
+    .page{padding:40px 22px 80px;}
+    h1.title{font-size:38px;}
+    .two-col{grid-template-columns:1fr;}
+  }
+
+}
+</style>
+    <div style="padding: 16px 20px; background: #f3e8d5;">
+        <button onclick="openThuVienArticle('')" style="background: transparent; border: 1px solid rgba(160,106,44,0.5); color: #a06a2c; padding: 7px 16px; cursor: pointer; font-family: 'Cormorant SC', serif; font-size: 0.85rem; letter-spacing: 0.05em; border-radius: 4px; font-weight: 600;">
+            &#8592; Quay lại danh sách
+        </button>
+    </div>
+    
+<div class="page">
+
+  <header class="masthead">
+    <div class="eyebrow">Lược Sử Nhân Vật · Ấn Bản Đặc Biệt</div>
+    <h1 class="title">Franklin D. Roosevelt</h1>
+    <p class="subtitle">Cậu ấm không biết buộc dây giày một mình, lớn lên thành người duy nhất được nước Mỹ bầu làm tổng thống tới bốn lần — và suýt bị bạn học từ chối kết nạp vào một câu lạc bộ sinh viên.</p>
+    <div class="byline">HYDE PARK — GROTON — HARVARD — NHÀ TRẮNG · 1882–1945</div>
+  </header>
+
+  <p class="lead">Nếu phải tóm tắt cuộc đời Franklin Delano Roosevelt trong một câu, có lẽ nên viết thế này: một cậu bé được mẹ mặc váy ren tới năm tuổi, lớn lên thành người đàn ông duy nhất trong lịch sử Hoa Kỳ dám ngồi ghế tổng thống bốn nhiệm kỳ, vượt qua cả đại suy thoái lẫn hai cuộc thế chiến, rồi cuối cùng lại chính là người ta vẫn còn tranh cãi tới hôm nay — không phải vì ông tầm thường, mà vì ông quá nhiều tầng lớp để bàn cho xuể trong một buổi trà chiều. Bài viết này sẽ cố lột hết những tầng đó ra, có chút hài hước cho đỡ nặng nề, nhưng tuyệt đối không né tránh phần khó nuốt.</p>
+
+  <div class="divider">❦ ❦ ❦</div>
+
+  <p class="section-number">Chương Một</p>
+  <h2 class="section">Cậu Bé Trong Lồng Kính Mạ Vàng</h2>
+
+  <p>Franklin sinh ngày 30 tháng 1 năm 1882 tại Hyde Park, New York, trong một ca sinh khó đến mức bác sĩ phải thổi ngạt để cậu bé thở được hơi đầu tiên. Có lẽ vì cú vào đời gian nan đó mà Sara Delano — người mẹ quyền lực và có phần độc chiếm — quyết định đây sẽ là đứa con duy nhất, và cũng là trung tâm vũ trụ của bà cho đến hết đời. Bà mặc cho cậu những bộ váy dài và để tóc xoăn tới gần sáu tuổi, một kiểu nuôi con "quý tộc kiểu Anh" phổ biến trong giới thượng lưu Mỹ thời Gilded Age, khiến cậu bé lớn lên trong một môi trường được bọc lót kỹ đến mức tách biệt hẳn với những trải nghiệm bình thường của trẻ con Mỹ.</p>
+
+  <p>Cha cậu, James Roosevelt, là một quý ông sùng đạo, dạy con trai cưỡi ngựa, chèo thuyền, và quan trọng hơn — trách nhiệm đạo đức phải giúp đỡ người kém may mắn. Năm Franklin lên năm, ông đưa con tới Nhà Trắng gặp Tổng thống Grover Cleveland, người đã nói một câu tiên tri ngược đời với cậu bé: "Ta ước một điều lạ lùng cho cháu — rằng cháu sẽ không bao giờ làm tổng thống Hoa Kỳ." Đời đúng là thích trêu ngươi những lời tiên tri.</p>
+
+  <p>Cái giá của sự nuông chiều ấy là Franklin học được rất sớm nghệ thuật che giấu cảm xúc thật — luôn phải tỏ ra dễ chịu, không bao giờ để lộ điều gì khó nghe. Kỹ năng "diễn" xã giao này, vốn được rèn từ tấm bé, sau này trở thành một trong những vũ khí chính trị lợi hại nhất của ông: khả năng đọc vị người đối diện qua một ánh mắt, một cái nhíu mày, mà không để lộ bản thân mình đang nghĩ gì. Báo chí sau này gọi ông là "con nhân sư" cũng vì lẽ đó.</p>
+
+  <blockquote>
+    "Tôi chưa bao giờ thấy một cậu bé nào có vẻ luôn tận hưởng cuộc sống một cách nhất quán như vậy."
+    <cite>— Sara Delano Roosevelt, nói về con trai mình</cite>
+  </blockquote>
+
+  <p>Năm 14 tuổi, cậu ấm được gửi tới trường nội trú Groton — cú sốc văn hóa đầu đời. Từ một đứa trẻ quen được phục vụ tận răng, Franklin bỗng phải sống giữa những cậu bé con nhà quyền quý khác, nơi vị thế được đo bằng cơ bắp và sự nổi loạn, hai thứ mà cậu chẳng có món nào. Cậu không giỏi thể thao, không phải học sinh xuất sắc, và tự nhận nhiều năm sau rằng mình luôn cảm thấy đứng ngoài cuộc chơi. Nhưng cậu biết cách nuốt nỗi buồn vào trong và không bao giờ để nó lộ ra trong những lá thư gửi về nhà — bài học "luôn phải dễ thương" từ tấm bé phát huy tác dụng ngay tại đây.</p>
+
+  <p>Điều để lại dấu ấn sâu đậm nhất ở Groton không phải là một môn học, mà là một buổi nói chuyện của người anh họ xa — Theodore Roosevelt — người mà Franklin ngưỡng mộ tới mức sau này biến thành hình mẫu chính trị trọn đời để noi theo, từ phong thái đến cả những chức vụ từng đảm nhiệm.</p>
+
+  <div class="divider">❦ ❦ ❦</div>
+
+  <p class="section-number">Chương Hai</p>
+  <h2 class="section">Harvard: Bốn Năm Học Ít, Chơi Nhiều, Nhưng Ngộ Ra Kha Khá</h2>
+
+  <p>Roosevelt vào Harvard năm 1900, cùng năm cha ông qua đời. Nếu bạn tưởng tượng một sinh viên xuất sắc, đứng đầu lớp, hãy dẹp ngay hình ảnh đó. Tại Harvard, Franklin học hành làng nhàng, giữ mức điểm trung bình nhỉnh hơn C một chút, và dành phần lớn thời gian, tâm huyết cho đời sống xã giao và hoạt động ngoại khóa. Ông sống tại khu "Gold Coast" sang trọng dành cho con nhà giàu, cùng bạn thân từ Groton là Lathrop Brown, trong một căn hộ trang trí đầy cờ trường, ảnh đội thể thao và thiệp mời tiệc tùng.</p>
+
+  <p>Tham vọng xã hội lớn nhất của cậu sinh viên trẻ là được kết nạp vào Porcellian Club — câu lạc bộ danh giá bậc nhất Harvard, nơi người anh họ Theodore từng là thành viên. Nhưng đời không chiều lòng người: Franklin bị từ chối, một cú sốc mà chính ông sau này gọi là "nỗi thất vọng lớn nhất" cuộc đời mình tính đến thời điểm đó. Ông đành gia nhập Fly Club — cũng danh giá, chỉ là không đỉnh bằng — và tự an ủi bằng cách trở thành người pha rượu punch giỏi nhất trong các buổi lễ kết nạp biên tập viên mới của tờ báo trường.</p>
+
+  <div class="callout">
+    <div class="callout-title">Thành tích lớn nhất đời sinh viên</div>
+    <p style="margin:0;">Không phải điểm số, không phải thể thao — mà là ghế Tổng biên tập <em>The Harvard Crimson</em>. Ông vực dậy một tờ báo trường "buồn ngủ" thành thứ khiến cả trường bàn tán, tăng lượng phát hành và cả huyết áp của ban giảng huấn. Cấp dưới của ông kể rằng dù ông không phải nhà báo xuất chúng, ông có tài khiến người khác vui vẻ làm việc hết mình cho mình — kể cả những người thợ in vốn nổi tiếng khó tính.</p>
+  </div>
+
+  <p>Về học thuật, Franklin từng thử sức với triết học trừu tượng qua lớp Philosophy 1a của giáo sư Josiah Royce — và bỏ ngang gần như ngay lập tức. Một sử gia viết rằng sức hấp dẫn của tư duy hệ thống hóa, trừu tượng mãi mãi là một bí ẩn đối với Roosevelt suốt cuộc đời. Đây là chi tiết quan trọng: ông không phải một nhà tư tưởng hàn lâm, không xây dựng học thuyết đồ sộ như một triết gia. Ông là người thực dụng bẩm sinh — thứ mà sau này định hình toàn bộ phong cách lãnh đạo của ông.</p>
+
+  <p>Chính ông, nhiều năm sau, cũng tự giễu quãng thời gian học kinh tế của mình bằng một câu để đời: ông đã học kinh tế suốt bốn năm đại học, và mọi thứ được dạy đều sai. Câu nói ấy, tưởng như đùa, lại là chìa khóa để hiểu cả sự nghiệp chính trị của ông — một người không tin tưởng tuyệt đối vào bất kỳ học thuyết kinh tế đóng khung nào, sẵn sàng thử-sai liên tục miễn là có hiệu quả thực tế.</p>
+
+  <p>Cũng tại Harvard, hai sự kiện định hình cả cuộc đời ông xảy ra gần như song song. Một là việc người anh họ Theodore Roosevelt trở thành Tổng thống Hoa Kỳ năm 1901 sau vụ ám sát McKinley — khiến vị thế của cậu sinh viên họ Roosevelt tại trường tăng vọt. Hai là ông bắt đầu để ý tới một cô gái họ xa khác: Eleanor Roosevelt, cháu gái của Theodore — người phụ nữ nghiêm túc, thông minh, và sẽ trở thành người bạn đời kiêm đối tác chính trị quan trọng bậc nhất đời ông.</p>
+
+  <div class="drop-ornament">◆</div>
+
+  <p>Roosevelt tốt nghiệp Harvard năm 1903 với bằng cử nhân Sử học, chỉ trong ba năm, rồi ở lại thêm một năm học sau đại học chủ yếu để tiếp tục công việc ở tờ Crimson. Sau đó ông vào Trường Luật Columbia nhưng bỏ ngang năm 1907 sau khi đã đỗ kỳ thi luật sư bang New York — bằng cấp, với ông, chưa bao giờ là mục tiêu tối thượng; cái ông cần là tấm vé để bước vào đời thực.</p>
+
+  <div class="divider">❦ ❦ ❦</div>
+
+  <p class="section-number">Chương Ba</p>
+  <h2 class="section">Triết Lý Của Một Người Không Thích Triết Lý</h2>
+
+  <p>Đây là phần thú vị nhất — và cũng khó gói gọn nhất — trong toàn bộ chân dung Roosevelt: ông theo đuổi triết lý gì?</p>
+
+  <p>Câu trả lời trung thực là: Roosevelt không phải một nhà tư tưởng có hệ thống. Ông không để lại một cuốn "Tuyên ngôn Roosevelt" nào cho hậu thế nghiền ngẫm như Marx hay Adam Smith. Cái ông có là một <em class="highlight">bản năng chính trị thực dụng cực kỳ sắc bén</em>, được rèn giũa qua chính cách ông lớn lên: một cậu bé thượng lưu học được cách quan sát tinh tế cảm xúc người khác để tồn tại trong một gia đình khắt khe về cảm xúc, một sinh viên chán ghét tư duy trừu tượng nhưng lại rất giỏi vận hành con người và tổ chức, một chính trị gia sẵn sàng vứt bỏ bất kỳ học thuyết kinh tế nào nếu nó không giải quyết được vấn đề trước mắt.</p>
+
+  <p>Đây là nơi câu hỏi bạn đặt ra — về quan điểm rằng <em>"lý thuyết được tạo ra để thuyết phục người lương thiện, còn luật chơi được tạo ra để bảo vệ kẻ mạnh"</em> — trở nên đáng phân tích. Cần nói rõ: đây không phải một câu trích dẫn nguyên văn được xác nhận là của chính Roosevelt, mà giống một lăng kính diễn giải về cách ông vận hành quyền lực. Nhưng lăng kính này, thú vị thay, lại khá khớp với nhiều mảng trong sự nghiệp của ông — nếu ta nhìn thẳng vào nó thay vì tô hồng.</p>
+
+  <div class="callout">
+    <div class="callout-title">Diễn giải: Lý thuyết như công cụ thuyết phục, luật chơi như công cụ bảo vệ quyền lực</div>
+    <p>Trong suốt sự nghiệp, Roosevelt liên tục dùng <strong>ngôn từ lý tưởng</strong> — "Chính sách Mới" (New Deal), "Bốn Quyền Tự Do", những buổi "chuyện trò bên lò sưởi" ấm áp — như một thứ ngôn ngữ để thuyết phục đại chúng, những "người lương thiện" tin vào công lý, vào một chính phủ chăm lo cho dân nghèo. Ông có tài kể chuyện khiến người nghe cảm thấy ông đang nói chuyện trực tiếp với chính họ, hiểu đúng nỗi khổ của họ.</p>
+    <p style="margin-bottom:0;">Nhưng song song đó, khi lý thuyết và lý tưởng bị cản trở bởi cấu trúc quyền lực hiện có — như khi Tối cao Pháp viện tuyên nhiều đạo luật New Deal là vi hiến — ông không ngần ngại tìm cách <strong>viết lại luật chơi</strong> để bảo vệ quyền lực hành pháp của chính mình, điển hình là kế hoạch "nhồi thêm thẩm phán" (court-packing) năm 1937. Đây chính là khoảnh khắc lộ rõ nhất ranh giới giữa lý tưởng ông rao giảng và cách ông thực sự vận hành quyền lực khi bị dồn vào chân tường.</p>
+  </div>
+
+  <p>Nói cách khác, triết lý sống của Roosevelt không nằm trong sách vở mà nằm trong hành động: ông tin vào một chính phủ liên bang chủ động, sẵn sàng can thiệp sâu vào nền kinh tế và đời sống xã hội để cứu vớt hệ thống tư bản khỏi chính sự sụp đổ của nó — nhưng ông theo đuổi niềm tin ấy bằng phương pháp thử-sai thực dụng hơn là bằng một học thuyết nhất quán. Chính vì thế mà cùng một con người vừa có thể là tác giả của Đạo luật An sinh Xã hội mang tính nhân văn sâu sắc, vừa có thể ký sắc lệnh giam giữ hơn 120.000 người Mỹ gốc Nhật mà gần như không đấu tranh nội tâm đáng kể nào được ghi nhận. Lý tưởng dành cho đám đông "người lương thiện" cần được thuyết phục; quyền lực thực tế thì vận hành theo luật chơi khác — luật chơi bảo vệ những gì ông cho là cần thiết để giữ vững vị thế và mục tiêu lớn hơn.</p>
+
+  <p>Cũng cần công bằng mà nói: ông không phải người tàn nhẫn có tính toán ác ý. Nhiều sử gia mô tả ông là người ấm áp, lạc quan lan tỏa (di sản trực tiếp từ cách mẹ ông nuôi dạy), thực sự tin vào công bằng xã hội. Nhưng khi lý tưởng ấy va chạm với thực tế chính trị — đặc biệt là khi cần giữ sự ủng hộ của các nghị sĩ miền Nam để thông qua luật, ông sẵn sàng lùi bước trước những vấn đề như luật chống hành hình tư nhân (anti-lynching) nhắm vào người da đen, dù bản thân ông không phải người phân biệt chủng tộc theo nghĩa cá nhân. Đó là một minh chứng khác cho triết lý thực dụng: lý tưởng bị điều chỉnh linh hoạt để phục vụ mục tiêu lớn hơn — giữ được quyền lực để làm được nhiều việc khác.</p>
+
+  <div class="divider">❦ ❦ ❦</div>
+
+  <p class="section-number">Chương Bốn</p>
+  <h2 class="section">Bước Ngoặt: Khi Đôi Chân Ngừng Vâng Lời</h2>
+
+  <p>Trước khi bàn tới sự nghiệp chính trị, phải dừng lại ở một khúc quanh định mệnh. Sau khi kết hôn với Eleanor năm 1905 (người chú họ Theodore đích thân trao cô dâu), Roosevelt bước vào chính trường: Thượng nghị sĩ bang New York, rồi Trợ lý Bộ trưởng Hải quân dưới thời Tổng thống Woodrow Wilson — vị trí giúp ông tích lũy kinh nghiệm quản trị quy mô lớn, tiền đề cho vai trò Tổng tư lệnh sau này. Năm 1920, ông được chọn làm ứng viên phó tổng thống cùng liên danh James Cox nhưng thất bại trước Warren Harding.</p>
+
+  <p>Rồi năm 1921, tai họa ập đến: ông mắc bệnh bại liệt (polio), liệt hoàn toàn hai chân. Đây là cú sốc thể chất khủng khiếp với một người đàn ông từng tự hào về vóc dáng vận động viên. Nhưng chính trong quá trình phục hồi gian khổ — với sự hỗ trợ không mệt mỏi của Eleanor và người trợ lý thân tín Louis Howe — ý chí sắt đá của ông càng được tôi luyện. Eleanor sau này kể rằng bà từng thấy ông thực sự sợ hãi trong những ngày đầu phát bệnh, nhưng sau đó bà chưa từng nghe ông nói mình sợ bất cứ điều gì nữa.</p>
+
+  <p>Ông đầu tư một phần lớn tài sản cá nhân để cải tạo khu suối nước nóng Warm Springs, Georgia thành nơi trị liệu — sau này trở thành "Nhà Trắng nhỏ" của ông. Về mặt hình ảnh công chúng, Roosevelt và đội ngũ của ông khéo léo che giấu mức độ khuyết tật thực sự trước công chúng suốt hai thập niên tiếp theo — một minh chứng khác cho khả năng kiểm soát hình ảnh và cảm xúc mà ông đã rèn từ thời thơ ấu.</p>
+
+  <div class="divider">❦ ❦ ❦</div>
+
+  <p class="section-number">Chương Năm</p>
+  <h2 class="section">Thành Công: Người Đàn Ông Ngồi Xe Lăn Cõng Cả Nước Mỹ</h2>
+
+  <p>Sự nghiệp chính trị của Roosevelt hồi sinh mạnh mẽ vào cuối thập niên 1920. Năm 1928 ông đắc cử Thống đốc New York, tái đắc cử năm 1930 với thành tích chống chọi Đại Suy thoái được đánh giá cao. Năm 1932, giữa lúc nước Mỹ chìm trong khủng hoảng kinh tế tồi tệ nhất lịch sử — tỷ lệ thất nghiệp chạm mức 25% — ông đánh bại Herbert Hoover với khoảng bảy triệu phiếu chênh lệch, mở ra kỷ nguyên chính trị dài nhất trong lịch sử tổng thống Hoa Kỳ.</p>
+
+  <table class="timeline">
+    <tr><td class="year">1933</td><td>Nhậm chức giữa lúc hệ thống ngân hàng sụp đổ. Trong "Một Trăm Ngày Đầu" huyền thoại, hàng loạt đạo luật cải tổ ngân hàng, chứng khoán, nông nghiệp và công nghiệp được thông qua thần tốc.</td></tr>
+    <tr><td class="year">1933</td><td>Bắt đầu chuỗi "chuyện trò bên lò sưởi" (fireside chats) qua radio — một phát minh truyền thông chính trị thay đổi cách tổng thống nói chuyện với dân, giản dị như đang tâm sự với hàng xóm ở Hyde Park.</td></tr>
+    <tr><td class="year">1935</td><td>Đạo luật An sinh Xã hội (Social Security Act) ra đời — có lẽ là di sản lập pháp bền vững và quan trọng nhất của toàn bộ New Deal.</td></tr>
+    <tr><td class="year">1935</td><td>Đạo luật Wagner trao quyền tổ chức và thương lượng tập thể cho công đoàn lao động, thay đổi vĩnh viễn quan hệ lao động Mỹ.</td></tr>
+    <tr><td class="year">1941</td><td>Thông qua đạo luật Lend-Lease, biến Hoa Kỳ thành "kho vũ khí của nền dân chủ" trước khi chính thức tham chiến.</td></tr>
+    <tr><td class="year">1941–45</td><td>Lãnh đạo Hoa Kỳ và phe Đồng Minh qua Thế chiến II, đích thân tham gia hoạch định chiến lược quân sự và ngoại giao cấp cao, đặt nền móng tư tưởng cho Liên Hợp Quốc sau này.</td></tr>
+  </table>
+
+  <p>Yếu tố then chốt làm nên thành công của Roosevelt không chỉ nằm ở chính sách, mà ở khả năng truyền cảm hứng gần như vô song: sự tự tin, lạc quan pha trộn với bản lĩnh chính trị sắc sảo đã giúp hàng triệu người Mỹ tuyệt vọng cảm thấy có ai đó đang thực sự hành động vì họ. Câu nói bất hủ trong diễn văn nhậm chức đầu tiên — rằng thứ duy nhất đáng sợ chính là nỗi sợ hãi — đã trở thành biểu tượng tinh thần của cả một thời đại khủng hoảng.</p>
+
+  <div class="divider">❦ ❦ ❦</div>
+
+  <p class="section-number">Chương Sáu</p>
+  <h2 class="section">Thất Bại: Mặt Tối Của Ánh Hào Quang</h2>
+
+  <p>Không có anh hùng nào sạch sẽ hoàn toàn, và Roosevelt chắc chắn không phải ngoại lệ. Ba vết đen lớn nhất trong di sản của ông đáng được nhìn thẳng, không né tránh:</p>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>1. Kế hoạch "nhồi" Tối cao Pháp viện</h3>
+      <ul>
+        <li>Sau khi Tối cao Pháp viện liên tục bác bỏ nhiều đạo luật New Deal (như Đạo luật Phục hồi Công nghiệp Quốc gia) là vi hiến, Roosevelt năm 1937 đề xuất bổ sung thêm thẩm phán mới cho mỗi thẩm phán trên 70 tuổi chưa nghỉ hưu — có thể mở rộng tòa lên 15 ghế.</li>
+        <li>Kế hoạch bị Quốc hội, kể cả nhiều đồng minh Dân chủ, phản đối dữ dội và cuối cùng thất bại — một trong những sai lầm chính trị lớn nhất đời ông, làm lộ rõ tham vọng thâu tóm quyền lực vượt khỏi ranh giới hiến pháp.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>2. Giam giữ người Mỹ gốc Nhật</h3>
+      <ul>
+        <li>Sau trận Trân Châu Cảng, Sắc lệnh 9066 (2/1942) dẫn tới việc giam giữ khoảng 120.000 người gốc Nhật, hai phần ba là công dân Mỹ, trong các trại tập trung — bất chấp báo cáo tình báo nội bộ cho thấy họ hầu như không phải mối đe dọa.</li>
+        <li>Nhiều sử gia sau này kết luận quyết định này chủ yếu xuất phát từ định kiến chủng tộc và làn sóng hoảng loạn thời chiến hơn là nhu cầu an ninh thực sự — một trong những vi phạm nhân quyền nghiêm trọng nhất trong lịch sử hiện đại Hoa Kỳ.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">3. Sự im lặng có tính toán về nạn phân biệt chủng tộc</div>
+    <p style="margin:0;">Dù không phải người theo tư tưởng phân biệt chủng tộc cá nhân và từng tiếp đón khách mời da đen tại Nhà Trắng, Roosevelt từ chối ủng hộ dự luật liên bang chống hành hình tư nhân vì không muốn đánh mất sự ủng hộ của các nghị sĩ miền Nam — minh chứng rõ nét cho việc lý tưởng công bằng bị đặt xuống dưới toan tính giữ quyền lực chính trị.</p>
+  </div>
+
+  <p>Về mặt kinh tế, cũng cần thành thật: bản thân New Deal, dù mang tính biểu tượng và nhân văn to lớn, không phải là thứ đơn phương chấm dứt Đại Suy thoái — nền kinh tế Mỹ chỉ thực sự phục hồi hoàn toàn nhờ guồng máy sản xuất khổng lồ phục vụ Thế chiến II. Đây là điểm mà cả những người ngưỡng mộ lẫn phê phán Roosevelt đều phải thừa nhận theo những cách khác nhau.</p>
+
+  <div class="divider">❦ ❦ ❦</div>
+
+  <p class="section-number">Chương Bảy</p>
+  <h2 class="section">Tâm Huyết Lớn Nhất: Một Chính Phủ Không Bỏ Rơi Ai</h2>
+
+  <p>Nếu phải chọn ra một điều Roosevelt tâm huyết nhất, xuyên suốt từ những năm tháng chèo lái nước Mỹ qua khủng hoảng kinh tế cho tới lúc dẫn dắt liên minh chống phát xít, đó chính là niềm tin rằng <em class="highlight">chính phủ liên bang có trách nhiệm đạo đức phải chủ động bảo vệ những người yếu thế nhất trong xã hội</em> — người thất nghiệp, người già, người nghèo, công nhân bị bóc lột. Đây không phải một ý tưởng trừu tượng với ông; nó bắt nguồn từ chính lời dạy của cha ông về trách nhiệm giúp đỡ người kém may mắn, được củng cố thêm qua ảnh hưởng của Eleanor — người đã mở mắt cho ông về cảnh nghèo khổ thực sự trong các khu ổ chuột New York mà một cậu ấm Hyde Park chưa từng biết tới.</p>
+
+  <p>Đạo luật An sinh Xã hội năm 1935 chính là kết tinh rõ ràng nhất của tâm huyết này — một mạng lưới an sinh cho người già, người nghèo và người thất nghiệp mà, về mặt lý thuyết, bao phủ toàn thể người dân Mỹ. Đó là di sản mà ngay cả những người phê phán gay gắt nhất về mặt kinh tế của New Deal cũng khó lòng phủ nhận giá trị lâu dài.</p>
+
+  <div class="divider">❦ ❦ ❦</div>
+
+  <p class="section-number">Chương Tám</p>
+  <h2 class="section">Người Đời Đánh Giá Ông Ra Sao?</h2>
+
+  <p>Roosevelt gần như luôn nằm trong top ba tổng thống vĩ đại nhất lịch sử Hoa Kỳ theo hầu hết các bảng xếp hạng của giới sử học — thường chỉ đứng sau Lincoln và Washington. Sử gia Arthur M. Schlesinger Jr. từng viết một câu tổng kết đầy sức nặng: thế giới chúng ta đang sống hôm nay chính là thế giới của Franklin Roosevelt.</p>
+
+  <p>Nhưng đánh giá đó không hề đồng nhất. Giới học thuật cánh tả và tự do thường tôn vinh ông như hình mẫu lãnh đạo khủng hoảng không ai sánh bằng ngoài Lincoln — người cứu vãn cả chủ nghĩa tư bản lẫn nền dân chủ Mỹ khỏi bờ vực sụp đổ. Ngược lại, các nhà phê bình bảo thủ và tự do kinh tế (libertarian) chỉ ra rằng thành tích kinh tế của New Deal bị thổi phồng, rằng hồ sơ về tự do dân sự của ông — đặc biệt vụ giam giữ người Nhật — là một vết nhơ không thể gột rửa bằng những lời hoa mỹ về "Bốn Quyền Tự Do".</p>
+
+  <p>Một số sử gia còn đi xa hơn, cho rằng việc giới học thuật thường mô tả vụ giam giữ người Nhật như một "ngoại lệ đáng buồn" của một tổng thống nhân văn là cách kể chuyện quá dễ dãi — bởi bằng chứng cho thấy chính Roosevelt đã chủ động và có ý thức rõ ràng trong quyết định này, không phải một người bị cuốn theo cơn cuồng loạn tập thể như nhiều người vẫn hình dung.</p>
+
+  <p>Nhìn tổng thể, hình ảnh phổ biến nhất về Roosevelt trong ký ức đại chúng vẫn cực kỳ tích cực: giọng nói ấm áp qua radio, nụ cười lạc quan bất chấp đôi chân bất động, một người dẫn dắt cả dân tộc vượt qua nỗi sợ hãi lớn nhất thế kỷ 20. Nhưng phần "con người thật" phía sau tấm huy chương ấy — thực dụng, đôi khi lạnh lùng tính toán, sẵn sàng hy sinh nguyên tắc vì mục tiêu lớn hơn — mới là phần khiến ông trở thành một nhân vật lịch sử phức tạp và đáng nghiền ngẫm hơn nhiều so với bức chân dung đơn giản trên đồng mười xu.</p>
+
+  <div class="divider">❦ ❦ ❦</div>
+
+  <p class="section-number">Chương Chín</p>
+  <h2 class="section">Di Sản Còn Lại</h2>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>Di sản thể chế</h3>
+      <ul>
+        <li>Hệ thống An sinh Xã hội vẫn vận hành tới ngày nay</li>
+        <li>Quyền tổ chức công đoàn và thương lượng tập thể</li>
+        <li>Ủy ban Chứng khoán và Giao dịch (SEC), bảo hiểm tiền gửi ngân hàng (FDIC)</li>
+        <li>Nền móng tư tưởng cho Liên Hợp Quốc</li>
+        <li>Tám thẩm phán Tối cao Pháp viện do ông bổ nhiệm, định hình tư pháp Mỹ nhiều thập niên sau đó</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Di sản chính trị & văn hóa</h3>
+      <ul>
+        <li>Định hình lại vai trò tổng thống như một nhà lãnh đạo chủ động can thiệp kinh tế — mô hình được noi theo tới tận ngày nay</li>
+        <li>Phát minh phong cách truyền thông chính trị "gần gũi" qua radio, tiền thân của mọi hình thức giao tiếp trực tiếp với cử tri sau này</li>
+        <li>Tu chính án thứ 22 (giới hạn hai nhiệm kỳ tổng thống) ra đời trực tiếp như phản ứng với việc ông tại vị bốn nhiệm kỳ</li>
+        <li>Di sản gây tranh cãi về ranh giới giữa quyền lực hành pháp khẩn cấp và tự do dân sự — vẫn được viện dẫn trong các cuộc tranh luận chính trị hiện đại</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>Cuối cùng, có lẽ điều thú vị nhất về Franklin Roosevelt không phải ông đã làm được bao nhiêu việc lớn, mà là cách một cậu ấm từng bị từ chối vào một câu lạc bộ sinh viên, từng chán ghét triết học trừu tượng đến mức bỏ học giữa chừng, lại trở thành người định hình cả một thế kỷ chính trị Mỹ — không phải bằng một cuốn sách lý thuyết vĩ đại, mà bằng bản năng thực dụng sắc bén và khả năng khiến "người lương thiện" tin tưởng mình, trong khi âm thầm viết lại luật chơi mỗi khi cần thiết để giữ vững con đường đã chọn. Đó vừa là bí quyết thành công vĩ đại của ông, vừa là lời cảnh tỉnh muôn thuở về việc đừng bao giờ đánh giá một nhà lãnh đạo chỉ qua những gì họ nói trước công chúng.</p>
+
+  <footer class="endnote">
+    Tài liệu tham khảo: FDR Presidential Library &amp; Museum · Miller Center (UVA) · Britannica · The Harvard Crimson Archive · FDR Foundation · History.com · Wikipedia (Criticism of FDR, Internment of Japanese Americans) · Densho Encyclopedia · Libertarianism.org<br>
+    Biên soạn dưới dạng lược sử tham khảo — không thay thế cho các công trình học thuật chuyên sâu.
+  </footer>
+
+</div>
+
+    <div style="padding: 20px; text-align: center; background: #f3e8d5;">
+        <button onclick="openThuVienArticle('')" style="background: transparent; border: 1px solid rgba(160,106,44,0.5); color: #a06a2c; padding: 7px 16px; cursor: pointer; font-family: 'Cormorant SC', serif; font-size: 0.85rem; letter-spacing: 0.05em; border-radius: 4px; font-weight: 600;">
+            &#8592; Quay lại danh sách
+        </button>
+    </div>
+</div>
+
 
             <!-- PANEL 7: GAME -->
             <div id="panel-game" class="tab-panel">
