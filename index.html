@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@400;500;600;700;800&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=Special+Elite&family=Cinzel:wght@400;500;600;700&family=Inconsolata:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/style.css?v=26">
     <style>
@@ -156,6 +157,19 @@ html, body {
             <div id="panel-trang-chu" class="tab-panel active">
                 <h2 class="section-title"><i class="fa-solid fa-fire-flame-curved"></i> Bài viết mới</h2>
                 <div class="news-list">
+                        <!-- Post: Edward Thorp (Huyen Thoai) -->
+                        <a href="/huyen-thoai/edward-thorp" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-crown"></i> Huyền thoại &amp; Tài chính</span>
+                                <span class="news-time">19/09/2026</span>
+                            </div>
+                            <h3 class="news-heading">Edward Thorp — Giáo Sư Đếm Bài, Thắng Cả Sòng Bạc Lẫn Phố Wall</h3>
+                            <p class="news-excerpt">Câu chuyện về một cậu bé nghèo thích nghịch hóa chất, người chứng minh rằng toán học kiếm được tiền ở cả bàn blackjack lẫn sàn chứng khoán.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc hồ sơ</span>
+                            </div>
+                        </a>
+
                         <!-- Post: FDR (Thu Vien) -->
                         <a href="/huyen-thoai/fdr-luoc-su" class="news-card clickable-card">
                             <div class="news-meta">
@@ -8088,6 +8102,19 @@ footer p+p { margin-top: 8px; }
                 <div id="huyen-thoai-list-view" class="sukien-view active">
                     <h2 class="section-title"><i class="fa-solid fa-crown"></i> Huyền thoại trong các lĩnh vực</h2>
                     <div class="news-list">
+                        <!-- Post: Edward Thorp -->
+                        <a href="/huyen-thoai/edward-thorp" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-crown"></i> Toán học &amp; Định lượng</span>
+                                <span class="news-time">14/08/1932 – nay</span>
+                            </div>
+                            <h3 class="news-heading"><span style="font-size:0.75em;color:#6fae6a;font-weight:500;display:block;margin-bottom:2px;letter-spacing:0.04em;">Toán học &amp; Tài chính định lượng</span>Edward Thorp — Giáo Sư Đếm Bài, Thắng Cả Sòng Bạc Lẫn Phố Wall</h3>
+                            <p class="news-excerpt">Từ một cậu bé nghèo nghịch hóa chất đến người chứng minh toán học có thể đánh bại casino và thị trường chứng khoán — cha đẻ của đầu tư định lượng hiện đại.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc hồ sơ</span>
+                            </div>
+                        </a>
+
 <!-- Post: FDR Luoc Su (Thu Vien) -->
                         <a href="/huyen-thoai/fdr-luoc-su" class="news-card clickable-card">
                             <div class="news-meta">
@@ -14577,6 +14604,727 @@ footer p+p { margin-top: 8px; }
         </button>
     </div>
 </div>
+<div id="article-thorp-panel" class="sukien-article-panel thorp-body">
+<style>
+#article-thorp-panel {
+
+&{
+  --paper:#f3f6f0;
+  --paper-2:#e6ede4;
+  --ink:#18231d;
+  --muted:#4f6056;
+  --rule:#c6d1c5;
+  --felt:#14402f;
+  --felt-deep:#0b2a1f;
+  --brass:#8f6a14;
+  --brass-soft:#ece1bd;
+  --red:#a3241d;
+  --head:#14402f;
+}
+@media (prefers-color-scheme: dark){
+  &{
+    --paper:#0e1813;
+    --paper-2:#17251d;
+    --ink:#e3eae4;
+    --muted:#a3b2a8;
+    --rule:#2b3c31;
+    --brass:#d3a83e;
+    --brass-soft:#2a2410;
+    --red:#e2645b;
+    --head:#b9d8c8;
+  }
+}
+*{box-sizing:border-box}
+&.thorp-html {-webkit-text-size-adjust:100%}
+&.thorp-body {
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Newsreader",Georgia,"Times New Roman",serif;
+  font-size:1.14rem;
+  line-height:1.78;
+}
+.wrap{width:min(44rem,calc(100% - 2.5rem));margin:0 auto}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:var(--felt);
+  color:#f2f5ee;
+  padding:3.2rem 0 3.6rem;
+  border-bottom:6px solid var(--brass);
+}
+.hero-inner{
+  width:min(60rem,calc(100% - 2.5rem));
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 15rem;
+  gap:2.5rem;
+  align-items:center;
+}
+.hero h1{
+  font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  font-weight:800;
+  font-size:clamp(2.1rem,5.2vw,3.5rem);
+  line-height:1.08;
+  letter-spacing:-0.02em;
+  margin:0 0 1.1rem;
+}
+.hero .dek{
+  font-size:1.22rem;
+  line-height:1.6;
+  margin:0 0 1rem;
+  color:#dfe8dc;
+}
+.hero .byline{
+  font-size:.98rem;
+  color:#b8c9bb;
+  margin:0;
+}
+.cards{
+  position:relative;
+  height:16rem;
+  width:15rem;
+  justify-self:center;
+}
+.card{
+  position:absolute;
+  width:9.2rem;
+  height:12.9rem;
+  background:#fffdf7;
+  border:1px solid #d8d4c4;
+  border-radius:.7rem;
+  box-shadow:0 10px 24px rgba(0,0,0,.35);
+  color:#161616;
+  font-family:Georgia,"Times New Roman",serif;
+}
+.card .corner{
+  position:absolute;
+  line-height:1;
+  font-weight:700;
+  font-size:1.55rem;
+  text-align:center;
+}
+.card .corner small{display:block;font-size:1.25rem;margin-top:.1rem}
+.card .tl{top:.55rem;left:.6rem}
+.card .br{bottom:.55rem;right:.6rem;transform:rotate(180deg)}
+.card .pip{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:4.6rem;
+}
+.card.ace{left:0;top:.6rem;transform:rotate(-9deg)}
+.card.king{left:4.6rem;top:1.2rem;transform:rotate(8deg);color:var(--red)}
+.card.king .pip{color:var(--red)}
+.card-caption{
+  grid-column:1 / -1;
+  margin:.4rem 0 0;
+  font-size:.95rem;
+  color:#a9bdae;
+  font-style:italic;
+}
+
+/* ---------- Layout ---------- */
+main{padding:2.6rem 0 3rem}
+h2{
+  font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  font-weight:800;
+  font-size:1.85rem;
+  line-height:1.2;
+  letter-spacing:-0.01em;
+  color:var(--head);
+  margin:3rem 0 1rem;
+  padding-bottom:.55rem;
+  border-bottom:2px solid var(--brass);
+}
+h3{
+  font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  font-weight:600;
+  font-size:1.28rem;
+  line-height:1.3;
+  color:var(--head);
+  margin:2rem 0 .5rem;
+}
+p{margin:0 0 1.1rem}
+strong{font-weight:600}
+em{font-style:italic}
+ul,ol{margin:0 0 1.2rem;padding-left:1.3rem}
+li{margin-bottom:.55rem}
+li::marker{color:var(--brass)}
+
+.suits{
+  text-align:center;
+  letter-spacing:.9em;
+  padding-left:.9em;
+  margin:3.2rem 0 0;
+  font-size:1.35rem;
+  color:var(--ink);
+  font-family:Georgia,serif;
+}
+.suits .r{color:var(--red)}
+
+.note{
+  background:var(--brass-soft);
+  border-left:5px solid var(--brass);
+  padding:.9rem 1.15rem;
+  margin:1.6rem 0;
+  font-size:1.03rem;
+  line-height:1.65;
+}
+.note p:last-child{margin-bottom:0}
+.note strong{color:var(--ink)}
+
+.toc{
+  border:1px solid var(--rule);
+  background:var(--paper-2);
+  padding:1.2rem 1.5rem 1rem;
+  margin:0 0 1rem;
+  columns:2;
+  column-gap:2rem;
+  font-size:1.02rem;
+  line-height:1.55;
+}
+.toc ul{margin:0;padding-left:1.1rem}
+.toc li{margin-bottom:.35rem;break-inside:avoid}
+.toc-title{
+  font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  font-weight:800;
+  font-size:1.15rem;
+  color:var(--head);
+  margin:0 0 .6rem;
+  column-span:all;
+}
+
+/* ---------- Tables ---------- */
+.tablewrap{overflow-x:auto;margin:1.4rem 0 1.6rem;border:1px solid var(--rule)}
+table{border-collapse:collapse;width:100%;font-size:.98rem;line-height:1.55}
+th,td{padding:.7rem .9rem;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule)}
+th{
+  background:var(--felt);
+  color:#f2f5ee;
+  font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  font-weight:600;
+  font-size:.98rem;
+}
+tr:last-child td{border-bottom:none}
+td:first-child{font-weight:600;color:var(--head)}
+.tablewrap.wide table{min-width:40rem}
+
+/* ---------- Profile ---------- */
+.profile{
+  display:grid;
+  grid-template-columns:9.5rem 1fr;
+  border:1px solid var(--rule);
+  margin:1.2rem 0 1.5rem;
+  font-size:1.02rem;
+  line-height:1.6;
+}
+.profile dt,.profile dd{padding:.75rem .95rem;border-bottom:1px solid var(--rule);margin:0}
+.profile dt{
+  background:var(--paper-2);
+  font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  font-weight:600;
+  color:var(--head);
+}
+.profile dt:last-of-type,.profile dd:last-of-type{border-bottom:none}
+
+/* ---------- Steps ---------- */
+ol.steps{list-style:none;counter-reset:s;padding:0}
+ol.steps li{
+  counter-increment:s;
+  position:relative;
+  padding-left:3rem;
+  margin-bottom:1.15rem;
+}
+ol.steps li::before{
+  content:counter(s);
+  position:absolute;left:0;top:.1rem;
+  width:2.1rem;height:2.1rem;
+  border-radius:50%;
+  background:var(--felt);
+  color:#f2f5ee;
+  font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  font-weight:800;
+  font-size:1rem;
+  display:flex;align-items:center;justify-content:center;
+}
+
+/* ---------- Books ---------- */
+.book{
+  border:1px solid var(--rule);
+  border-left:6px solid var(--felt);
+  padding:1rem 1.25rem .4rem;
+  margin:1.3rem 0;
+  background:var(--paper-2);
+}
+.book h3{margin:0 0 .15rem}
+.book .year{
+  font-size:.95rem;
+  color:var(--muted);
+  font-style:italic;
+  margin:0 0 .7rem;
+}
+.book p{font-size:1.03rem;line-height:1.68}
+.book .k{font-weight:600;color:var(--head)}
+
+/* ---------- Timeline ---------- */
+dl.timeline{
+  margin:1.4rem 0;
+  padding:0 0 0 1.4rem;
+  border-left:3px solid var(--brass);
+}
+dl.timeline dt{
+  font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  font-weight:800;
+  color:var(--head);
+  font-size:1.05rem;
+  margin-top:1rem;
+}
+dl.timeline dd{margin:.1rem 0 0;font-size:1.02rem;line-height:1.6}
+
+.sources{font-size:.98rem;line-height:1.6;color:var(--muted)}
+.sources li{margin-bottom:.35rem}
+footer{
+  border-top:6px solid var(--brass);
+  background:var(--felt-deep);
+  color:#b8c9bb;
+  padding:1.8rem 0 2.2rem;
+  font-size:.95rem;
+  line-height:1.6;
+}
+
+@media (max-width:760px){
+  .hero{padding:2.2rem 0 2.6rem}
+  .hero-inner{grid-template-columns:1fr;gap:1.6rem}
+  .cards{order:2;height:15rem;justify-self:start;margin-left:.6rem}
+  .toc{columns:1}
+  .profile{grid-template-columns:1fr}
+  .profile dt{border-bottom:none;padding-bottom:.1rem}
+  &.thorp-body {font-size:1.08rem}
+  h2{font-size:1.55rem}
+}
+@media print{
+  &.thorp-body {font-size:11pt}
+  .hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  th,ol.steps li::before{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .book,.tablewrap,.note{break-inside:avoid}
+  h2,h3{break-after:avoid}
+}
+
+}
+</style>
+
+    <div style="padding: 16px 20px; background: #e6ede4;">
+        <button class="back-btn" onclick="openLegendArticle('')" style="color: #14402f; border: 1px solid #c6d1c5; padding: 7px 16px; cursor: pointer; background: #f3f6f0; font-family: inherit; font-size: 0.95rem; border-radius: 4px; font-weight: 600;">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại danh sách
+        </button>
+    </div>
+
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>Edward Thorp: ông giáo sư đếm bài, thắng cả sòng bạc lẫn Phố Wall</h1>
+      <p class="dek">Câu chuyện về một cậu bé nghèo thích nghịch hóa chất, người chứng minh rằng toán học kiếm được tiền ở cả bàn blackjack lẫn sàn chứng khoán, rồi sau tất cả lại khuyên đa số chúng ta mua quỹ chỉ số và đi ngủ cho ngon.</p>
+      <p class="byline">Bài tổng hợp từ tiểu sử, sách của chính ông và các phân tích độc lập. Cập nhật ngày 19 tháng 9 năm 2026.</p>
+    </div>
+    <div class="cards" aria-hidden="true">
+      <div class="card ace"><span class="corner tl">A<small>♠</small></span><span class="pip">♠</span><span class="corner br">A<small>♠</small></span></div>
+      <div class="card king"><span class="corner tl">K<small>♥</small></span><span class="pip">♥</span><span class="corner br">K<small>♥</small></span></div>
+    </div>
+    <p class="card-caption">Một lá át và một lá mười điểm cho đúng hai mươi mốt: blackjack. Mọi chuyện của Thorp bắt đầu từ một ván như thế.</p>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<div class="note">
+  <p><strong>Trước khi vào bàn.</strong> Bài viết này để đọc cho vui, nhưng số liệu thì nghiêm túc. Vì các nguồn đôi khi ghi khác nhau ở vài con số (ví dụ lợi suất của các quỹ), tôi sẽ ghi rõ chỗ nào có chênh lệch. Đây là tài liệu tham khảo, không phải lời khuyên đầu tư, và tôi không phải cố vấn tài chính.</p>
+</div>
+
+<nav class="toc" aria-label="Mục lục">
+  <p class="toc-title">Trong bài có gì</p>
+  <ul>
+    <li>Hồ sơ nhanh</li>
+    <li>Cậu bé nghịch hóa chất</li>
+    <li>Vị giáo sư đi Las Vegas</li>
+    <li>Chiếc máy tính đeo người đầu tiên</li>
+    <li>Công thức Kelly: bí quyết đặt cược</li>
+    <li>Từ sòng bạc sang Phố Wall</li>
+    <li>Quỹ Princeton Newport Partners</li>
+    <li>Khi luật chống mafia gõ cửa</li>
+    <li>Quỹ Ridgeline và bài học về lợi thế hết hạn</li>
+    <li>Thành tựu tiêu biểu</li>
+    <li>Chuyện Madoff năm 1991</li>
+    <li>Sổ ghi thất bại</li>
+    <li>Phương pháp giao dịch</li>
+    <li>Ông tập trung vào điều gì</li>
+    <li>Triết lý sống và đầu tư</li>
+    <li>Sáu cuốn sách</li>
+    <li>Ý nghĩa với thị trường ngày nay</li>
+    <li>Dòng thời gian</li>
+    <li>Nguồn tham khảo</li>
+  </ul>
+</nav>
+
+<!-- ============ HỒ SƠ ============ -->
+<h2>Hồ sơ nhanh</h2>
+<dl class="profile">
+  <dt>Tên đầy đủ</dt><dd>Edward Oakley Thorp</dd>
+  <dt>Sinh</dt><dd>Ngày 14 tháng 8 năm 1932, tại Chicago, bang Illinois, Hoa Kỳ. Theo các nguồn tôi tra cứu đến tháng 9 năm 2026, ông thọ 94 tuổi và sống tại Newport Beach, bang California.</dd>
+  <dt>Học vấn</dt><dd>Cử nhân vật lý (1953), thạc sĩ vật lý (1955) và tiến sĩ toán học (1958), đều tại Đại học California, Los Angeles, sau một năm đầu học ở Đại học California, Berkeley.</dd>
+  <dt>Nghề nghiệp</dt><dd>Giáo sư toán học, nhà quản lý quỹ phòng hộ (hedge fund), tác giả, người nghiên cứu blackjack.</dd>
+  <dt>Các quỹ</dt><dd>Convertible Hedge Associates (thành lập năm 1969, từ 1974 mang tên Princeton Newport Partners), Ridgeline Partners (1994 đến 2002), và Edward O. Thorp &amp; Associates (quản lý tài sản gia đình).</dd>
+  <dt>Nổi tiếng vì</dt><dd>Chứng minh bằng toán học rằng có thể thắng blackjack bằng cách đếm bài; cùng Claude Shannon chế tạo chiếc máy tính đeo người đầu tiên; điều hành quỹ phòng hộ trung lập với thị trường mà chính ông cho là đầu tiên trên thế giới; phát hiện sớm từ năm 1991 rằng quỹ của Bernard Madoff có vấn đề.</dd>
+  <dt>Sách</dt><dd>Sáu cuốn, kể cả cuốn hồi ký <em>A Man for All Markets</em> (2017).</dd>
+</dl>
+
+<!-- ============ TUỔI THƠ ============ -->
+<h2>Cậu bé nghịch hóa chất</h2>
+<p>Thorp chào đời ở Chicago vào lúc nước Mỹ còn đang loay hoay thoát khỏi cuộc Đại suy thoái. Gia đình không giàu. Theo một số nguồn, khoảng năm 1942 cả nhà chuyển tới Lomita, một thị trấn của những gia đình lao động gần Los Angeles, và đó là nơi cậu bé lớn lên.</p>
+<p>Cậu không phải kiểu học trò ngồi yên nghe giảng. Thorp thích tự chế thí nghiệm, lắp ráp đủ thứ, và đôi khi nghịch đến mức rước rắc rối vào thân. Năm 12 tuổi, cậu đã có chứng chỉ radio nghiệp dư, thuộc nhóm người trẻ nhất thời đó. Cậu giành học bổng qua các cuộc thi hóa học và vật lý, một trong số đó đưa cậu tới gặp Tổng thống Harry Truman, và tên cậu có trong danh sách cựu thí sinh cuộc thi Tìm kiếm Tài năng Khoa học năm 1949.</p>
+<p>Nếu Thorp đi học ở thời nay, có lẽ phụ huynh sẽ nhận được vài cuộc điện thoại từ nhà trường. Nhưng đúng kiểu nghịch có phương pháp ấy, tức là đặt câu hỏi, tự làm thí nghiệm rồi xem thực tế trả lời ra sao, sẽ theo ông suốt đời. Ông cũng rút ra một bài học rất sớm: chẳng có lớp nào dạy cách đếm bài hay cách lập quỹ phòng hộ trung lập thị trường. Muốn làm được, ông phải học cách tự học.</p>
+
+<h3>Giảng đường và gia đình</h3>
+<p>Thorp vào Berkeley, nhưng chỉ sau một năm thì chuyển sang Đại học California, Los Angeles để học vật lý. Ở đó ông gặp Vivian, người sau này trở thành vợ ông; họ cưới nhau vào tháng 1 năm 1956 và có ba người con: Raun, Karen và Jeff. Vivian mất năm 2011. Ông lấy bằng cử nhân vật lý năm 1953, thạc sĩ năm 1955, rồi chuyển sang toán và bảo vệ luận án tiến sĩ năm 1958 với đề tài về các toán tử tuyến tính compact trong không gian định chuẩn, dưới sự hướng dẫn của giáo sư Angus Taylor. Một cuộc hành trình từ vật lý sang toán, rồi mang toán đi đánh bạc, chắc hẳn khiến nhiều bậc cha mẹ phải ngồi xuống uống ngụm trà.</p>
+<p>Sự nghiệp giảng dạy của ông đi qua bốn trạm:</p>
+<ul>
+  <li>Đại học California, Los Angeles: giảng viên trẻ.</li>
+  <li>Học viện Công nghệ Massachusetts, 1959 đến 1961: giảng viên C.L.E. Moore. Đây là nơi ông gặp Claude Shannon, cha đẻ của lý thuyết thông tin.</li>
+  <li>Đại học Bang New Mexico, 1961 đến 1965: giáo sư toán.</li>
+  <li>Đại học California, Irvine, 1965 đến 1982: giáo sư toán (đến 1977), rồi giáo sư toán và tài chính (1977 đến 1982). Ông là một trong những giảng viên sáng lập của trường này.</li>
+</ul>
+<p>Đến đầu thập niên 1980, thu nhập từ đầu tư đã vượt lương giáo sư, và ông dồn toàn bộ thời gian cho việc quản lý quỹ.</p>
+
+<div class="suits" aria-hidden="true">♠ <span class="r">♥</span> <span class="r">♦</span> ♣</div>
+
+<!-- ============ BLACKJACK ============ -->
+<h2>Vị giáo sư đi Las Vegas</h2>
+<p>Những năm 1959 đến 1961 ở Học viện Công nghệ Massachusetts, Thorp có một ý tưởng nghe như đùa: nếu bộ bài blackjack (còn gọi là hai mươi mốt) không được xáo lại sau mỗi ván, thì những lá đã ra sẽ tiết lộ điều gì đó về những lá sắp ra. Nói cách khác, bộ bài có trí nhớ, và trí nhớ ấy có thể đổi thành tiền.</p>
+<p>Để kiểm chứng, ông dùng máy tính IBM 704 và học luôn ngôn ngữ lập trình Fortran chỉ để tính xác suất cho bài toán này. Tháng 2 năm 1961, báo sinh viên của học viện đã đưa tin về công trình này với tiêu đề đại ý là máy 704 đánh bại blackjack, và còn viết sai tên ông thành &ldquo;Thorpe&rdquo;. Kết quả sau đó được công bố trong tạp chí của Viện Hàn lâm Khoa học Quốc gia Hoa Kỳ (Proceedings of the National Academy of Sciences) với nhan đề <em>A Favorable Strategy for Twenty-One</em>. Đây là một trong số rất ít nghiên cứu về cờ bạc đến được với công chúng mà không qua vòng bình duyệt học thuật thông thường. Ông từng nói rằng ông coi cả chuyện này chỉ là một thí nghiệm học thuật. Sòng bạc thì không coi thế.</p>
+
+<h3>Từ lý thuyết ra bàn cược</h3>
+<p>Ông cần vốn để thử, và người góp vốn là Manny Kimmel, một tay cờ bạc chuyên nghiệp giàu có, từng làm nghề nhận cá cược. Kimmel bỏ ra 10.000 đô la Mỹ. Nhóm đến Reno và hồ Tahoe, ngồi vào các bàn blackjack, và thắng 11.000 đô la chỉ trong một cuối tuần. Lý thuyết đã được kiểm chứng ngoài đời thật.</p>
+<p>Năm 1962, ông viết <em>Beat the Dealer</em>, và cuốn sách bán được hơn 700.000 bản, con số khổng lồ cho một tựa sách chuyên đề, đủ để lọt danh sách bán chạy của New York Times. Kimmel xuất hiện trong sách dưới cái tên &ldquo;Mr. X&rdquo;, và theo các tài liệu, ông ta không vui lắm vì danh tính của mình chỉ được che đậy sơ sài.</p>
+<p>Phản ứng của các sòng bạc thì đúng như bạn nghĩ: xáo bài sớm hơn nhiều so với cuối bộ bài, dùng nhiều bộ bài cùng lúc, và cảnh giác với những vị khách ngồi bàn lâu mà mặt cứ trầm ngâm tính toán. Thorp phải cải trang. Tạp chí Sports Illustrated năm 1964 ghi lại rằng ông đổi kính râm bọc quanh mắt và râu giả cho các lần tới Las Vegas khác nhau. Nhóm chơi baccarat của ông cũng đã thắng hơn 5.000 đô la và bị cấm ở hai sòng.</p>
+
+<div class="note">
+  <p><strong>Những chuyện nghe như phim.</strong> Trong hồi ký, Thorp kể rằng năm 1963, một nhóm sáu người giả vờ không quen biết nhau ngồi vào bàn baccarat ở sòng Dunes. Họ thắng khá đến mức, theo lời ông, người quản lý sòng đã bỏ thuốc vào cà phê của ông, và sau đó phanh xe của ông bị hỏng một cách bí ẩn. Thật là dịch vụ hạng sang: cà phê miễn phí, kèm phụ gia bất ngờ. Đây là lời kể của chính ông, tôi không có nguồn độc lập để xác nhận từng chi tiết.</p>
+</div>
+
+<h3>Người có lợi thế vẫn có ngày đen đủi</h3>
+<p>Đây là một bài học ít người nhắc: hệ thống đếm bài đầu tiên của ông (gọi là Ten-Count) có lúc cho những chuỗi thua khá nặng, xen lẫn những chuỗi thắng rực rỡ. Sau này ông giải thích rằng đó là bản chất của một chuỗi cược có lợi thế nhưng vẫn mang tính ngẫu nhiên, và ông sẽ gặp lại hiện tượng ấy hoài trong cả cờ bạc lẫn đầu tư. Có lợi thế không có nghĩa là ngày nào cũng thắng. Nó chỉ có nghĩa là nếu chơi đủ lâu và đủ kỷ luật, thì toán học đứng về phía bạn.</p>
+<p>Ngoài ra, ông còn được kể tên trong Đại sảnh Danh vọng Blackjack với tư cách một trong những thành viên đầu tiên, và cái tên &ldquo;Thorp count&rdquo; còn được người chơi backgammon dùng để ước lượng thế cờ ở cuối ván.</p>
+
+<!-- ============ MÁY TÍNH ĐEO NGƯỜI ============ -->
+<h2>Chiếc máy tính đeo người đầu tiên</h2>
+<p>Trong lúc dạy ở Học viện Công nghệ Massachusetts, Thorp làm quen với Claude Shannon, và họ nhanh chóng trở thành cặp đôi lập dị nhất khuôn viên: một giáo sư trẻ và một bậc thầy về lý thuyết thông tin, cùng bàn nhau cách thắng roulette. Vợ của Shannon, bà Betty, cũng tham gia các chuyến đi Las Vegas.</p>
+<p>Giữa năm 1960 và 1961, hai người chế tạo một thiết bị nhỏ đeo trên người. Một người đứng cạnh bàn, dùng ngón chân bấm nhịp quay của bánh xe roulette. Người còn lại nhận tín hiệu là những âm nhạc phát qua một chiếc tai nghe giấu kín, cho biết nên đặt vào nhóm số nào. Họ đặt vào các nhóm số kề nhau trên bánh xe để có lợi thế đủ lớn mà sinh lời. Bản hoàn chỉnh được thử trong tầng hầm nhà Shannon vào tháng 6 năm 1961.</p>
+<p>Đó là lần đầu tiên nhân loại dùng một chiếc máy tính đeo người trong sòng bạc, và cũng là chiếc máy tính đeo người đầu tiên nói chung. Nó ra đời không phải để nhắn tin hay đếm bước chân, mà để thắng roulette. Đến ngày 30 tháng 5 năm 1985, bang Nevada ban hành luật cấm các thiết bị kiểu này khi chơi blackjack và roulette.</p>
+
+<!-- ============ KELLY ============ -->
+<h2>Công thức Kelly: bí quyết đặt cược</h2>
+<p>Biết mình có lợi thế mới chỉ là nửa câu chuyện. Nửa còn lại là câu hỏi mà cả dân đánh bạc lẫn nhà đầu tư đều vấp: <strong>cược bao nhiêu?</strong> Cược quá ít thì bỏ phí lợi thế. Cược quá nhiều thì một chuỗi thua xấu số cũng đủ quét sạch vốn.</p>
+<p>Thorp học được câu trả lời từ bài báo năm 1956 của John Kelly, nhà nghiên cứu tại Phòng thí nghiệm Bell (Bell Labs) và là đồng nghiệp của Shannon. Trong <em>Beat the Dealer</em>, ông gọi nó một cách giản dị là &ldquo;hệ thống Kelly&rdquo;. Ý tưởng cốt lõi: tỷ lệ vốn nên đặt cược tăng theo mức lợi thế của bạn, và giảm khi rủi ro lớn hơn. Dạng công thức đơn giản nhất cho một ván cược thắng hoặc thua là:</p>
+<p style="padding-left:1.2rem;border-left:3px solid var(--brass)">Tỷ lệ vốn nên cược = (b nhân p, trừ q) chia cho b.<br>
+Trong đó p là xác suất thắng, q bằng một trừ p là xác suất thua, còn b là số tiền lãi trên mỗi đồng đặt cược khi thắng.</p>
+<p>Ví dụ: đồng xu cho bạn thắng với xác suất 60% và trả tiền một ăn một. Lợi thế của bạn là 60% trừ 40%, tức 20%, và công thức Kelly khuyên cược 20% vốn cho mỗi ván. Ưu điểm nổi bật: vì luôn cược theo tỷ lệ vốn hiện có, bạn gần như không bao giờ cháy sạch, ngay cả khi thua liên tục.</p>
+<p>Nhưng chính Thorp không dùng công thức này một cách máy móc. Ông chỉ cược ở mức mình thấy dễ chịu về mặt tâm lý, để giữ được sự bình tĩnh và kỷ luật. Ông khuyên trên thực tế nên dùng khoảng nửa mức Kelly để tránh những cú lên xuống dữ dội của tài sản, và khi không biết chắc xác suất thì dùng ước lượng thận trọng. Lý do đơn giản: nếu bạn đánh giá lợi thế của mình cao hơn thực tế, Kelly sẽ bảo bạn cược quá tay. Công thức chính xác đến đâu cũng chịu thua khi đầu vào lạc quan.</p>
+
+<div class="suits" aria-hidden="true">♠ <span class="r">♥</span> <span class="r">♦</span> ♣</div>
+
+<!-- ============ PHỐ WALL ============ -->
+<h2>Từ sòng bạc sang Phố Wall</h2>
+<p>Mùa hè năm 1964, Thorp tự học đầu tư bằng cách đọc ngấu nghiến sách về phân tích cơ bản và phân tích kỹ thuật. Kết luận của ông khá phũ: cả hai đều không giúp được gì cho mục đích của ông. Ông thấy rất nhiều điều được viết ra chỉ là nhảm nhí, và cảm thấy vừa ngạc nhiên vừa được khích lệ khi thấy nhiều người biết ít đến thế. Riêng chuyện đọc biểu đồ giá, ông kết luận rằng con người dễ thấy quy luật ở nơi chẳng có quy luật nào, và giới truyền thông tài chính cứ thế giải thích mọi biến động nhỏ như thể chúng có ý nghĩa.</p>
+<p>Điều thay đổi mọi thứ là cuộc gặp với Sheen Kassouf, một đồng nghiệp sáng lập của Đại học California, Irvine. Kassouf đã nghiên cứu cách định giá chứng quyền, một loại giấy tờ cho phép người nắm giữ mua cổ phiếu của công ty với mức giá định trước. Chứng quyền thường bị định giá lệch so với cổ phiếu, và cặp đôi Thorp và Kassouf nhìn ra cách tận dụng: bán khống (vay bán trước, mua lại sau) chứng quyền đang đắt, đồng thời mua một lượng cổ phiếu vừa đủ để bù trừ. Nếu giá cổ phiếu tăng, khoản lỗ trên chứng quyền được bù bằng lời trên cổ phiếu, và ngược lại. Lợi nhuận đến từ việc giá chứng quyền quay về mức hợp lý, chứ không phụ thuộc thị trường lên hay xuống.</p>
+<p>Về bản chất, đó là đếm bài trên sàn chứng khoán: đừng đoán lá bài kế tiếp, hãy tìm lúc giá cược bị sai. Kết quả là cuốn <em>Beat the Market</em> năm 1967, mở đường cho cả một ngành phòng hộ rủi ro bằng công cụ phái sinh.</p>
+
+<h3>Công thức mà ông giữ cho riêng mình</h3>
+<p>Cuối năm 1967, Thorp có được một công thức định giá chứng quyền, và ông dùng nó để giao dịch từ đó trong im lặng. Sáu năm sau, năm 1973, Fischer Black và Myron Scholes công bố công thức nổi tiếng mang tên họ. Thorp kể rằng ông nhận được bản thảo trước khi in kèm thư của Black, cắm số vào thì đồ thị không khớp với đồ thị của mình, rồi nhận ra mình có tới ba công thức chứ không phải một, và một trong ba chính là công thức Black-Scholes. Ông vội viết và công bố cả ba, vì lúc này chẳng còn bí mật nào để giữ nữa.</p>
+<p>Năm 1997, giải Nobel Kinh tế được trao cho Scholes và Robert Merton (Black đã mất từ 1995). Thorp không có mặt trên bục nhận giải, nhưng ông đã kiếm tiền từ công thức đó suốt nhiều năm trước khi thế giới biết đến nó. Nassim Nicholas Taleb thậm chí gọi công thức này bằng cái tên Bachelier-Thorp. Xét kỹ thì ông chọn giữ bí mật để kiếm tiền cho các nhà đầu tư của mình, và đó là một lựa chọn hoàn toàn có lý.</p>
+
+<h3>Người quen tên Warren</h3>
+<p>Năm 1968, qua một người quen ở Đại học California, Irvine, Thorp được làm quen với Warren Buffett. Đến năm 1982, ông bắt đầu mua cổ phiếu hạng A của công ty Berkshire Hathaway khi mỗi cổ phiếu có giá 982,50 đô la. Nếu có ai đó hỏi liệu một nhà toán học chuyên bắt lỗi định giá có ngưỡng mộ nhà đầu tư giá trị hay không, thì đây là câu trả lời bằng tiền thật.</p>
+
+<!-- ============ PNP ============ -->
+<h2>Quỹ Princeton Newport Partners</h2>
+<p>Tháng 11 năm 1969, Thorp thành lập Convertible Hedge Associates cùng Jay Regan, một môi giới chứng khoán đã đọc <em>Beat the Dealer</em> và viết thư cho tác giả để đề nghị gặp mặt. Đến năm 1974, quỹ đổi tên thành Princeton Newport Partners. Chính Thorp nói rằng đây là quỹ phòng hộ trung lập với thị trường đầu tiên trên thế giới, tức là quỹ được thiết kế để có lãi dù thị trường chung lên hay xuống.</p>
+<p>Quỹ hoạt động trên cả hai bờ biển nước Mỹ: văn phòng Newport Beach ở California là nơi nghiên cứu và sinh ra ý tưởng giao dịch, còn văn phòng ở Princeton và New York lo phần kinh doanh và bàn giao dịch. Các công cụ chính gồm chứng quyền, trái phiếu chuyển đổi, quyền chọn, cổ phiếu ưu đãi chuyển đổi; sau này bổ sung cả thống kê chênh lệch giá. Quỹ cũng khai thác các khoản chiết khấu hoặc phụ trội của quỹ đóng so với giá trị tài sản ròng, và những vụ tách công ty.</p>
+
+<div class="tablewrap">
+<table>
+  <thead><tr><th>Chỉ số</th><th>Con số</th></tr></thead>
+  <tbody>
+    <tr><td>Thời gian hoạt động</td><td>Từ tháng 11 năm 1969 đến cuối năm 1988 (một số nguồn ghi là 1989)</td></tr>
+    <tr><td>Vốn</td><td>Từ 1,4 triệu đô la lên 273 triệu đô la, với tổng vị thế khoảng 1 tỷ đô la (theo triển lãm lưu trữ của thư viện Đại học California, Irvine)</td></tr>
+    <tr><td>Lợi suất hằng năm (lãi kép)</td><td>19,1% trước phí và 15,1% sau phí</td></tr>
+    <tr><td>Chỉ số S&amp;P 500 (rổ 500 công ty niêm yết lớn của Mỹ) cùng giai đoạn</td><td>Khoảng 10,2% mỗi năm, với biến động mạnh hơn nhiều</td></tr>
+    <tr><td>Tháng thua lỗ</td><td>3 tháng trên tổng số 230 tháng, mức lỗ lớn nhất đều dưới 1%</td></tr>
+    <tr><td>Năm thua lỗ</td><td>Không có năm nào; nhiều nguồn còn ghi không có quý nào thua lỗ</td></tr>
+    <tr><td>Mười năm đầu</td><td>Đến kỷ niệm năm thứ mười (1979), quỹ đã tăng 409%</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="note">
+  <p><strong>Ghi chú về số liệu.</strong> Các con số trên là con số được Thorp công bố và nhiều tài liệu trích lại. Có nguồn nêu 20% mỗi năm sau phí, tôi không rõ vì sao có chênh lệch này, nên tôi chọn cặp số 19,1% và 15,1% vì được trích nhiều nhất từ hồi ký. Tôi không có bảng kiểm toán độc lập để đối chiếu, nên xin coi đây là số liệu do chính quỹ báo cáo.</p>
+</div>
+
+<!-- ============ RICO ============ -->
+<h2>Khi luật chống mafia gõ cửa</h2>
+<p>Năm 1987, trước khi thị trường sụp, Thorp đã nhìn thấy một mối nguy: thị trường đang đông nghẹt những chiến lược &ldquo;bảo hiểm danh mục&rdquo; tự động bán khi giá giảm. Ông cho rằng chúng có thể kích hoạt một cú rơi mạnh, và nhìn nhận đó là cả nguy cơ lẫn cơ hội cho các chiến lược phòng hộ. Ngày 19 tháng 10 năm 1987, thị trường Mỹ rơi khoảng 23% chỉ trong một phiên, mức giảm một ngày tệ nhất lịch sử.</p>
+<p>Nhưng không phải thị trường mới là thứ hạ gục quỹ của ông. Cuối năm 1987, khi Rudolph Giuliani, khi đó là công tố viên liên bang ở Manhattan, đang truy quét tội phạm chứng khoán quanh nhóm của Ivan Boesky và Michael Milken, hàng chục nhân viên liên bang, một số mang vũ khí, ập vào văn phòng của quỹ ở Princeton, tịch thu hồ sơ. Jay Regan, người điều hành văn phòng ấy, là bạn và có làm ăn với người trong nhóm bị điều tra.</p>
+<p>Tháng 8 năm 1988, Regan và bốn người khác trong quỹ, cùng một cựu nhân viên giao dịch của công ty Drexel Burnham Lambert, bị truy tố theo đạo luật chống tổ chức tội phạm và tham nhũng (Racketeer Influenced and Corrupt Organizations Act, thường gọi là RICO), một đạo luật vốn được thiết kế để đánh mafia. Năm 1989 họ bị kết án. Đến năm 1991, tòa phúc thẩm đã hủy các bản án, và các cáo buộc sau cùng cũng bị bãi bỏ. Vụ này được nhắc đến như trường hợp đầu tiên đạo luật chống tổ chức tội phạm được áp dụng cho gian lận chứng khoán.</p>
+<p>Thorp không bị truy tố. Văn phòng Newport Beach của ông chưa từng bị thẩm vấn và không hề biết những gì bị cáo buộc xảy ra ở Princeton. Tuy vậy, áp lực pháp lý và tai tiếng đã làm quỹ khó sống, và quỹ đóng cửa cuối năm 1988. Thorp mô tả biến cố này là một trải nghiệm đầy chấn động.</p>
+<p>Bài học không có trong công thức nào: bạn có thể tính toán đúng từng con số mà vẫn bị đánh bại bởi thứ nằm ngoài mô hình, chẳng hạn rủi ro liên đới, danh tiếng, và người bạn đồng hành. Sau này ông cũng cho rằng điều quan trọng nhất khi rót tiền vào một quỹ phòng hộ là kiểm tra sự trung thực và đạo đức của những người điều hành nó.</p>
+
+<!-- ============ RIDGELINE ============ -->
+<h2>Quỹ Ridgeline và bài học về lợi thế hết hạn</h2>
+<p>Thorp trở lại cuộc chơi với Ridgeline Partners, hoạt động từ tháng 8 năm 1994 đến tháng 9 năm 2002 và tập trung vào <strong>thống kê chênh lệch giá</strong> (statistical arbitrage). Tư duy khá quen thuộc với bất kỳ ai từng đếm bài: đừng trông chờ một cú đặt cược thần thánh, hãy làm hàng triệu cược nhỏ mà mỗi cược đều hơi nghiêng về phía mình. Theo hồi ký, đến năm 2000 hệ thống thống kê chênh lệch giá của ông đặt khoảng một triệu lệnh mỗi năm, kích cỡ trung bình khoảng 54.000 đô la, tức cứ khoảng sáu giây khi thị trường mở cửa lại có một lệnh.</p>
+<p>Các tín hiệu gồm tỷ suất lợi nhuận trên giá, tỷ suất cổ tức, tỷ lệ giá trên giá trị sổ sách, đà tăng giá, lượng bán khống, bất ngờ về lợi nhuận và hoạt động giao dịch của người trong nội bộ. Một hệ thống được ông đặt tên khá dễ nhớ là &ldquo;lên nhiều nhất, xuống nhiều nhất&rdquo; (most-up-most-down): mua nhóm 10% cổ phiếu giảm mạnh nhất trong hai tuần trước, bán khống nhóm 10% tăng mạnh nhất. Với sự giúp sức của Gerry Bamberger, quỹ còn được điều chỉnh để trung lập theo từng ngành, và thậm chí trung lập với các yếu tố như lạm phát và giá dầu. Cái giá của sự an toàn này là lợi nhuận thấp hơn, vì càng ít danh mục thỏa mọi điều kiện.</p>
+<p>Về kết quả, thư viện Đại học California, Irvine ghi Ridgeline đạt khoảng 18% mỗi năm trong tám năm hoạt động, trong khi một số nguồn khác nêu khoảng 21%. Dù con số nào, đó cũng là một thành tích rất tốt. Rồi đến năm 2002, ông đóng quỹ. Lý do không phải vì thua lỗ, mà vì ngày càng nhiều quỹ dùng cùng một ý tưởng, và mức lợi nhuận của phương pháp này bị co lại. Ông đúc kết: mọi hệ thống có lợi thế đều bị giới hạn về lượng tiền mà nó có thể dùng mà vẫn sinh lời vượt trội.</p>
+<p>Đây có lẽ là một trong những hành vi hiếm thấy trong ngành: rút lui khi lợi thế biến mất, thay vì tiếp tục thu phí quản lý. Nhận xét chua chát của ông về ngành sau này là ngành quỹ phòng hộ đang đi theo con đường của quỹ tương hỗ, tức là dần trở nên ngang bằng, hoặc tệ hơn thị trường sau khi trừ phí.</p>
+
+<div class="suits" aria-hidden="true">♠ <span class="r">♥</span> <span class="r">♦</span> ♣</div>
+
+<!-- ============ THÀNH TỰU ============ -->
+<h2>Thành tựu tiêu biểu</h2>
+<ul>
+  <li><strong>Đếm bài blackjack có cơ sở khoa học đầu tiên.</strong> Bài báo năm 1961 và cuốn <em>Beat the Dealer</em> (1962) chứng minh rằng lợi thế của nhà cái có thể bị vượt qua; các sòng bạc thay đổi cách xáo bài, số bộ bài và luật chơi để đối phó.</li>
+  <li><strong>Chiếc máy tính đeo người đầu tiên</strong>, cùng Claude Shannon, để dự đoán roulette (1960 đến 1961).</li>
+  <li><strong>Đưa hệ thống Kelly vào thực hành.</strong> Ông biến ý tưởng của Kelly thành công cụ định cỡ vị thế cho cả sòng bạc lẫn chứng khoán, và sau này cùng đồng nghiệp biên tập hẳn một cuốn sách về chủ đề đó.</li>
+  <li><strong>Phòng hộ chứng quyền và công thức định giá.</strong> Cùng Sheen Kassouf viết <em>Beat the Market</em>; tự tìm ra công thức tương đương Black-Scholes từ năm 1967, sớm hơn công bố của nhóm ba học giả kia khoảng sáu năm.</li>
+  <li><strong>Quỹ phòng hộ trung lập thị trường đầu tiên.</strong> Princeton Newport Partners hoạt động gần hai thập kỷ, không có năm nào lỗ.</li>
+  <li><strong>Đi tiên phong về thống kê chênh lệch giá</strong> ở quy mô lớn, với Ridgeline Partners.</li>
+  <li><strong>Phát hiện sớm sự bất thường của Madoff</strong> vào năm 1991, hơn mười bảy năm trước khi vụ lừa đảo sụp đổ.</li>
+  <li><strong>Thành tích cá nhân:</strong> năm 1998 ông báo cáo tài sản cá nhân sinh lời 20% mỗi năm, tính trung bình trong 28,5 năm. Ước tính tài sản của ông dao động quanh mức 800 triệu đô la, nhưng đây là con số phỏng đoán từ các trang tổng hợp, không có xác nhận chính thức.</li>
+  <li><strong>Ghi nhận cá nhân:</strong> thành viên khai mạc của Đại sảnh Danh vọng Blackjack.</li>
+</ul>
+
+<!-- ============ MADOFF ============ -->
+<h2>Chuyện Madoff năm 1991</h2>
+<p>Mùa xuân năm 1991, một công ty quốc tế nổi tiếng thuê Thorp làm tư vấn thẩm định các khoản đầu tư quỹ phòng hộ của họ. Ông xem báo cáo, phân tích cấu trúc kinh doanh, gặp người quản lý, và chấp thuận tất cả, chỉ trừ một trường hợp: quỹ của Bernard Madoff.</p>
+<p>Điều khiến ông nghi ngờ trước hết là lợi nhuận đều đặn đến khó tin, khoảng 20% mỗi năm trong thập niên 1980. Rồi ông nhìn kỹ vào những giao dịch được báo cáo. Theo bài của Forbes dựa trên sách <em>The Quants</em> của Scott Patterson, Madoff tuyên bố đã mua 123 quyền chọn mua cổ phiếu Procter &amp; Gamble vào ngày 16 tháng 4 năm 1991, trong khi cả ngày hôm đó chỉ có 20 quyền chọn loại này đổi chủ. Khối lượng giao dịch của cả những mã khác cũng không đủ để những giao dịch báo cáo có thể xảy ra. Thêm một điểm lạ: Madoff không thu mức phí thông thường của các quỹ phòng hộ, và kể một câu chuyện về nguồn thu mà Thorp thấy không hợp lý.</p>
+<p>Ông khuyên khách hàng rút tiền. Theo Forbes, ông không báo với cơ quan quản lý hay giới đầu tư, một điều đến nay vẫn được thảo luận. Ngày 11 tháng 12 năm 2008, Madoff thú nhận vụ lừa đảo trị giá hàng chục tỷ đô la. Con trai Thorp, Jeff, gọi điện cho cha và nói rằng đó chính là điều ông đã dự đoán từ năm 1991.</p>
+<p>Nói cho công bằng, Madoff không hề có lá bài nào để đếm. Thứ Thorp làm chỉ là đối chiếu con số báo cáo với thực tế thị trường, việc mà ai cũng có thể làm nếu chịu bỏ công. Bài học nằm ở đó.</p>
+
+<!-- ============ THẤT BẠI ============ -->
+<h2>Sổ ghi thất bại</h2>
+<p>Người ta hay kể về những trận thắng của Thorp, nên đây là những chỗ ông vấp, chủ yếu theo lời kể của chính ông:</p>
+<ul>
+  <li><strong>Cổ phiếu đầu tiên.</strong> Ông mua vì một bài báo mà không hiểu công ty, rồi từ chối bán khi giá tụt, cứ bám vào giá mua ban đầu. Ông gọi đó là &ldquo;neo giá&rdquo; và cho rằng nó làm khổ hầu hết nhà đầu tư. Cách sửa: hãy nhìn giá trị kinh tế hiện tại và chi phí cơ hội của việc cầm giữ, chứ đừng nhìn giá bạn từng trả.</li>
+  <li><strong>Vụ đầu tư bạc có vay mượn.</strong> Một khoản đầu tư dùng đòn bẩy vào bạc đi sai hướng, dạy ông rằng mình chưa thật sự hiểu rủi ro khi vay ký quỹ. Từ đó ông đặt quy tắc: mức vay phải là mức mà bạn chịu nổi kịch bản tồi tệ nhất.</li>
+  <li><strong>Những chuỗi thua đầu đời ở bàn bài.</strong> Hệ thống Ten-Count từng cho ông những chuỗi thua khá nặng. Ông rút ra rằng thắng dài hạn không loại trừ đau ngắn hạn.</li>
+  <li><strong>Sự thù địch của sòng bạc.</strong> Bị cấm chơi, phải cải trang, và nếu tin lời ông kể, còn gặp cả ly cà phê có thuốc lẫn chiếc xe hỏng phanh.</li>
+  <li><strong>Sự sụp đổ của Princeton Newport Partners.</strong> Một quỹ chưa từng thua lỗ mất vì rắc rối pháp lý của người khác, dù ông không bị truy tố. Đó là thứ mà toán học của ông không tính tới.</li>
+  <li><strong>Lợi thế thống kê chênh lệch giá co lại.</strong> Đây không hẳn là thất bại, mà là chu kỳ tự nhiên: ai cũng học được cùng một bài, rồi bánh chia nhỏ dần. Ông đóng Ridgeline khi thấy điều đó.</li>
+  <li><strong>Điểm gây tranh luận.</strong> Việc không báo cáo nghi ngờ về Madoff cho cơ quan quản lý.</li>
+</ul>
+<p>Và một mất mát riêng: vợ ông, bà Vivian, qua đời năm 2011 sau hơn năm mươi năm sống bên nhau.</p>
+
+<div class="suits" aria-hidden="true">♠ <span class="r">♥</span> <span class="r">♦</span> ♣</div>
+
+<!-- ============ PHƯƠNG PHÁP ============ -->
+<h2>Phương pháp giao dịch</h2>
+<p>Nếu nhìn lại toàn bộ sự nghiệp, có thể tóm gọn cách làm của Thorp thành một quy trình gồm sáu bước. Tôi đã tổng hợp từ các cuốn sách và bài phỏng vấn của ông; đây là cách diễn đạt của tôi chứ không phải danh sách do chính ông đặt ra.</p>
+<ol class="steps">
+  <li><strong>Tìm lợi thế (edge).</strong> Ông không hỏi &ldquo;thị trường có hiệu quả không&rdquo;, mà hỏi thị trường sai ở đâu và sai đến mức nào, rồi làm sao khai thác. Không có lợi thế thì không chơi.</li>
+  <li><strong>Dựng mô hình và kiểm chứng bằng dữ liệu.</strong> Từ máy tính IBM 704 cho blackjack đến công thức chứng quyền và các hệ thống thống kê chênh lệch giá: ý tưởng nào cũng phải qua thử nghiệm trước khi có tiền thật.</li>
+  <li><strong>Loại bỏ rủi ro không muốn chịu.</strong> Phòng hộ để bỏ đi rủi ro thị trường chung, rồi trung lập theo ngành và các yếu tố lớn như lạm phát hay giá dầu, chỉ giữ lại phần chênh lệch mình đã tính.</li>
+  <li><strong>Định cỡ vị thế bằng tinh thần Kelly.</strong> Lợi thế lớn thì cược lớn hơn, nhưng thực tế chỉ dùng khoảng nửa mức Kelly hoặc ít hơn, và ước lượng thận trọng. Khi quỹ thua khoảng 5%, ông thu nhỏ vị thế rồi tăng lại khi phục hồi.</li>
+  <li><strong>Đề phòng rủi ro đuôi.</strong> Ông không tin vào chỉ số &ldquo;giá trị chịu rủi ro&rdquo; (value at risk) vì nó bỏ qua đúng 5% kịch bản xấu nhất, nơi những vụ phá sản nằm. Ông tự hỏi những câu cực đoan, chẳng hạn điều gì xảy ra nếu thị trường rơi 25% trong một ngày.</li>
+  <li><strong>Theo dõi độ tuổi của lợi thế.</strong> Khi cạnh tranh làm lợi thế mỏng đi, hãy thu nhỏ hoặc rút lui.</li>
+</ol>
+
+<h3>Các chiến lược cụ thể</h3>
+<div class="tablewrap wide">
+<table>
+  <thead><tr><th>Chiến lược</th><th>Ý tưởng cốt lõi</th><th>Lợi thế đến từ đâu</th><th>Vì sao mòn dần</th></tr></thead>
+  <tbody>
+    <tr><td>Đếm bài blackjack</td><td>Theo dõi lá đã ra để biết khi nào bộ bài nghiêng về người chơi; cược lớn khi thuận lợi, nhỏ khi bất lợi</td><td>Thông tin từ bộ bài không được xáo lại</td><td>Sòng bạc xáo sớm, dùng nhiều bộ bài, cấm người chơi</td></tr>
+    <tr><td>Dự đoán roulette</td><td>Đo nhịp bánh xe bằng thiết bị đeo người, đặt vào nhóm số kề nhau</td><td>Vật lý của bánh xe</td><td>Luật bang Nevada cấm thiết bị từ năm 1985</td></tr>
+    <tr><td>Phòng hộ chứng quyền</td><td>Bán khống chứng quyền đắt, mua cổ phiếu theo tỷ lệ bù trừ</td><td>Chứng quyền bị định giá lệch</td><td>Càng nhiều người biết công thức, chênh lệch càng mỏng</td></tr>
+    <tr><td>Chênh lệch giá trái phiếu chuyển đổi và quyền chọn</td><td>Khai thác sai lệch giữa các chứng khoán khác nhau của cùng một công ty</td><td>Giá của các công cụ liên quan không khớp nhau</td><td>Cạnh tranh và định giá hiệu quả hơn</td></tr>
+    <tr><td>Thống kê chênh lệch giá</td><td>Hàng loạt cược nhỏ theo tín hiệu thống kê, trung lập ngành</td><td>Tín hiệu yếu nhưng lặp lại rất nhiều lần</td><td>Nhiều quỹ dùng cùng ý tưởng; lợi suất co lại (Ridgeline đóng cửa 2002)</td></tr>
+    <tr><td>Chiết khấu quỹ đóng, tách công ty</td><td>Mua thứ đang bị bán rẻ so với giá trị</td><td>Thị trường phản ứng chậm hoặc định giá sai</td><td>Cơ hội hiếm và không lớn</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Về cuối đời làm đầu tư, quan điểm của ông khá khiêm tốn. Ông cho rằng tài năng chọn cổ phiếu vượt trội là hiếm, và với đa số người thì quỹ chỉ số là lựa chọn hợp lý, vì lợi suất trung bình của nhà đầu tư chủ động bằng chỉ số trừ đi phí. Nếu không có lợi thế đủ lớn, ông khuyên mua và nắm giữ để khỏi biếu bớt tài sản cho những người giao dịch tần suất cao.</p>
+
+<!-- ============ TẬP TRUNG ============ -->
+<h2>Ông tập trung vào điều gì</h2>
+<p>Đọc kỹ sự nghiệp của Thorp, có một vài thứ xuất hiện đi xuất hiện lại như nhịp trống nền:</p>
+<ul>
+  <li><strong>Lợi thế trước, mọi thứ sau.</strong> Ông không chơi trò nào mà mình không biết ai đang ở phía bên kia và vì sao mình có lợi.</li>
+  <li><strong>Sống sót.</strong> Có lợi thế và sống sót là hai chuyện khác nhau, và cái thứ hai là điều kiện của cái thứ nhất. Nassim Taleb, trong lời tựa cho hồi ký, cũng nhấn mạnh rằng quản lý liều lượng cược mới là chỗ quyết định.</li>
+  <li><strong>Bằng chứng hơn niềm tin.</strong> Ông tự nghĩ, tự thử, rồi đối chiếu với dữ liệu thật, và dám bỏ tiền của chính mình vào ý tưởng của mình.</li>
+  <li><strong>Sự bình tĩnh và kỷ luật.</strong> Ông cược ở mức mình cảm thấy dễ chịu, chứ không phải mức toán học cho phép tối đa.</li>
+  <li><strong>Quy mô vừa đủ.</strong> Mọi hệ thống có lợi thế đều có sức chứa hữu hạn. Tham quá thì lợi thế biến mất.</li>
+  <li><strong>Tính trung thực của con người.</strong> Trước khi hỏi về lợi suất của một quỹ, ông hỏi về nhân cách của người điều hành.</li>
+  <li><strong>Học và dạy.</strong> Ông muốn xác suất và tài chính cá nhân được dạy trong trường phổ thông, chẳng hạn hiểu lãi kép và cách quản lý nợ.</li>
+  <li><strong>Cân bằng cuộc sống.</strong> Hồi ký của ông cũng nhấn mạnh việc cân bằng giữa công việc và cuộc sống, điều hiếm gặp trong các hồi ký kiểu Phố Wall.</li>
+</ul>
+
+<!-- ============ TRIẾT LÝ ============ -->
+<h2>Triết lý sống và đầu tư</h2>
+<p>Nếu buộc phải cô đọng, triết lý của Thorp nằm trong vài ý sau, và đây cũng là phần suy luận của tôi từ những gì ông viết.</p>
+<p><strong>Đời là hỗn hợp của may rủi và lựa chọn.</strong> Ta không kiểm soát được xúc xắc, nhưng ta kiểm soát được cách mình đặt cược. Người thắng lâu dài không phải người gặp may nhiều nhất, mà là người chọn được những ván có lợi và đặt đúng kích cỡ.</p>
+<p><strong>Nghi ngờ mọi thứ nghe quá hay.</strong> Ông nghi ngờ lời hứa của các sách chọn cổ phiếu, của biểu đồ, của các quỹ có lãi suất đều đặn đến kỳ lạ. Câu hỏi luôn là: điều này có kiểm chứng được không?</p>
+<p><strong>Khiêm tốn trước thị trường.</strong> Một người kiếm được ngần ấy bằng đầu óc toán học mà vẫn nói rằng đa số nên mua chỉ số. Điều đó không mâu thuẫn: ông biết lợi thế của mình khó tìm và khó giữ đến mức nào.</p>
+<p><strong>Thị trường không hiệu quả tuyệt đối, nhưng cũng không dễ thắng.</strong> Phiên bản của ông về giả thuyết thị trường hiệu quả khá thực tế: thông tin đến với người này trước người kia, mỗi người chỉ hợp lý trong một phạm vi, và phản ứng với tin tức trải ra qua nhiều giờ, nhiều ngày, thậm chí nhiều tháng. Khoảng hở đó đủ cho một số người kiếm tiền, và không đủ cho tất cả.</p>
+<p><strong>Học cách học.</strong> Điều quý nhất mà toán học mang lại cho ông không phải một công thức cụ thể, mà là khả năng tự học một lĩnh vực chưa có sách giáo khoa.</p>
+
+<div class="suits" aria-hidden="true">♠ <span class="r">♥</span> <span class="r">♦</span> ♣</div>
+
+<!-- ============ SÁCH ============ -->
+<h2>Sáu cuốn sách</h2>
+<p>Theo hồ sơ lưu trữ của thư viện Đại học California, Irvine, Thorp là tác giả của sáu cuốn sách. Dưới đây là từng cuốn, kèm nội dung chính và bài học có thể rút ra.</p>
+
+<div class="book">
+  <h3>Beat the Dealer: A Winning Strategy for the Game of Twenty-One</h3>
+  <p class="year">1962, cập nhật lớn năm 1966</p>
+  <p><span class="k">Nội dung.</span> Sách hướng dẫn thắng blackjack bằng cách đếm bài, trình bày các hệ thống đếm (trong đó có Ten-Count) và cách cược theo lợi thế bằng &ldquo;hệ thống Kelly&rdquo;. Sách bán hơn 700.000 bản và được xem là cuốn sách gốc của nghề đếm bài.</p>
+  <p><span class="k">Bài học.</span> Lợi thế nhỏ, lặp lại nhiều lần và cược đúng kích cỡ có thể thắng một hệ thống tưởng như bất khả chiến bại. Và cũng vì thế mà phải sẵn sàng chịu những chuỗi thua khó chịu trên đường đi.</p>
+</div>
+
+<div class="book">
+  <h3>Elementary Probability</h3>
+  <p class="year">1966, bản in lại năm 1977</p>
+  <p><span class="k">Nội dung.</span> Giáo trình xác suất nhập môn dành cho sinh viên đại học.</p>
+  <p><span class="k">Bài học.</span> Đây là cuốn ít ai nhớ đến nhất, nhưng là nền móng: mọi thứ Thorp làm sau này đều dựa trên việc nghĩ về thế giới bằng ngôn ngữ xác suất, và ông muốn nó được dạy rộng rãi hơn.</p>
+</div>
+
+<div class="book">
+  <h3>Beat the Market: A Scientific Stock Market System</h3>
+  <p class="year">1967, viết cùng Sheen Kassouf</p>
+  <p><span class="k">Nội dung.</span> Trình bày phương pháp phòng hộ chứng quyền: bán khống chứng quyền được định giá quá cao và mua cổ phiếu theo tỷ lệ bù trừ để lợi nhuận không phụ thuộc chiều đi của thị trường. Tổ chức lưu trữ của trường Irvine gọi đây là cuốn sách có ảnh hưởng dài lâu đến thế giới đầu tư.</p>
+  <p><span class="k">Bài học.</span> Đừng cố đoán thị trường sẽ đi đâu; hãy tìm những chỗ định giá sai và bảo vệ mình khỏi phần bất định còn lại.</p>
+</div>
+
+<div class="book">
+  <h3>The Mathematics of Gambling</h3>
+  <p class="year">1984</p>
+  <p><span class="k">Nội dung.</span> Một khảo sát toán học về các trò chơi may rủi và cách cược: xác suất, kỳ vọng và cách phân biệt lợi thế thật với ảo giác lợi thế.</p>
+  <p><span class="k">Bài học.</span> Trước khi đặt tiền, hãy tính kỳ vọng. Trò chơi có kỳ vọng âm thì không có mẹo cược nào cứu nổi về lâu dài; trò chơi có kỳ vọng dương thì vấn đề chuyển sang cược bao nhiêu.</p>
+</div>
+
+<div class="book">
+  <h3>The Kelly Capital Growth Investment Criterion: Theory and Practice</h3>
+  <p class="year">2011, do Leonard MacLean, Edward Thorp và William Ziemba biên tập</p>
+  <p><span class="k">Nội dung.</span> Tuyển tập bài viết học thuật quanh tiêu chí Kelly: cơ sở toán học, các bằng chứng thực nghiệm, và những cách vận dụng trong đầu tư, cùng các biến thể thận trọng hơn.</p>
+  <p><span class="k">Bài học.</span> Tối đa hóa tốc độ tăng vốn là một mục tiêu có căn cứ, nhưng phải luôn cân nhắc độ bất định của ước lượng lợi thế. Trong thực tế người ta thường dùng phiên bản giảm đi.</p>
+</div>
+
+<div class="book">
+  <h3>A Man for All Markets: From Las Vegas to Wall Street, How I Beat the Dealer and the Market</h3>
+  <p class="year">2017</p>
+  <p><span class="k">Nội dung.</span> Hồi ký của ông, khoảng hai phần ba là chuyện đời (tuổi thơ, sòng bạc, chiếc máy tính đeo người, quỹ phòng hộ, Madoff) và khoảng một phần ba là những bài học đầu tư: hiệu quả thị trường, tăng trưởng lãi kép, phân bổ tài sản, các cuộc khủng hoảng, quản trị rủi ro.</p>
+  <p><span class="k">Bài học.</span> Tò mò, kiên trì, tự kiểm chứng, và đối xử nghiêm túc với rủi ro. Cuốn sách được nhiều người trong giới đầu tư đánh giá cao.</p>
+</div>
+
+<h3>Ngoài sách</h3>
+<p>Thorp còn viết nhiều bài nghiên cứu và bài luận đáng đọc, chẳng hạn <em>The Kelly Criterion in Blackjack, Sports Betting, and the Stock Market</em> (1997), bộ sáu bài về thống kê chênh lệch giá, bài <em>Option Theory: What I Knew and When I Knew It</em> trên tạp chí Wilmott, bài <em>Extensions of the Black-Scholes Option Model</em> (1973), và bài luận về việc ông đối diện với Madoff. Ông cũng có bài trên tạp chí Financial Analysts Journal nói về &ldquo;số học của quản lý chủ động&rdquo; vào năm 2017.</p>
+
+<!-- ============ NGÀY NAY ============ -->
+<h2>Ý nghĩa với thị trường ngày nay</h2>
+<p>Thorp đã ở tuổi 94, nhưng nhiều bài học của ông nghe như viết cho thị trường tuần này.</p>
+
+<h3>1. Lợi thế có hạn sử dụng</h3>
+<p>Casino học cách xáo bài, chứng quyền hết bị định giá lệch khi ai cũng có công thức, thống kê chênh lệch giá bị bào mòn khi nhiều quỹ cùng chạy. Với nhà giao dịch ngày nay, câu hỏi cần tự hỏi định kỳ là: lợi thế của tôi còn không, và còn bao lâu?</p>
+
+<h3>2. Cược bao nhiêu quan trọng không kém cược gì</h3>
+<p>Phần lớn nhà giao dịch cá nhân dồn sức vào việc chọn mã, và rất ít người nghĩ đến kích cỡ vị thế. Tư duy Kelly nhắc rằng cùng một ý tưởng tốt, cược quá nhỏ thì bỏ phí, cược quá lớn thì nguy hiểm. Đặc biệt trong thị trường có vay ký quỹ phổ biến, một chuỗi thua có thể xóa sạch vốn trước khi lợi thế kịp phát huy.</p>
+
+<h3>3. Rủi ro đuôi và đòn bẩy</h3>
+<p>Thorp đã chứng kiến phiên rơi năm 1987, sự sụp đổ của quỹ Long-Term Capital Management năm 1998, và khủng hoảng năm 2008 với tập đoàn bảo hiểm American International Group. Ông coi những biến cố này là lời nhắc rằng các mô hình dựa trên dữ liệu quá khứ thường đánh giá thấp kịch bản cực đoan. Nguyên tắc dễ nhớ: nếu bạn không chịu nổi kịch bản xấu nhất, hãy giảm đòn bẩy.</p>
+
+<h3>4. Với đa số người, chỉ số và kiên nhẫn là đủ tốt</h3>
+<p>Điều đặc biệt là người có khả năng đánh bại thị trường hơn ai hết lại khuyên rằng đa số nên mua quỹ chỉ số. Ông cũng cảnh báo về các sai lầm hành vi quen thuộc: mua theo bài báo, đọc biểu đồ như bói bài, bám vào giá mua vào. Nghe rất nhàm chán, nhưng rất khó làm.</p>
+
+<h3>5. Thẩm định: nếu quá đẹp thì đối chiếu</h3>
+<p>Vụ Madoff cho thấy kỹ năng rất thực dụng: khi một quỹ báo lợi nhuận mượt bất thường, hãy kiểm tra xem các giao dịch được báo cáo có khớp với khối lượng thực trên thị trường hay không. Ông cũng nhắc rằng ngành quỹ phòng hộ thường bị thổi phồng bởi thiên lệch người sống sót, phí cao, và những quỹ đóng cửa rồi mở lại với hồ sơ mới.</p>
+
+<h3>6. Sự tỉnh táo trước giao dịch tần suất cao và phí</h3>
+<p>Ông đồng tình với quan điểm cho rằng giao dịch tần suất cao không tạo ra giá trị xã hội đáng kể. Ở góc độ nhà đầu tư cá nhân, hệ quả thực tế là: càng giao dịch nhiều mà không có lợi thế thật, bạn càng trả phí cho người khác.</p>
+
+<h3>Bộ câu hỏi tự kiểm tra, rút ra từ tinh thần của ông</h3>
+<ul>
+  <li>Lợi thế của tôi cụ thể là gì, và ai là người ở phía bên kia giao dịch?</li>
+  <li>Tôi đã kiểm chứng bằng dữ liệu, hay chỉ bằng một câu chuyện nghe hay?</li>
+  <li>Nếu ước lượng lợi thế của tôi sai một nửa thì tôi còn sống được không?</li>
+  <li>Kịch bản xấu nhất mà tôi chịu nổi là gì, và đòn bẩy hiện tại có vượt quá nó không?</li>
+  <li>Khi lợi thế mỏng đi, tôi có dám rút lui không?</li>
+</ul>
+
+<div class="note">
+  <p><strong>Lưu ý khi vận dụng.</strong> Công thức Kelly cần biết xác suất và tỷ lệ thắng thua, điều dễ trong blackjack và rất khó trong đầu tư, nơi lợi thế chỉ có thể ước lượng và đổi theo thời gian. Bản thân Thorp đã dùng phiên bản giảm và ước lượng thận trọng. Ngoài ra, phần lớn số liệu về các quỹ của ông là số liệu do chính quỹ công bố, thị trường ngày nay cạnh tranh hơn nhiều, và những gì hiệu quả cho một quỹ chuyên nghiệp chưa chắc phù hợp với nhà đầu tư cá nhân.</p>
+</div>
+
+<!-- ============ TIMELINE ============ -->
+<h2>Dòng thời gian</h2>
+<dl class="timeline">
+  <dt>1932</dt><dd>Sinh ngày 14 tháng 8 tại Chicago.</dd>
+  <dt>Khoảng 1942</dt><dd>Gia đình chuyển tới Lomita, gần Los Angeles.</dd>
+  <dt>1949</dt><dd>Tham gia cuộc thi Tìm kiếm Tài năng Khoa học.</dd>
+  <dt>1953 đến 1958</dt><dd>Cử nhân, thạc sĩ vật lý và tiến sĩ toán tại Đại học California, Los Angeles.</dd>
+  <dt>1956</dt><dd>Kết hôn với Vivian; bài báo của Kelly ra đời.</dd>
+  <dt>1959 đến 1961</dt><dd>Giảng dạy tại Học viện Công nghệ Massachusetts; gặp Claude Shannon.</dd>
+  <dt>1961</dt><dd>Công bố chiến lược blackjack; thử ở Reno và hồ Tahoe cùng Manny Kimmel; thử máy tính đeo người vào tháng 6.</dd>
+  <dt>1962</dt><dd>Xuất bản <em>Beat the Dealer</em>.</dd>
+  <dt>1961 đến 1965</dt><dd>Giáo sư toán tại Đại học Bang New Mexico.</dd>
+  <dt>1964</dt><dd>Mùa hè tự học đầu tư; Sports Illustrated đưa tin về nhóm đếm bài của ông.</dd>
+  <dt>1965 đến 1982</dt><dd>Giáo sư tại Đại học California, Irvine.</dd>
+  <dt>1967</dt><dd>Xuất bản <em>Beat the Market</em>; có công thức định giá chứng quyền.</dd>
+  <dt>1968</dt><dd>Quen Warren Buffett.</dd>
+  <dt>1969</dt><dd>Thành lập Convertible Hedge Associates cùng Jay Regan.</dd>
+  <dt>1973</dt><dd>Công bố ba công thức định giá quyền chọn, sau khi nhận bản thảo của Black và Scholes.</dd>
+  <dt>1974</dt><dd>Quỹ đổi tên thành Princeton Newport Partners.</dd>
+  <dt>1982</dt><dd>Bắt đầu mua cổ phiếu Berkshire Hathaway hạng A; rời giảng đường để tập trung đầu tư.</dd>
+  <dt>1984</dt><dd>Xuất bản <em>The Mathematics of Gambling</em>.</dd>
+  <dt>1985</dt><dd>Nevada cấm thiết bị hỗ trợ khi chơi blackjack và roulette (ngày 30 tháng 5).</dd>
+  <dt>1987 đến 1988</dt><dd>Thị trường sụp năm 1987; văn phòng Princeton bị lục soát tháng 12; truy tố tháng 8 năm 1988; quỹ đóng cuối năm.</dd>
+  <dt>1991</dt><dd>Cảnh báo về quỹ của Madoff; các bản án trong vụ Princeton Newport bị hủy.</dd>
+  <dt>1994 đến 2002</dt><dd>Điều hành quỹ Ridgeline Partners.</dd>
+  <dt>2008</dt><dd>Madoff thú nhận vụ lừa đảo (ngày 11 tháng 12).</dd>
+  <dt>2011</dt><dd>Ra mắt tuyển tập về tiêu chí Kelly; vợ ông, bà Vivian, qua đời.</dd>
+  <dt>2017</dt><dd>Xuất bản hồi ký <em>A Man for All Markets</em>.</dd>
+</dl>
+
+<h2>Lời kết</h2>
+<p>Nếu phải gói Thorp trong một đoạn: một cậu bé nghịch khoa học, tò mò tới mức đem toán học ra thử trên bàn bài, rồi thử trên sàn chứng khoán, rồi thử trên chính bản thân mình. Ông thắng không nhờ đoán tương lai giỏi hơn ai, mà nhờ luôn hỏi cùng một câu: lợi thế của tôi là gì, tôi cược bao nhiêu là hợp lý, và tôi có sống sót nếu mình sai? Ba câu hỏi ấy, tiếc thay, vẫn khó với hầu hết chúng ta hơn nhiều so với việc nhớ mấy lá bài.</p>
+
+<h2>Nguồn tham khảo</h2>
+<ul class="sources">
+  <li>Wikipedia: các bài về Edward O. Thorp và Princeton Newport Partners.</li>
+  <li>Thư viện Đại học California, Irvine: triển lãm trực tuyến về sự nghiệp của Thorp và hồ sơ lưu trữ Thorp Papers (Online Archive of California).</li>
+  <li>Society for Science: hồ sơ Edward O. Thorp. Red Rock Capital: tiểu sử Edward O. Thorp.</li>
+  <li>Forbes (2010): bài về việc Thorp phát hiện vấn đề của Madoff, dựa trên sách <em>The Quants</em> của Scott Patterson; đoạn trích bài của chính Thorp về Madoff.</li>
+  <li>Philosophical Investor: tóm tắt bài học đầu tư từ <em>A Man for All Markets</em>. CFA Institute, Investing.com, Moneylife, The Rational Walk: các bài điểm sách.</li>
+  <li>Nassim Nicholas Taleb: lời tựa cho <em>A Man for All Markets</em>. AQR: bản phỏng vấn Thorp &ldquo;Words from the Wise&rdquo;.</li>
+  <li>Trang fortunesformula.com: mục về công thức Black-Scholes. NJBIZ và Los Angeles Times: các bài về vụ Princeton Newport Partners.</li>
+  <li>Macro Ops, Collateral Partners, NYCIF: các bài phân tích, dùng để đối chiếu, đặc biệt về tiêu chí Kelly.</li>
+</ul>
+<p class="sources">Một số bài từ trang tổng hợp và blog được dùng để đối chiếu chứ không dùng làm nguồn duy nhất. Các số liệu về lợi suất quỹ đều là số liệu do chính quỹ công bố và được nhiều tài liệu trích lại.</p>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    Tài liệu tham khảo, không phải lời khuyên đầu tư. Mọi quyết định giao dịch cần dựa trên tình hình tài chính và khả năng chịu rủi ro của riêng bạn.
+  </div>
+</footer>
+
+
+    <div style="padding: 20px; text-align: center; background: #e6ede4;">
+        <button class="back-btn" onclick="openLegendArticle('')" style="color: #14402f; border: 1px solid #c6d1c5; padding: 7px 16px; cursor: pointer; background: #f3f6f0; font-family: inherit; font-size: 0.95rem; border-radius: 4px; font-weight: 600;">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại danh sách
+        </button>
+    </div>
+</div>
+
 </div><!-- /#huyen-thoai-article-view -->
 
             </div><!-- /#panel-huyen-thoai -->
