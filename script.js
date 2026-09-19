@@ -156,7 +156,9 @@ function handleRouting(path, updateUrl = false) {
     if (path.startsWith('/thu-vien')) {
         switchTab('thu-vien', false);
         const subPath = path.substring('/thu-vien'.length);
-        if (subPath === '/luoc-su-con-duong-to-lua') {
+        if (subPath === '/luoc-su-the-gioi') {
+            openThuVienArticle('luoc-su-the-gioi', updateUrl);
+        } else if (subPath === '/luoc-su-con-duong-to-lua') {
             openThuVienArticle('luoc-su-con-duong-to-lua', updateUrl);
         } else if (subPath === '/12-cung-hoang-dao') {
             openThuVienArticle('12-cung-hoang-dao', updateUrl);
@@ -315,7 +317,17 @@ function openThuVienArticle(articleId, updateUrl = true) {
 
     document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
 
-    if (articleId === 'luoc-su-con-duong-to-lua') {
+    if (articleId === 'luoc-su-the-gioi') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-thegioi-panel');
+        if (panel) {
+            panel.classList.add('active');
+            panel.querySelectorAll('.era-section').forEach(s => s.classList.add('visible'));
+        }
+        if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'luoc-su-the-gioi' }, '', '/thu-vien/luoc-su-the-gioi');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'luoc-su-con-duong-to-lua') {
         listView.classList.remove('active');
         articleView.classList.add('active');
         const panel = document.getElementById('article-conduong-panel');

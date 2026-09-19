@@ -157,6 +157,19 @@ html, body {
             <div id="panel-trang-chu" class="tab-panel active">
                 <h2 class="section-title"><i class="fa-solid fa-fire-flame-curved"></i> Bài viết mới</h2>
                 <div class="news-list">
+                        <!-- Post: Luoc Su The Gioi (Thu Vien) -->
+                        <a href="/thu-vien/luoc-su-the-gioi" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-earth-americas"></i> Lịch sử &amp; Xã hội</span>
+                                <span class="news-time">19/09/2026</span>
+                            </div>
+                            <h3 class="news-heading">Lược Sử Thế Giới &amp; Xã Hội Loài Người — Từ Khai Thiên Lập Địa Đến Kỷ Nguyên AI</h3>
+                            <p class="news-excerpt">13,8 tỷ năm vũ trụ, 300.000 năm loài người và 10.000 năm văn minh. Toàn cảnh hành trình tiến hóa, trỗi dậy và sụp đổ của các đế chế cùng những bài học muôn đời.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc bài viết</span>
+                            </div>
+                        </a>
+
                         <!-- Post: Edward Thorp (Huyen Thoai) -->
                         <a href="/huyen-thoai/edward-thorp" class="news-card clickable-card">
                             <div class="news-meta">
@@ -195,7 +208,20 @@ html, body {
                                 <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc hồ sơ</span>
                             </div>
                         </a>
-                        <!-- Post: Luoc Su Con Duong To Lua (Thu Vien) -->
+                                                <!-- Post: Luoc Su The Gioi (Thu Vien) -->
+                        <a href="/thu-vien/luoc-su-the-gioi" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-earth-americas"></i> Lịch sử &amp; Xã hội</span>
+                                <span class="news-time">Tháng 9, 2026</span>
+                            </div>
+                            <h3 class="news-heading">Lược Sử Thế Giới &amp; Xã Hội Loài Người — Từ Khai Thiên Lập Địa Đến Kỷ Nguyên AI</h3>
+                            <p class="news-excerpt">13,8 tỷ năm vũ trụ, 300.000 năm loài người và 10.000 năm văn minh. Toàn cảnh hành trình tiến hóa, trỗi dậy và sụp đổ của các đế chế cùng những bài học muôn đời.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc bài viết</span>
+                            </div>
+                        </a>
+
+<!-- Post: Luoc Su Con Duong To Lua (Thu Vien) -->
                         <a href="/thu-vien/luoc-su-con-duong-to-lua" class="news-card clickable-card">
                             <div class="news-meta">
                                 <span class="news-source"><i class="fa-solid fa-route"></i> L&#7883;ch s&#7917; &amp; V&#259;n minh</span>
@@ -23914,6 +23940,1101 @@ Trong đó p là xác suất thắng, q bằng một trừ p là xác suất thu
         </div>
     </div>
 </div>
+<div id="article-thegioi-panel" class="sukien-article-panel thegioi-body">
+<style>
+#article-thegioi-panel {
+
+  & {
+    --ink: #1a1208;
+    --ink-light: #3d2e1a;
+    --parchment: #f7f2e8;
+    --parchment-dark: #ede5d0;
+    --parchment-mid: #f2ead8;
+    --gold: #b8860b;
+    --gold-light: #d4a843;
+    --gold-pale: #f0d890;
+    --rust: #8b2e00;
+    --rust-light: #c04a1a;
+    --teal-deep: #1a4a4a;
+    --teal: #2e7070;
+    --stone: #7a6e5a;
+    --stone-light: #a89880;
+    --accent: #5c1a1a;
+    --serif-display: 'Cormorant Garamond', Georgia, serif;
+    --serif-body: 'Source Serif 4', Georgia, serif;
+    --mono: 'Space Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  &.thegioi-html { scroll-behavior: smooth; }
+
+  &.thegioi-body {
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: var(--serif-body);
+    font-size: 17px;
+    line-height: 1.85;
+    font-weight: 300;
+  }
+
+  /* NOISE TEXTURE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  /* NAVIGATION */
+  nav {
+    position: sticky; top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(247, 242, 232, 0.96);
+    border-bottom: 1px solid var(--parchment-dark);
+    backdrop-filter: blur(8px);
+    padding: 0 2rem;
+  }
+
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+
+  .nav-title {
+    font-family: var(--serif-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--gold);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    font-family: var(--mono);
+    letter-spacing: 0.08em;
+    color: var(--stone);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 2rem 80px;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 50% 60%, #e8dcc4 0%, var(--parchment) 70%);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), var(--gold-light), var(--gold), transparent);
+  }
+
+  .hero-ornament {
+    font-family: var(--serif-display);
+    font-size: 6rem;
+    color: var(--gold-pale);
+    line-height: 1;
+    margin-bottom: -1rem;
+    opacity: 0.6;
+  }
+
+  .hero h1 {
+    font-family: var(--serif-display);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-family: var(--serif-display);
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--stone);
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+
+  .hero-meta {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--stone-light);
+    text-transform: uppercase;
+    border-top: 1px solid var(--parchment-dark);
+    border-bottom: 1px solid var(--parchment-dark);
+    padding: 0.6rem 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-intro {
+    max-width: 720px;
+    font-size: 1.08rem;
+    color: var(--ink-light);
+    line-height: 2;
+  }
+
+  /* TIMELINE NAV */
+  .timeline-nav {
+    background: var(--ink);
+    color: var(--parchment);
+    padding: 2rem;
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    position: sticky;
+    top: 56px;
+    z-index: 90;
+  }
+
+  .tnav-item {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: block;
+  }
+
+  .tnav-item:last-child { border-right: none; }
+  .tnav-item:hover { background: rgba(184,134,11,0.2); }
+
+  .tnav-era {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 4px;
+  }
+
+  .tnav-name {
+    font-family: var(--serif-display);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--parchment);
+  }
+
+  /* MAIN LAYOUT */
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem 6rem;
+  }
+
+  /* SECTION */
+  .era-section {
+    margin: 5rem 0;
+    padding-top: 2rem;
+    border-top: 2px solid var(--parchment-dark);
+    position: relative;
+  }
+
+  .era-section::before {
+    content: attr(data-num);
+    position: absolute;
+    top: -2.2rem;
+    left: 0;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--stone-light);
+    letter-spacing: 0.1em;
+    background: var(--parchment);
+    padding-right: 1rem;
+  }
+
+  .era-tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background: var(--ink);
+    color: var(--gold-light);
+    padding: 3px 10px;
+    margin-bottom: 1rem;
+  }
+
+  .era-section h2 {
+    font-family: var(--serif-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+
+  .era-section h2 em {
+    font-style: italic;
+    color: var(--rust-light);
+  }
+
+  .era-timespan {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--stone);
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--parchment-dark);
+  }
+
+  /* PROSE */
+  .prose p {
+    margin-bottom: 1.4rem;
+    color: var(--ink-light);
+    font-size: 1.02rem;
+  }
+
+  .prose p:first-of-type::first-letter {
+    font-family: var(--serif-display);
+    font-size: 4rem;
+    font-weight: 700;
+    float: left;
+    line-height: 0.8;
+    margin-right: 0.12em;
+    margin-top: 0.1em;
+    color: var(--gold);
+  }
+
+  /* HIGHLIGHT BOXES */
+  .highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1px;
+    background: var(--parchment-dark);
+    margin: 2rem 0;
+    border: 1px solid var(--parchment-dark);
+  }
+
+  .highlight-box {
+    background: var(--parchment-mid);
+    padding: 1.3rem 1.4rem;
+  }
+
+  .hb-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--stone-light);
+    margin-bottom: 0.4rem;
+  }
+
+  .hb-title {
+    font-family: var(--serif-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+
+  .hb-&.thegioi-body {
+    font-size: 0.88rem;
+    color: var(--stone);
+    line-height: 1.6;
+  }
+
+  /* PULL QUOTE */
+  .pull-quote {
+    margin: 2.5rem 0;
+    padding: 1.5rem 2rem;
+    border-left: 4px solid var(--gold);
+    background: linear-gradient(135deg, rgba(184,134,11,0.05), transparent);
+  }
+
+  .pull-quote p {
+    font-family: var(--serif-display);
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--ink-light);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .pull-quote cite {
+    display: block;
+    margin-top: 0.6rem;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--stone);
+    font-style: normal;
+  }
+
+  /* EVENT LIST */
+  .event-list {
+    margin: 2rem 0;
+  }
+
+  .event-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 0;
+    margin-bottom: 1px;
+    background: var(--parchment-mid);
+    border: 1px solid var(--parchment-dark);
+  }
+
+  .event-year {
+    background: var(--ink);
+    color: var(--gold-light);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0.8rem 0.5rem;
+    font-weight: 700;
+  }
+
+  .event-content {
+    padding: 0.8rem 1.2rem;
+  }
+
+  .event-title {
+    font-family: var(--serif-display);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .event-desc {
+    font-size: 0.87rem;
+    color: var(--stone);
+    line-height: 1.55;
+  }
+
+  /* FIGURES */
+  .figure-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1px;
+    background: var(--parchment-dark);
+    margin: 2rem 0;
+    border: 1px solid var(--parchment-dark);
+  }
+
+  .figure-card {
+    background: var(--parchment);
+    padding: 1.2rem;
+  }
+
+  .fig-name {
+    font-family: var(--serif-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.15rem;
+  }
+
+  .fig-role {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .fig-desc {
+    font-size: 0.84rem;
+    color: var(--stone);
+    line-height: 1.55;
+  }
+
+  /* LESSON BOX */
+  .lesson-box {
+    margin: 2.5rem 0;
+    background: var(--teal-deep);
+    color: var(--parchment);
+    padding: 1.8rem 2rem;
+    position: relative;
+  }
+
+  .lesson-box::before {
+    content: 'BÀI HỌC LỊCH SỬ';
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    color: var(--gold-light);
+    display: block;
+    margin-bottom: 0.8rem;
+  }
+
+  .lesson-box p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: rgba(247,242,232,0.9);
+    margin-bottom: 0.6rem;
+  }
+
+  .lesson-box p:last-child { margin-bottom: 0; }
+
+  /* REVOLUTION BOX */
+  .revolution-box {
+    margin: 2rem 0;
+    border: 2px solid var(--rust-light);
+    padding: 1.5rem;
+    position: relative;
+  }
+
+  .revolution-box::before {
+    content: attr(data-label);
+    position: absolute;
+    top: -0.7rem;
+    left: 1rem;
+    background: var(--parchment);
+    padding: 0 0.5rem;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust-light);
+  }
+
+  .revolution-box h4 {
+    font-family: var(--serif-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--rust);
+    margin-bottom: 0.5rem;
+  }
+
+  .revolution-box p {
+    font-size: 0.92rem;
+    color: var(--ink-light);
+    line-height: 1.7;
+  }
+
+  /* DIVIDER */
+  .ornament-divider {
+    text-align: center;
+    margin: 3rem 0;
+    color: var(--gold);
+    font-family: var(--serif-display);
+    font-size: 1.5rem;
+    letter-spacing: 1em;
+    opacity: 0.5;
+  }
+
+  /* MODERN SECTION */
+  .modern-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--parchment-dark);
+    margin: 2rem 0;
+    border: 1px solid var(--parchment-dark);
+  }
+
+  .modern-cell {
+    background: var(--parchment-mid);
+    padding: 1.5rem;
+  }
+
+  .mc-head {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--stone-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .mc-title {
+    font-family: var(--serif-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+  }
+
+  .mc-&.thegioi-body {
+    font-size: 0.88rem;
+    color: var(--stone);
+    line-height: 1.65;
+  }
+
+  /* CLOSING */
+  .epilogue {
+    background: var(--ink);
+    color: var(--parchment);
+    padding: 5rem 2rem;
+    text-align: center;
+    margin-top: 6rem;
+  }
+
+  .epilogue h2 {
+    font-family: var(--serif-display);
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--gold-light);
+    margin-bottom: 1.5rem;
+  }
+
+  .epilogue p {
+    max-width: 640px;
+    margin: 0 auto 1.2rem;
+    font-size: 1rem;
+    line-height: 1.9;
+    color: rgba(247,242,232,0.8);
+  }
+
+  .epilogue-ornament {
+    margin-top: 2.5rem;
+    font-family: var(--serif-display);
+    font-size: 2rem;
+    color: var(--gold);
+    opacity: 0.5;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .timeline-nav { gap: 0; }
+    .tnav-item { min-width: 100px; padding: 0.7rem 0.3rem; }
+    .event-item { grid-template-columns: 70px 1fr; }
+    .modern-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2.2rem; }
+  }
+
+  /* SCROLL ANIMATION */
+  .era-section { opacity: 1; transform: none; } transition: opacity 0.6s ease, transform 0.6s ease; }
+  .era-section.visible { opacity: 1; transform: none; }
+
+}
+</style>
+
+    <div style="padding: 14px 20px; background: #ede5d0; border-bottom: 1px solid #d4a843;">
+        <button class="back-btn" onclick="openThuVienArticle('')" style="background: #f7f2e8; border: 1px solid #b8860b; color: #1a1208; padding: 7px 16px; cursor: pointer; font-family: 'Space Mono', monospace; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; border-radius: 4px;">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại Thư viện
+        </button>
+    </div>
+
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-title">Lược Sử Thế Giới</span>
+    <ul class="nav-links">
+      <li><a href="#tien-su">Tiền sử</a></li>
+      <li><a href="#co-dai">Cổ đại</a></li>
+      <li><a href="#co-dien">Cổ điển</a></li>
+      <li><a href="#trung-co">Trung Cổ</a></li>
+      <li><a href="#can-dai">Cận đại</a></li>
+      <li><a href="#hien-dai">Hiện đại</a></li>
+      <li><a href="#tuong-lai">Hiện tại</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="timeline-nav">
+  <a class="tnav-item" href="#tien-su"><div class="tnav-era">I</div><div class="tnav-name">Khai Thiên Lập Địa</div></a>
+  <a class="tnav-item" href="#co-dai"><div class="tnav-era">II</div><div class="tnav-name">Văn Minh Cổ Đại</div></a>
+  <a class="tnav-item" href="#co-dien"><div class="tnav-era">III</div><div class="tnav-name">Đế Chế Cổ Điển</div></a>
+  <a class="tnav-item" href="#trung-co"><div class="tnav-era">IV</div><div class="tnav-name">Thời Trung Cổ</div></a>
+  <a class="tnav-item" href="#can-dai"><div class="tnav-era">V</div><div class="tnav-name">Thời Cận Đại</div></a>
+  <a class="tnav-item" href="#hien-dai"><div class="tnav-era">VI</div><div class="tnav-name">Thế Kỷ XX</div></a>
+  <a class="tnav-item" href="#tuong-lai"><div class="tnav-era">VII</div><div class="tnav-name">Thế Giới Hôm Nay</div></a>
+</div>
+
+<section class="hero">
+  <div class="hero-ornament">✦</div>
+  <h1>Lược Sử <em>Thế Giới</em><br>& Xã Hội Loài Người</h1>
+  <div class="hero-sub">Từ khai thiên lập địa đến kỷ nguyên trí tuệ nhân tạo</div>
+  <div class="hero-meta">13,8 tỷ năm vũ trụ · 4,5 tỷ năm Trái Đất · 300.000 năm loài người · 10.000 năm văn minh</div>
+  <p class="hero-intro">Lịch sử là tấm gương khổng lồ, phản chiếu hành trình không ngừng của loài người — từ những sinh vật biết đứng thẳng trên thảo nguyên châu Phi, đến những tâm hồn tranh cãi về trí tuệ nhân tạo và vận mệnh hành tinh. Mỗi nền văn minh là một thử nghiệm về khả năng tổ chức xã hội; mỗi đế chế là câu hỏi về quyền lực; mỗi cuộc cách mạng là câu trả lời của con người trước sự bất công. Tổng hợp này là lược đồ — một bản đồ thô của 13 tỷ năm, để từ đó tự chiêm nghiệm.</p>
+</section>
+
+<main>
+
+<!-- ====== PHẦN I ====== -->
+<section class="era-section" id="tien-su" data-num="PHẦN I">
+  <div class="era-tag">Khởi nguyên</div>
+  <h2>Khai Thiên Lập Địa —<br><em>Vũ Trụ, Trái Đất & Loài Người Tiền Sử</em></h2>
+  <div class="era-timespan">13,8 tỷ năm TCN → 3.000 TCN</div>
+
+  <div class="prose">
+    <p>Khoảng 13,8 tỷ năm trước, một sự kiện mà vật lý học gọi là Vụ Nổ Lớn (Big Bang) đã tạo ra toàn bộ vật chất, năng lượng, không gian và thời gian của vũ trụ. Từ trạng thái cực nóng, cực đặc, vũ trụ giãn nở không ngừng. Khoảng 9 tỷ năm sau đó, hệ Mặt Trời hình thành từ một đám mây khí và bụi vũ trụ. Trái Đất xuất hiện khoảng 4,5 tỷ năm trước — một quả cầu nóng chảy, bao phủ bởi núi lửa và thiên thạch. Dần dần, đại dương hình thành, bầu khí quyển ổn định, và kỳ diệu thay — sự sống xuất hiện.</p>
+
+    <p>Sự sống đầu tiên trên Trái Đất là các sinh vật đơn bào xuất hiện cách đây khoảng 3,5 tỷ năm. Qua hàng tỷ năm tiến hóa, sự sống bùng nổ qua nhiều kỷ địa chất — từ kỷ Cambri với sự đa dạng sinh học vĩ đại, đến kỷ Khủng long Mesozoic. Khoảng 66 triệu năm trước, một tiểu hành tinh va chạm với Trái Đất, xóa sổ các loài khủng long không phải chim, mở đường cho thời đại của động vật có vú. Từ đó, linh trưởng tiến hóa, và khoảng 300.000 năm trước tại châu Phi, Homo sapiens — người hiện đại về mặt giải phẫu — xuất hiện.</p>
+
+    <p>Người tiền sử sống theo nhóm nhỏ, săn bắt hái lượm. Khoảng 70.000 năm trước, một cuộc Cách mạng Nhận thức diễn ra — ngôn ngữ phức tạp, tư duy biểu tượng, nghệ thuật hang động xuất hiện. Đây là bước nhảy vọt làm con người khác biệt hoàn toàn với mọi loài. Người Homo sapiens dần lan ra khỏi châu Phi, đến Trung Đông, châu Á, châu Âu, và khoảng 15.000 năm trước — đến châu Mỹ qua cầu đất Bering. Khắp nơi họ đi, các loài động vật lớn tuyệt chủng theo sau. Cuộc đại tuyệt chủng Pleistocene vừa là hậu quả của biến đổi khí hậu, vừa là dấu ấn đầu tiên của con người lên sinh quyển.</p>
+
+    <p>Khoảng 12.000 năm trước, tại vùng Trăng lưỡi liềm màu mỡ (Lưỡng Hà, Levant), một cuộc cách mạng thầm lặng nhưng vĩ đại nhất lịch sử diễn ra: Cách mạng Nông nghiệp. Con người từ bỏ lối sống du cư, trồng lúa mì, thuần hóa bò, lợn, dê và cừu. Thặng dư lương thực tạo ra phân công lao động, dân số tăng nhanh, và điều kiện cho các khu định cư lớn hơn — tiền thân của thành phố và nền văn minh.</p>
+  </div>
+
+  <div class="highlight-grid">
+    <div class="highlight-box">
+      <div class="hb-label">Sự kiện nền tảng</div>
+      <div class="hb-title">Cách mạng Nhận thức</div>
+      <div class="hb-body">~70.000 TCN — Ngôn ngữ phức tạp, tư duy biểu tượng, nghệ thuật xuất hiện. Con người trở thành loài kể chuyện, có khả năng hợp tác với số lượng lớn dựa trên "hư cấu chung" như thần thoại, tôn giáo, tiền tệ.</div>
+    </div>
+    <div class="highlight-box">
+      <div class="hb-label">Bước ngoặt văn minh</div>
+      <div class="hb-title">Cách mạng Nông nghiệp</div>
+      <div class="hb-body">~10.000 TCN — Con người từ bỏ săn bắt hái lượm. Trồng trọt và chăn nuôi tạo ra thặng dư, phân công lao động, bất bình đẳng giai cấp, và mầm mống của nhà nước đầu tiên.</div>
+    </div>
+    <div class="highlight-box">
+      <div class="hb-label">Hệ quả lớn</div>
+      <div class="hb-title">Đô thị hóa đầu tiên</div>
+      <div class="hb-body">~5.000 TCN — Jericho và Çatalhöyük là những khu định cư đô thị đầu tiên. Cư dân tập trung, luật lệ hình thành, và nhu cầu ghi chép dẫn đến phát minh chữ viết.</div>
+    </div>
+  </div>
+
+  <div class="lesson-box">
+    <p><strong>Bài học 1:</strong> Cách mạng Nông nghiệp không chỉ là tiến bộ — nó vừa tạo ra văn minh vừa tạo ra bất bình đẳng, dịch bệnh (từ gia súc), và sự suy giảm chất lượng sức khỏe cá nhân. Loài người đánh đổi tự do của người săn bắt để lấy sự ổn định tập thể.</p>
+    <p><strong>Bài học 2:</strong> Khả năng hợp tác dựa trên hư cấu chung — thần thoại, tôn giáo, tiền tệ, quốc gia — chính là sức mạnh tiến hóa lớn nhất của Homo sapiens. Đây vẫn là nền tảng của mọi thể chế chính trị và xã hội hiện đại.</p>
+  </div>
+</section>
+
+<div class="ornament-divider">· · · ✦ · · ·</div>
+
+<!-- ====== PHẦN II ====== -->
+<section class="era-section" id="co-dai" data-num="PHẦN II">
+  <div class="era-tag">Văn minh cổ đại</div>
+  <h2>Những Nền Văn Minh<br><em>Đầu Tiên Của Loài Người</em></h2>
+  <div class="era-timespan">3.500 TCN → 500 TCN</div>
+
+  <div class="prose">
+    <p>Khoảng 3.500 năm trước Công nguyên, tại vùng đồng bằng giữa hai con sông Tigris và Euphrates — mà người Hy Lạp sau này gọi là Mesopotamia (Lưỡng Hà) — nền văn minh đầu tiên của loài người bùng nở. Người Sumer sáng tạo ra chữ viết hình nêm (cuneiform) — ban đầu chỉ để ghi chép ngũ cốc và gia súc, sau này trở thành công cụ lưu giữ luật pháp, thơ ca và lịch sử. Cùng lúc đó, tại thung lũng sông Nile, người Ai Cập cổ đại xây dựng một nền văn minh phi thường kéo dài hơn 3.000 năm. Họ tạo ra kim tự tháp — kỳ quan duy nhất trong Bảy Kỳ Quan Cổ Đại còn tồn tại — một bằng chứng về khả năng tổ chức xã hội quy mô lớn và sức mạnh tư tưởng tôn giáo.</p>
+
+    <p>Trên khắp thế giới, cùng thời kỳ này, các nền văn minh lớn độc lập hình thành: tại thung lũng sông Indus (nay là Pakistan), nền văn minh Harappa phát triển những thành phố có hệ thống cống thoát nước tiên tiến đáng kinh ngạc; tại Trung Quốc, triều đại Thương xây dựng trên lưu vực Hoàng Hà; tại Mỹ Trung và Nam Mỹ, người Olmec và Chavín đặt nền móng cho các nền văn minh sau này. Sự hình thành độc lập của nhiều nền văn minh tại các khu vực khác nhau cho thấy điều kiện vật lý — đất đai màu mỡ, nguồn nước ổn định, khí hậu thuận lợi — đóng vai trò quyết định trong sự nảy sinh của văn minh.</p>
+
+    <p>Khoảng 2.000–500 TCN là thời kỳ đặc biệt mà học giả Karl Jaspers gọi là "Thời đại Trục" (Axial Age): trong khoảng 500 năm, tại nhiều nền văn minh không có liên hệ với nhau, những nhà tư tưởng vĩ đại đồng loạt xuất hiện — Khổng Tử và Lão Tử ở Trung Quốc, Phật Thích Ca ở Ấn Độ, Zarathustra ở Ba Tư, các nhà tiên tri Do Thái ở Trung Đông, Socrates và Plato ở Hy Lạp. Tất cả đều đặt câu hỏi về đạo đức, ý nghĩa cuộc sống và bản chất con người. Đây là cuộc cách mạng tư tưởng nền tảng cho mọi nền văn hóa lớn cho đến ngày nay.</p>
+  </div>
+
+  <div class="highlight-grid">
+    <div class="highlight-box">
+      <div class="hb-label">Nền văn minh</div>
+      <div class="hb-title">Lưỡng Hà (Sumer)</div>
+      <div class="hb-body">3.500–500 TCN. Phát minh chữ viết, bánh xe, hệ thống luật pháp (Bộ luật Hammurabi). Kinh tế thị trường đầu tiên với tiền tệ bằng bạc.</div>
+    </div>
+    <div class="highlight-box">
+      <div class="hb-label">Nền văn minh</div>
+      <div class="hb-title">Ai Cập cổ đại</div>
+      <div class="hb-body">3.100–30 TCN. Kim tự tháp Giza, chữ tượng hình, thiên văn học, y học, tôn giáo Amun-Ra. Nền văn minh liên tục lâu dài nhất lịch sử.</div>
+    </div>
+    <div class="highlight-box">
+      <div class="hb-label">Nền văn minh</div>
+      <div class="hb-title">Hy Lạp cổ đại</div>
+      <div class="hb-body">800–146 TCN. Dân chủ Athens, triết học Socratic, toán học Euclid, thơ sử thi Homer. Nền tảng tư tưởng phương Tây.</div>
+    </div>
+    <div class="highlight-box">
+      <div class="hb-label">Nền văn minh</div>
+      <div class="hb-title">Ấn Độ cổ đại (Vedic)</div>
+      <div class="hb-body">1.500–500 TCN. Kinh Veda, hệ thống đẳng cấp, toán học (hệ thập phân), và mầm mống của Ấn Độ giáo, Phật giáo, Jain giáo.</div>
+    </div>
+  </div>
+
+  <div class="event-list">
+    <div class="event-item">
+      <div class="event-year">~3200 TCN</div>
+      <div class="event-content"><div class="event-title">Phát minh chữ viết (Sumer)</div><div class="event-desc">Chữ hình nêm xuất hiện tại Uruk, ban đầu dùng cho kế toán. Đây là bước nhảy vọt cho phép lưu giữ và truyền tải tri thức qua các thế hệ.</div></div>
+    </div>
+    <div class="event-item">
+      <div class="event-year">~2560 TCN</div>
+      <div class="event-content"><div class="event-title">Kim tự tháp Giza hoàn thành</div><div class="event-desc">Pharaoh Khufu xây dựng kỳ quan duy nhất còn sót lại. Hơn 2 triệu tảng đá, tổ chức hàng chục nghìn lao động — bằng chứng về nhà nước quan liêu quy mô lớn đầu tiên.</div></div>
+    </div>
+    <div class="event-item">
+      <div class="event-year">1754 TCN</div>
+      <div class="event-content"><div class="event-title">Bộ luật Hammurabi</div><div class="event-desc">Vua Babylon ban hành bộ luật thành văn đầu tiên với 282 điều khoản. "Mắt đền mắt, răng đền răng" — tư tưởng luật pháp bình đẳng trước nhà nước.</div></div>
+    </div>
+    <div class="event-item">
+      <div class="event-year">508 TCN</div>
+      <div class="event-content"><div class="event-title">Nền dân chủ Athens ra đời</div><div class="event-desc">Cleisthenes cải cách Athens, lập nền dân chủ trực tiếp đầu tiên. Mọi công dân (nam, tự do) có quyền bỏ phiếu. Hạt nhân của tư tưởng chính trị phương Tây.</div></div>
+    </div>
+  </div>
+
+  <div class="figure-row">
+    <div class="figure-card">
+      <div class="fig-name">Hammurabi</div>
+      <div class="fig-role">Vua Babylon, ~1792 TCN</div>
+      <div class="fig-desc">Thống nhất Lưỡng Hà, ban hành bộ luật thành văn đầu tiên. Ý tưởng "công lý bình đẳng" đặt nền móng cho mọi hệ thống pháp luật hiện đại.</div>
+    </div>
+    <div class="figure-card">
+      <div class="fig-name">Khổng Tử</div>
+      <div class="fig-role">Nhà tư tưởng, 551–479 TCN</div>
+      <div class="fig-desc">Đặt nền móng cho Nho giáo — học thuyết về đạo đức, gia đình và nhà nước có ảnh hưởng sâu sắc đến Đông Á suốt 2.500 năm.</div>
+    </div>
+    <div class="figure-card">
+      <div class="fig-name">Phật Thích Ca</div>
+      <div class="fig-role">Nhà tư tưởng, ~563–483 TCN</div>
+      <div class="fig-desc">Siddhartha Gautama giác ngộ, sáng lập Phật giáo — triết học về khổ đau, vô thường và con đường giải thoát. Lan rộng khắp châu Á.</div>
+    </div>
+    <div class="figure-card">
+      <div class="fig-name">Socrates</div>
+      <div class="fig-role">Triết gia Hy Lạp, 470–399 TCN</div>
+      <div class="fig-desc">"Tôi biết rằng tôi không biết gì." Phương pháp đặt câu hỏi Socratic là nền tảng của tư duy phản biện và triết học phương Tây.</div>
+    </div>
+  </div>
+
+  <div class="lesson-box">
+    <p><strong>Bài học:</strong> "Thời đại Trục" dạy rằng khi xã hội đạt ngưỡng phức tạp nhất định, con người bắt đầu đặt câu hỏi đạo đức và ý nghĩa — không chỉ mưu sinh. Những câu hỏi này không thay đổi qua thiên niên kỷ. Mỗi thế hệ phải tự trả lời lại: Sống để làm gì? Công bằng là gì? Quyền lực từ đâu mà có?</p>
+    <p><strong>Bài học:</strong> Các nền văn minh cổ đại đều tàn lụi — nhưng tư tưởng của họ tồn tại. Bộ luật Hammurabi, triết học Plato, kinh Phật, kinh Veda — đây là "DNA văn hóa" được truyền qua nghìn năm. Văn minh vật chất có thể sụp đổ; tư tưởng thì không.</p>
+  </div>
+</section>
+
+<div class="ornament-divider">· · · ✦ · · ·</div>
+
+<!-- ====== PHẦN III ====== -->
+<section class="era-section" id="co-dien" data-num="PHẦN III">
+  <div class="era-tag">Đế chế cổ điển</div>
+  <h2>Thời Kỳ Các Đại Đế Chế —<br><em>Sự Thống Trị Và Giao Thoa Văn Minh</em></h2>
+  <div class="era-timespan">500 TCN → 500 CN</div>
+
+  <div class="prose">
+    <p>Từ thế kỷ thứ 5 TCN đến thế kỷ thứ 5 CN, thế giới chứng kiến sự ra đời và sụp đổ của những đế chế vĩ đại nhất từ trước đến lúc đó. Đây là kỷ nguyên mà quy mô, tổ chức và bạo lực của nhà nước được đẩy lên một tầm cao mới. Alexander Đại Đế trong vòng 13 năm chinh phục từ Hy Lạp đến Ấn Độ — tạo ra sự giao thoa Hellenistic giữa văn hóa Hy Lạp và các nền văn minh phương Đông. Đế chế La Mã thống nhất phần lớn châu Âu, Bắc Phi và Trung Đông dưới một hệ thống luật pháp, ngôn ngữ và hạ tầng chung. Đế chế Hán ở phương Đông khai mở Con đường Tơ lụa, nối liền Trung Quốc với La Mã qua hàng nghìn kilômét thảo nguyên và sa mạc. Đây là thời kỳ toàn cầu hóa đầu tiên của nhân loại.</p>
+
+    <p>La Mã là trường hợp nghiên cứu đặc biệt về quyền lực và sự suy tàn. Từ một thành phố nhỏ bên bờ sông Tiber, La Mã chinh phục toàn bộ Địa Trung Hải. Hệ thống Cộng hòa La Mã — với Thượng viện, lãnh sự và quyền phủ quyết — là mô hình cho các nền cộng hòa hiện đại. Nhưng khi lãnh thổ mở rộng, bất bình đẳng tăng, và quân sự hóa diễn ra, nền Cộng hòa sụp đổ. Julius Caesar vượt sông Rubicon năm 49 TCN, mở ra kỷ nguyên đế chế. La Mã hưng thịnh thêm 5 thế kỷ rồi dần tàn lụi — từ áp lực kinh tế, dịch bệnh, và cuộc xâm lăng của các bộ tộc German. Năm 476 CN, hoàng đế La Mã cuối cùng bị phế truất — một mốc thường được dùng để đánh dấu sự kết thúc của thế giới cổ đại.</p>
+
+    <p>Trong thời kỳ này, Kitô giáo và Phật giáo lan rộng rộng rãi — hai tôn giáo định hình phần lớn lịch sử về sau. Kitô giáo, bắt đầu như một phong trào thiểu số bị La Mã đàn áp, trở thành quốc giáo của đế chế La Mã năm 380 CN — một bước ngoặt chứng minh sức mạnh của tư tưởng vượt lên bạo lực nhà nước. Phật giáo từ Ấn Độ lan sang Trung Á, Trung Quốc, Đông Nam Á theo chân các thương nhân và tu sĩ trên Con đường Tơ lụa.</p>
+  </div>
+
+  <div class="highlight-grid">
+    <div class="highlight-box">
+      <div class="hb-label">Đế chế lớn nhất</div>
+      <div class="hb-title">Đế chế La Mã</div>
+      <div class="hb-body">27 TCN–476 CN. 5 triệu km², 88 triệu dân ở đỉnh cao. Luật La Mã, hệ thống đường sá, bê tông, vòm cung — nền tảng của văn minh phương Tây.</div>
+    </div>
+    <div class="highlight-box">
+      <div class="hb-label">Đế chế phương Đông</div>
+      <div class="hb-title">Đế chế Hán</div>
+      <div class="hb-body">206 TCN–220 CN. Con đường Tơ lụa, giấy, la bàn, thuốc súng. "Người Hán" trở thành tên gọi đa số dân Trung Quốc cho đến ngày nay.</div>
+    </div>
+    <div class="highlight-box">
+      <div class="hb-label">Sự kiện tôn giáo</div>
+      <div class="hb-title">Kitô giáo & Islam ra đời</div>
+      <div class="hb-body">33 CN (Kitô) — 622 CN (Islam). Hai tôn giáo độc thần này định hình nền văn minh phương Tây, Trung Đông, châu Phi và sau này — toàn thế giới.</div>
+    </div>
+  </div>
+
+  <div class="revolution-box" data-label="Nhân vật vĩ đại">
+    <h4>Alexander Đại Đế (356–323 TCN)</h4>
+    <p>Học trò của Aristotle, vua Macedonia từ năm 20 tuổi. Trong 13 năm, ông chinh phục Ba Tư, Ai Cập, Trung Á và Bắc Ấn Độ — tạo ra đế chế trải dài 5.000 km. Quan trọng hơn lãnh thổ là di sản văn hóa: ông thành lập hơn 20 thành phố mang tên Alexandria, nơi văn hóa Hy Lạp hòa quyện với phương Đông tạo nên nền văn minh Hellenistic. Thư viện Alexandria trở thành trung tâm tri thức vĩ đại nhất thế giới cổ đại.</p>
+  </div>
+
+  <div class="lesson-box">
+    <p><strong>Bài học từ La Mã:</strong> Không một đế chế nào trường tồn mãi mãi. La Mã suy tàn không phải chỉ vì bị tấn công từ bên ngoài, mà vì mục ruỗng từ bên trong — bất bình đẳng kinh tế cực đoan, tham nhũng chính trị, mất lòng tin vào thể chế. Đây là bài học mà mọi xã hội phát triển cần ghi nhớ.</p>
+    <p><strong>Bài học về tôn giáo:</strong> Các tôn giáo lớn xuất hiện và lan rộng không phải chủ yếu nhờ bạo lực (dù bạo lực có vai trò), mà nhờ chúng trả lời những câu hỏi sâu xa của con người về ý nghĩa, đạo đức và cộng đồng. Sức mạnh của tư tưởng — khi được tổ chức tốt — có thể vượt qua mọi quân đội.</p>
+  </div>
+</section>
+
+<div class="ornament-divider">· · · ✦ · · ·</div>
+
+<!-- ====== PHẦN IV ====== -->
+<section class="era-section" id="trung-co" data-num="PHẦN IV">
+  <div class="era-tag">Thời Trung Cổ</div>
+  <h2>Đêm Tối Và Ánh Sáng —<br><em>Thế Giới Thời Trung Cổ</em></h2>
+  <div class="era-timespan">500 CN → 1500 CN</div>
+
+  <div class="prose">
+    <p>Khi La Mã sụp đổ, châu Âu bước vào một thời kỳ được người đời sau gọi là "Thời Kỳ Đen Tối" — dù thực ra đây là cách nhìn thiên lệch của người Phục Hưng nhìn về quá khứ. Châu Âu thời Trung Cổ đúng là suy giảm đô thị hóa, thương mại và văn chương — nhưng đây cũng là thời kỳ Kitô giáo định hình văn hóa châu Âu sâu sắc, hệ thống phong kiến xuất hiện, và các trường đại học đầu tiên ra đời (Bologna 1088, Oxford 1096). Trong khi châu Âu vật lộn với bóng tối, thế giới Hồi giáo — từ Baghdad đến Cordoba — trải qua một thời kỳ hoàng kim rực rỡ về khoa học, toán học, y học và triết học.</p>
+
+    <p>Thế kỷ thứ 7 chứng kiến sự xuất hiện của Islam. Muhammad (570–632 CN) nhận Mặc khải tại Mecca, và trong vòng một thế kỷ sau khi ông mất, các đội quân Hồi giáo chinh phục từ Tây Ban Nha đến Ấn Độ — tốc độ bành trướng nhanh chóng nhất trong lịch sử thế giới cổ đại. Caliphate Abbasid tại Baghdad (750–1258) trở thành trung tâm học thuật lớn nhất thế giới, nơi học giả Muslim, Do Thái, Kitô giáo và Zoroastrian cùng làm việc. Đây là thời kỳ các học giả Arab dịch và bảo tồn tri thức Hy Lạp, phát triển đại số, quang học, thiên văn học — rồi truyền lại cho châu Âu thời Phục Hưng.</p>
+
+    <p>Thế kỷ 13 chứng kiến cuộc chinh phục của đế chế Mông Cổ — đế chế liền kề lớn nhất lịch sử. Thành Cát Tư Hãn và con cháu ông tàn phá từ Trung Quốc đến Ba Tư và Đông Âu, xóa sổ Baghdad năm 1258 và giết chết hàng triệu người. Nhưng đế chế Mông Cổ cũng kết nối Đông và Tây như chưa bao giờ có — Con đường Tơ lụa mở rộng, và trớ trêu thay, dịch hạch cũng theo đó lan rộng. Đại dịch Cái Chết Đen (1347–1351) giết chết 1/3 dân số châu Âu — khoảng 25 triệu người — và thay đổi căn bản xã hội châu Âu: lao động trở nên khan hiếm, nông nô có quyền mặc cả, hệ thống phong kiến lung lay.</p>
+  </div>
+
+  <div class="highlight-grid">
+    <div class="highlight-box">
+      <div class="hb-label">Trung tâm tri thức</div>
+      <div class="hb-title">Baghdad & Thế giới Hồi giáo</div>
+      <div class="hb-body">750–1258 CN. Nhà Trí tuệ (Bayt al-Hikmah) dịch thuật, phát triển đại số (Al-Khwarizmi), quang học (Ibn al-Haytham), y học (Ibn Sina).</div>
+    </div>
+    <div class="highlight-box">
+      <div class="hb-label">Đế chế lớn nhất</div>
+      <div class="hb-title">Đế chế Mông Cổ</div>
+      <div class="hb-body">1206–1368. 24 triệu km² — lớn nhất lịch sử. Vừa tàn phá vừa kết nối, tạo ra "Pax Mongolica" cho phép thương mại và tư tưởng lưu thông tự do.</div>
+    </div>
+    <div class="highlight-box">
+      <div class="hb-label">Thảm họa lịch sử</div>
+      <div class="hb-title">Cái Chết Đen</div>
+      <div class="hb-body">1347–1351. 25 triệu người châu Âu tử vong. Hệ quả nghịch lý: lao động khan hiếm → nông nô được trả lương → mầm mống của giai cấp tư sản.</div>
+    </div>
+    <div class="highlight-box">
+      <div class="hb-label">Khu vực nổi bật</div>
+      <div class="hb-title">Đế chế Khmer & Đông Nam Á</div>
+      <div class="hb-body">802–1431. Angkor Wat — đền thờ lớn nhất thế giới. Đế chế Khmer kiểm soát phần lớn Đông Dương, trung tâm thương mại và văn hóa Đông Nam Á.</div>
+    </div>
+  </div>
+
+  <div class="pull-quote">
+    <p>Khi Baghdad thất thủ năm 1258, quân Mông Cổ ném sách vào sông Tigris đến nỗi nước sông chuyển màu đen vì mực. Đó là một trong những tổn thất tri thức lớn nhất lịch sử loài người.</p>
+    <cite>— Ghi chép lịch sử về sự sụp đổ của Caliphate Abbasid</cite>
+  </div>
+
+  <div class="lesson-box">
+    <p><strong>Bài học về đa dạng tri thức:</strong> Thế giới Hồi giáo thời kỳ này dạy rằng khoa học và tôn giáo không nhất thiết mâu thuẫn, và rằng bao gồm các học giả từ nhiều nền tảng khác nhau tạo ra đột phá tri thức. Sự thu hẹp tư duy sau thế kỷ 12 (khi các học giả bảo thủ hơn lên ngôi) là nguyên nhân dài hạn của sự suy giảm của thế giới Hồi giáo so với châu Âu.</p>
+    <p><strong>Bài học từ Cái Chết Đen:</strong> Thảm họa đại quy mô — dù là dịch bệnh, chiến tranh hay biến đổi khí hậu — không chỉ phá hủy mà còn buộc xã hội tái cấu trúc. Nhiều bước tiến của thế giới hiện đại (quyền lao động, tư duy khoa học về y tế) có nguồn gốc từ những thảm họa này.</p>
+  </div>
+</section>
+
+<div class="ornament-divider">· · · ✦ · · ·</div>
+
+<!-- ====== PHẦN V ====== -->
+<section class="era-section" id="can-dai" data-num="PHẦN V">
+  <div class="era-tag">Thời Cận Đại</div>
+  <h2>Phục Hưng, Khám Phá<br><em>Và Cách Mạng Tư Tưởng</em></h2>
+  <div class="era-timespan">1400 CN → 1800 CN</div>
+
+  <div class="prose">
+    <p>Thế kỷ 15 đánh dấu sự khởi đầu của một thời kỳ biến đổi căn bản: Phục Hưng Italy (Renaissance) đặt con người — không phải Thượng đế — vào trung tâm của nghệ thuật, khoa học và triết học. Leonardo da Vinci, Michelangelo, Raphael không chỉ là nghệ sĩ — họ là biểu tượng của con người "toàn năng" (uomo universale), người có thể thành thạo mọi lĩnh vực từ giải phẫu học đến kỹ thuật quân sự. Cùng lúc đó, Gutenberg phát minh máy in khoảng năm 1440 — một cuộc cách mạng truyền thông giúp tri thức lan truyền với tốc độ và quy mô chưa từng có, kéo theo Cải cách Tôn giáo của Martin Luther (1517) và sự phân tách châu Âu Kitô giáo.</p>
+
+    <p>Kỷ nguyên Khám Phá (1490s–1600s) là khi châu Âu phá vỡ giới hạn địa lý đã ràng buộc họ hàng thế kỷ. Columbus năm 1492 "khám phá" châu Mỹ — thực ra là bắt đầu một trong những giai đoạn tàn bạo nhất lịch sử: chinh phục và diệt chủng các nền văn minh Aztec, Inca, Maya, và hàng trăm dân tộc bản địa. Trong 100 năm tiếp theo, dân số bản địa châu Mỹ giảm từ khoảng 50–60 triệu xuống còn 6 triệu — chủ yếu do dịch bệnh mà người bản địa chưa có miễn dịch. Đây là cuộc diệt chủng lớn nhất và ít được nhắc đến nhất trong lịch sử. Kỷ nguyên khám phá cũng khởi động hệ thống nô lệ xuyên Đại Tây Dương — hơn 12 triệu người châu Phi bị bắt cóc và bán sang châu Mỹ trong 400 năm, tạo nên vết thương lịch sử còn chưa lành đến ngày nay.</p>
+
+    <p>Thế kỷ 17–18 là Thời đại Khai sáng (Enlightenment) — khi lý trí, khoa học và quyền con người trở thành nền tảng tư tưởng. Galileo, Newton, Descartes, Locke, Rousseau, Voltaire — họ đặt câu hỏi về mọi thứ: từ vật lý học vũ trụ đến cơ sở của quyền lực chính trị. Tư tưởng Khai sáng trực tiếp dẫn đến Cách mạng Mỹ (1776) và Cách mạng Pháp (1789) — hai cuộc cách mạng chính trị đặt nền móng cho thế giới dân chủ hiện đại. Cách mạng Công nghiệp bắt đầu ở Anh vào thập niên 1760 — máy hơi nước của James Watt là biểu tượng — thay đổi căn bản cách sản xuất, tổ chức lao động và đô thị hóa.</p>
+  </div>
+
+  <div class="revolution-box" data-label="Cuộc cách mạng">
+    <h4>Cách mạng Khoa học (1543–1687)</h4>
+    <p>Từ Copernicus (Trái Đất quay quanh Mặt Trời) đến Galileo (kính thiên văn, vật lý học thực nghiệm) đến Newton (định luật vạn vật hấp dẫn, Principia Mathematica 1687) — nhân loại lần đầu tiên hiểu vũ trụ vận hành theo quy luật toán học có thể phát hiện và kiểm chứng. Đây không chỉ là phát hiện khoa học — đây là cách mạng nhận thức: lý trí con người, không phải thẩm quyền tôn giáo, là thước đo của sự thật.</p>
+  </div>
+
+  <div class="revolution-box" data-label="Cuộc cách mạng">
+    <h4>Cách mạng Công nghiệp (1760–1850)</h4>
+    <p>Từ nông nghiệp thủ công sang sản xuất cơ giới hóa. Máy hơi nước, dệt máy, xe lửa — năng suất lao động tăng vọt. Nhưng cũng: lao động trẻ em trong nhà máy, đô thị hóa hỗn loạn, ô nhiễm, và sự ra đời của giai cấp công nhân công nghiệp. Từ đây nảy sinh tư tưởng xã hội chủ nghĩa (Marx, Engels) và phong trào lao động hiện đại.</p>
+  </div>
+
+  <div class="event-list">
+    <div class="event-item">
+      <div class="event-year">1440</div>
+      <div class="event-content"><div class="event-title">Gutenberg phát minh máy in</div><div class="event-desc">Tri thức từ độc quyền của giáo hội và quý tộc trở thành đại chúng. Sách rẻ hơn 10 lần trong vòng 50 năm. Cải cách tôn giáo, khoa học và cách mạng chính trị theo sau.</div></div>
+    </div>
+    <div class="event-item">
+      <div class="event-year">1517</div>
+      <div class="event-content"><div class="event-title">Luther và Cải cách Tôn giáo</div><div class="event-desc">95 luận điểm của Martin Luther phá vỡ sự độc tôn của Giáo hội Công giáo La Mã. Dẫn đến các cuộc chiến tranh tôn giáo và cuối cùng — tách biệt nhà nước và tôn giáo.</div></div>
+    </div>
+    <div class="event-item">
+      <div class="event-year">1776</div>
+      <div class="event-content"><div class="event-title">Tuyên ngôn Độc lập Mỹ</div><div class="event-desc">"Mọi người sinh ra đều bình đẳng." Lần đầu tiên quyền con người được ghi thành văn bản nhà nước. Khuôn mẫu cho các nền dân chủ tự do sau này.</div></div>
+    </div>
+    <div class="event-item">
+      <div class="event-year">1789</div>
+      <div class="event-content"><div class="event-title">Cách mạng Pháp</div><div class="event-desc">"Tự do, Bình đẳng, Bác ái." Lật đổ chế độ quân chủ, tạo ra Tuyên ngôn Nhân quyền và Dân quyền. Mở ra kỷ nguyên chính trị hiện đại: dân tộc chủ nghĩa, cộng hòa, dân chủ.</div></div>
+    </div>
+  </div>
+
+  <div class="lesson-box">
+    <p><strong>Bài học về công nghệ và quyền lực:</strong> Máy in của Gutenberg dân chủ hóa tri thức — tương tự như Internet ngày nay. Mỗi khi phương tiện truyền thông thay đổi, cơ cấu quyền lực xã hội đảo lộn. Người nắm tri thức không còn là người duy nhất có quyền lực.</p>
+    <p><strong>Bài học về sự tàn bạo đi kèm tiến bộ:</strong> Kỷ nguyên Khám Phá và Khai sáng — thời kỳ châu Âu nói nhiều nhất về quyền con người — cũng là thời kỳ nô lệ và diệt chủng quy mô lớn nhất. Đây là mâu thuẫn nền tảng của "văn minh phương Tây" mà thế giới hiện đại vẫn đang đối mặt.</p>
+  </div>
+</section>
+
+<div class="ornament-divider">· · · ✦ · · ·</div>
+
+<!-- ====== PHẦN VI ====== -->
+<section class="era-section" id="hien-dai" data-num="PHẦN VI">
+  <div class="era-tag">Thế kỷ XIX–XX</div>
+  <h2>Thế Giới Hiện Đại —<br><em>Thế Kỷ Của Chiến Tranh Và Giải Phóng</em></h2>
+  <div class="era-timespan">1800 CN → 2000 CN</div>
+
+  <div class="prose">
+    <p>Thế kỷ 19 là thế kỷ của chủ nghĩa thực dân đỉnh cao và chủ nghĩa dân tộc trỗi dậy — hai lực lượng mâu thuẫn nhau sẽ kéo thế giới vào những thảm họa của thế kỷ 20. Đến năm 1900, châu Âu kiểm soát 84% diện tích đất liền thế giới. Đế quốc Anh cai quản 1/4 dân số và lãnh thổ toàn cầu. Châu Phi, Ấn Độ, Đông Nam Á, phần lớn Trung Đông và châu Mỹ Latinh đều nằm dưới quyền kiểm soát của các cường quốc châu Âu. Chủ nghĩa thực dân không chỉ là chiếm lãnh thổ — nó là hệ thống khai thác tài nguyên, áp đặt văn hóa và phân biệt chủng tộc được hệ thống hóa thành chính sách nhà nước.</p>
+
+    <p>Thế chiến thứ nhất (1914–1918) là kết quả của sự cộng hưởng nguy hiểm giữa chủ nghĩa dân tộc cực đoan, chủ nghĩa đế quốc cạnh tranh, và hệ thống liên minh phức tạp. Hơn 17 triệu người chết — và điều đáng sợ hơn: nó không giải quyết bất kỳ vấn đề gì, mà chỉ gieo mầm cho cuộc chiến tiếp theo. Hiệp ước Versailles (1919) áp đặt điều khoản nhục nhã với Đức — nuôi dưỡng sự phẫn uất và bất ổn kinh tế, tạo điều kiện cho Adolf Hitler và chủ nghĩa Phát-xít lên ngôi vào thập niên 1930.</p>
+
+    <p>Thế chiến thứ hai (1939–1945) là cuộc xung đột lớn nhất lịch sử: 70–85 triệu người chết, Holocaust — cuộc diệt chủng 6 triệu người Do Thái có hệ thống nhất trong lịch sử, và hai quả bom nguyên tử ném xuống Hiroshima và Nagasaki. Nhưng từ tàn lụi đó, thế giới cũng xây dựng lên hệ thống quốc tế mới: Liên Hợp Quốc (1945), Tuyên ngôn Nhân quyền Phổ quát (1948), và trật tự quốc tế dựa trên luật pháp. Chiến tranh Lạnh (1947–1991) phân chia thế giới thành hai cực: Mỹ và Liên Xô — mỗi bên đại diện cho một mô hình xã hội. Cuộc cạnh tranh này thúc đẩy cuộc chạy đua không gian và vũ trang hạt nhân, nhưng cũng — nghịch lý — duy trì hòa bình lớn do nỗi sợ hủy diệt lẫn nhau (MAD — Mutually Assured Destruction).</p>
+
+    <p>Trong nửa sau thế kỷ 20, phong trào phi thực dân hóa giải phóng hàng chục quốc gia ở châu Á, châu Phi và Trung Đông. Ấn Độ độc lập năm 1947 dưới sự lãnh đạo của Gandhi — một minh chứng lịch sử về sức mạnh của bất bạo động. Phong trào quyền dân sự ở Mỹ dưới sự lãnh đạo của Martin Luther King Jr. kết thúc hợp pháp hóa phân biệt chủng tộc năm 1965. Liên Xô sụp đổ năm 1991 mà không có một viên đạn được bắn — một kết thúc của thế kỷ bắt đầu bằng niềm tin rằng lịch sử chỉ được thay đổi bởi bạo lực.</p>
+  </div>
+
+  <div class="modern-grid">
+    <div class="modern-cell">
+      <div class="mc-head">Thảm họa</div>
+      <div class="mc-title">Holocaust (1941–1945)</div>
+      <div class="mc-body">6 triệu người Do Thái và hàng triệu người khác bị giết có hệ thống bởi Đức Quốc xã. Chứng minh rằng văn minh, khoa học và nhà nước quan liêu hiện đại có thể được dùng cho diệt chủng. Dẫn đến Công ước Diệt chủng 1948 và khái niệm "tội ác chống lại nhân loại".</div>
+    </div>
+    <div class="modern-cell">
+      <div class="mc-head">Thành tựu</div>
+      <div class="mc-title">Cuộc đổ bộ Mặt Trăng (1969)</div>
+      <div class="mc-body">Neil Armstrong đặt chân lên Mặt Trăng ngày 20/7/1969. Nhân loại lần đầu rời khỏi hành tinh của mình. Biểu tượng cho sức mạnh tập thể của khoa học và công nghệ khi được đầu tư có mục tiêu.</div>
+    </div>
+    <div class="modern-cell">
+      <div class="mc-head">Tư tưởng</div>
+      <div class="mc-title">Tuyên ngôn Nhân quyền (1948)</div>
+      <div class="mc-body">30 điều khoản về quyền cơ bản của mọi con người — bất phân quốc tịch, giới tính, chủng tộc. Tiêu chuẩn đạo đức toàn cầu đầu tiên, dù thực thi còn bất bình đẳng.</div>
+    </div>
+    <div class="modern-cell">
+      <div class="mc-head">Phong trào</div>
+      <div class="mc-title">Phi thực dân hóa</div>
+      <div class="mc-body">1945–1975: hơn 60 quốc gia giành độc lập. Nhưng nhiều trong số họ thừa hưởng biên giới tùy tiện của thực dân, gây xung đột sắc tộc kéo dài.</div>
+    </div>
+  </div>
+
+  <div class="figure-row">
+    <div class="figure-card">
+      <div class="fig-name">Gandhi</div>
+      <div class="fig-role">Lãnh đạo, 1869–1948</div>
+      <div class="fig-desc">Bất bạo động có tổ chức đưa 300 triệu người Ấn Độ thoát khỏi ách thực dân Anh. Ảnh hưởng đến mọi phong trào giải phóng sau này.</div>
+    </div>
+    <div class="figure-card">
+      <div class="fig-name">Einstein</div>
+      <div class="fig-role">Nhà vật lý, 1879–1955</div>
+      <div class="fig-desc">Thuyết tương đối thay đổi cách nhân loại hiểu vũ trụ. Nghịch lý: công trình của ông dẫn đến bom nguyên tử mà ông suốt đời ân hận.</div>
+    </div>
+    <div class="figure-card">
+      <div class="fig-name">M.L. King Jr.</div>
+      <div class="fig-role">Lãnh đạo, 1929–1968</div>
+      <div class="fig-desc">Dẫn dắt phong trào quyền dân sự Mỹ bằng bất bạo động và hùng biện đạo đức. "I have a dream" — bài phát biểu định hình lương tâm thế kỷ 20.</div>
+    </div>
+    <div class="figure-card">
+      <div class="fig-name">Mandela</div>
+      <div class="fig-role">Lãnh đạo, 1918–2013</div>
+      <div class="fig-desc">27 năm tù không bẻ gãy ý chí. Kết thúc Apartheid mà không có nội chiến — bằng tha thứ và hòa giải. Biểu tượng của phẩm giá con người.</div>
+    </div>
+  </div>
+
+  <div class="lesson-box">
+    <p><strong>Bài học từ thế kỷ 20:</strong> Thế kỷ 20 là thế kỷ của các cực đoan — diệt chủng và nhân quyền, bom nguyên tử và y học hiện đại, chủ nghĩa toàn trị và dân chủ mở rộng. Điều này dạy rằng tiến bộ kỹ thuật không tự động tạo ra tiến bộ đạo đức. Khoa học có thể phục vụ cả thiên thần lẫn ác quỷ — tùy thuộc vào cơ cấu quyền lực và giá trị xã hội nào định hướng nó.</p>
+    <p><strong>Bài học về sức mạnh bất bạo động:</strong> Gandhi, King, Mandela, Havel, Walesa — thế kỷ 20 chứng minh rằng bất bạo động có tổ chức là vũ khí chính trị mạnh hơn bạo lực trong nhiều hoàn cảnh. Không phải vì đối thủ "tốt bụng" — mà vì bất bạo động phơi bày sự bất công một cách không thể biện hộ.</p>
+  </div>
+</section>
+
+<div class="ornament-divider">· · · ✦ · · ·</div>
+
+<!-- ====== PHẦN VII ====== -->
+<section class="era-section" id="tuong-lai" data-num="PHẦN VII">
+  <div class="era-tag">Hiện tại & Tương lai</div>
+  <h2>Thế Giới Ngày Hôm Nay —<br><em>Dòng Chảy Lịch Sử Đang Ở Đâu?</em></h2>
+  <div class="era-timespan">2000 CN → Hiện tại</div>
+
+  <div class="prose">
+    <p>Thế giới năm 2025 là kết quả của toàn bộ lịch sử kể trên — nhưng cũng đang ở một bước ngoặt chưa có tiền lệ. Toàn cầu hóa giai đoạn 1990–2020 kết nối các nền kinh tế theo cách chưa từng có: hàng hóa, vốn, con người và thông tin di chuyển tự do hơn bất kỳ lúc nào trong lịch sử. Kết quả: hàng trăm triệu người thoát nghèo (đặc biệt ở Trung Quốc và Đông Nam Á), nhưng cũng: bất bình đẳng nội quốc tăng mạnh ở các nước phát triển, phá hủy việc làm sản xuất, và sự trỗi dậy của chủ nghĩa dân túy phản toàn cầu hóa.</p>
+
+    <p>Trí tuệ nhân tạo (AI) — đặc biệt từ năm 2022 với sự xuất hiện của ChatGPT và các mô hình ngôn ngữ lớn — là cuộc cách mạng công nghệ có quy mô có thể so sánh với máy in của Gutenberg hoặc Cách mạng Công nghiệp. AI có khả năng tự động hóa không chỉ lao động chân tay mà cả lao động trí tuệ. Điều này đặt ra câu hỏi chưa có lời đáp: khi máy móc làm được mọi thứ con người làm, vị trí của con người trong xã hội là gì? Biến đổi khí hậu là thách thức hiện hữu lớn nhất của thế kỷ 21 — khác với mọi thách thức lịch sử trước đó ở chỗ nó không có kẻ thù rõ ràng để đánh bại, mà đòi hỏi sự phối hợp toàn cầu chưa từng có trong lịch sử loài người.</p>
+
+    <p>Trật tự thế giới đơn cực do Mỹ dẫn dắt sau 1991 đang chuyển dịch sang đa cực. Trung Quốc vươn lên thành cường quốc kinh tế và quân sự thứ hai thế giới, thách thức quyền bá chủ Mỹ ở châu Á–Thái Bình Dương. Ấn Độ đang nổi lên như cường quốc thứ ba. Nga, dù kinh tế nhỏ hơn, vẫn sử dụng vũ lực quân sự (Ukraine) và ảnh hưởng thông tin như công cụ địa chính trị. Thế giới đang bước vào một kỷ nguyên cạnh tranh cường quốc mới — nhưng khác với Chiến tranh Lạnh ở chỗ kinh tế các cường quốc đan xen sâu sắc, làm cho "decoupling" (tách rời) vừa khó vừa tốn kém.</p>
+  </div>
+
+  <div class="modern-grid">
+    <div class="modern-cell">
+      <div class="mc-head">Điều đang thay đổi</div>
+      <div class="mc-title">Cách mạng AI</div>
+      <div class="mc-body">Lần đầu tiên trong lịch sử, một công nghệ có thể thực hiện các nhiệm vụ nhận thức — viết, lập luận, sáng tạo — ở mức độ tiếp cận năng lực con người. Điều này đặt ra câu hỏi căn bản về việc làm, giáo dục, quyền lực và bản sắc con người.</div>
+    </div>
+    <div class="modern-cell">
+      <div class="mc-head">Điều đang thay đổi</div>
+      <div class="mc-title">Biến đổi khí hậu</div>
+      <div class="mc-body">Nhiệt độ toàn cầu đã tăng 1,2°C so với tiền công nghiệp. Các sự kiện cực đoan — lũ lụt, hạn hán, cháy rừng — ngày càng khốc liệt. Có thể là thách thức hợp tác lớn nhất lịch sử loài người.</div>
+    </div>
+    <div class="modern-cell">
+      <div class="mc-head">Điều không thay đổi</div>
+      <div class="mc-title">Cạnh tranh quyền lực</div>
+      <div class="mc-body">Từ Sumer đến ngày nay, các cường quốc luôn cạnh tranh tài nguyên, ảnh hưởng và vị thế. Mỹ–Trung ngày nay không khác nhiều về động lực cơ bản so với La Mã–Parthia hay Anh–Pháp thế kỷ 18.</div>
+    </div>
+    <div class="modern-cell">
+      <div class="mc-head">Điều không thay đổi</div>
+      <div class="mc-title">Bất bình đẳng</div>
+      <div class="mc-body">1% người giàu nhất sở hữu hơn 45% tổng tài sản thế giới. Từ phong kiến đến tư bản, cơ cấu bất bình đẳng thay đổi hình thức nhưng không biến mất. Câu hỏi về phân phối công bằng vẫn là trung tâm của mọi chính trị.</div>
+    </div>
+  </div>
+
+  <div class="pull-quote">
+    <p>Lịch sử không lặp lại, nhưng nó vần điệu. Chúng ta đang sống trong một bản vần điệu của những thời kỳ đã qua — với những nhân vật và sân khấu khác, nhưng những câu hỏi cơ bản thì không đổi.</p>
+    <cite>— Mark Twain (được gán cho)</cite>
+  </div>
+
+  <div class="highlight-grid">
+    <div class="highlight-box">
+      <div class="hb-label">Thách thức lớn nhất</div>
+      <div class="hb-title">Quản trị AI & Công nghệ</div>
+      <div class="hb-body">Lần đầu tiên con người tạo ra một công cụ mà chúng ta chưa hiểu đầy đủ về hậu quả. Câu hỏi quản trị: Ai kiểm soát AI? Ai được hưởng lợi? Ai chịu rủi ro?</div>
+    </div>
+    <div class="highlight-box">
+      <div class="hb-label">Xu hướng tích cực</div>
+      <div class="hb-title">Giảm nghèo toàn cầu</div>
+      <div class="hb-body">Từ 1990 đến 2019, tỷ lệ cực nghèo giảm từ 36% xuống 9%. Tuổi thọ trung bình toàn cầu tăng từ 45 (1950) lên 73 (2023). Tiến bộ y tế và giáo dục chưa từng có.</div>
+    </div>
+    <div class="highlight-box">
+      <div class="hb-label">Rủi ro hiện hữu</div>
+      <div class="hb-title">Xói mòn dân chủ</div>
+      <div class="hb-body">V-Dem Institute: số lượng nền dân chủ tự do đã giảm từ 42 (2009) xuống 32 (2023). Chủ nghĩa dân túy, thông tin sai lệch và sự mất lòng tin vào thể chế là mối đe dọa từ bên trong.</div>
+    </div>
+    <div class="highlight-box">
+      <div class="hb-label">Cơ hội lớn</div>
+      <div class="hb-title">Năng lượng tái tạo</div>
+      <div class="hb-body">Chi phí năng lượng mặt trời giảm 90% trong 10 năm. Điện gió và mặt trời đang trở thành nguồn điện rẻ nhất lịch sử — cuộc cách mạng năng lượng đang diễn ra.</div>
+    </div>
+  </div>
+
+  <div class="lesson-box">
+    <p><strong>Điều lịch sử dạy về thời điểm này:</strong> Mỗi kỳ chuyển đổi lớn — Cách mạng Nông nghiệp, Cách mạng Công nghiệp, Kỷ nguyên Số — đều gây ra bất ổn sâu sắc trước khi thế giới tái cân bằng ở một mức cao hơn. Chúng ta đang trong giai đoạn bất ổn đó. Lịch sử cho thấy thời điểm chuyển đổi là khi các thể chế cũ không còn phù hợp nhưng thể chế mới chưa hình thành — đây là giai đoạn nguy hiểm nhất, nhưng cũng có nhiều cơ hội nhất.</p>
+    <p><strong>Điều không bao giờ thay đổi:</strong> Con người luôn cần ý nghĩa, cộng đồng, công lý và hy vọng. Mọi nền văn minh thành công trong lịch sử đều tìm được cách đáp ứng những nhu cầu này. Văn minh nào bỏ qua chúng — dù giàu có hay mạnh đến đâu — đều sụp đổ từ bên trong.</p>
+    <p><strong>Lời kết:</strong> Lịch sử không phải là chuỗi sự kiện đã qua — nó là cuộc trò chuyện liên tục giữa quá khứ và hiện tại. Mỗi thế hệ nhận di sản của mọi thế hệ trước và có trách nhiệm để lại gì đó xứng đáng cho thế hệ sau. Đây là ý nghĩa sâu xa nhất của việc học lịch sử.</p>
+  </div>
+</section>
+
+</main>
+
+<div class="epilogue">
+  <h2>Nhìn Lại Để Nhìn Về Phía Trước</h2>
+  <p>Trong 13,8 tỷ năm vũ trụ, 300.000 năm loài người, và 10.000 năm văn minh — chúng ta mới chỉ ở ngưỡng cửa của những gì có thể xảy ra. Mỗi giai đoạn lịch sử kể trên đều có một thế hệ không biết mình đang sống trong thời điểm lịch sử — nhưng họ vẫn phải ra quyết định, chọn đứng về phía nào, và chịu trách nhiệm về hậu quả.</p>
+  <p>Thế kỷ 21 là thế kỷ đầu tiên mà những quyết định của loài người có thể quyết định tương lai của loài người với tư cách là một nền văn minh. AI, biến đổi khí hậu, vũ khí sinh học, và sự cạnh tranh cường quốc — tất cả những thách thức này không có tiền lệ đầy đủ trong lịch sử, dù lịch sử có thể cho chúng ta nhiều gợi ý.</p>
+  <p>Và câu hỏi duy nhất quan trọng là: <em>Thế hệ chúng ta sẽ để lại di sản gì?</em></p>
+  <div class="epilogue-ornament">✦</div>
+</div>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.05 });
+
+document.querySelectorAll('.era-section').forEach(s => observer.observe(s));
+</script>
+
+    <div style="padding: 24px; text-align: center; background: #ede5d0; border-top: 1px solid #d4a843;">
+        <button class="back-btn" onclick="openThuVienArticle('')" style="background: #f7f2e8; border: 1px solid #b8860b; color: #1a1208; padding: 8px 20px; cursor: pointer; font-family: 'Space Mono', monospace; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.05em; border-radius: 4px;">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại Thư viện
+        </button>
+    </div>
+</div>
+
+
 
                 </div>
             </div>
