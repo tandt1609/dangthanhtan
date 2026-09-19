@@ -213,7 +213,9 @@ function handleRouting(path, updateUrl = false) {
     } else if (path.startsWith('/huyen-thoai')) {
         switchTab('huyen-thoai', false);
         const subPath = path.substring('/huyen-thoai'.length);
-        if (subPath === '/fdr-luoc-su') {
+        if (subPath === '/charles-dow') {
+            openLegendArticle('charles-dow', updateUrl);
+        } else if (subPath === '/fdr-luoc-su') {
             openLegendArticle('fdr-luoc-su', updateUrl);
         } else if (subPath === '/mark-douglas') {
             openLegendArticle('mark-douglas', updateUrl);
@@ -1261,7 +1263,14 @@ function openLegendArticle(articleId, updateUrl = true) {
 
     document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
 
-    if (articleId === 'fdr-luoc-su') {
+    if (articleId === 'charles-dow') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-dow-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'huyen-thoai', articleId: 'charles-dow' }, '', '/huyen-thoai/charles-dow');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'fdr-luoc-su') {
         listView.classList.remove('active');
         articleView.classList.add('active');
         const panel = document.getElementById('article-fdr-panel');
