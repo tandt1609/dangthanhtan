@@ -156,7 +156,9 @@ function handleRouting(path, updateUrl = false) {
     if (path.startsWith('/thu-vien')) {
         switchTab('thu-vien', false);
         const subPath = path.substring('/thu-vien'.length);
-        if (subPath === '/luoc-su-the-gioi') {
+        if (subPath === '/kinh-phap-hoa') {
+            openThuVienArticle('kinh-phap-hoa', updateUrl);
+        } else if (subPath === '/luoc-su-the-gioi') {
             openThuVienArticle('luoc-su-the-gioi', updateUrl);
         } else if (subPath === '/luoc-su-con-duong-to-lua') {
             openThuVienArticle('luoc-su-con-duong-to-lua', updateUrl);
@@ -319,7 +321,14 @@ function openThuVienArticle(articleId, updateUrl = true) {
 
     document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
 
-    if (articleId === 'luoc-su-the-gioi') {
+    if (articleId === 'kinh-phap-hoa') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-phaphoa-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'kinh-phap-hoa' }, '', '/thu-vien/kinh-phap-hoa');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'luoc-su-the-gioi') {
         listView.classList.remove('active');
         articleView.classList.add('active');
         const panel = document.getElementById('article-thegioi-panel');
