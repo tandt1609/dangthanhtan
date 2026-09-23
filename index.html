@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=Special+Elite&family=Cinzel:wght@400;500;600;700&family=Inconsolata:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/style.css?v=26">
     <style>
@@ -157,6 +158,19 @@ html, body {
             <div id="panel-trang-chu" class="tab-panel active">
                 <h2 class="section-title"><i class="fa-solid fa-fire-flame-curved"></i> Bài viết mới</h2>
                 <div class="news-list">
+                        <!-- Post: Trung Quan Luan (Thu Vien) -->
+                        <a href="/thu-vien/trung-quan-luan" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-dharmachakra"></i> Phật học &amp; Triết học</span>
+                                <span class="news-time">23/09/2026</span>
+                            </div>
+                            <h3 class="news-heading">Trung Quán Luận: Nghệ Thuật Đứng Giữa Có Và Không</h3>
+                            <p class="news-excerpt">Hành trình dễ hiểu và dí dỏm vào triết lý Trung Đạo của Long Thọ. Khám phá tính Không, Bát Bất, Nhị Đế và nghệ thuật đứng giữa hai thái cực Có và Không trong tư tưởng và đời sống.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc bài viết</span>
+                            </div>
+                        </a>
+
                         <!-- Post: Kinh Phap Hoa (Thu Vien) -->
                         <a href="/thu-vien/kinh-phap-hoa" class="news-card clickable-card">
                             <div class="news-meta">
@@ -16166,6 +16180,19 @@ footer{
                 <!-- LIST VIEW -->
                 <div id="thu-vien-list-view" class="sukien-view active">
                     <div class="news-list">
+                        <!-- Post: Trung Quan Luan (Thu Vien) -->
+                        <a href="/thu-vien/trung-quan-luan" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-dharmachakra"></i> Phật học &amp; Triết học</span>
+                                <span class="news-time">Tháng 9, 2026</span>
+                            </div>
+                            <h3 class="news-heading">Trung Quán Luận: Nghệ Thuật Đứng Giữa Có Và Không</h3>
+                            <p class="news-excerpt">Hành trình dễ hiểu và dí dỏm vào triết lý Trung Đạo của Long Thọ. Khám phá tính Không, Bát Bất, Nhị Đế và nghệ thuật đứng giữa hai thái cực Có và Không trong tư tưởng và đời sống.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc bài viết</span>
+                            </div>
+                        </a>
+
                         <!-- Post: Kinh Phap Hoa (Thu Vien) -->
                         <a href="/thu-vien/kinh-phap-hoa" class="news-card clickable-card">
                             <div class="news-meta">
@@ -26292,6 +26319,455 @@ document.querySelectorAll('.era-section').forEach(s => observer.observe(s));
         </button>
     </div>
 </div>
+
+
+<!-- ARTICLE PANEL: TRUNG QUAN LUAN -->
+<div id="article-trungquan-panel" class="sukien-article-panel trungquan-body">
+<style>
+#article-trungquan-panel {
+  --bg:#F1EAD9;
+  --bg-panel:#E8DFC6;
+  --ink:#2B2620;
+  --ink-soft:#6B6250;
+  --jade:#4E7864;
+  --jade-pale:#DCE5DA;
+  --vermilion:#A5402B;
+  --line:#C7BC9C;
+
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Noto Serif', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+
+  & * { box-sizing: border-box; }
+
+  h1,h2,h3,.marker,.toc a,.tile span,.figure-name,.colophon,.label-tag {
+    font-family: 'Be Vietnam Pro', sans-serif;
+  }
+  .wrap { max-width: 700px; margin: 0 auto; padding: 0 24px 120px; }
+  header.hero {
+    max-width: 700px; margin: 0 auto; padding: 72px 24px 40px; text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .seal {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--vermilion); color: #F3E9DC;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; margin: 0 auto 28px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.15) inset;
+    letter-spacing: 0;
+  }
+  h1 {
+    font-size: clamp(34px,6vw,52px);
+    font-weight: 800;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .subtitle {
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 19px;
+    max-width: 460px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  section.intro {
+    max-width: 700px; margin: 0 auto; padding: 44px 24px 8px;
+  }
+  section.intro p { margin: 0 0 18px; }
+  section.intro p:first-child {
+    font-size: 20px;
+  }
+  section.intro p:first-child::first-letter {
+    font-size: 52px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 800;
+    color: var(--vermilion);
+    float: left;
+    line-height: 0.85;
+    padding-right: 10px;
+    padding-top: 4px;
+  }
+  nav.toc {
+    max-width: 700px; margin: 28px auto 8px; padding: 28px 28px;
+    background: var(--bg-panel); border-radius: 2px;
+  }
+  nav.toc p.toc-title {
+    margin: 0 0 14px; font-size: 14px; letter-spacing: 0.02em;
+    color: var(--ink-soft); font-weight: 600;
+  }
+  nav.toc ol { margin: 0; padding: 0 0 0 4px; list-style: none; }
+  nav.toc li {
+    border-bottom: 1px solid var(--line);
+  }
+  nav.toc li:last-child { border-bottom: none; }
+  nav.toc a {
+    display: flex; gap: 14px; align-items: baseline;
+    padding: 11px 2px; color: var(--ink); text-decoration: none; font-size: 15.5px;
+  }
+  nav.toc a:hover { color: var(--jade); }
+  nav.toc .num { color: var(--vermilion); font-weight: 700; min-width: 20px; }
+
+  main { max-width: 700px; margin: 0 auto; padding: 8px 24px 0; }
+  section.phan { padding-top: 64px; }
+  .marker {
+    display: inline-block; color: var(--vermilion); font-weight: 700;
+    font-size: 14px; letter-spacing: 0.04em; margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 27px; font-weight: 700; margin: 0 0 22px; line-height: 1.32;
+    color: var(--ink);
+  }
+  h3 { font-size: 18px; font-weight: 600; margin: 26px 0 10px; color: var(--jade); }
+  p { margin: 0 0 17px; }
+  strong { color: var(--jade); font-weight: 600; }
+  .verse {
+    font-family: 'Noto Serif', serif; font-style: italic;
+    color: var(--ink);
+    border-left: 3px solid var(--vermilion);
+    padding: 6px 0 6px 22px; margin: 22px 0; font-size: 18px; line-height: 1.8;
+  }
+  .verse .han-viet { display: block; margin-bottom: 6px; }
+  .verse .nghia { display: block; color: var(--ink-soft); font-style: normal; font-size: 16px; }
+
+  .example {
+    background: var(--jade-pale);
+    border-radius: 2px;
+    padding: 20px 22px;
+    margin: 20px 0 22px;
+  }
+  .example p { margin: 0; }
+  .example .label-tag {
+    display: block; font-size: 13px; font-weight: 600;
+    color: var(--jade); margin-bottom: 8px; letter-spacing: 0.01em;
+  }
+
+  .fig-list { margin: 22px 0; padding: 0; list-style: none; }
+  .fig-list li {
+    padding: 16px 0; border-top: 1px solid var(--line);
+  }
+  .fig-list li:last-child { border-bottom: 1px solid var(--line); }
+  .figure-name { font-weight: 700; font-size: 16px; color: var(--ink); display: block; margin-bottom: 4px; }
+  .figure-role { color: var(--ink-soft); font-size: 15.5px; font-family: 'Noto Serif', serif; }
+
+  .bat-bat-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    background: var(--line); border: 1px solid var(--line);
+    margin: 24px 0; border-radius: 2px; overflow: hidden;
+  }
+  .tile { background: var(--bg); padding: 20px 18px; }
+  .tile span { display: block; font-weight: 700; font-size: 15px; color: var(--vermilion); }
+  .tile span.no { color: var(--jade); }
+  .tile p { margin: 8px 0 0; font-size: 15.5px; color: var(--ink-soft); }
+
+  .two-truths {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    background: var(--line); border: 1px solid var(--line);
+    margin: 22px 0; border-radius: 2px; overflow: hidden;
+  }
+  .two-truths > div { background: var(--bg); padding: 18px 18px; }
+  .two-truths h4 { margin: 0 0 8px; font-family: 'Be Vietnam Pro', sans-serif; font-size: 14.5px; font-weight: 700; color: var(--jade); }
+  .two-truths p { margin: 0; font-size: 15px; color: var(--ink-soft); }
+
+  .steps { margin: 22px 0; padding: 0; list-style: none; counter-reset: step; }
+  .steps li {
+    counter-increment: step;
+    padding: 14px 0 14px 40px; position: relative;
+    border-top: 1px solid var(--line);
+  }
+  .steps li:last-child { border-bottom: 1px solid var(--line); }
+  .steps li::before {
+    content: counter(step);
+    position: absolute; left: 0; top: 14px;
+    width: 24px; height: 24px; border-radius: 50%;
+    background: var(--jade); color: var(--bg);
+    font-family: 'Be Vietnam Pro', sans-serif; font-size: 12.5px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .steps li strong { display: block; color: var(--ink); font-size: 16px; margin-bottom: 3px; }
+
+  .divider {
+    display: flex; justify-content: center; margin: 44px 0;
+  }
+  .divider svg { opacity: 0.7; }
+
+  footer.colophon {
+    max-width: 700px; margin: 56px auto 0; padding: 32px 24px 60px;
+    border-top: 1px solid var(--line); text-align: center;
+  }
+  footer.colophon p {
+    font-family: 'Noto Serif', serif; font-style: italic; color: var(--ink-soft);
+    font-size: 14.5px; line-height: 1.7; max-width: 480px; margin: 0 auto;
+  }
+}
+
+@media (max-width: 560px) {
+  #article-trungquan-panel {
+    font-size: 16.5px;
+    header.hero { padding: 52px 20px 32px; }
+    h1 { font-size: 32px; }
+    .bat-bat-grid, .two-truths { grid-template-columns: 1fr; }
+  }
+}
+</style>
+
+    <div style="padding: 14px 20px; background: #E8DFC6; border-bottom: 1px solid #C7BC9C;">
+        <button class="back-btn" onclick="openThuVienArticle('')" style="background: #F1EAD9; border: 1px solid #4E7864; color: #2B2620; padding: 7px 16px; cursor: pointer; font-family: 'Be Vietnam Pro', sans-serif; font-size: 0.85rem; font-weight: 600; border-radius: 4px;">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại Thư viện
+        </button>
+    </div>
+
+
+<header class="hero">
+  <div class="seal">空</div>
+  <h1>Trung Quán Luận</h1>
+  <p class="subtitle">Nghệ thuật đứng giữa Có và Không, hành trình dễ hiểu, và đôi chỗ có phần dí dỏm, vào triết lý Trung Đạo của Long Thọ</p>
+</header>
+
+<section class="intro">
+  <p>Có bao giờ bạn vừa chắc chắn tuyệt đối về một điều gì đó, rồi năm phút sau lại phát hiện mình sai hoàn toàn chưa? Hoặc từng nhìn lại một tấm ảnh của chính mình mười năm trước và tự hỏi, đây có thật là tôi, hay chỉ là một người khá quen mặt mặc áo giống tôi mà thôi? Nếu câu trả lời là có, xin chúc mừng, bạn vừa vô tình chạm đúng vào câu hỏi mà một nhà sư Ấn Độ tên Long Thọ đã dành gần trọn cuộc đời để trả lời, cách đây khoảng mười tám thế kỷ.</p>
+  <p>Trung Quán Luận không phải một cuốn sách để đọc cho vui rồi gấp lại vào ngăn tủ. Nó giống một chiếc búa triết học được rèn ra để gõ vỡ hai bức tường mà con người rất hay tự xây quanh mình: bức tường thứ nhất tin rằng mọi thứ đều có thật, cố định, chắc như đá tảng; bức tường thứ hai lại buông xuôi cho rằng chẳng có gì là thật cả, thôi thì mặc kệ đời. Bài viết dưới đây sẽ đưa bạn đi qua bối cảnh ra đời, những nhân vật làm nên lịch sử trường phái này, nội dung cốt lõi, cách lập luận vừa tinh quái vừa chặt chẽ của nó, cho tới ý nghĩa rất thật trong đời sống hằng ngày, kể cả lúc bạn đang ngồi lướt điện thoại chờ một tin nhắn trả lời.</p>
+</section>
+
+<nav class="toc">
+  <p class="toc-title">Mục lục</p>
+  <ol>
+    <li><a href="#p1"><span class="num">I</span> Bối cảnh ra đời và mục đích, sau khi Đức Phật qua đời</a></li>
+    <li><a href="#p2"><span class="num">II</span> Quá trình phát triển của Trung Quán Luận</a></li>
+    <li><a href="#p3"><span class="num">III</span> Những tên tuổi gắn liền với Trung Quán Luận</a></li>
+    <li><a href="#p4"><span class="num">IV</span> Nội dung cốt lõi của Trung Quán Luận</a></li>
+    <li><a href="#p5"><span class="num">V</span> Phương pháp phản chứng triết học</a></li>
+    <li><a href="#p6"><span class="num">VI</span> Diễn giải các tầng sâu của Trung Quán Luận</a></li>
+    <li><a href="#p7"><span class="num">VII</span> Tám mệnh đề phá vỡ nhị nguyên</a></li>
+    <li><a href="#p8"><span class="num">VIII</span> Trái tim của Trung Quán: Tánh Không và Duyên Khởi</a></li>
+    <li><a href="#p9"><span class="num">IX</span> Giải phẫu ảo tưởng về Cái Tôi</a></li>
+    <li><a href="#p10"><span class="num">X</span> Sự tương đồng với khoa học hiện đại</a></li>
+    <li><a href="#p11"><span class="num">XI</span> Ý nghĩa thực tiễn trong đời sống</a></li>
+  </ol>
+</nav>
+
+<main>
+
+<section class="phan" id="p1">
+  <span class="marker">PHẦN I</span>
+  <h2>Bối cảnh ra đời và mục đích, sau khi Đức Phật qua đời</h2>
+  <p>Sau khi Đức Phật nhập diệt, khoảng thế kỷ thứ năm trước Công nguyên theo ước tính của giới học thuật hiện đại, tăng đoàn trải qua nhiều kỳ kết tập kinh điển để giữ gìn lời dạy của Ngài. Nhưng theo thời gian, giống như mọi tổ chức lớn khi người sáng lập không còn tại vị, tăng đoàn dần phân hóa thành nhiều bộ phái khác nhau, với khoảng mười tám đến hai mươi nhánh được ghi nhận trong sử liệu.</p>
+  <p>Trong số đó, Nhất Thiết Hữu Bộ là một bộ phái có ảnh hưởng lớn. Bộ phái này phát triển một hệ thống phân tích rất công phu gọi là A Tỳ Đàm, chia nhỏ thực tại thành những đơn vị cấu thành gọi là pháp, và cho rằng mỗi pháp ấy sở hữu một tự tính riêng, một bản chất tồn tại độc lập và có thật. Vấn đề nằm ở chỗ, dù bộ phái này vẫn giảng dạy đúng đắn về vô ngã ở cấp độ con người, họ lại vô tình mở một cánh cửa hậu, để cái tự tính bị đuổi ra khỏi cửa trước lại lẻn vào qua cấp độ vi tế hơn, nơi các thành phần cấu tạo nên con người và thế giới.</p>
+  <p><strong>Long Thọ</strong> xuất hiện vào khoảng thế kỷ thứ hai đến thứ ba sau Công nguyên, được cho là sinh ra ở miền Nam Ấn Độ. Mục đích lớn nhất khi ông soạn ra Trung Quán Luận, tên gốc là Căn Bản Trung Quán Luận Tụng, không phải để sáng tạo ra một học thuyết hoàn toàn mới, mà để làm một việc gần giống công tác kiểm toán nội bộ: quay trở lại đúng tinh thần Duyên Khởi và Tánh Không mà chính Đức Phật đã giảng trong các bài kinh nguyên thủy và trong hệ thống kinh Bát Nhã, đồng thời phá bỏ cả hai cực đoan đang tồn tại song song trong đời sống tư tưởng lúc bấy giờ, một bên là chấp có quá đà của một số bộ phái, một bên là chấp không kiểu hư vô chủ nghĩa.</p>
+  <div class="example">
+    <span class="label-tag">Một hình dung gần gũi</span>
+    <p>Hãy tưởng tượng một công ty lớn mà người sáng lập vừa nghỉ hưu. Các phòng ban bắt đầu tự diễn giải kim chỉ nam của công ty theo cách riêng, và có một phòng ban vô tình biến khẩu hiệu vốn rất linh hoạt thành một bộ quy định cứng nhắc, chi tiết đến từng con ốc vít. Long Thọ giống như một kiểm toán viên quay trở lại nhiều năm sau, chỉ vào bản kim chỉ nam gốc và nói, tinh thần ban đầu là sự linh hoạt tùy duyên, đừng biến nó thành một mớ quy định đóng khung cứng ngắc như vậy.</p>
+  </div>
+</section>
+
+<div class="divider">
+  <svg width="120" height="14" viewBox="0 0 120 14"><path d="M2,7 C22,2 38,12 60,6 C82,0 98,13 118,7" stroke="#4E7864" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+</div>
+
+<section class="phan" id="p2">
+  <span class="marker">PHẦN II</span>
+  <h2>Quá trình phát triển của Trung Quán Luận</h2>
+  <p>Long Thọ sáng lập trường phái Trung Quán tại Ấn Độ, để lại Căn Bản Trung Quán Luận Tụng gồm hai mươi bảy chương với khoảng bốn trăm năm mươi bài kệ, cùng nhiều luận thư khác bổ sung cho hệ thống tư tưởng của mình. Học trò trực tiếp của ông, Thánh Thiên, tiếp nối bằng tác phẩm Bách Luận, đào sâu thêm phần phản bác các quan điểm đối lập.</p>
+  <p>Vài thế kỷ sau, nội bộ trường phái Trung Quán chia thành hai hướng tranh luận về phương pháp lập luận. Một bên, gọi là Y Tự Khởi phái, do Thanh Biện đại diện, chủ trương có thể dùng các luận chứng lập luận độc lập, mang tính khẳng định, để chứng minh tánh không. Bên còn lại, gọi là Cụ Duyên phái, khởi đầu bởi Phật Hộ và được hoàn thiện bởi Nguyệt Xứng, giữ quan điểm nghiêm ngặt hơn của chính Long Thọ, chỉ sử dụng phương pháp phản chứng để chỉ ra mâu thuẫn trong lập luận của đối phương, chứ không tự dựng lên một lập trường khẳng định nào để bị bắt bẻ ngược lại.</p>
+  <p>Tư tưởng này truyền sang Trung Hoa vào đầu thế kỷ thứ năm, chủ yếu qua công lao phiên dịch của nhà sư Cưu Ma La Thập, người đã dịch Trung Luận, Thập Nhị Môn Luận và Bách Luận sang Hán văn, đặt nền móng cho Tam Luận Tông. Đệ tử của ông là Tăng Triệu viết nên những áng văn triết học sâu sắc, và về sau Cát Tạng tiếp tục hệ thống hóa tông phái này một cách bài bản. Ảnh hưởng của tư tưởng Trung Quán còn len lỏi vào những hình ảnh biểu tượng nổi tiếng sau này của Hoa Nghiêm tông, như hình ảnh tấm lưới của trời Đế Thích, nơi mỗi hạt châu phản chiếu tất cả những hạt châu còn lại.</p>
+  <p>Song song đó, tư tưởng Trung Quán cũng truyền sang Tây Tạng, nơi dòng Cụ Duyên của Nguyệt Xứng dần trở thành chính thống, được Tông Khách Ba, người sáng lập phái Gelug, nghiên cứu và giảng giải sâu rộng. Cho đến ngày nay, hệ thống tư tưởng này vẫn là nền tảng triết học trung tâm trong Phật giáo Tây Tạng.</p>
+  <div class="example">
+    <span class="label-tag">Một hình dung gần gũi</span>
+    <p>Có thể ví trường hợp này giống một phần mềm mã nguồn mở do Long Thọ công bố lần đầu. Nhiều nhóm phát triển ở những nơi khác nhau, Ấn Độ, Trung Hoa, Tây Tạng, đều lấy bản gốc ấy làm nền, rồi mỗi nơi viết thêm một vài dòng lệnh mang màu sắc riêng, tạo ra những bản phân phối khác nhau. Giao diện có thể trông khác nhau đôi chút, nhưng lõi vận hành bên trong vẫn trung thành với cùng một logic gốc.</p>
+  </div>
+</section>
+
+<div class="divider">
+  <svg width="120" height="14" viewBox="0 0 120 14"><path d="M2,7 C22,2 38,12 60,6 C82,0 98,13 118,7" stroke="#4E7864" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+</div>
+
+<section class="phan" id="p3">
+  <span class="marker">PHẦN III</span>
+  <h2>Những tên tuổi gắn liền với Trung Quán Luận</h2>
+  <p>Trải qua nhiều thế kỷ và nhiều vùng đất, một số nhân vật đã để lại dấu ấn rõ rệt nhất trong dòng chảy của trường phái này.</p>
+  <ul class="fig-list">
+    <li><span class="figure-name">Long Thọ</span><span class="figure-role">Tổ sư sáng lập Trung Quán, tác giả Căn Bản Trung Quán Luận Tụng, thường được xem là triết gia Phật giáo có ảnh hưởng bậc nhất sau thời Đức Phật.</span></li>
+    <li><span class="figure-name">Thánh Thiên</span><span class="figure-role">Đệ tử trực tiếp của Long Thọ, tác giả Bách Luận, người tiếp tục đào sâu phần phản bác các học thuyết đối lập.</span></li>
+    <li><span class="figure-name">Phật Hộ</span><span class="figure-role">Người đặt nền móng cho Cụ Duyên phái, kiên trì phương pháp phản chứng thuần túy mà không dựng lập trường khẳng định riêng.</span></li>
+    <li><span class="figure-name">Thanh Biện</span><span class="figure-role">Đại diện Y Tự Khởi phái, chủ trương dùng luận chứng độc lập mang tính khẳng định để trình bày tánh không.</span></li>
+    <li><span class="figure-name">Nguyệt Xứng</span><span class="figure-role">Người hoàn thiện Cụ Duyên phái, tác giả Nhập Trung Quán Luận, nổi tiếng với ví dụ phân tích chiếc cỗ xe để chỉ ra tính chất giả danh của cái tôi.</span></li>
+    <li><span class="figure-name">Cưu Ma La Thập</span><span class="figure-role">Dịch giả có công đưa Trung Luận và các luận thư liên quan sang Hán văn vào đầu thế kỷ thứ năm.</span></li>
+    <li><span class="figure-name">Tăng Triệu</span><span class="figure-role">Đệ tử của Cưu Ma La Thập tại Trung Hoa, tác giả những bài luận triết học sâu sắc góp phần hình thành Tam Luận Tông.</span></li>
+    <li><span class="figure-name">Cát Tạng</span><span class="figure-role">Người hệ thống hóa Tam Luận Tông tại Trung Hoa một cách bài bản và có ảnh hưởng lâu dài.</span></li>
+    <li><span class="figure-name">Tông Khách Ba</span><span class="figure-role">Người sáng lập phái Gelug tại Tây Tạng, đào sâu và phổ biến rộng rãi dòng Cụ Duyên của Nguyệt Xứng, vẫn là nền tảng triết học trung tâm của Phật giáo Tây Tạng cho đến hôm nay.</span></li>
+  </ul>
+</section>
+
+<div class="divider">
+  <svg width="120" height="14" viewBox="0 0 120 14"><path d="M2,7 C22,2 38,12 60,6 C82,0 98,13 118,7" stroke="#4E7864" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+</div>
+
+<section class="phan" id="p4">
+  <span class="marker">PHẦN IV</span>
+  <h2>Nội dung cốt lõi của Trung Quán Luận</h2>
+  <p>Xuyên suốt tác phẩm, Long Thọ tập trung xoáy vào một khái niệm gọi là tự tính, tức ý tưởng cho rằng một sự vật có thể tồn tại độc lập, tự đầy đủ, không cần nương vào bất cứ điều kiện nào khác. Ông lần lượt xem xét gần như mọi phạm trù quan trọng của tư duy con người, từ nhân quả, vận động, thời gian, chủ thể và đối tượng, cho đến chính khái niệm Niết Bàn, và trong mỗi trường hợp, ông chỉ ra rằng nếu gán cho phạm trù ấy một tự tính cố định, ta sẽ rơi vào mâu thuẫn logic không lối thoát.</p>
+  <p>Từ đó, ông đưa ra một mệnh đề trung tâm, được trình bày rõ nhất ở chương hai mươi bốn của tác phẩm, rằng bất cứ điều gì sinh khởi do duyên, điều đó chính là tánh không, cũng có thể gọi là giả danh, và đó cũng chính là nghĩa của Trung Đạo. Nói cách khác, bốn cái tên tưởng như khác nhau, Duyên Khởi, Tánh Không, Giả Danh và Trung Đạo, thực ra chỉ là bốn cách gọi cho cùng một thực tại.</p>
+  <p>Một trụ cột quan trọng khác là học thuyết về hai chân lý, gọi là Nhị Đế, phân biệt giữa chân lý quy ước, tức tục đế, vốn vẫn vận hành đầy đủ trong đời sống thường ngày, và chân lý tối hậu, tức chân đế, vốn cho thấy không một pháp nào có tự tính. Long Thọ nhấn mạnh rằng ai không phân biệt được hai tầng chân lý này thì sẽ không thể nào hiểu đúng ý nghĩa sâu xa trong lời dạy của Đức Phật.</p>
+  <div class="two-truths">
+    <div>
+      <h4>Tục đế</h4>
+      <p>Chân lý ở cấp độ quy ước và chức năng. Nhân quả, đạo đức, ngôn ngữ, việc tu tập, tất cả vẫn vận hành bình thường và có giá trị thực tiễn.</p>
+    </div>
+    <div>
+      <h4>Chân đế</h4>
+      <p>Chân lý ở cấp độ tối hậu. Không một pháp nào, kể cả những khái niệm quy ước ấy, có tự tính độc lập hay thường hằng.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider">
+  <svg width="120" height="14" viewBox="0 0 120 14"><path d="M2,7 C22,2 38,12 60,6 C82,0 98,13 118,7" stroke="#4E7864" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+</div>
+
+<section class="phan" id="p5">
+  <span class="marker">PHẦN V</span>
+  <h2>Phương pháp phản chứng triết học</h2>
+  <p>Điểm đặc biệt của Long Thọ, nhất là trong truyền thống Cụ Duyên phái về sau, nằm ở chỗ ông gần như không bao giờ tự mình đứng ra khẳng định một lập trường riêng có tự tính để rồi bị người khác vặn lại. Thay vào đó, ông dùng một phương pháp gọi là quy mậu luận chứng, tức là tạm thời chấp nhận giả định của đối phương, rồi từ chính giả định đó suy diễn ra cho đến khi lộ ra một mâu thuẫn hoặc một điều phi lý không thể chấp nhận. Khi ấy, đối phương buộc phải tự mình rút lại giả định ban đầu.</p>
+  <p>Một công cụ thường được ông sử dụng là cách xét bốn khả năng logic cho một mệnh đề, thường gọi là tứ cú, bao gồm, một sự vật có tồn tại, không tồn tại, vừa tồn tại vừa không tồn tại, hoặc không phải tồn tại cũng không phải không tồn tại. Với mỗi phạm trù được đem ra khảo sát, Long Thọ lần lượt chỉ ra rằng nếu gán cho nó một tự tính cố định, thì không một khả năng nào trong bốn khả năng ấy đứng vững được, buộc người đọc phải buông bỏ hẳn cái khung tự tính hóa nhị nguyên đang trói buộc tư duy mình.</p>
+  <p>Một ví dụ nổi tiếng nằm ở chương hai của tác phẩm, khi ông khảo sát hành động đi. Ông lập luận rằng người đang đi thì không thể đang thực hiện hành động đi, vì nếu người đi đã là một chủ thể có sẵn tách rời khỏi hành động, việc gán thêm hành động đi vào chủ thể ấy sẽ dẫn đến việc có hai cái đi chồng lên nhau một cách vô lý. Trong khi đó, người không đi thì hiển nhiên không đi, và ngoài hai trường hợp này ra, không tồn tại một khả năng thứ ba nào khác. Qua đó, ông chỉ ra rằng khái niệm đi không phải một thực thể tự tồn tách rời khỏi người đi và bối cảnh của nó, mà chỉ là một quy ước tiện dụng sinh khởi do các yếu tố nương nhau mà có.</p>
+  <div class="example">
+    <span class="label-tag">Một hình dung gần gũi</span>
+    <p>Cách lập luận này khá giống một thám tử phá án tài ba. Vị thám tử không cần chứng minh trực tiếp ai là hung thủ thật sự, ông chỉ cần chỉ ra rằng lời khai của từng nghi phạm, khi soi kỹ, đều tự mâu thuẫn với chính nó. Khi mọi khả năng được đưa ra đều sụp đổ dưới sức nặng logic, cả căn phòng buộc phải thừa nhận rằng giả thuyết ban đầu, cho là có một hung thủ cố định và có thể chỉ mặt đặt tên ngay từ đầu, chính là giả thuyết sai.</p>
+  </div>
+</section>
+
+<div class="divider">
+  <svg width="120" height="14" viewBox="0 0 120 14"><path d="M2,7 C22,2 38,12 60,6 C82,0 98,13 118,7" stroke="#4E7864" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+</div>
+
+<section class="phan" id="p6">
+  <span class="marker">PHẦN VI</span>
+  <h2>Diễn giải các tầng sâu của Trung Quán Luận</h2>
+  <p>Nếu chỉ đọc lướt qua, Trung Quán Luận rất dễ bị hiểu lầm thành một dạng hư vô chủ nghĩa, phủ nhận tất cả. Nhưng nếu đọc kỹ, ta sẽ thấy tư tưởng này được triển khai qua nhiều tầng ngày càng tinh tế hơn.</p>
+  <ol class="steps">
+    <li><strong>Tầng phủ định sự tồn tại thô</strong>Ở tầng đầu tiên, Trung Quán bác bỏ cách hiểu ngây thơ rằng sự vật tồn tại y như vẻ ngoài của chúng, cố định và tách biệt hoàn toàn với mọi thứ xung quanh. Đây chưa phải điểm dừng, chỉ là bước khởi động.</li>
+    <li><strong>Tầng phủ định tự tính, không phủ định hiện tượng</strong>Ở tầng thứ hai, điều bị phủ nhận không phải là sự hiện hữu của hiện tượng, mà là tự tính của hiện tượng ấy. Nhân quả, đạo đức, việc tu tập, tất cả vẫn vận hành đầy đủ ở cấp độ quy ước, chỉ là chúng vận hành mà không cần một cái lõi cố định nào đứng đằng sau.</li>
+    <li><strong>Tầng phủ định luôn cả sự Không</strong>Ở tầng thứ ba, Long Thọ cẩn thận cảnh báo một cái bẫy tinh vi, đó là biến chính khái niệm tánh không thành một tự tính mới, một thứ tuyệt đối để bám víu. Ông gọi đây là chấp không, và xem nó cũng nguy hiểm không kém gì chấp có, thậm chí trong một số bài kệ ông còn ví chấp không như liều thuốc dùng sai cách có thể gây hại nặng hơn cả căn bệnh ban đầu.</li>
+    <li><strong>Tầng Trung Đạo tối hậu</strong>Ở tầng cuối cùng, tư duy được mời buông bỏ toàn bộ khung khái niệm nhị nguyên, không kẹt vào có, không kẹt vào không, không kẹt vào cả hai, cũng không kẹt vào việc phủ định cả hai. Đây không còn là một lập trường triết học nữa, mà là một cách trực tiếp gặp gỡ thực tại như chính nó đang là.</li>
+  </ol>
+</section>
+
+<div class="divider">
+  <svg width="120" height="14" viewBox="0 0 120 14"><path d="M2,7 C22,2 38,12 60,6 C82,0 98,13 118,7" stroke="#4E7864" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+</div>
+
+<section class="phan" id="p7">
+  <span class="marker">PHẦN VII</span>
+  <h2>Tám mệnh đề phá vỡ nhị nguyên</h2>
+  <p>Ngay từ bài kệ mở đầu tác phẩm, trước khi bước vào hai mươi bảy chương lập luận chi tiết, Long Thọ đã đúc kết toàn bộ tinh thần của mình thành tám phủ định, thường được gọi là Bát Bất, xếp thành bốn cặp đối lập.</p>
+  <div class="verse">
+    <span class="han-viet">Bất sinh diệc bất diệt, bất thường diệc bất đoạn, bất nhất diệc bất dị, bất lai diệc bất xuất.</span>
+    <span class="nghia">Không sinh cũng không diệt, không thường cũng không đoạn, không một cũng không khác, không đến cũng không đi.</span>
+  </div>
+  <div class="bat-bat-grid">
+    <div class="tile"><span class="no">Không sinh</span><span>Không diệt</span><p>Không có một khởi đầu tuyệt đối tách rời và một chấm dứt tuyệt đối tách rời, mọi sinh khởi hay hoại diệt đều chỉ là chuyển hóa nương theo điều kiện.</p></div>
+    <div class="tile"><span class="no">Không thường</span><span>Không đoạn</span><p>Phá hai cực đoan, tin rằng có một thực thể vĩnh hằng bất biến, hoặc tin rằng mọi thứ đứt đoạn hoàn toàn không còn liên hệ nhân quả nào cả.</p></div>
+    <div class="tile"><span class="no">Không một</span><span>Không khác</span><p>Nhân và quả, hay các thời điểm khác nhau của cùng một sự vật, không hoàn toàn đồng nhất, cũng không hoàn toàn tách rời độc lập với nhau.</p></div>
+    <div class="tile"><span class="no">Không đến</span><span>Không đi</span><p>Không có một khối thực thể cố định nào thật sự di chuyển từ nơi này sang nơi khác trong khi vẫn giữ nguyên một tự tính bất biến của nó.</p></div>
+  </div>
+  <div class="example">
+    <span class="label-tag">Một hình dung gần gũi</span>
+    <p>Hãy nhìn ngọn lửa của một cây nến. Ngọn lửa lúc bảy giờ tối và ngọn lửa lúc bảy giờ năm phút không thể gọi là hoàn toàn giống nhau, vì nhiên liệu đã cháy đi, hình dạng đã đổi khác từng khoảnh khắc. Nhưng cũng không thể gọi là hoàn toàn khác nhau, vì có một dòng chảy nhân quả liên tục nối kết chúng, chứ không phải một ngọn lửa mới bỗng dưng xuất hiện từ hư không. Đó chính là hình ảnh sống động cho không một, không khác, và cũng gợi mở luôn cho không thường, không đoạn.</p>
+  </div>
+</section>
+
+<div class="divider">
+  <svg width="120" height="14" viewBox="0 0 120 14"><path d="M2,7 C22,2 38,12 60,6 C82,0 98,13 118,7" stroke="#4E7864" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+</div>
+
+<section class="phan" id="p8">
+  <span class="marker">PHẦN VIII</span>
+  <h2>Trái tim của Trung Quán: Tánh Không và Duyên Khởi</h2>
+  <p>Nếu phải rút toàn bộ Trung Quán Luận về một câu duy nhất, đó chính là bài kệ ở chương hai mươi bốn đã nhắc ở phần trước, rằng cái gì do duyên khởi sinh, cái đó chính là tánh không. Đây không phải một phép toán trừu tượng, mà là một cách nhìn có thể áp dụng cho bất cứ điều gì quanh ta.</p>
+  <p>Hãy nghĩ đến một cầu vồng. Cầu vồng là có thật, ta nhìn thấy nó, chụp ảnh được nó, thậm chí giải thích được bằng vật lý quang học. Nhưng cầu vồng lại không có tự tính độc lập, không hề tồn tại một cục cầu vồng nằm chờ sẵn ở đâu đó trong không gian để ta đến gặp. Nó chỉ hiện khởi khi đủ điều kiện hội tụ cùng lúc, ánh sáng mặt trời, những giọt nước trong không khí, và cả vị trí đứng quan sát của chính người nhìn. Thiếu một trong ba điều kiện ấy, cầu vồng biến mất ngay lập tức. Cầu vồng vừa có, ở cấp độ hiện tượng và chức năng, vừa không, ở cấp độ tự tính độc lập, và chính sự song hành ấy mới là Trung Đạo đích thực, chứ không phải một điểm cân bằng nửa vời ở giữa có và không.</p>
+  <div class="example">
+    <span class="label-tag">Một hình dung gần gũi</span>
+    <p>Một tờ tiền giấy cũng vận hành y hệt như vậy. Tự bản thân nó chỉ là một mảnh giấy in mực, không hề mang sẵn trong mình một giá trị nội tại nào cố định. Toàn bộ giá trị của nó sinh khởi do vô số điều kiện nương nhau, hệ thống ngân hàng, luật pháp, và trên hết là niềm tin chung của cả một xã hội. Đúng ở cấp độ tánh không, tờ tiền ấy trống rỗng tự tính. Nhưng đúng ở cấp độ tục đế, nó vẫn mua được một ổ bánh mì ngon lành vào sáng hôm sau, chẳng có gì mâu thuẫn cả.</p>
+  </div>
+</section>
+
+<div class="divider">
+  <svg width="120" height="14" viewBox="0 0 120 14"><path d="M2,7 C22,2 38,12 60,6 C82,0 98,13 118,7" stroke="#4E7864" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+</div>
+
+<section class="phan" id="p9">
+  <span class="marker">PHẦN IX</span>
+  <h2>Giải phẫu ảo tưởng về Cái Tôi</h2>
+  <p>Một trong những ứng dụng sắc bén nhất của tư tưởng Trung Quán là phân tích khái niệm về một cái tôi cố định, thường trực. Theo cách phân tích truyền thống, con người được cấu thành từ năm nhóm yếu tố, gọi là ngũ uẩn, gồm sắc, tức thân thể vật lý, thọ, tức cảm giác, tưởng, tức tri giác và nhận thức, hành, tức các phản ứng và ý chí, và thức, tức dòng nhận biết. Khi truy tìm, ta không thể tìm thấy một cái tôi nào tồn tại tách biệt khỏi năm nhóm yếu tố ấy, nhưng cũng không thể nói cái tôi hoàn toàn đồng nhất với chúng, vì nếu đồng nhất tuyệt đối, mỗi khi các uẩn sinh diệt trong từng khoảnh khắc, cái tôi cũng phải sinh diệt liên tục theo, điều này mâu thuẫn với cảm giác có một cái tôi liên tục mà ai cũng trải nghiệm.</p>
+  <p>Nguyệt Xứng, trong tác phẩm Nhập Trung Quán Luận, đưa ra một ví dụ nổi tiếng để làm sáng tỏ điều này, gọi là phân tích chiếc cỗ xe. Ông lần lượt xét qua từng khả năng, chiếc cỗ xe không phải là bánh xe, không phải là trục xe, không phải là thùng xe, cũng không phải tổng cộng đơn thuần của tất cả các bộ phận ấy cộng lại, không phải một chủ thể nào đó sở hữu các bộ phận, cũng không phải hình dáng của các bộ phận. Vậy chiếc cỗ xe nằm ở đâu. Câu trả lời của ông là, chiếc cỗ xe chỉ là một cái tên quy ước được đặt lên trên một tập hợp các bộ phận đang vận hành tương tác đúng cách, đúng lúc, đúng chức năng với nhau. Cái tôi cũng vận hành theo đúng nguyên lý ấy, nó chỉ là một cái tên được gán lên trên một dòng chảy các uẩn đang tương tác liên tục.</p>
+  <div class="example">
+    <span class="label-tag">Một hình dung gần gũi</span>
+    <p>Có thể liên hệ với một tài khoản trên một ứng dụng bất kỳ. Tài khoản ấy không phải là chiếc điện thoại, không phải là dòng mã lập trình, không phải là máy chủ lưu trữ, cũng không phải là mật khẩu đăng nhập. Nhưng khi tất cả những thành phần rời rạc ấy vận hành đồng bộ đúng cách, tài khoản hiện hữu một cách đầy đủ chức năng, có thể đăng nhập, giao dịch, sử dụng thật sự. Cái tôi của mỗi người cũng vậy, chức năng thì có thật, nhưng một tự tính độc lập đứng đằng sau để sở hữu chức năng ấy thì không hề tìm thấy được.</p>
+  </div>
+</section>
+
+<div class="divider">
+  <svg width="120" height="14" viewBox="0 0 120 14"><path d="M2,7 C22,2 38,12 60,6 C82,0 98,13 118,7" stroke="#4E7864" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+</div>
+
+<section class="phan" id="p10">
+  <span class="marker">PHẦN X</span>
+  <h2>Sự tương đồng với khoa học hiện đại</h2>
+  <p>Điều thú vị là nhiều nhà nghiên cứu hiện đại nhận thấy một số điểm gợi liên tưởng đáng chú ý giữa tư tưởng Trung Quán và khoa học đương đại, dù cần nói ngay rằng đây là những ẩn dụ hữu ích để hiểu, không phải bằng chứng khoa học chứng minh cho một hệ thống triết học ra đời từ hai nghìn năm trước.</p>
+  <p>Trong vật lý lượng tử, thí nghiệm khe đôi cho thấy một hạt như điện tử không thể hiện tính chất sóng hay hạt một cách cố định, kết quả phụ thuộc vào chính cách thức và điều kiện của phép đo. Điều này gợi liên tưởng khá gần với ý tưởng rằng một pháp không mang sẵn một tự tính cố định độc lập với duyên, ở đây chính người quan sát và cách quan sát cũng trở thành một phần của duyên.</p>
+  <p>Trong thuyết tương đối, không tồn tại một khung quy chiếu tuyệt đối nào cho không gian và thời gian, mọi phép đo vận tốc hay khoảng cách chỉ có ý nghĩa tương đối giữa các hệ quy chiếu khác nhau, không có điểm gốc nào được xem là tuyệt đối đúng. Điều này gợi nhớ đến tinh thần không đến không đi trong Bát Bất, khi không có một thực thể mang tự tính cố định thật sự di chuyển từ nơi này sang nơi khác.</p>
+  <p>Trong sinh học tế bào, phần lớn tế bào trong cơ thể con người được thay thế liên tục qua nhiều năm tháng, không hề tồn tại một lõi tế bào cố định xuyên suốt cả đời người. Trong sinh thái học, không một loài sinh vật nào tồn tại tách biệt, mọi loài đều nằm trong một mạng lưới phụ thuộc lẫn nhau chằng chịt, gợi nhớ đến hình ảnh tấm lưới của trời Đế Thích đã nhắc ở phần lịch sử phát triển.</p>
+  <div class="example">
+    <span class="label-tag">Một hình dung gần gũi</span>
+    <p>Người ta có thể nói vui rằng, nếu Long Thọ sống lại ở thời hiện đại và được nghe giảng về thí nghiệm khe đôi, có lẽ ông sẽ gật gù và nói, đấy, tôi đã nói với các vị hai nghìn năm trước rồi, chỉ là bây giờ các vị mới có máy móc để đo lại cho chắc.</p>
+  </div>
+</section>
+
+<div class="divider">
+  <svg width="120" height="14" viewBox="0 0 120 14"><path d="M2,7 C22,2 38,12 60,6 C82,0 98,13 118,7" stroke="#4E7864" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+</div>
+
+<section class="phan" id="p11">
+  <span class="marker">PHẦN XI</span>
+  <h2>Ý nghĩa thực tiễn trong đời sống</h2>
+  <p>Tư tưởng Trung Quán không dừng lại ở phòng thí nghiệm triết học, mà mang theo những gợi ý rất thiết thực cho đời sống hằng ngày.</p>
+  <p>Trước hết, khi hiểu rằng mọi thành công, thất bại, danh tiếng, tài sản hay cả các mối quan hệ đều sinh khởi do vô số điều kiện nương nhau, ta bớt tuyệt đối hóa việc được hay mất. Điều này không có nghĩa là thờ ơ với cuộc sống, mà là bớt đi sự bám chặt cứng nhắc vào một kết quả duy nhất, nhờ đó dễ thích nghi hơn khi hoàn cảnh đổi thay, dù đó là chuyện đổi công việc, một mối quan hệ tan vỡ, hay một cú sốc tài chính bất ngờ.</p>
+  <p>Trong việc quản lý cảm xúc, khi cơn giận hay nỗi buồn xuất hiện, hiểu rằng cảm xúc ấy cũng chỉ là một hiện tượng duyên khởi, sinh lên rồi sẽ hoại diệt theo điều kiện, giúp ta không đồng hóa toàn bộ bản thân với cảm xúc nhất thời ấy. Cơn giận đang có mặt, nhưng cơn giận không phải là bản chất cố định của con người mình.</p>
+  <p>Trong công việc và việc ra quyết định, tinh thần Trung Đạo gợi ý một thái độ vừa kiên định vừa linh hoạt, không xem bất cứ kế hoạch hay chiến lược nào là chân lý tuyệt đối bất di bất dịch, cũng không rơi vào thái độ buông xuôi cho rằng chẳng có gì đáng để cố gắng. Người áp dụng tinh thần này sẵn sàng điều chỉnh khi dữ liệu và hoàn cảnh thay đổi, thay vì cố chấp bảo vệ một quan điểm chỉ vì đã trót tuyên bố ra trước đó.</p>
+  <p>Trong giao tiếp, khi hiểu rằng cái tôi của người đối diện, cũng như cái tôi của chính mình, chỉ là một hiện tượng duyên khởi chứ không phải một khối tự tính cứng nhắc, những cuộc tranh luận dễ bớt căng thẳng hơn, vì không còn cảm giác phải bảo vệ một pháo đài cố định bằng mọi giá.</p>
+  <div class="example">
+    <span class="label-tag">Một hình dung gần gũi</span>
+    <p>Một nhà đầu tư khôn ngoan thường hiểu rằng giá của một cổ phiếu không hề mang sẵn tự tính tốt hay xấu cố định, nó sinh khởi từ vô số nhân duyên đan xen, tâm lý đám đông, chính sách vĩ mô, tin tức bất ngờ, quan hệ cung cầu. Chính vì hiểu điều này, người ấy không chấp cứng vào một nhận định duy nhất, mà luôn quan sát các duyên đang thay đổi để điều chỉnh quyết định của mình. Đó chính là tinh thần Trung Quán được ứng dụng một cách rất đời thường, ngay trên màn hình giao dịch mỗi ngày.</p>
+  </div>
+</section>
+
+</main>
+
+<div class="wrap">
+  <div class="divider">
+    <svg width="120" height="14" viewBox="0 0 120 14"><path d="M2,7 C22,2 38,12 60,6 C82,0 98,13 118,7" stroke="#A5402B" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+  </div>
+  <p style="text-align:center;font-style:italic;color:var(--ink-soft);max-width:520px;margin:0 auto 8px;">
+    Quay lại câu hỏi mở đầu, tấm ảnh mười năm trước của bạn và con người đang đọc những dòng này, không hoàn toàn là một, cũng không hoàn toàn là khác. Có lẽ đó chính là lời mời gần gũi nhất mà Trung Quán Luận gửi đến bất cứ ai, ngay cả khi họ chưa từng đọc một trang kinh sách nào.
+  </p>
+</div>
+
+<footer class="colophon">
+  <p>Tài liệu này là bản tổng hợp và diễn giải mang tính phổ thông, được biên soạn nhằm giúp người đọc tiếp cận dễ dàng hơn với tư tưởng Trung Quán. Đây không phải bản dịch chính thức của Trung Quán Luận, và người đọc quan tâm sâu hơn nên tìm đọc trực tiếp Căn Bản Trung Quán Luận Tụng cùng các bản chú giải chuyên khảo.</p>
+</footer>
+
+
+    <div style="padding: 24px; text-align: center; background: #E8DFC6; border-top: 1px solid #C7BC9C;">
+        <button class="back-btn" onclick="openThuVienArticle('')" style="background: #F1EAD9; border: 1px solid #4E7864; color: #2B2620; padding: 8px 20px; cursor: pointer; font-family: 'Be Vietnam Pro', sans-serif; font-size: 0.9rem; font-weight: 600; border-radius: 4px;">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại Thư viện
+        </button>
+    </div>
+</div>
+
 
 
                 </div>
