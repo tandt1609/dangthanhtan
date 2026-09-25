@@ -156,7 +156,9 @@ function handleRouting(path, updateUrl = false) {
     if (path.startsWith('/thu-vien')) {
         switchTab('thu-vien', false);
         const subPath = path.substring('/thu-vien'.length);
-        if (subPath === '/trung-quan-luan') {
+        if (subPath === '/truong-xac-suat' || subPath === '/thi-truong-khong-co-bi-mat') {
+            openThuVienArticle('truong-xac-suat', updateUrl);
+        } else if (subPath === '/trung-quan-luan') {
             openThuVienArticle('trung-quan-luan', updateUrl);
         } else if (subPath === '/kinh-phap-hoa') {
             openThuVienArticle('kinh-phap-hoa', updateUrl);
@@ -323,7 +325,14 @@ function openThuVienArticle(articleId, updateUrl = true) {
 
     document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
 
-        if (articleId === 'trung-quan-luan') {
+            if (articleId === 'truong-xac-suat') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-xacsuat-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'truong-xac-suat' }, '', '/thu-vien/truong-xac-suat');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'trung-quan-luan') {
         listView.classList.remove('active');
         articleView.classList.add('active');
         const panel = document.getElementById('article-trungquan-panel');
