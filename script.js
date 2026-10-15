@@ -38,9 +38,10 @@ const routeToTab = {
     '/': 'trang-chu',
     '/trang-chu': 'trang-chu',
     '/ban-tin': 'trang-chu',
-    '/vi-mo': 'vi-mo',
-    '/hang-hoa': 'hang-hoa',
-    '/su-kien': 'su-kien',
+    '/chinh-tri-kinh-te-thoi-su': 'chinh-tri-kinh-te-thoi-su',
+    '/vi-mo': 'chinh-tri-kinh-te-thoi-su',
+    '/hang-hoa': 'chinh-tri-kinh-te-thoi-su',
+    '/su-kien': 'chinh-tri-kinh-te-thoi-su',
     '/huyen-thoai': 'huyen-thoai',
     '/thu-vien': 'thu-vien',
     '/game': 'game'
@@ -48,15 +49,19 @@ const routeToTab = {
 
 const tabToRoute = {
     'trang-chu': '/',
-    'vi-mo': '/vi-mo',
-    'hang-hoa': '/hang-hoa',
-    'su-kien': '/su-kien',
+    'chinh-tri-kinh-te-thoi-su': '/chinh-tri-kinh-te-thoi-su',
+    'vi-mo': '/chinh-tri-kinh-te-thoi-su',
+    'hang-hoa': '/chinh-tri-kinh-te-thoi-su',
+    'su-kien': '/chinh-tri-kinh-te-thoi-su',
     'huyen-thoai': '/huyen-thoai',
     'thu-vien': '/thu-vien',
     'game': '/game'
 };
 
 function switchTab(tabId, updateUrl = true) {
+    if (tabId === 'vi-mo' || tabId === 'hang-hoa' || tabId === 'su-kien') {
+        tabId = 'chinh-tri-kinh-te-thoi-su';
+    }
     // Deactivate current tabs and panels
     document.querySelectorAll('.tab-link').forEach(link => link.classList.remove('active'));
     document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
@@ -70,12 +75,8 @@ function switchTab(tabId, updateUrl = true) {
     if (targetPanel) targetPanel.classList.add('active');
 
     // Handle sub-view routing per tab
-    if (tabId === 'hang-hoa' && updateUrl) {
-        // Hang hoa: reset to list view and push URL
-        openCommodityArticle('', true);
-    } else if (tabId === 'su-kien' && updateUrl) {
-        // Su kien: reset to list view and push URL
-        openEventArticle('', true);
+    if (tabId === 'chinh-tri-kinh-te-thoi-su' && updateUrl) {
+        openPoliticsEconomyArticle('', true);
     } else if (tabId === 'huyen-thoai' && updateUrl) {
         // Huyen thoai: reset to list view and push URL
         openLegendArticle('', true);
@@ -87,67 +88,66 @@ function switchTab(tabId, updateUrl = true) {
     console.log(`🧭 Switched to tab: ${tabId}`);
 }
 
-function openCommodityArticle(articleId, updateUrl = true) {
-    const listView = document.getElementById('commodity-list-view');
-    const articleView = document.getElementById('commodity-article-view');
-    
+const politicsEconomyArticles = {
+    'quy-luat-gia-tri': { panelId: 'article-quyluatgiatri-panel', route: '/chinh-tri-kinh-te-thoi-su/quy-luat-gia-tri' },
+    'quy-luat-gia-tri-cau-chuyen': { panelId: 'article-quyluatgiatri-panel', route: '/chinh-tri-kinh-te-thoi-su/quy-luat-gia-tri' },
+    'dxy-us10y-theory': { panelId: 'article-lythuyet-panel', route: '/chinh-tri-kinh-te-thoi-su/dxy-us10y-theory' },
+    'dxy-us10y': { panelId: 'article-dxy-us10y-panel', route: '/chinh-tri-kinh-te-thoi-su/dxy-us10y' },
+    'luoc-su-vang': { panelId: 'article-gold-panel', route: '/chinh-tri-kinh-te-thoi-su/luoc-su-vang' },
+    'luoc-su-dau-mo': { panelId: 'article-oil-panel', route: '/chinh-tri-kinh-te-thoi-su/luoc-su-dau-mo' },
+    'tien-si-dong': { panelId: 'article-tiensidong-panel', route: '/chinh-tri-kinh-te-thoi-su/tien-si-dong' },
+    'luoc-su-dong': { panelId: 'article-luocsudong-panel', route: '/chinh-tri-kinh-te-thoi-su/luoc-su-dong' },
+    'chicxulub': { panelId: 'article-chicxulub-panel', route: '/chinh-tri-kinh-te-thoi-su/chicxulub' },
+    'nganh-ngan-hang': { panelId: 'article-nganhang-panel', route: '/chinh-tri-kinh-te-thoi-su/nganh-ngan-hang' }
+};
+
+function openPoliticsEconomyArticle(articleId, updateUrl = true) {
+    const listView = document.getElementById('chinh-tri-kinh-te-thoi-su-list-view');
+    const articleView = document.getElementById('chinh-tri-kinh-te-thoi-su-article-view');
     if (!listView || !articleView) return;
-    
+
     // Deactivate all article panels
-    document.querySelectorAll('.commodity-article-panel').forEach(panel => panel.classList.remove('active'));
-    
-    if (articleId === 'luoc-su-vang') {
+    articleView.querySelectorAll('.sukien-article-panel, .commodity-article-panel').forEach(p => p.classList.remove('active'));
+
+    const item = politicsEconomyArticles[articleId];
+    if (item) {
         listView.classList.remove('active');
         articleView.classList.add('active');
-        const panel = document.getElementById('article-gold-panel');
+        const panel = document.getElementById(item.panelId);
         if (panel) panel.classList.add('active');
-        if (updateUrl) history.pushState({ tabId: 'hang-hoa', articleId: 'luoc-su-vang' }, '', '/hang-hoa/luoc-su-vang');
+        if (updateUrl) history.pushState({ tabId: 'chinh-tri-kinh-te-thoi-su', articleId }, '', item.route);
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else if (articleId === 'luoc-su-dau-mo') {
-        listView.classList.remove('active');
-        articleView.classList.add('active');
-        const panel = document.getElementById('article-oil-panel');
-        if (panel) panel.classList.add('active');
-        if (updateUrl) history.pushState({ tabId: 'hang-hoa', articleId: 'luoc-su-dau-mo' }, '', '/hang-hoa/luoc-su-dau-mo');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else if (articleId === 'tien-si-dong') {
-        listView.classList.remove('active');
-        articleView.classList.add('active');
-        const targetPanel = document.getElementById('article-tiensidong-panel');
-        if (targetPanel) targetPanel.classList.add('active');
-        
-        if (updateUrl) {
-            history.pushState({ tabId: 'hang-hoa', articleId: 'tien-si-dong' }, '', '/hang-hoa/tien-si-dong');
-        }
-    } else if (articleId === 'luoc-su-dong') {
-        listView.classList.remove('active');
-        articleView.classList.add('active');
-        const targetPanel = document.getElementById('article-luocsudong-panel');
-        if (targetPanel) targetPanel.classList.add('active');
-        
-        if (updateUrl) {
-            history.pushState({ tabId: 'hang-hoa', articleId: 'luoc-su-dong' }, '', '/hang-hoa/luoc-su-dong');
-        }
     } else {
-        // Go back to list view
         articleView.classList.remove('active');
         listView.classList.add('active');
-        
-        if (updateUrl) {
-            history.pushState({ tabId: 'hang-hoa', articleId: '' }, '', '/hang-hoa');
-        }
+        if (updateUrl) history.pushState({ tabId: 'chinh-tri-kinh-te-thoi-su', articleId: '' }, '', '/chinh-tri-kinh-te-thoi-su');
     }
 }
+
+// Backward compatibility wrappers for all legacy article opening calls
+function openCommodityArticle(articleId, updateUrl = true) {
+    switchTab('chinh-tri-kinh-te-thoi-su', false);
+    openPoliticsEconomyArticle(articleId, updateUrl);
+}
+
+function openEventArticle(articleId, updateUrl = true) {
+    switchTab('chinh-tri-kinh-te-thoi-su', false);
+    openPoliticsEconomyArticle(articleId, updateUrl);
+}
+
+function openVimoArticle(articleId, updateUrl = true) {
+    switchTab('chinh-tri-kinh-te-thoi-su', false);
+    openPoliticsEconomyArticle(articleId, updateUrl);
+}
+
 function openHomeArticle(articleId) {
-    // Switch to Commodities tab without updating the URL yet
-    switchTab('hang-hoa', false);
-    // Open the commodity article and update the URL to its nested path
-    openCommodityArticle(articleId, true);
+    switchTab('chinh-tri-kinh-te-thoi-su', false);
+    openPoliticsEconomyArticle(articleId, true);
 }
 
 function openHomeEventArticle(articleId) {
-    switchTab('su-kien', false);
-    openEventArticle(articleId, true);
+    switchTab('chinh-tri-kinh-te-thoi-su', false);
+    openPoliticsEconomyArticle(articleId, true);
 }
 
 
@@ -197,32 +197,18 @@ function handleRouting(path, updateUrl = false) {
         } else {
             openThuVienArticle('', updateUrl);
         }
+    } else if (path.startsWith('/chinh-tri-kinh-te-thoi-su')) {
+        switchTab('chinh-tri-kinh-te-thoi-su', false);
+        const subPath = path.substring('/chinh-tri-kinh-te-thoi-su'.length).replace(/^\//, '');
+        openPoliticsEconomyArticle(subPath, updateUrl);
     } else if (path.startsWith('/vi-mo')) {
-        switchTab('vi-mo', false);
-        const subPath = path.substring('/vi-mo'.length);
-        if (subPath === '/dxy-us10y') {
-            openVimoArticle('dxy-us10y', updateUrl);
-        } else if (subPath === '/dxy-us10y-theory') {
-            openVimoArticle('dxy-us10y-theory', updateUrl);
-        } else if (subPath === '/quy-luat-gia-tri' || subPath === '/quy-luat-gia-tri-cau-chuyen') {
-            openVimoArticle('quy-luat-gia-tri', updateUrl);
-        } else {
-            openVimoArticle('', updateUrl);
-        }
+        switchTab('chinh-tri-kinh-te-thoi-su', false);
+        const subPath = path.substring('/vi-mo'.length).replace(/^\//, '');
+        openPoliticsEconomyArticle(subPath, updateUrl);
     } else if (path.startsWith('/hang-hoa')) {
-        switchTab('hang-hoa', false);
-        const subPath = path.substring('/hang-hoa'.length);
-        if (subPath === '/luoc-su-vang') {
-            openCommodityArticle('luoc-su-vang', updateUrl);
-        } else if (subPath === '/luoc-su-dau-mo') {
-            openCommodityArticle('luoc-su-dau-mo', updateUrl);
-        } else if (subPath === '/tien-si-dong') {
-            openCommodityArticle('tien-si-dong', updateUrl);
-        } else if (subPath === '/luoc-su-dong') {
-            openCommodityArticle('luoc-su-dong', updateUrl);
-        } else {
-            openCommodityArticle('', updateUrl);
-        }
+        switchTab('chinh-tri-kinh-te-thoi-su', false);
+        const subPath = path.substring('/hang-hoa'.length).replace(/^\//, '');
+        openPoliticsEconomyArticle(subPath, updateUrl);
     } else if (path.startsWith('/huyen-thoai')) {
         switchTab('huyen-thoai', false);
         const subPath = path.substring('/huyen-thoai'.length);
@@ -254,81 +240,12 @@ function handleRouting(path, updateUrl = false) {
             openLegendArticle('', updateUrl);
         }
     } else if (path.startsWith('/su-kien')) {
-        switchTab('su-kien', false);
-        const subPath = path.substring('/su-kien'.length);
-        if (subPath === '/chicxulub') {
-            openEventArticle('chicxulub', updateUrl);
-        } else if (subPath === '/nganh-ngan-hang') {
-            openEventArticle('nganh-ngan-hang', updateUrl);
-        } else {
-            openEventArticle('', updateUrl);
-        }
+        switchTab('chinh-tri-kinh-te-thoi-su', false);
+        const subPath = path.substring('/su-kien'.length).replace(/^\//, '');
+        openPoliticsEconomyArticle(subPath, updateUrl);
     } else {
         const tabId = routeToTab[path] || 'trang-chu';
         switchTab(tabId, updateUrl);
-    }
-}
-
-function openEventArticle(articleId, updateUrl = true) {
-    const listView   = document.getElementById('sukien-list-view');
-    const articleView = document.getElementById('sukien-article-view');
-    if (!listView || !articleView) return;
-
-    document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
-
-    if (articleId === 'chicxulub') {
-        listView.classList.remove('active');
-        articleView.classList.add('active');
-        const panel = document.getElementById('article-chicxulub-panel');
-        if (panel) panel.classList.add('active');
-        if (updateUrl) history.pushState({ tabId: 'su-kien', articleId: 'chicxulub' }, '', '/su-kien/chicxulub');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else if (articleId === 'nganh-ngan-hang') {
-        listView.classList.remove('active');
-        articleView.classList.add('active');
-        const panel = document.getElementById('article-nganhang-panel');
-        if (panel) panel.classList.add('active');
-        if (updateUrl) history.pushState({ tabId: 'su-kien', articleId: 'nganh-ngan-hang' }, '', '/su-kien/nganh-ngan-hang');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-        articleView.classList.remove('active');
-        listView.classList.add('active');
-        if (updateUrl) history.pushState({ tabId: 'su-kien', articleId: '' }, '', '/su-kien');
-    }
-}
-
-function openVimoArticle(articleId, updateUrl = true) {
-    const listView   = document.getElementById('vi-mo-list-view');
-    const articleView = document.getElementById('vi-mo-article-view');
-    if (!listView || !articleView) return;
-
-    document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
-
-    if (articleId === 'dxy-us10y') {
-        listView.classList.remove('active');
-        articleView.classList.add('active');
-        const panel = document.getElementById('article-dxy-us10y-panel');
-        if (panel) panel.classList.add('active');
-        if (updateUrl) history.pushState({ tabId: 'vi-mo', articleId: 'dxy-us10y' }, '', '/vi-mo/dxy-us10y');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else if (articleId === 'dxy-us10y-theory') {
-        listView.classList.remove('active');
-        articleView.classList.add('active');
-        const panel = document.getElementById('article-lythuyet-panel');
-        if (panel) panel.classList.add('active');
-        if (updateUrl) history.pushState({ tabId: 'vi-mo', articleId: 'dxy-us10y-theory' }, '', '/vi-mo/dxy-us10y-theory');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else if (articleId === 'quy-luat-gia-tri' || articleId === 'quy-luat-gia-tri-cau-chuyen') {
-        listView.classList.remove('active');
-        articleView.classList.add('active');
-        const panel = document.getElementById('article-quyluatgiatri-panel');
-        if (panel) panel.classList.add('active');
-        if (updateUrl) history.pushState({ tabId: 'vi-mo', articleId: 'quy-luat-gia-tri' }, '', '/vi-mo/quy-luat-gia-tri');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-        articleView.classList.remove('active');
-        listView.classList.add('active');
-        if (updateUrl) history.pushState({ tabId: 'vi-mo', articleId: '' }, '', '/vi-mo');
     }
 }
 
