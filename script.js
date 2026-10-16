@@ -158,7 +158,9 @@ function handleRouting(path, updateUrl = false) {
     if (path.startsWith('/thu-vien')) {
         switchTab('thu-vien', false);
         const subPath = path.substring('/thu-vien'.length);
-        if (subPath === '/bai-luan-chu-no' || subPath === '/vo-kich-muon-doi') {
+        if (subPath === '/hai-kich-giua-dong-nhan-sinh') {
+            openThuVienArticle('hai-kich-giua-dong-nhan-sinh', updateUrl);
+        } else if (subPath === '/bai-luan-chu-no' || subPath === '/vo-kich-muon-doi') {
             openThuVienArticle('bai-luan-chu-no', updateUrl);
         } else 
         if (subPath === '/truong-xac-suat' || subPath === '/thi-truong-khong-co-bi-mat') {
@@ -258,7 +260,14 @@ function openThuVienArticle(articleId, updateUrl = true) {
 
     document.querySelectorAll('.sukien-article-panel').forEach(p => p.classList.remove('active'));
 
-            if (articleId === 'bai-luan-chu-no' || articleId === 'vo-kich-muon-doi') {
+            if (articleId === 'hai-kich-giua-dong-nhan-sinh') {
+        listView.classList.remove('active');
+        articleView.classList.add('active');
+        const panel = document.getElementById('article-haikich-panel');
+        if (panel) panel.classList.add('active');
+        if (updateUrl) history.pushState({ tabId: 'thu-vien', articleId: 'hai-kich-giua-dong-nhan-sinh' }, '', '/thu-vien/hai-kich-giua-dong-nhan-sinh');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (articleId === 'bai-luan-chu-no' || articleId === 'vo-kich-muon-doi') {
         listView.classList.remove('active');
         articleView.classList.add('active');
         const panel = document.getElementById('article-chuno-panel');
