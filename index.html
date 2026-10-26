@@ -156,6 +156,19 @@ html, body {
             <div id="panel-trang-chu" class="tab-panel active">
                 <h2 class="section-title"><i class="fa-solid fa-fire-flame-curved"></i> Bài viết mới</h2>
                 <div class="news-list">
+                        <!-- Post: Tu Song Han Den Song Hong -->
+                        <a href="/chinh-tri-kinh-te-thoi-su/tu-song-han-den-song-hong" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-scale-balanced"></i> Kinh tế chính trị</span>
+                                <span class="news-time">26/10/2026</span>
+                            </div>
+                            <h3 class="news-heading">Từ Sông Hàn Đến Sông Hồng: Phép Màu Có Công Thức, Còn Diễn Văn Thì Không</h3>
+                            <p class="news-excerpt">Về kỳ tích sông Hàn, hai người bạn cùng lớp Thái Lan và Indonesia, và giấc mơ Kỷ nguyên vươn mình. Phân tích sâu sắc về kỷ luật xuất khẩu, bẫy thu nhập trung bình và điều kiện để Việt Nam bứt phá trong kỷ nguyên bán dẫn và AI.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc bài viết</span>
+                            </div>
+                        </a>
+
                         <!-- Post: Gia Tri Thang Du -->
                         <a href="/chinh-tri-kinh-te-thoi-su/gia-tri-thang-du" class="news-card clickable-card">
                             <div class="news-meta">
@@ -539,6 +552,19 @@ html, body {
                 <div id="chinh-tri-kinh-te-thoi-su-list-view" class="sukien-view active">
                     <h2 class="section-title"><i class="fa-solid fa-scale-balanced"></i> Chính trị - Kinh tế - Thời sự</h2>
                     <div class="news-list">
+                        <!-- Post: Tu Song Han Den Song Hong -->
+                        <a href="/chinh-tri-kinh-te-thoi-su/tu-song-han-den-song-hong" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-scale-balanced"></i> Kinh tế chính trị</span>
+                                <span class="news-time">26/10/2026</span>
+                            </div>
+                            <h3 class="news-heading">Từ Sông Hàn Đến Sông Hồng: Phép Màu Có Công Thức, Còn Diễn Văn Thì Không</h3>
+                            <p class="news-excerpt">Về kỳ tích sông Hàn, hai người bạn cùng lớp Thái Lan và Indonesia, và giấc mơ Kỷ nguyên vươn mình. Phân tích sâu sắc về kỷ luật xuất khẩu, bẫy thu nhập trung bình và điều kiện để Việt Nam bứt phá trong kỷ nguyên bán dẫn và AI.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc bài viết</span>
+                            </div>
+                        </a>
+
                         <!-- Post: Gia Tri Thang Du -->
                         <a href="/chinh-tri-kinh-te-thoi-su/gia-tri-thang-du" class="news-card clickable-card">
                             <div class="news-meta">
@@ -687,7 +713,522 @@ html, body {
                 <div id="chinh-tri-kinh-te-thoi-su-article-view" class="sukien-view">
                     <button class="back-to-list-btn" onclick="openPoliticsEconomyArticle('')"><i class="fa-solid fa-arrow-left"></i> Quay lại danh sách</button>
 
-                                        <!-- ARTICLE PANEL: GIA TRI THANG DU -->
+                                                            <!-- ARTICLE PANEL: TU SONG HAN DEN SONG HONG -->
+                    <div id="article-songhansonghong-panel" class="sukien-article-panel songhansonghong-body">
+<style>
+#article-songhansonghong-panel {
+  --paper:#fdf6ec;
+  --ink:#2c1a0e;
+  --gold:#a07830;
+  --cream:#f6ead3;
+  --rule:#dcc9a4;
+  --soft:#6b4f33;
+
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'EB Garamond','Cormorant Garamond',Georgia,'Times New Roman',serif;
+  font-size: 20px;
+  line-height: 1.72;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+#article-songhansonghong-panel * { box-sizing: border-box; }
+#article-songhansonghong-panel main { max-width: 780px; margin: 0 auto; padding: 40px 22px 90px; }
+#article-songhansonghong-panel header.masthead { text-align: center; padding: 28px 0 34px; border-bottom: 3px double var(--gold); margin-bottom: 38px; }
+#article-songhansonghong-panel .kicker { font-family: 'Cormorant Garamond', Georgia, serif; letter-spacing: .28em; text-transform: uppercase; font-size: .82rem; color: var(--gold); margin: 0 0 14px; font-weight: 600; }
+#article-songhansonghong-panel h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: clamp(2.2rem, 6vw, 3.3rem); line-height: 1.08; margin: 0 0 16px; letter-spacing: .01em; color: var(--ink); }
+#article-songhansonghong-panel .deck { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 1.34rem; line-height: 1.4; color: var(--soft); margin: 0 auto 18px; max-width: 640px; }
+#article-songhansonghong-panel .byline { font-size: .9rem; letter-spacing: .06em; color: var(--soft); margin: 0; }
+#article-songhansonghong-panel h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 2.15rem; line-height: 1.2; margin: 2.4em 0 .5em; padding-top: .3em; border-top: 1px solid var(--rule); color: var(--ink); }
+#article-songhansonghong-panel h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 1.5rem; line-height: 1.25; margin: 1.7em 0 .3em; color: var(--gold); }
+#article-songhansonghong-panel p { margin: 0 0 1.05em; text-align: justify; hyphens: auto; }
+#article-songhansonghong-panel .dropcap::first-letter {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  font-size: 5.1em;
+  line-height: .78;
+  float: left;
+  padding: .07em .1em 0 0;
+  color: var(--gold);
+}
+#article-songhansonghong-panel blockquote {
+  margin: 1.6em 0;
+  padding: .35em 0 .35em 1.3em;
+  border-left: 4px solid var(--gold);
+  font-style: italic;
+  color: #3b2614;
+}
+#article-songhansonghong-panel blockquote p { margin: 0 0 .4em; text-align: left; }
+#article-songhansonghong-panel blockquote cite { display: block; font-style: normal; font-size: .85rem; letter-spacing: .05em; color: var(--soft); }
+#article-songhansonghong-panel .callout {
+  background: var(--cream);
+  border: 1px solid #e3d0a8;
+  border-radius: 3px;
+  padding: 1.1em 1.4em .6em;
+  margin: 1.8em 0;
+}
+#article-songhansonghong-panel .callout .ct {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: .04em;
+  color: var(--gold);
+  margin: 0 0 .5em;
+  text-transform: uppercase;
+}
+#article-songhansonghong-panel .callout ul, #article-songhansonghong-panel .callout ol { margin: 0 0 .8em 1.1em; padding: 0; }
+#article-songhansonghong-panel .callout li { margin: 0 0 .5em; }
+#article-songhansonghong-panel table { width: 100%; border-collapse: collapse; margin: 1.6em 0; font-size: .9rem; line-height: 1.45; }
+#article-songhansonghong-panel caption { caption-side: top; text-align: left; font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 1.15rem; color: var(--gold); padding-bottom: .4em; }
+#article-songhansonghong-panel th, #article-songhansonghong-panel td { border-bottom: 1px solid var(--rule); padding: .55em .6em; vertical-align: top; text-align: left; }
+#article-songhansonghong-panel th { border-bottom: 2px solid var(--gold); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.02rem; font-weight: 700; }
+#article-songhansonghong-panel tbody tr:nth-child(even) { background: rgba(246,234,211,.55); }
+#article-songhansonghong-panel .tablewrap { overflow-x: auto; margin: 1.6em 0; }
+#article-songhansonghong-panel .bars { margin: 1.6em 0; padding: 1em 1.2em; background: var(--cream); border: 1px solid #e3d0a8; }
+#article-songhansonghong-panel .bars .bt { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 1.15rem; color: var(--gold); margin: 0 0 .6em; }
+#article-songhansonghong-panel .brow { display: grid; grid-template-columns: 118px 1fr 54px; gap: 10px; align-items: center; margin: .35em 0; font-size: .9rem; }
+#article-songhansonghong-panel .brow .bar { height: 15px; background: #d9bd85; border-radius: 1px; }
+#article-songhansonghong-panel .brow .bar i { display: block; height: 100%; background: var(--gold); }
+#article-songhansonghong-panel .brow.vn .bar i { background: #7a3b14; }
+#article-songhansonghong-panel .brow .v { text-align: right; font-variant-numeric: tabular-nums; }
+#article-songhansonghong-panel .bars small { display: block; margin-top: .6em; color: var(--soft); font-size: .8rem; }
+#article-songhansonghong-panel .fn { font-size: .68em; vertical-align: super; color: var(--gold); text-decoration: none; font-weight: 600; margin-left: 1px; }
+#article-songhansonghong-panel .fn:hover { text-decoration: underline; }
+#article-songhansonghong-panel hr.orn { border: 0; text-align: center; margin: 2.4em 0; height: 1em; }
+#article-songhansonghong-panel hr.orn::after { content: "\2766"; color: var(--gold); font-size: 1.4rem; }
+#article-songhansonghong-panel ol.weak { padding-left: 1.2em; }
+#article-songhansonghong-panel ol.weak li { margin-bottom: .9em; text-align: justify; }
+#article-songhansonghong-panel ol.weak li::marker { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; color: var(--gold); }
+#article-songhansonghong-panel ol.src { font-size: .82rem; line-height: 1.5; padding-left: 2.3em; }
+#article-songhansonghong-panel ol.src li { margin-bottom: .3em; word-break: break-word; }
+#article-songhansonghong-panel ol.src a { color: var(--soft); }
+#article-songhansonghong-panel .note { font-size: .88rem; color: var(--soft); font-style: italic; }
+#article-songhansonghong-panel footer { margin-top: 3em; padding-top: 1.2em; border-top: 3px double var(--gold); text-align: center; font-size: .85rem; color: var(--soft); }
+@media (max-width: 600px) {
+  #article-songhansonghong-panel { font-size: 18px; }
+  #article-songhansonghong-panel h1 { font-size: 2.45rem; }
+  #article-songhansonghong-panel h2 { font-size: 1.75rem; }
+  #article-songhansonghong-panel p { text-align: left; }
+  #article-songhansonghong-panel .brow { grid-template-columns: 92px 1fr 46px; }
+  #article-songhansonghong-panel main { padding: 30px 14px 60px; }
+}
+</style>
+
+    <div style="padding: 14px 20px; background: #f6ead3; border-bottom: 1px solid #dcc9a4;">
+        <button class="back-btn" onclick="openPoliticsEconomyArticle('')" style="background: #fdf6ec; border: 1px solid #a07830; color: #2c1a0e; padding: 7px 16px; cursor: pointer; font-family: 'EB Garamond', Georgia, serif; font-size: 0.95rem; font-weight: 600; border-radius: 4px;">
+            <i class="fa-solid fa-arrow-left"></i> Quay láº¡i danh sÃ¡ch
+        </button>
+    </div>
+
+<main>
+
+<header class="masthead">
+  <p class="kicker">Bài luận kinh tế chính trị</p>
+  <h1>Từ Sông Hàn đến Sông Hồng</h1>
+  <p class="deck">Phép màu có công thức, còn diễn văn thì không. Về kỳ tích Hàn Quốc, hai người bạn cùng lớp Thái Lan và Indonesia, và giấc mơ Kỷ nguyên vươn mình</p>
+  <p class="byline">Số liệu cập nhật đến 26/10/2026 · Thời gian đọc khoảng 30 phút</p>
+</header>
+
+<div class="callout">
+  <p class="ct">Tóm lược cho người bận</p>
+  <ul>
+    <li><strong>Hàn Quốc</strong> thắng vì tín dụng và ưu đãi chỉ chảy vào doanh nghiệp nội địa chịu sự chấm điểm của thị trường xuất khẩu, rồi liên tục leo sang ngành mà thế giới đang cần hơn. Cái giá: khủng hoảng 1997, và một xã hội giàu mà kiệt sức.</li>
+    <li><strong>Thái Lan</strong> làm đúng nửa đầu (mở cửa, xuất khẩu) rồi sai nửa sau (gia công mãi không nâng cấp, tiền đổ vào bất động sản). Kết quả: hơn ba mươi năm kẹt ở thu nhập trung bình.</li>
+    <li><strong>Indonesia</strong> sai từ lõi: sống bằng tô tài nguyên và quan hệ thân hữu thay vì năng lực công nghiệp. Kết quả: công nghiệp hóa non, tầng lớp trung lưu co lại.</li>
+    <li><strong>Việt Nam 2026</strong> có thành tích thật, nhưng cấu trúc đang giống Thái Lan thập niên 1990 hơn Hàn Quốc thập niên 1970: xuất khẩu do FDI dẫn dắt, giá trị nội địa thấp, tín dụng nghiêng về bất động sản, mục tiêu tăng trưởng đặt trước cả động cơ.</li>
+    <li><strong>Đúc kết:</strong> tăng trưởng bền chỉ đến từ việc làm chủ một ngành lõi của thời đại. Thời nay đó là hạ tầng AI, bán dẫn và năng lượng. Việt Nam đủ điều kiện để leo từng bậc, chưa đủ để nhảy cóc, và đồng hồ nhân khẩu chỉ còn khoảng mười năm.</li>
+  </ul>
+</div>
+
+<p class="dropcap">Trong kinh tế học phát triển có một nghịch lý quen thuộc: nước nào cũng muốn trở thành Hàn Quốc, nhưng phần lớn lại sống theo kiểu Thái Lan, và một số ít nhất quyết sống theo kiểu Indonesia. Cũng giống chuyện ai cũng muốn có thân hình vận động viên, chỉ không muốn dậy lúc năm giờ sáng.</p>
+
+<p>Năm 2026, Việt Nam đặt mục tiêu tăng trưởng GDP từ 10% trở lên (Quốc hội thông qua ngày 13/11/2025<a class="fn" href="#s61">[61]</a>), thu nhập bình quân đầu người 5.400 đến 5.500 USD ngay trong năm nay<a class="fn" href="#s14">[14]</a> và khoảng 8.500 USD vào năm 2030<a class="fn" href="#s7">[7]</a>. Khẩu hiệu là Kỷ nguyên vươn mình. Bài này mượn cách gọi giấc mơ sông Hồng để đặt cạnh kỳ tích sông Hàn. Đối xứng thì đẹp. Vấn đề là kỳ tích sông Hàn không chảy ra từ một nghị quyết, và con sông Hồng, như người Hà Nội nào cũng biết, nổi tiếng vì phù sa chứ không nổi tiếng vì trong veo.</p>
+
+<p>Bài luận đi qua bốn chặng: Hàn Quốc đã làm gì và trả giá bao nhiêu; Thái Lan và Indonesia sai ở đâu; Việt Nam hôm nay đứng ở đâu so với họ; và cuối cùng, ngành nào là sóng lớn của thời đại, Việt Nam cưỡi nổi hay không. Giọng văn có chút mỉa mai, nhưng số liệu thì nghiêm túc, và có đánh số nguồn để bạn kiểm tra.</p>
+
+<hr class="orn">
+
+<h2>I. Sông Hàn: phép màu có công thức, và hóa đơn đi kèm</h2>
+
+<h3>Điểm xuất phát: nghèo, đổ nát, và xuất khẩu tóc giả</h3>
+<p>Đầu thập niên 1960, Hàn Quốc không phải hình mẫu của ai. Thu nhập bình quân chỉ vài chục USD, nông nghiệp là chính, tài nguyên gần như không có. Từ khoảng 87 USD đầu thời kỳ, thu nhập bình quân đầu người lên 5.199 USD, và lần đầu vượt ngưỡng 5.000 USD vào năm 1989<a class="fn" href="#s33">[33]</a>. Năm 1962 cả nước xuất khẩu được 55 triệu USD, bằng 2,4% GDP. Mười năm sau là 1,6 tỷ USD, bằng 15% GDP. Ba mặt hàng xuất khẩu hàng đầu năm 1970 là dệt may (40,8%), gỗ dán (11%) và tóc giả (10,8%)<a class="fn" href="#s29">[29]</a>.</p>
+
+<p>Xin đọc lại cho kỹ: tóc giả. Không phải chip, không phải AI, không phải “công nghiệp văn hóa”. Bài học đầu tiên của sông Hàn khiêm tốn đến mức hơi mất hứng: phép màu bắt đầu bằng việc bán thứ thế giới đang mua, bằng thứ mình đang có (lao động cần cù, rẻ, kỷ luật), chứ không phải thứ mình muốn khoe trong diễn văn.</p>
+
+<h3>Cái lõi: kỷ luật xuất khẩu</h3>
+<p>Tướng Park Chung-hee lên nắm quyền sau cuộc đảo chính năm 1961 và lập ngay Ban Kế hoạch Kinh tế. Triết lý điều hành của thời kỳ này tóm được trong một câu: xây dựng quốc gia bằng xúc tiến xuất khẩu<a class="fn" href="#s33">[33]</a>. Hằng tháng có họp xúc tiến xuất khẩu; tín dụng, thuế, tỷ giá đều xoay quanh một câu hỏi duy nhất: anh bán được bao nhiêu ra nước ngoài? Trong thập niên 1960, kinh tế tăng khoảng 8% mỗi năm còn xuất khẩu tăng khoảng 40% mỗi năm<a class="fn" href="#s32">[32]</a>.</p>
+
+<p>Cái hay nằm ở cơ chế. Nhà nước chọn hướng, nhưng người chấm điểm là thị trường thế giới. Doanh nghiệp nào xuất khẩu được thì tiếp tục được vay rẻ, doanh nghiệp nào không thì (về nguyên tắc) hết ưu đãi. Người chấm bài không quen biết ai, không nể mặt ai, không nhận phong bì: đó là người mua ở Los Angeles. Kinh tế học gọi đây là kỷ luật thị trường đặt lên chính sách công nghiệp. Nói dân dã: muốn được cưng thì phải có đơn hàng.</p>
+
+<h3>Cú ép năm 1973 và bài học lạm phát</h3>
+<p>Đầu thập niên 1970, Hàn Quốc quyết định nhảy sang công nghiệp nặng và hóa chất. Năm 1973-1974, công nghiệp nặng nhận khoảng một phần ba tín dụng cho công nghiệp; hai năm sau là hơn 60%. Cơ cấu ngành đảo chiều: năm 1971 công nghiệp nhẹ chiếm 56%, công nghiệp nặng 44%; đến 1980 thì ngược lại<a class="fn" href="#s31">[31]</a>. POSCO ra đời, Hyundai và Samsung lớn dần. Thập niên 1970, GNP tăng trung bình 9,6% mỗi năm, xuất khẩu tăng khoảng 31% mỗi năm<a class="fn" href="#s31">[31]</a>.</p>
+
+<p>Nhưng đây cũng là lúc Hàn Quốc nhận hóa đơn. Đầu tư dồn quá nhiều vào công nghiệp nặng, thêm cú sốc dầu mỏ, lạm phát lên khoảng 20% mỗi năm vào cuối thập niên<a class="fn" href="#s32">[32]</a>. Chính phủ phải quay xe: ổn định hóa, giảm đầu tư công nghiệp nặng, tự do hóa nhập khẩu, đưa lạm phát từ 25% (1980-1981) xuống 7% (1982) rồi dưới 3% (1983-1987)<a class="fn" href="#s32">[32]</a>. Điều đáng nhớ không phải là Hàn Quốc không mắc sai lầm. Họ mắc đủ loại sai lầm, nhưng sửa trong vài năm chứ không phải vài thập kỷ.</p>
+
+<h3>Cưỡi sóng thời đại: mỗi thập niên một con sóng</h3>
+<p>Người ta hay nói Hàn Quốc giỏi. Chính xác hơn: Hàn Quốc giỏi chọn con sóng, rồi giỏi leo từ sóng này sang sóng kia trước khi sóng cũ hạ. Mỗi lần leo, doanh nghiệp nội địa giữ vai chủ lực và tích lũy năng lực thật.</p>
+
+<div class="tablewrap">
+<table>
+  <caption>Bảng 1. Hàn Quốc cưỡi sóng nào, vào thời nào</caption>
+  <thead><tr><th>Giai đoạn</th><th>Ngành mạnh của thế giới</th><th>Hàn Quốc làm gì</th></tr></thead>
+  <tbody>
+    <tr><td>Thập niên 1960</td><td>Nhật và Mỹ đẩy dần ngành thâm dụng lao động ra ngoài; thị trường Mỹ mở</td><td>Dệt may, gỗ dán, tóc giả; xuất khẩu tăng khoảng 40% mỗi năm<a class="fn" href="#s32">[32]</a></td></tr>
+    <tr><td>Thập niên 1970</td><td>Bùng nổ vận tải biển, xây dựng và công nghiệp nặng sau cú sốc dầu mỏ</td><td>Thép (POSCO), đóng tàu, hóa dầu, thầu xây dựng; chuyển sang công nghiệp nặng<a class="fn" href="#s30">[30]</a></td></tr>
+    <tr><td>Thập niên 1980</td><td>Điện tử tiêu dùng, ô tô, làn sóng máy tính cá nhân</td><td>Samsung tuyên bố vào bán dẫn năm 1983; điện tử và ô tô thành mũi nhọn</td></tr>
+    <tr><td>Sau 1997</td><td>Internet và công nghệ thông tin</td><td>Đầu tư lớn vào hạ tầng Internet và IT làm nền cho thập niên 2000<a class="fn" href="#s37">[37]</a></td></tr>
+    <tr><td>Thập niên 2020</td><td>Hạ tầng AI, bộ nhớ băng thông cao (HBM)</td><td>Xuất khẩu bán dẫn 173,4 tỷ USD năm 2025; SK Hynix chiếm khoảng 62% thị trường HBM (quý II/2025)<a class="fn" href="#s40">[40]</a><a class="fn" href="#s41">[41]</a></td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Để ý một chi tiết: từ lúc Samsung tuyên bố vào bán dẫn năm 1983 đến lúc Hàn Quốc nắm bộ nhớ AI hôm nay là bốn thập kỷ. Bốn thập kỷ, không phải bốn năm kế hoạch. Chúng ta sẽ quay lại con số này ở phần cuối.</p>
+
+<h3>Hóa đơn năm 1997</h3>
+<p>Mô hình sông Hàn có một vết nứt chạy suốt từ thập niên 1970: các tập đoàn chaebol vay nợ khổng lồ, bảo lãnh chéo cho nhau, và tin rằng “lớn quá không thể sập”. Khi khủng hoảng từ Thái Lan lan sang, Hàn Quốc phải xin IMF cứu trợ vào tháng 11/1997, gói khoảng 58 tỷ USD<a class="fn" href="#s36">[36]</a>. Năm 1998 là cuộc suy thoái sâu nhất kể từ chiến tranh Triều Tiên<a class="fn" href="#s34">[34]</a>; Daewoo, một trong năm tập đoàn lớn nhất, sụp đổ<a class="fn" href="#s34">[34]</a>. Một năm sau, kinh tế bật lại 10,7%<a class="fn" href="#s35">[35]</a>.</p>
+
+<blockquote>
+  <p>Hàn Quốc có những tập đoàn công nghiệp quyền lực mà không có một hệ thống tài chính đủ mạnh để làm đối trọng; khủng hoảng 1997 là điểm cuối của sự mất cân bằng ấy.</p>
+  <cite>Tóm ý từ nghiên cứu của Edward M. Graham về cải cách các tập đoàn Hàn Quốc<a class="fn" href="#s34">[34]</a></cite>
+</blockquote>
+
+<p>Bài học ở đây tinh tế hơn người ta tưởng. Tín dụng cho công nghiệp không phải tội lỗi: Hàn Quốc làm giàu bằng đúng thứ đó. Nhưng tín dụng ưu đãi mà không có phá sản, không có đối trọng tài chính, không có minh bạch, thì sớm muộn cũng thành quả bóng nợ. Ai đọc bài này mà kết luận “tín dụng xấu, tiền mặt tốt” thì đã đọc sai.</p>
+
+<h3>Hóa đơn xã hội hôm nay</h3>
+<p>Phép màu sông Hàn có kèm một hóa đơn thứ hai, không ghi bằng won. Năm 2023, tỷ suất sinh của Hàn Quốc chỉ còn 0,72 con trên mỗi phụ nữ<a class="fn" href="#s39">[39]</a>, thấp nhất thế giới; đây là nước OECD duy nhất có tỷ suất sinh dưới 1, và 57% trong 228 đơn vị hành chính cấp địa phương có nguy cơ biến mất<a class="fn" href="#s37">[37]</a>. Nợ hộ gia đình gần 90% GDP, thuộc nhóm cao nhất OECD<a class="fn" href="#s37">[37]</a>. Tỷ lệ nghèo của người trên 65 tuổi khoảng 39,8%, cao nhất OECD<a class="fn" href="#s38">[38]</a>. Tỷ lệ tự tử cũng thuộc hàng cao nhất khối OECD<a class="fn" href="#s37">[37]</a>.</p>
+
+<p>Nói gọn: Hàn Quốc giàu nhanh đến mức quên mất việc sinh em bé và chăm sóc người già. Những gì từng là động lực (thi cử khốc liệt, làm việc cật lực, mua nhà bằng nợ, chạy đua địa vị) nay thành nguyên nhân của khủng hoảng nhân khẩu. Và ngay cả đỉnh cao công nghệ hôm nay cũng mong manh: đợt xuất khẩu kỷ lục 2025-2026 thực chất là một cơn bùng nổ chip nhớ, chiếm khoảng 44% xuất khẩu trong tháng 6/2026<a class="fn" href="#s41">[41]</a>. Một nền kinh tế đặt quá nhiều trứng vào một giỏ, dù là giỏ vàng, vẫn là giỏ.</p>
+
+<div class="callout">
+  <p class="ct">Công thức sông Hàn trong sáu dòng</p>
+  <ol>
+    <li><strong>Nền móng xã hội trước:</strong> cải cách ruộng đất và phổ cập giáo dục, để tăng trưởng không dồn vào một nhúm chủ đất.</li>
+    <li><strong>Bán thứ thế giới đang mua:</strong> bắt đầu từ hàng thâm dụng lao động, không ngại cái tên nghe thiếu sang như “tóc giả”.</li>
+    <li><strong>Kỷ luật xuất khẩu:</strong> ưu đãi đi theo kết quả xuất khẩu, thị trường thế giới là giám khảo.</li>
+    <li><strong>Doanh nghiệp nội địa làm chủ năng lực:</strong> học bằng gia công và cấp phép, rồi tự làm thương hiệu và công nghệ riêng.</li>
+    <li><strong>Leo bậc đúng nhịp thế giới:</strong> nhẹ sang nặng, nặng sang điện tử, điện tử sang bán dẫn.</li>
+    <li><strong>Sửa sai nhanh:</strong> quay xe năm 1979-1980 khi lạm phát vượt tầm. Chỗ thiếu sót lớn nhất: đối trọng tài chính, dẫn đến 1997.</li>
+  </ol>
+</div>
+
+<hr class="orn">
+
+<h2>II. Hai người bạn cùng lớp: Thái Lan và Indonesia</h2>
+
+<p>Nếu Hàn Quốc là học sinh giỏi, thì Thái Lan là học sinh khá mà nửa chừng đi chơi game, còn Indonesia là học sinh có cha giàu: không học cũng được nhờ tiền tiêu vặt từ dầu mỏ. Cả ba cùng nhận học bổng của thời đại là thương mại toàn cầu và dòng vốn nước ngoài. Cách dùng học bổng thì khác nhau một trời một vực.</p>
+
+<h3>Thái Lan: con hổ thứ năm ngủ quên ba mươi năm</h3>
+<p><strong>Điều đúng.</strong> Thái Lan mở cửa đón FDI, chuyển từ nông nghiệp sang công nghiệp, xuất khẩu mạnh. Trong bốn thập kỷ trước khủng hoảng 1997, thu nhập thực bình quân đầu người tăng gần 5% mỗi năm<a class="fn" href="#s44">[44]</a>. Cuối thập niên 1980, GDP có những năm tăng hai con số. Năm 1988 Ngân hàng Thế giới xếp Thái Lan vào nhóm thu nhập trung bình thấp, và người ta kỳ vọng họ sẽ nối gót Nhật, Hàn, Đài Loan, Singapore để thành con hổ thứ năm<a class="fn" href="#s43">[43]</a>.</p>
+
+<p><strong>Điều sai, thứ nhất: gia công mãi không nâng cấp.</strong> Nền kinh tế Thái phụ thuộc mô hình OEM, tức lắp ráp theo đơn của tập đoàn nước ngoài, và ba mươi năm vẫn kẹt trong nhóm thu nhập trung bình<a class="fn" href="#s43">[43]</a>. Mô hình lao động rẻ và đầu tư tư nhân đưa một nước từ nghèo lên trung bình, nhưng không đưa thêm nữa nếu không đầu tư mạnh vào vốn con người<a class="fn" href="#s44">[44]</a>.</p>
+
+<p><strong>Điều sai, thứ hai: tài chính chạy trước công nghiệp.</strong> Thái Lan muốn biến Bangkok thành trung tâm tài chính Đông Nam Á, khuyến khích các định chế trung gian mọc lên<a class="fn" href="#s47">[47]</a>. Tiền vay ngoại tệ ngắn hạn đổ vào cơn sốt xây dựng và bất động sản, trong khi tỷ giá neo cứng vào USD. Thâm hụt vãng lai lên tới khoảng 8% GDP; nợ nước ngoài khoảng 90 tỷ USD<a class="fn" href="#s47">[47]</a>. Sau chuỗi đổ vỡ của các công ty bất động sản và tài chính, đến ngày 2/7/1997 Thái Lan hết ngoại tệ để giữ tỷ giá neo và buộc phải thả nổi đồng baht<a class="fn" href="#s48">[48]</a>. Cả khu vực lên cơn sốt rét tài chính, mà người Thái gọi là khủng hoảng Tom Yum Kung, theo tên món canh tôm chua cay nổi tiếng.</p>
+
+<p><strong>Hôm nay.</strong> Mười năm gần đây, GDP Thái tăng trung bình dưới 2% mỗi năm, và nước này bị gọi là “người bệnh của châu Á”<a class="fn" href="#s43">[43]</a>. Năm 2025 tăng khoảng 2,2%<a class="fn" href="#s42">[42]</a>, IMF dự báo 2026 chỉ 1,5%<a class="fn" href="#s45">[45]</a>. Thu nhập bình quân năm 2025 khoảng 8.060 USD, nhích rất ít so với 7.240 USD năm 2021<a class="fn" href="#s45">[45]</a>. Nợ hộ gia đình khoảng 90% GDP (104% nếu tính cả nợ phi chính thức)<a class="fn" href="#s43">[43]</a>; khoảng 40% hộ gia đình vay phi chính thức với lãi suất cao<a class="fn" href="#s46">[46]</a>. Dân số giảm bốn năm liên tiếp, số trẻ sinh ra thấp nhất trong 75 năm<a class="fn" href="#s42">[42]</a>. Tỷ lệ đầu tư trên GDP chỉ còn khoảng một nửa so với trước 1997<a class="fn" href="#s44">[44]</a>.</p>
+
+<h3>Indonesia: có dầu thì cần gì cải cách</h3>
+<p><strong>Điều đúng.</strong> Sau năm 1966, chính quyền Suharto với đội ngũ kỹ trị đã kéo Indonesia ra khỏi vực thẳm: kiềm chế lạm phát, mở cửa đầu tư, đẩy mạnh nông nghiệp. Khi giá dầu rơi những năm 1980, họ phá giá đồng rupiah và đẩy xuất khẩu phi dầu mỏ; công nghiệp chế biến từng tăng khoảng 7% vào năm 1990, mức cao nhất lịch sử nước này<a class="fn" href="#s54">[54]</a>.</p>
+
+<p><strong>Điều sai, nằm ngay ở lõi.</strong> Cú sốc dầu năm 1973 là lời nguyền được ngụy trang thành quà. Doanh thu dầu mỏ qua công ty nhà nước Pertamina tăng khoảng 4.000% từ năm tài khóa 1968 đến 1985, và đi kèm là bê bối, nợ nần và kiểu “chủ nghĩa tư bản quan liêu” mà các nhà nghiên cứu mô tả: người nắm chức vụ biến vị trí công thành lãnh địa riêng<a class="fn" href="#s51">[51]</a>. Khi kinh tế sống bằng tô tài nguyên và quan hệ, không ai có động cơ xây năng lực công nghiệp thật. Cú sốc 1997 phơi bày điều đó: đồng rupiah từ 2.600 xuống hơn 14.800 đổi một USD trong vài tháng<a class="fn" href="#s52">[52]</a>, nợ ngoại khoảng 113 tỷ USD<a class="fn" href="#s47">[47]</a>, và Suharto từ chức ngày 21/5/1998 sau ba mươi hai năm cầm quyền<a class="fn" href="#s52">[52]</a>.</p>
+
+<p><strong>Hôm nay.</strong> Công nghiệp chế biến từng chiếm khoảng 32% GDP năm 2002, còn khoảng 19% năm 2025: người ta gọi đó là phi công nghiệp hóa sớm<a class="fn" href="#s49">[49]</a>. Hàng giá rẻ từ Trung Quốc từ năm 2023 làm đóng cửa nhiều nhà máy, đẩy công nhân vào khu vực phi chính thức<a class="fn" href="#s49">[49]</a>. Tầng lớp trung lưu từ 59,5 triệu người (2018) xuống 47,9 triệu (2024)<a class="fn" href="#s50">[50]</a>; tỷ lệ lao động có thu nhập trung lưu từ 14,5% (2018) xuống 7,1% (2025)<a class="fn" href="#s49">[49]</a>. Chính sách “hạ nguồn hóa” niken (như khu công nghiệp Morowali) là bước đi đúng hướng, nhưng như một nhà kinh tế Indonesia nhận xét, không thể là trụ cột duy nhất vì tài nguyên rồi sẽ cạn<a class="fn" href="#s53">[53]</a>.</p>
+
+<div class="tablewrap">
+<table>
+  <caption>Bảng 2. Bảng điểm ba nền kinh tế: ai đúng ở lõi, ai sai</caption>
+  <thead><tr><th>Tiêu chí</th><th>Hàn Quốc</th><th>Thái Lan</th><th>Indonesia</th></tr></thead>
+  <tbody>
+    <tr><td>Nguồn tăng trưởng cốt lõi</td><td>Xuất khẩu công nghiệp do doanh nghiệp nội địa dẫn dắt</td><td>Gia công cho FDI, du lịch, bất động sản</td><td>Dầu mỏ, rồi hàng hóa, rồi niken</td></tr>
+    <tr><td>Ai nắm năng lực công nghệ</td><td>Chaebol nội địa (học bằng cấp phép, gia công, rồi tự làm)</td><td>Chủ yếu tập đoàn nước ngoài; nội địa làm thầu phụ</td><td>Gần như không; nhà nước và nhóm thân hữu hưởng tô</td></tr>
+    <tr><td>Tín dụng chảy vào đâu</td><td>Công nghiệp xuất khẩu (kèm bảo lãnh chéo rủi ro)</td><td>Bất động sản và vay USD ngắn hạn</td><td>Dự án thân hữu, ngành được bảo hộ</td></tr>
+    <tr><td>Hậu quả lớn nhất</td><td>Khủng hoảng 1997; nhân khẩu và nợ hộ hôm nay</td><td>Kẹt thu nhập trung bình trên 30 năm</td><td>Công nghiệp hóa non, trung lưu co hẹp</td></tr>
+    <tr><td>Phán quyết ngắn</td><td><strong>Đúng ở lõi</strong>, trả giá ở tài chính và xã hội</td><td><strong>Đúng lúc đầu, sai ở phân bổ nguồn lực và nâng cấp</strong></td><td><strong>Sai ở lõi:</strong> sống bằng tô, không bằng năng lực</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Hệ lụy xã hội: thành hay bại, hóa đơn vẫn đến</h3>
+<p>Có một mẫu số chung đáng ngẫm. Hàn Quốc thành công mà nhận hóa đơn nhân khẩu và tự tử. Thái Lan nửa thành nửa bại mà nhận hóa đơn nợ hộ gia đình và già hóa. Indonesia bại ở lõi mà nhận hóa đơn trung lưu. Ba kiểu hóa đơn khác nhau, nhưng đều xuất phát từ một chỗ: tăng trưởng nhanh mà không đi kèm phân phối công bằng, an sinh và sức khỏe tinh thần. Giàu nhanh chưa bao giờ miễn phí, chỉ là có nước trả ngay, có nước trả góp lãi cao.</p>
+
+<hr class="orn">
+
+<h2>III. Việt Nam 2026: hồ sơ thẳng thắn</h2>
+
+<h3>Điều công bằng phải nói trước</h3>
+<div class="callout">
+  <p class="ct">Thành tích thật, không phải do báo chí thổi</p>
+  <ul>
+    <li>Tăng trưởng GDP năm 2025 đạt 8,02%; thu nhập bình quân khoảng 5.000 USD<a class="fn" href="#s7">[7]</a>.</li>
+    <li>Tháng 7/2026, Ngân hàng Thế giới xếp Việt Nam vào nhóm thu nhập trung bình cao, sau 17 năm ở nhóm trung bình thấp; GNI bình quân năm 2025 là 4.970 USD<a class="fn" href="#s16">[16]</a>.</li>
+    <li>Nợ công khoảng 32,9% GDP (2024), một đệm an toàn thật<a class="fn" href="#s56">[56]</a>. (Xin lưu ý: Thái Lan năm 1997 cũng có nợ công thấp. Thứ làm họ gục là nợ tư nhân, nên đệm này cần đi kèm kỷ luật với tín dụng.)</li>
+    <li>Nửa đầu 2026 tăng khoảng 8,18%, quý II đạt 8,39%<a class="fn" href="#s57">[57]</a>.</li>
+    <li>Các tổ chức quốc tế ban đầu dự báo thấp (Ngân hàng Thế giới 6,1%, ADB 6%, IMF 5,6% cho năm 2026)<a class="fn" href="#s13">[13]</a>, rồi nâng dần; trung vị dự báo tháng 9/2026 là khoảng 8%<a class="fn" href="#s15">[15]</a>.</li>
+    <li>Nhà nước đã nhận ra rủi ro: Ngân hàng Nhà nước hạ mục tiêu tăng tín dụng 2026 xuống khoảng 15% so với khoảng 19% năm 2025<a class="fn" href="#s6">[6]</a>; một quan chức cấp cao của Đảng cũng nhắc rằng tăng trưởng không thể bằng mọi giá<a class="fn" href="#s28">[28]</a>.</li>
+  </ul>
+</div>
+
+<p>Nói cách khác, bài này không viết cho người muốn nghe “Việt Nam sắp sập”. Việt Nam không sắp sập. Câu hỏi sắc hơn nhiều: tăng trưởng đó được xây bằng chất liệu gì, và chất liệu ấy có đủ bền để chạm 10% rồi ở lại đó, hay chỉ đủ để trình diễn một hai năm?</p>
+
+<div class="tablewrap">
+<table>
+  <caption>Bảng 3. Việt Nam 2026 qua mười hai con số</caption>
+  <thead><tr><th>Chỉ số</th><th>Số liệu</th><th>Đọc nó thế nào</th></tr></thead>
+  <tbody>
+    <tr><td>Mục tiêu GDP 2026</td><td>Từ 10% trở lên<a class="fn" href="#s14">[14]</a></td><td>Cao hơn dự báo ban đầu của các tổ chức quốc tế khoảng bốn điểm phần trăm</td></tr>
+    <tr><td>Tăng trưởng cần ở quý IV</td><td>Ít nhất 12,5%<a class="fn" href="#s12">[12]</a></td><td>Mức Việt Nam chỉ đạt một lần (13,7% quý III/2022, thời bật dậy sau phong tỏa)</td></tr>
+    <tr><td>Lạm phát tháng 9/2026</td><td>Gần 5,1% so với mục tiêu 4,5%<a class="fn" href="#s12">[12]</a></td><td>Giá đã bắt đầu đáp lại việc kéo tăng trưởng</td></tr>
+    <tr><td>Tín dụng ngân hàng / GDP</td><td>Khoảng 145 đến 146% cuối 2025<a class="fn" href="#s6">[6]</a><a class="fn" href="#s7">[7]</a></td><td>Rất cao so với thu nhập; Fitch ghi đòn bẩy 135% GDP, trung vị nhóm đồng hạng BB là 53%<a class="fn" href="#s11">[11]</a></td></tr>
+    <tr><td>Bất động sản và xây dựng trong tổng tín dụng</td><td>27,4%<a class="fn" href="#s8">[8]</a></td><td>Hai năm 2024-2025, tín dụng bất động sản tăng 37,6% trong khi tín dụng công nghiệp tăng 9,4%<a class="fn" href="#s8">[8]</a></td></tr>
+    <tr><td>Giá nhà / thu nhập</td><td>23,5 lần (UN-Habitat), trung bình thế giới 11,2<a class="fn" href="#s9">[9]</a></td><td>Ở Hà Nội và TP.HCM, đại biểu Quốc hội nêu mức 25 đến 30 lần<a class="fn" href="#s8">[8]</a></td></tr>
+    <tr><td>Giá căn hộ sơ cấp quý I/2026</td><td>Khoảng 100 triệu đồng/m² ở Hà Nội, 91 triệu ở TP.HCM<a class="fn" href="#s10">[10]</a></td><td>Căn 70 m² khoảng 7 tỷ đồng</td></tr>
+    <tr><td>FDI trong xuất khẩu</td><td>79,8% (5 tháng đầu 2026)<a class="fn" href="#s4">[4]</a></td><td>Từ khoảng 55% năm 2010 lên 70% năm 2015 rồi trên 76% cuối 2025<a class="fn" href="#s3">[3]</a></td></tr>
+    <tr><td>Giá trị nội địa trong xuất khẩu điện tử</td><td>26,9%<a class="fn" href="#s2">[2]</a></td><td>Thấp hơn Thái Lan, Indonesia, Hàn Quốc (xem biểu đồ)</td></tr>
+    <tr><td>Chi cho R&amp;D</td><td>Khoảng 0,4% GDP; doanh nghiệp chỉ khoảng 0,2% GDP<a class="fn" href="#s18">[18]</a></td><td>Hàn Quốc: doanh nghiệp chi khoảng 3,6% GDP</td></tr>
+    <tr><td>Tỷ suất sinh 2025</td><td>1,93 con/phụ nữ<a class="fn" href="#s19">[19]</a></td><td>Cơ cấu dân số vàng dự kiến kết thúc năm 2036<a class="fn" href="#s20">[20]</a></td></tr>
+    <tr><td>Lao động có bằng cấp, chứng chỉ</td><td>29,7% (nửa đầu 2026)<a class="fn" href="#s22">[22]</a></td><td>Khoảng 14 triệu trong tổng 52,4 triệu lao động vẫn làm nông, lâm, thủy sản<a class="fn" href="#s23">[23]</a></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="bars" role="img" aria-label="Biểu đồ tỷ lệ giá trị nội địa trong xuất khẩu điện tử">
+  <p class="bt">Biểu đồ 1. Giá trị nội địa trong xuất khẩu điện tử và điện (%)<a class="fn" href="#s2">[2]</a></p>
+  <div class="brow vn"><span>Việt Nam</span><span class="bar"><i style="width:26.9%"></i></span><span class="v">26,9</span></div>
+  <div class="brow"><span>Thái Lan</span><span class="bar"><i style="width:52.2%"></i></span><span class="v">52,2</span></div>
+  <div class="brow"><span>Indonesia</span><span class="bar"><i style="width:61.2%"></i></span><span class="v">61,2</span></div>
+  <div class="brow"><span>Ấn Độ</span><span class="bar"><i style="width:66%"></i></span><span class="v">66,0</span></div>
+  <div class="brow"><span>Hàn Quốc</span><span class="bar"><i style="width:68.8%"></i></span><span class="v">68,8</span></div>
+  <div class="brow"><span>Trung Quốc</span><span class="bar"><i style="width:75.3%"></i></span><span class="v">75,3</span></div>
+  <small>Nguồn: báo cáo của Tổ chức Thương mại Thế giới (2024), dẫn lại qua báo chí. Thanh dài hơn nghĩa là nước đó giữ lại nhiều giá trị hơn trong sản phẩm xuất khẩu.</small>
+</div>
+
+<p>Biểu đồ trên đáng nhìn lâu một chút. Ngay cả Thái Lan, nạn nhân điển hình của bẫy gia công, giữ lại nhiều giá trị nội địa gần gấp đôi Việt Nam trong xuất khẩu điện tử. Indonesia, nước bị chê là phi công nghiệp hóa non, cũng hơn hai lần. Nghĩa là Việt Nam đang xuất khẩu rất nhiều, nhưng một phần lớn của con số xuất khẩu ấy là hàng hóa nước ngoài đi ngang qua nhà mình. Với điện thoại, khối FDI xuất khẩu 100% giá trị nhưng nhập tới 89% giá trị linh kiện<a class="fn" href="#s5">[5]</a>. Xuất khẩu kỷ lục, giá trị giữ lại thì khiêm tốn: giống như làm nhà hàng nổi tiếng mà tiền lãi chủ yếu nằm ở khâu nhập nguyên liệu.</p>
+
+<hr class="orn">
+
+<h2>IV. Sông Hàn và sông Hồng: giống ở đâu, khác ở đâu</h2>
+
+<div class="tablewrap">
+<table>
+  <caption>Bảng 4. So sánh hai dòng sông</caption>
+  <thead><tr><th>Khía cạnh</th><th>Sông Hàn (1960-1990)</th><th>Sông Hồng (2026)</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Giống</strong> · Nhà nước chủ động</td><td>Kế hoạch năm năm, Ban Kế hoạch Kinh tế, mục tiêu cụ thể</td><td>Kế hoạch năm năm, mục tiêu GDP và thu nhập đặt từ trên xuống</td></tr>
+    <tr><td><strong>Giống</strong> · Hướng ngoại</td><td>Xuất khẩu là nguyên tắc sống còn</td><td>Hội nhập sâu, nhiều hiệp định thương mại, xuất khẩu bằng quy mô GDP<a class="fn" href="#s15">[15]</a></td></tr>
+    <tr><td><strong>Giống</strong> · Lao động cần cù, chi phí thấp</td><td>Dân số trẻ, kỷ luật</td><td>Dân số vàng, chi phí cạnh tranh</td></tr>
+    <tr><td><strong>Giống</strong> · Gặp thời cuộc địa chính trị</td><td>Chiến tranh Lạnh, Mỹ mở cửa thị trường</td><td>Chuỗi cung ứng dịch chuyển khỏi một nước, Việt Nam thành điểm đến</td></tr>
+    <tr><td><strong>Giống</strong> · Ép nhịp tăng trưởng</td><td>Cú ép công nghiệp nặng 1973, lạm phát 20%<a class="fn" href="#s32">[32]</a></td><td>Mục tiêu 10%+, miễn hạn mức tín dụng cho 18 dự án lớn (752 nghìn tỷ đồng) hồi tháng 6/2026<a class="fn" href="#s27">[27]</a></td></tr>
+    <tr><td><strong>Khác</strong> · Ai xuất khẩu</td><td>Chaebol nội địa là chủ lực</td><td>Khối FDI chiếm khoảng 80% xuất khẩu<a class="fn" href="#s4">[4]</a></td></tr>
+    <tr><td><strong>Khác</strong> · Tín dụng chảy đâu</td><td>Vào công nghiệp xuất khẩu, gắn kết quả xuất khẩu</td><td>Gần 27,4% vào bất động sản và xây dựng<a class="fn" href="#s8">[8]</a></td></tr>
+    <tr><td><strong>Khác</strong> · Năng lực công nghệ</td><td>Học và làm chủ qua doanh nghiệp nội địa</td><td>R&amp;D doanh nghiệp 0,2% GDP; giá trị nội địa điện tử 26,9%<a class="fn" href="#s18">[18]</a><a class="fn" href="#s2">[2]</a></td></tr>
+    <tr><td><strong>Khác</strong> · Bối cảnh thế giới</td><td>Thương mại mở rộng, Mỹ hào phóng với đồng minh</td><td>Thuế quan, chủ nghĩa bảo hộ, lo ngại hàng trung chuyển<a class="fn" href="#s11">[11]</a></td></tr>
+    <tr><td><strong>Khác</strong> · Đồng hồ nhân khẩu</td><td>Cất cánh khi dân số còn trẻ và chưa già</td><td>Dân số vàng kết thúc khoảng 2036, già hóa thành &ldquo;siêu già&rdquo; khoảng 2049<a class="fn" href="#s20">[20]</a><a class="fn" href="#s21">[21]</a></td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>Nền kinh tế dựa trên sức mạnh lõi hay trên tín dụng?</h3>
+<p>Câu hỏi này thường được đặt bằng chữ “tín dụng ảo”. Cần nói cho chính xác, vì chính xác mới sắc: tín dụng của Việt Nam không ảo. Tiền ấy có thật, người vay có thật, công trình mọc lên có thật. Cái ảo nằm ở chỗ khác: khi tín dụng chảy vào tài sản mà giá của nó tăng nhờ chính dòng tín dụng ấy, thì của cải sinh ra là của cải trên giấy. Giá đất tăng, tài sản thế chấp tăng, ngân hàng cho vay thêm, giá đất lại tăng. Vòng xoáy ấy không tạo ra thêm một container hàng xuất khẩu nào.</p>
+
+<p>Số liệu cho thấy vòng xoáy đó không hề nhỏ: tín dụng ngân hàng bằng khoảng 145% GDP, trong khi thị trường trái phiếu doanh nghiệp, kênh vốn dài hạn thay thế, chững ở mức khoảng 10% GDP<a class="fn" href="#s15">[15]</a>. Nghĩa là nền kinh tế đặt gần như toàn bộ gánh nặng tài trợ lên vai các ngân hàng. Báo chí tài chính còn dẫn một ước tính cho rằng giá trị giao dịch tiền mã hóa on-chain ở Việt Nam đã vượt 200 tỷ USD, tương đương khoảng 45% GDP<a class="fn" href="#s6">[6]</a>, cho thấy lượng vốn đầu cơ không nhỏ đang lang thang tìm chỗ ở. Còn với người đi mua nhà, câu chuyện giản dị hơn: giá nhà tăng gần gấp đôi tốc độ tăng thu nhập.</p>
+
+<p>Sự khác biệt với Hàn Quốc nằm ở một câu. Ở Hàn Quốc những năm 1970, tín dụng ưu đãi là phần thưởng cho việc xuất khẩu giỏi. Ở Việt Nam những năm 2020, tín dụng, trong nhiều trường hợp, là phần thưởng cho việc đang sở hữu đất. Một bên bị thế giới chấm điểm. Bên kia bị chính giá đất tự chấm điểm. Chưa nước nào xuất khẩu được căn hộ chung cư, trừ khi tính cả việc xuất khẩu nỗi lo trả nợ thế chấp cho thế hệ con cháu.</p>
+
+<div class="callout">
+  <p class="ct">Công bằng với phía bên kia</p>
+  <ul>
+    <li>Tín dụng cao một phần phản ánh một hệ thống tài chính xoay quanh ngân hàng, chứ không riêng là bong bóng.</li>
+    <li>Ngân hàng Nhà nước đã siết: hạn mức tín dụng 2026 khoảng 15%, tín dụng bất động sản không được vượt tốc độ chung<a class="fn" href="#s6">[6]</a>. Thị trường bất động sản gần như đứng yên vì lãi suất cao, nên rủi ro bong bóng bớt nóng<a class="fn" href="#s27">[27]</a>.</li>
+    <li>Nhưng đứng yên cũng là rủi ro: dòng tiền bị tắc dễ biến thành nợ xấu trong ngân hàng<a class="fn" href="#s27">[27]</a>.</li>
+    <li>Đầu năm 2026, cán cân thương mại nhiều tháng thâm hụt vì nhập khẩu tăng nhanh hơn xuất khẩu<a class="fn" href="#s55">[55]</a>. Đây là điểm cần theo dõi, chưa phải kết luận.</li>
+  </ul>
+</div>
+
+<hr class="orn">
+
+<h2>V. Sông Hồng giống ai hơn?</h2>
+
+<p>Câu trả lời trung thực: về <em>cấu trúc</em>, sông Hồng hôm nay giống Thái Lan thập niên 1990 hơn Hàn Quốc thập niên 1970. Về <em>tham vọng</em>, nó muốn là Hàn Quốc. Về <em>thời gian</em>, nó có ít hơn Hàn Quốc rất nhiều.</p>
+
+<p>Lý do nghe hơi phũ phàng nhưng có chứng cứ. Thái Lan 1996 có xuất khẩu tăng mạnh nhờ FDI, giá trị nội địa thấp, tín dụng đổ vào bất động sản, và niềm tin rằng tăng trưởng cao là trạng thái tự nhiên của vũ trụ. Việt Nam 2026 có ba điều đầu rất rõ, còn điều thứ tư thì đang được in thành mục tiêu. Điều khác biệt, và đây là điểm sáng thật, là Việt Nam đã có chiến lược bán dẫn của nhà nước, đã có cảnh báo từ Ngân hàng Nhà nước, từ Ủy ban Kinh tế của Quốc hội, từ chính các tổ chức quốc tế<a class="fn" href="#s63">[63]</a>. Biết mình đang đứng trên miệng hố là lợi thế thật, miễn là biết xong thì lùi lại.</p>
+
+<p>Còn Indonesia thì sao? Việt Nam không có tô tài nguyên khổng lồ để nằm hưởng, nên khó đi con đường Indonesia theo nghĩa đen. Nhưng có một biến thể gần hơn: tăng trưởng nhờ dòng vốn và nhu cầu nội địa lớn, mà không nâng cấp lõi công nghiệp, trong khi đất đai và tín dụng đóng vai trò “tô” thay cho dầu mỏ. Đó là phiên bản Indonesia mà Việt Nam cần dè chừng.</p>
+
+<div class="tablewrap">
+<table>
+  <caption>Bảng 5. Ba kịch bản cho sông Hồng (nhận định của người viết)</caption>
+  <thead><tr><th>Kịch bản</th><th>Điều kiện để xảy ra</th><th>Dấu hiệu nhận biết</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Hàn hóa</strong></td><td>Doanh nghiệp nội địa chiếm vị trí chủ lực ở khâu giá trị cao; tín dụng đi theo kết quả xuất khẩu và công nghệ; kỹ sư bán dẫn đủ số lượng</td><td>Tỷ lệ giá trị nội địa tăng; R&amp;D doanh nghiệp tiến về 1% GDP; nhà máy chip nội địa chạy thật</td></tr>
+    <tr><td><strong>Thái hóa</strong> (khả năng cao nhất nếu không đổi)</td><td>Tăng trưởng nhờ vốn và FDI gia công; tín dụng tiếp tục nghiêng về bất động sản</td><td>Tăng trưởng trôi từ 8% xuống 5 đến 6% sau chu kỳ tín dụng; nợ hộ gia đình tăng; xuất khẩu lớn mà giá trị giữ lại không tăng</td></tr>
+    <tr><td><strong>Indonesia hóa</strong></td><td>Tô đất đai và nhu cầu nội địa thay cho năng lực; doanh nghiệp tư nhân yếu thế trước nhóm có quan hệ</td><td>Công nghiệp chế biến đứng yên hoặc giảm tỷ trọng; trung lưu mỏng đi</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Một điều cần nhấn mạnh để không bị hiểu nhầm là lời tiên tri: kịch bản có khả năng nhất không phải một vụ sụp đổ kiểu 1997. Theo các số liệu nêu trên, phần lớn gánh nặng nằm ở tín dụng của ngân hàng trong nước chứ không phải vay ngoại tệ ngắn hạn ồ ạt, nên cú sốc tỷ giá kiểu Thái Lan ít khả năng hơn (dù không loại trừ). Rủi ro thực tế hơn là <em>sự chững lại từ từ</em>: tăng trưởng nhích xuống, nợ xấu ngân hàng tích lũy, thu nhập tăng chậm hơn giá nhà. Một cuộc ngộ độc chậm, không phải một cú đột quỵ. Cũng vì thế nên nó dễ bị bỏ qua.</p>
+
+<hr class="orn">
+
+<h2>VI. Bảy điểm yếu của giấc mơ vươn mình</h2>
+
+<p>Từng có lần báo chí và tổ chức quốc tế ngợi ca rồi cảnh báo. Năm 1993, Ngân hàng Thế giới xuất bản báo cáo ca ngợi “phép màu Đông Á”. Năm 1994, Paul Krugman viết trên Foreign Affairs rằng tăng trưởng nhờ đổ thêm vốn và lao động, không nhờ năng suất, rồi sẽ cạn, và so sánh nó với mô hình kinh tế Liên Xô. Bốn năm sau là 1997. Hôm nay, Fitch, Bloomberg và các nhà nghiên cứu ở khu vực lặp lại điệp khúc ấy với Việt Nam, bằng giọng lịch sự hơn: tăng trưởng đang đi trước năng lực tài trợ<a class="fn" href="#s11">[11]</a><a class="fn" href="#s27">[27]</a><a class="fn" href="#s12">[12]</a>. Bảy điểm yếu dưới đây là bản đồ của lời cảnh báo đó.</p>
+
+<ol class="weak">
+  <li><strong>Đặt đích trước, tìm đường sau.</strong> Mục tiêu 10% được đưa ra khi các tổ chức quốc tế dự báo 5,6 đến 6,1%<a class="fn" href="#s13">[13]</a>. Đầu tháng 10, để chạm 10% cả năm, quý IV phải tăng ít nhất 12,5%<a class="fn" href="#s12">[12]</a>. Nếu tăng trưởng ban hành được bằng nghị quyết, thế giới đã không còn nước nghèo nào. Một nghị quyết đặt mục tiêu thì tốt, nhưng nó không thay được năng suất. Ngay người đứng đầu Ủy ban Kinh tế của Quốc hội cũng thừa nhận nền móng mở rộng còn bất ổn, lại chịu áp lực lạm phát và nhu cầu vốn, năng lượng<a class="fn" href="#s63">[63]</a>.</li>
+  <li><strong>Động cơ là vốn, không phải năng suất.</strong> Đầu tư chiếm khoảng 33% GDP, tín dụng tăng khoảng 19% năm 2025<a class="fn" href="#s7">[7]</a>. Các nhà nghiên cứu của ISEAS chỉ ra một nghịch lý: chính những công cụ cần để đạt hai con số (tín dụng cao, đầu tư cao, chi tiêu cao) lại là những thứ đe dọa ổn định vĩ mô mà lãnh đạo muốn giữ<a class="fn" href="#s28">[28]</a>. Ngân hàng Nhà nước cũng cảnh báo hồi tháng 8 rằng tín dụng đang tăng nhanh hơn khả năng huy động vốn của hệ thống<a class="fn" href="#s12">[12]</a>.</li>
+  <li><strong>Xuất khẩu của ai?</strong> Khối FDI chiếm khoảng 80% xuất khẩu, trong khi xuất khẩu của doanh nghiệp nội địa có năm giảm<a class="fn" href="#s4">[4]</a><a class="fn" href="#s3">[3]</a>. Khoảng cách giữa kim ngạch và giá trị giữ lại chính là điểm yếu nhất của câu chuyện thành công. Nếu một ngày nhà đầu tư nước ngoài dời nhà máy đi nơi rẻ hơn hoặc thuế quan thay đổi, phần nội địa để lại không nhiều.</li>
+  <li><strong>Tín dụng chảy sai chỗ.</strong> Bất động sản và xây dựng chiếm 27,4% tín dụng, tăng nhanh gấp bốn lần tín dụng công nghiệp trong hai năm gần đây<a class="fn" href="#s8">[8]</a>. Giá nhà bằng 23,5 đến 30 lần thu nhập, hơn gấp đôi trung bình thế giới<a class="fn" href="#s9">[9]</a>. Đây là phân bổ nguồn lực sai theo nghĩa rõ nhất: vốn khan hiếm bị hút vào thứ không sinh ra năng lực xuất khẩu hay công nghệ.</li>
+  <li><strong>Doanh nghiệp tư nhân nội địa còn mỏng.</strong> Chi R&amp;D của doanh nghiệp chỉ khoảng 0,2% GDP, so với 1,7% ở Trung Quốc và 3,6% ở Hàn Quốc<a class="fn" href="#s18">[18]</a>. Phần lớn doanh nghiệp dùng công nghệ nhập hoặc cải tiến nhỏ, theo chính Ngân hàng Thế giới<a class="fn" href="#s18">[18]</a>. Thị trường trái phiếu chững, vốn dài hạn thiếu<a class="fn" href="#s15">[15]</a>. Muốn có “Samsung của Việt Nam”, ngoài khẩu hiệu còn cần tiền kiên nhẫn và quyền được thất bại.</li>
+  <li><strong>Vốn con người chưa theo kịp tham vọng.</strong> Chỉ 29,7% lực lượng lao động có bằng cấp hoặc chứng chỉ<a class="fn" href="#s22">[22]</a>; hơn 14 triệu người vẫn làm nông nghiệp<a class="fn" href="#s23">[23]</a>. Việt Nam xếp thứ 44 trên 139 nền kinh tế về chỉ số đổi mới sáng tạo toàn cầu năm 2025, giữ nguyên hạng so với năm trước<a class="fn" href="#s62">[62]</a>. Không thể làm bán dẫn bằng sức lao động giá rẻ.</li>
+  <li><strong>Đồng hồ cát nhân khẩu.</strong> Tỷ suất sinh 2025 là 1,93, dưới mức thay thế; cơ cấu dân số vàng dự kiến kết thúc năm 2036<a class="fn" href="#s19">[19]</a><a class="fn" href="#s20">[20]</a>. Hàn Quốc làm giàu khi còn trẻ và đông. Việt Nam đang cố làm giàu khi cát chảy xuống nhanh hơn dự kiến. Ngân hàng Thế giới ước tính Việt Nam phải tăng thu nhập hơn gấp ba trong hai thập kỷ để thành nước thu nhập cao vào 2045, ở mức tăng trưởng khoảng 6% một năm<a class="fn" href="#s17">[17]</a>; một nghiên cứu khác cho rằng cần tối thiểu 7% bình quân đầu người mỗi năm, điều mà đa số nền kinh tế thu nhập trung bình chưa từng làm được<a class="fn" href="#s58">[58]</a>.</li>
+</ol>
+
+<blockquote>
+  <p>Mục tiêu 10% nghe oai hơn. Nhưng khó hơn nhiều là 6 đến 7% bền vững suốt hai mươi năm: vì không ai vỗ tay cho sự bền bỉ.</p>
+  <cite>Nhận xét của người viết</cite>
+</blockquote>
+
+<hr class="orn">
+
+<h2>VII. Ngành lõi của thời đại: sông Hàn đã cưỡi sóng nào, sông Hồng cưỡi nổi không?</h2>
+
+<p>Bài học tổng quát từ ba nước: tăng trưởng bền không đến từ ngành nào cũng được, mà từ ngành đang là <em>lõi của thời đại</em>, tức là ngành mà cầu thế giới tăng nhanh hơn GDP, nơi doanh nghiệp nội địa có thể tích lũy năng lực và nơi thị trường xuất khẩu chấm điểm công bằng. Hàn Quốc chọn đúng sóng (hàng nhẹ, thép và tàu, điện tử, chip) và luôn giữ doanh nghiệp bản địa ở vị trí chủ lực. Thái Lan chọn đúng sóng nhưng để người khác làm chủ. Indonesia chọn sóng sai: tô tài nguyên.</p>
+
+<p>Còn sóng của thời đại này? Không cần nhiều tưởng tượng: đó là hạ tầng AI, gồm chip nhớ, chip logic, đóng gói tiên tiến, trung tâm dữ liệu, và thứ nuôi chúng là điện. Xung quanh là pin và xe điện, tự động hóa, và phần mềm. Chính Hàn Quốc hôm nay đang hưởng lợi nhất từ sóng này, với xuất khẩu bán dẫn kỷ lục 173,4 tỷ USD năm 2025<a class="fn" href="#s40">[40]</a>.</p>
+
+<div class="tablewrap">
+<table>
+  <caption>Bảng 6. Việt Nam có thể bám vào sóng nào, ở bậc nào</caption>
+  <thead><tr><th>Sóng của thời đại</th><th>Việt Nam đang có gì</th><th>Đánh giá khả năng</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Đóng gói, kiểm thử chip</strong></td><td>Khoảng 170 dự án FDI bán dẫn và công nghệ cao, tổng vốn gần 11,6 tỷ USD<a class="fn" href="#s24">[24]</a>; FPT lập nhà máy kiểm thử, đóng gói tiên tiến đầu 2026<a class="fn" href="#s59">[59]</a>; mục tiêu 10 nhà máy đến 2030<a class="fn" href="#s25">[25]</a></td><td><strong>Cao, nếu thiếu thì chỉ thiếu kỹ sư.</strong> Đây là bậc thang thực tế nhất</td></tr>
+    <tr><td><strong>Thiết kế và chip chuyên dụng</strong></td><td>Chiến lược “C = SET + 1”, chọn chip chuyên dụng làm hướng ưu tiên<a class="fn" href="#s26">[26]</a>; FPT, Viettel đã vào thiết kế</td><td><strong>Trung bình khá.</strong> Cần hệ sinh thái khách hàng thật, không chỉ chương trình đào tạo</td></tr>
+    <tr><td><strong>Chế tạo chip</strong></td><td>Viettel khởi công nhà máy chế tạo chip đầu tiên đầu 2026; mục tiêu một nhà máy quy mô nhỏ đến 2030, hai nhà máy đến 2040, ba nhà máy đến 2050<a class="fn" href="#s59">[59]</a>; Geleximco dự kiến khởi công tháng 11/2026<a class="fn" href="#s26">[26]</a></td><td><strong>Thấp ở công nghệ tiên tiến.</strong> Tự thân mục tiêu ba nhà máy trong ba mươi năm đã nói lên nhịp độ thật</td></tr>
+    <tr><td><strong>Bộ nhớ AI (HBM)</strong></td><td>Chưa có</td><td><strong>Rất thấp.</strong> Hàn Quốc mất bốn thập kỷ, và SK Hynix đang chiếm hơn một nửa thị trường<a class="fn" href="#s41">[41]</a></td></tr>
+    <tr><td><strong>Năng lượng và lưới điện</strong></td><td>Chính phủ thừa nhận phải bảo đảm đủ điện và nhiên liệu cho đà tăng trưởng<a class="fn" href="#s63">[63]</a></td><td><strong>Là điều kiện cần.</strong> Không có điện ổn định thì chưa nói được chuyện AI</td></tr>
+    <tr><td><strong>Phần mềm, dịch vụ số, AI ứng dụng</strong></td><td>Đã có hợp tác với NVIDIA đặt trung tâm nghiên cứu AI<a class="fn" href="#s60">[60]</a>; doanh nghiệp công nghệ trong nước</td><td><strong>Khả thi.</strong> Ít tốn vốn hơn, phù hợp thế mạnh nhân lực kỹ thuật</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Nhìn vào bảng, kết luận khá rõ. Việt Nam <em>không thể nhảy cóc</em> lên HBM trong một nhiệm kỳ, nhưng <em>có thể leo từng bậc</em>: đóng gói và kiểm thử, rồi thiết kế chip chuyên dụng, rồi một nhà máy chế tạo nhỏ, đi cùng năng lượng và phần mềm. Nghị quyết 57 đặt đúng hướng khi nhắm vào bán dẫn và khoa học công nghệ làm động lực, và đặt mục tiêu R&amp;D 2% GDP vào năm 2030 với hơn 60% đến từ khu vực tư nhân<a class="fn" href="#s18">[18]</a>. Con số thật hiện nay là khoảng 0,4%<a class="fn" href="#s18">[18]</a>, nên quãng đường còn dài gấp năm lần.</p>
+
+<p>Cái khó nằm ở chỗ đặt chính sách công nghiệp vào kỷ luật thị trường. Hàn Quốc đủ khôn để buộc ưu đãi vào kết quả xuất khẩu. Nếu chương trình bán dẫn của Việt Nam được xây kiểu “nhà máy mọc lên là xong”, mà không trả lời câu hỏi “ai mua, mua bao nhiêu, mua với giá nào”, thì nó có nguy cơ thành một dự án bất động sản mặc áo công nghệ.</p>
+
+<hr class="orn">
+
+<h2>VIII. Đúc kết</h2>
+
+<p>Gom lại, có thể nói tóm bằng bốn mệnh đề.</p>
+
+<p><strong>Thứ nhất,</strong> tăng trưởng phải bám vào ngành lõi của thời đại, không phải ngành dễ vay tiền nhất. Bất động sản không phải ngành lõi của bất kỳ thời đại nào: nó là người tiêu thụ tiết kiệm, không phải người tạo ra năng lực. Nền kinh tế nào để nó chiếm hơn một phần tư tín dụng thì đang tự nguyện làm người đi nuôi tài sản.</p>
+
+<p><strong>Thứ hai,</strong> doanh nghiệp nội địa phải làm chủ ít nhất một mắt xích giá trị cao. FDI là cầu thang chứ không phải căn nhà. Thái Lan đứng ở bậc cầu thang ba mươi năm và gọi đó là nhà. Hàn Quốc dùng cầu thang rồi xây nhà riêng.</p>
+
+<p><strong>Thứ ba,</strong> kỷ luật thị trường phải đi kèm chính sách công nghiệp. Ưu đãi gắn với kết quả, thất bại phải được phép phá sản, hệ thống tài chính phải có tiếng nói đối trọng. Hàn Quốc quên điều cuối cùng nên có năm 1997.</p>
+
+<p><strong>Thứ tư,</strong> thời gian là nguồn lực khan hiếm nhất. Hàn Quốc có thời gian cho thử sai. Việt Nam có khoảng mười năm trước khi cơ cấu dân số vàng khép lại. Một mục tiêu như 10% là lời nhắc về tham vọng, nhưng chiến lược thật nằm ở việc trong mười năm ấy dựng được bao nhiêu năng lực không phụ thuộc vào người khác.</p>
+
+<div class="callout">
+  <p class="ct">Sáu việc nên làm trong bốn năm tới</p>
+  <ol>
+    <li><strong>Đổi chiều tín dụng:</strong> ưu tiên cho công nghiệp, công nghệ, xuất khẩu có kết quả; dùng công cụ thị trường (ví dụ dự trữ bắt buộc phân biệt theo lĩnh vực) thay vì chỉ ra lệnh hành chính, như một đại biểu Quốc hội đề xuất<a class="fn" href="#s8">[8]</a>.</li>
+    <li><strong>Đánh thuế bất động sản đầu cơ</strong> lũy tiến để giảm sức hút của đất so với nhà máy.</li>
+    <li><strong>Gắn ưu đãi FDI với chuyển giao công nghệ và tỷ lệ nội địa hóa</strong>, như chính các đại biểu và hiệp hội doanh nghiệp FDI đã đề xuất<a class="fn" href="#s1">[1]</a><a class="fn" href="#s5">[5]</a>.</li>
+    <li><strong>Chọn vài mắt xích bán dẫn có thể thắng</strong> (đóng gói, kiểm thử, chip chuyên dụng) và buộc ưu đãi vào đơn hàng thật.</li>
+    <li><strong>Đầu tư kỹ sư và kỹ năng</strong> với quy mô tương xứng tham vọng, vì thiếu kỹ sư là nút thắt gần nhất của mọi mục tiêu ở trên.</li>
+    <li><strong>Phát triển thị trường vốn dài hạn</strong> (trái phiếu, vốn chủ sở hữu) để bớt gánh nặng cho ngân hàng và có chỗ cho doanh nghiệp tư nhân lớn lên.</li>
+  </ol>
+</div>
+
+<p>Cuối cùng, để trả lời câu hỏi mở đầu: sông Hồng sẽ giống ai? Nếu không đổi, nó sẽ giống Thái Lan, chỉ khác ở chỗ lên xe sớm hơn và lỡ nhịp sớm hơn do dân số. Nếu đổi đúng chỗ, nó có thể giống Hàn Quốc ở lõi, và có cơ hội học được thêm điều mà Hàn Quốc chưa học: giàu mà không kiệt sức. Giấc mơ vươn mình không sai. Chỉ cần nhớ rằng người ta vươn mình bằng cơ bắp chứ không bằng tiếng hô, và dòng sông nào cũng chỉ trong veo sau khi lắng phù sa xuống.</p>
+
+<p class="note">Lưu ý về phương pháp: bài dùng số liệu công khai từ báo chí, cơ quan thống kê và tổ chức quốc tế, một số là sơ bộ hoặc ước tính và có thể được điều chỉnh. Các phần nhận định (kịch bản, bảng điểm, đánh giá khả năng) là quan điểm của người viết, không phải dự báo chắc chắn. Một số mốc lịch sử về Hàn Quốc (cải cách ruộng đất, việc Samsung tuyên bố vào bán dẫn năm 1983, báo cáo của Ngân hàng Thế giới năm 1993 và bài viết của Krugman năm 1994, tăng trưởng hai con số của Thái Lan cuối thập niên 1980, thâm hụt vãng lai khoảng 8% GDP của Thái Lan trước 1997, việc Indonesia phá giá rupiah thập niên 1980) được dẫn từ kiến thức lịch sử phổ biến, không đánh số nguồn.</p>
+
+<hr class="orn">
+
+<h2>Nguồn tham khảo</h2>
+<ol class="src">
+  <li id="s1"><a href="https://kynguyenvuonminh.vov.vn/en/economy/stronger-local-foreign-business-linkages-seen-key-to-boosting-fdi-quality-in-vietnam-post1242986.vov">VOV, Stronger local-foreign business linkages seen key to boosting FDI quality in Vietnam</a></li>
+  <li id="s2"><a href="https://baobacninhtv.vn/domestic-foreign-business-connectivity-key-to-fdi-quality-improvement-postid430466.bbg">Báo Bắc Ninh, Domestic-foreign business connectivity key to FDI quality improvement (dẫn báo cáo WTO 2024)</a></li>
+  <li id="s3"><a href="https://antidumping.vn/viet-nams-record-exports-and-the-hidden-fragility-of-its-economy-n29636.html">Cục Phòng vệ thương mại, Viet Nam's record exports and the hidden fragility of its economy</a></li>
+  <li id="s4"><a href="https://kynguyenvuonminh.vov.vn/en/economy/fdi-export-earnings-forecast-to-exceed-us400-billion-in-2026-post1305100.vov">VOV, FDI export earnings forecast to exceed US$400 billion in 2026</a></li>
+  <li id="s5"><a href="https://news.tuoitre.vn/decoding-the-miracles-of-vietnams-technology-exports-10384098.htm">Tuổi Trẻ, Decoding the 'miracles' of Vietnam's technology exports</a></li>
+  <li id="s6"><a href="https://theinvestor.vn/vietnams-credit-in-2026-when-capital-gets-selective-d18327.html">The Investor, Vietnam's credit in 2026: When capital gets selective</a></li>
+  <li id="s7"><a href="https://www.iseas.edu.sg/?p=80738">ISEAS, Webinar Vietnam's 2026 Economic Outlook: Ready for the 'New Era'?</a></li>
+  <li id="s8"><a href="https://doanhnghiephoinhap.vn/gia-nha-ha-noi-tphcm-gap-25-30-lan-thu-nhap-dai-bieu-quoc-hoi-de-nghi-danh-phi-luy-tien-133156.html">Doanh nghiệp &amp; Hội nhập, Giá nhà Hà Nội, TP.HCM gấp 25-30 lần thu nhập</a></li>
+  <li id="s9"><a href="https://doanhnhan.baophapluat.vn/gia-nha-cao-gap-23-lan-thu-nhap-va-bai-toan-giai-toa-con-khat-nguon-cung-binh-dan.html">Doanh nhân &amp; Pháp luật, Giá nhà cao gấp 23 lần thu nhập</a></li>
+  <li id="s10"><a href="https://thoibaotaichinhvietnam.vn/gia-nha-tang-nhanh-hon-thu-nhap-ap-luc-an-cu-cua-nguoi-tre-ngay-cang-lon-197705.html">Thời báo Tài chính Việt Nam, Giá nhà tăng nhanh hơn thu nhập</a></li>
+  <li id="s11"><a href="https://the-shiv.com/economy-vietnam-government-growth-push-could-lift-leverage-risk-says-fitch/">The Shiv, Vietnam government growth push could lift leverage risk, says Fitch</a></li>
+  <li id="s12"><a href="https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/05/vietnam-warns-of-039future-challenges039-after-hitting-10-growth-goal">Bloomberg qua The Star (5/10/2026), Vietnam warns of 'future challenges' after hitting 10% growth goal</a></li>
+  <li id="s13"><a href="https://daibieunhandan.vn/tang-truong-10-nam-2026-khat-vong-va-hanh-dong-10388314.html">Báo Đại biểu Nhân dân, Tăng trưởng 10% năm 2026: Khát vọng và hành động</a></li>
+  <li id="s14"><a href="https://vnbusiness.vn/quoc-hoi-thong-qua-muc-tieu-tang-truong-gdp-2026-tu-10-tro-len.html">VnBusiness, Quốc hội thông qua mục tiêu tăng trưởng GDP 2026 từ 10% trở lên</a></li>
+  <li id="s15"><a href="https://doanhnhan.baophapluat.vn/kinh-te-viet-nam-duoc-cac-to-chuc-tai-chinh-du-bao-tang-truong-8-nam-2026-dong-luc-xuat-khau-va-ap-luc-nguon-von.html">Doanh nhân &amp; Pháp luật, Kinh tế Việt Nam được các tổ chức tài chính dự báo tăng trưởng 8% năm 2026</a></li>
+  <li id="s16"><a href="https://vietnamnews.vn/economy/1785236/viet-nam-s-upper-middle-income-status-marks-new-chapter-but-tougher-reforms-lie-ahead-world-bank.html">Vietnam News, Việt Nam's upper-middle-income status marks new chapter: World Bank</a></li>
+  <li id="s17"><a href="https://www.thestar.com.my/business/business-news/2026/09/02/vietnams-middle-income-trap-solution">The Star, Vietnam's middle-income trap solution</a></li>
+  <li id="s18"><a href="https://vir.com.vn/nations-high-tech-ambitions-require-core-of-rd-and-experts-136740.html">Vietnam Investment Review, Nation's high-tech ambitions require core of R&amp;D and experts</a></li>
+  <li id="s19"><a href="https://en.baochinhphu.vn/viet-nams-working-age-population-accounts-for-almost-63-111260109111947185.htm">Báo Chính phủ, Viet Nam's working age population accounts for almost 63%</a></li>
+  <li id="s20"><a href="https://vietnamnews.vn/society/1732538/viet-nam-s-population-to-peak-around-2059-as-ageing-accelerates.html">Vietnam News, Việt Nam's population to peak around 2059 as ageing accelerates</a></li>
+  <li id="s21"><a href="https://vietnamnet.vn/en/vietnam-s-birth-rate-hits-record-low-raising-alarm-2351887.html">VietnamNet, Vietnam's birth rate hits record low, raising alarm</a></li>
+  <li id="s22"><a href="https://vietnamnews.vn/politics-laws/1798607/national-day-ambitions-a-fresh-growth-imperative-to-ensure-a-fairer-future-for-all.html">Vietnam News, National Day ambitions: a fresh growth imperative</a></li>
+  <li id="s23"><a href="https://tapchinganhang.gov.vn/nang-cao-nang-suat-lao-dong-de-vuot-qua-bay-thu-nhap-trung-binh-tu-thuc-tien-kinh-te-viet-nam-17183.html">Tạp chí Ngân hàng, Nâng cao năng suất lao động để vượt qua bẫy thu nhập trung bình</a></li>
+  <li id="s24"><a href="https://theleader.vn/thu-tuong-dat-muc-tieu-2027-phai-co-chip-make-in-vietnam-d41447.html">The Leader, Thủ tướng đặt mục tiêu 2027 phải có chip Make in Vietnam</a></li>
+  <li id="s25"><a href="https://www.vcci.com.vn/tin-tuc/dot-pha-theo-nghi-quyet-57-chinh-sach-mo-loi-cho-nganh-cong-nghiep-ban-dan">VCCI, Đột phá theo Nghị quyết 57: Chính sách mở lối cho ngành công nghiệp bán dẫn</a></li>
+  <li id="s26"><a href="https://tapchikinhtetaichinh.vn/chip-chuyen-dung-co-hoi-de-viet-nam-tien-sau-vao-chuoi-gia-tri-ban-dan-166704.html">Tạp chí Kinh tế Tài chính, Chip chuyên dụng: Cơ hội để Việt Nam tiến sâu vào chuỗi giá trị bán dẫn</a></li>
+  <li id="s27"><a href="https://fulcrum.sg/article/commentaries/vietnams-growth-ambitions-are-outrunning-its-capital/">Fulcrum (ISEAS), Vietnam's Growth Ambitions Are Outrunning Its Capital</a></li>
+  <li id="s28"><a href="https://www.iseas.edu.sg/articles-commentaries/iseas-perspective/2026-40-vietnams-ambition-for-double-digit-growth-rationale-and-challenges-by-ho-quoc-tuan/">ISEAS Perspective 2026/40, Vietnam's Ambition for Double-Digit Growth (Ho Quoc Tuan)</a></li>
+  <li id="s29"><a href="https://voxukraine.org/en/korea-causes-of-the-tremendous-growth/">VoxUkraine, Korea: causes of the tremendous growth</a></li>
+  <li id="s30"><a href="https://www.koreatimes.co.kr/amp/business/companies/20100629/koreatoday-from-war-torn-nation-to-economic-powerhouse">The Korea Times, From war-torn nation to economic powerhouse</a></li>
+  <li id="s31"><a href="https://irving.vassar.edu/faculty/dk/Econ367/Notes13.doc">Vassar College, Econ 367 notes: South Korea (Park Chung Hee policies)</a></li>
+  <li id="s32"><a href="https://dfat.gov.au/about-us/publications/trade-investment/korea-rebuilds/Pages/korea-rebuilds-from-crisis-to-opportunity-3">DFAT Australia, Korea Rebuilds: From Crisis to Opportunity</a></li>
+  <li id="s33"><a href="https://es.scribd.com/document/55597169/Korean-Miracle">Export-led industrialisation and growth: Korea's economic miracle 1962-89</a></li>
+  <li id="s34"><a href="https://econpapers.repec.org/RePEc:iie:ppress:341">E. M. Graham, Reforming Korea's Industrial Conglomerates (Peterson Institute)</a></li>
+  <li id="s35"><a href="https://www.icrier.org/pdf/Paper_Choong_Yong_Ahn_SessionIII.pdf">Choong Yong Ahn, South Korea: Wary of Another Financial Crisis (Global Asia)</a></li>
+  <li id="s36"><a href="https://old.fairware.com/97-asian-financial-crisis-2561422463.html">1997 Asian Financial Crisis: Causes, Impact &amp; Recovery</a></li>
+  <li id="s37"><a href="https://www.koreajoongangdaily.com/opinion/time-is-running-out-for-the-korean-economy/11229510">Korea JoongAng Daily, Time is running out for the Korean economy</a></li>
+  <li id="s38"><a href="https://koreapro.org/2025/03/south-koreas-2025-sdg-report-highlights-economic-and-social-weaknesses/">Korea Pro, South Korea's 2025 SDG Report highlights economic and social weaknesses</a></li>
+  <li id="s39"><a href="https://www.bankofscotlandtrade.co.uk/en/market-potential/south-korea/presentation-context">Bank of Scotland Trade, South Korea: Economic outline</a></li>
+  <li id="s40"><a href="https://www.malaymail.com/news/money/2026/01/01/ai-boom-drives-south-korea-exports-to-record-us700b-in-2025/203935">AFP qua Malay Mail, AI boom drives South Korea exports to record in 2025</a></li>
+  <li id="s41"><a href="https://startupfortune.com/south-koreas-record-exports-show-how-deep-its-ai-chip-bet-really-goes/">Startup Fortune, South Korea's Record Exports Show How Deep Its AI Chip Bet Really Goes</a></li>
+  <li id="s42"><a href="https://asianews.network/thailand-branded-the-sick-man-of-asia-how-much-hope-can-a-new-government-deliver/">The Nation qua Asia News Network, Thailand, branded the 'sick man of Asia'</a></li>
+  <li id="s43"><a href="https://www.nationthailand.com/blogs/business/economy/40053929">The Nation, From would-be fifth tiger to Asia's sick man</a></li>
+  <li id="s44"><a href="https://eastasiaforum.org/2026/02/24/thailands-economy-faces-a-human-capital-problem/">East Asia Forum, Thailand's economy faces a human capital problem</a></li>
+  <li id="s45"><a href="https://en.thairath.co.th/money/economics/thai_economics/2928609">Thairath, Thailand vs ASEAN per capita income: trapped in the middle-income bracket</a></li>
+  <li id="s46"><a href="https://www.thailand-business-news.com/economics/223254-is-thailands-growth-engine-stalling">Thailand Business News, Is Thailand's growth engine stalling?</a></li>
+  <li id="s47"><a href="https://www.ginmon.de/en/wiki/asienkrise">Ginmon, Asian financial crisis</a></li>
+  <li id="s48"><a href="https://graphsearch.epfl.ch/en/concept/262233">EPFL GraphSearch, 1997 Asian financial crisis (tóm tắt)</a></li>
+  <li id="s49"><a href="https://www.thejakartapost.com/opinion/2026/08/22/the-quiet-crisis-of-indonesias-shrinking-middle-class">The Jakarta Post, The quiet crisis of Indonesia's shrinking middle class</a></li>
+  <li id="s50"><a href="https://www.krungsri.com/en/research/research-intelligence/indonesia-middle-class-2026">Krungsri Research, Forgotten middle child: Indonesia middle class under pressure</a></li>
+  <li id="s51"><a href="https://countrystudies.us/indonesia/23.htm">Country Studies, Indonesia: The State and Economic Development</a></li>
+  <li id="s52"><a href="https://en.wikipedia.org/wiki/Fall_of_Suharto">Wikipedia, Fall of Suharto</a></li>
+  <li id="s53"><a href="https://www.idnfinancials.com/jp/news/63938/raden-pardede-indonesia-cant-advance-solely-on-natural-resources">IDN Financials, Raden Pardede: Indonesia can't advance solely on natural resources</a></li>
+  <li id="s54"><a href="https://www.thejakartapost.com/opinion/2025/02/26/the-missing-steps-indonesia-must-retrace">The Jakarta Post, The missing steps Indonesia must retrace</a></li>
+  <li id="s55"><a href="https://www.ceicdata.com/en/indicator/vietnam/government-debt--of-nominal-gdp">CEIC, Vietnam Government Debt and trade data</a></li>
+  <li id="s56"><a href="https://tradingeconomics.com/vietnam/government-debt-to-gdp">Trading Economics, Vietnam Government Debt to GDP</a></li>
+  <li id="s57"><a href="https://mekongasean.vn/tag/gdp-998.tag">Mekong ASEAN, Tăng trưởng GDP quý 2/2026 và 6 tháng đầu năm</a></li>
+  <li id="s58"><a href="https://econpapers.repec.org/RePEc:dpc:wpaper:0202">DEPOCEN, Challenges and Strategies for Viet Nam in Escaping the Middle-Income Trap</a></li>
+  <li id="s59"><a href="https://thuonghieucongluan.com.vn/kien-tao-chuoi-gia-tri-ban-dan-make-in-vietnam-a305835.html">Thương hiệu &amp; Công luận, Kiến tạo chuỗi giá trị bán dẫn Make in Vietnam</a></li>
+  <li id="s60"><a href="https://nhandan.vn/post-864107.html">Nhân Dân, Đổi mới tương lai: Kết nối AI và bán dẫn toàn cầu</a></li>
+  <li id="s61"><a href="https://baodauthau.vn/dong-luc-nao-de-gdp-tang-truong-hai-con-so-post188717.html">Báo Đấu thầu, Động lực nào để GDP tăng trưởng hai con số?</a></li>
+  <li id="s62"><a href="https://vietnamnews.vn/economy/1725440/viet-nam-ranks-44th-in-2025-global-innovation-index.html">Vietnam News, Việt Nam ranks 44th in 2025 Global Innovation Index</a></li>
+  <li id="s63"><a href="https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/18/vietnam-prime-minister-targets-2027-gdp-growth-of-at-least-10">Bloomberg qua The Star (18/10/2026), Vietnam Prime Minister targets 2027 GDP growth of at least 10%</a></li>
+</ol>
+
+<footer>
+  Bài luận Sepia Parchment · Tĩnh, không phụ thuộc mã động · Hoàn thành ngày 26/10/2026
+</footer>
+
+</main>
+
+    <div style="padding: 24px; text-align: center; background: #f6ead3; border-top: 1px solid #dcc9a4;">
+        <button class="back-btn" onclick="openPoliticsEconomyArticle('')" style="background: #fdf6ec; border: 1px solid #a07830; color: #2c1a0e; padding: 8px 20px; cursor: pointer; font-family: 'EB Garamond', Georgia, serif; font-size: 1rem; font-weight: 600; border-radius: 4px;">
+            <i class="fa-solid fa-arrow-left"></i> Quay láº¡i danh sÃ¡ch
+        </button>
+    </div>
+                    </div>
+<!-- ARTICLE PANEL: GIA TRI THANG DU -->
                     <div id="article-giatrithangdu-panel" class="sukien-article-panel giatrithangdu-body">
 <style>
 #article-giatrithangdu-panel {

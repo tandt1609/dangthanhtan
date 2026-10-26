@@ -89,6 +89,7 @@ function switchTab(tabId, updateUrl = true) {
 }
 
 const politicsEconomyArticles = {
+    'tu-song-han-den-song-hong': { panelId: 'article-songhansonghong-panel', route: '/chinh-tri-kinh-te-thoi-su/tu-song-han-den-song-hong' },
     'gia-tri-thang-du': { panelId: 'article-giatrithangdu-panel', route: '/chinh-tri-kinh-te-thoi-su/gia-tri-thang-du' },
     'tu-duy-co-chu-dich': { panelId: 'article-tuduycochudich-panel', route: '/chinh-tri-kinh-te-thoi-su/tu-duy-co-chu-dich' },
     'cai-cay-va-sat-na': { panelId: 'article-tuduycochudich-panel', route: '/chinh-tri-kinh-te-thoi-su/tu-duy-co-chu-dich' },
