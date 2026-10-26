@@ -89,6 +89,7 @@ function switchTab(tabId, updateUrl = true) {
 }
 
 const politicsEconomyArticles = {
+    'gia-tri-thang-du': { panelId: 'article-giatrithangdu-panel', route: '/chinh-tri-kinh-te-thoi-su/gia-tri-thang-du' },
     'tu-duy-co-chu-dich': { panelId: 'article-tuduycochudich-panel', route: '/chinh-tri-kinh-te-thoi-su/tu-duy-co-chu-dich' },
     'cai-cay-va-sat-na': { panelId: 'article-tuduycochudich-panel', route: '/chinh-tri-kinh-te-thoi-su/tu-duy-co-chu-dich' },
     'quy-luat-gia-tri': { panelId: 'article-quyluatgiatri-panel', route: '/chinh-tri-kinh-te-thoi-su/quy-luat-gia-tri' },

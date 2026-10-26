@@ -156,6 +156,19 @@ html, body {
             <div id="panel-trang-chu" class="tab-panel active">
                 <h2 class="section-title"><i class="fa-solid fa-fire-flame-curved"></i> Bài viết mới</h2>
                 <div class="news-list">
+                        <!-- Post: Gia Tri Thang Du -->
+                        <a href="/chinh-tri-kinh-te-thoi-su/gia-tri-thang-du" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-scale-balanced"></i> Kinh tế chính trị</span>
+                                <span class="news-time">26/10/2026</span>
+                            </div>
+                            <h3 class="news-heading">Giá Trị Thặng Dư: Chiếc Bánh Mì Mà Ông Chủ Luôn Ăn Phần Dày Nhất</h3>
+                            <p class="news-excerpt">Câu chuyện về một học thuyết bị yêu, bị ghét, bị tuyên bố đã chết nhiều lần, và vẫn cứ xuất hiện đều đặn trong mọi cuộc cãi nhau về tiền lương. Khám phá bản chất của lợi nhuận, bóc lột và giá trị lao động qua lăng kính kinh tế học sâu sắc.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc bài viết</span>
+                            </div>
+                        </a>
+
                         <!-- Post: Rung Mua Khoang Lang (Thu Vien) -->
                         <a href="/thu-vien/rung-mua-khoang-lang" class="news-card clickable-card">
                             <div class="news-meta">
@@ -526,6 +539,19 @@ html, body {
                 <div id="chinh-tri-kinh-te-thoi-su-list-view" class="sukien-view active">
                     <h2 class="section-title"><i class="fa-solid fa-scale-balanced"></i> Chính trị - Kinh tế - Thời sự</h2>
                     <div class="news-list">
+                        <!-- Post: Gia Tri Thang Du -->
+                        <a href="/chinh-tri-kinh-te-thoi-su/gia-tri-thang-du" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-scale-balanced"></i> Kinh tế chính trị</span>
+                                <span class="news-time">26/10/2026</span>
+                            </div>
+                            <h3 class="news-heading">Giá Trị Thặng Dư: Chiếc Bánh Mì Mà Ông Chủ Luôn Ăn Phần Dày Nhất</h3>
+                            <p class="news-excerpt">Câu chuyện về một học thuyết bị yêu, bị ghét, bị tuyên bố đã chết nhiều lần, và vẫn cứ xuất hiện đều đặn trong mọi cuộc cãi nhau về tiền lương. Khám phá bản chất của lợi nhuận, bóc lột và giá trị lao động qua lăng kính kinh tế học sâu sắc.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Đọc bài viết</span>
+                            </div>
+                        </a>
+
                         <!-- Post: Tu Duy Co Chu Dich -->
                         <a href="/chinh-tri-kinh-te-thoi-su/tu-duy-co-chu-dich" class="news-card clickable-card">
                             <div class="news-meta">
@@ -661,7 +687,469 @@ html, body {
                 <div id="chinh-tri-kinh-te-thoi-su-article-view" class="sukien-view">
                     <button class="back-to-list-btn" onclick="openPoliticsEconomyArticle('')"><i class="fa-solid fa-arrow-left"></i> Quay lại danh sách</button>
 
-                    <!-- ARTICLE PANEL: TU DUY CO CHU DICH -->
+                                        <!-- ARTICLE PANEL: GIA TRI THANG DU -->
+                    <div id="article-giatrithangdu-panel" class="sukien-article-panel giatrithangdu-body">
+<style>
+#article-giatrithangdu-panel {
+  --paper: #fdf6ec;
+  --ink: #2c1a0e;
+  --gold: #a07830;
+  --cream: #f6ead3;
+  --rule: #d9c7a3;
+  --soft: #6b5139;
+
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  font-size: 1.2rem;
+  line-height: 1.75;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+#article-giatrithangdu-panel * { box-sizing: border-box; }
+#article-giatrithangdu-panel .wrap { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.4rem 5rem; }
+#article-giatrithangdu-panel header.hero { text-align: center; padding-bottom: 2.2rem; border-bottom: 1px solid var(--rule); margin-bottom: 2.2rem; }
+#article-giatrithangdu-panel .kicker {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: .28em; text-transform: uppercase; color: var(--gold);
+  font-size: .95rem; font-weight: 600; margin: 0 0 1rem;
+}
+#article-giatrithangdu-panel h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700; font-size: clamp(2.2rem, 6vw, 3.5rem);
+  line-height: 1.12; margin: 0 0 1rem; letter-spacing: -.01em; color: var(--ink);
+}
+#article-giatrithangdu-panel .subtitle { font-style: italic; color: var(--soft); font-size: 1.25rem; margin: 0; }
+#article-giatrithangdu-panel .ornament { color: var(--gold); letter-spacing: .6em; margin: 1.4rem 0 0; font-size: 1rem; }
+#article-giatrithangdu-panel h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700; font-size: 2rem; line-height: 1.2;
+  margin: 3.2rem 0 .3rem; color: var(--ink);
+}
+#article-giatrithangdu-panel h2 .num { color: var(--gold); font-style: italic; margin-right: .4rem; }
+#article-giatrithangdu-panel h2::after { content: ""; display: block; width: 64px; height: 2px; background: var(--gold); margin-top: .6rem; }
+#article-giatrithangdu-panel h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700; font-size: 1.45rem; color: var(--gold);
+  margin: 2rem 0 .2rem;
+}
+#article-giatrithangdu-panel p { margin: 1rem 0; text-align: justify; hyphens: auto; }
+#article-giatrithangdu-panel .dropcap::first-letter {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700; color: var(--gold);
+  float: left; font-size: 4.6rem; line-height: .82;
+  padding: .35rem .6rem 0 0;
+}
+#article-giatrithangdu-panel blockquote {
+  margin: 1.8rem 0; padding: .4rem 0 .4rem 1.4rem;
+  border-left: 4px solid var(--gold);
+  font-style: italic; color: var(--soft); font-size: 1.25rem;
+}
+#article-giatrithangdu-panel blockquote cite { display: block; margin-top: .4rem; font-size: 1rem; font-style: normal; color: var(--gold); letter-spacing: .04em; }
+#article-giatrithangdu-panel .callout {
+  background: var(--cream);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 1.1rem 1.4rem; margin: 1.8rem 0;
+}
+#article-giatrithangdu-panel .callout .label {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 700; text-transform: uppercase; letter-spacing: .18em;
+  color: var(--gold); font-size: .9rem; display: block; margin-bottom: .3rem;
+}
+#article-giatrithangdu-panel .callout p { margin: .4rem 0; text-align: left; }
+#article-giatrithangdu-panel .formula {
+  text-align: center; font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.5rem; font-weight: 600; color: var(--ink);
+  margin: 1.2rem 0; letter-spacing: .03em;
+}
+#article-giatrithangdu-panel table {
+  width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 1.05rem;
+  background: var(--cream); border: 1px solid var(--rule);
+}
+#article-giatrithangdu-panel th, #article-giatrithangdu-panel td { padding: .55rem .7rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+#article-giatrithangdu-panel th {
+  font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.05rem;
+  color: var(--gold); letter-spacing: .06em; text-transform: uppercase; border-bottom: 2px solid var(--gold);
+}
+#article-giatrithangdu-panel .tablewrap { overflow-x: auto; margin: 1.5rem 0; }
+#article-giatrithangdu-panel .toc {
+  background: var(--cream); border: 1px solid var(--rule); border-radius: 4px;
+  padding: 1rem 1.4rem; margin: 0 0 1rem; font-size: 1.05rem;
+}
+#article-giatrithangdu-panel .toc strong { font-family: 'Cormorant Garamond', Georgia, serif; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); font-size: .9rem; }
+#article-giatrithangdu-panel .toc ol { margin: .5rem 0 0; padding-left: 1.4rem; }
+#article-giatrithangdu-panel .toc a { color: var(--ink); text-decoration: none; border-bottom: 1px dotted var(--gold); }
+#article-giatrithangdu-panel .toc a:hover { color: var(--gold); }
+#article-giatrithangdu-panel ul, #article-giatrithangdu-panel ol { padding-left: 1.4rem; }
+#article-giatrithangdu-panel li { margin: .35rem 0; }
+#article-giatrithangdu-panel li::marker { color: var(--gold); }
+#article-giatrithangdu-panel strong { font-weight: 600; }
+#article-giatrithangdu-panel em { color: var(--soft); }
+#article-giatrithangdu-panel .two { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+#article-giatrithangdu-panel .two > div { background: var(--cream); border: 1px solid var(--rule); border-radius: 4px; padding: .9rem 1.2rem; }
+#article-giatrithangdu-panel .two h4 { margin: .1rem 0 .4rem; font-family: 'Cormorant Garamond', Georgia, serif; color: var(--gold); font-size: 1.25rem; }
+#article-giatrithangdu-panel .two ul { margin: 0; }
+#article-giatrithangdu-panel footer { margin-top: 3.5rem; padding-top: 1.4rem; border-top: 1px solid var(--rule); font-size: 1rem; color: var(--soft); }
+#article-giatrithangdu-panel footer h3 { margin-top: 0; }
+@media (max-width: 640px) {
+  #article-giatrithangdu-panel { font-size: 1.1rem; }
+  #article-giatrithangdu-panel p { text-align: left; }
+  #article-giatrithangdu-panel .two { grid-template-columns: 1fr; }
+  #article-giatrithangdu-panel h2 { font-size: 1.7rem; }
+  #article-giatrithangdu-panel .wrap { padding: 1.5rem 1rem 3.5rem; }
+}
+</style>
+
+    <div style="padding: 14px 20px; background: #f6ead3; border-bottom: 1px solid #d9c7a3;">
+        <button class="back-btn" onclick="openPoliticsEconomyArticle('')" style="background: #fdf6ec; border: 1px solid #a07830; color: #2c1a0e; padding: 7px 16px; cursor: pointer; font-family: 'EB Garamond', Georgia, serif; font-size: 0.95rem; font-weight: 600; border-radius: 4px;">
+            <i class="fa-solid fa-arrow-left"></i> Quay láº¡i danh sÃ¡ch
+        </button>
+    </div>
+
+<div class="wrap">
+
+<header class="hero">
+  <p class="kicker">Tiểu luận kinh tế chính trị</p>
+  <h1>Giá trị thặng dư: Chiếc bánh mì mà ông chủ luôn ăn phần dày nhất</h1>
+  <p class="subtitle">Câu chuyện về một học thuyết bị yêu, bị ghét, bị tuyên bố đã chết nhiều lần, và vẫn cứ xuất hiện đều đặn trong mọi cuộc cãi nhau về tiền lương</p>
+  <p class="ornament">&#10086; &#10086; &#10086;</p>
+</header>
+
+<nav class="toc">
+  <strong>Lộ trình chuyến đi</strong>
+  <ol>
+    <li><a href="#s1">Mở màn: Ly trà sữa 35 nghìn và câu hỏi hóc búa</a></li>
+    <li><a href="#s2">Bối cảnh ra đời: Khi khói nhà máy che kín bầu trời</a></li>
+    <li><a href="#s3">Các bậc tiền bối và nguồn gốc tư tưởng</a></li>
+    <li><a href="#s4">Quá trình phát triển: Từ bản thảo bụi bặm đến tranh luận thế kỷ</a></li>
+    <li><a href="#s5">Nội dung cốt lõi, kèm ví dụ từng trường hợp</a></li>
+    <li><a href="#s6">Những người phản biện và cuộc đấu trí kéo dài hơn một thế kỷ</a></li>
+    <li><a href="#s7">Mối quan hệ với các học thuyết khác</a></li>
+    <li><a href="#s8">Chỗ nào đã vững, chỗ nào còn hở</a></li>
+    <li><a href="#s9">Ý nghĩa hôm nay và ai cần hiểu</a></li>
+    <li><a href="#s10">Lời kết</a></li>
+  </ol>
+</nav>
+
+<!-- 1 -->
+<h2 id="s1"><span class="num">I.</span>Mở màn: Ly trà sữa 35 nghìn và câu hỏi hóc búa</h2>
+
+<p class="dropcap">Hãy tưởng tượng bạn mở một quán trà sữa. Bạn thuê Lan pha chế, trả 8 giờ công một ngày. Nguyên liệu, ly, ống hút, tiền điện, hao mòn máy ép nắp, tất cả cộng lại là một khoản chi phí rõ ràng. Cuối ngày, bạn thu tiền, trừ hết mọi thứ, trừ cả lương Lan, và vẫn còn dư một ít bỏ túi. Câu hỏi nghe ngây thơ như trẻ lớp một: <em>khoản dư ấy từ đâu ra?</em></p>
+
+<p>Bạn sẽ nói: nhờ tôi khéo buôn bán, nhờ tôi có vốn, nhờ tôi chọn mặt bằng đẹp, nhờ tôi chịu rủi ro. Mỗi câu đều có phần đúng. Nhưng Karl Marx, một người đàn ông râu rậm, nợ tiền chủ nhà, ngồi cả đời trong thư viện Bảo tàng Anh, đã hỏi một câu khó chịu hơn: nếu cả nền kinh tế đều "buôn bán khéo" thì ai là người bị "mua rẻ" để cho tất cả mọi người cùng lãi? Và bài trả lời của ông là một trong những học thuyết gây nhiều tranh cãi nhất lịch sử kinh tế: <strong>học thuyết giá trị thặng dư</strong>.</p>
+
+<p>Bài này sẽ dẫn bạn đi qua học thuyết ấy theo kiểu tham quan bảo tàng có hướng dẫn viên hay đùa: bối cảnh ra đời, ai đóng góp gì, nội dung cốt lõi với số liệu cụ thể, ai phản biện, cái gì đứng vững, cái gì lung lay, và vì sao một học thuyết sinh ra từ thế kỷ 19 vẫn đáng đọc khi bạn đang cầm điện thoại kiểm tra đơn hàng giao đồ ăn.</p>
+
+<!-- 2 -->
+<h2 id="s2"><span class="num">II.</span>Bối cảnh ra đời: Khi khói nhà máy che kín bầu trời</h2>
+
+<p>Học thuyết không rơi từ trên trời xuống đầu một ông râu rậm. Nó là đứa con của một thời đại cụ thể: nước Anh và châu Âu giữa thế kỷ 19, lúc cách mạng công nghiệp biến làng quê thành thành phố, thợ thủ công thành công nhân, và đồng hồ nhà máy thành ông chủ thật sự của đời sống.</p>
+
+<h3>Một thế giới đảo lộn</h3>
+<ul>
+  <li><strong>Năng suất bùng nổ, đời sống công nhân không bùng theo.</strong> Máy hơi nước, máy dệt cơ khí làm của cải tăng vọt, nhưng ở các thành phố như Manchester, công nhân sống chen chúc, ngày làm việc kéo dài 12 đến 16 giờ, trẻ em đứng máy từ khi còn thấp hơn cái bàn.</li>
+  <li><strong>Khủng hoảng chu kỳ xuất hiện đều như hóa đơn điện.</strong> Hàng hóa ế thừa, nhà máy đóng cửa, công nhân thất nghiệp, trong khi kho đầy hàng. Các nhà kinh tế cổ điển giải thích rất khó: sản xuất nhiều thì phải giàu chứ?</li>
+  <li><strong>Phong trào công nhân trỗi dậy.</strong> Phong trào Hiến chương ở Anh, các cuộc nổi dậy của thợ dệt, cách mạng 1848 lan khắp châu Âu. Giai cấp công nhân bắt đầu đòi lời giải thích: sự giàu có này đi đâu?</li>
+  <li><strong>Luật lao động đầu tiên ra đời.</strong> Đạo luật Công xưởng của Anh từng bước hạn chế giờ làm của trẻ em, phụ nữ, đến Đạo luật Mười giờ năm 1847. Marx dùng rất nhiều tài liệu điều tra của thanh tra công xưởng làm bằng chứng, vì chính các quan chức Anh đã viết những báo cáo khiến ông không cần phải bịa thêm.</li>
+</ul>
+
+<blockquote>
+  Tư bản là lao động chết, chỉ sống được nhờ hút lao động sống như ma cà rồng, và hút càng nhiều thì sống càng khỏe.
+  <cite>Ý của Marx trong bộ Tư bản (diễn đạt lại), một hình ảnh khiến mọi bữa tiệc Halloween của các nhà kinh tế học trở nên rất ngượng</cite>
+</blockquote>
+
+<p>Marx sinh năm 1818 ở Trier (nước Đức ngày nay), học luật rồi chuyển sang triết học, làm báo, bị trục xuất khỏi hết nước này đến nước khác, và cuối cùng định cư ở London từ 1849. Người bạn đồng hành của ông là Friedrich Engels, con trai một chủ xưởng dệt, sống đời "kép": ban ngày quản lý xưởng của gia đình ở Manchester, ban đêm viết sách phê phán chính cái xưởng ấy. Engels vừa là nguồn cảm hứng, vừa là nguồn thông tin nội bộ, vừa là nhà tài trợ. Nếu không có Engels, nhiều khả năng bộ Tư bản đã không có tiền để viết xong. Một sự mỉa mai đẹp: học thuyết phê phán tư bản được nuôi bằng lợi nhuận của tư bản.</p>
+
+<div class="callout">
+  <span class="label">Ghi chú nhỏ</span>
+  <p>Năm 1845, Engels xuất bản cuốn <em>Tình cảnh giai cấp công nhân Anh</em>, mô tả tận mắt đời sống ở các khu ổ chuột công nghiệp. Cuốn sách này chưa có khái niệm giá trị thặng dư, nhưng nó là "bản phóng sự hiện trường" đặt nền cho câu hỏi: vì sao sản xuất giàu thế mà người sản xuất nghèo thế?</p>
+</div>
+
+<!-- 3 -->
+<h2 id="s3"><span class="num">III.</span>Các bậc tiền bối và nguồn gốc tư tưởng</h2>
+
+<p>Marx tự nhận mình đứng trên vai người khổng lồ, dù là loại khổng lồ mà ông thích vừa đứng vừa phê bình. Có thể kể ra những cột mốc chính.</p>
+
+<table>
+<thead><tr><th>Nhân vật</th><th>Đóng góp</th><th>Phần Marx lấy / phần Marx phê</th></tr></thead>
+<tbody>
+<tr><td><strong>François Quesnay</strong> (phái Trọng nông, 1758)</td><td>Cho rằng sản phẩm thuần (excédent) sinh ra từ nông nghiệp và vẽ "Biểu kinh tế" mô tả dòng chảy của cải.</td><td>Marx khen ý tưởng nhìn nền kinh tế như một vòng tuần hoàn; chê việc chỉ coi nông nghiệp là nơi tạo ra thặng dư.</td></tr>
+<tr><td><strong>Adam Smith</strong> (1776)</td><td>Chỉ ra lao động là nguồn gốc của của cải; thấy lợi nhuận và địa tô là "khoản khấu trừ" từ sản phẩm lao động.</td><td>Marx lấy cái nhìn lao động là nguồn của giá trị; chê Smith lẫn lộn nhiều định nghĩa về giá trị.</td></tr>
+<tr><td><strong>David Ricardo</strong> (1817)</td><td>Phát triển nhất quán thuyết giá trị lao động; chỉ ra xung đột lợi ích giữa tiền lương và lợi nhuận.</td><td>Marx coi Ricardo là điểm đỉnh của kinh tế học cổ điển; nhưng cho rằng ông không giải thích được lợi nhuận từ đâu mà không đụng vào mâu thuẫn.</td></tr>
+<tr><td><strong>Các nhà "xã hội chủ nghĩa Ricardo"</strong> (Hodgskin, Thompson, Bray) và <strong>Proudhon</strong></td><td>Dùng thuyết giá trị lao động để kết luận công nhân bị tước đoạt một phần sản phẩm.</td><td>Marx ủng hộ hướng nhìn nhưng chê họ thiếu cơ chế giải thích bằng quy luật kinh tế.</td></tr>
+<tr><td><strong>Saint-Simon, Fourier, Owen</strong> (xã hội chủ nghĩa không tưởng)</td><td>Phê phán bất công xã hội, mơ về xã hội hợp tác.</td><td>Marx coi họ có tâm huyết nhưng thiếu phân tích khoa học về cách tư bản vận hành.</td></tr>
+</tbody>
+</table>
+
+<p>Điểm mấu chốt: Smith và Ricardo đều biết lao động tạo ra giá trị, nhưng khi hỏi "vậy lợi nhuận của nhà tư bản đến từ đâu", họ lúng túng như học sinh bị gọi trả bài chưa thuộc. Nếu trao đổi ngang giá, ai lấy đâu ra phần dư? Nếu trao đổi không ngang giá, quy luật giá trị đi đâu? Marx nhìn thấy khe hở này và bước vào đó với cây đèn pin của mình.</p>
+
+<!-- 4 -->
+<h2 id="s4"><span class="num">IV.</span>Quá trình phát triển: Từ bản thảo bụi bặm đến tranh luận thế kỷ</h2>
+
+<h3>Giai đoạn 1: Marx tự mài gươm (1850 đến 1867)</h3>
+<p>Từ giữa thập niên 1850, Marx ngày ngày ngồi đọc sách ở Bảo tàng Anh. Ông viết các bản thảo kinh tế 1857-1858 (thường gọi là <em>Grundrisse</em>), rồi cuốn <em>Góp phần phê phán khoa kinh tế chính trị</em> (1859), rồi bộ bản thảo đồ sộ 1861-1863. Phần phê phán các nhà kinh tế đi trước trong bản thảo này về sau được Karl Kautsky biên tập và xuất bản với tên <em>Các học thuyết về giá trị thặng dư</em> (1905 đến 1910). Năm 1867, tập I của bộ <em>Tư bản</em> ra đời, trong đó học thuyết giá trị thặng dư được trình bày hoàn chỉnh nhất.</p>
+
+<p>Đóng góp quyết định của Marx, theo chính ông và Engels, là phân biệt <strong>lao động</strong> và <strong>sức lao động</strong>. Nhà tư bản không mua "lao động", ông ta mua <em>khả năng lao động</em> trong một khoảng thời gian, như thuê một chiếc máy nhưng là người. Hàng hóa đặc biệt này khi sử dụng lại tạo ra giá trị lớn hơn chính giá trị của nó. Ở bài điếu văn bên mộ Marx năm 1883, Engels gọi hai phát kiến lớn của bạn mình là quan niệm duy vật về lịch sử và học thuyết giá trị thặng dư.</p>
+
+<h3>Giai đoạn 2: Engels dọn đống bản thảo (1883 đến 1894)</h3>
+<p>Marx mất năm 1883 khi tập II và III chưa hoàn thiện. Engels ngồi giải mã chữ viết tay vốn khét tiếng khó đọc của bạn mình, xuất bản tập II (1885) và tập III (1894). Chính tập III chứa phần "chuyển hóa giá trị thành giá cả sản xuất", mảnh đất mà về sau các nhà phê bình đào bới nhiều nhất.</p>
+
+<h3>Giai đoạn 3: Kẻ kế thừa và kẻ vá víu (1900 đến 1940)</h3>
+<ul>
+  <li><strong>Rudolf Hilferding</strong> viết <em>Tư bản tài chính</em> (1910), mở rộng phân tích sang vai trò ngân hàng và độc quyền.</li>
+  <li><strong>Rosa Luxemburg</strong> viết <em>Sự tích lũy tư bản</em> (1913), đặt câu hỏi: giá trị thặng dư rồi bán cho ai nếu công nhân không đủ tiền mua? Bà lý giải bằng thị trường bên ngoài tư bản chủ nghĩa.</li>
+  <li><strong>V. I. Lenin</strong> viết <em>Chủ nghĩa đế quốc, giai đoạn tột cùng của chủ nghĩa tư bản</em> (1916), vận dụng học thuyết để giải thích xuất khẩu tư bản và tranh giành thuộc địa.</li>
+  <li><strong>Ladislaus von Bortkiewicz</strong> (1907) đưa ra lời giải toán học cho bài toán chuyển hóa giá trị thành giá cả, đồng thời chỉ ra Marx chưa chuyển hóa các yếu tố đầu vào.</li>
+</ul>
+
+<h3>Giai đoạn 4: Hậu chiến, toán học hóa và đại tranh luận (1940 đến nay)</h3>
+<ul>
+  <li><strong>Paul Sweezy</strong> (1942) giới thiệu Marx cho độc giả Mỹ có học; cùng <strong>Paul Baran</strong> viết <em>Tư bản độc quyền</em> (1966), đưa khái niệm "thặng dư kinh tế" vào tư bản độc quyền.</li>
+  <li><strong>Piero Sraffa</strong> (1960), <strong>Nobuo Okishio</strong> (1961), <strong>Ian Steedman</strong> (1977) dùng mô hình toán để chất vấn: nếu giá và lợi nhuận đã giải thích được bằng chi phí vật chất, liệu giá trị lao động có cần thiết?</li>
+  <li><strong>John Roemer</strong> (1982) phát triển lý thuyết bóc lột dựa trên phân phối tài sản, không cần thuyết giá trị lao động.</li>
+  <li>Các trường phái giải thích lại Marx: "cách diễn giải mới" của Duménil và Foley, cách diễn giải "một hệ thống theo thời gian" (TSSI) của Kliman, Freeman, Carchedi, Moseley, Mohun và đồng sự, tranh luận rằng nghịch lý chuyển hóa nảy sinh từ cách đọc Marx sai chứ không phải từ Marx.</li>
+</ul>
+
+<!-- 5 -->
+<h2 id="s5"><span class="num">V.</span>Nội dung cốt lõi, kèm ví dụ từng trường hợp</h2>
+
+<p>Đây là phần "ruột bánh mì". Chúng ta sẽ mổ xẻ từng mảnh, mỗi mảnh một ví dụ để khỏi ngủ gật.</p>
+
+<h3>1. Hàng hóa, giá trị và lao động xã hội cần thiết</h3>
+<p>Marx khởi đầu bằng thứ nhàm chán nhất: một món hàng. Hàng hóa có hai mặt: <strong>giá trị sử dụng</strong> (nó dùng để làm gì) và <strong>giá trị</strong> (kết tinh bao nhiêu lao động xã hội). Lượng giá trị được đo bằng <em>thời gian lao động xã hội cần thiết</em>: thời gian để sản xuất món hàng ấy với kỹ thuật bình thường, trình độ bình thường của xã hội.</p>
+<div class="callout">
+  <span class="label">Ví dụ</span>
+  <p>Hai bạn cùng làm áo thun. Bạn A tỉ mỉ, ngồi may một chiếc mất 10 giờ vì... vừa may vừa xem phim. Bạn B may một chiếc mất 2 giờ, đúng mức trung bình của ngành. Áo của A có "giá trị" bằng áo của B, không phải gấp năm lần. Thị trường không trả tiền cho sự chậm chạp, dù bạn rất có tâm.</p>
+</div>
+
+<h3>2. Công thức chung của tư bản và mâu thuẫn của nó</h3>
+<p>Người bán hàng bình thường làm vòng <strong>H - T - H</strong> (bán hàng lấy tiền, dùng tiền mua hàng khác để dùng). Nhà tư bản làm vòng ngược: <strong>T - H - T'</strong>, tức bỏ tiền mua hàng rồi bán lại để thu về nhiều tiền hơn, với T' = T + ΔT. Phần ΔT chính là giá trị thặng dư.</p>
+<div class="formula">T &rarr; H &rarr; T' (T' = T + ΔT)</div>
+<p>Rắc rối ở đây. Nếu cứ mua rẻ bán đắt, người này lãi thì người kia thiệt, tổng của cải xã hội không tăng. Ví dụ cả làng đồng loạt tăng giá bán thêm 10 phần trăm: ai cũng lãi 10 phần trăm khi bán, rồi ai cũng mất 10 phần trăm khi mua. Trên giấy ai cũng giàu, đi chợ thì ai cũng nghèo. Vậy thặng dư phải sinh ra ở <em>nơi nào đó không phải là lưu thông đơn thuần</em>. Marx gọi đây là bài toán "Hic Rhodus, hic salta": nhảy ngay tại đây, cứ đừng đổ cho trò xiếc.</p>
+
+<h3>3. Hàng hóa sức lao động: người hùng bí mật</h3>
+<p>Câu trả lời của Marx là hàng hóa sức lao động. Giá trị của nó tính bằng chi phí để nuôi sống và tái tạo người lao động (ăn, ở, mặc, học hành, nuôi con). Nhưng khi nhà tư bản sử dụng nó trong ngày làm việc, nó tạo ra giá trị mới lớn hơn giá trị của chính nó. Khác biệt đó là giá trị thặng dư, và nó <em>không vi phạm</em> nguyên tắc trao đổi ngang giá: nhà tư bản mua sức lao động đúng giá trị, rồi hưởng giá trị sử dụng của nó.</p>
+
+<div class="callout">
+  <span class="label">Ví dụ bằng số: xưởng may Sông Hồng</span>
+  <p>Xưởng có 10 công nhân, mỗi người làm 8 giờ một ngày, mỗi giờ tạo ra 100.000 đồng giá trị mới. Mỗi người nhận lương ngày 400.000 đồng.</p>
+  <p>Trong 8 giờ, mỗi người tạo ra 800.000 đồng. Chỉ cần <strong>4 giờ đầu</strong> (lao động tất yếu) là đã "hoàn vốn" cho khoản lương 400.000. <strong>4 giờ sau</strong> (lao động thặng dư) làm ra 400.000 đồng khác, và khoản này thuộc về chủ xưởng.</p>
+  <p>Nhân cho 10 người: v = 4.000.000; m = 4.000.000 đồng mỗi ngày. Nếu bạn là công nhân, bạn có thể nói đùa với bạn bè rằng nửa ngày làm việc của mình là "tình nguyện". Marx sẽ nói: nó được tính bằng tiền, nhưng không được trả bằng tiền.</p>
+</div>
+
+<h3>4. Tư bản bất biến và tư bản khả biến</h3>
+<p>Marx chia tư bản thành hai phần. <strong>Tư bản bất biến (c)</strong> gồm máy móc, nguyên liệu: chúng chỉ <em>chuyển</em> giá trị vào sản phẩm, không tạo giá trị mới. <strong>Tư bản khả biến (v)</strong> là phần tiền trả lương: nó biến thành sức lao động, tạo ra giá trị lớn hơn chính nó. Từ đó:</p>
+<div class="formula">G = c + v + m</div>
+<div class="callout">
+  <span class="label">Ví dụ: xưởng may Sông Hồng, tiếp</span>
+  <p>Nguyên liệu và khấu hao máy móc mỗi ngày: c = 6.000.000 đồng. Tổng giá trị sản phẩm: 6.000.000 + 4.000.000 + 4.000.000 = <strong>14.000.000 đồng</strong>. Chiếc máy may rất giỏi, nhưng nó chỉ trao lại đúng phần giá trị đã bị hao mòn. Nó không đòi lương, nhưng nó cũng không đẻ ra thặng dư. Thặng dư chỉ đến từ sức người.</p>
+</div>
+
+<h3>5. Tỷ suất và khối lượng giá trị thặng dư</h3>
+<p><strong>Tỷ suất giá trị thặng dư</strong> m' = m / v, đo mức độ bóc lột: ở xưởng may, m' = 4.000.000 / 4.000.000 = 100 phần trăm. <strong>Khối lượng giá trị thặng dư</strong> M = m' × V (V là tổng tư bản khả biến). Đừng nhầm với <strong>tỷ suất lợi nhuận</strong> p' = m / (c + v) = 4.000.000 / 10.000.000 = 40 phần trăm. Một cái nhìn từ góc công nhân, một cái nhìn từ góc chủ vốn, và hai góc này hiếm khi cùng ngắm một bức tranh.</p>
+
+<h3>6. Ba cách chủ vốn "ép" thêm thặng dư</h3>
+
+<h4 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;margin:1.4rem 0 .1rem;">a) Giá trị thặng dư tuyệt đối: kéo dài ngày làm việc</h4>
+<p>Cách thô sơ nhất: giữ nguyên lương, bắt làm thêm giờ. Nếu xưởng may kéo ngày làm từ 8 lên 10 giờ nhưng lương vẫn 400.000, mỗi người tạo ra 1.000.000 đồng giá trị mới, m tăng từ 400.000 lên 600.000. Tỷ suất m' tăng từ 100 phần trăm lên 150 phần trăm. Marx dành nhiều trang kể lịch sử đấu tranh về độ dài ngày làm việc, từ Đạo luật Công xưởng đến phong trào đòi ngày làm 8 giờ.</p>
+
+<h4 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;margin:1.4rem 0 .1rem;">b) Giá trị thặng dư tương đối: tăng năng suất, hạ giá "giỏ hàng" của công nhân</h4>
+<p>Khi ngày làm việc không thể kéo thêm, cách thứ hai là làm giảm thời gian lao động tất yếu. Giả sử công nghệ mới khiến giá cơm, quần áo, tiền điện, vốn là các thứ công nhân cần để sống, rẻ đi, giá trị sức lao động giảm từ 400.000 xuống 300.000 đồng. Ngày làm vẫn 8 giờ, mỗi người vẫn tạo 800.000 đồng, nhưng m tăng lên 500.000, tỷ suất m' tăng từ 100 phần trăm lên khoảng 167 phần trăm. Công nhân vẫn ăn đủ, nhưng thời gian làm cho mình rút từ 4 giờ xuống 3 giờ, và 5 giờ còn lại làm cho chủ. Đây là lý do một xã hội đạt "năng suất tăng" mà cảm giác "vẫn không dư dả", đúng ra là lời giải thích một phần.</p>
+
+<h4 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.25rem;margin:1.4rem 0 .1rem;">c) Giá trị thặng dư siêu ngạch: kẻ đi trước ăn khoản tiền thưởng</h4>
+<p>Một doanh nghiệp áp dụng công nghệ mới sớm hơn đối thủ, làm giá trị cá biệt của sản phẩm thấp hơn giá trị xã hội. Giả sử giá trị xã hội của một chiếc áo là 100.000 đồng, xưởng tiên phong làm ra với chi phí tương ứng chỉ 80.000 đồng nhưng bán giá thị trường 100.000. Mỗi áo thu thêm 20.000 đồng; 500 áo mỗi ngày là 10.000.000 đồng "tiền thưởng nhờ đi trước". Phần thưởng này chỉ tạm thời: khi đối thủ bắt chước, giá trị xã hội giảm, lợi thế biến mất, và cả ngành lại phải chạy nhanh hơn. Marx coi đây là động lực khiến chủ nghĩa tư bản mê công nghệ như mèo mê cá khô.</p>
+
+<h3>7. Tích lũy tư bản: ăn xong rồi mua thêm nồi</h3>
+<p>Giá trị thặng dư không chỉ để chủ vốn tiêu xài. Một phần được tái đầu tư để mở rộng sản xuất, gọi là <strong>tích lũy tư bản</strong>. Vì sao? Vì <em>cạnh tranh</em> ép buộc, không phải vì ông chủ tốt bụng hay tham lam hơn người khác. Ở xưởng may: lợi nhuận 4 triệu, chủ dùng 1 triệu chi tiêu cá nhân, 3 triệu mua máy mới và thuê thêm người. Nếu ông không làm, hàng xóm sẽ làm, và ông bị nuốt.</p>
+<p>Quá trình này kéo theo: (1) <strong>tích tụ và tập trung tư bản</strong>, tiệm nhỏ bị chuỗi lớn nuốt; (2) <strong>cấu tạo hữu cơ tư bản</strong> (tỷ lệ c/v) tăng, máy nhiều người ít; (3) <strong>"đội quân công nghiệp dự bị"</strong>, tức lượng người thất nghiệp luôn sẵn sàng thay thế người đang làm, giúp kìm tiền lương xuống. Câu hỏi "tôi có bị thay bằng máy không" chính là hậu duệ của đoạn này.</p>
+
+<h3>8. Thặng dư đi đâu: lợi nhuận, lợi tức, địa tô</h3>
+<p>Thặng dư sau khi tạo ra không đứng yên. Nó bị "xẻ" cho nhiều bên. Nhà tư bản công nghiệp giữ <strong>lợi nhuận</strong>, thương nhân nhận <strong>lợi nhuận thương nghiệp</strong>, ngân hàng nhận <strong>lợi tức</strong>, chủ đất nhận <strong>địa tô</strong>. Nói theo ngôn ngữ đời thường: chủ quán cà phê làm ra phần thặng dư, rồi chia cho chủ nhà cho thuê mặt bằng, ngân hàng cho vay vốn, sàn thương mại điện tử thu phí. Sau cùng chủ quán nhìn mình giống người chia bánh sinh nhật hơn là người ăn bánh.</p>
+
+<h3>9. Từ giá trị sang giá cả sản xuất: lợi nhuận bình quân</h3>
+<p>Nhà tư bản không quan tâm ngành nào có nhiều công nhân, họ chỉ chạy theo nơi lợi nhuận cao. Vốn chảy giữa các ngành làm tỷ suất lợi nhuận hướng về mức bình quân. Ví dụ cổ điển: ba ngành, mỗi ngành vốn 100, tỷ suất giá trị thặng dư đều 100 phần trăm.</p>
+
+<div class="tablewrap">
+<table>
+<thead><tr><th>Ngành</th><th>c + v</th><th>m</th><th>Giá trị</th><th>Giá cả sản xuất (vốn + 30%)</th><th>So với giá trị</th></tr></thead>
+<tbody>
+<tr><td>A (máy nhiều, người ít)</td><td>80 + 20</td><td>20</td><td>120</td><td>130</td><td>Bán cao hơn giá trị</td></tr>
+<tr><td>B (trung bình)</td><td>70 + 30</td><td>30</td><td>130</td><td>130</td><td>Bằng giá trị</td></tr>
+<tr><td>C (máy ít, người nhiều)</td><td>60 + 40</td><td>40</td><td>140</td><td>130</td><td>Bán thấp hơn giá trị</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Tổng m = 90 trên tổng vốn 300, nên tỷ suất lợi nhuận bình quân là 30 phần trăm. Tổng giá trị (390) bằng tổng giá cả sản xuất (390). Marx muốn nói: thặng dư được "chia lại" giữa các ngành chứ không biến mất. Đây cũng là chỗ khởi điểm của cuộc tranh luận về bài toán chuyển hóa mà chúng ta gặp ở phần sau.</p>
+
+<h3>10. Xu hướng tỷ suất lợi nhuận giảm</h3>
+<p>Khi máy móc tăng nhanh hơn lao động sống, tức c/v tăng, tỷ suất lợi nhuận p' = m' / (c/v + 1) có xu hướng giảm. Nếu m' = 100 phần trăm: khi c/v = 1 thì p' = 50 phần trăm; khi c/v = 4 thì p' còn 20 phần trăm. Marx nêu cả các yếu tố đối kháng (tăng m', rẻ hóa vật tư, thương mại quốc tế...) nên gọi là "xu hướng", không phải định luật sắt. Dẫu vậy, đây là phần bị tranh luận nặng nhất về mặt thực nghiệm.</p>
+
+<!-- 6 -->
+<h2 id="s6"><span class="num">VI.</span>Những người phản biện và cuộc đấu trí kéo dài hơn một thế kỷ</h2>
+
+<p>Nếu học thuyết là một nhà hàng, thì chắc chắn đây là nhà hàng có quầy đánh giá một sao lẫn năm sao dài nhất lịch sử kinh tế học.</p>
+
+<h3>Eugen von Böhm-Bawerk: Người ngồi ở hàng ghế đối diện</h3>
+<p>Nhà kinh tế người Áo thuộc trường phái giá trị chủ quan, theo các nghiên cứu hồi cứu, đã công kích từ rất sớm. Ông phê bình lý thuyết giá trị và thặng dư của Marx trong bộ <em>Tư bản và lãi suất</em> (1884), rồi viết bài tổng kết nổi tiếng <em>Karl Marx và sự kết thúc hệ thống của ông</em> (1896) sau khi tập III ra đời. Hai luận điểm chính:</p>
+<ul>
+  <li><strong>Tập I và tập III mâu thuẫn nhau.</strong> Tập I nói giá cả xoay quanh giá trị, tức là lượng lao động; tập III nói hàng hóa bán theo giá cả sản xuất, khác giá trị. Theo ông, Marx hứa giải quyết mâu thuẫn rồi không giải quyết nổi.</li>
+  <li><strong>Lợi nhuận và lãi có cách giải thích khác.</strong> Với ông, lãi suất sinh ra từ sự ưu tiên hiện tại hơn tương lai (thiên hướng thời gian), không cần dựa vào lao động bị chiếm đoạt.</li>
+</ul>
+
+<blockquote>
+  Nếu bạn cho rằng giá trị là lao động đóng băng, vậy cái bánh kem này đóng băng ở độ nào thì ngon?
+  <cite>Cách diễn đạt đùa của người viết bài này cho tinh thần của cuộc đối đáp giữa hai trường phái giá trị khách quan và chủ quan</cite>
+</blockquote>
+
+<h3>Phản công từ phía những người ủng hộ</h3>
+<p>Rudolf Hilferding trả lời Böhm-Bawerk ngay từ 1904 trong bài <em>Sự phê phán của Böhm-Bawerk đối với Marx</em>, và Nikolai Bukharin viết <em>Lý thuyết kinh tế của giai cấp ăn bám</em> (viết 1914) nhằm phê phán thuyết hữu dụng cận biên. Chủ đề họ nhấn mạnh: Böhm-Bawerk đã đọc sai mục đích của Marx. Marx không chỉ muốn giải thích từng giá cả đơn lẻ, mà muốn giải thích tổng thặng dư của xã hội và cách nó phân chia. Về sau, các nhà nghiên cứu hiện đại còn chỉ ra điều thú vị: tập III thật ra được Marx soạn thảo trước khi tập I xuất bản, nên nói Marx "bỏ rơi" tập I là một cách kể hơi vội.</p>
+
+<h3>Bortkiewicz, Samuelson, Sraffa: Cuộc tranh luận chuyển sang toán học</h3>
+<ul>
+  <li><strong>Bortkiewicz (1907)</strong> chỉ ra rằng Marx chuyển giá trị sang giá cả cho đầu ra nhưng để nguyên đầu vào theo giá trị. Ông đề xuất lời giải chặt chẽ hơn. Lưu ý: phê bình của ông khác bản chất so với Böhm-Bawerk, vì ông coi bài toán chuyển hóa đáng được giải chứ không phải để bác bỏ.</li>
+  <li><strong>Paul Samuelson (1971)</strong> cho rằng quy trình chuyển hóa giống như "xóa bảng, viết lại" một hệ thống này bằng hệ thống khác, nên giá trị lao động là một "đường vòng không cần thiết".</li>
+  <li><strong>Steedman (1977)</strong>, dựa trên Sraffa, cho rằng chỉ cần dữ liệu kỹ thuật và tiền lương thực tế là xác định được giá cả và lợi nhuận, không cần lượng lao động.</li>
+  <li><strong>Okishio (1961)</strong> chứng minh rằng nếu nhà tư bản chọn kỹ thuật hạ chi phí và tiền lương thực tế không đổi thì tỷ suất lợi nhuận <em>không</em> giảm. Điều này chạm trực tiếp vào xu hướng tỷ suất lợi nhuận giảm.</li>
+  <li><strong>John Roemer (1982)</strong> chỉ ra rằng bóc lột vẫn có thể giải thích bằng bất bình đẳng sở hữu tài sản mà không cần thuyết giá trị lao động.</li>
+</ul>
+
+<p>Các trường phái giải thích lại Marx (như TSSI) đáp lại rằng nghịch lý biến mất nếu xem đầu vào và đầu ra diễn ra theo trình tự thời gian chứ không đồng thời. Các bên vẫn chưa nhất trí. Chuyện này giống một trận cờ mà cả hai bên đều chắc mình chiếu hết, chỉ khác là bàn cờ vẫn còn trên bàn sau 130 năm.</p>
+
+<h3>Những phản biện "kiểu đời thường"</h3>
+<ul>
+  <li><strong>Vai trò của quản lý, đổi mới sáng tạo và rủi ro.</strong> Schumpeter, Knight và nhiều nhà kinh tế khác cho rằng lợi nhuận một phần là phần thưởng cho đổi mới và gánh chịu bất định. Người ủng hộ Marx đáp rằng lao động quản lý vẫn được tính là lao động, còn phần "thưởng cho sở hữu" mới là thặng dư.</li>
+  <li><strong>Tiền lương thực tế ở các nước phát triển đã tăng mạnh.</strong> Một số dự đoán của thế kỷ 19 về bần cùng hóa không diễn ra theo cách ban đầu được hiểu; người bảo vệ Marx nói rằng điều cốt lõi là tương quan giữa lương và thặng dư, không phải mức tuyệt đối.</li>
+  <li><strong>Kinh tế dịch vụ và tri thức.</strong> Một phần mềm sao chép với chi phí gần bằng 0 thì "thời gian lao động xã hội cần thiết" để làm ra bản sao thứ triệu là bao nhiêu? Đây là thử thách thật sự cho việc đo giá trị.</li>
+</ul>
+
+<!-- 7 -->
+<h2 id="s7"><span class="num">VII.</span>Mối quan hệ với các học thuyết khác</h2>
+
+<p>Học thuyết giá trị thặng dư không sống một mình. Nó giống một nhân vật trong tiểu thuyết nhiều tập, có bạn bè, họ hàng, và đối thủ đáng gờm.</p>
+
+<div class="two">
+  <div>
+    <h4>Họ hàng và đồng minh</h4>
+    <ul>
+      <li><strong>Thuyết giá trị lao động</strong> (Petty, Smith, Ricardo): nền móng trực tiếp.</li>
+      <li><strong>Chủ nghĩa duy vật lịch sử:</strong> khung lý giải vì sao quan hệ sản xuất quyết định cấu trúc xã hội.</li>
+      <li><strong>Lý thuyết về tha hóa</strong> (Bản thảo kinh tế-triết học 1844): bóc lột không chỉ là thiếu tiền mà còn là mất kiểm soát sản phẩm lao động.</li>
+      <li><strong>Lý thuyết khủng hoảng và tái sản xuất mở rộng:</strong> giải thích vì sao thặng dư không luôn "bán hết".</li>
+      <li><strong>Lý thuyết đế quốc</strong> (Hilferding, Luxemburg, Lenin): mở rộng sang quy mô thế giới.</li>
+      <li><strong>Lý thuyết thặng dư kinh tế</strong> (Baran, Sweezy).</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Đối thủ và đối thoại viên</h4>
+    <ul>
+      <li><strong>Cách mạng cận biên</strong> (Menger, Jevons, Walras, 1870 đến 1874): giá trị đến từ độ hữu dụng chủ quan.</li>
+      <li><strong>Lý thuyết "nhịn tiêu dùng" và thiên hướng thời gian</strong> (Senior, Böhm-Bawerk): lãi là phần thưởng chờ đợi.</li>
+      <li><strong>Schumpeter:</strong> lợi nhuận từ đổi mới và doanh nhân, đồng thời lại cũng thừa nhận sức mạnh "hủy diệt sáng tạo" của tư bản.</li>
+      <li><strong>Keynes</strong> (1936): nhấn mạnh cầu hiệu dụng, gần với nỗi lo "thặng dư bán cho ai" nhưng không dùng khung giá trị lao động.</li>
+      <li><strong>Sraffa, Roemer:</strong> vừa kế thừa vừa chất vấn.</li>
+      <li><strong>Piketty</strong> (2013): bất bình đẳng do lợi suất vốn lớn hơn tăng trưởng, một lối đi khác để tới câu hỏi tương tự.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout">
+  <span class="label">Điểm cần nhớ</span>
+  <p>Ngay cả những người không đồng ý với thuyết giá trị lao động thường vẫn dùng ngôn ngữ phân phối giữa tiền lương và lợi nhuận, thứ mà Ricardo và Marx đã đặt ở trung tâm. Hạch toán quốc gia hiện đại chia thu nhập quốc dân thành thu nhập từ lao động và thu nhập từ vốn, một cách chia mà Marx chắc sẽ nhận ra ngay.</p>
+</div>
+
+<!-- 8 -->
+<h2 id="s8"><span class="num">VIII.</span>Chỗ nào đã vững, chỗ nào còn hở</h2>
+
+<div class="tablewrap">
+<table>
+<thead><tr><th>Phần tương đối hoàn thiện, còn sức sống</th><th>Phần còn hạn chế, đang tranh cãi</th></tr></thead>
+<tbody>
+<tr>
+  <td>Phân biệt <strong>lao động</strong> và <strong>sức lao động</strong>: một cú tách khái niệm thông minh, giúp giải thích vì sao hợp đồng lao động "tự nguyện, ngang giá" vẫn có thể che một quan hệ bất cân xứng.</td>
+  <td><strong>Bài toán chuyển hóa:</strong> tranh luận chưa ngã ngũ. Có lời giải toán học dưới các giả định nhất định, nhưng nhiều nhà kinh tế vẫn coi lượng lao động là không cần thiết.</td>
+</tr>
+<tr>
+  <td>Chỉ ra <strong>động lực tích lũy do cạnh tranh</strong>: vì sao doanh nghiệp liên tục đầu tư, đổi mới, mở rộng, ngay cả khi chủ muốn nghỉ ngơi.</td>
+  <td><strong>Đo lường giá trị:</strong> thời gian lao động xã hội cần thiết khó quan sát thực nghiệm; quy lao động phức tạp về lao động giản đơn là phần nhiều tranh cãi.</td>
+</tr>
+<tr>
+  <td>Giải thích vì sao <strong>độ dài ngày làm việc</strong> và <strong>cường độ lao động</strong> là chiến trường kinh tế thật sự, soi sáng lịch sử luật lao động.</td>
+  <td><strong>Dự báo:</strong> xu hướng tỷ suất lợi nhuận giảm, bần cùng hóa, tập trung tư bản dẫn tới sụp đổ chưa được kiểm chứng đồng đều trong thực tế; nhiều yếu tố đối kháng mạnh hơn kỳ vọng.</td>
+</tr>
+<tr>
+  <td>Cách nhìn <strong>lợi nhuận, lợi tức, địa tô là các hình thức chia thặng dư</strong> vẫn là một khung phân tích hữu ích.</td>
+  <td><strong>Vai trò doanh nhân, quản lý, rủi ro, tri thức</strong> bị đánh giá thấp hoặc diễn giải chưa đủ sức thuyết phục đối với nhiều nhà kinh tế.</td>
+</tr>
+<tr>
+  <td>Giải thích <strong>khủng hoảng chu kỳ</strong> và <strong>thất nghiệp</strong> như đặc tính nội tại thay vì tai nạn hy hữu.</td>
+  <td><strong>Kinh tế số, dịch vụ, sản phẩm có chi phí biên gần bằng 0:</strong> khung giá trị lao động gặp thách thức khi áp dụng.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>Một cách đánh giá công bằng: học thuyết giá trị thặng dư mạnh ở vai trò <em>khung câu hỏi</em> (lợi nhuận đến từ đâu, ai nắm quyền với thành quả lao động, vì sao tích lũy không ngừng) và yếu hơn ở vai trò <em>công cụ dự báo giá cả</em>. Rất nhiều người không bao giờ đồng ý với đáp án của Marx, nhưng vẫn thấy câu hỏi của ông khó lờ đi.</p>
+
+<!-- 9 -->
+<h2 id="s9"><span class="num">IX.</span>Ý nghĩa hôm nay và ai cần hiểu</h2>
+
+<h3>Ba cảnh đời thường soi vào học thuyết</h3>
+<ul>
+  <li><strong>Kinh tế nền tảng.</strong> Một tài xế công nghệ chạy 10 giờ mỗi ngày, nền tảng thu phần trăm trên mỗi cuốc. Ai là chủ công cụ, ai là người trả chi phí xăng xe, bảo hiểm, thời gian chờ? Dù bạn gọi đó là "đối tác" hay "người lao động", cuộc tranh luận về việc <em>phần dư được chia thế nào</em> vẫn là câu hỏi cũ trong bộ áo mới.</li>
+  <li><strong>Chuỗi giá trị toàn cầu.</strong> Trong ngành giày dép và may mặc, khâu gia công thường nhận một phần nhỏ giá trị cuối cùng, còn thiết kế, thương hiệu, phân phối nhận phần lớn. "Đường cong nụ cười" của Stan Shih (1992) mô tả điều này: hai đầu cao, giữa thấp. Một đôi giày bán ở nước ngoài với giá cao hơn nhiều lần lương công nhân làm ra nó, và câu hỏi "phần chênh lệch thuộc về ai" cũng là câu hỏi của chương này.</li>
+  <li><strong>AI và tự động hóa.</strong> Khi máy làm thay người, c tăng, v giảm. Lợi nhuận ai hưởng? Việc làm biến đổi ra sao? Cuộc bàn luận về thuế robot, ngày làm 4 ngày, thu nhập cơ bản phổ quát đều là hậu duệ của chương "tích lũy tư bản".</li>
+</ul>
+
+<h3>Điều học thuyết giúp ta hiểu</h3>
+<ul>
+  <li>Vì sao ngày làm 8 giờ, nghỉ cuối tuần, lương tối thiểu, bảo hiểm xã hội là kết quả của đấu tranh và thỏa hiệp, không phải món quà từ trời.</li>
+  <li>Vì sao thương lượng tập thể, công đoàn, cổ phần cho người lao động (ESOP), chia sẻ lợi nhuận là các cách điều hòa phần chia.</li>
+  <li>Vì sao năng suất tăng không tự động làm mọi người thấy giàu lên: nó còn tùy vào ai nắm phần tăng thêm.</li>
+  <li>Vì sao doanh nghiệp phải liên tục đổi mới: không phải vì thích, mà vì cạnh tranh bắt buộc.</li>
+</ul>
+
+<h3>Ai cần hiểu rõ?</h3>
+<ul>
+  <li><strong>Người lao động</strong>: để hiểu mình ở đâu trong chuỗi phân chia và đàm phán dựa trên hiểu biết chứ không chỉ cảm xúc.</li>
+  <li><strong>Chủ doanh nghiệp và nhà quản lý</strong>: để hiểu vì sao căng thẳng lao động xuất hiện, và một chính sách lương thưởng công bằng có thể là khoản đầu tư thay vì chi phí.</li>
+  <li><strong>Nhà hoạch định chính sách và lập pháp</strong>: luật lao động, thuế, an sinh xã hội, quy định cho kinh tế nền tảng đều nằm trên đường phân chia này. Tại Việt Nam, hiểu học thuyết còn là nền tảng của môn Kinh tế chính trị Mác-Lênin và của những tranh luận về mô hình kinh tế thị trường định hướng xã hội chủ nghĩa.</li>
+  <li><strong>Sinh viên, học viên kinh tế, luật, xã hội học, triết học</strong>: vì không hiểu Marx thì khó hiểu nổi một nửa các cuộc tranh luận mà các trường phái khác đang phản ứng lại.</li>
+  <li><strong>Nhà đầu tư</strong>: để hiểu vì sao lợi nhuận doanh nghiệp phụ thuộc vào cấu trúc tiền lương, công nghệ và cạnh tranh.</li>
+  <li><strong>Công dân nói chung</strong>: vì mỗi lần bạn tranh luận "mức lương như vậy có công bằng không", bạn đang đứng giữa một truyền thống tranh luận dài hai thế kỷ mà không biết.</li>
+</ul>
+
+<!-- 10 -->
+<h2 id="s10"><span class="num">X.</span>Lời kết</h2>
+
+<p>Quay lại quán trà sữa của chúng ta. Câu hỏi "khoản dư từ đâu ra" vẫn đứng đó, không biến mất dù đã bị tuyên bố "đã giải xong" bởi cả hai phía. Người bênh Marx sẽ chỉ vào 4 giờ lao động thặng dư. Người phản biện sẽ chỉ vào ý tưởng, vốn, rủi ro, thời gian chờ đợi và nỗ lực quản lý. Một người đọc tỉnh táo sẽ nhận ra mỗi bên giữ một mảnh sự thật, và chiếc bánh mì thì thực sự có phần dày, phần mỏng, vấn đề là ai cắt, theo quy tắc nào, và ai có quyền ngồi vào bàn đàm phán.</p>
+
+<p>Dù bạn đọc Marx như một nhà tiên tri, một nhà phê bình xã hội sắc sảo, hay một nhà kinh tế có điểm yếu về phương pháp, có một điều khó phủ nhận: ông đã đặt câu hỏi về <em>nguồn gốc của lợi nhuận và quyền đối với thành quả lao động</em> theo cách khiến mọi trường phái sau đó, dù đồng ý hay phản đối, đều phải trả lời. Một học thuyết khiến người ta cãi nhau sau hơn 150 năm thì ít nhất cũng chứng minh nó chạm trúng một chỗ nhạy cảm của đời sống.</p>
+
+<footer>
+  <h3>Nguồn gốc tư liệu chính để đối chiếu</h3>
+  <ul>
+    <li>K. Marx, <em>Tư bản</em>, tập I (1867), tập II (1885), tập III (1894, Engels biên tập); <em>Các học thuyết về giá trị thặng dư</em> (Kautsky biên tập, 1905 đến 1910).</li>
+    <li>E. von Böhm-Bawerk, <em>Capital and Interest</em> (1884); <em>Karl Marx and the Close of His System</em> (1896).</li>
+    <li>R. Hilferding, <em>Böhm-Bawerk's Criticism of Marx</em> (1904); N. Bukharin, <em>Economic Theory of the Leisure Class</em>.</li>
+    <li>L. von Bortkiewicz (1907) về chuyển hóa giá trị thành giá cả; P. Sraffa (1960); N. Okishio (1961); P. Samuelson (1971); I. Steedman (1977); J. Roemer (1982).</li>
+    <li>P. Baran và P. Sweezy, <em>Monopoly Capital</em> (1966); Giáo trình Kinh tế chính trị Mác-Lênin các bản hiện hành tại Việt Nam.</li>
+  </ul>
+  <p><em>Lưu ý: đây là bài tiểu luận tổng hợp theo văn phong phổ biến, một số mốc năm và cách diễn giải nên được đối chiếu với nguyên tác khi dùng cho mục đích trích dẫn học thuật.</em></p>
+</footer>
+
+</div>
+
+    <div style="padding: 24px; text-align: center; background: #f6ead3; border-top: 1px solid #d9c7a3;">
+        <button class="back-btn" onclick="openPoliticsEconomyArticle('')" style="background: #fdf6ec; border: 1px solid #a07830; color: #2c1a0e; padding: 8px 20px; cursor: pointer; font-family: 'EB Garamond', Georgia, serif; font-size: 1rem; font-weight: 600; border-radius: 4px;">
+            <i class="fa-solid fa-arrow-left"></i> Quay láº¡i danh sÃ¡ch
+        </button>
+    </div>
+                    </div>
+<!-- ARTICLE PANEL: TU DUY CO CHU DICH -->
                     <div id="article-tuduycochudich-panel" class="sukien-article-panel tuduycochudich-body">
 <style>
 #article-tuduycochudich-panel {
