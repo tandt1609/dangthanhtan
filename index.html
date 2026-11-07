@@ -8759,6 +8759,18 @@ footer p+p { margin-top: 8px; }
                 <div id="trading-list-view" class="sukien-view active">
                     <h2 class="section-title"><i class="fa-solid fa-chart-line"></i> Trading</h2>
                     <div class="news-list">
+                        <!-- Post: Tong Quan Phan Tich Ky Thuat -->
+                        <a href="/trading/tong-quan-phan-tich-ky-thuat" class="news-card clickable-card">
+                            <div class="news-meta">
+                                <span class="news-source"><i class="fa-solid fa-chart-line"></i> PhÃ¢n tÃ­ch ká»¹ thuáº­t</span>
+                                <span class="news-time">07/11/2026</span>
+                            </div>
+                            <h3 class="news-heading"><span style="font-size:0.75em;color:#eab308;font-weight:500;display:block;margin-bottom:2px;letter-spacing:0.04em;">Tiá»ƒu luáº­n Â· PhÃ¢n tÃ­ch ká»¹ thuáº­t</span>Chá»‰ CÃ³ Hai Tráº¡ng ThÃ¡i, Äá»«ng Äá»ƒ Ai BÃ¡n Cho Báº¡n Con Sá»‘ Ba</h3>
+                            <p class="news-excerpt">Tá»•ng quan vá» phÃ¢n tÃ­ch ká»¹ thuáº­t: nhá»¯ng Ä‘iá»u cÆ¡ báº£n nháº¥t, thá»±c táº¿ nháº¥t. Thá»‹ trÆ°á»ng chá»‰ cÃ³ hai tráº¡ng thÃ¡i: hoáº·c Ä‘i ngang, hoáº·c cÃ³ xu hÆ°á»›ng.</p>
+                            <div class="news-footer">
+                                <span class="sentiment-indicator bullish"><i class="fa-solid fa-book-open"></i> Äá»c bÃ i viáº¿t</span>
+                            </div>
+                        </a>
                         <!-- Post: Trading - Tro Choi Phan Bo Rui Ro -->
                         <a href="/trading/trading-tro-choi-phan-bo-rui-ro" class="news-card clickable-card">
                             <div class="news-meta">
@@ -9879,6 +9891,244 @@ footer p+p { margin-top: 8px; }
                             <p>VÃ  náº¿u cÃ³ ai Ä‘Ã³ chÃ o bÃ¡n bÃ­ máº­t cá»§a thá»‹ trÆ°á»ng vá»›i giÃ¡ há»i, hÃ£y há»i má»™t cÃ¢u giáº£n dá»‹: náº¿u bÃ­ máº­t áº¥y tháº­t sá»± hiá»‡u nghiá»‡m, vÃ¬ sao ngÆ°á»i bÃ¡n váº«n cáº§n Ä‘áº¿n tiá»n há»c phÃ­ cá»§a báº¡n?</p>
 
                             <footer>BÃ i luáº­n mang tÃ­nh chia sáº» kiáº¿n thá»©c, khÃ´ng pháº£i khuyáº¿n nghá»‹ Ä‘áº§u tÆ°. CÃ¡c sá»‘ liá»‡u trong báº£ng vÃ­ dá»¥ lÃ  sá»‘ liá»‡u minh há»a.</footer>
+
+                            <div class="bottom-nav">
+                                <button class="back-btn" onclick="openTradingArticle('')">
+                                    <i class="fa-solid fa-arrow-left"></i> Quay láº¡i danh sÃ¡ch
+                                </button>
+                            </div>
+                        </main>
+                    </div>
+                    <!-- ARTICLE PANEL: TONG QUAN PHAN TICH KY THUAT -->
+                    <div id="article-tongquanphantichkythuat-panel" class="sukien-article-panel">
+                        <style>
+                        #article-tongquanphantichkythuat-panel {
+                            --paper: #fdf6ec;
+                            --ink: #2c1a0e;
+                            --gold: #a07830;
+                            --cream: #f6ead3;
+                            --line: #e3d2b3;
+                            background: var(--paper);
+                            color: var(--ink);
+                            font-family: 'EB Garamond', Georgia, serif;
+                            font-size: 1.22rem;
+                            line-height: 1.75;
+                            border-radius: 12px;
+                            overflow: hidden;
+                            margin: 0;
+                            padding: 0;
+                            -webkit-font-smoothing: antialiased;
+                        }
+                        #article-tongquanphantichkythuat-panel * { box-sizing: border-box; }
+                        #article-tongquanphantichkythuat-panel .top-bar-nav {
+                            padding: 20px 24px 0;
+                        }
+                        #article-tongquanphantichkythuat-panel .back-btn {
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 8px;
+                            padding: 9px 18px;
+                            background: #fdf6ec;
+                            color: #2c1a0e;
+                            border: 1px solid #a07830;
+                            border-radius: 6px;
+                            font-size: 0.95rem;
+                            font-weight: 600;
+                            cursor: pointer;
+                            transition: all 0.2s ease;
+                            font-family: 'EB Garamond', Georgia, serif;
+                        }
+                        #article-tongquanphantichkythuat-panel .back-btn:hover {
+                            background: #a07830;
+                            color: #fff;
+                        }
+                        #article-tongquanphantichkythuat-panel main {
+                            max-width: 46rem;
+                            margin: 0 auto;
+                            padding: 2.5rem 1.4rem 4rem;
+                        }
+                        #article-tongquanphantichkythuat-panel header {
+                            text-align: center;
+                            border-bottom: 1px solid var(--gold);
+                            padding-bottom: 2rem;
+                            margin-bottom: 2.5rem;
+                        }
+                        #article-tongquanphantichkythuat-panel .kicker {
+                            font-variant: small-caps;
+                            letter-spacing: .2em;
+                            color: var(--gold);
+                            font-size: 1rem;
+                        }
+                        #article-tongquanphantichkythuat-panel h1 {
+                            font-family: 'Cormorant Garamond', Georgia, serif;
+                            font-weight: 700;
+                            font-size: clamp(2.2rem, 5.5vw, 3.2rem);
+                            line-height: 1.15;
+                            margin: .6rem 0 .8rem;
+                            color: var(--ink);
+                        }
+                        #article-tongquanphantichkythuat-panel .sub {
+                            font-style: italic;
+                            font-size: 1.2rem;
+                            color: #5b4128;
+                            margin: 0;
+                        }
+                        #article-tongquanphantichkythuat-panel h2 {
+                            font-family: 'Cormorant Garamond', Georgia, serif;
+                            font-weight: 600;
+                            font-size: 1.9rem;
+                            margin: 2.6rem 0 .6rem;
+                            color: var(--ink);
+                        }
+                        #article-tongquanphantichkythuat-panel h2::before {
+                            content: "Â§ ";
+                            color: var(--gold);
+                        }
+                        #article-tongquanphantichkythuat-panel p {
+                            margin: 0 0 1.1rem;
+                            text-align: justify;
+                            hyphens: auto;
+                        }
+                        #article-tongquanphantichkythuat-panel .lead::first-letter {
+                            font-family: 'Cormorant Garamond', Georgia, serif;
+                            font-weight: 700;
+                            float: left;
+                            font-size: 4.6rem;
+                            line-height: .8;
+                            padding: .35rem .6rem 0 0;
+                            color: var(--gold);
+                        }
+                        #article-tongquanphantichkythuat-panel blockquote {
+                            margin: 1.8rem 0;
+                            padding: .4rem 0 .4rem 1.3rem;
+                            border-left: 4px solid var(--gold);
+                            font-style: italic;
+                            font-size: 1.28rem;
+                            color: #4a3019;
+                        }
+                        #article-tongquanphantichkythuat-panel .callout {
+                            background: var(--cream);
+                            border: 1px solid var(--line);
+                            border-radius: 4px;
+                            padding: 1.1rem 1.4rem;
+                            margin: 1.8rem 0;
+                        }
+                        #article-tongquanphantichkythuat-panel .callout b.t {
+                            display: block;
+                            font-family: 'Cormorant Garamond', Georgia, serif;
+                            font-size: 1.25rem;
+                            color: var(--gold);
+                            margin-bottom: .3rem;
+                        }
+                        #article-tongquanphantichkythuat-panel .callout p {
+                            margin: 0;
+                            font-size: 1.12rem;
+                        }
+                        #article-tongquanphantichkythuat-panel .wrap {
+                            overflow-x: auto;
+                            margin: 1.8rem 0;
+                        }
+                        #article-tongquanphantichkythuat-panel table {
+                            border-collapse: collapse;
+                            width: 100%;
+                            min-width: 32rem;
+                            font-size: 1.02rem;
+                            line-height: 1.5;
+                            background: transparent;
+                        }
+                        #article-tongquanphantichkythuat-panel th,
+                        #article-tongquanphantichkythuat-panel td {
+                            border-bottom: 1px solid var(--line);
+                            padding: .6rem .7rem;
+                            text-align: left;
+                            vertical-align: top;
+                            color: var(--ink);
+                        }
+                        #article-tongquanphantichkythuat-panel th {
+                            font-family: 'Cormorant Garamond', Georgia, serif;
+                            font-size: 1.15rem;
+                            color: var(--gold);
+                            border-bottom: 2px solid var(--gold);
+                        }
+                        #article-tongquanphantichkythuat-panel footer {
+                            margin-top: 3rem;
+                            padding-top: 1.2rem;
+                            border-top: 1px solid var(--gold);
+                            text-align: center;
+                            font-style: italic;
+                            color: #6b5238;
+                            font-size: 1rem;
+                        }
+                        #article-tongquanphantichkythuat-panel .bottom-nav {
+                            text-align: center;
+                            margin-top: 2rem;
+                        }
+                        @media (max-width:520px){
+                            #article-tongquanphantichkythuat-panel { font-size: 1.1rem; }
+                            #article-tongquanphantichkythuat-panel .lead::first-letter { font-size: 3.8rem; }
+                            #article-tongquanphantichkythuat-panel main { padding: 1.5rem 1rem 2.5rem; }
+                        }
+                        </style>
+
+                        <div class="top-bar-nav">
+                            <button class="back-btn" onclick="openTradingArticle('')">
+                                <i class="fa-solid fa-arrow-left"></i> Quay láº¡i danh sÃ¡ch
+                            </button>
+                        </div>
+
+                        <main>
+                            <header>
+                                <div class="kicker">Tiá»ƒu luáº­n Â· PhÃ¢n tÃ­ch ká»¹ thuáº­t</div>
+                                <h1>Chá»‰ CÃ³ Hai Tráº¡ng ThÃ¡i, Äá»«ng Äá»ƒ Ai BÃ¡n Cho Báº¡n Con Sá»‘ Ba</h1>
+                                <p class="sub">Tá»•ng quan vá» phÃ¢n tÃ­ch ká»¹ thuáº­t: nhá»¯ng Ä‘iá»u cÆ¡ báº£n nháº¥t, thá»±c táº¿ nháº¥t</p>
+                            </header>
+
+                            <p class="lead">Má»Ÿ báº¥t ká»³ diá»…n Ä‘Ã n giao dá»‹ch nÃ o, báº¡n sáº½ gáº·p má»™t khu vÆ°á»n bÃ¡ch tháº£o: sÃ³ng Elliott chÃ­n táº§ng, Ichimoku nÄƒm Ä‘Æ°á»ng, Fibonacci vá»›i Ä‘á»§ loáº¡i tá»· lá»‡ mang tÃªn tháº§n thÃ¡nh, cá»™ng thÃªm vÃ i chá»‰ bÃ¡o cÃ³ tÃªn nghe nhÆ° phÃ©p thuáº­t. NgÆ°á»i má»›i nhÃ¬n vÃ o vÃ  tin ráº±ng thá»‹ trÆ°á»ng lÃ  má»™t bÃ i toÃ¡n nhiá»u áº©n, cáº§n cáº£ tá»§ sÃ¡ch má»›i giáº£i ná»•i. Sá»± tháº­t khiÃªm tá»‘n hÆ¡n nhiá»u: thá»‹ trÆ°á»ng chá»‰ cÃ³ hai tráº¡ng thÃ¡i. Hoáº·c nÃ³ Ä‘i ngang, hoáº·c nÃ³ cÃ³ xu hÆ°á»›ng. Háº¿t.</p>
+
+                            <h2>Hai tráº¡ng thÃ¡i, hai tÃ­nh cÃ¡ch</h2>
+                            <p>Sideway (hay range) lÃ  lÃºc giÃ¡ dáº­p dÃ¬u giá»¯a má»™t Ä‘Ã¡y vÃ  má»™t Ä‘á»‰nh, nhÆ° con láº¯c Ä‘á»“ng há»“ cÅ©. CÃ³ xu hÆ°á»›ng lÃ  lÃºc giÃ¡ Ä‘i má»™t máº¡ch vá» má»™t phÃ­a, táº¡o Ä‘á»‰nh sau cao hÆ¡n Ä‘á»‰nh trÆ°á»›c hoáº·c Ä‘Ã¡y sau tháº¥p hÆ¡n Ä‘Ã¡y trÆ°á»›c. Xu hÆ°á»›ng tÄƒng hay giáº£m chá»‰ lÃ  hai máº·t cá»§a cÃ¹ng má»™t Ä‘á»“ng xu, vÃ¬ cÃ¡ch Ä‘Ã¡nh gáº§n nhÆ° Ä‘á»‘i xá»©ng nhau. Äiá»u thá»±c sá»± quan trá»ng lÃ  phÃ¢n biá»‡t <em>Ä‘i ngang</em> vá»›i <em>Ä‘i má»™t hÆ°á»›ng</em>, khÃ´ng pháº£i phÃ¢n biá»‡t <em>lÃªn</em> vá»›i <em>xuá»‘ng</em>.</p>
+                            <p>Hai tráº¡ng thÃ¡i nÃ y cÃ³ hai tÃ­nh cÃ¡ch trÃ¡i ngÆ°á»£c. Thá»‹ trÆ°á»ng range giá»‘ng ngÆ°á»i hÃ ng xÃ³m hay Ä‘á»•i Ã½: lÃªn Ä‘áº¿n má»™t má»©c lÃ  quay Ä‘áº§u, xuá»‘ng Ä‘áº¿n má»™t má»©c lÃ  quay Ä‘áº§u. Thá»‹ trÆ°á»ng cÃ³ xu hÆ°á»›ng giá»‘ng chiáº¿c xe buÃ½t giá» cao Ä‘iá»ƒm: má»™t khi Ä‘Ã£ cháº¡y thÃ¬ Ä‘á»«ng Ä‘á»©ng trÆ°á»›c Ä‘áº§u xe Ä‘á»ƒ báº£o nÃ³ dá»«ng láº¡i.</p>
+
+                            <blockquote>Má»™t chiáº¿n lÆ°á»£c khÃ´ng cÃ³ Ä‘Ãºng hay sai. Chá»‰ cÃ³ Ä‘Ãºng tráº¡ng thÃ¡i hay sai tráº¡ng thÃ¡i.</blockquote>
+
+                            <h2>PhÃ¢n tÃ­ch ká»¹ thuáº­t Ä‘á»ƒ lÃ m gÃ¬?</h2>
+                            <p>Nhiá»u ngÆ°á»i dÃ¹ng phÃ¢n tÃ­ch ká»¹ thuáº­t nhÆ° quáº£ cáº§u pha lÃª, há»i nÃ³ giÃ¡ sáº½ lÃªn hay xuá»‘ng. Quáº£ cáº§u nÃ y hay nÃ³i dá»‘i. Má»¥c Ä‘Ã­ch thá»±c táº¿ cá»§a nÃ³ khiÃªm tá»‘n vÃ  há»¯u Ã­ch hÆ¡n nhiá»u: xÃ¡c Ä‘á»‹nh thá»‹ trÆ°á»ng Ä‘ang á»Ÿ tráº¡ng thÃ¡i nÃ o, tá»« Ä‘Ã³ chá»n chiáº¿n lÆ°á»£c phÃ¹ há»£p, rá»“i láº­p nguyÃªn táº¯c phÃ¢n bá»• rá»§i ro cho Ä‘Ãºng tráº¡ng thÃ¡i Ä‘Ã³. Rá»§i ro cÅ©ng pháº£i vá»«a vá»›i biÃªn Ä‘á»™ sÃ³ng Ä‘ang diá»…n ra vÃ  vá»«a vá»›i nhá»¯ng Ä‘á»‰nh Ä‘Ã¡y mÃ  giÃ¡ vá»«a táº¡o ra. Cáº¯t lá»— 5 giÃ¡ trong má»™t con sÃ³ng chá»‰ dÃ i 8 giÃ¡ thÃ¬ khÃ´ng pháº£i lÃ  quáº£n trá»‹ rá»§i ro, Ä‘Ã³ lÃ  má»™t lá»i má»i náº¡p tiá»n.</p>
+                            <div class="callout"><b class="t">NguyÃªn táº¯c cá»‘t lÃµi</b><p>BÆ°á»›c má»™t lÃ  nháº­n diá»‡n tráº¡ng thÃ¡i. BÆ°á»›c hai lÃ  chá»n chiáº¿n lÆ°á»£c tÆ°Æ¡ng á»©ng. BÆ°á»›c ba lÃ  Ä‘áº·t Ä‘iá»ƒm vÃ o, Ä‘iá»ƒm cáº¯t lá»— vÃ  khá»‘i lÆ°á»£ng sao cho khá»›p vá»›i biÃªn Ä‘á»™ sÃ³ng vÃ  cáº¥u trÃºc Ä‘á»‰nh Ä‘Ã¡y. Äáº£o thá»© tá»± ba bÆ°á»›c nÃ y lÃ  cÃ¡ch nhanh nháº¥t Ä‘á»ƒ thÃ nh ngÆ°á»i Ä‘Ã³ng gÃ³p thanh khoáº£n.</p></div>
+
+                            <h2>Thá»‹ trÆ°á»ng cÃ³ xu hÆ°á»›ng: Ä‘á»«ng Ä‘uá»•i, hÃ£y chá» giÃ¡ quay láº¡i</h2>
+                            <p>Khi xu hÆ°á»›ng Ä‘Ã£ rÃµ, pháº§n lá»›n lá»£i nhuáº­n Ä‘áº¿n tá»« viá»‡c Ä‘i cÃ¹ng chiá»u. NhÆ°ng Ä‘u theo giÃ¡ á»Ÿ Ä‘á»‰nh sÃ³ng lÃ  cÃ¡ch mua Ä‘áº¯t nháº¥t cÃ³ thá»ƒ. Giáº£i phÃ¡p cá»§a dÃ¢n chuyÃªn nghiá»‡p lÃ  <strong>pullback</strong>: chá» nhá»‹p há»“i rá»“i vÃ o lá»‡nh thuáº­n xu hÆ°á»›ng, nhÆ° chá» chuyáº¿n xe buÃ½t káº¿ tiáº¿p thay vÃ¬ cháº¡y theo chuyáº¿n vá»«a rá»i báº¿n. CÃ³ hai trÆ°á»ng phÃ¡i, vÃ  cáº£ hai Ä‘á»u Ä‘Æ¡n giáº£n Ä‘áº¿n má»©c hÆ¡i buá»“n cÆ°á»i.</p>
+                            <p><strong>Pullback cáº­n biÃªn (Donchian).</strong> KÃªnh Donchian váº½ Ä‘Ãºng hai thá»©: má»©c cao nháº¥t vÃ  má»©c tháº¥p nháº¥t cá»§a N phiÃªn gáº§n nháº¥t. KhÃ´ng phÆ°Æ¡ng trÃ¬nh, khÃ´ng tham sá»‘ bÃ­ truyá»n. Trong xu hÆ°á»›ng tÄƒng, giÃ¡ há»“i vá» gáº§n biÃªn dÆ°á»›i hoáº·c vÃ¹ng giá»¯a kÃªnh rá»“i xuáº¥t hiá»‡n tÃ­n hiá»‡u tá»« chá»‘i thÃ¬ Ä‘Ã³ lÃ  Ä‘iá»ƒm mua thuáº­n xu hÆ°á»›ng, vá»›i cáº¯t lá»— Ä‘áº·t ngay dÆ°á»›i biÃªn. Lá»£i tháº¿ cá»§a nÃ³ lÃ  Ä‘iá»ƒm cáº¯t lá»— rÃµ rÃ ng, nÃªn rá»§i ro Ä‘Æ°á»£c Ä‘o báº±ng thÆ°á»›c chá»© khÃ´ng báº±ng cáº£m giÃ¡c.</p>
+                            <p><strong>Pullback trá»¥c xÆ°Æ¡ng sá»‘ng (EMA).</strong> Náº¿u Donchian lÃ  hÃ ng rÃ o hai bÃªn Ä‘Æ°á»ng thÃ¬ EMA lÃ  sá»‘ng lÆ°ng cá»§a con sÃ³ng. Trong xu hÆ°á»›ng khá»e, giÃ¡ thÆ°á»ng há»“i vá» cháº¡m Ä‘Æ°á»ng trung bÃ¬nh Ä‘á»™ng (vÃ­ dá»¥ EMA 20 hoáº·c EMA 50 tÃ¹y khung thá»i gian) rá»“i báº­t lÃªn tiáº¿p tá»¥c hÃ nh trÃ¬nh. GiÃ¡ náº±m trÃªn xÆ°Æ¡ng sá»‘ng thÃ¬ xu hÆ°á»›ng cÃ²n sá»‘ng. GiÃ¡ cáº¯m xuá»‘ng xuyÃªn qua nÃ³ vÃ  khÃ´ng quay láº¡i thÃ¬ chiáº¿n lÆ°á»£c nÃ y nÃªn nghá»‰ hÆ°u, kÃ¨m lá»i cáº£m Æ¡n.</p>
+                            <p><strong>Breakout (Donchian) trong xu hÆ°á»›ng máº¡nh.</strong> CÃ³ nhá»¯ng lÃºc giÃ¡ cháº¡y quÃ¡ nhanh, quÃ¡ máº¡nh, cháº³ng cho ai cÆ¡ há»™i pullback. Khi Ä‘Ã³, chá» há»“i chÃ­nh lÃ  cÃ¡ch tá»± bá» lá»¡ cáº£ con sÃ³ng. PhÃ¡ vá»¡ Ä‘á»‰nh cao nháº¥t cá»§a N phiÃªn lÃ  tÃ­n hiá»‡u Ä‘á»ƒ Ä‘i cÃ¹ng. ÄÃ¢y khÃ´ng pháº£i Ã½ tÆ°á»Ÿng má»›i: Richard Donchian lÃ  ngÆ°á»i Ä‘áº·t ná»n mÃ³ng cho trÆ°á»ng phÃ¡i theo xu hÆ°á»›ng, vÃ  nhÃ³m Turtle Traders cá»§a Richard Dennis vÃ o tháº­p niÃªn 1980 ná»•i tiáº¿ng vá»›i há»‡ thá»‘ng breakout kÃªnh 20 vÃ  55 ngÃ y. Ba mÆ°Æ¡i máº¥y nÄƒm trÃ´i qua, Ã½ tÆ°á»Ÿng váº«n Ä‘á»§ Ä‘Æ¡n giáº£n Ä‘á»ƒ viáº¿t lÃªn má»™t máº£nh giáº¥y Äƒn.</p>
+
+                            <blockquote>Pullback lÃ  kiÃªn nháº«n cÃ³ tá»• chá»©c. Breakout lÃ  dÅ©ng cáº£m cÃ³ Ä‘iá»u kiá»‡n. Äá»«ng nháº§m hai thá»© nÃ y vá»›i liá»u lÄ©nh cÃ³ cáº£m xÃºc.</blockquote>
+
+                            <h2>Thá»‹ trÆ°á»ng sideway: biÃªn lÃ  nhÃ , há»£p lÆ°u lÃ  chÃ¬a khÃ³a</h2>
+                            <p>Trong range, chiáº¿n lÆ°á»£c sinh ra tá»« má»™t nháº­n xÃ©t ráº¥t Ä‘á»i thÆ°á»ng: giÃ¡ cháº¡m Ä‘á»‰nh range thÃ¬ dá»… bá»‹ Ä‘áº©y vá», cháº¡m Ä‘Ã¡y range thÃ¬ dá»… báº­t lÃªn. Chiáº¿n lÆ°á»£c chÃ­nh lÃ  Ä‘Ã¡nh cáº­n biÃªn, theo kiá»ƒu <strong>Reversal há»£p lÆ°u Ä‘á»‰nh Ä‘Ã¡y khung nhá» vÃ  khung lá»›n</strong>. Há»£p lÆ°u nghÄ©a lÃ  nhiá»u báº±ng chá»©ng cÃ¹ng chá»‰ vá» má»™t chá»—. Má»™t Ä‘Ã¡y trÃªn khung H4 lÃ  má»™t lá»i nÃ³i. ÄÃ¡y khung H4 trÃ¹ng Ä‘Ãºng Ä‘Ã¡y khung M15, kÃ¨m náº¿n tá»« chá»‘i, lÃ  ba ngÆ°á»i lÃ m chá»©ng Ä‘á»©ng cÃ¹ng má»™t phÃ­a.</p>
+                            <p>VÃ­ dá»¥ minh há»a: vÃ ng Ä‘i ngang nhiá»u phiÃªn giá»¯a hai má»©c biÃªn trÃªn khung lá»›n. GiÃ¡ cháº¡m vÃ¹ng Ä‘Ã¡y range, Ä‘á»“ng thá»i khung M15 vá»«a táº¡o Ä‘Ã¡y nhá» ngay táº¡i vÃ¹ng Ä‘Ã³, sau Ä‘Ã³ xuáº¥t hiá»‡n náº¿n Ä‘áº£o chiá»u. Lá»‡nh mua á»Ÿ Ä‘Ã¢y cÃ³ cáº¯t lá»— ngay dÆ°á»›i Ä‘Ã¡y, má»¥c tiÃªu hÆ°á»›ng vá» biÃªn Ä‘á»‘i diá»‡n. NgÆ°á»£c láº¡i, giá»¯a range lÃ  vÃ¹ng cháº³ng ai ná»£ ai Ä‘iá»u gÃ¬, nÃªn cÃ¡ch tá»‘t nháº¥t lÃ  ngá»“i yÃªn uá»‘ng trÃ .</p>
+                            <div class="callout"><b class="t">LÆ°u Ã½ vá» Ä‘iá»ƒm cháº¿t</b><p>Reversal chá»‰ sá»‘ng Ä‘Æ°á»£c trong range. Mang nÃ³ vÃ o thá»‹ trÆ°á»ng cÃ³ xu hÆ°á»›ng máº¡nh, báº¡n sáº½ trá»Ÿ thÃ nh ngÆ°á»i Ä‘á»©ng trÆ°á»›c Ä‘áº§u xe buÃ½t nÃ³i á»Ÿ trÃªn. Dáº¥u hiá»‡u cáº§n dá»«ng: giÃ¡ Ä‘Ã³ng cá»­a vÆ°á»£t rÃµ rÃ ng ra ngoÃ i biÃªn vÃ  khÃ´ng quay láº¡i.</p></div>
+
+                            <h2>Báº£ng tÃ³m táº¯t cho ngÆ°á»i báº­n rá»™n</h2>
+                            <div class="wrap">
+                                <table>
+                                    <thead><tr><th>Tráº¡ng thÃ¡i</th><th>Chiáº¿n lÆ°á»£c</th><th>CÃ´ng cá»¥</th><th>Ã tÆ°á»Ÿng cá»‘t lÃµi</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>CÃ³ xu hÆ°á»›ng</td><td>Pullback cáº­n biÃªn</td><td>Donchian</td><td>Chá» giÃ¡ há»“i vá» biÃªn rá»“i Ä‘i thuáº­n xu hÆ°á»›ng</td></tr>
+                                        <tr><td>CÃ³ xu hÆ°á»›ng</td><td>Pullback xÆ°Æ¡ng sá»‘ng</td><td>EMA</td><td>Mua nhá»‹p há»“i vá» Ä‘Æ°á»ng trung bÃ¬nh Ä‘á»™ng</td></tr>
+                                        <tr><td>Xu hÆ°á»›ng máº¡nh</td><td>Breakout</td><td>Donchian</td><td>GiÃ¡ phÃ¡ Ä‘á»‰nh N phiÃªn thÃ¬ Ä‘i cÃ¹ng</td></tr>
+                                        <tr><td>Sideway / range</td><td>Reversal há»£p lÆ°u</td><td>Äá»‰nh Ä‘Ã¡y khung nhá» + khung lá»›n</td><td>ÄÃ¡nh Ä‘áº£o chiá»u á»Ÿ biÃªn khi nhiá»u khung cÃ¹ng xÃ¡c nháº­n</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h2>VÃ¬ sao Ä‘Æ¡n giáº£n mÃ  váº«n Ä‘Ãºng?</h2>
+                            <p>CÃ³ ba lÃ½ do. Thá»© nháº¥t, má»i chiáº¿n lÆ°á»£c trÃªn Ä‘á»u Ä‘o báº±ng thá»© nhÃ¬n tháº¥y Ä‘Æ°á»£c: Ä‘á»‰nh, Ä‘Ã¡y, Ä‘Æ°á»ng trung bÃ¬nh. KhÃ´ng cÃ³ thá»© gÃ¬ pháº£i tin báº±ng Ä‘á»©c tin. Thá»© hai, má»—i chiáº¿n lÆ°á»£c Ä‘á»u cÃ³ Ä‘iá»ƒm sai rÃµ rÃ ng, nÃªn rá»§i ro Ä‘Æ°á»£c tÃ­nh trÆ°á»›c khi vÃ o lá»‡nh chá»© khÃ´ng pháº£i sau khi há»‘i háº­n. Thá»© ba, táº­p há»£p chiáº¿n lÆ°á»£c nÃ y Ä‘Ã£ phá»§ kÃ­n cáº£ hai tráº¡ng thÃ¡i cá»§a thá»‹ trÆ°á»ng, nÃªn báº¡n luÃ´n cÃ³ viá»‡c Ä‘Ãºng Ä‘á»ƒ lÃ m, ká»ƒ cáº£ khi viá»‡c Ä‘Ãºng lÃ  khÃ´ng lÃ m gÃ¬.</p>
+                            <p>Trong khi Ä‘Ã³, nhá»¯ng há»‡ thá»‘ng phá»©c táº¡p thÆ°á»ng tháº¥t báº¡i vÃ¬ lÃ½ do ngÆ°á»£c láº¡i: quÃ¡ nhiá»u Ä‘iá»u kiá»‡n thÃ¬ Ã­t khi Ä‘á»§ Ä‘iá»u kiá»‡n, quÃ¡ nhiá»u chá»‰ bÃ¡o thÃ¬ chÃºng cÃ£i nhau, vÃ  quÃ¡ nhiá»u lÃ½ thuyáº¿t thÃ¬ cháº³ng cÃ²n chá»— cho ká»· luáº­t. Äá»™ phá»©c táº¡p thÆ°á»ng lÃ  cÃ¡ch tá»± an á»§i ráº±ng mÃ¬nh Ä‘ang lÃ m viá»‡c chÄƒm chá»‰, trong khi tÃ i khoáº£n Ä‘ang lÃ m viá»‡c ngÆ°á»£c láº¡i.</p>
+
+                            <h2>Lá»i káº¿t</h2>
+                            <p>PhÃ¢n tÃ­ch ká»¹ thuáº­t khÃ´ng pháº£i mÃ´n tiÃªn tri. NÃ³ lÃ  mÃ´n <em>phÃ¢n loáº¡i rá»“i hÃ nh xá»­</em>. HÃ£y xÃ¡c Ä‘á»‹nh thá»‹ trÆ°á»ng Ä‘ang Ä‘i ngang hay Ä‘i má»™t hÆ°á»›ng. Náº¿u cÃ³ xu hÆ°á»›ng, chá» pullback vá» biÃªn Donchian hoáº·c vá» xÆ°Æ¡ng sá»‘ng EMA, vÃ  chá»‰ breakout khi xu hÆ°á»›ng tháº­t sá»± máº¡nh. Náº¿u Ä‘i ngang, chá»‰ Ä‘Ã¡nh á»Ÿ biÃªn vá»›i há»£p lÆ°u Ä‘á»‰nh Ä‘Ã¡y nhiá»u khung. Rá»“i Ä‘áº·t rá»§i ro vá»«a vá»›i biÃªn Ä‘á»™ sÃ³ng Ä‘ang cÃ³. Báº¥y nhiÃªu thÃ´i, pháº§n cÃ²n láº¡i lÃ  ká»· luáº­t vÃ  má»™t chÃºt kiÃªn nháº«n.</p>
+
+                            <footer>PhÃ¢n tÃ­ch ká»¹ thuáº­t khÃ´ng Ä‘áº£m báº£o lá»£i nhuáº­n. Ná»™i dung chá»‰ mang tÃ­nh giÃ¡o dá»¥c, khÃ´ng pháº£i khuyáº¿n nghá»‹ Ä‘áº§u tÆ°.</footer>
 
                             <div class="bottom-nav">
                                 <button class="back-btn" onclick="openTradingArticle('')">
@@ -30239,6 +30489,6 @@ document.querySelectorAll('.era-section').forEach(s => observer.observe(s));
     </div>
 
     <!-- JavaScript -->
-    <script src="/script.js?v=8"></script>
+    <script src="/script.js?v=9"></script>
 </body>
 </html>
