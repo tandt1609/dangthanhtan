@@ -46,6 +46,7 @@ const routeToTab = {
     '/trading': 'trading',
     '/huyen-thoai': 'huyen-thoai',
     '/thu-vien': 'thu-vien',
+    '/luan-tac': 'luan-tac',
     '/game': 'game'
 };
 
@@ -59,6 +60,7 @@ const tabToRoute = {
     'su-kien': '/kinh-te-tai-chinh',
     'huyen-thoai': '/huyen-thoai',
     'thu-vien': '/thu-vien',
+    'luan-tac': '/luan-tac',
     'game': '/game'
 };
 
@@ -250,6 +252,8 @@ function handleRouting(path, updateUrl = false) {
         switchTab('trading', false);
         const subPath = path.substring('/trading'.length).replace(/^\//, '');
         openTradingArticle(subPath, updateUrl);
+    } else if (path.startsWith('/luan-tac')) {
+        switchTab('luan-tac', updateUrl);
     } else if (path.startsWith('/chinh-tri-kinh-te-thoi-su')) {
         switchTab('kinh-te-tai-chinh', false);
         const subPath = path.substring('/chinh-tri-kinh-te-thoi-su'.length).replace(/^\//, '');
