@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/style.css?v=26">
+    <link rel="stylesheet" href="/style.css?v=27">
     <style>
 /* ===== GLOBAL OVERFLOW LOCK — prevents horizontal scroll on all screens ===== */
 html, body {
@@ -140,7 +140,8 @@ html, body {
 
         <!-- Dynamic Navigation Tabs -->
         <nav class="tab-navigation">
-            <div class="tabs-wrapper">
+            <div class="tabs-track">
+                <div class="tabs-group">
                 <a href="/" class="tab-link active" data-tab="trang-chu"><i class="fa-solid fa-house"></i> Trang chủ</a>
                 <a href="/kinh-te-tai-chinh" class="tab-link" data-tab="kinh-te-tai-chinh"><i class="fa-solid fa-scale-balanced"></i> Kinh tế & Tài chính</a>
                 <a href="/trading" class="tab-link" data-tab="trading"><i class="fa-solid fa-chart-line"></i> Trading</a>
@@ -148,6 +149,16 @@ html, body {
                 <a href="/thu-vien" class="tab-link" data-tab="thu-vien"><i class="fa-solid fa-book-open"></i> Thư viện</a>
                 <a href="/luan-tac" class="tab-link" data-tab="luan-tac"><i class="fa-solid fa-scroll"></i> Luận &amp; Tác</a>
                 <a href="/game" class="tab-link" data-tab="game"><i class="fa-solid fa-gamepad"></i> Game</a>
+            </div>
+            <div class="tabs-group" aria-hidden="true">
+                <a href="/" class="tab-link active" data-tab="trang-chu"><i class="fa-solid fa-house"></i> Trang chủ</a>
+                <a href="/kinh-te-tai-chinh" class="tab-link" data-tab="kinh-te-tai-chinh"><i class="fa-solid fa-scale-balanced"></i> Kinh tế & Tài chính</a>
+                <a href="/trading" class="tab-link" data-tab="trading"><i class="fa-solid fa-chart-line"></i> Trading</a>
+                <a href="/huyen-thoai" class="tab-link" data-tab="huyen-thoai"><i class="fa-solid fa-user-astronaut"></i> Huyền thoại</a>
+                <a href="/thu-vien" class="tab-link" data-tab="thu-vien"><i class="fa-solid fa-book-open"></i> Thư viện</a>
+                <a href="/luan-tac" class="tab-link" data-tab="luan-tac"><i class="fa-solid fa-scroll"></i> Luận &amp; Tác</a>
+                <a href="/game" class="tab-link" data-tab="game"><i class="fa-solid fa-gamepad"></i> Game</a>
+            </div>
             </div>
         </nav>
 
@@ -29918,6 +29929,6 @@ document.querySelectorAll('.era-section').forEach(s => observer.observe(s));
     </div>
 
     <!-- JavaScript -->
-    <script src="/script.js?v=6"></script>
+    <script src="/script.js?v=7"></script>
 </body>
 </html>

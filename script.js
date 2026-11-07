@@ -73,8 +73,8 @@ function switchTab(tabId, updateUrl = true) {
     document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
     
     // Activate target tab link
-    const targetLink = document.querySelector(`.tab-link[data-tab="${tabId}"]`);
-    if (targetLink) targetLink.classList.add('active');
+    document.querySelectorAll(`.tab-link[data-tab="${tabId}"]`).forEach(link => link.classList.add('active'));
+
 
     // Activate target panel
     const targetPanel = document.getElementById(`panel-${tabId}`) || (tabId === 'kinh-te-tai-chinh' ? document.getElementById('panel-chinh-tri-kinh-te-thoi-su') : null);

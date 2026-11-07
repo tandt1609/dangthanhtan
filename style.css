@@ -434,6 +434,7 @@ body {
 }
 
 /* Tab Navigation Bar */
+/* Tab Navigation Bar - Continuous Horizontal Marquee */
 .tab-navigation {
     width: 100%;
     background: var(--bg-card);
@@ -441,33 +442,42 @@ body {
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--border-color);
     border-radius: 20px;
-    padding: 0.5rem;
+    padding: 0.5rem 0;
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
 }
 
-.tabs-wrapper {
+.tabs-track {
+    display: flex;
+    width: max-content;
+    animation: tabMarquee 26s linear infinite;
+    will-change: transform;
+}
+
+.tab-navigation:hover .tabs-track,
+.tab-navigation:focus-within .tabs-track,
+.tabs-track:hover {
+    animation-play-state: paused;
+}
+
+.tabs-group {
     display: flex;
     gap: 0.5rem;
-    overflow-x: auto;
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    padding: 0 0.25rem;
+    flex-shrink: 0;
 }
 
-.tabs-wrapper/* ===== CUSTOM SCROLLBAR ===== */
-::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+@keyframes tabMarquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
-::-webkit-scrollbar-track {
-    background: var(--bg-dark); 
-}
-::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.15); 
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.3); 
-}
-
 
 .tab-link {
     text-decoration: none;
