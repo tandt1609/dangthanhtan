@@ -114,7 +114,9 @@ const politicsEconomyArticles = {
 };
 
 const tradingArticles = {
-    'dxy-us10y': { panelId: 'article-dxy-us10y-panel', route: '/trading/dxy-us10y' }
+    'dxy-us10y': { panelId: 'article-dxy-us10y-panel', route: '/trading/dxy-us10y' },
+    'trading-tro-choi-phan-bo-rui-ro': { panelId: 'article-tradingphanboruiro-panel', route: '/trading/trading-tro-choi-phan-bo-rui-ro' },
+    'tro-choi-phan-bo-rui-ro': { panelId: 'article-tradingphanboruiro-panel', route: '/trading/trading-tro-choi-phan-bo-rui-ro' }
 };
 
 function openTradingArticle(articleId, updateUrl = true) {
